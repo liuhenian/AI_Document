@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-待整理/ai初步分析/APM_AI助手_多Agent框架选型与部署评估.md",
+                "file": "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph多Agent完整设计文档.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "APM_AI助手_多Agent框架选型与部署评估"
+              "title": "APM-AI助手-LangGraph多Agent完整设计文档"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 399.5
+    "width": 249.5
   },
   "right": {
     "id": "ef69d1c52213b7a0",
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-待整理/ai初步分析/APM_AI助手_多Agent框架选型与部署评估.md",
+                "file": "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph多Agent完整设计文档.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "APM_AI助手_多Agent框架选型与部署评估 的大纲"
+              "title": "APM-AI助手-LangGraph多Agent完整设计文档 的大纲"
             }
           },
           {
@@ -180,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 456.5
+    "width": 667.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,65 +198,27 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "floating": {
-    "id": "68909db9c9e1a900",
-    "type": "floating",
-    "children": [
-      {
-        "id": "782639d9abd07694",
-        "type": "window",
-        "children": [
-          {
-            "id": "bb9c029b244050ce",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "9cbbdf7dffabb7ec",
-                "type": "leaf",
-                "state": {
-                  "type": "markdown",
-                  "state": {
-                    "file": "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph多Agent完整设计文档.md",
-                    "mode": "source",
-                    "source": false
-                  },
-                  "icon": "lucide-file",
-                  "title": "APM-AI助手-LangGraph多Agent完整设计文档"
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2224,
-        "y": 524,
-        "width": 1024,
-        "height": 800,
-        "maximize": true,
-        "zoom": 0
-      }
-    ]
-  },
   "active": "57ce1a7351306cdb",
   "lastOpenFiles": [
-    "00-待整理/ai初步分析/多Agent框架知识梳理与选型指南.md",
-    "00-待整理/ai初步分析/APM_AI助手_多Agent框架选型与部署评估.md",
-    "00-待整理/ai初步分析/APM AI助手技术选型与演进方案.md",
-    "00-待整理/ai初步分析/AI助手Skill体系与自定义数据源接入指南.md",
-    "00-待整理/ai初步分析/五个Agent框架详细分析与APM端口丢包案例对比.md",
     "00-待整理/LangGraph知识点学习/AI助手设计文档-增加多轮对话版本.md",
     "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph多Agent完整设计文档.md",
     "00-待整理/LangGraph知识点学习/AI助手设计文档.md",
-    "00-待整理/00 - 灵感/灵感收集.md",
+    "00-待整理/LangGraph知识点学习/LangGraph网络运维Agent四阶段知识点.md",
     "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph技术选型与实施方案-v2.md",
+    "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph技术选型与实施方案.md",
+    "00-待整理/ai初步分析/APM_AI助手_多Agent框架选型与部署评估.md",
+    "00-待整理/ai初步分析/APM AI助手技术选型与演进方案.md",
+    "00-待整理/ai初步分析/AI助手Skill体系与自定义数据源接入指南.md",
+    "00-待整理/ai初步分析/多Agent框架知识梳理与选型指南.md",
+    "00-待整理/ai初步分析/Hermes_Agent_架构分析.md",
+    "00-待整理/ai初步分析/五个Agent框架详细分析与APM端口丢包案例对比.md",
+    "00-待整理/00 - 灵感/灵感收集.md",
     "00-待整理/LangGraph知识点学习/草稿.md",
     "00-待整理/LangGraph知识点学习/名词.md",
     "00-待整理/记忆/LangGraph如何实现短期记忆.md",
     "00-待整理/记忆/长短期记忆.md",
     "00-待整理/记忆/多轮记忆.md",
-    "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph技术选型与实施方案.md",
     "00-待整理/AI提示词/AI助手.md",
-    "00-待整理/LangGraph知识点学习/LangGraph网络运维Agent四阶段知识点.md",
     "00-待整理/LangGraph知识点学习/新建文本文档.txt",
     "00-待整理/LangGraph知识点学习/任务拆分和任务路由.md",
     "00-待整理/LangGraph知识点学习/意图.md",
@@ -266,7 +228,6 @@
     "00-待整理/灵感/灵感收集.md",
     "00-待整理/灵感",
     "00-待整理/专家模式和流程模式的梳理/流程建模和多专家区别的例子.md",
-    "00-待整理/agent/agent.md",
     "附件资料/Pasted image 20260701124916.png",
     "00-待整理/00 - 灵感",
     "未命名.canvas",

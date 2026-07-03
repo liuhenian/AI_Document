@@ -1,11 +1,11 @@
-# APM AI 助手 LangGraph 技术选型与实施方案
+# 1 APM AI 助手 LangGraph 技术选型与实施方案
 
 > 版本：v0.1  
 > 日期：2026-07-01  
 > 适用范围：APM Web 端 AI 助手、异常智能分析、多源观测数据关联分析  
 > 约束：Python 后端、商用大模型 API、LangGraph、多数据源安全读写
 
-## 1. 背景与目标
+## 1.1 背景与目标
 
 APM 当前已经完成交换机性能与健康数据采集、异常检测、Web 图表呈现和告警触发。下一阶段需要在 Web 端新增 AI 助手，使用户可以用自然语言发起问题，例如：
 
@@ -26,9 +26,9 @@ AI 助手需要完成从问题理解、数据规划、多源查询、关联分�
 | Pyroscope | 进程级 CPU/内存等持续性能剖析数据、火焰图 | Profile 查询工具，返回 profile 链接或摘要 |
 | Loki | 交换机日志、系统日志、异常上下文 | LogQL 查询工具 |
 
-## 2. 技术选型结论
+## 1.2 技术选型结论
 
-### 2.1 推荐架构
+### 1.2.1 推荐架构
 
 推荐采用“单入口 LangGraph 编排 + 多专职工具/子 Agent + 统一数据访问网关”的架构。
 
@@ -42,7 +42,7 @@ Web Chat UI
   -> Web UI 渲染文本、表格、ECharts 图表、Profile 链接
 ```
 
-### 2.2 核心选型
+### 1.2.2 核心选型
 
 | 层级 | 推荐选型 | 说明 |
 |---|---|---|
@@ -58,7 +58,7 @@ Web Chat UI
 | 状态持久化 | LangGraph Checkpointer + Redis/PostgreSQL/MySQL | 支持会话恢复、审计和重放 |
 | 权限控制 | RBAC + 数据源工具级 guardrail | 按用户、设备、租户、操作类型授权 |
 
-### 2.3 为什么选择 LangGraph
+### 1.2.3 为什么选择 LangGraph
 
 APM 异常分析不是简单的“一问一答”，而是需要多轮规划、工具调用、结果校验、必要时补充查询、最后生成报告。LangGraph 的 State、Node、Edge、Conditional Edge 与 Checkpoint 机制适合表达这类确定性骨架 + LLM 灵活决策的流程。
 
@@ -70,7 +70,7 @@ APM 异常分析不是简单的“一问一答”，而是需要多轮规划、�
 - 支持人在回路，例如高风险写操作前确认。
 - 支持中断恢复，适合长耗时诊断任务。
 
-## 3. 总体架构
+## 1.3 总体架构
 
 ```mermaid
 flowchart LR
@@ -101,7 +101,7 @@ flowchart LR
     RESP --> UI
 ```
 
-## 4. LangGraph 状态设计
+## 1.4 LangGraph 状态设计
 
 建议将整个分析过程建模为一个强类型 State。所有节点只读写自己负责的字段，便于审计与测试。
 
@@ -148,9 +148,9 @@ class APMAnalysisState(TypedDict):
     audit_events: list[dict[str, Any]]
 ```
 
-## 5. 节点设计
+## 1.5 节点设计
 
-### 5.1 `入口与上下文注入节点`
+### 1.5.1 `入口与上下文注入节点`
 
 作用：
 
@@ -168,7 +168,7 @@ class APMAnalysisState(TypedDict):
 
 - 初始 `APMAnalysisState`。
 
-### 5.2 `意图识别节点`
+### 1.5.2 `意图识别节点`
 
 作用：
 
@@ -198,7 +198,7 @@ class APMAnalysisState(TypedDict):
 }
 ```
 
-### 5.3 `上下文补全节点`
+### 1.5.3 `上下文补全节点`
 
 作用：
 
@@ -211,7 +211,7 @@ class APMAnalysisState(TypedDict):
 - 当前页面选中了端口，默认使用该端口。
 - 未提供时间范围时，默认近 1 小时，同时允许用户调整。
 
-### 5.4 `权限与策略校验节点`
+### 1.5.4 `权限与策略校验节点`
 
 作用：
 
@@ -226,7 +226,7 @@ class APMAnalysisState(TypedDict):
 - 写操作默认禁用；确需写入时只允许写 Redis 会话、任务状态、反馈记录等低风险数据。
 - 高风险操作，例如修改告警配置、静默告警，必须走人工确认节点。
 
-### 5.5 `诊断规划节点`
+### 1.5.5 `诊断规划节点`
 
 作用：
 
@@ -245,11 +245,11 @@ class APMAnalysisState(TypedDict):
 | 5 | MySQL | 历史告警和异常检测事件 | 找异常时间点 |
 | 6 | Pyroscope | 相关进程在异常时间窗口的 profile | 判断是否由控制面/采集进程 CPU 异常引起 |
 
-### 5.6 `数据采集节点组`
+### 1.5.6 `数据采集节点组`
 
 建议拆成多个专职节点，便于超时控制和并发执行。
 
-#### `mysql_query_node`
+#### 1.5.6.1 `mysql_query_node`
 
 作用：
 
@@ -264,7 +264,7 @@ def get_device_port_metadata(device_id: str, port_name: str) -> dict:
     """查询设备端口元数据、端口速率、管理状态、最近配置变更。"""
 ```
 
-#### `redis_query_node`
+#### 1.5.6.2 `redis_query_node`
 
 作用：
 
@@ -276,7 +276,7 @@ def get_device_port_metadata(device_id: str, port_name: str) -> dict:
 - key 必须在 `apm:ai:*`、`apm:realtime:*` 等白名单 namespace。
 - 写入必须设置 TTL。
 
-#### `victoriametrics_query_node`
+#### 1.5.6.3 `victoriametrics_query_node`
 
 作用：
 
@@ -291,7 +291,7 @@ def get_device_port_metadata(device_id: str, port_name: str) -> dict:
 - `switch_system_cpu_usage_ratio`
 - `switch_process_cpu_usage_ratio`
 
-#### `loki_query_node`
+#### 1.5.6.4 `loki_query_node`
 
 作用：
 
@@ -299,7 +299,7 @@ def get_device_port_metadata(device_id: str, port_name: str) -> dict:
 - 按设备、端口、进程、级别过滤。
 - 先做日志聚合和去重，再交给分析节点。
 
-#### `pyroscope_query_node`
+#### 1.5.6.5 `pyroscope_query_node`
 
 作用：
 
@@ -307,7 +307,7 @@ def get_device_port_metadata(device_id: str, port_name: str) -> dict:
 - 生成火焰图链接或提取 top 函数摘要。
 - 不建议把完整 profile 原始数据给 LLM。
 
-### 5.7 `数据校验与归一化节点`
+### 1.5.7 `数据校验与归一化节点`
 
 作用：
 
@@ -329,7 +329,7 @@ def get_device_port_metadata(device_id: str, port_name: str) -> dict:
 }
 ```
 
-### 5.8 `关联分析节点`
+### 1.5.8 `关联分析节点`
 
 作用：
 
@@ -344,7 +344,7 @@ def get_device_port_metadata(device_id: str, port_name: str) -> dict:
 - 事件对齐：配置变更、端口 flap、链路协商变化是否发生在异常前。
 - profile 关联：异常窗口进程热点是否明显变化。
 
-### 5.9 `根因推断节点`
+### 1.5.9 `根因推断节点`
 
 作用：
 
@@ -374,7 +374,7 @@ def get_device_port_metadata(device_id: str, port_name: str) -> dict:
 }
 ```
 
-### 5.10 `图表生成节点`
+### 1.5.10 `图表生成节点`
 
 作用：
 
@@ -414,7 +414,7 @@ ChartSpec 示例：
 }
 ```
 
-### 5.11 `报告生成节点`
+### 1.5.11 `报告生成节点`
 
 作用：
 
@@ -435,9 +435,9 @@ ChartSpec 示例：
 }
 ```
 
-## 6. 边的设计
+## 1.6 边的设计
 
-### 6.1 主流程边
+### 1.6.1 主流程边
 
 ```mermaid
 flowchart TD
@@ -455,7 +455,7 @@ flowchart TD
     report --> END([END])
 ```
 
-### 6.2 条件边
+### 1.6.2 条件边
 
 | 条件 | 来源节点 | 目标节点 | 说明 |
 |---|---|---|---|
@@ -466,7 +466,7 @@ flowchart TD
 | 部分数据源失败 | 数据采集节点组 | 降级分析节点 | 基于可用证据回答，并声明缺失 |
 | 结果置信度低 | 根因推断 | 澄清问题节点或报告生成 | 请求更多上下文，或输出低置信结论 |
 
-### 6.3 并发边
+### 1.6.3 并发边
 
 诊断规划完成后，以下查询可并发：
 
@@ -490,9 +490,9 @@ flowchart LR
 - VictoriaMetrics、Loki、Pyroscope 可在实体确认后并发执行。
 - Redis 实时快照可与 MySQL 并行，但返回后需与元数据对齐。
 
-## 7. 数据流转设计
+## 1.7 数据流转设计
 
-### 7.1 数据流图
+### 1.7.1 数据流图
 
 ```mermaid
 flowchart TB
@@ -524,7 +524,7 @@ flowchart TB
     N --> O["Web UI<br/>文本 + 图表 + 火焰图链接"]
 ```
 
-### 7.2 数据分层
+### 1.7.2 数据分层
 
 | 层级 | 内容 | 是否进入 LLM 上下文 |
 |---|---|---|
@@ -536,7 +536,7 @@ flowchart TB
 
 原则：LLM 看“事实摘要和证据链”，Web 图表看“结构化图表数据”，原始数据留在后端和数据源。
 
-## 8. 时序图
+## 1.8 时序图
 
 ```mermaid
 sequenceDiagram
@@ -597,9 +597,9 @@ sequenceDiagram
     Web-->>User: 展示报告、趋势图、日志摘要、火焰图链接
 ```
 
-## 9. Tool Gateway 设计
+## 1.9 Tool Gateway 设计
 
-### 9.1 目标
+### 1.9.1 目标
 
 Tool Gateway 是 LLM/Agent 与真实数据源之间的唯一通道。它负责把“模型想查什么”转换为“系统允许查什么”。
 
@@ -613,7 +613,7 @@ Tool Gateway 是 LLM/Agent 与真实数据源之间的唯一通道。它负责�
 - 审计记录：记录用户、工具名、参数摘要、耗时、结果大小。
 - 脱敏：日志中的密码、Token、SNMP community 等敏感内容必须脱敏。
 
-### 9.2 工具命名建议
+### 1.9.2 工具命名建议
 
 | 工具 | 操作 | 说明 |
 |---|---|---|
@@ -627,7 +627,7 @@ Tool Gateway 是 LLM/Agent 与真实数据源之间的唯一通道。它负责�
 | `query_profile_summary` | read Pyroscope | 查 profile 摘要 |
 | `create_chart_spec` | local | 生成图表 spec |
 
-### 9.3 禁止直接暴露的能力
+### 1.9.3 禁止直接暴露的能力
 
 - 任意 SQL 执行。
 - 任意 Redis key 扫描。
@@ -636,9 +636,9 @@ Tool Gateway 是 LLM/Agent 与真实数据源之间的唯一通道。它负责�
 - 无限制日志下载。
 - 无限制 profile 原始数据导出。
 
-## 10. 五类数据源接入方案
+## 1.10 五类数据源接入方案
 
-### 10.1 MySQL
+### 1.10.1 MySQL
 
 用途：
 
@@ -666,7 +666,7 @@ def get_recent_alerts(ctx, device_id: str, start: str, end: str, limit: int = 50
     return db.execute(stmt).mappings().all()
 ```
 
-### 10.2 Redis
+### 1.10.2 Redis
 
 用途：
 
@@ -681,7 +681,7 @@ def get_recent_alerts(ctx, device_id: str, start: str, end: str, limit: int = 50
 - 写：只允许写 `apm:ai:{tenant_id}:{conversation_id}:*`，必须 TTL。
 - 禁止：`KEYS *`、跨租户 key、无 TTL 写入。
 
-### 10.3 VictoriaMetrics
+### 1.10.3 VictoriaMetrics
 
 用途：
 
@@ -707,7 +707,7 @@ def get_recent_alerts(ctx, device_id: str, start: str, end: str, limit: int = 50
 }
 ```
 
-### 10.4 Loki
+### 1.10.4 Loki
 
 用途：
 
@@ -723,7 +723,7 @@ def get_recent_alerts(ctx, device_id: str, start: str, end: str, limit: int = 50
   - 敏感信息脱敏。
   - 限制最大行数。
 
-### 10.5 Pyroscope
+### 1.10.5 Pyroscope
 
 用途：
 
@@ -737,9 +737,9 @@ def get_recent_alerts(ctx, device_id: str, start: str, end: str, limit: int = 50
 - 查询窗口与指标异常窗口对齐。
 - 返回火焰图 URL 和 top N 热点函数，不把完整 profile 送入 LLM。
 
-## 11. 前后端接口设计
+## 1.11 前后端接口设计
 
-### 11.1 Chat 请求
+### 1.11.1 Chat 请求
 
 ```http
 POST /api/ai/chat
@@ -761,7 +761,7 @@ Content-Type: application/json
 }
 ```
 
-### 11.2 Chat 响应
+### 1.11.2 Chat 响应
 
 ```json
 {
@@ -798,7 +798,7 @@ Content-Type: application/json
 }
 ```
 
-### 11.3 流式事件
+### 1.11.3 流式事件
 
 推荐用 SSE 或 WebSocket 返回进度：
 
@@ -813,16 +813,16 @@ event: final
 data: {"summary":"...","charts":[...]}
 ```
 
-## 12. 安全设计
+## 1.12 安全设计
 
-### 12.1 权限边界
+### 1.12.1 权限边界
 
 - 用户权限由 APM 后端统一判断，Agent 不自行判断最终权限。
 - 每个工具调用都必须携带 `tenant_id`、`user_id`、`device_scope`。
 - 查询结果必须做字段级裁剪。
 - 日志和配置内容必须脱敏。
 
-### 12.2 查询安全
+### 1.12.2 查询安全
 
 - 禁止 LLM 直接执行 SQL、LogQL、MetricsQL。
 - 只允许调用业务语义工具。
@@ -830,7 +830,7 @@ data: {"summary":"...","charts":[...]}
 - 对慢查询设置超时和熔断。
 - 工具结果超过阈值时返回摘要和 data_ref，不直接返回大 payload。
 
-### 12.3 写操作安全
+### 1.12.3 写操作安全
 
 默认只允许：
 
@@ -846,7 +846,7 @@ data: {"summary":"...","charts":[...]}
 - 修改设备配置。
 - 创建自动化处置任务。
 
-### 12.4 审计
+### 1.12.4 审计
 
 每次工具调用记录：
 
@@ -861,7 +861,7 @@ data: {"summary":"...","charts":[...]}
 - 是否成功
 - 错误码
 
-## 13. 多 Agent 分工
+## 1.13 多 Agent 分工
 
 虽然底层用 LangGraph 编排，但逻辑上可以拆成多个专职 Agent/节点：
 
@@ -879,9 +879,9 @@ data: {"summary":"...","charts":[...]}
 
 建议初期不要把每个 Agent 都做成独立 LLM。MVP 阶段可以用一个 LangGraph + 少量 LLM 节点 + 多个 deterministic tool node；等业务稳定后再拆成多个专职 Agent。
 
-## 14. 分阶段实施方案
+## 1.14 分阶段实施方案
 
-### 阶段 0：准备与边界定义，1 周
+### 1.14.1 阶段 0：准备与边界定义，1 周
 
 目标：
 
@@ -902,7 +902,7 @@ data: {"summary":"...","charts":[...]}
 - 1 人负责 LangGraph 原型。
 - 1 人负责前端 AI 面板和图表协议。
 
-### 阶段 1：MVP，3-4 周
+### 1.14.2 阶段 1：MVP，3-4 周
 
 目标：
 
@@ -931,7 +931,7 @@ data: {"summary":"...","charts":[...]}
 - 报告中每条结论都有证据来源。
 - 无权限设备不可查询。
 
-### 阶段 2：扩展诊断能力，4-6 周
+### 1.14.3 阶段 2：扩展诊断能力，4-6 周
 
 目标：
 
@@ -953,7 +953,7 @@ data: {"summary":"...","charts":[...]}
 - 相似异常检索。
 - 会话 checkpoint 和恢复。
 
-### 阶段 3：半自动化处置，6-8 周
+### 1.14.4 阶段 3：半自动化处置，6-8 周
 
 目标：
 
@@ -974,7 +974,7 @@ data: {"summary":"...","charts":[...]}
 - Action 审批流。
 - 用户反馈学习闭环。
 
-### 阶段 4：平台化与优化，持续
+### 1.14.5 阶段 4：平台化与优化，持续
 
 目标：
 
@@ -989,15 +989,15 @@ data: {"summary":"...","charts":[...]}
 - 成本统计。
 - Agent 运行质量监控。
 
-## 15. 案例：端口为什么丢包
+## 1.15 案例：端口为什么丢包
 
-### 15.1 用户问题
+### 1.15.1 用户问题
 
 用户位于设备 `SW-Core-01` 的端口详情页，当前选中端口 `Gi1/0/24`，提问：
 
 > 我的端口为什么丢包？
 
-### 15.2 上下文补全
+### 1.15.2 上下文补全
 
 系统从页面上下文获得：
 
@@ -1013,7 +1013,7 @@ data: {"summary":"...","charts":[...]}
 }
 ```
 
-### 15.3 诊断计划
+### 1.15.3 诊断计划
 
 ```json
 [
@@ -1048,7 +1048,7 @@ data: {"summary":"...","charts":[...]}
 ]
 ```
 
-### 15.4 查询结果摘要
+### 1.15.4 查询结果摘要
 
 MySQL：
 
@@ -1080,7 +1080,7 @@ Pyroscope：
 
 - 本次不触发深度 profile 分析，因为系统 CPU 和关键进程 CPU 未异常。
 
-### 15.5 关联分析
+### 1.15.5 关联分析
 
 时间线：
 
@@ -1104,7 +1104,7 @@ timeline
 - 系统 CPU、内存未出现异常，基本排除系统资源饱和导致。
 - 无 link flap 日志，基本排除链路频繁抖动。
 
-### 15.6 最终回答示例
+### 1.15.6 最终回答示例
 
 ```markdown
 结论：Gi1/0/24 的丢包主要发生在出方向，最可能原因是出口队列拥塞。
@@ -1122,7 +1122,7 @@ timeline
 4. 如该端口长期接近 1Gbps，建议评估链路扩容或流量分担。
 ```
 
-### 15.7 图表输出
+### 1.15.7 图表输出
 
 前端应展示：
 
@@ -1131,9 +1131,9 @@ timeline
 - 图 3：端口出方向流量与端口速率上限对比。
 - 图 4：告警和日志事件时间线。
 
-## 16. 开发落地建议
+## 1.16 开发落地建议
 
-### 16.1 代码结构
+### 1.16.1 代码结构
 
 ```text
 apm_ai/
@@ -1171,7 +1171,7 @@ apm_ai/
       port_packet_loss.yaml
 ```
 
-### 16.2 MVP 优先级
+### 1.16.2 MVP 优先级
 
 优先做：
 
@@ -1189,7 +1189,7 @@ apm_ai/
 - 自主生成任意查询语言。
 - 原始 profile 深度解释。
 
-## 17. 风险与对策
+## 1.17 风险与对策
 
 | 风险 | 表现 | 对策 |
 |---|---|---|
@@ -1201,7 +1201,7 @@ apm_ai/
 | 团队 AI 经验不足 | 难以维护复杂 Agent | 从单用例 MVP 开始，节点保持确定性，LLM 只做必要推理 |
 | 成本失控 | 大量 token 和模型调用 | 摘要化工具结果、缓存、模型分级、流式进度 |
 
-## 18. 验收指标
+## 1.18 验收指标
 
 功能指标：
 
@@ -1224,7 +1224,7 @@ apm_ai/
 - 至少 20 个真实/模拟异常案例离线回放。
 - 每次上线前跑评测集。
 
-## 19. 推荐的第一版 LangGraph 流程
+## 1.19 推荐的第一版 LangGraph 流程
 
 第一版不要追求“完全自主 Agent”。建议采用受控图：
 
