@@ -11,14 +11,14 @@
             "id": "a768547062c9e67a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "00-待整理/APM/04 在ko加载之前挂载监控函数.md",
-                "mode": "preview",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "04 在ko加载之前挂载监控函数"
+              "icon": "diff",
+              "title": "Diff: workspace.json  (Working Tree)"
             }
           }
         ]
@@ -78,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 249.5
+    "width": 499.5
   },
   "right": {
     "id": "ef69d1c52213b7a0",
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "00-待整理/APM AI助手技术选型与演进方案.md",
+                "file": "00-待整理/APM/05 内核模块相关.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "APM AI助手技术选型与演进方案 的反向链接列表"
+              "title": "05 内核模块相关 的反向链接列表"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "00-待整理/APM AI助手技术选型与演进方案.md",
+                "file": "00-待整理/APM/05 内核模块相关.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "APM AI助手技术选型与演进方案 的出链列表"
+              "title": "05 内核模块相关 的出链列表"
             }
           },
           {
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-待整理/APM/04 在ko加载之前挂载监控函数.md",
+                "file": "00-待整理/APM/05 内核模块相关.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "04 在ko加载之前挂载监控函数 的大纲"
+              "title": "05 内核模块相关 的大纲"
             }
           },
           {
@@ -180,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 862.5
+    "width": 621.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -198,12 +198,13 @@
       "pdf-plus:PDF++: Toggle auto-paste": false
     }
   },
-  "active": "57ce1a7351306cdb",
+  "active": "a768547062c9e67a",
   "lastOpenFiles": [
-    "00-待整理/APM/03 指定KO监控.md",
+    "00-待整理/APM/05 内核模块相关.md",
     "00-待整理/APM/04 在ko加载之前挂载监控函数.md",
-    "00-待整理/APM/02 监控核心函数.md",
     "00-待整理/APM/01 内核内存监控.md",
+    "00-待整理/APM/03 指定KO监控.md",
+    "00-待整理/APM/02 监控核心函数.md",
     "00-待整理/工作计划/BUG分析.md",
     "00-待整理/APM",
     "02-项目资料/目录整理.md",
@@ -236,7 +237,6 @@
     "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph多Agent完整设计文档.md",
     "00-待整理/LangGraph知识点学习/AI助手设计文档-增加多轮对话版本.md",
     "00-待整理/LangGraph知识点学习/AI助手设计文档.md",
-    "00-待整理/LangGraph知识点学习/LangGraph网络运维Agent四阶段知识点.md",
     "00-待整理/LangGraph知识点学习/新建文本文档.txt",
     "00-待整理/灵感",
     "附件资料/Pasted image 20260701124916.png",
