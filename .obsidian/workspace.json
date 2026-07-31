@@ -4,39 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "92920b45fb0efa31",
+        "id": "385b666151ad358e",
         "type": "tabs",
         "children": [
           {
-            "id": "3c25ada162191b97",
+            "id": "c452c01591776f47",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "00-待整理/工作计划/未命名.md",
+                "file": "00-待整理/多轮对话场景/LangGraph多轮对话三节点设计.md",
                 "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "未命名"
-            }
-          },
-          {
-            "id": "db238b7de14d1c99",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "生活相关/减肥/减肥计划.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "减肥计划"
+              "title": "LangGraph多轮对话三节点设计"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 371.5
+    "width": 242.5
   },
   "right": {
     "id": "ef69d1c52213b7a0",
@@ -181,13 +166,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "00-待整理/LangGraph知识点学习/多节点，多任务并行例子.md",
+                "file": "00-待整理/多轮对话场景/多轮对话场景.md",
                 "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "多节点，多任务并行例子 的大纲"
+              "title": "多轮对话场景 的大纲"
             }
           },
           {
@@ -201,7 +186,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -225,36 +210,77 @@
       "recent-notes:Recent notes": false
     }
   },
-  "active": "db238b7de14d1c99",
+  "floating": {
+    "id": "405a31f9a7613c06",
+    "type": "floating",
+    "children": [
+      {
+        "id": "d2bfbff833fcd82e",
+        "type": "window",
+        "children": [
+          {
+            "id": "3e05dad9ff5c8cfc",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "3c25ada162191b97",
+                "type": "leaf",
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "00-待整理/多轮对话场景/多轮对话场景.md",
+                    "mode": "preview",
+                    "source": false
+                  },
+                  "icon": "lucide-file",
+                  "title": "多轮对话场景"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 931,
+        "y": 20,
+        "width": 698,
+        "height": 1369,
+        "maximize": true,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "3c25ada162191b97",
   "lastOpenFiles": [
-    "0.md",
-    "生活相关/减肥/减肥计划.md",
-    "生活相关/减肥",
-    "生活相关",
-    "00-待整理/工作计划/测试用例.md",
+    "00-待整理/多轮对话场景/LangGraph多轮对话三节点设计.md",
+    "00-待整理/多轮对话场景/多轮对话场景.md",
+    "00-待整理/00 - 灵感/灵感收集.md",
+    "04-知识库/APM 配置相关.md",
+    "00-待整理/多轮对话场景",
+    "00-待整理/未命名.md",
     "00-待整理/工作计划/未命名.md",
-    "00-待整理/工作计划/下一阶段的计划.md",
+    "04-知识库/vscode相关/VSCODE 插件 配置.md",
+    "04-知识库/vscode相关",
+    "00-待整理/工作计划/测试用例.md",
+    "00-待整理/多意图场景分析/04-意图数据库太大的处理方案.md",
+    "00-待整理/多意图场景分析/参数提取标准化.md",
+    "00-待整理/多意图场景分析/02-单一意图思路.md",
+    "00-待整理/多意图场景分析/03-未命中的场景.md",
     "00-待整理/多意图场景分析/意图.md",
     "00-待整理/多意图场景分析/01- 意图场景.md",
-    "00-待整理/多意图场景分析/02-单一意图思路.md",
+    "生活相关/减肥/减肥计划.md",
+    "00-待整理/工作计划/下一阶段的计划.md",
+    "00-待整理/工作计划/BUG分析.md",
+    "00-待整理/工作室/游戏区选择.md",
+    "00-待整理/LangGraph知识点学习/草稿.md",
+    "0.md",
+    "生活相关/减肥",
+    "生活相关",
     "00-待整理/APM/嵌入式系统启动.md",
     "00-待整理/APM/未命名.md",
     "00-待整理/APM/09 在initramfs阶段启动的demo.md",
     "00-待整理/APM/10 - ebpf依赖.md",
     "00-待整理/APM/确保可行性.md",
     "00-待整理/APM/02 监控核心函数.md",
-    "00-待整理/APM/01 内核内存监控.md",
-    "00-待整理/APM/03 指定KO监控.md",
-    "00-待整理/LangGraph知识点学习/模糊意图处理.md",
-    "00-待整理/多意图场景分析/参数提取标准化.md",
-    "00-待整理/多意图场景分析/04-意图数据库太大的处理方案.md",
-    "00-待整理/多意图场景分析/03-未命中的场景.md",
-    "00-待整理/提示词构建/参数映射提示词构建.md",
-    "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph技术选型与实施方案-v2.md",
-    "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph多Agent完整设计文档.md",
-    "00-待整理/LangGraph知识点学习/LangGraph网络运维Agent四阶段知识点.md",
-    "00-待整理/LangGraph知识点学习/ReAct和Function-calling.md",
-    "00-待整理/LangGraph知识点学习/意图.md",
     "附件资料/Pasted image 20260711160854.png",
     "附件资料/Pasted image 20260711160835.png",
     "附件资料/Pasted image 20260711160742.png",
@@ -268,8 +294,6 @@
     "00-待整理/多意图场景分析/未命名",
     "未命名.canvas",
     "未命名.base",
-    "00-待整理/多意图场景分析",
-    "00-待整理/关键点",
     "附件资料/Pasted image 20260707102449.png",
     "附件资料/Pasted image 20260701124916.png",
     "Pasted image 20260630141107.png"
