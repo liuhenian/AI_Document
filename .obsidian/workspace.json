@@ -11,14 +11,14 @@
             "id": "a768547062c9e67a",
             "type": "leaf",
             "state": {
-              "type": "split-diff-view",
+              "type": "markdown",
               "state": {
-                "aFile": ".obsidian/workspace.json",
-                "bFile": ".obsidian/workspace.json",
-                "aRef": ""
+                "file": "03-职责领域/新建 Markdown.md",
+                "mode": "preview",
+                "source": false
               },
-              "icon": "diff",
-              "title": "Diff: workspace.json  (Working Tree)"
+              "icon": "lucide-file",
+              "title": "新建 Markdown"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -78,7 +80,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 499.5
+    "width": 369.5
   },
   "right": {
     "id": "ef69d1c52213b7a0",
@@ -180,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 621.5
+    "width": 357.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -200,6 +202,15 @@
   },
   "active": "a768547062c9e67a",
   "lastOpenFiles": [
+    "00-待整理/LangGraph知识点学习/知识点.md",
+    "03-职责领域/新建 Markdown.md",
+    "00-待整理/LangGraph知识点学习/AI助手设计文档.md",
+    "00-待整理/LangGraph知识点学习/AI助手设计文档-增加多轮对话版本.md",
+    "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph多Agent完整设计文档.md",
+    "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph技术选型与实施方案.md",
+    "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph技术选型与实施方案-v2.md",
+    "00-待整理/多agent之间如何交互/langGraph中不同agent之间交互方式.md",
+    "00-待整理/00 - 灵感/灵感收集.md",
     "00-待整理/APM/05 内核模块相关.md",
     "00-待整理/APM/04 在ko加载之前挂载监控函数.md",
     "00-待整理/APM/01 内核内存监控.md",
@@ -221,22 +232,13 @@
     "00-待整理/demo 搭建",
     "00-待整理/LangGraph知识点学习/模糊意图处理.md",
     "00-待整理/LangGraph知识点学习/数据结构的设计初稿.md",
-    "00-待整理/LangGraph知识点学习/完整流程.md",
-    "00-待整理/LangGraph知识点学习/多节点，多任务并行例子.md",
-    "00-待整理/LangGraph知识点学习/多任务并行.md",
-    "00-待整理/AP相关.md",
     "附件资料/Pasted image 20260711160854.png",
     "附件资料/Pasted image 20260711160835.png",
     "附件资料/Pasted image 20260711160742.png",
     "附件资料/Pasted image 20260711155809.png",
     "附件资料/Pasted image 20260711155717.png",
     "附件资料/Pasted image 20260711155708.png",
-    "00-待整理/工作室/游戏硬件.md",
-    "00-待整理/00 - 灵感/灵感收集.md",
     "00-待整理/工作室",
-    "00-待整理/LangGraph知识点学习/APM-AI助手-LangGraph多Agent完整设计文档.md",
-    "00-待整理/LangGraph知识点学习/AI助手设计文档-增加多轮对话版本.md",
-    "00-待整理/LangGraph知识点学习/AI助手设计文档.md",
     "00-待整理/LangGraph知识点学习/新建文本文档.txt",
     "00-待整理/灵感",
     "附件资料/Pasted image 20260701124916.png",
