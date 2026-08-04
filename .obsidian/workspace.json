@@ -57,12 +57,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "01-每日记录/Readme.md",
+                "file": "生活相关/减肥/减肥计划.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Readme"
+              "title": "减肥计划"
             }
           }
         ],
@@ -86,7 +86,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "文件列表"
@@ -254,8 +256,9 @@
       "recent-notes:Recent notes": false
     }
   },
-  "active": "57ce1a7351306cdb",
+  "active": "1d43574cbb2e6096",
   "lastOpenFiles": [
+    "01-每日记录/Readme.md",
     "00-待整理/APM/未命名 1.md",
     "00-待整理/APM/AP920_strip_symbol_size_report.md",
     "00-待整理/多轮对话场景/多轮对话场景.md",
@@ -285,7 +288,6 @@
     "0.md",
     "生活相关/减肥",
     "生活相关",
-    "00-待整理/APM/嵌入式系统启动.md",
     "附件资料/Pasted image 20260711160854.png",
     "附件资料/Pasted image 20260711160835.png",
     "附件资料/Pasted image 20260711160742.png",
