@@ -1,0 +1,8 @@
+/* 让所有表格在页面中水平居中 */
+.markdown-source-view.mod-cm6 .cm-table-widget,
+.markdown-reading-view .markdown-preview-view table,
+.markdown-preview-view table {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: auto !important;  /* 表格宽度根据内容自适应，不占满全屏 */
+}

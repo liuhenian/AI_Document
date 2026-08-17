@@ -2,9 +2,10 @@
   "theme": "obsidian",
   "cssTheme": "Minimal",
   "baseFontSizeAction": true,
-  "baseFontSize": 16,
+  "baseFontSize": 15,
   "enabledCssSnippets": [
-    "minimal-headings"
+    "minimal-headings",
+    "table-center"
   ],
   "accentColor": ""
 }
