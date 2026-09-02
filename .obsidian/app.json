@@ -5,5 +5,12 @@
   "strictLineBreaks": false,
   "showLineNumber": true,
   "autoConvertHtml": true,
-  "attachmentFolderPath": "附件资料"
+  "attachmentFolderPath": "附件资料",
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "Tabloid",
+    "landscape": false,
+    "margin": "2",
+    "downscalePercent": 100
+  }
 }
