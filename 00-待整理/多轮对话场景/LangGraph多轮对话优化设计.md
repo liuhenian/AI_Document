@@ -1,10 +1,10 @@
-# LangGraph 多轮对话优化设计
+# 1 LangGraph 多轮对话优化设计
 
 > 基于《LangGraph多轮对话三节点设计.md》优化。核心变化：将原来的 **会话管理节点** 和 **意图解析节点** 合并为一次 LLM 调用的 **对话理解节点**，降低链路耗时；参数提取和任务规划继续拆开，保证结构化参数质量和后续执行稳定性。
 
 ---
 
-## 1. 设计目标
+## 1.1 设计目标
 
 原设计链路：
 
@@ -30,7 +30,7 @@
 
 ---
 
-## 2. 八大意图定义
+## 1.2 八大意图定义
 
 原始文档中“上下文继承/省略场景”只有一个子场景，工程上更适合并入“追问与上下文继承意图”。因此本文按 8 大意图组织，但覆盖原表全部 27 个子场景。
 
@@ -47,9 +47,9 @@
 
 ---
 
-## 3. 完整 State 设计
+## 1.3 完整 State 设计
 
-### 3.1 AgentState
+### 1.3.1 AgentState
 
 ```python
 class AgentState(TypedDict, total=False):
@@ -104,7 +104,7 @@ class AgentState(TypedDict, total=False):
     next_stage: str                                        # 下一跳节点名称，由各节点写入，供条件边路由使用
 ```
 
-### 3.2 枚举字段
+### 1.3.2 枚举字段
 
 ```python
 DialoguePhase = Literal[
@@ -149,7 +149,7 @@ IntentCategory = Literal[
 ]
 ```
 
-### 3.3 PreRouteResult
+### 1.3.3 PreRouteResult
 
 ```python
 class PreRouteResult(TypedDict):
@@ -163,7 +163,7 @@ class PreRouteResult(TypedDict):
 
 说明：`pre_route` 是低成本规则结果。它只处理强规则场景，例如“确认”“重试”“谢谢”“设备A”“90%”这类短澄清回复。规则不确定时，必须把 `should_call_llm` 设为 `true`，交给对话理解节点。
 
-### 3.4 ConversationUnderstandingResult
+### 1.3.4 ConversationUnderstandingResult
 
 ```python
 class ConversationUnderstandingResult(TypedDict):
@@ -189,7 +189,7 @@ class ConversationUnderstandingResult(TypedDict):
 
 说明：合并后的对话理解节点一次性输出“当前输入和上下文的关系”以及“要生成或更新哪些意图”。`session_event` 解决原会话管理问题，`parsed_intents` 解决原意图解析问题。
 
-### 3.5 ParsedIntent
+### 1.3.5 ParsedIntent
 
 ```python
 class ParsedIntent(TypedDict, total=False):
@@ -231,7 +231,7 @@ class ParsedIntent(TypedDict, total=False):
     ]
 ```
 
-### 3.6 ParameterResult
+### 1.3.6 ParameterResult
 
 ```python
 class ParameterResult(TypedDict, total=False):
@@ -259,7 +259,7 @@ class ParameterResult(TypedDict, total=False):
     extra_context: Dict[str, Any]          # 额外上下文，如异常窗口、关联依据、指标别名解释
 ```
 
-### 3.7 ClarificationRequest
+### 1.3.7 ClarificationRequest
 
 ```python
 class ClarificationRequest(TypedDict):
@@ -272,7 +272,7 @@ class ClarificationRequest(TypedDict):
     retry_count: int                # 同一澄清问题已追问次数，防止无限追问
 ```
 
-### 3.8 ContextFrame
+### 1.3.8 ContextFrame
 
 ```python
 class ContextFrame(TypedDict):
@@ -283,7 +283,7 @@ class ContextFrame(TypedDict):
     pushed_turn_id: str                          # 该上下文帧被压入栈的轮次 ID
 ```
 
-### 3.9 PlannerInput
+### 1.3.9 PlannerInput
 
 ```python
 class PlannerInput(TypedDict):
@@ -296,7 +296,7 @@ class PlannerInput(TypedDict):
 
 ---
 
-## 4. 从意图解析到任务规划前的完整流程
+## 1.4 从意图解析到任务规划前的完整流程
 
 ```mermaid
 flowchart TD
@@ -327,9 +327,9 @@ flowchart TD
 
 ---
 
-## 5. 通用节点 State 输入输出
+## 1.5 通用节点 State 输入输出
 
-### 5.1 规则预路由节点
+### 1.5.1 规则预路由节点
 
 ```mermaid
 flowchart TD
@@ -371,7 +371,7 @@ flowchart TD
 | `pre_route.target_intent_id` | 规则定位到的目标意图 |
 | `next_stage` | `conversation_understanding`、`parameter_extraction`、`feedback_response` 等 |
 
-### 5.2 对话理解节点
+### 1.5.2 对话理解节点
 
 ```mermaid
 flowchart TD
@@ -420,7 +420,7 @@ flowchart TD
 | `extraction_targets` | 下一步需要参数提取的意图 ID |
 | `next_stage` | 通常为 `parameter_extraction` |
 
-### 5.3 参数提取节点
+### 1.5.3 参数提取节点
 
 ```mermaid
 flowchart TD
@@ -463,7 +463,7 @@ flowchart TD
 | `planner_input` | 参数完整时准备规划输入 |
 | `next_stage` | `parameter_validation_router` |
 
-### 5.4 参数校验与路由节点
+### 1.5.4 参数校验与路由节点
 
 ```mermaid
 flowchart TD
@@ -504,9 +504,9 @@ flowchart TD
 
 ---
 
-## 6. 八大意图的节点流程与 State
+## 1.6 八大意图的节点流程与 State
 
-### 6.1 I1 澄清意图
+### 1.6.1 I1 澄清意图
 
 覆盖场景：缺少必要实体、实体指代歧义、指标名称模糊、条件不充分、操作超出范围。
 
@@ -589,7 +589,7 @@ State 示例：
 }
 ```
 
-### 6.2 I2 追问与上下文继承意图
+### 1.6.2 I2 追问与上下文继承意图
 
 覆盖场景：指标细化、时间窗口调整、增加实体范围、对比追加、原因追问、操作建议、实体省略。
 
@@ -674,7 +674,7 @@ State 示例：
 }
 ```
 
-### 6.3 I3 上下文切换意图
+### 1.6.3 I3 上下文切换意图
 
 覆盖场景：话题重置、回溯历史意图、多话题交替。
 
@@ -759,7 +759,7 @@ State 示例：
 }
 ```
 
-### 6.4 I4 确认与修正意图
+### 1.6.4 I4 确认与修正意图
 
 覆盖场景：显式确认、隐式确认、用户主动修正。
 
@@ -836,7 +836,7 @@ State 示例：
 }
 ```
 
-### 6.5 I5 反馈与重试意图
+### 1.6.5 I5 反馈与重试意图
 
 覆盖场景：正面/负面反馈、要求重试。
 
@@ -910,7 +910,7 @@ State 示例：
 }
 ```
 
-### 6.6 I6 中断与恢复意图
+### 1.6.6 I6 中断与恢复意图
 
 覆盖场景：用户中断、系统中断。
 
@@ -982,7 +982,7 @@ State 示例：
 }
 ```
 
-### 6.7 I7 复合意图交替
+### 1.6.7 I7 复合意图交替
 
 覆盖场景：澄清回复 + 新意图。
 
@@ -1065,7 +1065,7 @@ State 示例：
 }
 ```
 
-### 6.8 I8 领域深化与策略意图
+### 1.6.8 I8 领域深化与策略意图
 
 覆盖场景：异常分析深化、多数据源关联、基线/阈值定制、批量与迭代过滤。
 
@@ -1167,7 +1167,7 @@ State 示例：
 
 ---
 
-## 7. 任务规划前的 PlannerInput 边界
+## 1.7 任务规划前的 PlannerInput 边界
 
 ```mermaid
 flowchart TD
@@ -1210,7 +1210,7 @@ PlannerInput 示例：
 
 ---
 
-## 8. 推荐 LangGraph 结构
+## 1.8 推荐 LangGraph 结构
 
 ```python
 builder.add_node("pre_route", pre_route_node)
@@ -1254,7 +1254,7 @@ builder.add_conditional_edges(
 
 ---
 
-## 9. 性能优化建议
+## 1.9 性能优化建议
 
 | 优化点 | 建议 |
 |---|---|
