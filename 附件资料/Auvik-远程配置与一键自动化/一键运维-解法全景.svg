@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 700" width="1520" height="700">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.2;stroke-linecap:round}
+.gy2{fill:none;stroke:#DDE1E5;stroke-width:1.2;stroke-linecap:round;stroke-dasharray:5 5}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.6}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1}
+.hair{fill:none;stroke:#E6E9EC;stroke-width:1}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:12px;fill:#2F3437}
+.t13{font-size:13px}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:11px;fill:#9AA0A6}
+.a11{fill:#C0392B;font-size:11px}
+.act{fill:#C0392B}
+.mid{text-anchor:middle}
+</style>
+<rect width="1520" height="700" fill="#FFFFFF"/>
+
+<!-- S2 Command Runner -->
+<text x="270" y="80" class="t act">S2</text>
+<rect x="270" y="90" width="420" height="110" rx="6" class="box"/>
+<text x="288" y="124" class="t">Command Runner</text>
+<text x="288" y="148" class="s">直接下发命令（含 PowerShell），不发起远程会话</text>
+<text x="288" y="178" class="t act">一个刷 DNS 的问题，不再需要接管屏幕</text>
+<line x1="270" y1="145" x2="150" y2="145" class="gy2"/>
+<line x1="150" y1="145" x2="150" y2="292" class="gy2"/>
+<polygon points="150,300 145,290 155,290" fill="#B6BBC1"/>
+
+<!-- 终端 -->
+<rect x="70" y="300" width="150" height="90" rx="6" class="box"/>
+<text x="145" y="340" class="t mid">服务器 / 工作站</text>
+<text x="145" y="362" class="s mid">被管理终端</text>
+<line x1="220" y1="350" x2="262" y2="350" class="ln"/>
+<polygon points="270,350 258,356 258,344" fill="#2F3437"/>
+
+<!-- S1 Quick Actions -->
+<text x="270" y="230" class="t act">S1</text>
+<rect x="270" y="240" width="420" height="230" rx="6" class="box"/>
+<text x="288" y="266" class="s">10 步 → 1 次点击</text>
+<rect x="288" y="278" width="88" height="32" rx="4" class="chip"/>
+<text x="332" y="299" class="s mid">重启</text>
+<rect x="388" y="278" width="88" height="32" rx="4" class="chip"/>
+<text x="432" y="299" class="s mid">关机</text>
+<rect x="488" y="278" width="88" height="32" rx="4" class="chip"/>
+<text x="532" y="299" class="s mid">睡眠</text>
+<rect x="588" y="278" width="88" height="32" rx="4" class="chip"/>
+<text x="632" y="299" class="s mid">锁定</text>
+<rect x="288" y="322" width="88" height="32" rx="4" class="chip"/>
+<text x="332" y="343" class="s mid">刷 DNS</text>
+<rect x="388" y="322" width="88" height="32" rx="4" class="chip"/>
+<text x="432" y="343" class="s mid">续租 DHCP</text>
+<rect x="488" y="322" width="88" height="32" rx="4" class="chip"/>
+<text x="532" y="343" class="s mid">清临时文件</text>
+<rect x="588" y="322" width="88" height="32" rx="4" class="chip"/>
+<text x="632" y="343" class="s mid">启停服务</text>
+<text x="288" y="390" class="s">「知道怎么修」不再是前提 —— 动作是成品</text>
+<text x="288" y="416" class="t a11">处置质量与人的熟练度解耦</text>
+
+<!-- S3 审计 -->
+<line x1="480" y1="470" x2="480" y2="512" class="gy"/>
+<polygon points="480,520 474,508 486,508" fill="#B6BBC1"/>
+<text x="270" y="510" class="t act">S3</text>
+<rect x="270" y="520" width="420" height="140" rx="6" class="box"/>
+<text x="288" y="552" class="t">全部动作进审计日志</text>
+<text x="288" y="578" class="s">All Quick Actions are recorded in the User Activity logs</text>
+<text x="288" y="608" class="t">命令何时发出、会话何时开关，均可查看</text>
+<text x="288" y="634" class="s">「谁在什么时候对哪台机器做了什么」可回查</text>
+
+<!-- S4 网络设备侧替代路径 -->
+<text x="760" y="230" class="t act">S4</text>
+<rect x="760" y="240" width="300" height="230" rx="6" class="box"/>
+<text x="780" y="272" class="t">网络设备侧：两条替代路径</text>
+<text x="780" y="306" class="t">Remote Command widget</text>
+<text x="780" y="326" class="s">单行命令，不必开完整会话</text>
+<text x="780" y="362" class="t">Network Automation</text>
+<text x="780" y="382" class="s">命令变模板，批量、可计划</text>
+<line x1="780" y1="404" x2="1040" y2="404" class="hair"/>
+<text x="780" y="430" class="t a11">缺口：一键端口重启 / PoE 下电重上</text>
+<text x="780" y="450" class="s">这一层仍然要靠人敲命令</text>
+<line x1="1060" y1="350" x2="1102" y2="350" class="gy"/>
+<polygon points="1110,350 1098,356 1098,344" fill="#B6BBC1"/>
+<rect x="1110" y="300" width="150" height="100" rx="6" class="box"/>
+<text x="1185" y="348" class="t mid">网络设备</text>
+<text x="1185" y="370" class="s mid">无现成按钮</text>
+<text x="760" y="494" class="t a11">但「一键端口重启 / PoE 下电重上」官方并未提供</text>
+<text x="760" y="514" class="s">官方只在一篇教育行业博客里把它作为倡议提出，而非已具备的能力</text>
+</svg>

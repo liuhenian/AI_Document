@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" width="1600" height="940">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.8;stroke-linecap:round}
+.ln2{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.4;stroke-linecap:round}
+.gy2{fill:none;stroke:#DDE1E5;stroke-width:1.4;stroke-linecap:round}
+.ac2{fill:none;stroke:#C0392B;stroke-width:1.8;stroke-linecap:round}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.8}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.dt{stroke-dasharray:7 6}
+.dl{stroke-dasharray:5 5}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:15px;font-weight:600;fill:#22282C}
+.t13{font-size:17px;font-weight:700}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:13px;font-weight:500;fill:#7F868D}
+.act{fill:#C0392B}
+.a11{fill:#C0392B;font-size:13px;font-weight:700}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.q{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:22px;font-weight:600;fill:#C9CED4}
+</style>
+<rect width="1600" height="940" fill="#FFFFFF"/>
+
+<!-- ============ P1 通了 不等于 能用 ============ -->
+<text x="80" y="108" class="s">运维看到的</text>
+<rect x="80" y="122" width="240" height="180" rx="8" class="box"/>
+<polyline points="98,150 104,157 118,140" class="ln2"/>
+<rect x="130" y="144" width="130" height="12" rx="3" fill="#DDE1E5"/>
+<polyline points="98,188 104,195 118,178" class="ln2"/>
+<rect x="130" y="182" width="104" height="12" rx="3" fill="#DDE1E5"/>
+<polyline points="98,226 104,233 118,216" class="ln2"/>
+<rect x="130" y="220" width="150" height="12" rx="3" fill="#DDE1E5"/>
+<polyline points="98,264 104,271 118,254" class="ln2"/>
+<rect x="130" y="258" width="118" height="12" rx="3" fill="#DDE1E5"/>
+<text x="200" y="284" class="s mid">全部正常 · 无告警</text>
+
+<text x="370" y="108" class="s">用户经历的</text>
+<rect x="370" y="122" width="190" height="168" rx="8" class="box"/>
+<circle cx="398" cy="156" r="11" fill="none" stroke="#B6BBC1" stroke-width="1.4"/>
+<rect x="392" y="188" width="146" height="38" rx="5" class="chip"/>
+<text x="462" y="214" class="t mid">登录</text>
+<line x1="516" y1="192" x2="534" y2="210" class="ac2"/>
+<line x1="534" y1="192" x2="516" y2="210" class="ac2"/>
+<rect x="392" y="238" width="146" height="38" rx="5" class="chip"/>
+<text x="462" y="264" class="t mid">下单</text>
+<line x1="516" y1="242" x2="534" y2="260" class="ac2"/>
+<line x1="534" y1="242" x2="516" y2="260" class="ac2"/>
+
+<text x="70" y="352" class="t13 act">P1</text>
+<text x="104" y="352" class="t13">「通了」不等于「能用」</text>
+<text x="104" y="380" class="s">Ping 通、首页 200，用户却登不进去、下不了单</text>
+
+<!-- ============ P2 故障在别人的地盘 ============ -->
+<line x1="850" y1="134" x2="850" y2="306" class="gy dt"/>
+<text x="858" y="126" class="s">自己控制不了的那半条路</text>
+<rect x="610" y="196" width="180" height="76" rx="8" class="box"/>
+<text x="700" y="242" class="t mid">自己的系统</text>
+<line x1="792" y1="234" x2="826" y2="234" class="ln2"/>
+<polygon points="838,234 822,241 822,227" fill="#2F3437"/>
+<line x1="850" y1="163" x2="876" y2="163" class="gy dl"/>
+<line x1="850" y1="215" x2="876" y2="215" class="gy dl"/>
+<line x1="850" y1="267" x2="876" y2="267" class="gy dl"/>
+<rect x="880" y="142" width="250" height="42" rx="5" class="chip"/>
+<text x="995" y="170" class="t mid">DNS 服务商</text>
+<rect x="880" y="194" width="250" height="42" rx="5" class="chip"/>
+<text x="995" y="222" class="t mid">CDN / 云区域</text>
+<rect x="880" y="246" width="250" height="42" rx="5" class="chip"/>
+<text x="995" y="274" class="t mid">支付 / 登录 API</text>
+<line x1="1091" y1="258" x2="1109" y2="276" class="ac2"/>
+<line x1="1109" y1="258" x2="1091" y2="276" class="ac2"/>
+<text x="610" y="306" class="s">问题在供应商一侧，你这里没有探针</text>
+
+<text x="600" y="352" class="t13 act">P2</text>
+<text x="634" y="352" class="t13">故障在别人的地盘，自己最后一个知道</text>
+<text x="634" y="380" class="s">供应商挂了，被骂的却是自己</text>
+
+<!-- ============ P3 确定性事故 ============ -->
+<rect x="1160" y="150" width="210" height="64" rx="8" class="box"/>
+<text x="1180" y="180" class="t">SSL 证书</text>
+<text x="1180" y="204" class="a11">剩余 0 天</text>
+<line x1="1321" y1="173" x2="1339" y2="191" class="ac2"/>
+<line x1="1339" y1="173" x2="1321" y2="191" class="ac2"/>
+<rect x="1160" y="226" width="210" height="64" rx="8" class="box"/>
+<text x="1180" y="256" class="t">DNS 记录</text>
+<text x="1180" y="280" class="a11">被误改 / 被劫持</text>
+<line x1="1321" y1="249" x2="1339" y2="267" class="ac2"/>
+<line x1="1339" y1="249" x2="1321" y2="267" class="ac2"/>
+<path d="M1420,220 q0,-32 20,-32 q20,0 20,32 z" fill="none" stroke="#B6BBC1" stroke-width="1.4"/>
+<line x1="1414" y1="220" x2="1466" y2="220" stroke="#B6BBC1" stroke-width="1.4"/>
+<path d="M1430,226 a6,6 0 0 0 12,0" fill="none" stroke="#B6BBC1" stroke-width="1.4"/>
+<line x1="1412" y1="238" x2="1468" y2="166" class="ac2"/>
+<text x="1440" y="262" class="s mid">没有前置告警</text>
+
+<text x="1160" y="352" class="t13 act">P3</text>
+<text x="1194" y="352" class="t13">本可预知的确定性事故仍在生产上炸</text>
+<text x="1194" y="380" class="s">证书到期 · 记录被误改 · 域名被劫持</text>
+
+<!-- ============ P4 新协议盲区 ============ -->
+<rect x="90" y="500" width="230" height="192" rx="8" class="box"/>
+<text x="112" y="544" class="t">监控面板</text>
+<rect x="112" y="564" width="186" height="44" rx="5" class="chip"/>
+<polyline points="128,578 134,585 148,568" class="ln2"/>
+<text x="160" y="592" class="t">HTTP 首页</text>
+<text x="112" y="652" class="s">业务已经跑在新协议上</text>
+<text x="112" y="676" class="s">这里配的测试，仅此一项</text>
+
+<rect x="360" y="500" width="310" height="68" rx="8" class="chip"/>
+<text x="382" y="538" class="t">视频 / HLS · DASH</text>
+<text x="382" y="560" class="s">起播慢 · 反复缓冲</text>
+<rect x="360" y="584" width="310" height="68" rx="8" class="chip"/>
+<text x="382" y="622" class="t">WebSocket</text>
+<text x="382" y="644" class="s">断连 · 重连</text>
+<rect x="360" y="668" width="310" height="68" rx="8" class="chip"/>
+<text x="382" y="706" class="t">MQTT（IoT 设备）</text>
+<text x="382" y="728" class="s">掉线</text>
+<rect x="360" y="752" width="310" height="68" rx="8" class="chip"/>
+<text x="382" y="790" class="t">TCP 端口</text>
+<text x="382" y="812" class="s">通，但业务不可用</text>
+
+<line x1="700" y1="508" x2="700" y2="820" class="ac2 dl"/>
+<line x1="700" y1="508" x2="713" y2="508" class="ac2 dl"/>
+<line x1="700" y1="820" x2="713" y2="820" class="ac2 dl"/>
+<text x="722" y="668" class="s">没有可看的指标</text>
+
+<text x="70" y="878" class="t13 act">P4</text>
+<text x="104" y="878" class="t13">业务跑在新协议上，监控却停在首页</text>
+<text x="104" y="906" class="s">起播慢 · 反复缓冲 · WS 断连 · MQTT 掉线 · 端口通但不可用</text>
+
+<!-- ============ P5 慢 与 坏 只报一种 ============ -->
+<rect x="880" y="500" width="330" height="270" rx="8" class="box"/>
+<rect x="892" y="512" width="306" height="32" rx="4" class="chip"/>
+<circle cx="908" cy="528" r="3.5" fill="#C9CED4"/>
+<circle cx="921" cy="528" r="3.5" fill="#C9CED4"/>
+<circle cx="934" cy="528" r="3.5" fill="#C9CED4"/>
+<rect x="892" y="556" width="306" height="62" rx="4" class="chip"/>
+<rect x="892" y="630" width="146" height="62" rx="4" class="chip"/>
+<line x1="956" y1="652" x2="974" y2="670" class="ac2"/>
+<line x1="974" y1="652" x2="956" y2="670" class="ac2"/>
+<rect x="1052" y="630" width="146" height="62" rx="4" fill="#FFFFFF" stroke="#C9CED4" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text x="1125" y="672" class="q mid">?</text>
+<rect x="892" y="704" width="306" height="52" rx="4" class="chip"/>
+
+<rect x="1250" y="516" width="310" height="230" rx="8" class="box"/>
+<text x="1274" y="558" class="t">可用性报表</text>
+<line x1="1274" y1="576" x2="1536" y2="576" class="gy2"/>
+<text x="1274" y="616" class="t">响应码 200</text>
+<polyline points="1488,604 1494,611 1508,594" class="ln2"/>
+<text x="1274" y="656" class="t">可用性 100%</text>
+<polyline points="1488,644 1494,651 1508,634" class="ln2"/>
+<text x="1274" y="696" class="t">内容完整性</text>
+<rect x="1476" y="674" width="52" height="28" rx="4" fill="#FFFFFF" stroke="#C9CED4" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text x="1502" y="696" class="q mid">?</text>
+<text x="1274" y="732" class="s">报表里没有这一栏</text>
+
+<text x="850" y="878" class="t13 act">P5</text>
+<text x="884" y="878" class="t13">「慢」和「坏」只报得出来一种</text>
+<text x="884" y="906" class="s">可用性 100%，功能已残废 —— 报表上完全隐身</text>
+</svg>

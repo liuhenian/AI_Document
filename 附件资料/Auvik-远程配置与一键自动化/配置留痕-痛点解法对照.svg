@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" width="1200" height="600">
+<style>
+.cn{fill:none;stroke:#B6BBC1;stroke-width:1.3}
+.cna{fill:none;stroke:#C0392B;stroke-width:1.5;stroke-dasharray:6 5}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:12px;fill:#2F3437}
+.t13{font-size:13px}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:11px;fill:#9AA0A6}
+.act{fill:#C0392B}
+.end{text-anchor:end}
+.mid{text-anchor:middle}
+</style>
+<rect width="1200" height="600" fill="#FFFFFF"/>
+<text x="70" y="70" class="s">痛点</text>
+<text x="1130" y="70" class="s end">解法</text>
+
+<line x1="300" y1="110" x2="855" y2="110" class="cn"/>
+<path d="M855,110 C700,130 480,180 300,200" class="cn"/>
+<line x1="300" y1="200" x2="855" y2="200" class="cn"/>
+<path d="M855,200 C700,220 480,270 300,290" class="cn"/>
+<path d="M855,290 C700,310 480,360 300,380" class="cn"/>
+<path d="M855,290 C700,360 480,430 300,470" class="cn"/>
+<path d="M855,380 C700,400 480,450 300,470" class="cn"/>
+<path d="M855,470 C600,500 360,250 300,120" class="cna"/>
+
+<text x="70" y="115" class="t t13 act">P1</text>
+<text x="104" y="115" class="t t13">改坏了，没有上一版可退</text>
+<text x="104" y="135" class="s">时间 / 钱</text>
+
+<text x="70" y="205" class="t t13 act">P2</text>
+<text x="104" y="205" class="t t13">默认「什么都没变」</text>
+<text x="104" y="225" class="s">时间</text>
+
+<text x="70" y="295" class="t t13 act">P3</text>
+<text x="104" y="295" class="t t13">拿不出「谁改了什么」</text>
+<text x="104" y="315" class="s">合规 / 组织</text>
+
+<text x="70" y="385" class="t t13 act">P4</text>
+<text x="104" y="385" class="t t13">备份挂在错误的设备名下</text>
+<text x="104" y="405" class="s">时间 / 钱</text>
+
+<text x="70" y="475" class="t t13 act">P5</text>
+<text x="104" y="475" class="t t13">认证变更，备份静默失效</text>
+<text x="104" y="495" class="s">时间</text>
+
+<text x="1130" y="115" class="t t13 act end">S1</text>
+<text x="1094" y="115" class="t t13 end">变更触发的永久版本</text>
+
+<text x="1130" y="205" class="t t13 act end">S2</text>
+<text x="1094" y="205" class="t t13 end">diff 对比 + 变更告警</text>
+
+<text x="1130" y="295" class="t t13 act end">S3</text>
+<text x="1094" y="295" class="t t13 end">API 优先 + 身份绑定</text>
+
+<text x="1130" y="385" class="t t13 act end">S4</text>
+<text x="1094" y="385" class="t t13 end">备份状态可见</text>
+
+<text x="1130" y="475" class="t t13 act end">S5</text>
+<text x="1094" y="475" class="t t13 end">恢复 = 人工闸门</text>
+
+<text x="600" y="545" class="s mid">红色虚线：S5 对 P1 只是「部分解决」—— 只给材料，不给一键回退。其余均为完整对应。</text>
+</svg>

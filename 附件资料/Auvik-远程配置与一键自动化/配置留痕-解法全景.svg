@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1520 700" width="1520" height="700">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.2;stroke-linecap:round}
+.gy2{fill:none;stroke:#DDE1E5;stroke-width:1.2;stroke-linecap:round}
+.ac2{fill:none;stroke:#C0392B;stroke-width:1.4;stroke-linecap:round}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.6}
+.boxa{fill:#FFFFFF;stroke:#C0392B;stroke-width:1.6}
+.dl{stroke-dasharray:4 4}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:12px;fill:#2F3437}
+.t13{font-size:13px}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:11px;fill:#9AA0A6}
+.act{fill:#C0392B}
+.a11{fill:#C0392B;font-size:11px}
+.mid{text-anchor:middle}
+</style>
+<rect width="1520" height="700" fill="#FFFFFF"/>
+
+<!-- S3 通道与归属 -->
+<text x="300" y="96" class="t act">S3</text>
+<rect x="300" y="110" width="760" height="120" rx="6" class="box"/>
+<text x="320" y="142" class="t">API 优先通道</text>
+<text x="450" y="142" class="s">备份默认走 FortiOS REST API，无需 CLI 访问</text>
+<text x="320" y="172" class="t">设备身份绑定</text>
+<text x="450" y="172" class="s">HA 备机保留在 inventory / topology，防止其配置备份丢失</text>
+<text x="320" y="202" class="s">2026-09 补 header-only 认证，适配 FortiOS v7.4.5+ / v7.6.1+</text>
+<line x1="605" y1="230" x2="605" y2="332" class="gy"/>
+<polygon points="605,340 599,328 611,328" fill="#B6BBC1"/>
+
+<!-- 主链 S1 -->
+<text x="70" y="330" class="t act">S1</text>
+<rect x="70" y="340" width="150" height="80" rx="6" class="box"/>
+<text x="145" y="378" class="t t13 mid">设备</text>
+<text x="145" y="400" class="s mid">配置源</text>
+<line x1="220" y1="380" x2="292" y2="380" class="ln"/>
+<polygon points="300,380 286,386 286,374" fill="#2F3437"/>
+<text x="258" y="368" class="s mid">持续轮询</text>
+<rect x="300" y="340" width="150" height="80" rx="6" class="box"/>
+<text x="375" y="382" class="t mid">检测到变更</text>
+<line x1="450" y1="380" x2="522" y2="380" class="ln"/>
+<polygon points="530,380 516,386 516,374" fill="#2F3437"/>
+<text x="490" y="368" class="s mid">延迟 60 分钟</text>
+<rect x="530" y="340" width="150" height="80" rx="6" class="box"/>
+<text x="605" y="382" class="t mid">触发备份</text>
+<line x1="680" y1="380" x2="752" y2="380" class="ln"/>
+<polygon points="760,380 746,386 746,374" fill="#2F3437"/>
+<rect x="760" y="340" width="260" height="80" rx="6" class="box"/>
+<text x="890" y="376" class="t mid">备份入库</text>
+<text x="890" y="398" class="s mid">永久保留 · 写入版本索引，旧版不被覆盖</text>
+<text x="300" y="452" class="s">「上一版」不再取决于有没有人记得备份 —— 系统自己攒</text>
+
+<line x1="1020" y1="380" x2="1092" y2="380" class="ln"/>
+<polygon points="1100,380 1086,386 1086,374" fill="#2F3437"/>
+<text x="1100" y="330" class="t act">S5</text>
+<rect x="1100" y="340" width="340" height="80" rx="6" class="boxa"/>
+<text x="1270" y="372" class="t mid">选版本 → 用设备自身的恢复流程推回</text>
+<text x="1270" y="396" class="s mid">human-in-the-loop</text>
+<text x="1100" y="440" class="t act">Auvik 不会自动把配置推回设备。</text>
+<text x="1100" y="458" class="s">「可回退」= 有材料可退，不是一键回退。</text>
+
+<!-- S2 差异对比与告警 -->
+<line x1="890" y1="420" x2="890" y2="470" class="gy2"/>
+<line x1="890" y1="470" x2="780" y2="470" class="gy2"/>
+<line x1="780" y1="470" x2="780" y2="494" class="gy2"/>
+<polygon points="780,500 774,488 786,488" fill="#B6BBC1"/>
+<text x="560" y="490" class="t act">S2</text>
+<rect x="560" y="500" width="440" height="160" rx="6" class="box"/>
+<text x="580" y="530" class="t">差异对比 + 变更告警</text>
+<rect x="580" y="540" width="250" height="10" fill="#B6BBC1"/>
+<rect x="580" y="558" width="170" height="10" fill="#C0392B"/>
+<text x="838" y="550" class="s">删了什么</text>
+<text x="758" y="568" class="s">加了什么</text>
+<text x="580" y="596" class="s">任意两版可比，不限相邻；检测到变更并完成备份后推送告警</text>
+<text x="580" y="620" class="s">「变了」变成一条通知 —— 排查不必再假设，定责不必再回忆</text>
+
+<!-- S4 备份状态可见 -->
+<line x1="145" y1="420" x2="145" y2="494" class="gy"/>
+<polygon points="145,500 139,488 151,488" fill="#B6BBC1"/>
+<text x="70" y="490" class="t act">S4</text>
+<rect x="70" y="500" width="440" height="160" rx="6" class="box"/>
+<text x="90" y="530" class="t">备份状态可见</text>
+<text x="90" y="558" class="s">设备仪表盘与 Documentation → Configurations 上显示：</text>
+<text x="90" y="580" class="s">凭据状态 · 备份状态 · 最后成功登录与备份时间</text>
+<text x="90" y="608" class="t a11">钥匙图标 = 凭据有效，但这台设备没有 API 备份</text>
+<circle cx="372" cy="602" r="6" class="ac2"/>
+<line x1="378" y1="602" x2="400" y2="602" class="ac2"/>
+<line x1="392" y1="602" x2="392" y2="608" class="ac2"/>
+<line x1="400" y1="602" x2="400" y2="608" class="ac2"/>
+</svg>

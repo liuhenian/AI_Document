@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 680" width="1400" height="680">
+<style>
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.5}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:15px;font-weight:600;fill:#22282C}
+.t13{font-size:17px;font-weight:700}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:13px;font-weight:500;fill:#7F868D}
+.act{fill:#C0392B}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<rect width="1400" height="680" fill="#FFFFFF"/>
+<text x="70" y="66" class="s">痛点</text>
+<text x="700" y="66" class="s mid">桥：把痛点做成能力的那一步</text>
+<text x="1330" y="66" class="s end">解法</text>
+
+<!-- P1 -->
+<text x="70" y="120" class="t13 act">P1</text>
+<text x="108" y="120" class="t13">「通了」不等于「能用」</text>
+<text x="108" y="146" class="s">时间 / 钱</text>
+<line x1="310" y1="120" x2="534" y2="120" class="gy"/>
+<polygon points="550,120 534,113 534,127" fill="#B6BBC1"/>
+<rect x="560" y="96" width="280" height="48" rx="8" class="chip"/>
+<text x="700" y="126" class="t mid">端口 → 接口 → 页面 → 交易</text>
+<line x1="852" y1="120" x2="1000" y2="120" class="gy"/>
+<polygon points="1016,120 1000,113 1000,127" fill="#B6BBC1"/>
+<text x="1330" y="120" class="t13 act end">S1</text>
+<text x="1294" y="120" class="t13 end">四层探针：按业务闭环定义</text>
+
+<!-- P2 -->
+<text x="70" y="216" class="t13 act">P2</text>
+<text x="108" y="216" class="t13">故障在别人的地盘</text>
+<text x="108" y="242" class="s">组织 / 时间</text>
+<line x1="310" y1="216" x2="534" y2="216" class="gy"/>
+<polygon points="550,216 534,209 534,223" fill="#B6BBC1"/>
+<rect x="560" y="192" width="280" height="48" rx="8" class="chip"/>
+<text x="700" y="222" class="t mid">对控制不了的那半条路单独发问</text>
+<line x1="852" y1="216" x2="1000" y2="216" class="gy"/>
+<polygon points="1016,216 1000,209 1000,223" fill="#B6BBC1"/>
+<text x="1330" y="216" class="t13 act end">S2</text>
+<text x="1294" y="216" class="t13 end">第三方依赖可被独立举证</text>
+
+<!-- P3 -->
+<text x="70" y="312" class="t13 act">P3</text>
+<text x="108" y="312" class="t13">确定性事故仍在生产上炸</text>
+<text x="108" y="338" class="s">钱 / 合规</text>
+<line x1="310" y1="312" x2="534" y2="312" class="gy"/>
+<polygon points="550,312 534,305 534,319" fill="#B6BBC1"/>
+<rect x="560" y="288" width="280" height="48" rx="8" class="chip"/>
+<text x="700" y="318" class="t mid">前置成零流量的例行检查</text>
+<line x1="852" y1="312" x2="1000" y2="312" class="gy"/>
+<polygon points="1016,312 1000,305 1000,319" fill="#B6BBC1"/>
+<text x="1330" y="312" class="t13 act end">S3</text>
+<text x="1294" y="312" class="t13 end">SSL 有效期 · DNS 校验</text>
+
+<!-- P4 -->
+<text x="70" y="408" class="t13 act">P4</text>
+<text x="108" y="408" class="t13">监控停在 HTTP 首页</text>
+<text x="108" y="434" class="s">钱 / 时间</text>
+<line x1="310" y1="408" x2="534" y2="408" class="gy"/>
+<polygon points="550,408 534,401 534,415" fill="#B6BBC1"/>
+<rect x="560" y="384" width="280" height="48" rx="8" class="chip"/>
+<text x="700" y="414" class="t mid">测试类型跟着业务协议走</text>
+<line x1="852" y1="408" x2="1000" y2="408" class="gy"/>
+<polygon points="1016,408 1000,401 1000,415" fill="#B6BBC1"/>
+<text x="1330" y="408" class="t13 act end">S4</text>
+<text x="1294" y="408" class="t13 end">Streaming / MQTT / Heartbeat</text>
+
+<!-- P5 -->
+<text x="70" y="504" class="t13 act">P5</text>
+<text x="108" y="504" class="t13">「慢」和「坏」只报一种</text>
+<text x="108" y="530" class="s">钱 / 时间</text>
+<line x1="310" y1="504" x2="534" y2="504" class="gy"/>
+<polygon points="550,504 534,497 534,511" fill="#B6BBC1"/>
+<rect x="560" y="480" width="280" height="48" rx="8" class="chip"/>
+<text x="700" y="510" class="t mid">可用性 / 内容完整性分列</text>
+<line x1="852" y1="504" x2="1000" y2="504" class="gy"/>
+<polygon points="1016,504 1000,497 1000,511" fill="#B6BBC1"/>
+<text x="1330" y="504" class="t13 act end">S5</text>
+<text x="1294" y="504" class="t13 end">三个百分数（含 % Content）</text>
+
+<text x="700" y="614" class="s mid">P1–P5 与 S1–S5 完全一一对应（对角线映射）：无悬空痛点，无悬空解法。</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 110 1240 500" width="1240" height="500">
+<style>
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.2;stroke-linecap:round}
+.st{fill:none;stroke:#2F3437;stroke-width:1.7;stroke-linecap:round}
+.acd{fill:none;stroke:#C0392B;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.now{fill:none;stroke:#2F3437;stroke-width:2}
+.band{fill:#FBF1EF;stroke:#C0392B;stroke-width:1;stroke-dasharray:5 5}
+.snap{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.7}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:12px;fill:#2F3437}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:11px;fill:#9AA0A6}
+.act{fill:#C0392B}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<rect width="1240" height="620" fill="#FFFFFF"/>
+
+<rect x="800" y="180" width="280" height="240" rx="4" class="band"/>
+<text x="940" y="170" class="s act mid">15 分钟窗口 · 4 次状态变化</text>
+
+<text x="128" y="224" class="s end">Established</text>
+<text x="128" y="384" class="s end">Idle</text>
+
+<path d="M140,220 H548" class="st"/>
+<path d="M556,220 H738" class="st"/>
+<path d="M746,220 H810" class="st"/>
+<path d="M818,220 H862" class="st"/>
+<path d="M870,220 H912" class="st"/>
+<path d="M920,220 H960" class="st"/>
+<path d="M968,220 H1080" class="st"/>
+
+<path d="M548,220 V380 H556 V220" class="acd"/>
+<path d="M738,220 V380 H746 V220" class="acd"/>
+<path d="M810,220 V380 H818 V220" class="acd"/>
+<path d="M862,220 V380 H870 V220" class="acd"/>
+<path d="M912,220 V380 H920 V220" class="acd"/>
+<path d="M960,220 V380 H968 V220" class="acd"/>
+
+<line x1="1080" y1="170" x2="1080" y2="430" class="now"/>
+<text x="1080" y="156" class="t mid">现在</text>
+<circle cx="1080" cy="220" r="6" class="snap"/>
+
+<line x1="140" y1="460" x2="1080" y2="460" class="gy"/>
+<polygon points="1080,460 1066,466 1066,454" fill="#B6BBC1"/>
+
+<line x1="1114" y1="210" x2="1088" y2="220" class="gy"/>
+<text x="1120" y="214" class="t">状态</text>
+<text x="1120" y="232" class="s">现在坏了吗</text>
+
+<line x1="1114" y1="310" x2="1084" y2="300" class="gy"/>
+<text x="1120" y="314" class="t">抖动</text>
+<text x="1120" y="332" class="s">一直在抖吗</text>
+
+<line x1="1114" y1="454" x2="1086" y2="460" class="gy"/>
+<text x="1120" y="458" class="t">历史</text>
+<text x="1120" y="476" class="s">什么时候开始的</text>
+
+<text x="344" y="500" class="s mid">一直平稳</text>
+<text x="650" y="500" class="t mid">偶发一次，已恢复</text>
+<text x="949" y="500" class="t mid">越来越密</text>
+
+<text x="140" y="570" class="s">只看「现在」这一个点，三种情况长得一模一样 —— 缺的从来不是状态，是历史。</text>
+</svg>

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 840" width="1420" height="840">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.2;stroke-linecap:round}
+.ac{fill:none;stroke:#C0392B;stroke-width:1.8;stroke-linecap:round}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.6}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1}
+.dt{stroke-dasharray:7 6}
+.dl{stroke-dasharray:4 4}
+.hair{fill:none;stroke:#E6E9EC;stroke-width:1}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:12px;fill:#2F3437}
+.t13{font-size:13px}
+.t15{font-size:15px;font-weight:600}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:11px;fill:#9AA0A6}
+.sg{font-size:11px;fill:#C9CED4}
+.m{font-family:Consolas,Menlo,'Courier New',monospace;font-size:12px;fill:#2F3437}
+.m11{font-size:11px}
+.act{fill:#C0392B}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<rect width="1420" height="840" fill="#FFFFFF"/>
+
+<!-- 视野范围 -->
+<rect x="70" y="270" width="1010" height="215" rx="10" class="gy dt"/>
+<text x="84" y="292" class="s">up / down 与设备健康 的视野</text>
+<text x="88" y="470" class="s">设备全在线 · 接口全 up · CPU 正常</text>
+
+<!-- 拓扑 -->
+<path d="M118,398 C98,398 86,382 92,368 C84,352 98,336 116,340 C122,322 148,314 164,326 C180,312 208,316 216,336 C236,332 250,348 244,364 C256,376 246,396 228,396 Z" class="ln"/>
+<line x1="250" y1="378" x2="290" y2="378" class="ln"/>
+
+<rect x="290" y="336" width="120" height="84" rx="6" class="box"/>
+<text x="350" y="372" class="t t15 mid">R1</text>
+<text x="350" y="392" class="s mid">总部出口</text>
+
+<rect x="620" y="336" width="120" height="84" rx="6" class="box"/>
+<text x="680" y="372" class="t t15 mid">R2</text>
+<text x="680" y="392" class="s mid">分支出口</text>
+
+<rect x="900" y="351" width="100" height="60" rx="6" class="box"/>
+<text x="950" y="388" class="t t13 mid">SW</text>
+
+<line x1="410" y1="358" x2="620" y2="358" stroke="#A8AEB5" stroke-width="1.5" stroke-linecap="round"/>
+<text x="515" y="350" class="s mid">主出口</text>
+
+<line x1="410" y1="414" x2="598" y2="414" class="ac"/>
+<polygon points="612,414 598,420 598,408" fill="#C0392B"/>
+<text x="505" y="432" class="s act mid">备出口</text>
+
+<line x1="740" y1="378" x2="900" y2="378" class="ln"/>
+
+<line x1="1000" y1="378" x2="1080" y2="378" class="ln"/>
+<line x1="1080" y1="378" x2="1150" y2="378" class="ac dt"/>
+
+<rect x="1150" y="344" width="200" height="72" rx="8" class="ac dt"/>
+<text x="1250" y="376" class="m t13 act mid">10.1.3.0/24</text>
+<text x="1250" y="398" class="s mid">业务网段</text>
+<text x="1104" y="356" class="s act mid">路由不可达</text>
+
+<!-- 全绿标记 -->
+<path d="M158,416 l6,7 l12,-14" fill="none" stroke="#9AA0A6" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M344,434 l6,7 l12,-14" fill="none" stroke="#9AA0A6" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M674,434 l6,7 l12,-14" fill="none" stroke="#9AA0A6" stroke-width="1.6" stroke-linecap="round"/>
+<path d="M944,424 l6,7 l12,-14" fill="none" stroke="#9AA0A6" stroke-width="1.6" stroke-linecap="round"/>
+
+<!-- 切换发生在几小时前 -->
+<circle cx="770" cy="436" r="9" class="ac"/>
+<path d="M770,436 L770,429" class="ac"/>
+<path d="M770,436 L775,438.5" class="ac"/>
+<text x="786" y="440" class="s act">≈ 3 h 前已切换</text>
+
+<!-- P1 -->
+<line x1="1102" y1="442" x2="1148" y2="420" stroke="#C0392B" stroke-width="0.9"/>
+<text x="1090" y="452" class="t act">P1</text>
+<text x="1117" y="452" class="t">设备全绿，这个网段就是不通</text>
+<text x="1117" y="470" class="s">断的不是链路，是「路由的去向」</text>
+
+<!-- P4 -->
+<line x1="492" y1="546" x2="516" y2="420" stroke="#C0392B" stroke-width="0.9"/>
+<text x="490" y="556" class="t act">P4</text>
+<text x="517" y="556" class="t">主出口劣化，流量已切到备用出口</text>
+<text x="517" y="574" class="s">业务还在跑，但没人被告知</text>
+
+<!-- P2 -->
+<rect x="110" y="60" width="340" height="150" rx="6" class="chip"/>
+<text x="128" y="90" class="s">show ip bgp summary</text>
+<line x1="110" y1="104" x2="450" y2="104" class="hair"/>
+<text x="128" y="140" class="m">10.0.0.2</text>
+<text x="248" y="140" class="m">Established</text>
+<rect x="128" y="156" width="200" height="28" rx="3" class="gy dl"/>
+<text x="140" y="175" class="s">10 分钟前？</text>
+<line x1="300" y1="214" x2="350" y2="330" stroke="#C9CED4" stroke-width="1"/>
+<circle cx="350" cy="330" r="2.5" fill="#C9CED4"/>
+<text x="110" y="236" class="t act">P2</text>
+<text x="137" y="236" class="t">只看得见「现在是好的」</text>
+<text x="137" y="254" class="s">「一直是好的」是另一个结论</text>
+
+<!-- P3 -->
+<circle cx="505" cy="108" r="13" class="ln"/>
+<path d="M484,150 c0,-17 9,-24 21,-24 c12,0 21,7 21,24" class="ln"/>
+<text x="545" y="102" class="t act">P3</text>
+<text x="572" y="102" class="t">会看邻居表的只有一个人</text>
+<text x="572" y="120" class="s">他一休假，值班只剩「重启设备」</text>
+
+<!-- P5 -->
+<rect x="110" y="620" width="190" height="120" rx="5" class="chip"/>
+<text x="126" y="648" class="s">BGP</text>
+<text x="126" y="682" class="m m11">10.0.0.2   Established</text>
+<rect x="390" y="620" width="190" height="120" rx="5" class="chip"/>
+<text x="406" y="648" class="s">OSPF</text>
+<text x="406" y="682" class="m m11">10.0.0.2   Full</text>
+<line x1="345" y1="632" x2="345" y2="728" class="gy dl"/>
+<text x="345" y="612" class="s mid">?</text>
+<text x="110" y="776" class="t act">P5</text>
+<text x="137" y="776" class="t">BGP 和 OSPF 分在两处看</text>
+<text x="137" y="794" class="s">同一时刻的对照只能靠人肉拼</text>
+</svg>

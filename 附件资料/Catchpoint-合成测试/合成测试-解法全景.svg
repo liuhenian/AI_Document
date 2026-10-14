@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" width="1600" height="940">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.8;stroke-linecap:round}
+.ln2{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.4;stroke-linecap:round}
+.gy2{fill:none;stroke:#DDE1E5;stroke-width:1.4;stroke-linecap:round}
+.ac2{fill:none;stroke:#C0392B;stroke-width:1.8;stroke-linecap:round}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.8}
+.boxa{fill:#FFFFFF;stroke:#C0392B;stroke-width:1.8}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.dt{stroke-dasharray:7 6}
+.dl{stroke-dasharray:5 5}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:15px;font-weight:600;fill:#22282C}
+.t13{font-size:17px;font-weight:700}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:13px;font-weight:500;fill:#7F868D}
+.act{fill:#C0392B}
+.a11{fill:#C0392B;font-size:13px;font-weight:700}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<rect width="1600" height="940" fill="#FFFFFF"/>
+
+<!-- ============ S1 四层探针 ============ -->
+<text x="70" y="106" class="t13 act">S1</text>
+<text x="104" y="106" class="t13">按「业务闭环」而非「协议端口」定义测试类型</text>
+<rect x="170" y="150" width="220" height="62" rx="8" class="box"/>
+<text x="280" y="188" class="t mid">端口  Ping / Transport</text>
+<rect x="150" y="218" width="260" height="62" rx="8" class="box"/>
+<text x="280" y="256" class="t mid">接口  API 单步</text>
+<rect x="130" y="286" width="300" height="62" rx="8" class="box"/>
+<text x="280" y="324" class="t mid">链式接口  API 多步</text>
+<rect x="110" y="354" width="340" height="62" rx="8" class="box"/>
+<text x="280" y="392" class="t mid">页面  Web / WebPageTest</text>
+<rect x="90" y="422" width="380" height="62" rx="8" class="boxa"/>
+<text x="280" y="460" class="t mid">交易  Transaction / Playwright</text>
+<text x="280" y="522" class="s mid">真正渲染页面 · 执行 JS · 点击 · 填表 · 提交</text>
+<text x="90" y="558" class="s">回答的是「用户能否完成这件事」</text>
+<text x="90" y="584" class="s">而不是「服务器是否应答」—— 与纯端口 / Uptime 工具的分界</text>
+
+<!-- ============ S2 第三方独立举证 ============ -->
+<text x="560" y="106" class="t13 act">S2</text>
+<text x="594" y="106" class="t13">把第三方依赖变成可被独立举证的测试对象</text>
+<line x1="830" y1="142" x2="830" y2="320" class="gy dt"/>
+<text x="838" y="134" class="s">自己控制不了的那半条路</text>
+<rect x="600" y="200" width="180" height="80" rx="8" class="box"/>
+<text x="690" y="248" class="t mid">自己的系统</text>
+<line x1="784" y1="240" x2="816" y2="240" class="ln2"/>
+<polygon points="828,240 812,247 812,233" fill="#2F3437"/>
+<line x1="830" y1="169" x2="856" y2="169" class="gy dl"/>
+<line x1="830" y1="221" x2="856" y2="221" class="gy dl"/>
+<line x1="830" y1="273" x2="856" y2="273" class="gy dl"/>
+<rect x="860" y="148" width="250" height="42" rx="5" class="chip"/>
+<text x="985" y="176" class="t mid">DNS（直查 / 体验）</text>
+<rect x="860" y="200" width="250" height="42" rx="5" class="chip"/>
+<text x="985" y="228" class="t mid">SSL</text>
+<rect x="860" y="252" width="250" height="42" rx="5" class="chip"/>
+<text x="985" y="280" class="t mid">BGP</text>
+<rect x="860" y="304" width="250" height="42" rx="5" class="chip"/>
+<text x="985" y="332" class="t mid">Transport / Traceroute</text>
+<text x="600" y="392" class="s">客户手里有一份自己采集的、带时间戳与节点维度的证据</text>
+<text x="600" y="418" class="s">而不是供应商状态页的截图 —— 决定了谁道歉、谁整改</text>
+
+<!-- ============ S3 确定性检查 ============ -->
+<text x="560" y="486" class="t13 act">S3</text>
+<text x="594" y="486" class="t13">把「必然会发生」的事故前置成例行检查</text>
+<polyline points="608,528 614,535 628,518" class="ln2"/>
+<text x="640" y="532" class="t">SSL：证书链 · 有效期 · 主机名匹配</text>
+<text x="640" y="558" class="s">按剩余天数设阈值告警</text>
+<polyline points="608,612 614,619 628,602" class="ln2"/>
+<text x="640" y="616" class="t">DNS Direct：应答内容与预期一致</text>
+<text x="640" y="642" class="s">发现记录被篡改 / 被劫持 / 缓存投毒</text>
+<text x="600" y="696" class="s">两者都是「零流量的确定性检查」—— 成本极低，收益清晰</text>
+
+<!-- ============ S4 协议跟着业务走 ============ -->
+<text x="1180" y="106" class="t13 act">S4</text>
+<text x="1214" y="106" class="t13">让测试类型跟着业务实际使用的协议走</text>
+<rect x="1180" y="140" width="400" height="76" rx="8" class="chip"/>
+<text x="1200" y="172" class="t">Streaming Test（2026-06）</text>
+<text x="1200" y="198" class="s">真实 Chromium 内测 HLS / DASH / MP4 起播与缓冲</text>
+<rect x="1180" y="228" width="400" height="76" rx="8" class="chip"/>
+<text x="1200" y="260" class="t">MQTT（Agent 2.18.0 · 2026-09）</text>
+<text x="1200" y="286" class="s">面向 IoT 与设备侧场景</text>
+<rect x="1180" y="316" width="400" height="76" rx="8" class="chip"/>
+<text x="1200" y="348" class="t">Node-to-Node</text>
+<text x="1200" y="374" class="s">这张网内部通不通、两点之间好不好 → 持续矩阵</text>
+<rect x="1180" y="404" width="400" height="76" rx="8" class="chip"/>
+<text x="1200" y="436" class="t">Heartbeat（5 秒）</text>
+<text x="1200" y="462" class="s">覆盖亚分钟级的中断</text>
+<text x="1180" y="510" class="a11">边界：Streaming 仅 Enterprise 节点</text>
+<text x="1180" y="536" class="a11">Selenium 型 Transaction / API 测试 2026-08-31 停止工作</text>
+
+<!-- ============ S5 两个指标 ============ -->
+<text x="1180" y="586" class="t13 act">S5</text>
+<text x="1214" y="586" class="t13">把「可用性」与「内容完整性」拆成两个指标</text>
+<text x="1180" y="634" class="t">% Availability</text>
+<text x="1180" y="658" class="s">= （测试运行数 − 测试错误数）/ 测试运行数</text>
+<text x="1180" y="680" class="s">主 URL 是否被成功触达</text>
+<text x="1180" y="720" class="t">% Content Availability</text>
+<text x="1180" y="744" class="s">页面上的每个元素是否都加载成功</text>
+<text x="1180" y="766" class="s">只要有一个对象失败，本次运行即判为「内容不可用」</text>
+<text x="1180" y="806" class="t">% Adjusted Availability</text>
+<text x="1180" y="830" class="s">剔除人工排除（Purged Runs）后的可用性，用于 SLA 口径</text>
+<text x="1180" y="866" class="s">「可用性 100% 但功能坏了」，第一次有了能写进报表的数</text>
+<text x="1180" y="898" class="a11">边界：% Content Availability 不等同于「功能正确」</text>
+</svg>

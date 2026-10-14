@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 60 1480 520" width="1480" height="520">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.2;stroke-linecap:round}
+.gy2{fill:none;stroke:#DDE1E5;stroke-width:1.2;stroke-linecap:round}
+.ac{fill:none;stroke:#C0392B;stroke-width:1.4;stroke-linecap:round}
+.acd{fill:none;stroke:#C0392B;stroke-width:1.4;stroke-linecap:round;stroke-dasharray:6 5}
+.dl{stroke-dasharray:4 4}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.6}
+.soft{fill:#F9FAFB;stroke:#E6E9EC;stroke-width:1}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:12px;fill:#2F3437}
+.t13{font-size:13px}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:11px;fill:#9AA0A6}
+.ms{font-family:Consolas,Menlo,'Courier New',monospace;font-size:11px;fill:#9AA0A6}
+.act{fill:#C0392B}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<rect width="1480" height="660" fill="#FFFFFF"/>
+
+<!-- P1 手段与问题不匹配 -->
+<rect x="96" y="136" width="148" height="112" rx="8" class="acd"/>
+<rect x="110" y="150" width="120" height="84" rx="6" class="box"/>
+<circle cx="170" cy="192" r="12" class="gy"/>
+<line x1="161" y1="183" x2="179" y2="201" class="gy"/>
+<line x1="170" y1="234" x2="170" y2="248" class="ln"/>
+<line x1="146" y1="248" x2="194" y2="248" class="ln"/>
+<circle cx="330" cy="182" r="14" class="ln"/>
+<path d="M306,228 c0,-19 10,-27 24,-27 c14,0 24,8 24,27" class="ln"/>
+<rect x="378" y="168" width="5" height="24" fill="#C0392B"/>
+<rect x="388" y="168" width="5" height="24" fill="#C0392B"/>
+<text x="110" y="300" class="t act">P1</text>
+<text x="137" y="300" class="t">只需刷一下 DNS，却要接管别人的屏幕</text>
+<text x="137" y="318" class="s">手段与问题严重不匹配，代价由使用者承担</text>
+
+<!-- P2 十步操作 -->
+<line x1="800" y1="190" x2="1230" y2="190" class="gy2"/>
+<line x1="850" y1="150" x2="1200" y2="150" class="gy"/>
+<line x1="850" y1="150" x2="850" y2="158" class="gy"/>
+<line x1="1200" y1="150" x2="1200" y2="158" class="gy"/>
+<text x="1025" y="142" class="t act mid">10 步</text>
+<circle cx="800" cy="190" r="6" fill="#2F3437"/>
+<circle cx="850" cy="190" r="3.5" fill="#2F3437"/>
+<circle cx="900" cy="190" r="3.5" fill="#2F3437"/>
+<circle cx="950" cy="190" r="3.5" fill="#2F3437"/>
+<circle cx="1000" cy="190" r="3.5" fill="#2F3437"/>
+<circle cx="1050" cy="190" r="3.5" fill="#2F3437"/>
+<circle cx="1100" cy="190" r="3.5" fill="#2F3437"/>
+<circle cx="1150" cy="190" r="3.5" fill="#2F3437"/>
+<circle cx="1200" cy="190" r="3.5" fill="#2F3437"/>
+<circle cx="1230" cy="190" r="6" fill="#2F3437"/>
+<text x="800" y="124" class="s">知道怎么修</text>
+<text x="1230" y="124" class="s end">修好了</text>
+<text x="780" y="300" class="t act">P2</text>
+<text x="807" y="300" class="t">每次都要登进去、一步步点</text>
+<text x="807" y="318" class="s">占了工单量的大头，却没有任何判断价值</text>
+
+<g transform="translate(0,-70)">
+<!-- P3 质量随人波动 -->
+<rect x="200" y="470" width="90" height="18" fill="#2F3437"/>
+<text x="190" y="484" class="s end">熟练</text>
+<text x="302" y="484" class="t">3 分钟</text>
+<rect x="200" y="510" width="280" height="18" fill="#C0392B"/>
+<text x="190" y="524" class="s end">不熟练</text>
+<text x="492" y="524" class="t">15 分钟，甚至做错</text>
+<text x="110" y="600" class="t act">P3</text>
+<text x="137" y="600" class="t">同一个问题，质量取决于当班的是谁</text>
+<text x="137" y="618" class="s">也无法向上解释「为什么这次慢了」</text>
+
+<!-- P4 设备侧只能敲 -->
+<circle cx="820" cy="498" r="13" class="ln"/>
+<path d="M798,542 c0,-18 10,-26 22,-26 c12,0 22,8 22,26" class="ln"/>
+<line x1="848" y1="530" x2="1012" y2="530" class="gy2"/>
+<polygon points="1020,530 1008,536 1008,524" fill="#B6BBC1"/>
+<text x="932" y="520" class="ms mid">ssh / telnet</text>
+<rect x="1020" y="490" width="140" height="80" rx="6" class="box"/>
+<rect x="1032" y="504" width="116" height="52" rx="3" class="soft"/>
+<text x="1042" y="524" class="ms">ntp server ...</text>
+<text x="1042" y="544" class="ms">acl ...</text>
+<text x="1180" y="534" class="t act">没有现成的一键动作</text>
+<text x="780" y="600" class="t act">P4</text>
+<text x="807" y="600" class="t">NTP、ACL、端口假死 —— 只能登进去敲</text>
+<text x="807" y="618" class="s">动作多、单项价值低，夜间与远端更难安排</text>
+</g>
+</svg>
