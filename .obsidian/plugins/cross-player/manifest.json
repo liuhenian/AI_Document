@@ -1,0 +1,10 @@
+{
+	"id": "cross-player",
+	"name": "Cross Player",
+	"version": "1.2.20",
+	"minAppVersion": "1.7.2",
+	"description": "A media player plugin focused on playback across desktop and mobile devices.",
+	"author": "Imed Ghomari",
+	"authorUrl": "https://github.com/imed-ghomari",
+	"isDesktopOnly": false
+}
