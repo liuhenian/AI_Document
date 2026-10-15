@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>国庆启动 Checklist（10/2 – 10/8）</title>
+<style>
+  :root{
+    --bg:#f5f6f8;
+    --card:#ffffff;
+    --text:#1f2328;
+    --muted:#6b7280;
+    --line:#e6e8ec;
+    --accent:#0d7d76;
+    --accent-soft:#e6f4f2;
+    --warm:#c2410c;
+    --warm-soft:#fdf0e8;
+    --done:#0d7d76;
+    --radius:12px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font:15px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    -webkit-font-smoothing:antialiased;
+    padding:28px 16px 80px;
+  }
+  .wrap{max-width:860px;margin:0 auto}
+
+  header{margin-bottom:22px}
+  h1{font-size:24px;line-height:1.3;margin:0 0 6px;letter-spacing:-.2px}
+  .sub{color:var(--muted);font-size:13.5px;margin:0 0 18px}
+  .sub a{color:var(--accent)}
+
+  .overall{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 18px;
+  }
+  .bar{height:10px;background:#eef0f3;border-radius:99px;overflow:hidden}
+  .bar>i{
+    display:block;height:100%;width:0%;border-radius:99px;
+    background:linear-gradient(90deg,#0d7d76,#12a396);
+    transition:width .35s cubic-bezier(.4,0,.2,1);
+  }
+  .meta{display:flex;justify-content:space-between;align-items:baseline;margin-top:10px;font-size:13px;color:var(--muted)}
+  .meta b{font-size:18px;color:var(--text);font-weight:650;font-variant-numeric:tabular-nums}
+
+  section{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    margin-top:14px;overflow:hidden;
+  }
+  section.today{border-color:#bfe3df;box-shadow:0 0 0 3px var(--accent-soft)}
+  .head{
+    display:flex;align-items:center;gap:10px;flex-wrap:wrap;
+    padding:14px 18px;border-bottom:1px solid var(--line);background:#fcfcfd;
+  }
+  section.today .head{background:var(--accent-soft)}
+  .tag{
+    font-size:11.5px;font-weight:650;letter-spacing:.3px;
+    padding:2px 9px;border-radius:99px;background:#eceff3;color:#4b5563;white-space:nowrap;
+  }
+  section.today .tag{background:var(--accent);color:#fff}
+  .h-title{font-weight:650;font-size:15px}
+  .h-theme{color:var(--muted);font-size:13px}
+  .h-count{margin-left:auto;font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+  ul{list-style:none;margin:0;padding:6px 0}
+  li{border-top:1px solid #f2f3f5}
+  li:first-child{border-top:0}
+  label{
+    display:flex;gap:11px;align-items:flex-start;
+    padding:11px 18px;cursor:pointer;transition:background .12s;
+  }
+  label:hover{background:#fafbfc}
+  input[type=checkbox]{
+    flex:0 0 auto;width:18px;height:18px;margin:2px 0 0;
+    accent-color:var(--accent);cursor:pointer;
+  }
+  .txt{flex:1;min-width:0}
+  .txt .t{display:block}
+  .txt .n{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+  li.done .txt .t{color:#a6adb8;text-decoration:line-through}
+  li.done .txt .n{color:#c2c8d0}
+
+  .note{
+    padding:11px 18px;font-size:12.8px;color:var(--muted);
+    background:#fbfbfc;border-top:1px dashed var(--line);
+  }
+  .note.warn{background:var(--warm-soft);color:#9a3412}
+  .note.out{background:#f7fbfa;color:#0f766e}
+  .note b{color:inherit}
+
+  .rest{padding:18px;text-align:center;color:var(--muted);font-size:13.5px}
+  .rest b{color:var(--text)}
+
+  footer{margin-top:22px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  button{
+    font:inherit;font-size:13.5px;padding:8px 15px;border-radius:9px;
+    border:1px solid var(--line);background:var(--card);color:var(--text);cursor:pointer;
+  }
+  button:hover{background:#f2f4f6}
+  button.ghost{color:var(--muted)}
+  .saved{margin-left:auto;font-size:12.5px;color:var(--muted)}
+  .saved.ok{color:var(--accent)}
+
+  @media print{
+    body{background:#fff;padding:0}
+    section{break-inside:avoid}
+    footer{display:none}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>国庆启动 Checklist</h1>
+    <p class="sub">
+      10/2 – 10/8 ｜ 唯一目标：跑通「拍摄 → 剪辑 → 发布」，产出<b>第 00 期</b> + 一份真实耗时<br>
+      任务来源：<b>2026国庆启动计划</b> · 勾选自动保存在本机浏览器
+    </p>
+    <div class="overall">
+      <div class="bar"><i id="barAll"></i></div>
+      <div class="meta">
+        <span><b id="pctAll">0%</b> 完成</span>
+        <span id="cntAll">0 / 0</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="days"></main>
+
+  <footer>
+    <button id="reset" class="ghost">重置全部勾选</button>
+    <button id="print">打印 / 存 PDF</button>
+    <span class="saved" id="savedHint"></span>
+  </footer>
+
+</div>
+
+<script>
+const KEY = 'gq-checklist-2026-v1';
+const TODAY = (function(){
+  const d = new Date();
+  const p = function(n){ return (n < 10 ? '0' : '') + n; };
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
+})();
+
+const DAYS = [
+  {
+    id:'basis', tag:'前提', dateText:'开始前', theme:'先认五件事', pre:true,
+    items:[
+      '假期这几天你是一个人——买菜 / 备菜 / 炒 / 收拾全是你，按 105 分钟/天算',
+      '做菜不是「顺手」——拍摄会在做饭之上再加一份活，并且让做饭本身变慢',
+      '「她」不在场，人设得在场——用微信远程点菜：把她发来的消息截图（裁掉头像昵称），作图片轨插到前 2 秒',
+      '国庆求的是「链路跑通 + 内容过得了内容地板」——前 3 秒有钩子 / 有「人」/ 无 3 秒空档',
+      '★ 器材采购（一次性 ￥150~230，红线一已改为「≤￥400 禁订阅」）：10/4 下单 —— 手机夹臂 ￥50~80 + 蓝牙快门遥控 ￥20 + 保鲜膜。⛔ 不要为等器材推迟拍摄，10/11 第 01 期前到手就够'
+    ],
+    sub:'厨房拍摄铁律｜① 先出菜后补拍（成品热镜另算：出锅 0~2min 在 A 位拍起锅装盘，成品镜 ≤5min 拍完）　② 动作片段录制每段 10~30 秒；等待期把手机拿到 ≥1m 外 + 拆壳 + 放通风处　③ 全天搬机 ≤2 次（只做 1 道主拍菜；副菜提前做好只加热）　④ ⛔ 禁用数码变焦（只用 1× 主摄）　⑤ ★ 镜头贴超薄保鲜膜（绷平贴镜，不用厚自封袋）；套膜后触屏失效 → 录前锁参数、启停不碰机身（有蓝牙遥控用遥控）　⑥ ★ 白平衡用 AWB（不手动，每块画面留白色参照）；曝光锁 ISO ≤800，快门随帧率（30fps→1/50 / 60fps→1/100）；蒸汽镜 ≥1/250　⑦ B 位不架 120~140cm 高架（油烟机会挡镜头）→ B1 固定在操作台边缘（夹臂；没夹臂前只拍摆好的静态食材全景）、B2 到餐桌只开台灯　⑧ 拍摄全程关吸顶灯　⑨ 前 3 期不碰「整道菜都在爆炒 / 油炸 / 干煸」　⑩ 手上有油永远不碰手机　⑪ 上镜清洁排在拍摄之前　⑫ ★ 每期必须落「人话三句」（0~2 秒她点的那句 / 中段一句自嘲或类比 / 结尾一句评价）',
+    note:'表格里带【厨房】的是生活既有时间（单独记账）；带【生活】的是吃饭休息；其余的才是视频时间。三笔账分开记，不混算。'
+  },
+  {
+    id:'pre', tag:'前置', dateText:'开号准备', theme:'应已完成', pre:true,
+    items:[
+      '定平台（默认抖音；不想被同事看到就避开视频号）',
+      '手机号注册 + 实名认证',
+      '完善资料（昵称 / 头像 / 简介）',
+      '开通创作者权限 + 数据看板（不开则复盘无数据）',
+      '装剪映（手机版 + 电脑版）',
+      '填完账号定位表'
+    ],
+    note:'详见《平台选择与开号清单》与《账号身份方案》。若实际未做，取消勾选即可。'
+  },
+  {
+    id:'d1', tag:'Day 1', date:'2026-10-02', dateText:'10/2 周五', theme:'只学剪辑',
+    items:[
+      {t:'0–0.5h　剪映界面认路：只看三个——时间轴、分割、导出'},
+      {t:'0.5–1.5h　拍 15 段随手素材（家里 / 做饭 / 窗外，各 2–5 秒）'},
+      {t:'1.5–3.5h　把素材拼成 30 秒，练「分割 + 删除 + 排序」'},
+      {t:'3.5–4.5h　加字幕（「文本」→「智能字幕」）'},
+      {t:'4.5–5h　导出，看一眼成品'},
+      {t:'★ 在电脑上重跑一遍（快捷键是另一套肌肉记忆：Ctrl+B 切 / Delete 删 / 空格 播 / Ctrl+E 导）'},
+      {t:'★ 20:00–20:40 空拍测试（40min，不拍菜）：定机位 A（离锅 70~90cm / 向下 15~25°）、B1（油烟机灯正下方手持 40~50cm）、B2（餐桌）'},
+      {t:'★ 实测「油烟机挡不挡 B1」：油烟机底部距灶台多少 cm？手持俯拍会不会顶到？'},
+      {t:'★ 照度验收：只开油烟机灯 + 关吸顶灯，专业模式看 ISO ≤ 800？快门 ≥ 1/50？（★ B2 餐桌关厨房灯、只开台灯，重点测；记下台灯色温档位）'},
+      {t:'★ 参数锁定：白平衡用 AWB、ISO/快门手动；只用 1× 主摄'},
+      {t:'★ 保鲜膜试拍：绷平贴镜、橡皮筋固定 → 确认不起皱、不跑焦、反光可控；确认音量键能启停录制'},
+      {t:'★ 连续录到停录为止：记下真实能连续录多少分钟（决定明天每段录多久）'},
+      {t:'★ 录两段试拍：30 秒空锅比划切菜 + 10 秒淋热油 → 回看手部有没有拖影、蒸汽看得清吗'},
+      {t:'★ 跑一次 USB 传输（建目录 → 连手机 → 选「传输图片」→ Win+E → 拖文件）'}
+    ],
+    out:'产出物：一条 30 秒短片（不发，纯练手）+ 一份「机位 / 光线 / 录制时长」实测记录',
+    warn:'今天不学：转场、特效、调色、关键帧、音乐。多学一个都是浪费。'
+  },
+  {
+    id:'d2', tag:'Day 2', date:'2026-10-03', dateText:'10/3 周六', theme:'真做一次 + 拍第 00 期素材',
+    items:[
+      {t:'09:00–10:00　学脚本结构：钩子（前 3 秒）+ 主体 + 结尾'},
+      {t:'10:00–10:30　按昨晚记录搭好机位；镜头贴保鲜膜 + 白平衡用 AWB + ISO/快门手动'},
+      {t:'10:30–11:00【厨房】上镜清洁 —— 灶台擦到顶光下不反白、清走生活杂物（并关掉吸顶灯）'},
+      {t:'11:00–12:00【厨房】大采买菜（顺便拍买菜素材 3~5 段）'},
+      {t:'12:00–13:00【生活】午饭 + 收拾'},
+      {t:'13:00–13:30【厨房】备菜（B1 手持拍切配 + 食材全景）'},
+      {t:'13:30–14:15【厨房】炒制 + 动作片段录制（片段1 下锅 10~20s → 等待期把手机拿到 ≥1m 外拆壳散热 → 片段2 揭盖/收汁 → 片段3 淋热油）'},
+      {t:'14:15–14:20　★ A 位拍起锅 / 装盘（出锅 0~2min，蒸汽油光就在这 2 分钟）'},
+      {t:'14:20–14:30　挪到 B2 位（餐桌，关厨房灯、只开台灯）拍 成品 / 夹一筷 / 9:16 封面照（出锅 ≤5min）'},
+      {t:'14:30–15:15【生活】吃饭（拍完立刻吃，菜还热）'},
+      {t:'15:15–15:45【厨房】收拾 + 洗碗'},
+      {t:'15:45–16:05　素材粗筛（手机删废段）'},
+      {t:'16:05–16:15　USB 传输到电脑'},
+      {t:'16:15–16:35　写实拍总结：哪一步超时了、菜有没有被拍坏'}
+    ],
+    sub:'厨房拍摄铁律见上方「先认五件事」。★ 核心：成品镜必须出锅 ≤5min 拍完，超时必跳色。',
+    out:'产出物：第 00 期的全部素材（已在电脑上）+ 实拍总结',
+    note:'💡 今天只求「拍全」，不求「拍好」。⛔ 只做 1 道主拍菜；副菜提前做好、只加热（单灶眼没法在等待期现做）。⛔ 今天不写脚本定稿（Day 3 全天是学习与建设，脚本在 Day 4 用结构卡反写）。'
+  },
+  {
+    id:'rest', tag:'休息日', date:'2026-10-04', dateText:'10/4 周日', rest:true,
+    text:'不安排任何任务。留白是计划能执行的前提。',
+    note:'这一天不编号 —— Day 编号 = 第 N 个学习日。'
+  },
+  {
+    id:'d3', tag:'Day 3', date:'2026-10-05', dateText:'10/5 周一', theme:'学习与建设',
+    items:[
+      {t:'09:00–09:15　A1 选片：找 10 条同类视频（家常菜 / 一人食，30~60 秒，近 3 个月，至少 3 条来自万粉以下的号）'},
+      {t:'09:15–10:15　A2 逐条记 4 列：前 3 秒是什么 / 共几镜 / 有没有「人」/ 哪一镜让你想继续看'},
+      {t:'10:15–10:35　A3 统计三个数：最常见的钩子类型 / 平均镜数 / 「人」第一次出现在第几秒'},
+      {t:'10:35–11:00　A4 落成「结构卡.md」（此后前 3 期不许改）'},
+      {t:'11:00–12:00　B 定「人话三句」+ 写 10 条备选句'},
+      {t:'12:00–13:00【生活】午饭 + 收拾（顺手用 AI 批量出 30 个选题）'},
+      {t:'13:00–14:00　C 构图三项 + 景别三档，回看今天的素材逐项核对'},
+      {t:'14:00–15:30【厨房】做晚饭（独自期基线 ~1.5h，含收拾）'},
+      {t:'15:30–16:10　★ 用今天的素材做对照诊断，写成「第 00 期差距清单」'},
+      {t:'★ 排出 ≥12 道候选菜单 —— 逐道过「菜品适配 5 条」（≤40min / 有等待期 / 有淋油或揭盖 / ≥2 对比色 / 非整道爆炒）'},
+      {t:'★ 排不满 12 道 = 条件太严，当场放宽（先放宽「40 分钟」）。最严口径下只剩 6~8 道，第 8 期必重复'}
+    ],
+    out:'产出物：结构卡.md + 人话句库（10 条）+ 第 00 期差距清单 + 30 个选题',
+    warn:'今天不剪片、不拍片。这是一次性投入（约 4h），回报在后面 12 周。',
+    note:'方法见《学习与特色建设》；提示词模板见《AI提示词模板包》；选题填入《选题库》。'
+  },
+  {
+    id:'d4', tag:'Day 4', date:'2026-10-06', dateText:'10/6 周二', theme:'重剪第 00 期 + 拍第 01 期',
+    items:[
+      {t:'09:00–10:00　按结构卡重排第 00 期：把成品镜 / 淋热油镜的 2 秒前置到开头（结果前置）'},
+      {t:'10:00–11:00　加「人话三句」字幕：她那句话（截图裁头像 → 图片轨）+ 中段自嘲 + 结尾评价'},
+      {t:'11:00–12:00　掐时长到 30 秒（每镜 2.5~3.5 秒、6~10 镜；字幕一条 ≤8 字，可跨镜）'},
+      {t:'12:00–13:00【生活】午饭 + 收拾'},
+      {t:'13:00–13:40【厨房】买菜（第 01 期的料）'},
+      {t:'13:40–14:10【厨房】上镜清洁 + 搭机位 + 贴膜（按 Day 1 的照片复原）'},
+      {t:'14:10–14:40【厨房】备菜 + B1 拍切配 / 食材全景（特写多拍两条）'},
+      {t:'14:40–15:40【厨房】炒制 + 动作片段录制（按结构卡留出特写）'},
+      {t:'15:40–15:55　A 位拍起锅装盘 → 挪 B2 拍成品 / 夹一筷 / 封面照'},
+      {t:'15:55–16:45【生活】吃饭'},
+      {t:'16:45–17:15【厨房】收拾'},
+      {t:'17:15–18:00　第 01 期素材粗筛 + USB 传输'}
+    ],
+    out:'产出物：第 00 期粗剪（含人话三句）+ 第 01 期全部素材',
+    note:'第 00 期不重拍——素材已拍完，能补的是「结构」和「人话」，都在后期。★ 今天是新方法的第一次实拍，重点验证结构卡好不好执行。第 01 期 10/11 上午剪 → 18:00 发布。前 3 期不做口播。'
+  },
+  {
+    id:'d5', tag:'Day 5', date:'2026-10-07', dateText:'10/7 周三', theme:'第 00 期收尾',
+    items:[
+      {t:'09:00–10:00　配乐 + 调音量（关键动作原声 80~100 / 环境原声 20~30 / 音乐 15）'},
+      {t:'10:00–11:00　加 / 核对字幕（「文本」→「智能字幕」；人话三句要看得清）'},
+      {t:'11:00–11:30　学封面规范 + 用装盘照做封面（不用视频首帧）'},
+      {t:'11:30–12:00　导出自检（1080P / 与拍摄一致的帧率 / 码率「推荐」）'},
+      {t:'12:00–13:00【生活】午饭 + 收拾'},
+      {t:'13:00–13:30　★ 发布前三问：前 3 秒有钩子？有「人」？无 3 秒空档？'},
+      {t:'13:30–14:30　缓冲：补字幕 / 重剪不满意的段落'},
+      {t:'14:30–16:00【厨房】做晚饭（厨房基线）'}
+    ],
+    out:'产出物：第 00 期成片（已导出、已过内容地板自检，待发布）',
+    warn:'今天必须出片。出不来 → 直接用已有素材剪 30 秒极简版。发布不给退出出口。'
+  },
+  {
+    id:'d6', tag:'Day 6', date:'2026-10-08', dateText:'10/8 周四', theme:'大采 + 发布 + 复盘',
+    items:[
+      {t:'上午 1h【厨房】大采买菜 + 分装备菜（叶菜 2 天量 / 根茎 4~5 天量 / 肉与鱼丸、肉燕、扁肉分装冷冻）'},
+      {t:'下午 0.5h　写简介 + 加 4 个标签'},
+      {t:'下午 0.5h　18:00 发布第 00 期'},
+      {t:'下午 1h　记录真实耗时（内容增量 / 厨房基线 / 拍摄附加，三笔分开记；另有一次性建设 4h 单独记）'}
+    ],
+    out:'产出物：已发布的第 00 期 + 一份耗时复盘',
+    note:'耗时记入《耗时记录表》。第 01 期素材已在 10/6 拍完，今天的大采是为第 02 期起补库存。'
+  },
+  {
+    id:'acc', tag:'验收', dateText:'10/8 晚', theme:'结束时的验收', pre:false,
+    items:[
+      '手上有一条已发布的视频（第 00 期）',
+      '有真实的耗时数字：内容增量 / 厨房基线 / 拍摄附加，三笔分开记',
+      '素材已备份到移动硬盘（防手机丢 / 坏）',
+      '视频与简介里没有出现「孕妇 / 孕期 / 医生 / 营养」等合规词',
+      '已决定 10/11（周日）18:00 发第 01 期，正式进入 12 周'
+    ],
+    note:'国庆的目标不是「做出好视频」，是「证明这条路走得通」。'
+  }
+];
+
+let state = {};
+try { state = JSON.parse(localStorage.getItem(KEY)) || {}; } catch(e){ state = {}; }
+
+const daysEl = document.getElementById('days');
+
+DAYS.forEach(function(day){
+  const sec = document.createElement('section');
+  if (day.date && day.date === TODAY) sec.classList.add('today');
+
+  const tagCls = 'tag';
+  const tagTxt = (day.date && day.date === TODAY) ? '今天' : day.tag;
+  let head = '<div class="head">'
+    + '<span class="' + tagCls + '">' + tagTxt + '</span>'
+    + '<span class="h-title">' + day.dateText + '</span>'
+    + '<span class="h-theme">' + day.theme + '</span>'
+    + (day.items ? '<span class="h-count" data-count="' + day.id + '"></span>' : '')
+    + '</div>';
+  sec.innerHTML = head;
+
+  if (day.rest){
+    const d = document.createElement('div');
+    d.className = 'rest';
+    d.innerHTML = '<b>' + day.text + '</b>';
+    sec.appendChild(d);
+  }
+
+  if (day.items){
+    const ul = document.createElement('ul');
+    day.items.forEach(function(it, i){
+      const isObj = typeof it === 'object';
+      const text = isObj ? it.t : it;
+      const note = isObj && it.n ? it.n : '';
+      const id = day.id + '-' + i;
+      const li = document.createElement('li');
+      const lab = document.createElement('label');
+      const cb = document.createElement('input');
+      cb.type = 'checkbox';
+      cb.dataset.id = id;
+      const checked = (id in state) ? state[id] : !!day.pre;
+      cb.checked = !!checked;
+      if (cb.checked) li.classList.add('done');
+      const span = document.createElement('span');
+      span.className = 'txt';
+      span.innerHTML = '<span class="t">' + text + '</span>' + (note ? '<span class="n">' + note + '</span>' : '');
+      lab.appendChild(cb); lab.appendChild(span);
+      li.appendChild(lab);
+      ul.appendChild(li);
+      cb.addEventListener('change', function(){
+        state[id] = cb.checked;
+        li.classList.toggle('done', cb.checked);
+        save(); paint();
+      });
+      if (!(id in state) && day.pre) state[id] = true;
+    });
+    sec.appendChild(ul);
+  }
+
+  if (day.sub) sec.insertAdjacentHTML('beforeend', '<div class="note">' + day.sub + '</div>');
+  if (day.out) sec.insertAdjacentHTML('beforeend', '<div class="note out">' + day.out + '</div>');
+  if (day.warn) sec.insertAdjacentHTML('beforeend', '<div class="note warn">' + day.warn + '</div>');
+  if (day.note) sec.insertAdjacentHTML('beforeend', '<div class="note">' + day.note + '</div>');
+
+  daysEl.appendChild(sec);
+});
+
+const boxes = Array.prototype.slice.call(document.querySelectorAll('input[type=checkbox]'));
+
+function paint(){
+  let done = 0;
+  boxes.forEach(function(b){ if (b.checked) done++; });
+  const total = boxes.length;
+  const pct = total ? Math.round(done / total * 100) : 0;
+  document.getElementById('barAll').style.width = pct + '%';
+  document.getElementById('pctAll').textContent = pct + '%';
+  document.getElementById('cntAll').textContent = done + ' / ' + total;
+
+  DAYS.forEach(function(day){
+    if (!day.items) return;
+    const el = document.querySelector('[data-count="' + day.id + '"]');
+    if (!el) return;
+    const mine = boxes.filter(function(b){ return b.dataset.id.indexOf(day.id + '-') === 0; });
+    const n = mine.filter(function(b){ return b.checked; }).length;
+    el.textContent = n + ' / ' + mine.length;
+    el.style.color = (n === mine.length && mine.length) ? '#0d7d76' : '';
+  });
+}
+
+let timer = null;
+function save(){
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){}
+  const hint = document.getElementById('savedHint');
+  hint.textContent = '已保存';
+  hint.classList.add('ok');
+  clearTimeout(timer);
+  timer = setTimeout(function(){ hint.textContent = ''; hint.classList.remove('ok'); }, 1600);
+}
+
+document.getElementById('reset').addEventListener('click', function(){
+  if (!confirm('确定要清空全部勾选吗？此操作不可撤销。')) return;
+  state = {};
+  boxes.forEach(function(b){ b.checked = false; b.closest('li').classList.remove('done'); });
+  save(); paint();
+});
+
+document.getElementById('print').addEventListener('click', function(){ window.print(); });
+
+(function init(){
+  try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e){}
+})();
+paint();
+</script>
+</body>
+</html>
