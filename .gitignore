@@ -1,4 +1,13 @@
+# ── Obsidian 运行时状态（每次打开都可能变，不入库） ──
+# workspace.json 记录窗口布局/最近打开文件；graph.json 保存图谱视图
 .obsidian/workspace.json
+.obsidian/graph.json
+# 各插件的 data.json 是插件自己的界面状态（画布位置、任务面板展开、快捷设置等）
+.obsidian/plugins/*/data.json
+# 说明：以下配置类文件仍入库，换机时靠它们还原环境 ——
+#   app.json / appearance.json / core-plugins.json / community-plugins.json
+#   hotkeys.json / types.json / snippets/ / themes/ / 各插件的 main.js+manifest.json
+# 已从跟踪中移除的文件需执行过 git rm --cached，.gitignore 才会生效。
 
 # ── 05-第二行业：《她点的菜》视频项目 ──
 # 视频原片与成片体积大（每期数 GB），不入 git；只保留说明文档、头像图、封面图
