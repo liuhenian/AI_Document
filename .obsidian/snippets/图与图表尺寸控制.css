@@ -1,0 +1,144 @@
+/* ==========================================================================
+   图与图表尺寸控制（Obsidian + Minimal 主题）
+   作用：让正文里的 Mermaid 图不再撑满屏幕、可以滚动、可以拖拽缩放
+   启用：设置 → 外观 → CSS 代码片段 → 点右侧「刷新」按钮 → 打开开关
+   说明：默认只开第一、二部分（安全、纯视觉）。第三、四部分需要手动去掉注释。
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   第一部分（默认生效）
+   Mermaid 图限制在正文宽度内；超过 70% 屏高时在框内滚动
+   —— 解决「图太大、要滚动半天、还挡住下面的正文」
+   -------------------------------------------------------------------------- */
+
+.mermaid {
+  max-width: 100% !important;
+  max-height: 70vh !important;   /* 想更矮就改小，例如 50vh */
+  overflow: auto !important;     /* 超高/超宽时出现滚动条，而不是撑开页面 */
+  margin: 1em auto !important;
+  padding: 6px !important;
+  text-align: center !important;
+}
+
+/* 图形本体按容器宽度等比缩放。
+   想让所有图整体变小：把下面的 100% 换成固定像素，例如 700px */
+.mermaid svg,
+svg[id^="m"][viewBox] {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+/* 实时预览（编辑态）里 Mermaid 溢出时会盖住输入区，这里给它一个滚动容器 */
+.markdown-source-view.mod-cm6 .cm-content > [contenteditable="false"]:has(.mermaid) {
+  max-height: 70vh !important;
+  overflow: auto !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   第二部分（默认生效）
+   给图加一层底色和边框，让「这里是一个图」在长文里一眼可辨
+   —— 不喜欢就整段删掉
+   -------------------------------------------------------------------------- */
+
+.mermaid {
+  border: 1px solid var(--background-modifier-border) !important;
+  border-radius: var(--radius-s) !important;
+  background-color: var(--background-secondary) !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   第三部分（默认关闭）
+   ★ 让 Mermaid 图变成可拖拽缩放的框 ★
+   —— 这是最接近「收缩」的办法：抓住图右下角拖动，即可把图拖小、拖大。
+      横向极长的流程图（比如 243 行的 flowchart LR）尤其需要它。
+   —— 想用就删掉下面这组注释标记
+   -------------------------------------------------------------------------- */
+
+/*
+.mermaid {
+  resize: both !important;
+  overflow: auto !important;
+  min-height: 120px !important;
+  min-width: 240px !important;
+}
+*/
+
+
+/* --------------------------------------------------------------------------
+   第四部分（默认关闭）
+   图片相关的两条可选规则，按需启用
+   -------------------------------------------------------------------------- */
+
+/* 4a. 压窄表格里的图片，避免一行被截图撑得老高 */
+/*
+.markdown-rendered table img,
+table img {
+  max-width: 200px !important;
+  max-height: 140px !important;
+  vertical-align: middle !important;
+}
+*/
+
+/* 4b. 按住图片临时全屏查看（纯 CSS，不需要插件）；
+       Minimal 自带「按住图片放大」，二选一，别同时开 */
+/*
+.markdown-rendered img:active {
+  position: fixed !important;
+  inset: 4vh 4vw !important;
+  width: 92vw !important;
+  height: 92vh !important;
+  object-fit: contain !important;
+  background-color: var(--background-primary) !important;
+  z-index: 9999 !important;
+  cursor: zoom-out !important;
+  max-height: none !important;
+}
+*/
+
+
+/* --------------------------------------------------------------------------
+   第六部分（默认生效）：按住图 = 临时全屏
+   —— 零安装的「点开看大图」：阅读模式下按住任意 Mermaid 图，
+      图会铺满整个窗口、背景变暗；松开鼠标立刻复原。
+   —— 想看细节时按住不放即可，不影响正常滚动阅读。
+   —— 与第三部分（resize 拖拽）目标重复，建议只开一个。
+   —— 不需要就整段删掉。
+   -------------------------------------------------------------------------- */
+
+.markdown-reading-view .mermaid:active,
+.markdown-preview-view .mermaid:active {
+  position: fixed !important;
+  inset: 2vh 2vw !important;
+  width: 96vw !important;
+  height: 96vh !important;
+  max-width: 96vw !important;
+  max-height: 96vh !important;
+  z-index: 9999 !important;
+  padding: 12px !important;
+  overflow: auto !important;
+  cursor: zoom-out !important;
+  background-color: var(--background-primary) !important;
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5) !important;
+}
+
+.markdown-reading-view .mermaid:active > svg,
+.markdown-preview-view .mermaid:active > svg {
+  max-width: 94vw !important;
+  max-height: 90vh !important;
+  height: auto !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   备忘：CSS 治不了的那一件事
+   1. 真正的折叠（把图收起来、留一行标题）——CSS 做不到，得用：
+      · 标题折叠：阅读模式下点标题左侧的三角，整节连图一起收起（零改动）
+      · Callout 折叠：> [!example]- 图：标题   包住 mermaid 代码块，默认收起
+      · 装插件：Lookout / Mermaid Kit（点开全屏 + 滚轮缩放 + Fit）
+   2. CSS 能做的替代：按住全屏（第六部分）、拖拽缩放（第三部分）
+   3. 超宽图治本方法是改图本身 —— 把 flowchart LR 改成 TB，或拆成两张
+   -------------------------------------------------------------------------- */

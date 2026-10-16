@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1620 920" width="1620" height="920">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.8;stroke-linecap:round}
+.ln2{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.4;stroke-linecap:round}
+.gy2{fill:none;stroke:#DDE1E5;stroke-width:1.4;stroke-linecap:round}
+.ac2{fill:none;stroke:#C0392B;stroke-width:1.8;stroke-linecap:round}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.8}
+.boxg{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.dt{stroke-dasharray:7 6}
+.dl{stroke-dasharray:5 5}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:15px;font-weight:600;fill:#22282C}
+.t13{font-size:17px;font-weight:700}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:13px;font-weight:500;fill:#7F868D}
+.act{fill:#C0392B}
+.a11{fill:#C0392B;font-size:13px;font-weight:700}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.q{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:22px;font-weight:600;fill:#C9CED4}
+</style>
+<rect width="1620" height="920" fill="#FFFFFF"/>
+
+<!-- ======== 第一排 ======== -->
+
+<!-- P1 「网慢」拆成四类，无线团队无法自证 -->
+<rect x="170" y="116" width="220" height="50" rx="10" class="box"/>
+<text x="280" y="148" class="t13 mid">「网慢」</text>
+
+<line x1="280" y1="166" x2="130" y2="214" class="gy"/>
+<line x1="280" y1="166" x2="240" y2="214" class="gy"/>
+<line x1="280" y1="166" x2="350" y2="214" class="gy"/>
+<line x1="280" y1="166" x2="460" y2="214" class="gy"/>
+
+<rect x="80" y="214" width="100" height="38" rx="5" class="chip"/>
+<text x="130" y="239" class="t mid">无线</text>
+<rect x="190" y="214" width="100" height="38" rx="5" class="chip"/>
+<text x="240" y="239" class="t mid">有线</text>
+<rect x="300" y="214" width="100" height="38" rx="5" class="chip"/>
+<text x="350" y="239" class="t mid">应用</text>
+<rect x="410" y="214" width="100" height="38" rx="5" class="chip"/>
+<text x="460" y="239" class="t mid">终端</text>
+
+<rect x="160" y="300" width="240" height="52" rx="8" class="box"/>
+<text x="280" y="332" class="t mid">无线团队</text>
+<text x="370" y="320" class="a11">?</text>
+<text x="70" y="392" class="t13 act">P1</text>
+<text x="108" y="392" class="s">拿不出这是不是无线侧的锅</text>
+
+<!-- P2 间歇性问题，等它再犯 -->
+<text x="820" y="100" class="s mid">一个客户端的时间线</text>
+<line x1="610" y1="200" x2="1030" y2="200" class="gy2"/>
+<circle cx="650" cy="200" r="5" fill="#C0392B"/>
+<line x1="660" y1="200" x2="760" y2="200" class="gy2 dl"/>
+<circle cx="770" cy="200" r="5" fill="#C0392B"/>
+<line x1="780" y1="200" x2="900" y2="200" class="gy2 dl"/>
+<circle cx="910" cy="200" r="5" fill="#C0392B"/>
+<line x1="920" y1="200" x2="1020" y2="200" class="gy2 dl"/>
+
+<text x="650" y="234" class="s mid">偶尔掉</text>
+<text x="770" y="234" class="s mid">偶尔连不上</text>
+<text x="910" y="234" class="s mid">又掉了</text>
+
+<text x="820" y="300" class="a11 mid">中间全是空白 —— 没有账号维度的连续记录</text>
+<text x="820" y="332" class="t mid">只能等它再犯</text>
+<text x="570" y="392" class="t13 act">P2</text>
+<text x="608" y="392" class="s">单客户端间歇性问题无从查起</text>
+
+<!-- P3 海量 SSID，业务关键网络被淹没 -->
+<rect x="1130" y="120" width="120" height="34" rx="5" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="1190" y="143" class="s mid">办公</text>
+<rect x="1260" y="120" width="120" height="34" rx="5" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="1320" y="143" class="s mid">访客</text>
+<rect x="1130" y="164" width="120" height="34" rx="5" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="1190" y="187" class="s mid">IoT</text>
+<rect x="1260" y="164" width="120" height="34" rx="5" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="1320" y="187" class="s mid">访客</text>
+<rect x="1130" y="208" width="120" height="34" rx="5" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="1190" y="231" class="s mid">办公</text>
+<rect x="1260" y="208" width="120" height="34" rx="5" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="1320" y="231" class="s mid">IoT</text>
+<rect x="1130" y="252" width="120" height="34" rx="5" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="1190" y="275" class="s mid">访客</text>
+<rect x="1260" y="252" width="120" height="34" rx="5" fill="#FFFFFF" stroke="#2F3437" stroke-width="1.8"/>
+<text x="1320" y="275" class="t mid">生产</text>
+
+<text x="1320" y="316" class="a11 mid">最有价值的「生产」，只有这一格</text>
+<text x="1100" y="392" class="t13 act">P3</text>
+<text x="1138" y="392" class="s">业务关键网络被噪声淹没</text>
+
+<!-- ======== 第二排 ======== -->
+
+<!-- P4 时延来源分不清 -->
+<rect x="190" y="476" width="200" height="60" rx="8" class="box"/>
+<text x="290" y="514" class="t13 mid">时延 120ms</text>
+
+<line x1="220" y1="536" x2="120" y2="600" class="ac2 dl"/>
+<line x1="290" y1="536" x2="290" y2="600" class="ac2 dl"/>
+<line x1="360" y1="536" x2="460" y2="600" class="ac2 dl"/>
+
+<rect x="70" y="600" width="140" height="42" rx="5" class="chip"/>
+<text x="140" y="627" class="t mid">楼层位置?</text>
+<rect x="220" y="600" width="140" height="42" rx="5" class="chip"/>
+<text x="290" y="627" class="t mid">AP 异常?</text>
+<rect x="370" y="600" width="140" height="42" rx="5" class="chip"/>
+<text x="440" y="627" class="t mid">频段拥塞?</text>
+
+<text x="290" y="692" class="a11 mid">三个变量，只能逐个试</text>
+<text x="70" y="742" class="t13 act">P4</text>
+<text x="108" y="742" class="s">客户端时延来源分不清</text>
+
+<!-- P5 Wi-Fi 7 没有对应健康视图 -->
+<rect x="610" y="476" width="400" height="220" rx="8" class="box"/>
+<text x="810" y="512" class="t mid">Client Health Dashboard</text>
+<line x1="630" y1="528" x2="990" y2="528" class="gy2"/>
+<rect x="630" y="544" width="100" height="34" rx="5" class="chip"/>
+<text x="680" y="567" class="s mid">Wi-Fi 4</text>
+<polyline points="668,558 672,563 682,548" class="ln2"/>
+<rect x="740" y="544" width="100" height="34" rx="5" class="chip"/>
+<text x="790" y="567" class="s mid">Wi-Fi 5</text>
+<polyline points="778,558 782,563 792,548" class="ln2"/>
+<rect x="850" y="544" width="100" height="34" rx="5" class="chip"/>
+<text x="900" y="567" class="s mid">Wi-Fi 6</text>
+<polyline points="888,558 892,563 902,548" class="ln2"/>
+<rect x="630" y="588" width="320" height="40" rx="5" fill="#FFFFFF" stroke="#C9CED4" stroke-width="1.2" stroke-dasharray="6 5"/>
+<text x="790" y="614" class="s mid">Wi-Fi 7 —— 没有这一行</text>
+
+<circle cx="960" cy="660" r="16" fill="none" stroke="#C0392B" stroke-width="1.8"/>
+<text x="960" y="666" class="a11 mid">7</text>
+<line x1="944" y1="650" x2="910" y2="610" class="ac2 dl"/>
+<text x="960" y="700" class="a11 mid">监控盲区</text>
+<text x="570" y="742" class="t13 act">P5</text>
+<text x="608" y="742" class="s">Wi-Fi 7 客户端没有对应的健康视图</text>
+
+<!-- P6 拿不出可导出的报表 -->
+<rect x="1130" y="476" width="180" height="120" rx="8" class="box"/>
+<text x="1220" y="510" class="s mid">排障界面截图</text>
+<rect x="1150" y="524" width="140" height="16" rx="2" fill="#EDEFF1"/>
+<rect x="1150" y="548" width="100" height="16" rx="2" fill="#EDEFF1"/>
+<rect x="1150" y="572" width="120" height="16" rx="2" fill="#EDEFF1"/>
+
+<line x1="1320" y1="536" x2="1380" y2="536" class="ac2"/>
+<polygon points="1392,536 1376,543 1376,529" fill="#C0392B"/>
+<text x="1350" y="520" class="a11 mid">说服力有限</text>
+
+<rect x="1400" y="476" width="180" height="120" rx="8" class="boxg"/>
+<text x="1490" y="510" class="s mid">管理层要的</text>
+<rect x="1420" y="524" width="140" height="8" rx="2" fill="#DDE1E5"/>
+<rect x="1420" y="540" width="140" height="8" rx="2" fill="#DDE1E5"/>
+<rect x="1420" y="556" width="100" height="8" rx="2" fill="#DDE1E5"/>
+<rect x="1420" y="572" width="120" height="8" rx="2" fill="#DDE1E5"/>
+<text x="1490" y="624" class="s mid">趋势 + 证据</text>
+
+<text x="1320" y="660" class="a11 mid">缺少可定期产出的报表</text>
+<text x="1100" y="742" class="t13 act">P6</text>
+<text x="1138" y="742" class="s">没法向上汇报，拿不出可导出数据</text>
+
+<!-- ======== 底部 ======== -->
+<text x="810" y="880" class="s mid">六个痛点的共同底色：无线体验「说不清」—— 说不清是不是自己的锅、说不清哪台终端、说不清哪个变量、说不清新终端、说不清给上面听。</text>
+</svg>

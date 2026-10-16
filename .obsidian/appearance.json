@@ -5,7 +5,8 @@
   "baseFontSize": 22,
   "enabledCssSnippets": [
     "minimal-headings",
-    "table-center"
+    "table-center",
+    "TreeFocus高亮改为文字色"
   ],
   "accentColor": ""
 }

@@ -1,0 +1,116 @@
+/* ==========================================================================
+   TreeFocus：把「高亮」从"放大字号"改成"只改文字颜色"
+
+   背景：TreeFocus 内置的 3 个预设（Default / Delight / Fancy）在高亮时都会把
+        字号放大到 1.2~1.3 倍，插件设置里没有任何颜色选项。
+        全部样式都由 CSS 变量驱动，所以可以用本片段整体接管。
+
+   启用：设置 → 外观 → CSS 代码片段 → 点刷新 → 打开「TreeFocus高亮改为文字色」
+
+   说明：选择器统一加了 body 前缀，是为了提高优先级、确保能压过插件自带样式。
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   一、颜色定义（自动跟随明暗主题切换）
+   —— 想换颜色，只改这两处 hex 即可
+   -------------------------------------------------------------------------- */
+
+.theme-light {
+  --tf-hl-color: #d9480f;   /* 亮色主题下的高亮色：橙 */
+}
+
+.theme-dark {
+  --tf-hl-color: #ffa94d;   /* 暗色主题下的高亮色：亮橙 */
+}
+
+
+/* --------------------------------------------------------------------------
+   二、关掉「放大字号」——三个预设都要覆盖，否则会被插件自己的值盖回来
+   -------------------------------------------------------------------------- */
+
+body .tree-item-self[data-treefocus-theme="DEFAULT"],
+body .tree-item-self[data-treefocus-theme="DELIGHT"],
+body .tree-item-self[data-treefocus-theme="FANCY"] {
+  --treefocus-highlight-font-scale: 1;
+  --treefocus-dim-font-scale: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   三、高亮 = 只改文字颜色（字号、行高强制还原）
+   -------------------------------------------------------------------------- */
+
+body .tree-item-self[data-treefocus-mode="HIGHLIGHT"] {
+  font-size: var(--nav-item-size) !important;
+  line-height: var(--line-height-tight) !important;
+  color: var(--tf-hl-color) !important;
+}
+
+/* 鼠标悬停时不要被打回原色（插件自带一条 hover 规则，这里压过它） */
+body .tree-item-self[data-treefocus-mode="HIGHLIGHT"]:hover {
+  color: var(--tf-hl-color) !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   四、淡化 = 字号也还原
+   —— 淡化的"后退感"由插件自带的 opacity（0.4~0.5）承担，够用。
+      如果你反而喜欢靠"缩小字号"来区分淡化项，把下面这段删掉。
+   -------------------------------------------------------------------------- */
+
+body .tree-item-self[data-treefocus-mode="DIM"] {
+  font-size: var(--nav-item-size) !important;
+  line-height: var(--line-height-tight) !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   五、保留一点"加重"效果
+   —— 只变色不改粗细会显得不够突出；不想加粗就把这段删掉或改成 400
+   -------------------------------------------------------------------------- */
+
+body .tree-item-self[data-treefocus-theme="DEFAULT"],
+body .tree-item-self[data-treefocus-theme="DELIGHT"],
+body .tree-item-self[data-treefocus-theme="FANCY"] {
+  --treefocus-highlight-font-weight: 600;
+}
+
+
+/* --------------------------------------------------------------------------
+   六、让 Iconize 的图标跟着一起变色
+   —— 不想要就删掉
+   -------------------------------------------------------------------------- */
+
+body .tree-item-self[data-treefocus-mode="HIGHLIGHT"] .obsidian-icon-folder-icon {
+  color: var(--tf-hl-color) !important;
+}
+
+
+/* --------------------------------------------------------------------------
+   七、如果你用的是 FANCY 预设
+   —— 它除了放大字号，还会给文字加"药丸背景 + 内边距"。
+      想要纯文字变色效果，就把下面这段的注释去掉。
+   -------------------------------------------------------------------------- */
+
+/*
+body .tree-item-self[data-treefocus-theme="FANCY"] {
+  --treefocus-highlight-background: none;
+  --treefocus-highlight-border: none;
+  --treefocus-highlight-padding-h: 0;
+  --treefocus-highlight-padding-v: 0;
+}
+*/
+
+
+/* --------------------------------------------------------------------------
+   八、备选配色（改第一节里 --tf-hl-color 的值即可）
+      亮色主题 / 暗色主题
+      红  #c92a2a / #ff6b6b
+      橙  #d9480f / #ffa94d      ← 当前默认
+      金  #a07d00 / #ffd43b
+      绿  #2f9e44 / #69db7c
+      蓝  #1971c2 / #4dabf7
+      紫  #9c36b5 / #da77f2
+      粉  #c2255c / #f783ac
+   -------------------------------------------------------------------------- */

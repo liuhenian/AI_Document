@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 780" width="1440" height="780">
+<style>
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.5}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:15px;font-weight:600;fill:#22282C}
+.t13{font-size:17px;font-weight:700}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:13px;font-weight:500;fill:#7F868D}
+.act{fill:#C0392B}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.bd{fill:none;stroke:#E6E9EC;stroke-width:1}
+</style>
+<rect width="1440" height="780" fill="#FFFFFF"/>
+
+<text x="720" y="46" class="s mid">P1–P6 与 S1–S6 完全一一对应（对角线映射）：无悬空痛点，无悬空解法。</text>
+<line x1="60" y1="66" x2="1380" y2="66" class="bd"/>
+
+<text x="60" y="60" class="s">痛点</text>
+<text x="720" y="60" class="s mid">桥：把痛点做成能力的那一步</text>
+<text x="1380" y="60" class="s end">解法</text>
+
+<!-- P1 -->
+<text x="60" y="130" class="t13 act">P1</text>
+<text x="108" y="130" class="t13">拿不出这是不是无线侧的锅</text>
+<text x="108" y="156" class="s">时间 / 组织</text>
+<line x1="340" y1="130" x2="530" y2="130" class="gy"/>
+<polygon points="546,130 530,137 530,123" fill="#B6BBC1"/>
+<rect x="550" y="108" width="320" height="44" rx="8" class="chip"/>
+<text x="710" y="136" class="t mid">统一指标口径（8 类指标 + 30 天趋势）</text>
+<line x1="878" y1="130" x2="1060" y2="130" class="gy"/>
+<polygon points="1076,130 1060,137 1060,123" fill="#B6BBC1"/>
+<text x="1380" y="130" class="t13 act end">S1</text>
+<text x="1340" y="130" class="t13 end">Client Health 全局概览</text>
+
+<!-- P2 -->
+<text x="60" y="240" class="t13 act">P2</text>
+<text x="108" y="240" class="t13">单客户端间歇性问题无从查起</text>
+<text x="108" y="266" class="s">时间 / 人</text>
+<line x1="340" y1="240" x2="530" y2="240" class="gy"/>
+<polygon points="546,240 530,247 530,233" fill="#B6BBC1"/>
+<rect x="550" y="218" width="320" height="44" rx="8" class="chip"/>
+<text x="710" y="246" class="t mid">以 MAC 为键的完整个体视图</text>
+<line x1="878" y1="240" x2="1060" y2="240" class="gy"/>
+<polygon points="1076,240 1060,247 1060,233" fill="#B6BBC1"/>
+<text x="1380" y="240" class="t13 act end">S2</text>
+<text x="1340" y="240" class="t13 end">Client 360</text>
+
+<!-- P3 -->
+<text x="60" y="350" class="t13 act">P3</text>
+<text x="108" y="350" class="t13">业务关键网络被噪声淹没</text>
+<text x="108" y="376" class="s">时间</text>
+<line x1="340" y1="350" x2="530" y2="350" class="gy"/>
+<polygon points="546,350 530,357 530,343" fill="#B6BBC1"/>
+<rect x="550" y="328" width="320" height="44" rx="8" class="chip"/>
+<text x="710" y="356" class="t mid">业务维度优先筛选（不改数据）</text>
+<line x1="878" y1="350" x2="1060" y2="350" class="gy"/>
+<polygon points="1076,350 1060,357 1060,343" fill="#B6BBC1"/>
+<text x="1380" y="350" class="t13 act end">S3</text>
+<text x="1340" y="350" class="t13 end">Per-SSID Filtering</text>
+
+<!-- P4 -->
+<text x="60" y="460" class="t13 act">P4</text>
+<text x="108" y="460" class="t13">客户端时延来源分不清</text>
+<text x="108" y="486" class="s">时间</text>
+<line x1="340" y1="460" x2="530" y2="460" class="gy"/>
+<polygon points="546,460 530,467 530,453" fill="#B6BBC1"/>
+<rect x="550" y="438" width="320" height="44" rx="8" class="chip"/>
+<text x="710" y="466" class="t mid">时延按位置 / AP / 频段三层拆解</text>
+<line x1="878" y1="460" x2="1060" y2="460" class="gy"/>
+<polygon points="1076,460 1060,467 1060,453" fill="#B6BBC1"/>
+<text x="1380" y="460" class="t13 act end">S4</text>
+<text x="1340" y="460" class="t13 end">Latency Insights</text>
+
+<!-- P5 -->
+<text x="60" y="570" class="t13 act">P5</text>
+<text x="108" y="570" class="t13">Wi-Fi 7 客户端没有健康视图</text>
+<text x="108" y="596" class="s">时间</text>
+<line x1="340" y1="570" x2="530" y2="570" class="gy"/>
+<polygon points="546,570 530,577 530,563" fill="#B6BBC1"/>
+<rect x="550" y="548" width="320" height="44" rx="8" class="chip"/>
+<text x="710" y="576" class="t mid">跟随 PHY 代际更新健康口径</text>
+<line x1="878" y1="570" x2="1060" y2="570" class="gy"/>
+<polygon points="1076,570 1060,577 1060,563" fill="#B6BBC1"/>
+<text x="1380" y="570" class="t13 act end">S5</text>
+<text x="1340" y="570" class="t13 end">Wi-Fi 7 + MLO 支持</text>
+
+<!-- P6 -->
+<text x="60" y="680" class="t13 act">P6</text>
+<text x="108" y="680" class="t13">没法向上汇报，拿不出可导出数据</text>
+<text x="108" y="706" class="s">组织</text>
+<line x1="340" y1="680" x2="530" y2="680" class="gy"/>
+<polygon points="546,680 530,687 530,673" fill="#B6BBC1"/>
+<rect x="550" y="658" width="320" height="44" rx="8" class="chip"/>
+<text x="710" y="686" class="t mid">截图 → 可定期产出的报表</text>
+<line x1="878" y1="680" x2="1060" y2="680" class="gy"/>
+<polygon points="1076,680 1060,687 1060,673" fill="#B6BBC1"/>
+<text x="1380" y="680" class="t13 act end">S6</text>
+<text x="1340" y="680" class="t13 end">报表实体（30 / 180 天）</text>
+
+<line x1="60" y1="730" x2="1380" y2="730" class="bd"/>
+<text x="720" y="760" class="s mid">六条平行直连：全图无强调色、无虚线 —— 「无缺口」本身即是信息。</text>
+</svg>
