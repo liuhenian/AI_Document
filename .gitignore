@@ -1,15 +1,53 @@
-# ── Obsidian 运行时状态（每次打开都可能变，不入库） ──
-# workspace.json 记录窗口布局/最近打开文件；graph.json 保存图谱视图
-.obsidian/workspace.json
-.obsidian/graph.json
-# 各插件的 data.json 是插件自己的界面状态（画布位置、任务面板展开、快捷设置等）
-.obsidian/plugins/*/data.json
-# 说明：以下配置类文件仍入库，换机时靠它们还原环境 ——
-#   app.json / appearance.json / core-plugins.json / community-plugins.json
-#   hotkeys.json / types.json / snippets/ / themes/ / 各插件的 main.js+manifest.json
-# 已从跟踪中移除的文件需执行过 git rm --cached，.gitignore 才会生效。
+# ══════════════════════════════════════════════════════════════════
+# Obsidian 库同步策略：同步「配置 + 内容」，不同步「运行时状态」
+#
+#   判定标准：
+#     文件内容会因为你「用」Obsidian 而自己变  → 状态 → 忽略
+#     只有你「主动改设置」时才变            → 配置 → 入库
+#
+#   ⚠️ 改完本文件后，已被跟踪的文件必须 git rm --cached 才会真正失效；
+#      反之要重新纳入也要 git add -f（ignore 对已跟踪文件不起作用）。
+#
+#   入库的配置类清单（换机靠它们还原环境）：
+#     app.json / appearance.json / core-plugins.json / community-plugins.json
+#     hotkeys.json / types.json / bookmarks.json
+#     snippets/（CSS 片段）/ themes/（主题）
+#     icons/（图标包 zip）
+#     各插件的 main.js + manifest.json + styles.css
+#     各插件中「只随主动改设置而变」的 data.json
+# ══════════════════════════════════════════════════════════════════
 
-# ── 05-第二行业：《她点的菜》视频项目 ──
+# ── 1. Obsidian 核心运行时状态 ──
+# 窗口布局、当前打开的标签页、最近打开文件、面板宽度：每次开合都在变
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+# 图谱视图的缩放、拖拽位置、节点大小（颜色分组也存在这里，会一起丢，需要时重设）
+.obsidian/graph.json
+# 旧版本残留的缓存目录
+.obsidian/cache
+
+# ── 2. 插件里「边用边变」的 data.json ──
+# 注意：插件设置也存放在 data.json，所以这里只逐个点名真正会自己变的，
+#       其余 data.json 照常入库，否则换机时插件设置全部丢失。
+# obsidian-git：记录 lastAutoBackup / lastAutoPull / lastAutoPush 时间戳，
+#               每轮自动同步都改写 → 两台机器必然来回冲突。
+.obsidian/plugins/obsidian-git/data.json
+# Excalidraw：27KB，含 drawingOpenCount / previousRelease / rank（使用量成长值）
+#             这类会自己变的字段；且 aiProviderProfiles 里带 API Key 字段，
+#             入库有泄密风险。绘图内容在 Excalidraw/ 目录，照常入库。
+.obsidian/plugins/obsidian-excalidraw-plugin/data.json
+
+# ── 3. 插件生成的索引与向量缓存 ──
+# Smart Connections 的向量库与事件日志，随索引过程不断增长
+.smart-env/
+
+# ── 4. 本地回收站与系统垃圾 ──
+.trash/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── 5. 05-第二行业：《她点的菜》视频项目 ──
 # 视频原片与成片体积大（每期数 GB），不入 git；只保留说明文档、头像图、封面图
 # 「素材」下按「第XX期」建子目录存原片，全部忽略；头像目录保留
 05-第二行业/05-制作与素材/素材/*/
@@ -26,5 +64,5 @@
 # 剪辑软件本地设备标识（机器相关状态，不入库）
 .cross-player-devices/
 
-# ── 临时备份目录（pull 冲突处理时产生，确认后可删） ──
+# ── 6. 临时备份目录（pull 冲突处理时产生，确认后可删） ──
 _backup_*/
