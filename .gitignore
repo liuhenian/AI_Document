@@ -36,6 +36,10 @@
 #             这类会自己变的字段；且 aiProviderProfiles 里带 API Key 字段，
 #             入库有泄密风险。绘图内容在 Excalidraw/ 目录，照常入库。
 .obsidian/plugins/obsidian-excalidraw-plugin/data.json
+# obsidian-git 自动生成的 SSH askpass 临时脚本。
+# 原先写在 .git/info/exclude 里 —— 那是本地私有文件、不随仓库分发，
+# 另一台机器上没有这条规则就会把它提交进去，所以挪到此处统一管理。
+.obsidian/plugins/obsidian-git/obsidian_askpass.sh
 
 # ── 3. 插件生成的索引与向量缓存 ──
 # Smart Connections 的向量库与事件日志，随索引过程不断增长
@@ -46,6 +50,13 @@
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# ── 4.1 开发临时文件 ──
+# 库里有零散的 Python 脚本（如 Catalyst/check_assurance_report.py），运行会产生字节码
+__pycache__/
+*.pyc
+# Office / WPS 打开文档时生成的锁文件
+~$*
 
 # ── 5. 05-第二行业：《她点的菜》视频项目 ──
 # 视频原片与成片体积大（每期数 GB），不入 git；只保留说明文档、头像图、封面图
