@@ -1,0 +1,21 @@
+{
+  "settings": {
+    "watchedFolder": "05-第二行业/05-制作与素材",
+    "defaultPlaybackSpeed": 2,
+    "speedPresets": "1, 1.5, 2, 2.5",
+    "seekSecondsForward": 10,
+    "seekSecondsBackward": 10,
+    "youtubeDlpPath": "yt-dlp",
+    "ffmpegPath": "",
+    "jsRuntimePath": "",
+    "downloadFolder": "",
+    "showMediaIndicator": true,
+    "storageLimitGB": 10,
+    "autoplayNext": true,
+    "showProgressColor": true,
+    "pauseOnMobileTap": true,
+    "wrapQueueText": false,
+    "volumeBoostPercent": 100,
+    "soundNormalization": false
+  }
+}

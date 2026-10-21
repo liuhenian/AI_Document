@@ -1,0 +1,31 @@
+# ══════════════════════════════════════════════════════════════════
+# 换行符策略
+#
+# 背景：本仓库原先没有 .gitattributes，而本机 core.autocrlf=true，
+#       导致 .obsidian 下用 LF 保存的 JSON 被误判为「已修改」，
+#       每次开 Obsidian 都凭空冒出一堆无意义 diff。
+#
+# 规则：.obsidian 下的配置统一以 LF 存入仓库（换机还原不挑平台），
+#       文本文件其余部分交给 Git 自动判断。
+# ══════════════════════════════════════════════════════════════════
+
+* text=auto
+.obsidian/** text eol=lf
+
+# ── 二进制文件：必须显式声明 binary ──
+# ⚠️ 踩过的坑：一旦用 `.obsidian/** text eol=lf` 把目录整体标为文本，
+#    显式的 text 属性会覆盖 Git 的二进制自动探测，导致 icons 下的
+#    icon包 zip 被当文本做换行转换、内容被悄悄改小（-114 字节）而无法使用。
+#    所以凡是被上面的规则扫到的二进制，必须在这里显式豁免。
+.obsidian/icons/*.zip binary
+*.zip binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.pdf binary
+*.mp4 binary
+*.mov binary
+*.m4v binary
+*.zip binary
