@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 840" width="1600" height="840">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.acb{fill:#FFFFFF;stroke:#C0392B;stroke-width:1.8}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+</defs>
+<rect width="1600" height="840" fill="#FFFFFF"/>
+
+<!-- 顶部：AI Advisor（中心） -->
+<g transform="translate(620,40)">
+  <rect x="0" y="0" width="360" height="80" rx="40" class="acb"/>
+  <text x="180" y="36" class="t13 act mid">AI Advisor</text>
+  <text x="180" y="62" class="s mid">同一会话内返回 · 不需要切换</text>
+</g>
+
+<!-- 三件套分支 -->
+<line x1="800" y1="120" x2="240" y2="200" class="lg"/>
+<line x1="800" y1="120" x2="800" y2="200" class="lg"/>
+<line x1="800" y1="120" x2="1360" y2="200" class="lg"/>
+
+<!-- ===== S1：On-Demand Connectivity Test ===== -->
+<g transform="translate(80,200)">
+  <text x="0" y="22" class="act">S1</text>
+  <text x="42" y="22" class="t13">On-Demand Connectivity Test</text>
+  <g transform="translate(0,50)">
+    <rect x="0" y="0" width="320" height="100" rx="6" class="box"/>
+    <text x="14" y="26" class="t15">ping / traceroute</text>
+    <text x="14" y="48" class="s">由 AI Advisor 在同一会话内返回</text>
+    <text x="14" y="68" class="s">和流量图一起 · 不需要切换</text>
+    <text x="14" y="88" class="s">以客户的 agent 为观测点发起测试</text>
+  </g>
+  <text x="0" y="180" class="a11">Kentik 优势特点：观测点在客户侧</text>
+</g>
+
+<!-- ===== S2：Config Context ===== -->
+<g transform="translate(640,200)">
+  <text x="0" y="22" class="act">S2</text>
+  <text x="42" y="22" class="t13">Config Context</text>
+  <g transform="translate(0,50)">
+    <rect x="0" y="0" width="320" height="100" rx="6" class="box"/>
+    <text x="14" y="26" class="t15">配置快照 + 版本序列</text>
+    <text x="14" y="48" class="s">以设备侧提交记录为证据锚点保存</text>
+    <text x="14" y="68" class="s">周期性快照形成版本序列</text>
+    <text x="14" y="88" class="s">机器算 diff + AI 解读差异含义</text>
+  </g>
+  <g transform="translate(0,170)">
+    <!-- diff 示意 -->
+    <rect x="0" y="0" width="320" height="60" rx="4" class="box"/>
+    <line x1="14" y1="20" x2="306" y2="20" class="lg"/>
+    <text x="14" y="36" class="s" fill="#C0392B">- no router bgp 100</text>
+    <text x="14" y="52" class="s" fill="#22282C">+ router bgp 200</text>
+  </g>
+  <text x="0" y="270" class="a11">系统对比差异 · AI 回答「这次改动影响了什么」</text>
+</g>
+
+<!-- ===== S3：SSH Command Access ===== -->
+<g transform="translate(1200,200)">
+  <text x="0" y="22" class="act">S3</text>
+  <text x="42" y="22" class="t13">SSH Command Access</text>
+  <g transform="translate(0,50)">
+    <rect x="0" y="0" width="320" height="100" rx="6" class="box"/>
+    <text x="14" y="26" class="t15">AI 待选命令 + SSH/TELNET</text>
+    <text x="14" y="48" class="s">利用 AI 待选命令</text>
+    <text x="14" y="68" class="s">使用 SSH/TELNET 进行信息获取</text>
+    <text x="14" y="88" class="s">（BGP、ACL 等信息）</text>
+  </g>
+  <g transform="translate(0,170)">
+    <!-- 命令芯片 -->
+    <rect x="0" y="0" width="120" height="32" rx="4" class="chip"/>
+    <text x="60" y="22" class="s mid">show ip bgp</text>
+    <rect x="130" y="0" width="120" height="32" rx="4" class="chip"/>
+    <text x="190" y="22" class="s mid">show access-list</text>
+    <rect x="0" y="40" width="120" height="32" rx="4" class="chip"/>
+    <text x="60" y="62" class="s mid">show interface</text>
+    <rect x="130" y="40" width="120" height="32" rx="4" class="chip"/>
+    <text x="190" y="62" class="s mid">show running</text>
+  </g>
+  <text x="0" y="270" class="a11">不会 CLI 的人也能参与排障</text>
+</g>
+
+<!-- 底部：客户侧收益总结 -->
+<g transform="translate(80,540)">
+  <rect x="0" y="0" width="1440" height="80" rx="6" class="box"/>
+  <text x="20" y="30" class="t15">客户侧收益（来自原文借鉴点）</text>
+  <text x="20" y="56" class="s">将配置自动采集，保存历史 · AI 自动调用工具判断链路情况 · AI 查看配置变动情况 · AI 登入设备查看当前情况（非配置情况），然后自己进行诊断，并输出结论</text>
+</g>
+
+<!-- 边界 -->
+<g transform="translate(80,660)">
+  <text x="0" y="22" class="a11">边界</text>
+  <text x="60" y="22" class="s">三件套的功能原理见原文链接；当前口径以 2026-05-04 官方发布为准</text>
+</g>
+
+</svg>

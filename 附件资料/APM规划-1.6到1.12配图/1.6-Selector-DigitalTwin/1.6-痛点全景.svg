@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" width="1600" height="940">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.dot{fill:#C0392B}
+.gdot{fill:#7F868D}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+<marker id="arrr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/></marker>
+</defs>
+<rect width="1600" height="940" fill="#FFFFFF"/>
+
+<!-- ===== P1：确认现状 ===== -->
+<g transform="translate(80,60)">
+  <text x="0" y="22" class="act">P1</text>
+  <text x="42" y="22" class="t13">排障与设计的第一步都变成「确认现状」</text>
+  <!-- 图纸堆：4 张错位的方框 -->
+  <g transform="translate(20,70)">
+    <rect x="0" y="0" width="180" height="130" rx="3" class="box" transform="rotate(-3 90 65)"/>
+    <rect x="14" y="10" width="180" height="130" rx="3" class="box" transform="rotate(1 104 75)"/>
+    <rect x="28" y="20" width="180" height="130" rx="3" class="box"/>
+    <line x1="40" y1="40" x2="180" y2="40" class="lg"/>
+    <line x1="40" y1="60" x2="180" y2="60" class="lg"/>
+    <line x1="40" y1="80" x2="160" y2="80" class="lg"/>
+    <line x1="40" y1="100" x2="140" y2="100" class="lg"/>
+    <text x="50" y="36" class="s">过期 · 折角</text>
+    <text x="100" y="160" class="s mid">几张图纸，没一张是准的</text>
+  </g>
+  <!-- 资深工程师头像 + 离开的脚印 -->
+  <g transform="translate(280,100)">
+    <circle cx="40" cy="40" r="28" class="box"/>
+    <circle cx="40" cy="35" r="11" fill="none" stroke="#22282C" stroke-width="1.6"/>
+    <path d="M22,58 Q40,46 58,58" fill="none" stroke="#22282C" stroke-width="1.6"/>
+    <text x="40" y="92" class="s mid">资深工程师</text>
+    <!-- 离开脚印虚线 -->
+    <path d="M70,90 Q120,100 170,80" class="lgd" marker-end="url(#arr)"/>
+    <text x="125" y="115" class="s mid">人一走，全貌带走</text>
+  </g>
+  <text x="0" y="290" class="a11">按图索骥找错设备、跨工具反复切换</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="800" y1="50" x2="800" y2="430" class="lgd"/>
+<line x1="50" y1="460" x2="1550" y2="460" class="lgd"/>
+
+<!-- ===== P2：故障现场无法复现 ===== -->
+<g transform="translate(880,60)">
+  <text x="0" y="22" class="act">P2</text>
+  <text x="42" y="22" class="t13">故障现场无法复现：间歇性问题只能「等它下次再出现」</text>
+  <!-- 时间轴 -->
+  <g transform="translate(20,120)">
+    <line x1="0" y1="60" x2="600" y2="60" class="ln"/>
+    <text x="0" y="90" class="s">3 小时前</text>
+    <text x="580" y="90" class="s end">现在</text>
+    <!-- 红点：3 小时前那一下 -->
+    <circle cx="120" cy="60" r="9" class="dot"/>
+    <text x="120" y="40" class="a11 mid">那一下</text>
+    <line x1="120" y1="48" x2="120" y2="56" class="lr"/>
+    <!-- 之后的虚线空白 -->
+    <line x1="135" y1="60" x2="580" y2="60" class="lgd"/>
+    <text x="350" y="40" class="s mid">抓不到 · 凭回忆拼凑</text>
+    <!-- 问号 -->
+    <text x="350" y="100" class="t13" fill="#C0392B">到底发生了什么？</text>
+  </g>
+  <text x="0" y="290" class="a11">SLA 争议时拿不出「当时网络什么样」的证据</text>
+</g>
+
+<!-- ===== P3：容量与冗余无依据 ===== -->
+<g transform="translate(80,500)">
+  <text x="0" y="22" class="act">P3</text>
+  <text x="42" y="22" class="t13">容量与冗余的结论没有可核查的依据</text>
+  <!-- 天平：左倾（过度采购）右倾（紧急溢价） -->
+  <g transform="translate(80,80)">
+    <!-- 天平柱 -->
+    <line x1="120" y1="0" x2="120" y2="100" class="ln"/>
+    <line x1="40" y1="20" x2="200" y2="20" class="ln"/>
+    <circle cx="120" cy="0" r="6" fill="#22282C"/>
+    <!-- 左盘过度采购 -->
+    <g transform="translate(40,20)">
+      <line x1="0" y1="0" x2="0" y2="20" class="ln"/>
+      <path d="M-20,20 L20,20 L15,28 L-15,28 z" fill="#FFFFFF" stroke="#22282C" stroke-width="1.4"/>
+      <text x="0" y="50" class="s mid">过度采购</text>
+      <text x="0" y="68" class="s mid">钱溢出</text>
+    </g>
+    <!-- 右盘紧急溢价 -->
+    <g transform="translate(200,30)">
+      <line x1="0" y1="10" x2="0" y2="30" class="ln"/>
+      <path d="M-20,30 L20,30 L15,38 L-15,38 z" fill="#FFFFFF" stroke="#22282C" stroke-width="1.4"/>
+      <text x="0" y="60" class="s mid">紧急采购</text>
+      <text x="0" y="78" class="s mid">溢价</text>
+    </g>
+    <text x="120" y="130" class="a11 mid">要么过度 · 要么欠配</text>
+  </g>
+  <!-- 仪表盘空着 -->
+  <g transform="translate(360,80)">
+    <circle cx="60" cy="60" r="50" class="box"/>
+    <line x1="60" y1="60" x2="60" y2="22" class="lg"/>
+    <text x="60" y="125" class="s mid">利用率？</text>
+    <text x="60" y="145" class="s mid">冗余度？</text>
+    <text x="60" y="165" class="s mid">说不清</text>
+    <!-- 问号在仪表中央 -->
+    <text x="60" y="68" class="t13 act mid">?</text>
+  </g>
+  <text x="0" y="290" class="a11">打满了才知道 · 扩容有采购+到货+上架周期</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="800" y1="490" x2="800" y2="900" class="lgd"/>
+
+<!-- ===== P4：跨域事件无共同基础 ===== -->
+<g transform="translate(880,500)">
+  <text x="0" y="22" class="act">P4</text>
+  <text x="42" y="22" class="t13">跨域事件没有共同事实基础</text>
+  <!-- 三个分离的小图：网络 / 云 / 应用 -->
+  <g transform="translate(20,80)">
+    <!-- 网络 -->
+    <g>
+      <rect x="0" y="0" width="160" height="110" rx="6" class="box"/>
+      <circle cx="80" cy="40" r="22" fill="none" stroke="#22282C" stroke-width="1.6"/>
+      <line x1="58" y1="55" x2="102" y2="55" class="ln"/>
+      <text x="80" y="100" class="t15 mid">网络</text>
+      <text x="80" y="125" class="s mid">各看各的图</text>
+    </g>
+    <!-- 云 -->
+    <g transform="translate(220,0)">
+      <rect x="0" y="0" width="160" height="110" rx="6" class="box"/>
+      <path d="M40,50 Q40,30 60,30 Q70,18 90,22 Q108,18 110,40 Q120,40 120,55 L40,55 z" fill="none" stroke="#22282C" stroke-width="1.6"/>
+      <text x="80" y="100" class="t15 mid">云</text>
+      <text x="80" y="125" class="s mid">自己的指标</text>
+    </g>
+    <!-- 应用 -->
+    <g transform="translate(440,0)">
+      <rect x="0" y="0" width="160" height="110" rx="6" class="box"/>
+      <rect x="20" y="22" width="120" height="30" fill="none" stroke="#22282C" stroke-width="1.4"/>
+      <rect x="20" y="58" width="80" height="14" fill="none" stroke="#22282C" stroke-width="1.4"/>
+      <text x="80" y="100" class="t15 mid">应用</text>
+      <text x="80" y="125" class="s mid">自己的视角</text>
+    </g>
+    <!-- 各自指自己的箭头 -->
+    <path d="M80,140 L80,170" class="lgd" marker-end="url(#arr)"/>
+    <path d="M300,140 L300,170" class="lgd" marker-end="url(#arr)"/>
+    <path d="M520,140 L520,170" class="lgd" marker-end="url(#arr)"/>
+    <text x="300" y="195" class="s mid">出事时无法指着同一张图定责</text>
+  </g>
+  <text x="0" y="290" class="a11">没有共享证据链 · SLA 争议与复盘都举不出证</text>
+</g>
+
+</svg>

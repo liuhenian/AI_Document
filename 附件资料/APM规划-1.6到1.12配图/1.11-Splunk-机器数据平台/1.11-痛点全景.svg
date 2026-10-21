@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+</style>
+</defs>
+<rect width="1600" height="720" fill="#FFFFFF"/>
+
+<!-- ===== P1：证据分散又不可预设 ===== -->
+<g transform="translate(80,60)">
+  <text x="0" y="22" class="act">P1</text>
+  <text x="42" y="22" class="t13">故障证据既分散又「不可预设」，定位只能靠猜</text>
+  <!-- 几十台机器图标网格 -->
+  <g transform="translate(20,60)">
+    <g>
+      <rect x="0" y="0" width="24" height="20" class="box"/>
+      <rect x="30" y="0" width="24" height="20" class="box"/>
+      <rect x="60" y="0" width="24" height="20" class="box"/>
+      <rect x="90" y="0" width="24" height="20" class="box"/>
+      <rect x="0" y="26" width="24" height="20" class="box"/>
+      <rect x="30" y="26" width="24" height="20" class="box"/>
+      <rect x="60" y="26" width="24" height="20" class="box"/>
+      <rect x="90" y="26" width="24" height="20" class="box"/>
+      <rect x="0" y="52" width="24" height="20" class="box"/>
+      <rect x="30" y="52" width="24" height="20" class="box"/>
+      <rect x="60" y="52" width="24" height="20" class="box"/>
+      <rect x="90" y="52" width="24" height="20" class="box"/>
+      <text x="60" y="92" class="s mid">几十台机器</text>
+    </g>
+    <!-- 几十种格式 -->
+    <g transform="translate(170,0)">
+      <rect x="0" y="0" width="40" height="20" rx="3" class="chip"/>
+      <text x="20" y="14" class="s mid">log</text>
+      <rect x="46" y="0" width="40" height="20" rx="3" class="chip"/>
+      <text x="66" y="14" class="s mid">json</text>
+      <rect x="0" y="26" width="40" height="20" rx="3" class="chip"/>
+      <text x="20" y="40" class="s mid">csv</text>
+      <rect x="46" y="26" width="40" height="20" rx="3" class="chip"/>
+      <text x="66" y="40" class="s mid">xml</text>
+      <rect x="0" y="52" width="40" height="20" rx="3" class="chip"/>
+      <text x="20" y="66" class="s mid">evtx</text>
+      <rect x="46" y="52" width="40" height="20" rx="3" class="chip"/>
+      <text x="66" y="66" class="s mid">...</text>
+      <text x="50" y="92" class="s mid">几十种格式</text>
+    </g>
+    <!-- 时间戳不一致 -->
+    <g transform="translate(310,0)">
+      <text x="0" y="14" class="s">12:34:56</text>
+      <text x="0" y="40" class="s">12:34:56Z</text>
+      <text x="0" y="66" class="s">2026-10-19 12:34</text>
+      <text x="0" y="92" class="a11 mid">口径不一致</text>
+    </g>
+  </g>
+  <!-- 建库时定死字段 -->
+  <g transform="translate(560,60)">
+    <rect x="0" y="0" width="220" height="120" rx="4" class="box"/>
+    <text x="14" y="26" class="t15">建库时定死字段</text>
+    <text x="14" y="48" class="s">src_ip ✓</text>
+    <text x="14" y="66" class="s">dst_port ✓</text>
+    <text x="14" y="84" class="s">user_id ✓</text>
+    <text x="14" y="104" class="a11">未预设字段 · 入库即丢</text>
+    <!-- 红色 ✕ 表示丢弃 -->
+    <line x1="180" y1="100" x2="200" y2="120" class="lr"/>
+    <line x1="200" y1="100" x2="180" y2="120" class="lr"/>
+  </g>
+  <text x="0" y="220" class="a11">排障的本质：事后提出当初没人想到的问题</text>
+  <text x="0" y="240" class="a11">结果不是分析错了 · 是证据没了</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="900" y1="40" x2="900" y2="320" class="lgd"/>
+
+<!-- ===== P2：查询能力只属于少数专家 ===== -->
+<g transform="translate(940,60)">
+  <text x="0" y="22" class="act">P2</text>
+  <text x="42" y="22" class="t13">查询能力只属于少数专家，而且沉淀不下来</text>
+  <!-- 老手 -->
+  <g transform="translate(20,60)">
+    <circle cx="40" cy="40" r="28" class="box"/>
+    <circle cx="40" cy="35" r="11" fill="none" stroke="#22282C" stroke-width="1.6"/>
+    <path d="M22,58 Q40,46 58,58" fill="none" stroke="#22282C" stroke-width="1.6"/>
+    <text x="40" y="92" class="s mid">老手</text>
+    <text x="40" y="110" class="s mid">团队唯一的知识库</text>
+    <!-- 离开脚印 -->
+    <path d="M70,90 Q120,100 170,80" class="lgd" marker-end="url(#arr)"/>
+    <text x="125" y="115" class="s mid">他一休假</text>
+  </g>
+  <!-- 值班的两招 -->
+  <g transform="translate(280,60)">
+    <rect x="0" y="0" width="100" height="40" rx="4" class="chip"/>
+    <text x="50" y="26" class="s mid">重启</text>
+    <rect x="0" y="50" width="100" height="40" rx="4" class="chip"/>
+    <text x="50" y="76" class="s mid">回滚</text>
+    <text x="50" y="115" class="s mid">值班的两招</text>
+  </g>
+  <!-- 老手的查法无法变成视图 -->
+  <g transform="translate(20,170)">
+    <rect x="0" y="0" width="360" height="50" rx="4" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="6 5"/>
+    <text x="14" y="22" class="a11">老手脑子里那套查法</text>
+    <text x="14" y="42" class="a11">没法变成别人点两下就能用的视图</text>
+  </g>
+  <text x="0" y="240" class="a11">同一逻辑还要在「检索」与「数据准备」两处各写一遍</text>
+</g>
+
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+</defs>
+
+</svg>

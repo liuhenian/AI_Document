@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+</style>
+</defs>
+<rect width="1600" height="720" fill="#FFFFFF"/>
+
+<!-- ===== P1：间歇性故障抓不住 ===== -->
+<g transform="translate(80,60)">
+  <text x="0" y="22" class="act">P1</text>
+  <text x="42" y="22" class="t13">间歇性故障抓不住，等你去跑命令时它已经好了</text>
+  <!-- 时间轴 -->
+  <g transform="translate(20,80)">
+    <line x1="0" y1="60" x2="540" y2="60" class="ln"/>
+    <text x="0" y="100" class="s">上周</text>
+    <text x="270" y="100" class="s mid">昨天</text>
+    <text x="540" y="100" class="s end">现在</text>
+    <!-- 三个红点：间歇出现 -->
+    <circle cx="60" cy="60" r="6" fill="#C0392B"/>
+    <text x="60" y="40" class="a11 mid">闪一下</text>
+    <circle cx="240" cy="60" r="6" fill="#C0392B"/>
+    <text x="240" y="40" class="a11 mid">几分钟</text>
+    <circle cx="380" cy="60" r="6" fill="#C0392B"/>
+    <text x="380" y="40" class="a11 mid">又一下</text>
+    <!-- 之间的虚线：抓不到 -->
+    <line x1="68" y1="60" x2="232" y2="60" class="lgd"/>
+    <line x1="248" y1="60" x2="372" y2="60" class="lgd"/>
+    <line x1="388" y1="60" x2="540" y2="60" class="lgd"/>
+  </g>
+  <!-- 工程师键盘不在场 -->
+  <g transform="translate(20,210)">
+    <text x="0" y="0" class="s">工程师恰好在键盘前的概率：</text>
+    <text x="320" y="0" class="a11">几乎为零</text>
+    <text x="0" y="20" class="s">每天几分钟 · 或几周一次的巧合</text>
+  </g>
+  <text x="0" y="270" class="a11">官方原话：用间歇的工具抓间歇的故障，靠的是运气不是技能</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="660" y1="40" x2="660" y2="350" class="lgd"/>
+
+<!-- ===== P2：历史路径无从查起 ===== -->
+<g transform="translate(700,60)">
+  <text x="0" y="22" class="act">P2</text>
+  <text x="42" y="22" class="t13">手动 traceroute 只能看「此刻」，历史路径无从查起</text>
+  <!-- traceroute 输出一闪即逝 -->
+  <g transform="translate(20,80)">
+    <rect x="0" y="0" width="240" height="140" rx="4" class="box"/>
+    <text x="14" y="26" class="s">$ traceroute 10.8.8.2</text>
+    <text x="14" y="46" class="s">1  10.0.0.1   0.4ms</text>
+    <text x="14" y="66" class="s">2  10.1.1.1   1.2ms</text>
+    <text x="14" y="86" class="s">3  10.2.2.2   2.8ms</text>
+    <text x="14" y="106" class="s">4  10.8.8.2   3.6ms</text>
+    <text x="120" y="170" class="s mid">一闪即逝</text>
+    <!-- 虚线消失 -->
+    <path d="M120,140 L120,160" class="lgd"/>
+  </g>
+  <!-- 口述 -->
+  <g transform="translate(300,80)">
+    <rect x="0" y="0" width="200" height="100" rx="4" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="6 5"/>
+    <text x="14" y="26" class="t15">印象中</text>
+    <text x="14" y="50" class="t15">当时是走第 5 跳</text>
+    <text x="100" y="80" class="s mid">口述</text>
+    <text x="100" y="120" class="a11 mid">无版本快照</text>
+  </g>
+  <text x="0" y="240" class="a11">同问题第二次出现，排查从零开始</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="1180" y1="40" x2="1180" y2="350" class="lgd"/>
+
+<!-- ===== P3：回程问题被漏掉 ===== -->
+<g transform="translate(1220,60)">
+  <text x="0" y="22" class="act">P3</text>
+  <text x="42" y="22" class="t13">只看到去程就下结论，回程问题被漏掉</text>
+  <!-- 双向路径示意 -->
+  <g transform="translate(20,80)">
+    <!-- 源 -->
+    <circle cx="20" cy="30" r="14" fill="#FFFFFF" stroke="#22282C" stroke-width="1.6"/>
+    <text x="20" y="36" class="s mid">源</text>
+    <!-- 目的 -->
+    <circle cx="280" cy="30" r="14" fill="#FFFFFF" stroke="#22282C" stroke-width="1.6"/>
+    <text x="280" y="36" class="s mid">目的</text>
+    <!-- 去程：实线，看得见 -->
+    <line x1="34" y1="30" x2="266" y2="30" class="ln" marker-end="url(#arr)"/>
+    <text x="150" y="20" class="s mid">去程 · 看得见 · 正常</text>
+    <!-- 回程：虚线红，漏掉 -->
+    <path d="M266,60 C200,80 100,80 34,60" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="6 5"/>
+    <text x="150" y="90" class="a11 mid">回程 · 漏掉 · 实际异常</text>
+    <!-- 结论被误导 -->
+    <text x="150" y="130" class="s mid">→ 误判「链路没问题」</text>
+    <text x="150" y="148" class="s mid">→ 问题归到应用/终端</text>
+  </g>
+  <text x="0" y="240" class="a11">IP 路由不对称 · 单向 traceroute 制造摩擦</text>
+</g>
+
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#22282C"/></marker>
+</defs>
+
+</svg>

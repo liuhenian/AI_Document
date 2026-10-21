@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" width="1600" height="940">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.acb{fill:#FFFFFF;stroke:#C0392B;stroke-width:1.8}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+<marker id="arrr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/></marker>
+</defs>
+<rect width="1600" height="940" fill="#FFFFFF"/>
+
+<!-- 顶部：实时数字镜像（核心） -->
+<g transform="translate(540,40)">
+  <rect x="0" y="0" width="520" height="90" rx="6" class="acb"/>
+  <text x="260" y="36" class="t13 act mid">实时数字镜像</text>
+  <text x="260" y="62" class="s mid">事实底座 · 随遥测自动刷新 · 不需要人工维护</text>
+</g>
+
+<!-- 第二层：四个核心能力（围绕实时镜像） -->
+<g transform="translate(80,200)">
+  <!-- 路径计算与依赖映射 -->
+  <g>
+    <rect x="0" y="0" width="320" height="80" rx="6" class="box"/>
+    <text x="160" y="34" class="t15 mid">路径计算与依赖映射</text>
+    <text x="160" y="58" class="s mid">把「这条业务怎么走」算成可查询对象</text>
+  </g>
+  <!-- DVR 历史回放 -->
+  <g transform="translate(380,0)">
+    <rect x="0" y="0" width="320" height="80" rx="6" class="box"/>
+    <text x="160" y="34" class="t15 mid">网络 DVR 历史回放</text>
+    <text x="160" y="58" class="s mid">录制状态 · 定点倒带 · 回到案发时刻</text>
+  </g>
+  <!-- What-If 仿真推演 -->
+  <g transform="translate(760,0)">
+    <rect x="0" y="0" width="320" height="80" rx="6" class="box"/>
+    <text x="160" y="34" class="t15 mid">What-If 仿真推演</text>
+    <text x="160" y="58" class="s mid">在沙盘上跑变更与故障 · 先跑完再上线</text>
+  </g>
+  <!-- 容量预测与增长规划 -->
+  <g transform="translate(1140,0)">
+    <rect x="0" y="0" width="320" height="80" rx="6" class="box"/>
+    <text x="160" y="34" class="t15 mid">容量预测与增长规划</text>
+    <text x="160" y="58" class="s mid">预测何时触限 · 给出到位置与端口数的建议</text>
+  </g>
+</g>
+
+<!-- 连接线：核心 → 四能力 -->
+<line x1="800" y1="130" x2="240" y2="200" class="lg"/>
+<line x1="800" y1="130" x2="620" y2="200" class="lg"/>
+<line x1="800" y1="130" x2="1000" y2="200" class="lg"/>
+<line x1="800" y1="130" x2="1380" y2="200" class="lg"/>
+
+<!-- ===== 五个解法 ===== -->
+<g transform="translate(80,360)">
+  <!-- S1：把网络做成随遥测持续自更新的活模型 -->
+  <g>
+    <text x="0" y="22" class="act">S1</text>
+    <text x="42" y="22" class="t13">把网络做成随遥测持续自更新的活模型</text>
+    <text x="0" y="48" class="t15">→ 实时数字镜像 + 路径计算与依赖映射</text>
+    <text x="0" y="68" class="s">替代需要人工维护的静态图纸</text>
+  </g>
+  <!-- S2：把网络当成一台 DVR -->
+  <g transform="translate(0,100)">
+    <text x="0" y="22" class="act">S2</text>
+    <text x="42" y="22" class="t13">把网络当成一台 DVR</text>
+    <text x="0" y="48" class="t15">→ 网络 DVR 历史回放 + 实时数字镜像</text>
+    <text x="0" y="68" class="s">状态被录制 · 可定点倒带 · 不再只剩一条曲线</text>
+  </g>
+  <!-- S3：在孪生上开沙盘 -->
+  <g transform="translate(0,200)">
+    <text x="0" y="22" class="act">S3</text>
+    <text x="42" y="22" class="t13">在孪生上开一个不碰生产网的沙盘</text>
+    <text x="0" y="48" class="t15">→ What-If 仿真推演 + 容量预测与增长规划 + 路径计算</text>
+    <text x="0" y="68" class="s">变更前后做端到端路径验证</text>
+  </g>
+  <!-- S4：把容量与冗余变成可量化决策依据 -->
+  <g transform="translate(820,0)">
+    <text x="0" y="22" class="act">S4</text>
+    <text x="42" y="22" class="t13">把容量与冗余从经验判断变成可量化依据</text>
+    <text x="0" y="48" class="t15">→ 容量预测 + 路径计算 + 实时数字镜像</text>
+    <text x="0" y="68" class="s">算出冗余度 · 回答「备用路径扛不扛得住」</text>
+  </g>
+  <!-- S5：原文笔误点 -->
+  <g transform="translate(820,100)">
+    <text x="0" y="22" class="act">S5</text>
+    <text x="42" y="22" class="t13">把设备、位置、服务、应用放进同一个上下文</text>
+    <text x="0" y="48" class="t15">→ 网络 DVR 历史回放 + 实时数字镜像</text>
+    <text x="0" y="68" class="s">三层模型把设备 / 位置 / 服务 / 应用放进同一张图</text>
+  </g>
+  <!-- 原文笔误提示 -->
+  <g transform="translate(820,200)">
+    <text x="0" y="22" class="a11">⚠ 原文 S5 标注「针对痛点5」，但前文仅列 4 个痛点（P1–P4）</text>
+    <text x="0" y="48" class="a11">  实为 S4 的强化（共同事实基础），对应 P4</text>
+  </g>
+</g>
+
+</svg>

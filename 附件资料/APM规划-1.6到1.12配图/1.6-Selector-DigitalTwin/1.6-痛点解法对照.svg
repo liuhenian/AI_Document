@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 780" width="1440" height="780">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:2;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:2;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+</style>
+</defs>
+<rect width="1440" height="780" fill="#FFFFFF"/>
+
+<!-- 标题 -->
+<text x="60" y="40" class="t13">痛点</text>
+<text x="1380" y="40" class="t13 end">解法</text>
+
+<!-- 中间分割竖线 -->
+<line x1="720" y1="60" x2="720" y2="660" class="lg"/>
+
+<!-- 左侧：4 个痛点节点（垂直均匀分布） -->
+<!-- P1 -->
+<g transform="translate(60,100)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P1</text>
+  <text x="60" y="6" class="t15">确认现状：图纸没一张准的</text>
+</g>
+<!-- P2 -->
+<g transform="translate(60,250)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P2</text>
+  <text x="60" y="6" class="t15">故障现场无法复现</text>
+</g>
+<!-- P3 -->
+<g transform="translate(60,400)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P3</text>
+  <text x="60" y="6" class="t15">容量与冗余无依据</text>
+</g>
+<!-- P4 -->
+<g transform="translate(60,550)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P4</text>
+  <text x="60" y="6" class="t15">跨域事件无共同事实基础</text>
+</g>
+
+<!-- 右侧：5 个解法节点 -->
+<!-- S1 -->
+<g transform="translate(1380,80)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S1</text>
+  <text x="-60" y="6" class="t15 end">把网络做成随遥测自更新的活模型</text>
+</g>
+<!-- S2 -->
+<g transform="translate(1380,200)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S2</text>
+  <text x="-60" y="6" class="t15 end">把网络当成一台 DVR</text>
+</g>
+<!-- S3 -->
+<g transform="translate(1380,340)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S3</text>
+  <text x="-60" y="6" class="t15 end">在孪生上开沙盘 · 先跑完再上线</text>
+</g>
+<!-- S4 -->
+<g transform="translate(1380,490)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S4</text>
+  <text x="-60" y="6" class="t15 end">把容量冗余变成可量化决策依据</text>
+</g>
+<!-- S5 -->
+<g transform="translate(1380,620)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S5</text>
+  <text x="-60" y="6" class="t15 end">设备位置服务应用放进同一上下文</text>
+</g>
+
+<!-- 连接线：S1 → P1 -->
+<line x1="1356" y1="80" x2="80" y2="100" class="lg"/>
+<!-- S2 → P2 -->
+<line x1="1356" y1="200" x2="80" y2="250" class="lg"/>
+<!-- S3 → P3 -->
+<line x1="1356" y1="340" x2="80" y2="400" class="lg"/>
+<!-- S4 → P4 -->
+<line x1="1356" y1="490" x2="80" y2="550" class="lg"/>
+<!-- S5 → P4（红色虚线，原文笔误点的强化关系） -->
+<path d="M1356,620 C800,620 200,580 80,560" class="lrd"/>
+<text x="720" y="610" class="a11 mid">⚠ 原文 S5 标「针对痛点5」，但 P5 不存在 — 实为对 P4 的强化（共同事实基础）</text>
+
+<!-- 底部说明 -->
+<text x="720" y="720" class="s mid">实线 = 一对一常规对应 · 红色虚线 = 原文笔误，按多对多强化关系呈现</text>
+
+</svg>

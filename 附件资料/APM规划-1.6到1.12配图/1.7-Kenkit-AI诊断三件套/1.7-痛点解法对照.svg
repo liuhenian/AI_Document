@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 620" width="1440" height="620">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+</style>
+</defs>
+<rect width="1440" height="620" fill="#FFFFFF"/>
+
+<!-- 标题 -->
+<text x="60" y="40" class="t13">痛点</text>
+<text x="1380" y="40" class="t13 end">解法</text>
+
+<!-- 中间桥 -->
+<text x="720" y="40" class="t13 mid">机制</text>
+
+<!-- 中间分割竖线 -->
+<line x1="720" y1="60" x2="720" y2="540" class="lg"/>
+
+<!-- 左侧：3 个痛点节点 -->
+<g transform="translate(60,140)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P1</text>
+  <text x="60" y="6" class="t15">连通性数据要和流量图来回切换</text>
+</g>
+<g transform="translate(60,300)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P2</text>
+  <text x="60" y="6" class="t15">配置只有「当前值」，没有「历史值」</text>
+</g>
+<g transform="translate(60,460)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P3</text>
+  <text x="60" y="6" class="t15">不会 CLI 的人根本没法参与排障</text>
+</g>
+
+<!-- 右侧：3 个解法节点 -->
+<g transform="translate(1380,140)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S1</text>
+  <text x="-60" y="6" class="t15 end">AI Advisor 同会话返回 ping/traceroute</text>
+</g>
+<g transform="translate(1380,300)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S2</text>
+  <text x="-60" y="6" class="t15 end">配置快照 + diff + AI 解读差异</text>
+</g>
+<g transform="translate(1380,460)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S3</text>
+  <text x="-60" y="6" class="t15 end">AI 待选命令 + SSH/TELNET 取数</text>
+</g>
+
+<!-- 中间桥：机制描述 -->
+<g transform="translate(720,140)">
+  <rect x="-130" y="-22" width="260" height="44" rx="6" class="box"/>
+  <text x="0" y="-2" class="s mid">观测点在客户 agent 侧</text>
+  <text x="0" y="16" class="s mid">不再切工具</text>
+</g>
+<g transform="translate(720,300)">
+  <rect x="-130" y="-22" width="260" height="44" rx="6" class="box"/>
+  <text x="0" y="-2" class="s mid">设备侧提交记录为锚点</text>
+  <text x="0" y="16" class="s mid">机器算 diff + AI 解读</text>
+</g>
+<g transform="translate(720,460)">
+  <rect x="-130" y="-22" width="260" height="44" rx="6" class="box"/>
+  <text x="0" y="-2" class="s mid">AI 待选命令 · 一键发起</text>
+  <text x="0" y="16" class="s mid">取代手工切终端敲命令</text>
+</g>
+
+<!-- 连接线：三段式 P → 桥 → S -->
+<!-- P1 -->
+<line x1="380" y1="140" x2="590" y2="140" class="lg"/>
+<line x1="850" y1="140" x2="1060" y2="140" class="lg"/>
+<!-- P2 -->
+<line x1="380" y1="300" x2="590" y2="300" class="lg"/>
+<line x1="850" y1="300" x2="1060" y2="300" class="lg"/>
+<!-- P3 -->
+<line x1="380" y1="460" x2="590" y2="460" class="lg"/>
+<line x1="850" y1="460" x2="1060" y2="460" class="lg"/>
+
+<!-- 底部说明 -->
+<text x="720" y="580" class="s mid">三段式：痛点 → 机制（把痛点做成能力的那一步）→ 解法 · 三条平行直线 · 完全 1:1 对应</text>
+
+</svg>

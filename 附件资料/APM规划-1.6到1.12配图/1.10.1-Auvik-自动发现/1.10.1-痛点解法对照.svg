@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 620" width="1440" height="620">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+</style>
+</defs>
+<rect width="1440" height="620" fill="#FFFFFF"/>
+
+<!-- 标题 -->
+<text x="60" y="40" class="t13">痛点</text>
+<text x="1380" y="40" class="t13 end">解法</text>
+<text x="720" y="40" class="t13 mid">机制</text>
+
+<!-- 中间分割竖线 -->
+<line x1="720" y1="60" x2="720" y2="540" class="lg"/>
+
+<!-- 左侧：3 个痛点 -->
+<g transform="translate(60,140)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P1</text>
+  <text x="60" y="6" class="t15">事实来源是过期图纸 + 几个人的记忆</text>
+</g>
+<g transform="translate(60,300)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P2</text>
+  <text x="60" y="6" class="t15">网络变化没有事件化 · 全静默</text>
+</g>
+<g transform="translate(60,460)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P3</text>
+  <text x="60" y="6" class="t15">陌生网络第一次成图要数天到数周</text>
+</g>
+
+<!-- 右侧：3 个解法 -->
+<g transform="translate(1380,140)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S1</text>
+  <text x="-60" y="6" class="t15 end">持续扫描 + 连接推断 → 自更新关系图</text>
+</g>
+<g transform="translate(1380,300)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S2</text>
+  <text x="-60" y="6" class="t15 end">设备上线与变化 → 可被告知的事件</text>
+</g>
+<g transform="translate(1380,460)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S3</text>
+  <text x="-60" y="6" class="t15 end">一个采集器 → 自动扫候选网络</text>
+</g>
+
+<!-- 中间桥 -->
+<g transform="translate(720,140)">
+  <rect x="-140" y="-22" width="280" height="44" rx="6" class="box"/>
+  <text x="0" y="-2" class="s mid">LLDP/CDP + 子网/ARP/MAC</text>
+  <text x="0" y="16" class="s mid">不再需要人工维护</text>
+</g>
+<g transform="translate(720,300)">
+  <rect x="-140" y="-22" width="280" height="44" rx="6" class="box"/>
+  <text x="0" y="-2" class="s mid">事件化告警 · 身份归并</text>
+  <text x="0" y="16" class="s mid">MAC/IP/主机名 → 稳定实体</text>
+</g>
+<g transform="translate(720,460)">
+  <rect x="-140" y="-22" width="280" height="44" rx="6" class="box"/>
+  <text x="0" y="-2" class="s mid">单一采集器自动扫</text>
+  <text x="0" y="16" class="s mid">数周 → 小时级</text>
+</g>
+
+<!-- 连接线 -->
+<line x1="380" y1="140" x2="580" y2="140" class="lg"/>
+<line x1="860" y1="140" x2="1060" y2="140" class="lg"/>
+<line x1="380" y1="300" x2="580" y2="300" class="lg"/>
+<line x1="860" y1="300" x2="1060" y2="300" class="lg"/>
+<line x1="380" y1="460" x2="580" y2="460" class="lg"/>
+<line x1="860" y1="460" x2="1060" y2="460" class="lg"/>
+
+<!-- 底部说明 -->
+<text x="720" y="580" class="s mid">三段式：痛点 → 机制（把痛点做成能力的那一步）→ 解法 · 完全 1:1 对应</text>
+
+</svg>

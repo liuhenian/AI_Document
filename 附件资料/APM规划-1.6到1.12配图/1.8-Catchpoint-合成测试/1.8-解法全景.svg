@@ -1,0 +1,173 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 940" width="1600" height="940">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.acb{fill:#FFFFFF;stroke:#C0392B;stroke-width:1.8}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+</defs>
+<rect width="1600" height="940" fill="#FFFFFF"/>
+
+<!-- ===== S1：四层金字塔 ===== -->
+<g transform="translate(80,50)">
+  <text x="0" y="22" class="act">S1</text>
+  <text x="42" y="22" class="t13">按「业务闭环」而非「协议端口」定义测试类型</text>
+  <text x="0" y="44" class="s">从端口 → 接口 → 链式接口 → 页面 → 交易 · 真实浏览器渲染页面、执行 JS、点击填表提交</text>
+  
+  <!-- 金字塔（5 层） -->
+  <g transform="translate(0,60)">
+    <polygon points="0,0 320,0 300,30 20,30" class="box"/>
+    <text x="160" y="22" class="t15 mid">交易 Transaction / Playwright</text>
+    <polygon points="20,30 300,30 285,60 35,60" class="box"/>
+    <text x="160" y="52" class="t15 mid">页面 Web / WebPageTest</text>
+    <polygon points="35,60 285,60 270,90 50,90" class="box"/>
+    <text x="160" y="82" class="t15 mid">链式接口 API 多步</text>
+    <polygon points="50,90 270,90 255,120 65,120" class="box"/>
+    <text x="160" y="112" class="t15 mid">接口 API 单步</text>
+    <polygon points="65,120 255,120 240,150 80,150" class="box"/>
+    <text x="160" y="142" class="t15 mid">端口 Ping / Transport</text>
+  </g>
+  <!-- 强调框：最上层 -->
+  <rect x="0" y="60" width="320" height="30" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="6 5"/>
+  <text x="0" y="220" class="a11">回答「用户能否完成这件事」而非「服务器是否应答」</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="460" y1="40" x2="460" y2="320" class="lgd"/>
+
+<!-- ===== S2：第三方依赖独立举证 ===== -->
+<g transform="translate(500,50)">
+  <text x="0" y="22" class="act">S2</text>
+  <text x="42" y="22" class="t13">把第三方依赖变成可被独立举证的测试对象</text>
+  <!-- 五个对象芯片 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="100" height="32" rx="4" class="chip"/>
+    <text x="50" y="22" class="s mid">DNS 直查</text>
+    <rect x="110" y="0" width="100" height="32" rx="4" class="chip"/>
+    <text x="160" y="22" class="s mid">DNS 体验</text>
+    <rect x="220" y="0" width="100" height="32" rx="4" class="chip"/>
+    <text x="270" y="22" class="s mid">SSL</text>
+    <rect x="0" y="42" width="100" height="32" rx="4" class="chip"/>
+    <text x="50" y="62" class="s mid">BGP</text>
+    <rect x="110" y="42" width="100" height="32" rx="4" class="chip"/>
+    <text x="160" y="62" class="s mid">Transport</text>
+    <rect x="220" y="42" width="100" height="32" rx="4" class="chip"/>
+    <text x="270" y="62" class="s mid">Traceroute</text>
+  </g>
+  <text x="0" y="180" class="a11">对「自己控制不了的那半条路」单独发问</text>
+  <text x="0" y="200" class="s">带时间戳与节点维度的证据 · 不是供应商的状态页截图</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="940" y1="40" x2="940" y2="320" class="lgd"/>
+
+<!-- ===== S3：测试类型跟着业务协议走 ===== -->
+<g transform="translate(980,50)">
+  <text x="0" y="22" class="act">S3</text>
+  <text x="42" y="22" class="t13">测试类型跟着业务实际使用的协议走</text>
+  <!-- 四个协议芯片 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="150" height="50" rx="4" class="chip"/>
+    <text x="75" y="22" class="s mid">Streaming Test</text>
+    <text x="75" y="40" class="s mid">2026-06 · HLS/DASH/MP4</text>
+    <rect x="160" y="0" width="150" height="50" rx="4" class="chip"/>
+    <text x="235" y="22" class="s mid">MQTT</text>
+    <text x="235" y="40" class="s mid">Agent 2.18.0 · 2026-09</text>
+    <rect x="0" y="60" width="150" height="50" rx="4" class="chip"/>
+    <text x="75" y="82" class="s mid">Node-to-Node</text>
+    <text x="75" y="100" class="s mid">持续矩阵</text>
+    <rect x="160" y="60" width="150" height="50" rx="4" class="chip"/>
+    <text x="235" y="82" class="s mid">Heartbeat</text>
+    <text x="235" y="100" class="s mid">5 秒 · 亚分钟级</text>
+  </g>
+  <text x="0" y="180" class="a11">在真实 Chromium 内测量起播延迟与缓冲行为</text>
+</g>
+
+<!-- 横向分隔 -->
+<line x1="50" y1="350" x2="1550" y2="350" class="lgd"/>
+
+<!-- ===== S4：可用性 vs 内容完整性 ===== -->
+<g transform="translate(80,400)">
+  <text x="0" y="22" class="act">S4</text>
+  <text x="42" y="22" class="t13">把「可用性」与「内容完整性」拆成两个指标</text>
+  <!-- 三个百分数 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="180" height="60" rx="4" class="box"/>
+    <text x="14" y="26" class="t15">% Availability</text>
+    <text x="14" y="48" class="s">主 URL 是否被触达</text>
+  </g>
+  <g transform="translate(210,60)">
+    <rect x="0" y="0" width="180" height="60" rx="4" class="box"/>
+    <text x="14" y="26" class="t15">% Content Availability</text>
+    <text x="14" y="48" class="s">每个元素是否加载</text>
+  </g>
+  <g transform="translate(420,60)">
+    <rect x="0" y="0" width="180" height="60" rx="4" class="box"/>
+    <text x="14" y="26" class="t15">% Adjusted Availability</text>
+    <text x="14" y="48" class="s">剔除 Purged Runs · SLA 口径</text>
+  </g>
+  <text x="0" y="160" class="a11">「可用性 100% 但功能坏了」第一次有能写进报表的数</text>
+  <text x="0" y="180" class="s">边界：% Content Availability 只衡量元素加载，不衡量业务逻辑正确</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="780" y1="390" x2="780" y2="650" class="lgd"/>
+
+<!-- ===== S5：向用户所在处布点 ===== -->
+<g transform="translate(820,400)">
+  <text x="0" y="22" class="act">S5</text>
+  <text x="42" y="22" class="t13">向用户所在处布点，而非向机房布点</text>
+  <!-- 四类节点分层 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="160" height="32" rx="4" class="chip"/>
+    <text x="80" y="22" class="s mid">Backbone 骨干 · 998</text>
+    <rect x="170" y="0" width="160" height="32" rx="4" class="chip"/>
+    <text x="250" y="22" class="s mid">Last Mile 末公里 · 127</text>
+    <rect x="0" y="42" width="160" height="32" rx="4" class="chip"/>
+    <text x="80" y="64" class="s mid">Wireless 无线 · 46</text>
+    <rect x="170" y="42" width="160" height="32" rx="4" class="chip"/>
+    <text x="250" y="64" class="s mid">Cloud 云内 · 266</text>
+  </g>
+  <text x="0" y="160" class="a11">3,109 agents · 353 城市 · 108 国家</text>
+  <text x="0" y="180" class="s">同一句「快不快」可得到十几个不同答案，每个都对应一组真实用户</text>
+</g>
+
+<!-- 横向分隔 -->
+<line x1="50" y1="680" x2="1550" y2="680" class="lgd"/>
+
+<!-- ===== S6：最后一公里 / 无线保留 ===== -->
+<g transform="translate(80,720)">
+  <text x="0" y="22" class="act">S6</text>
+  <text x="42" y="22" class="t13">把「最后一公里」与「无线」作为独立类别刻意保留</text>
+  <!-- 两个区域 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="200" height="80" rx="4" class="box"/>
+    <text x="14" y="26" class="t15">Last Mile</text>
+    <text x="14" y="48" class="s">居民宽带</text>
+    <text x="14" y="66" class="s">家庭网络</text>
+  </g>
+  <g transform="translate(220,60)">
+    <rect x="0" y="0" width="200" height="80" rx="4" class="box"/>
+    <text x="14" y="26" class="t15">Wireless</text>
+    <text x="14" y="48" class="s">移动网络</text>
+    <text x="14" y="66" class="s">MEC</text>
+  </g>
+  <text x="0" y="170" class="a11">从云上测永远测不准的区域</text>
+  <text x="440" y="170" class="s">官方明确：节点直接接入一级 ISP · 与被测云解耦</text>
+</g>
+
+</svg>

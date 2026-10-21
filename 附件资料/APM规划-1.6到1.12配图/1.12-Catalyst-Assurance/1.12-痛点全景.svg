@@ -1,0 +1,148 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" width="1600" height="960">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.8;stroke-linecap:round}
+.ln2{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.4;stroke-linecap:round}
+.gy2{fill:none;stroke:#DDE1E5;stroke-width:1.4;stroke-linecap:round}
+.ac2{fill:none;stroke:#C0392B;stroke-width:1.8;stroke-linecap:round}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.8}
+.boxg{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.card{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.8}
+.dt{stroke-dasharray:7 6}
+.dl{stroke-dasharray:5 5}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:15px;font-weight:600;fill:#22282C}
+.t13{font-size:17px;font-weight:700}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:13px;font-weight:500;fill:#7F868D}
+.act{fill:#C0392B}
+.a11{fill:#C0392B;font-size:13px;font-weight:700}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<rect width="1600" height="960" fill="#FFFFFF"/>
+
+<!-- ===== 第一排 ===== -->
+<!-- P1 从「网慢」出发的排查长路 -->
+<text x="90" y="100" class="s">用户的描述</text>
+<rect x="90" y="116" width="300" height="62" rx="8" class="box"/>
+<text x="240" y="155" class="t mid">「某栋楼、某个人、网慢」</text>
+<line x1="240" y1="178" x2="240" y2="208" class="gy"/>
+<polygon points="240,222 233,206 247,206" fill="#B6BBC1"/>
+<text x="252" y="200" class="s">从这句话出发</text>
+<rect x="90" y="228" width="300" height="46" rx="6" class="chip"/>
+<text x="240" y="258" class="t mid">终端</text>
+<rect x="90" y="282" width="300" height="46" rx="6" class="chip"/>
+<text x="240" y="312" class="t mid">AP</text>
+<rect x="90" y="336" width="300" height="46" rx="6" class="chip"/>
+<text x="240" y="366" class="t mid">WLC</text>
+<rect x="90" y="390" width="300" height="46" rx="6" class="chip"/>
+<text x="240" y="420" class="t mid">交换机</text>
+<line x1="240" y1="270" x2="240" y2="278" class="gy"/>
+<line x1="240" y1="324" x2="240" y2="332" class="gy"/>
+<line x1="240" y1="378" x2="240" y2="386" class="gy"/>
+<line x1="106" y1="458" x2="374" y2="458" class="ac2 dl"/>
+<text x="240" y="482" class="a11 mid">每步都要先确认「不是这里的问题」</text>
+
+<!-- P2 四步串行 -->
+<text x="466" y="100" class="s">上线：四步串行</text>
+<rect x="470" y="120" width="140" height="62" rx="8" class="boxg"/>
+<text x="540" y="159" class="t mid">关联</text>
+<rect x="640" y="120" width="140" height="62" rx="8" class="boxg"/>
+<text x="710" y="159" class="t mid">认证</text>
+<rect x="810" y="120" width="140" height="62" rx="8" class="boxg"/>
+<text x="880" y="159" class="t mid">地址</text>
+<rect x="980" y="120" width="140" height="62" rx="8" class="boxg"/>
+<text x="1050" y="159" class="t mid">域名</text>
+<line x1="612" y1="151" x2="636" y2="151" class="gy"/>
+<line x1="782" y1="151" x2="806" y2="151" class="gy"/>
+<line x1="952" y1="151" x2="976" y2="151" class="gy"/>
+<circle cx="880" cy="182" r="5" fill="#C0392B"/>
+<line x1="880" y1="187" x2="880" y2="222" class="ac2"/>
+<text x="880" y="246" class="a11 mid">断在这里</text>
+
+<line x1="466" y1="306" x2="1150" y2="306" class="ac2 dl"/>
+<text x="808" y="338" class="a11 mid">不拆开，三种失败在用户嘴里是同一句话：「我连不上」</text>
+<text x="808" y="366" class="s mid">只能一步步反复试</text>
+
+<!-- P3 两个系统之间来回跑 -->
+<text x="1230" y="100" class="s">两个系统，两套日志</text>
+<rect x="1210" y="116" width="300" height="76" rx="8" class="box"/>
+<text x="1360" y="150" class="t mid">网管（Assurance）</text>
+<text x="1360" y="174" class="s mid">有终端，没失败原因</text>
+<rect x="1210" y="230" width="300" height="76" rx="8" class="box"/>
+<text x="1360" y="264" class="t mid">认证系统（AAA）</text>
+<text x="1360" y="288" class="s mid">有原因，没终端</text>
+<path d="M1520,192 C1560,216 1560,226 1520,250" class="gy dl"/>
+<polygon points="1502,254 1516,244 1506,238" fill="#B6BBC1"/>
+<path d="M1200,250 C1160,226 1160,216 1200,192" class="gy dl"/>
+<polygon points="1218,188 1204,198 1214,204" fill="#B6BBC1"/>
+<text x="1360" y="336" class="s mid">登录、看日志、抄时间点、再回来对</text>
+<text x="1360" y="362" class="a11 mid">取证动作本身在消耗排障时间</text>
+
+<!-- ===== 第二排 ===== -->
+<!-- P4 非关键 SSID 刷屏 -->
+<text x="90" y="530" class="s">监督大屏</text>
+<rect x="90" y="546" width="330" height="222" rx="8" class="box"/>
+<line x1="90" y1="614" x2="420" y2="614" class="ac2 dl"/>
+<text x="255" y="600" class="a11 mid">下面全是访客网络的数据</text>
+<rect x="106" y="632" width="140" height="24" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="176" y="649" class="s mid">访客 SSID</text>
+<rect x="256" y="632" width="140" height="24" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="326" y="649" class="s mid">访客 SSID</text>
+<rect x="106" y="664" width="140" height="24" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="176" y="681" class="s mid">测试 SSID</text>
+<rect x="256" y="664" width="140" height="24" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="326" y="681" class="s mid">访客 SSID</text>
+<rect x="106" y="696" width="140" height="24" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="176" y="713" class="s mid">访客 SSID</text>
+<rect x="256" y="696" width="140" height="24" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="326" y="713" class="s mid">测试 SSID</text>
+<rect x="106" y="728" width="140" height="24" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="176" y="745" class="s mid">访客 SSID</text>
+<rect x="256" y="728" width="140" height="24" rx="4" fill="#FFFFFF" stroke="#2F3437" stroke-width="1.8"/>
+<text x="326" y="745" class="t mid">生产 SSID</text>
+
+<!-- P5 新制式没有基线 -->
+<text x="466" y="530" class="s">健康分 / 图表</text>
+<rect x="466" y="546" width="310" height="222" rx="8" class="box"/>
+<text x="621" y="584" class="t mid">Wi-Fi 7 / MLO 客户端</text>
+<path d="M486,650 q38,-38 76,0 q38,38 76,0 q38,-38 76,0" fill="none" stroke="#B6BBC1" stroke-width="1.6"/>
+<text x="621" y="676" class="s mid">没有历史基线可比</text>
+<line x1="486" y1="712" x2="756" y2="712" class="gy2"/>
+<text x="621" y="742" class="t mid">这个分难看，是设备的问题，</text>
+<text x="621" y="766" class="s mid">还是终端太新？</text>
+
+<text x="466" y="820" class="t13 act">P5</text>
+<text x="504" y="820" class="s">新制式终端没有基线可比</text>
+
+<!-- P6 锅甩给网络 -->
+<text x="826" y="530" class="s">用户感知到的只有一句</text>
+<rect x="826" y="546" width="694" height="96" rx="8" class="box"/>
+<text x="1173" y="602" class="t13 mid">「网连不上」</text>
+
+<text x="836" y="676" class="s">其实断在这里</text>
+<rect x="826" y="690" width="300" height="90" rx="8" class="box"/>
+<text x="976" y="726" class="t mid">AAA / DHCP</text>
+<text x="976" y="750" class="s mid">外部系统，不在网络管辖范围</text>
+<line x1="1142" y1="735" x2="1170" y2="735" class="ac2"/>
+<polygon points="1184,735 1168,742 1168,728" fill="#C0392B"/>
+<rect x="1200" y="690" width="320" height="90" rx="8" class="box"/>
+<text x="1360" y="726" class="t mid">网络团队</text>
+<text x="1360" y="750" class="s mid">被投诉、被要求整改的一方</text>
+
+<text x="826" y="836" class="a11">没有一份双方都认的证据</text>
+<text x="826" y="862" class="s">跨团队定责就变成了立场之争</text>
+
+<text x="826" y="820" class="t13 act">P6</text>
+<text x="864" y="820" class="s">认证与地址服务慢，锅甩给网络</text>
+
+<!-- ===== 标签区 ===== -->
+<text x="70" y="920" class="t13 act">P1</text>
+<text x="108" y="920" class="s">用户只会说「网慢」</text>
+<text x="450" y="920" class="t13 act">P2</text>
+<text x="488" y="920" class="s">说不清「卡在哪一步」</text>
+<text x="826" y="920" class="t13 act">P3</text>
+<text x="864" y="920" class="s">认证故障在两个系统来回跑</text>
+<text x="1240" y="920" class="t13 act">P4</text>
+<text x="1278" y="920" class="s">非关键流量盖住关键业务</text>
+</svg>

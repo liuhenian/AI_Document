@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+</style>
+</defs>
+<rect width="1600" height="720" fill="#FFFFFF"/>
+
+<!-- ===== P1：确认现状 ===== -->
+<g transform="translate(80,60)">
+  <text x="0" y="22" class="act">P1</text>
+  <text x="42" y="22" class="t13">排障与变更的第一步都变成「确认现状」</text>
+  <!-- 一叠过期图纸 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="160" height="110" rx="3" class="box" transform="rotate(-2 80 55)"/>
+    <rect x="14" y="10" width="160" height="110" rx="3" class="box" transform="rotate(1 94 65)"/>
+    <rect x="28" y="20" width="160" height="110" rx="3" class="box"/>
+    <text x="108" y="50" class="s mid">过期图纸</text>
+    <line x1="40" y1="65" x2="160" y2="65" class="lg"/>
+    <line x1="40" y1="80" x2="170" y2="80" class="lg"/>
+    <line x1="40" y1="95" x2="150" y2="95" class="lg"/>
+    <text x="108" y="160" class="s mid">事实来源不是数据</text>
+  </g>
+  <!-- 几个人的记忆（口头气泡） -->
+  <g transform="translate(240,60)">
+    <rect x="0" y="0" width="200" height="40" rx="6" class="box"/>
+    <text x="14" y="26" class="s">「我记得是 R3 接 SW2」</text>
+    <rect x="0" y="50" width="200" height="40" rx="6" class="box"/>
+    <text x="14" y="76" class="s">「上次谁动过吗？」</text>
+    <rect x="0" y="100" width="200" height="40" rx="6" class="box"/>
+    <text x="14" y="126" class="s">「等下我登上去看看」</text>
+    <text x="100" y="160" class="s mid">几个人的记忆</text>
+  </g>
+  <text x="0" y="240" class="a11">每一步都要重新拼一遍「当下长什么样」</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="600" y1="40" x2="600" y2="320" class="lgd"/>
+
+<!-- ===== P2：网络变化没有事件化 ===== -->
+<g transform="translate(640,60)">
+  <text x="0" y="22" class="act">P2</text>
+  <text x="42" y="22" class="t13">网络的「变化」没有事件化</text>
+  <!-- 拓扑图变化示意 -->
+  <g transform="translate(20,60)">
+    <!-- 设备来来去去 -->
+    <circle cx="60" cy="40" r="14" fill="#FFFFFF" stroke="#22282C" stroke-width="1.6"/>
+    <text x="60" y="46" class="s mid">R1</text>
+    <circle cx="160" cy="40" r="14" fill="#FFFFFF" stroke="#22282C" stroke-width="1.6"/>
+    <text x="160" y="46" class="s mid">R2</text>
+    <line x1="74" y1="40" x2="146" y2="40" class="ln"/>
+    <!-- 新增的私接 -->
+    <circle cx="260" cy="80" r="14" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="4 3"/>
+    <text x="260" y="86" class="a11 mid">?</text>
+    <line x1="174" y1="46" x2="248" y2="74" class="lrd"/>
+    <!-- 替换的设备 -->
+    <circle cx="60" cy="120" r="14" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="4 3"/>
+    <text x="60" y="126" class="a11 mid">R3?</text>
+    <text x="60" y="155" class="s mid">被原样替换？</text>
+    <!-- LLDP 被固件升级清掉 -->
+    <text x="200" y="130" class="a11 mid">固件升级</text>
+    <text x="200" y="148" class="a11 mid">LLDP 清掉</text>
+    <text x="200" y="166" class="s mid">没机制告诉你</text>
+  </g>
+  <text x="0" y="240" class="a11">设备来去、私接、固件升级、原样替换 · 全静默</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="1140" y1="40" x2="1140" y2="320" class="lgd"/>
+
+<!-- ===== P3：第一次成图成本极高 ===== -->
+<g transform="translate(1180,60)">
+  <text x="0" y="22" class="act">P3</text>
+  <text x="42" y="22" class="t13">陌生网络的「第一次成图」成本极高</text>
+  <!-- 手工流程 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="100" height="32" rx="4" class="chip"/>
+    <text x="50" y="22" class="s mid">登设备</text>
+    <line x1="100" y1="16" x2="120" y2="16" class="lg" marker-end="url(#arr)"/>
+    <rect x="120" y="0" width="100" height="32" rx="4" class="chip"/>
+    <text x="170" y="22" class="s mid">抄型号</text>
+    <line x1="220" y1="16" x2="240" y2="16" class="lg" marker-end="url(#arr)"/>
+    <rect x="240" y="0" width="100" height="32" rx="4" class="chip"/>
+    <text x="290" y="22" class="s mid">查互联</text>
+    <text x="170" y="60" class="s mid">↓</text>
+    <text x="170" y="90" class="a11 mid">数天到数周</text>
+    <text x="170" y="120" class="s mid">交付质量取决于谁去做</text>
+  </g>
+  <text x="0" y="240" class="a11">陌生站点接入 · 第一份能用的清单要等数天到数周</text>
+</g>
+
+<defs>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+</defs>
+
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660">
+<style>
+.cn{fill:none;stroke:#B6BBC1;stroke-width:1.3}
+.cna{fill:none;stroke:#C0392B;stroke-width:2.2}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:12px;fill:#2F3437}
+.t13{font-size:13px}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:11px;fill:#9AA0A6}
+.act{fill:#C0392B}
+.end{text-anchor:end}
+.mid{text-anchor:middle}
+</style>
+<rect width="1200" height="660" fill="#FFFFFF"/>
+<text x="70" y="70" class="s">痛点</text>
+<text x="1130" y="70" class="s end">解法</text>
+
+<line x1="300" y1="130" x2="855" y2="130" class="cn"/>
+<path d="M855,130 C700,150 480,310 300,330" class="cn"/>
+<line x1="300" y1="230" x2="855" y2="230" class="cna"/>
+<line x1="300" y1="330" x2="855" y2="330" class="cn"/>
+<path d="M855,330 C700,350 480,410 300,430" class="cn"/>
+<path d="M855,430 C700,450 480,510 300,530" class="cn"/>
+<path d="M855,530 C640,548 372,310 300,150" class="cn"/>
+
+<text x="70" y="135" class="t t13 act">P1</text>
+<text x="104" y="135" class="t t13">设备全绿，网段不通</text>
+<text x="104" y="155" class="s">时间</text>
+
+<text x="70" y="235" class="t t13 act">P2</text>
+<text x="104" y="235" class="t t13">只有「现在」看得见</text>
+<text x="104" y="255" class="s">结论不可信 / 时间</text>
+
+<text x="70" y="335" class="t t13 act">P3</text>
+<text x="104" y="335" class="t t13">能力绑在一个人身上</text>
+<text x="104" y="355" class="s">人</text>
+
+<text x="70" y="435" class="t t13 act">P4</text>
+<text x="104" y="435" class="t t13">出口切换不可知</text>
+<text x="104" y="455" class="s">钱 / 时间</text>
+
+<text x="70" y="535" class="t t13 act">P5</text>
+<text x="104" y="535" class="t t13">两个协议、两处看</text>
+<text x="104" y="555" class="s">时间</text>
+
+<text x="1130" y="135" class="t t13 act end">S1</text>
+<text x="1094" y="135" class="t t13 end">标准 MIB 变成表格</text>
+
+<text x="1130" y="235" class="t t13 act end">S2</text>
+<text x="1094" y="235" class="t t13 end">状态 / 抖动 / 历史</text>
+
+<text x="1130" y="335" class="t t13 act end">S3</text>
+<text x="1094" y="335" class="t t13 end">5 个告警维度</text>
+
+<text x="1130" y="435" class="t t13 act end">S4</text>
+<text x="1094" y="435" class="t t13 end">统一入口 Debug &gt; Routes</text>
+
+<text x="1130" y="535" class="t t13 act end">S5</text>
+<text x="1094" y="535" class="t t13 end">排查路径写进文档</text>
+
+<text x="578" y="214" class="s mid">P2 的唯一解</text>
+<text x="600" y="610" class="s mid">5 条痛点都指得回解法；5 条解法都指得回痛点 —— 没有悬空项</text>
+</svg>

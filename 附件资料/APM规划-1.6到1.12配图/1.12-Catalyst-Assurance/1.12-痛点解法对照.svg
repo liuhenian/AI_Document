@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1420 780" width="1420" height="780">
+<style>
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.5}
+.gya{fill:none;stroke:#C0392B;stroke-width:1.8;stroke-dasharray:8 6}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:15px;font-weight:600;fill:#22282C}
+.t13{font-size:17px;font-weight:700}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:13px;font-weight:500;fill:#7F868D}
+.act{fill:#C0392B}
+.a11{fill:#C0392B;font-size:13px;font-weight:700}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.bd{fill:none;stroke:#E6E9EC;stroke-width:1}
+</style>
+<rect width="1420" height="780" fill="#FFFFFF"/>
+
+<!-- 上边界提示 -->
+<text x="710" y="46" class="s mid">常规直连 = 一对一；红色虚线 = 一处多对多（S3 同时回应 P3 与 P6）</text>
+<line x1="60" y1="66" x2="1360" y2="66" class="bd"/>
+
+<!-- 左列：痛点 -->
+<text x="60" y="60" class="s">痛点</text>
+
+<text x="60" y="136" class="t13 act">P1</text>
+<text x="110" y="136" class="t13">用户只会说「网慢」或「连不上」</text>
+<text x="110" y="162" class="s">时间 / 人</text>
+
+<text x="60" y="240" class="t13 act">P2</text>
+<text x="110" y="240" class="t13">「卡在哪一步」说不出来</text>
+<text x="110" y="266" class="s">时间</text>
+
+<text x="60" y="344" class="t13 act">P3</text>
+<text x="110" y="344" class="t13">认证类故障要在两个系统之间来回跑</text>
+<text x="110" y="370" class="s">时间 / 人</text>
+
+<text x="60" y="448" class="t13 act">P4</text>
+<text x="110" y="448" class="t13">同一 SSID 里非关键流量盖住关键业务</text>
+<text x="110" y="474" class="s">时间</text>
+
+<text x="60" y="552" class="t13 act">P5</text>
+<text x="110" y="552" class="t13">新制式终端没有基线可比</text>
+<text x="110" y="578" class="s">时间</text>
+
+<text x="60" y="656" class="t13 act">P6</text>
+<text x="110" y="656" class="t13">认证与地址服务慢，锅最后甩给网络</text>
+<text x="110" y="682" class="s">组织</text>
+
+<text x="1190" y="136" class="t13 end">以客户端为主语的 360 视图</text>
+<text x="1240" y="136" class="t13 act">S1</text>
+<text x="1190" y="240" class="t13 end">四阶段漏斗，钉在具体一步</text>
+<text x="1240" y="240" class="t13 act">S2</text>
+<text x="1190" y="344" class="t13 end">认证证据搬进 Assurance</text>
+<text x="1240" y="344" class="t13 act">S3</text>
+<text x="1190" y="448" class="t13 end">过滤器把噪声移出统计</text>
+<text x="1240" y="448" class="t13 act">S5</text>
+<text x="1190" y="552" class="t13 end">新制式补上健康口径</text>
+<text x="1240" y="552" class="t13 act">S6</text>
+<text x="1190" y="656" class="t13 end">AAA / DHCP 服务健康集中</text>
+<text x="1240" y="656" class="t13 act">S4</text>
+
+<text x="1340" y="46" class="s end">解法</text>
+
+<!-- 六条主线 -->
+<path d="M660,136 L1210,136" class="gy"/>
+<polygon points="1222,136 1206,143 1206,129" fill="#B6BBC1"/>
+<text x="935" y="124" class="s mid">一步到位</text>
+
+<path d="M660,240 L1210,240" class="gy"/>
+<polygon points="1222,240 1206,247 1206,233" fill="#B6BBC1"/>
+<text x="935" y="228" class="s mid">失败停在具体一步</text>
+
+<path d="M660,344 L1210,344" class="gy"/>
+<polygon points="1222,344 1206,351 1206,337" fill="#B6BBC1"/>
+<text x="935" y="332" class="s mid">同屏可见，取消跨系统取证</text>
+
+<path d="M660,448 L1210,448" class="gy"/>
+<polygon points="1222,448 1206,455 1206,441" fill="#B6BBC1"/>
+<text x="935" y="436" class="s mid">把噪声移出统计口径</text>
+
+<path d="M660,552 L1210,552" class="gy"/>
+<polygon points="1222,552 1206,559 1206,545" fill="#B6BBC1"/>
+<text x="935" y="540" class="s mid">先能看见，再谈优化</text>
+
+<path d="M660,656 L1210,656" class="gy"/>
+<polygon points="1222,656 1206,663 1206,649" fill="#B6BBC1"/>
+<text x="935" y="644" class="s mid">受影响名单 = 共同材料</text>
+
+<!-- 多对多：P6 另由 S3 承接，走底部折线 -->
+<path d="M660,690 L660,742 L1340,742 L1340,378 L1320,378" class="gya"/>
+<text x="1000" y="732" class="a11 mid">P6 的另一半：证据也要在网管侧 —— S3 一并承接</text>
+
+<line x1="60" y1="712" x2="1360" y2="712" class="bd"/>
+<text x="60" y="756" class="s">六条常规直连之上，P6 多一条折线指向 S3：本组共 7 组对应，无悬空痛点、无悬空解法。</text>
+</svg>

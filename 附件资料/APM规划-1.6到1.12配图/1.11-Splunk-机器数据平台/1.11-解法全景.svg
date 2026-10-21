@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 840" width="1600" height="840">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.acb{fill:#FFFFFF;stroke:#C0392B;stroke-width:1.8}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+</defs>
+<rect width="1600" height="840" fill="#FFFFFF"/>
+
+<!-- ===== S1：原始事件入库 + 读时建模 + 倒排索引 ===== -->
+<g transform="translate(80,60)">
+  <text x="0" y="22" class="act">S1</text>
+  <text x="42" y="22" class="t13">原始事件统一入库 + 读时建模 + 倒排索引</text>
+  
+  <!-- 主流程 -->
+  <g transform="translate(0,60)">
+    <!-- 原始事件 -->
+    <rect x="0" y="0" width="160" height="50" rx="6" class="box"/>
+    <text x="80" y="22" class="t15 mid">原始事件</text>
+    <text x="80" y="40" class="s mid">按原始入库 · 不做成列</text>
+    
+    <line x1="160" y1="25" x2="180" y2="25" class="lg" marker-end="url(#arr)"/>
+    
+    <!-- 读时建模 -->
+    <rect x="180" y="0" width="200" height="50" rx="6" class="box"/>
+    <text x="280" y="22" class="t15 mid">读时建模</text>
+    <text x="280" y="40" class="s mid">props.conf / transforms.conf</text>
+    
+    <line x1="380" y1="25" x2="400" y2="25" class="lg" marker-end="url(#arr)"/>
+    
+    <!-- 倒排索引 -->
+    <rect x="400" y="0" width="180" height="50" rx="6" class="acb"/>
+    <text x="490" y="22" class="t15 mid">tsidx 倒排索引</text>
+    <text x="490" y="40" class="s mid">按时间 roll 成 bucket</text>
+    
+    <line x1="580" y1="25" x2="600" y2="25" class="lg" marker-end="url(#arr)"/>
+    
+    <!-- tsidxWritingLevel 分级 -->
+    <rect x="600" y="0" width="220" height="50" rx="6" class="box"/>
+    <text x="710" y="22" class="t15 mid">tsidxWritingLevel 分级</text>
+    <text x="710" y="40" class="s mid">7.2 引入 · 9.0 默认 2→3</text>
+  </g>
+  
+  <text x="0" y="160" class="a11">P1 的唯一解 · 也是 Splunk 全部下游能力的共同地基</text>
+  
+  <!-- 客户侧收益 -->
+  <g transform="translate(0,200)">
+    <rect x="0" y="0" width="820" height="80" rx="6" class="box"/>
+    <text x="14" y="26" class="t15">客户侧收益</text>
+    <text x="14" y="50" class="s">一次查询覆盖全部原始证据</text>
+    <text x="14" y="70" class="s">同一份原始数据可事后用任何新视角重新切 · 当初没人想到要看的维度还在</text>
+  </g>
+</g>
+
+<!-- 横向分隔 -->
+<line x1="50" y1="380" x2="1550" y2="380" class="lgd"/>
+
+<!-- ===== S2：把查询能力从个人转移给组织 ===== -->
+<g transform="translate(80,420)">
+  <text x="0" y="22" class="act">S2</text>
+  <text x="42" y="22" class="t13">把查询能力从个人转移给组织</text>
+  <text x="0" y="44" class="s">三件事叠加</text>
+  
+  <!-- 三件事：横向布局 -->
+  <g transform="translate(0,60)">
+    <!-- Data Model + Pivot -->
+    <g>
+      <rect x="0" y="0" width="280" height="100" rx="6" class="box"/>
+      <text x="14" y="26" class="t15">Data Model + Pivot（6.0）</text>
+      <text x="14" y="50" class="s">搜索逻辑抽象成语义数据模型</text>
+      <text x="14" y="68" class="s">支持加速摘要</text>
+      <text x="14" y="86" class="s">（High Performance Analytics Store）</text>
+    </g>
+    <line x1="280" y1="50" x2="300" y2="50" class="lg" marker-end="url(#arr)"/>
+    
+    <!-- Dashboard Studio -->
+    <g transform="translate(300,0)">
+      <rect x="0" y="0" width="280" height="100" rx="6" class="box"/>
+      <text x="14" y="26" class="t15">Dashboard Studio（8.2）</text>
+      <text x="14" y="50" class="s">非 SPL 用户拖拽即可出报告</text>
+      <text x="14" y="68" class="s">视图可共享复用</text>
+      <text x="14" y="86" class="s">8.2 进 Enterprise</text>
+    </g>
+    <line x1="580" y1="50" x2="600" y2="50" class="lg" marker-end="url(#arr)"/>
+    
+    <!-- SPL2 -->
+    <g transform="translate(600,0)">
+      <rect x="0" y="0" width="280" height="100" rx="6" class="acb"/>
+      <text x="14" y="26" class="t15">SPL2</text>
+      <text x="14" y="50" class="s">learn once, use everywhere</text>
+      <text x="14" y="68" class="s">搜索索引 + 联邦数据 + 流式数据准备</text>
+      <text x="14" y="86" class="s">新增可复用的 module 概念</text>
+    </g>
+  </g>
+  
+  <!-- SPL2 三段演进 -->
+  <g transform="translate(0,200)">
+    <text x="0" y="22" class="t15">SPL2 三段演进</text>
+    <rect x="0" y="40" width="200" height="40" rx="4" class="chip"/>
+    <text x="100" y="64" class="s mid">2023 管道落地</text>
+    <line x1="200" y1="60" x2="220" y2="60" class="lg" marker-end="url(#arr)"/>
+    <rect x="220" y="40" width="280" height="40" rx="4" class="chip"/>
+    <text x="360" y="64" class="s mid">2024-12 开放 API / VS Code 应用开发</text>
+    <line x1="500" y1="60" x2="520" y2="60" class="lg" marker-end="url(#arr)"/>
+    <rect x="520" y="40" width="240" height="40" rx="4" class="chip"/>
+    <text x="640" y="64" class="s mid">2026-01 进入搜索栏</text>
+  </g>
+  
+  <text x="0" y="320" class="a11">老手的一次劳动 → 全员可用的资产</text>
+</g>
+
+</svg>

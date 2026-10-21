@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1480 780" width="1480" height="780">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.8;fill:none;stroke-dasharray:6 5}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+</style>
+</defs>
+<rect width="1480" height="780" fill="#FFFFFF"/>
+
+<!-- 标题 -->
+<text x="60" y="40" class="t13">痛点</text>
+<text x="1420" y="40" class="t13 end">解法</text>
+<text x="740" y="40" class="t13 mid">对应关系（多对多）</text>
+
+<!-- 中间分割竖线 -->
+<line x1="740" y1="60" x2="740" y2="700" class="lg"/>
+
+<!-- 左侧：6 个痛点 -->
+<g transform="translate(60,100)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P1</text>
+  <text x="60" y="6" class="t15">通了不等于能用</text>
+</g>
+<g transform="translate(60,200)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P2</text>
+  <text x="60" y="6" class="t15">故障发生在别人的地盘</text>
+</g>
+<g transform="translate(60,300)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P3</text>
+  <text x="60" y="6" class="t15">监控停在 HTTP 首页</text>
+</g>
+<g transform="translate(60,400)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P4</text>
+  <text x="60" y="6" class="t15">慢和坏只报一种</text>
+</g>
+<g transform="translate(60,500)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P5</text>
+  <text x="60" y="6" class="t15">总部测着好的虚假安全感</text>
+</g>
+<g transform="translate(60,600)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="20" y="6" class="act">P6</text>
+  <text x="60" y="6" class="t15">测试在机房，用户在家/手机</text>
+</g>
+
+<!-- 右侧：6 个解法 -->
+<g transform="translate(1420,100)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S1</text>
+  <text x="-60" y="6" class="t15 end">按业务闭环定义四层探针</text>
+</g>
+<g transform="translate(1420,200)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S2</text>
+  <text x="-60" y="6" class="t15 end">第三方依赖可独立举证</text>
+</g>
+<g transform="translate(1420,300)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S3</text>
+  <text x="-60" y="6" class="t15 end">测试跟着业务协议走</text>
+</g>
+<g transform="translate(1420,400)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S4</text>
+  <text x="-60" y="6" class="t15 end">可用性 vs 内容完整性拆分</text>
+</g>
+<g transform="translate(1420,500)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S5</text>
+  <text x="-60" y="6" class="t15 end">向用户所在处布点</text>
+</g>
+<g transform="translate(1420,600)">
+  <circle cx="0" cy="0" r="6" fill="#C0392B"/>
+  <text x="-20" y="6" class="act end">S6</text>
+  <text x="-60" y="6" class="t15 end">最后一公里 / 无线保留</text>
+</g>
+
+<!-- 连接线：实线为原文明确标注，虚线为内容上的多对多 -->
+
+<!-- P1 → S1 -->
+<line x1="320" y1="100" x2="1100" y2="100" class="lg"/>
+<!-- P2 → S2 -->
+<line x1="320" y1="200" x2="1100" y2="200" class="lg"/>
+<!-- P3 → S3 -->
+<line x1="320" y1="300" x2="1100" y2="300" class="lg"/>
+<!-- P4 → S4 -->
+<line x1="320" y1="400" x2="1100" y2="400" class="lg"/>
+<!-- P5 → S5 -->
+<line x1="320" y1="500" x2="1100" y2="500" class="lg"/>
+<!-- P6 → S6 -->
+<line x1="320" y1="600" x2="1100" y2="600" class="lg"/>
+
+<!-- 红色虚线：多对多（原文笔误标注，按内容强化） -->
+<!-- S3 同时回应 P4（原文 S3 标 P4） -->
+<path d="M320,400 C700,400 720,300 1100,300" class="lrd"/>
+<!-- S4 同时回应 P5（原文 S4 标 P5） -->
+<path d="M320,500 C700,500 720,400 1100,400" class="lrd"/>
+
+<!-- 标注 -->
+<text x="740" y="730" class="a11 mid">⚠ 原文 S3 标「→ 解 P4」、S4 标「→ 解 P5」，但按内容应为 S3↔P3、S4↔P4</text>
+<text x="740" y="755" class="s mid">实线 = 按内容正解的一一对应 · 红色虚线 = 原文笔误，按多对多强化关系呈现</text>
+
+</svg>

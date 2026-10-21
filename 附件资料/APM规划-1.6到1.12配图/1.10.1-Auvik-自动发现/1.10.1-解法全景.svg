@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.acb{fill:#FFFFFF;stroke:#C0392B;stroke-width:1.8}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+</defs>
+<rect width="1600" height="720" fill="#FFFFFF"/>
+
+<!-- ===== S1：持续扫描 + 连接推断 → 自更新关系图 ===== -->
+<g transform="translate(80,60)">
+  <text x="0" y="22" class="act">S1</text>
+  <text x="42" y="22" class="t13">持续扫描 + 连接推断 → 随网络变化自更新的关系图</text>
+  <!-- 三段流程 -->
+  <g transform="translate(20,80)">
+    <rect x="0" y="0" width="140" height="50" rx="6" class="box"/>
+    <text x="70" y="22" class="t15 mid">持续扫描</text>
+    <text x="70" y="40" class="s mid">LLDP / CDP</text>
+    <line x1="140" y1="25" x2="160" y2="25" class="lg" marker-end="url(#arr)"/>
+    <rect x="160" y="0" width="140" height="50" rx="6" class="box"/>
+    <text x="230" y="22" class="t15 mid">连接推断</text>
+    <text x="230" y="40" class="s mid">子网 / ARP / MAC</text>
+    <line x1="300" y1="25" x2="320" y2="25" class="lg" marker-end="url(#arr)"/>
+    <rect x="320" y="0" width="160" height="50" rx="6" class="acb"/>
+    <text x="400" y="22" class="t15 mid">关系图</text>
+    <text x="400" y="40" class="s mid">随网络变化自更新</text>
+  </g>
+  <text x="0" y="180" class="a11">替代需要人工维护的静态图纸</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="660" y1="40" x2="660" y2="320" class="lgd"/>
+
+<!-- ===== S2：变化事件化 + 身份归并 ===== -->
+<g transform="translate(700,60)">
+  <text x="0" y="22" class="act">S2</text>
+  <text x="42" y="22" class="t13">把「设备上线」与「识别变化」变成事件</text>
+  <!-- 事件流 -->
+  <g transform="translate(20,80)">
+    <rect x="0" y="0" width="160" height="40" rx="4" class="chip"/>
+    <text x="14" y="26" class="s">设备上线</text>
+    <rect x="0" y="50" width="160" height="40" rx="4" class="chip"/>
+    <text x="14" y="76" class="s">识别变化</text>
+    <rect x="0" y="100" width="160" height="40" rx="4" class="chip"/>
+    <text x="14" y="126" class="s">身份归并</text>
+    <text x="80" y="160" class="s mid">→ 可被告知的事件</text>
+  </g>
+  <!-- 身份归并示意 -->
+  <g transform="translate(220,80)">
+    <text x="0" y="20" class="s mid">三个 MAC / IP / 主机名</text>
+    <rect x="0" y="30" width="60" height="24" rx="4" class="chip"/>
+    <text x="30" y="46" class="s mid">MAC</text>
+    <rect x="70" y="30" width="60" height="24" rx="4" class="chip"/>
+    <text x="100" y="46" class="s mid">IP</text>
+    <rect x="140" y="30" width="60" height="24" rx="4" class="chip"/>
+    <text x="170" y="46" class="s mid">主机</text>
+    <line x1="30" y1="54" x2="100" y2="74" class="lg"/>
+    <line x1="100" y1="54" x2="100" y2="74" class="lg"/>
+    <line x1="170" y1="54" x2="100" y2="74" class="lg"/>
+    <circle cx="100" cy="84" r="10" fill="#FFFFFF" stroke="#22282C" stroke-width="1.6"/>
+    <text x="100" y="89" class="s mid">设备</text>
+    <text x="100" y="120" class="s mid">→ 稳定实体</text>
+  </g>
+  <text x="0" y="240" class="a11">设备身份归并到稳定实体（同一设备的 MAC/IP/主机名归一）</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="1140" y1="40" x2="1140" y2="320" class="lgd"/>
+
+<!-- ===== S3：采集器自动扫候选网络 ===== -->
+<g transform="translate(1180,60)">
+  <text x="0" y="22" class="act">S3</text>
+  <text x="42" y="22" class="t13">部署一个采集器即可自动扫出候选网络与设备</text>
+  <!-- 采集器图标 -->
+  <g transform="translate(20,80)">
+    <rect x="60" y="0" width="80" height="50" rx="6" class="box"/>
+    <text x="100" y="30" class="t15 mid">采集器</text>
+    <text x="100" y="76" class="s mid">一个</text>
+    <!-- 扫出候选网络 -->
+    <line x1="100" y1="50" x2="100" y2="100" class="lg" marker-end="url(#arr)"/>
+    <rect x="20" y="110" width="160" height="40" rx="4" class="chip"/>
+    <text x="100" y="136" class="s mid">候选网络与设备</text>
+    <line x1="100" y1="150" x2="100" y2="180" class="lg" marker-end="url(#arr)"/>
+    <text x="100" y="200" class="a11 mid">数周 → 小时级</text>
+  </g>
+  <text x="0" y="240" class="a11">「第一次成图」从人工几周压到小时级</text>
+</g>
+
+</svg>

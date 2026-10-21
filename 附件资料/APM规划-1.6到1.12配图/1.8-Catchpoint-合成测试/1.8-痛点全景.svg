@@ -1,0 +1,208 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 880" width="1600" height="880">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+</defs>
+<rect width="1600" height="880" fill="#FFFFFF"/>
+
+<!-- ===== P1：通了不等于能用 ===== -->
+<g transform="translate(80,50)">
+  <text x="0" y="22" class="act">P1</text>
+  <text x="42" y="22" class="t13">「通了」不等于「能用」</text>
+  <!-- 左：运维看到的 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="180" height="120" rx="4" class="box"/>
+    <text x="14" y="26" class="s">✓ 端口开着</text>
+    <text x="14" y="46" class="s">✓ Ping 通</text>
+    <text x="14" y="66" class="s">✓ 首页返回 200</text>
+    <text x="14" y="86" class="s">✓ 大盘全绿</text>
+    <text x="90" y="108" class="s mid">运维看到的</text>
+  </g>
+  <!-- 右：用户经历的 -->
+  <g transform="translate(220,60)">
+    <rect x="0" y="0" width="160" height="40" rx="4" class="box"/>
+    <text x="80" y="26" class="t15 mid">登录</text>
+    <line x1="64" y1="13" x2="96" y2="33" class="lr"/>
+    <line x1="96" y1="13" x2="64" y2="33" class="lr"/>
+    <rect x="0" y="50" width="160" height="40" rx="4" class="box"/>
+    <text x="80" y="76" class="t15 mid">下单</text>
+    <line x1="64" y1="63" x2="96" y2="83" class="lr"/>
+    <line x1="96" y1="63" x2="64" y2="83" class="lr"/>
+    <rect x="0" y="100" width="160" height="40" rx="4" class="box"/>
+    <text x="80" y="126" class="t15 mid">支付回调</text>
+    <line x1="64" y1="113" x2="96" y2="133" class="lr"/>
+    <line x1="96" y1="113" x2="64" y2="133" class="lr"/>
+    <text x="80" y="155" class="s mid">用户经历的</text>
+  </g>
+  <text x="0" y="240" class="a11">投诉电话已打进来</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="540" y1="40" x2="540" y2="300" class="lgd"/>
+
+<!-- ===== P2：故障发生在别人的地盘 ===== -->
+<g transform="translate(580,50)">
+  <text x="0" y="22" class="act">P2</text>
+  <text x="42" y="22" class="t13">故障发生在别人的地盘，自己最后一个知道</text>
+  <!-- 边界：自己的系统 vs 外部 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="120" height="120" rx="4" class="box"/>
+    <text x="60" y="40" class="t15 mid">自己的</text>
+    <text x="60" y="62" class="t15 mid">系统</text>
+    <text x="60" y="100" class="s mid">能看</text>
+  </g>
+  <!-- 虚线边界 -->
+  <line x1="140" y1="120" x2="200" y2="120" class="lgd"/>
+  <text x="170" y="112" class="s mid">边界</text>
+  <!-- 外部：DNS / CDN / 支付·登录 -->
+  <g transform="translate(220,60)">
+    <rect x="0" y="0" width="140" height="36" rx="4" class="chip"/>
+    <text x="70" y="24" class="s mid">DNS 服务商</text>
+    <rect x="0" y="42" width="140" height="36" rx="4" class="chip"/>
+    <text x="70" y="66" class="s mid">CDN / 云区域</text>
+    <rect x="0" y="84" width="140" height="36" rx="4" class="chip"/>
+    <text x="70" y="108" class="s mid">支付 / 登录 API</text>
+    <line x1="110" y1="90" x2="124" y2="104" class="lr"/>
+    <line x1="124" y1="90" x2="110" y2="104" class="lr"/>
+  </g>
+  <text x="0" y="220" class="a11">APM 与基础设施监控的观测盲区</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="1080" y1="40" x2="1080" y2="300" class="lgd"/>
+
+<!-- ===== P3：业务跑在新协议，监控停在 HTTP ===== -->
+<g transform="translate(1120,50)">
+  <text x="0" y="22" class="act">P3</text>
+  <text x="42" y="22" class="t13">监控停在 HTTP 首页</text>
+  <!-- 监控面板 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="160" height="60" rx="4" class="box"/>
+    <text x="14" y="26" class="t15">HTTP 首页</text>
+    <text x="14" y="48" class="s">200 OK · 1.2s</text>
+  </g>
+  <!-- 业务跑在新协议（被括弧圈起） -->
+  <g transform="translate(20,140)">
+    <rect x="0" y="0" width="120" height="32" rx="4" class="chip"/>
+    <text x="60" y="22" class="s mid">HLS / DASH</text>
+    <rect x="130" y="0" width="120" height="32" rx="4" class="chip"/>
+    <text x="190" y="22" class="s mid">WebSocket</text>
+    <rect x="0" y="40" width="120" height="32" rx="4" class="chip"/>
+    <text x="60" y="62" class="s mid">MQTT</text>
+    <rect x="130" y="40" width="120" height="32" rx="4" class="chip"/>
+    <text x="190" y="62" class="s mid">TCP 端口</text>
+    <!-- 红色括弧 -->
+    <path d="M-10,-8 L-10,80 L260,80 L260,-8" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="6 5"/>
+    <text x="125" y="100" class="a11 mid">没有可看的指标</text>
+  </g>
+  <text x="0" y="270" class="a11">对业务方说「我们这边正常」</text>
+</g>
+
+<!-- 横向分隔 -->
+<line x1="50" y1="370" x2="1550" y2="370" class="lgd"/>
+
+<!-- ===== P4：慢和坏只报一种 ===== -->
+<g transform="translate(80,400)">
+  <text x="0" y="22" class="act">P4</text>
+  <text x="42" y="22" class="t13">「慢」和「坏」是两种事故，工具只报其中一种</text>
+  <!-- 浏览器线框：一块缺失 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="220" height="140" rx="4" class="box"/>
+    <rect x="14" y="14" width="80" height="40" fill="none" stroke="#22282C" stroke-width="1.4"/>
+    <line x1="14" y1="62" x2="100" y2="62" class="ln"/>
+    <line x1="14" y1="78" x2="80" y2="78" class="ln"/>
+    <!-- 缺失的块 -->
+    <rect x="110" y="14" width="80" height="40" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="6 5"/>
+    <text x="150" y="38" class="t13 act mid">✕</text>
+    <line x1="14" y1="100" x2="200" y2="100" class="ln"/>
+    <text x="110" y="160" class="s mid">页面打开 · 内容残废</text>
+  </g>
+  <!-- 报表 -->
+  <g transform="translate(280,60)">
+    <rect x="0" y="0" width="180" height="140" rx="4" class="box"/>
+    <text x="14" y="26" class="s">响应码 200</text>
+    <text x="160" y="26" class="s end">✓</text>
+    <text x="14" y="56" class="s">可用性 100%</text>
+    <text x="160" y="56" class="s end">✓</text>
+    <text x="14" y="86" class="s">内容完整性</text>
+    <text x="160" y="86" class="s end">?</text>
+    <line x1="14" y1="100" x2="166" y2="100" class="lgd"/>
+    <text x="14" y="124" class="a11">报表里没有这一栏</text>
+  </g>
+  <text x="0" y="240" class="a11">第三方 JS 被墙 · 图片 CDN 挂 · 样式表 404</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="540" y1="390" x2="540" y2="650" class="lgd"/>
+
+<!-- ===== P5：总部测着好，虚假安全感 ===== -->
+<g transform="translate(580,400)">
+  <text x="0" y="22" class="act">P5</text>
+  <text x="42" y="22" class="t13">「总部测着好」制造虚假安全感</text>
+  <!-- 总部探针 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="120" height="60" rx="4" class="box"/>
+    <text x="60" y="26" class="t15 mid">总部出口</text>
+    <text x="60" y="48" class="s mid">一个探针</text>
+  </g>
+  <!-- 一切正常 -->
+  <text x="80" y="146" class="s mid">测出来一切正常</text>
+  <!-- 外地用户红 ✕ -->
+  <g transform="translate(220,60)">
+    <rect x="0" y="0" width="120" height="60" rx="4" class="box"/>
+    <text x="60" y="26" class="t15 mid">外地用户</text>
+    <text x="60" y="48" class="s mid">持续抱怨</text>
+    <line x1="40" y1="14" x2="80" y2="50" class="lr"/>
+    <line x1="80" y1="14" x2="40" y2="50" class="lr"/>
+  </g>
+  <g transform="translate(360,60)">
+    <rect x="0" y="0" width="120" height="60" rx="4" class="box"/>
+    <text x="60" y="26" class="t15 mid">海外用户</text>
+    <text x="60" y="48" class="s mid">抱怨</text>
+    <line x1="40" y1="14" x2="80" y2="50" class="lr"/>
+    <line x1="80" y1="14" x2="40" y2="50" class="lr"/>
+  </g>
+  <text x="0" y="240" class="a11">观测点越少，误判为「正常」的概率越高</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="1080" y1="390" x2="1080" y2="650" class="lgd"/>
+
+<!-- ===== P6：测试跑在机房，用户在家在手机上 ===== -->
+<g transform="translate(1120,400)">
+  <text x="0" y="22" class="act">P6</text>
+  <text x="42" y="22" class="t13">测试跑在机房，用户在家、在手机上</text>
+  <!-- 机房探针 -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="120" height="60" rx="4" class="box"/>
+    <text x="60" y="26" class="t15 mid">机房探针</text>
+    <text x="60" y="48" class="s mid">云上测</text>
+  </g>
+  <text x="80" y="146" class="s mid">测出来的数</text>
+  <!-- 用户实际路径 -->
+  <g transform="translate(20,170)">
+    <rect x="0" y="0" width="120" height="60" rx="4" class="box"/>
+    <text x="60" y="26" class="t15 mid">家宽</text>
+    <text x="60" y="48" class="s mid">手机 4G/5G</text>
+  </g>
+  <text x="80" y="256" class="s mid">用户感受到的数</text>
+  <text x="0" y="290" class="a11">手里没有可用的数</text>
+</g>
+
+</svg>

@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 960" width="1600" height="960">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.8;stroke-linecap:round}
+.ln2{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.4;stroke-linecap:round}
+.gy2{fill:none;stroke:#DDE1E5;stroke-width:1.4;stroke-linecap:round}
+.ac2{fill:none;stroke:#C0392B;stroke-width:1.8;stroke-linecap:round}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.8}
+.boxa{fill:#FFFFFF;stroke:#C0392B;stroke-width:1.8}
+.boxg{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+.dt{stroke-dasharray:7 6}
+.dl{stroke-dasharray:5 5}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:15px;font-weight:600;fill:#22282C}
+.t13{font-size:17px;font-weight:700}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:13px;font-weight:500;fill:#7F868D}
+.act{fill:#C0392B}
+.a11{fill:#C0392B;font-size:13px;font-weight:700}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+</style>
+<rect width="1600" height="960" fill="#FFFFFF"/>
+
+<!-- ============ S1 Client 360 三块并一页 ============ -->
+<text x="70" y="96" class="t13 act">S1</text>
+<text x="104" y="96" class="t13">以客户端为主语的 360 视图</text>
+<text x="104" y="124" class="s">排查的入口从「哪台设备报警了」变成「是哪个人不好受」</text>
+
+<circle cx="152" cy="216" r="14" fill="none" stroke="#B6BBC1" stroke-width="1.6"/>
+<rect x="96" y="252" width="112" height="76" rx="6" class="chip"/>
+<text x="152" y="284" class="t mid">这个终端</text>
+<text x="152" y="310" class="s mid">一个人</text>
+
+<line x1="216" y1="286" x2="250" y2="286" class="ln2"/>
+<polygon points="264,286 248,293 248,279" fill="#2F3437"/>
+<rect x="270" y="150" width="290" height="272" rx="8" class="box"/>
+<text x="415" y="186" class="t mid">Client 360</text>
+<line x1="288" y1="202" x2="542" y2="202" class="gy2"/>
+<text x="288" y="236" class="t">连接旅程</text>
+<text x="288" y="264" class="s">什么时候上线的</text>
+<text x="288" y="296" class="t">事件时间线</text>
+<text x="288" y="324" class="s">在哪几个 AP 之间漫游过</text>
+<text x="288" y="356" class="t">RF 环境</text>
+<text x="288" y="384" class="s">信号有多好 · 现在用什么应用</text>
+
+<!-- ============ S2 四阶段漏斗 ============ -->
+<text x="620" y="96" class="t13 act">S2</text>
+<text x="654" y="96" class="t13">四阶段漏斗把「卡在哪」钉在具体一步</text>
+<text x="654" y="124" class="s">一步定位取代四步轮询</text>
+
+<rect x="620" y="152" width="150" height="62" rx="8" class="box"/>
+<text x="695" y="191" class="t mid">关联</text>
+<polygon points="770,183 786,183 786,199 802,199 786,215 786,231 770,231 770,215 754,215 754,199 770,199" fill="none" stroke="#C9CED4" stroke-width="0"/>
+<rect x="810" y="196" width="150" height="62" rx="8" class="boxa"/>
+<text x="885" y="235" class="t mid">认证</text>
+<rect x="620" y="272" width="150" height="62" rx="8" class="box"/>
+<text x="695" y="311" class="t mid">地址</text>
+<rect x="810" y="272" width="150" height="62" rx="8" class="box"/>
+<text x="885" y="311" class="t mid">域名</text>
+<line x1="770" y1="183" x2="806" y2="183" class="gy"/>
+<line x1="770" y1="311" x2="806" y2="311" class="gy"/>
+<line x1="695" y1="214" x2="695" y2="268" class="gy"/>
+<line x1="885" y1="258" x2="885" y2="268" class="gy"/>
+<line x1="756" y1="227" x2="752" y2="268" class="ac2"/>
+<text x="730" y="376" class="a11">失败停在「认证」这一步</text>
+<text x="620" y="412" class="s">不用再四步逐一排查</text>
+
+<!-- ============ S3 认证证据搬进 Assurance ============ -->
+<text x="1050" y="96" class="t13 act">S3</text>
+<text x="1084" y="96" class="t13">把认证证据搬进网管侧</text>
+<text x="1084" y="124" class="s">彻底取消跨系统取证</text>
+<rect x="1050" y="150" width="470" height="272" rx="8" class="box"/>
+<text x="1070" y="186" class="t">认证失败详情，直接在这四处可见：</text>
+<rect x="1070" y="206" width="200" height="40" rx="5" class="chip"/>
+<text x="1170" y="232" class="s mid">Client 面板</text>
+<rect x="1290" y="206" width="210" height="40" rx="5" class="chip"/>
+<text x="1395" y="232" class="s mid">Client 360</text>
+<rect x="1070" y="256" width="200" height="40" rx="5" class="chip"/>
+<text x="1170" y="282" class="s mid">Events 标签</text>
+<rect x="1290" y="256" width="210" height="40" rx="5" class="chip"/>
+<text x="1395" y="282" class="s mid">AAA 标签</text>
+<line x1="1070" y1="322" x2="1500" y2="322" class="gy2"/>
+<text x="1070" y="352" class="s">3.1.3 起 · 无需登录认证系统界面</text>
+<text x="1070" y="382" class="a11">把「跨系统取证」压缩成「同屏可见」</text>
+
+<!-- ============ S4 AAA / DHCP 服务健康集中 ============ -->
+<text x="70" y="490" class="t13 act">S4</text>
+<text x="104" y="490" class="t13">把 AAA / DHCP 服务健康集中呈现</text>
+<text x="104" y="518" class="s">关键是「受影响的是谁」这一列</text>
+<rect x="70" y="544" width="420" height="250" rx="8" class="box"/>
+<text x="90" y="582" class="t">无线网络服务分析</text>
+<line x1="90" y1="598" x2="470" y2="598" class="gy2"/>
+<rect x="90" y="614" width="110" height="30" rx="4" class="chip"/>
+<text x="145" y="635" class="s mid">AAA 健康</text>
+<rect x="210" y="614" width="110" height="30" rx="4" class="chip"/>
+<text x="265" y="635" class="s mid">DHCP 健康</text>
+<rect x="330" y="614" width="140" height="30" rx="4" class="chip"/>
+<text x="400" y="635" class="s mid">受影响的服务器</text>
+<rect x="90" y="658" width="380" height="46" rx="4" fill="#FFFFFF" stroke="#C0392B" stroke-width="1.8"/>
+<text x="104" y="687" class="t">受影响的站点 · 用户名单</text>
+<text x="90" y="736" class="s">把「服务慢了」从抽象指标</text>
+<text x="90" y="762" class="s">变成一份跨团队共用的名单</text>
+
+<!-- ============ S5 过滤器把噪声移出统计 ============ -->
+<text x="530" y="490" class="t13 act">S5</text>
+<text x="564" y="490" class="t13">用过滤器把噪声移出统计</text>
+<text x="564" y="518" class="s">「看得少」有时就是「看得清」</text>
+<rect x="530" y="544" width="420" height="250" rx="8" class="box"/>
+<text x="550" y="580" class="s">过滤前的统计</text>
+<rect x="550" y="592" width="90" height="22" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="595" y="608" class="s mid">访客</text>
+<rect x="646" y="592" width="90" height="22" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="691" y="608" class="s mid">访客</text>
+<rect x="742" y="592" width="90" height="22" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="787" y="608" class="s mid">测试</text>
+<rect x="838" y="592" width="90" height="22" rx="4" fill="#EDEFF1" stroke="#DDE1E5"/>
+<text x="883" y="608" class="s mid">访客</text>
+<line x1="550" y1="632" x2="928" y2="632" class="gy"/>
+<polygon points="739,660 733,648 745,648" fill="#B6BBC1"/>
+<text x="550" y="688" class="s">过滤后的统计</text>
+<rect x="550" y="700" width="140" height="26" rx="4" fill="#FFFFFF" stroke="#2F3437" stroke-width="1.8"/>
+<text x="620" y="718" class="t mid">生产 SSID</text>
+<text x="710" y="718" class="s">+ 按 MAC 排除测试终端</text>
+<text x="550" y="764" class="s">Per-SSID filtering + 客户端排除清单</text>
+
+<!-- ============ S6 新制式健康口径 ============ -->
+<text x="990" y="490" class="t13 act">S6</text>
+<text x="1024" y="490" class="t13">给新制式补上健康口径</text>
+<text x="1024" y="518" class="s">终端制式换代时，「能不能看见」要先于「能不能优化」</text>
+<rect x="990" y="544" width="540" height="120" rx="8" class="chip"/>
+<text x="1010" y="580" class="t">MLO（多链路操作）客户端支持</text>
+<text x="1010" y="606" class="s">2.3.7.9 · 跨 2.4 / 5 / 6 GHz 连接</text>
+<rect x="990" y="674" width="540" height="120" rx="8" class="chip"/>
+<text x="1010" y="710" class="t">Wi-Fi 7 客户端健康</text>
+<text x="1010" y="736" class="s">2.3.7.10 · Client Health Dashboard 跟上终端代际</text>
+
+<text x="990" y="836" class="a11">边界：新制式需对应 AP / WLC / IOS XE 版本配合</text>
+<text x="70" y="920" class="s">S3 同时回应 P3 与 P6；S4 回应 P6；其余 S 与 P 一一对应。 详见对照图。</text>
+</svg>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 245 1540 595" width="1540" height="595">
+<style>
+.ln{fill:none;stroke:#2F3437;stroke-width:1.6;stroke-linecap:round}
+.gy{fill:none;stroke:#B6BBC1;stroke-width:1.2;stroke-linecap:round}
+.ac{fill:none;stroke:#C0392B;stroke-width:1.8;stroke-linecap:round}
+.box{fill:#FFFFFF;stroke:#2F3437;stroke-width:1.6}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1}
+.chipc{fill:#FDF3F1;stroke:#C0392B;stroke-width:1.2}
+.soft{fill:#F5F6F7;stroke:none}
+.hair{fill:none;stroke:#E6E9EC;stroke-width:1}
+.dl{stroke-dasharray:4 4}
+.t{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:12px;fill:#2F3437}
+.s{font-family:'Microsoft YaHei','PingFang SC','Hiragino Sans GB',sans-serif;font-size:11px;fill:#9AA0A6}
+.m{font-family:Consolas,Menlo,'Courier New',monospace;font-size:12px;fill:#2F3437}
+.m11{font-size:11px}
+.ms{font-family:Consolas,Menlo,'Courier New',monospace;font-size:11px;fill:#9AA0A6}
+.act{fill:#C0392B}
+.mid{text-anchor:middle}
+</style>
+<rect width="1540" height="840" fill="#FFFFFF"/>
+
+<!-- 设备角色 -->
+<rect x="70" y="300" width="170" height="150" rx="6" class="box"/>
+<rect x="86" y="316" width="138" height="32" rx="4" class="chip"/>
+<text x="155" y="336" class="s mid">Router</text>
+<rect x="86" y="356" width="138" height="32" rx="4" class="chip"/>
+<text x="155" y="376" class="s mid">Firewall</text>
+<rect x="86" y="396" width="138" height="32" rx="4" class="chip"/>
+<text x="155" y="416" class="s mid">L3 Switch</text>
+<text x="70" y="472" class="s">自动尝试，无需开启</text>
+
+<!-- 采集链路 -->
+<line x1="240" y1="375" x2="456" y2="375" class="ln"/>
+<polygon points="470,375 456,381 456,369" fill="#2F3437"/>
+<text x="250" y="358" class="m">SNMP · BGP4-MIB / OSPF-MIB</text>
+<text x="250" y="394" class="ms">1.3.6.1.2.1.15</text>
+
+<!-- 邻居表 -->
+<rect x="470" y="300" width="320" height="150" rx="6" class="box"/>
+<line x1="470" y1="336" x2="790" y2="336" class="hair"/>
+<text x="486" y="368" class="m">10.0.0.2</text>
+<text x="606" y="368" class="m">Established</text>
+<text x="720" y="368" class="ms">3d 02:11</text>
+<text x="486" y="398" class="m">10.0.0.6</text>
+<text x="606" y="398" class="m act">Idle</text>
+<text x="720" y="398" class="ms">00:00:41</text>
+<text x="486" y="428" class="m">10.0.0.9</text>
+<text x="606" y="428" class="m">Established</text>
+<text x="720" y="428" class="ms">12d 05:30</text>
+<text x="470" y="472" class="s">邻居身份 / 状态 / uptime —— 自动填充</text>
+<text x="470" y="498" class="t act">S1</text>
+<text x="494" y="498" class="t">不用写任何解析规则</text>
+<text x="470" y="516" class="s">可见性由「设备是否实现 MIB」决定，不由运维技能决定</text>
+
+<line x1="790" y1="375" x2="866" y2="375" class="ln"/>
+<polygon points="880,375 866,381 866,369" fill="#2F3437"/>
+
+<!-- 三件套 -->
+<rect x="880" y="300" width="320" height="150" rx="6" class="box"/>
+<circle cx="906" cy="348" r="4.5" fill="#2F3437"/>
+<text x="922" y="352" class="t">状态</text>
+<text x="966" y="352" class="s">现在坏了吗</text>
+<polyline points="896,385 903,376 910,385 917,376" fill="none" stroke="#9AA0A6" stroke-width="1.4"/>
+<text x="922" y="388" class="t">抖动</text>
+<text x="966" y="388" class="s">一直在抖吗</text>
+<line x1="896" y1="424" x2="926" y2="424" stroke="#9AA0A6" stroke-width="1.4" stroke-linecap="round"/>
+<line x1="911" y1="418" x2="911" y2="430" stroke="#9AA0A6" stroke-width="1.4" stroke-linecap="round"/>
+<text x="922" y="428" class="t">历史</text>
+<text x="966" y="428" class="s">什么时候开始的</text>
+<text x="880" y="472" class="t act">S2</text>
+<text x="904" y="472" class="t">三个维度回答三个不同的问题</text>
+
+<!-- 扇出 -->
+<line x1="1040" y1="450" x2="1040" y2="505" class="gy"/>
+<line x1="790" y1="505" x2="1300" y2="505" class="gy"/>
+<line x1="790" y1="505" x2="790" y2="533" class="gy"/>
+<polygon points="790,545 784,533 796,533" fill="#B6BBC1"/>
+<line x1="1300" y1="505" x2="1300" y2="533" class="gy"/>
+<polygon points="1300,545 1294,533 1306,533" fill="#B6BBC1"/>
+
+<!-- 告警维度 -->
+<rect x="570" y="545" width="440" height="205" rx="6" class="box"/>
+<rect x="590" y="568" width="86" height="26" rx="4" class="chip"/>
+<text x="600" y="585" class="ms">State</text>
+<rect x="686" y="568" width="60" height="26" rx="4" class="chip"/>
+<text x="696" y="585" class="ms">IP</text>
+<rect x="756" y="568" width="116" height="26" rx="4" class="chip"/>
+<text x="766" y="585" class="ms">Admin State</text>
+<rect x="590" y="606" width="166" height="26" rx="4" class="chip"/>
+<text x="600" y="623" class="ms">State Change (15 min)</text>
+<rect x="766" y="606" width="150" height="26" rx="4" class="chipc"/>
+<text x="776" y="623" class="ms act">Connection Uptime</text>
+<text x="590" y="660" class="t act">uptime 突然变小 → 会话重建过 → 发生过切换</text>
+<rect x="582" y="674" width="414" height="30" rx="4" class="soft"/>
+<text x="594" y="694" class="s">OSPF Neighbor is Down · Warning · 条件 ≠ Full · 延迟 5 分钟</text>
+<text x="582" y="726" class="t act">S3</text>
+<text x="606" y="726" class="s">把专家经验固化成可配置的告警维度</text>
+
+<!-- 统一入口 -->
+<rect x="1105" y="545" width="390" height="205" rx="6" class="box"/>
+<rect x="1125" y="565" width="350" height="120" rx="5" class="chip"/>
+<text x="1137" y="588" class="ms">Debug &gt; Routes</text>
+<line x1="1125" y1="596" x2="1475" y2="596" class="hair"/>
+<text x="1137" y="620" class="m m11">BGP   10.0.0.2   Established</text>
+<text x="1137" y="644" class="m m11">OSPF  10.0.0.2   Full</text>
+<text x="1137" y="668" class="m m11">BGP   10.0.0.6   <tspan class="act">Idle</tspan></text>
+<text x="1105" y="712" class="s">Site → Debug → All Routes / Device → Debug → Routes</text>
+<text x="1105" y="736" class="t act">S4</text>
+<text x="1129" y="736" class="s">两条协议同一处对照 · 共享 $routeNeighbours.*</text>
+
+<!-- 排查路径 -->
+<line x1="210" y1="450" x2="210" y2="608" class="ac dl"/>
+<polygon points="210,620 204,608 216,608" fill="#C0392B"/>
+<rect x="70" y="620" width="420" height="180" rx="6" class="box"/>
+<text x="90" y="652" class="t">采不到数据？</text>
+<text x="90" y="686" class="m">snmpwalk &lt;device&gt; 1.3.6.1.2.1.15</text>
+<text x="90" y="714" class="s">核对 SNMP 凭据与 ACL 是否放行</text>
+<text x="90" y="742" class="t act">多数「没数据」不是功能问题，是 MIB 未开或 ACL 未放行</text>
+<text x="90" y="772" class="t act">S5</text>
+<text x="114" y="772" class="s">把排查路径写进文档，把落地门槛降下来</text>
+</svg>

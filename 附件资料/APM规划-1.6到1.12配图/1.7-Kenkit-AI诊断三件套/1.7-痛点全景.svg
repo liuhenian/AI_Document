@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" width="1600" height="720">
+<defs>
+<style>
+.t{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600}
+.t13{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.t15{fill:#22282C;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:600;font-size:15px}
+.s{fill:#7F868D;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:500;font-size:13px}
+.a11{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:13px}
+.act{fill:#C0392B;font-family:'PingFang SC','Microsoft YaHei',sans-serif;font-weight:700;font-size:17px}
+.mid{text-anchor:middle}
+.end{text-anchor:end}
+.ln{stroke:#22282C;stroke-width:1.6;fill:none}
+.lg{stroke:#7F868D;stroke-width:1.4;fill:none}
+.lgd{stroke:#7F868D;stroke-width:1.4;fill:none;stroke-dasharray:6 5}
+.lrd{stroke:#C0392B;stroke-width:1.6;fill:none;stroke-dasharray:6 5}
+.lr{stroke:#C0392B;stroke-width:1.8;fill:none}
+.box{fill:#FFFFFF;stroke:#C9CED4;stroke-width:1.4}
+.chip{fill:#FCFCFD;stroke:#C9CED4;stroke-width:1.2}
+</style>
+<marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7F868D"/></marker>
+<marker id="arrr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#C0392B"/></marker>
+</defs>
+<rect width="1600" height="720" fill="#FFFFFF"/>
+
+<!-- ===== P1：链路连通性不清楚，数据来回切换 ===== -->
+<g transform="translate(80,60)">
+  <text x="0" y="22" class="act">P1</text>
+  <text x="42" y="22" class="t13">链路连通性情况不清楚，数据要和流量图来回切换</text>
+  <!-- 流量图（折线） -->
+  <g transform="translate(20,60)">
+    <rect x="0" y="0" width="240" height="120" rx="4" class="box"/>
+    <line x1="20" y1="100" x2="220" y2="100" class="lg"/>
+    <line x1="20" y1="20" x2="20" y2="100" class="lg"/>
+    <polyline points="30,80 60,60 90,70 120,40 150,50 180,30 210,45" fill="none" stroke="#22282C" stroke-width="1.6"/>
+    <text x="120" y="145" class="s mid">流量图</text>
+  </g>
+  <!-- ping/traceroute 窗口 -->
+  <g transform="translate(320,60)">
+    <rect x="0" y="0" width="240" height="120" rx="4" class="box"/>
+    <text x="14" y="26" class="s">$ ping 10.8.8.2</text>
+    <text x="14" y="46" class="s">64 bytes from 10.8.8.2: ...</text>
+    <text x="14" y="66" class="s">64 bytes from 10.8.8.2: ...</text>
+    <text x="14" y="86" class="s">$ traceroute 10.8.8.2</text>
+    <text x="14" y="106" class="s">1  10.0.0.1  ...</text>
+    <text x="120" y="145" class="s mid">ping / traceroute</text>
+  </g>
+  <!-- 循环箭头 -->
+  <path d="M270,90 C300,80 310,80 320,90" class="lg" marker-end="url(#arr)"/>
+  <path d="M320,130 C310,140 300,140 270,130" class="lg" marker-end="url(#arr)"/>
+  <text x="295" y="170" class="a11 mid">来回切换</text>
+  <text x="0" y="225" class="a11">连通性从哪里开始测试？不知道</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="640" y1="50" x2="640" y2="320" class="lgd"/>
+
+<!-- ===== P2：配置只有「当前值」 ===== -->
+<g transform="translate(720,60)">
+  <text x="0" y="22" class="act">P2</text>
+  <text x="42" y="22" class="t13">配置只有「当前值」，没有「历史值」</text>
+  <!-- 时钟指着 23:00 -->
+  <g transform="translate(60,90)">
+    <circle cx="40" cy="40" r="36" class="box"/>
+    <line x1="40" y1="40" x2="40" y2="12" class="ln"/>
+    <line x1="40" y1="40" x2="62" y2="40" class="ln"/>
+    <text x="40" y="100" class="s mid">昨晚 23:00</text>
+    <text x="40" y="118" class="s mid">故障发生</text>
+  </g>
+  <!-- 配置文档：虚线空框 + 问号 -->
+  <g transform="translate(200,80)">
+    <rect x="0" y="0" width="180" height="120" rx="4" fill="none" stroke="#C0392B" stroke-width="1.6" stroke-dasharray="6 5"/>
+    <text x="90" y="60" class="t13 act mid">?</text>
+    <text x="90" y="90" class="s mid">昨晚的配置</text>
+    <text x="90" y="108" class="s mid">谁也说不出来</text>
+  </g>
+  <text x="0" y="225" class="a11">没有历史值，无法判断「变了什么」</text>
+</g>
+
+<!-- 分隔 -->
+<line x1="1180" y1="50" x2="1180" y2="320" class="lgd"/>
+
+<!-- ===== P3：依赖专家经验 ===== -->
+<g transform="translate(1240,60)">
+  <text x="0" y="22" class="act">P3</text>
+  <text x="42" y="22" class="t13">不会 CLI 的人，根本没法参与排障</text>
+  <!-- 终端窗口 -->
+  <g transform="translate(0,60)">
+    <rect x="0" y="0" width="280" height="140" rx="4" class="box"/>
+    <text x="14" y="26" class="s">R1# show ip bgp summary</text>
+    <text x="14" y="46" class="s">...</text>
+    <text x="14" y="66" class="s">R1# show interface</text>
+    <text x="14" y="86" class="s">...</text>
+    <text x="14" y="106" class="s">R1# show running-config</text>
+    <text x="14" y="126" class="s">...</text>
+  </g>
+  <!-- 多步流程 -->
+  <g transform="translate(0,225)">
+    <text x="0" y="0" class="s">切终端 → 敲命令 → 复制输出 → 再切回来</text>
+  </g>
+  <text x="0" y="290" class="a11">依赖专家经验 · 他一休假，只剩重启和回滚</text>
+</g>
+
+<!-- 底部分隔线 -->
+<line x1="50" y1="380" x2="1550" y2="380" class="lgd"/>
+
+<!-- 顶部三件套说明（P3 下方） -->
+<g transform="translate(80,420)">
+  <text x="0" y="22" class="t13">三件套</text>
+  <g transform="translate(0,50)">
+    <rect x="0" y="0" width="460" height="60" rx="6" class="box"/>
+    <text x="14" y="26" class="t15">1. On-Demand Connectivity Test</text>
+    <text x="14" y="48" class="s">按需连通性测试</text>
+  </g>
+  <g transform="translate(500,50)">
+    <rect x="0" y="0" width="460" height="60" rx="6" class="box"/>
+    <text x="14" y="26" class="t15">2. Config Context</text>
+    <text x="14" y="48" class="s">配置上下文（历史 + diff）</text>
+  </g>
+  <g transform="translate(1000,50)">
+    <rect x="0" y="0" width="460" height="60" rx="6" class="box"/>
+    <text x="14" y="26" class="t15">3. SSH Command Access</text>
+    <text x="14" y="48" class="s">SSH 命令访问（AI 待选命令）</text>
+  </g>
+</g>
+
+</svg>
