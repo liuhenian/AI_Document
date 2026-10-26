@@ -84,3 +84,9 @@ __pycache__/
 
 # ── 6. 临时备份目录（pull 冲突处理时产生，确认后可删） ──
 _backup_*/
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env
