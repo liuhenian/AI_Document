@@ -1,0 +1,9 @@
+{
+  "id": "code-reader",
+  "name": "Code Reader",
+  "version": "1.0.0",
+  "minAppVersion": "1.4.0",
+  "description": "Open code and text files (.py, .js, .sql, .sh, .json ...) inside Obsidian as a read-only, syntax-highlighted code block.",
+  "author": "local",
+  "isDesktopOnly": false
+}

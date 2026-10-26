@@ -15,5 +15,7 @@
   "mermaid-kit",
   "treefocus",
   "smart-connections",
-  "smart-lookup"
+  "smart-lookup",
+  "import-code",
+  "code-reader"
 ]

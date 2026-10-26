@@ -6,7 +6,8 @@
   "enabledCssSnippets": [
     "minimal-headings",
     "table-center",
-    "TreeFocus高亮改为文字色"
+    "TreeFocus高亮改为文字色",
+    "附件链接卡片"
   ],
   "accentColor": ""
 }

@@ -1,0 +1,111 @@
+/* ============================================================
+   附件链接 → 文件卡片（胶囊样式）
+   ------------------------------------------------------------
+   作用：把正文里指向脚本/数据文件的内部链接，渲染成一枚带类型
+        徽标的小卡片，hover 时浮起，点击照旧跳转。
+   生效范围：阅读模式正文（.markdown-rendered 内的 a.internal-link）
+   不生效：实时预览（编辑模式）。原因：编辑模式下的链接由
+          CodeMirror 渲染，节点上没有 data-href 属性，
+          没法按文件扩展名选中，只能整体改，风险大，故不做。
+   增删类型：在下面第 2 段的 :is(...) 列表里加减选择器，
+          再在第 3 段补一条对应的 content + 徽标颜色即可。
+   ============================================================ */
+
+/* ---------- 1. 卡片本体 ---------- */
+.markdown-rendered a.internal-link:is(
+  [data-href$=".py"],
+  [data-href$=".json"],
+  [data-href$=".csv"],
+  [data-href$=".sh"],
+  [data-href$=".sql"],
+  [data-href$=".yml"],
+  [data-href$=".yaml"],
+  [data-href$=".js"],
+  [data-href$=".ts"],
+  [data-href$=".html"],
+  [data-href$=".zip"]
+) {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 2px 11px 2px 6px;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: var(--radius-m, 8px);
+  background: var(--background-secondary);
+  color: var(--text-normal);
+  text-decoration: none;
+  font-size: 0.9em;
+  line-height: 1.7;
+  vertical-align: baseline;
+  box-shadow: 0 1px 0 var(--background-modifier-box-shadow, rgba(0, 0, 0, .05));
+  transition: border-color .15s ease, box-shadow .15s ease, transform .15s ease;
+}
+
+.markdown-rendered a.internal-link:is(
+  [data-href$=".py"],
+  [data-href$=".json"],
+  [data-href$=".csv"],
+  [data-href$=".sh"],
+  [data-href$=".sql"],
+  [data-href$=".yml"],
+  [data-href$=".yaml"],
+  [data-href$=".js"],
+  [data-href$=".ts"],
+  [data-href$=".html"],
+  [data-href$=".zip"]
+):hover {
+  border-color: var(--interactive-accent);
+  box-shadow: 0 3px 10px var(--background-modifier-box-shadow, rgba(0, 0, 0, .12));
+  transform: translateY(-1px);
+}
+
+/* ---------- 2. 左侧类型徽标：通用样式 ---------- */
+.markdown-rendered a.internal-link:is(
+  [data-href$=".py"],
+  [data-href$=".json"],
+  [data-href$=".csv"],
+  [data-href$=".sh"],
+  [data-href$=".sql"],
+  [data-href$=".yml"],
+  [data-href$=".yaml"],
+  [data-href$=".js"],
+  [data-href$=".ts"],
+  [data-href$=".html"],
+  [data-href$=".zip"]
+)::before {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  min-width: 28px;
+  height: 17px;
+  padding: 0 4px;
+  border-radius: 4px;
+  font-family: var(--font-monospace);
+  font-size: 0.66em;
+  font-weight: 700;
+  letter-spacing: .05em;
+  color: #fff;
+  background: var(--text-muted);
+}
+
+/* ---------- 3. 各类型的徽标文字与配色 ---------- */
+.markdown-rendered a.internal-link[data-href$=".py"]::before  { content: "PY";   background: #3572A5; }
+.markdown-rendered a.internal-link[data-href$=".js"]::before  { content: "JS";   background: #B8A227; }
+.markdown-rendered a.internal-link[data-href$=".ts"]::before  { content: "TS";   background: #3178C6; }
+.markdown-rendered a.internal-link[data-href$=".json"]::before{ content: "JSON"; background: #6B7280; }
+.markdown-rendered a.internal-link[data-href$=".yaml"]::before,
+.markdown-rendered a.internal-link[data-href$=".yml"]::before { content: "YML";  background: #CB171E; }
+.markdown-rendered a.internal-link[data-href$=".sh"]::before  { content: "SH";   background: #4EAA25; }
+.markdown-rendered a.internal-link[data-href$=".sql"]::before { content: "SQL";  background: #C77A00; }
+.markdown-rendered a.internal-link[data-href$=".csv"]::before { content: "CSV";  background: #1F7244; }
+.markdown-rendered a.internal-link[data-href$=".html"]::before{ content: "HTML"; background: #E34C26; }
+.markdown-rendered a.internal-link[data-href$=".zip"]::before { content: "ZIP";  background: #8B5CF6; }
+
+/* ---------- 4. 附件目录里的这类文件在文件列表中降噪（可选） ---------- */
+/* 想让 附件资料/ 里的 .py 在左侧文件列表里灰一点，去掉下面注释即可
+.nav-file-title[data-path$=".py"] .nav-file-title-content,
+.nav-file-title[data-path$=".json"] .nav-file-title-content {
+  color: var(--text-faint);
+}
+*/

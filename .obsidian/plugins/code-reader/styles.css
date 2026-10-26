@@ -1,0 +1,31 @@
+/* Code Reader —— 只读代码视图的最小样式。
+   主体排版与代码高亮全部复用 Obsidian 阅读模式（.markdown-preview-view / .markdown-rendered），
+   这里只做三件事：铺满容器、给足边距、长行横向滚动而不是硬换行。 */
+
+.code-reader-view {
+  padding: 0;
+  overflow: hidden;
+}
+
+.code-reader-body {
+  height: 100%;
+  padding: var(--file-margins, 20px) 28px 80px 28px;
+  max-width: 100%;
+}
+
+/* 代码块占满宽度；超长行横向滚动，避免换行后缩进全乱 */
+.code-reader-body pre {
+  margin: 0;
+  max-width: 100%;
+}
+
+.code-reader-body pre > code {
+  display: block;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+.code-reader-error {
+  color: var(--text-error);
+  font-family: var(--font-monospace);
+}

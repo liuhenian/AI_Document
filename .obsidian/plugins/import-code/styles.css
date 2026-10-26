@@ -1,0 +1,748 @@
+/* === Base Styles (Reading + Editing Mode) === */
+
+.code-embed-container {
+	position: relative;
+	margin: 1em 0;
+	border-radius: 6px;
+	overflow: hidden;
+	text-align: left;
+	pointer-events: auto;
+}
+
+.code-embed-wrapper {
+	text-align: left;
+	width: 100%;
+	/* 统一背景层：pre 和 mermaid 等非 pre 产物共用，避免背景不贴合 */
+	background: var(--code-background);
+	border-radius: inherit;
+	overflow: auto;
+	max-height: 500px;
+}
+
+/* pre 产物：继承 wrapper 背景，去掉重复约束 */
+.code-embed-wrapper pre {
+	margin: 0;
+	border-radius: 0;
+	max-height: none;
+	background: transparent;
+}
+
+/* mermaid 等非 pre 产物：居中 + 适配 wrapper 滚动 */
+.code-embed-wrapper > .mermaid,
+.code-embed-wrapper > div:not(pre) {
+	padding: 1em;
+	text-align: center;
+	background: transparent;
+	overflow: auto;
+}
+
+/* mermaid 展示范围扩大：突破代码块 500px 高度限制
+   （由 JS 在渲染时给 wrapper 加 .code-embed-has-mermaid，替代 :has 选择器） */
+.code-embed-wrapper.code-embed-has-mermaid {
+	max-height: 80vh;
+}
+
+.code-embed-wrapper .mermaid svg {
+	/* 不缩小：保持 mermaid 原始渲染尺寸，超宽时在 wrapper 内横向滚动 */
+	max-width: none;
+	height: auto;
+}
+
+/* 注：本文件用「同类名叠加」提高特异性（如 .code-embed-wrapper.code-embed-wrapper）
+   来压过主题样式，替代 !important。 */
+.code-embed-wrapper.code-embed-wrapper pre code {
+	font-size: var(--font-smaller);
+	font-family: var(--font-monospace);
+	min-height: calc(3 * 1.5em);
+	display: block;
+	white-space: pre;
+}
+
+/* Toolbar */
+.code-embed-container .code-embed-toolbar {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	flex-direction: row;
+	z-index: 10;
+	pointer-events: auto;
+	border-radius: 6px;
+	overflow: hidden;
+}
+
+.code-embed-container .code-block-flair.code-block-flair,
+.code-embed-container .code-embed-open-btn.code-embed-open-btn {
+	appearance: none;
+	height: 32px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--code-bracket-background);
+	transition: all 0.2s ease;
+	cursor: pointer;
+	border: none;
+	border-radius: 0;
+}
+
+.code-embed-container .code-embed-open-btn + .code-block-flair.code-block-flair {
+	border-left: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-embed-container .code-block-flair {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.code-embed-container .code-embed-open-btn svg {
+	width: 14px;
+	height: 14px;
+	opacity: 0.7;
+}
+
+/* Zoom controls -- 缩放按钮组，只在聚焦态注入 */
+.code-embed-focus-overlay .code-embed-zoom-controls {
+	display: flex;
+	flex-direction: row;
+}
+
+.code-embed-focus-overlay .code-embed-zoom-btn.code-embed-zoom-btn {
+	appearance: none;
+	height: 32px;
+	width: 32px;
+	padding: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--code-bracket-background);
+	transition: all 0.2s ease;
+	cursor: pointer;
+	border: none;
+	border-left: 2px solid rgba(255, 255, 255, 0.1);
+	border-radius: 0;
+}
+
+.code-embed-focus-overlay .code-embed-zoom-btn.code-embed-zoom-btn:hover {
+	background: var(--background-modifier-hover);
+}
+
+.code-embed-focus-overlay .code-embed-zoom-btn svg {
+	width: 14px;
+	height: 14px;
+	opacity: 0.7;
+}
+
+/* Code link block display */
+.code-link-block {
+	display: block;
+}
+
+/* Loading skeleton — 远程/alias 拉取时的占位动画 */
+.code-embed-container .code-link-skeleton,
+.code-link-block > .code-link-skeleton {
+	padding: 12px 16px;
+	border-radius: 6px;
+	background: var(--background-secondary);
+}
+
+.code-embed-container .code-link-skeleton-line,
+.code-link-block .code-link-skeleton-line {
+	height: 12px;
+	margin: 6px 0;
+	border-radius: 3px;
+	background: linear-gradient(
+		90deg,
+		var(--background-modifier-border) 0%,
+		var(--background-modifier-border-hover) 50%,
+		var(--background-modifier-border) 100%
+	);
+	background-size: 200% 100%;
+	animation: code-embed-skeleton-shimmer 1.4s ease-in-out infinite;
+}
+
+/* 让 3 条骨架线宽度不同，更像真实代码 */
+.code-embed-container .code-link-skeleton-line:nth-child(1),
+.code-link-block .code-link-skeleton-line:nth-child(1) {
+	width: 72%;
+}
+.code-embed-container .code-link-skeleton-line:nth-child(2),
+.code-link-block .code-link-skeleton-line:nth-child(2) {
+	width: 92%;
+}
+.code-embed-container .code-link-skeleton-line:nth-child(3),
+.code-link-block .code-link-skeleton-line:nth-child(3) {
+	width: 58%;
+}
+
+@keyframes code-embed-skeleton-shimmer {
+	0%   { background-position: 200% 0; }
+	100% { background-position: -200% 0; }
+}
+
+/* Line numbers —— 启用时给每行 .code-line 前挂 .code-line-no gutter */
+.code-embed-with-line-numbers .code-line {
+	display: inline;
+}
+
+.code-embed-with-line-numbers .code-line-no {
+	display: inline-block;
+	width: 3em;
+	padding-right: 1em;
+	margin-right: 0.5em;
+	text-align: right;
+	color: var(--text-faint);
+	border-right: 1px solid var(--background-modifier-border);
+	user-select: none;
+	-webkit-user-select: none;
+	/* 不参与 Prism 语法着色 */
+	font-family: var(--font-monospace);
+	font-variant-numeric: tabular-nums;
+	box-sizing: border-box;
+}
+
+/* Folding —— 超过阈值时代码块默认折叠，工具栏加展开按钮 */
+.code-embed-wrap-lines.code-embed-with-line-numbers .code-line {
+	display: inline-flex;
+	width: 100%;
+}
+
+.code-embed-wrap-lines.code-embed-with-line-numbers .code-line-no {
+	flex-shrink: 0;
+	display: block;
+}
+
+.code-embed-wrap-lines.code-embed-with-line-numbers .code-line-content {
+	flex: 1;
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.code-embed-foldable.code-embed-folded .code-embed-wrapper pre {
+	max-height: var(--fold-collapsed-h, 10em);
+	overflow: auto;
+	position: relative;
+}
+
+.code-embed-foldable.code-embed-fold-full:not(.code-embed-folded) .code-embed-wrapper pre {
+	max-height: none;
+}
+
+.code-embed-foldable.code-embed-fold-partial:not(.code-embed-folded) .code-embed-wrapper pre {
+	max-height: var(--fold-expanded-h, 20em);
+	overflow: auto;
+}
+
+.code-embed-foldable.code-embed-folded .code-embed-wrapper pre::after,
+.code-embed-foldable.code-embed-fold-partial:not(.code-embed-folded) .code-embed-wrapper pre::after {
+	content: "";
+	position: sticky;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	height: 2em;
+	margin-top: -2em;
+	pointer-events: none;
+	background: linear-gradient(
+		to bottom,
+		rgba(0, 0, 0, 0),
+		var(--background-primary) 80%
+	);
+}
+
+/* 折叠按钮复用工具栏其他按钮的样式（.code-block-flair / .code-embed-open-btn），
+   保持视觉统一；仅 uppercase 与 lang flair 区分，这里不要 uppercase */
+.code-embed-container .code-embed-fold-btn.code-embed-fold-btn {
+	appearance: none;
+	height: 32px;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--code-bracket-background);
+	transition: all 0.2s ease;
+	cursor: pointer;
+	border: none;
+	border-radius: 0;
+	font-size: var(--font-smaller);
+}
+
+.code-embed-container .code-embed-fold-btn:hover,
+.code-embed-container .code-embed-fold-btn:active {
+	opacity: 0.7;
+}
+
+/* Wrap long lines —— 启用时代码块超长行换行显示（否则横向滚动） */
+.code-embed-wrap-lines .code-embed-wrapper.code-embed-wrapper pre code {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+/* Hide Obsidian's default copy button inside our code embeds */
+.code-embed-container button.copy-code-button.copy-code-button,
+.code-embed-wrapper button.copy-code-button.copy-code-button {
+	display: none;
+}
+
+/* === Editor Mode Override Styles === */
+
+.markdown-source-view.mod-cm6 .internal-embed.code-link-processed {
+	display: block;
+	margin: 1em 0;
+	pointer-events: auto;
+}
+
+.markdown-source-view.mod-cm6 .internal-embed.code-link-processed[contenteditable="false"] {
+	cursor: default;
+}
+
+.markdown-source-view.mod-cm6 .code-link-loading {
+	padding: 12px 16px;
+	border-radius: 6px;
+}
+
+/* Allow text selection in embeds */
+.markdown-source-view.mod-cm6 .code-embed-wrapper,
+.markdown-source-view.mod-cm6 .code-embed-wrapper pre,
+.markdown-source-view.mod-cm6 .code-embed-wrapper code {
+	-webkit-user-select: text;
+	user-select: text;
+	cursor: text;
+}
+
+/* Hide Obsidian's built-in copy button inside our code embeds in editor */
+.markdown-source-view.mod-cm6 .code-embed-container button.copy-code-button.copy-code-button,
+.markdown-source-view.mod-cm6 .code-embed-wrapper button.copy-code-button.copy-code-button {
+	display: none;
+}
+
+/* Reset Obsidian's default .code-block-flair styles in editor */
+.markdown-source-view.mod-cm6 .code-embed-container .code-block-flair.code-block-flair {
+	position: static;
+	text-transform: uppercase;
+	border: none;
+	border-radius: 0;
+	border-left: 1px solid rgba(255, 255, 255, 0.1);
+	box-shadow: none;
+	outline: none;
+}
+
+.markdown-source-view.mod-cm6 .code-embed-container .code-embed-open-btn.code-embed-open-btn {
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	outline: none;
+}
+
+/* === File Modal Styles === */
+
+.code-import-file-modal .file-content-input {
+	width: 100%;
+	min-height: 200px;
+	font-family: var(--font-monospace);
+	resize: vertical;
+}
+
+.code-import-file-modal .modal-button-container,
+.code-import-edit-link-modal .modal-button-container {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+	margin-top: 20px;
+}
+
+.code-import-file-modal .setting-item .file-name-input {
+	width: 300px;
+}
+
+/* === Highlighted lines === */
+
+.code-highlight-line {
+	display: inline-block;
+	width: 100%;
+	background-color: var(--text-highlight-bg, rgba(255, 255, 0, 0.2));
+	border-left: 3px solid var(--text-accent);
+	margin: 0 -16px;
+	padding: 0 16px;
+}
+
+/* === Symbol extraction error === */
+
+.code-link-error {
+	color: var(--text-error);
+	padding: 1em;
+	border: 1px solid var(--background-modifier-error);
+	border-radius: 4px;
+	font-family: var(--font-monospace);
+	white-space: pre-wrap;
+}
+
+.code-link-error .code-link-retry-btn {
+	margin-top: 0.75em;
+	padding: 4px 14px;
+	font-size: var(--font-small);
+	font-family: var(--font-interface);
+	border: 1px solid var(--background-modifier-error);
+	background: var(--background-modifier-error);
+	color: var(--text-error);
+	border-radius: 4px;
+	cursor: pointer;
+	transition: opacity 0.2s ease;
+}
+
+.code-link-error .code-link-retry-btn:hover {
+	opacity: 0.7;
+}
+
+/* === Storage Path Section (FileModal) === */
+
+.code-import-file-modal .storage-path-section {
+	margin-bottom: 1em;
+}
+
+.code-import-file-modal .storage-path-section .setting-item {
+	border-top: none;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+}
+
+/* === Edit Link Modal === */
+
+.code-import-edit-link-modal .edit-link-info {
+	background: var(--background-secondary);
+	border-radius: 6px;
+	padding: 0.75em 1em;
+	margin-bottom: 1em;
+}
+
+.code-import-edit-link-modal .edit-link-info-row {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.25em 0;
+	font-size: var(--font-smaller);
+}
+
+.code-import-edit-link-modal .edit-link-info-label {
+	color: var(--text-muted);
+}
+
+.code-import-edit-link-modal .edit-link-info-value {
+	color: var(--text-normal);
+	font-family: var(--font-monospace);
+}
+
+.code-import-edit-link-modal .edit-link-code-container {
+	max-height: 400px;
+	overflow: auto;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	margin-bottom: 1em;
+}
+
+.code-import-edit-link-modal .edit-link-code-container .code-embed-container {
+	margin: 0;
+}
+
+.code-import-edit-link-modal .edit-link-code-container .code-embed-wrapper pre {
+	max-height: 400px;
+}
+
+.code-import-edit-link-modal .edit-link-code-container .code-embed-toolbar {
+	display: none;
+}
+
+/* === Remote Source Section (Settings) === */
+
+.code-import-remote-source-section .setting-items {
+	margin-bottom: 1.5em;
+}
+
+.code-import-remote-source-section .remote-source-add {
+	margin-top: 0.5em;
+}
+
+.code-import-remote-source-section .remote-source-add .setting-item-description {
+	margin-top: 0.25em;
+	color: var(--text-muted);
+	font-size: var(--font-smaller);
+}
+
+/* === Upload Source Section (Settings) === */
+
+.code-import-upload-source-section .setting-items {
+	margin-bottom: 1.5em;
+}
+
+.code-import-upload-source-section .upload-source-add {
+	margin-top: 0.5em;
+}
+
+.code-import-upload-source-section .upload-source-add .setting-item-description {
+	margin-top: 0.25em;
+	color: var(--text-muted);
+	font-size: var(--font-smaller);
+}
+
+/* Upload source summary in modal */
+.code-import-file-modal .upload-source-summary {
+	padding: 0.5em 0;
+	color: var(--text-muted);
+	font-size: var(--font-smaller);
+	font-family: var(--font-monospace);
+	border-bottom: 1px solid var(--background-modifier-border);
+	margin-bottom: 0.75em;
+}
+
+/* === Link Preview === */
+
+.code-import-edit-link-modal .link-preview-section {
+	margin: 1em 0;
+}
+
+.code-import-edit-link-modal .link-preview-content {
+	background: var(--background-secondary);
+	border: 1px solid var(--background-modifier-border);
+	border-radius: 6px;
+	padding: 0.75em 1em;
+	font-family: var(--font-monospace);
+	font-size: var(--font-smaller);
+	word-break: break-all;
+	white-space: pre-wrap;
+	color: var(--text-accent);
+}
+
+/* === Settings Tab Bar === */
+
+.code-import-tab-bar {
+	display: flex;
+	border-bottom: 2px solid var(--background-modifier-border);
+	margin-bottom: 1.5em;
+}
+
+.code-import-tab {
+	appearance: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid transparent;
+	margin-bottom: -2px;
+	padding: 0.5em 1em;
+	font-size: var(--font-ui-small);
+	font-weight: 500;
+	color: var(--text-muted);
+	cursor: pointer;
+	transition: color 0.15s, border-color 0.15s;
+}
+
+.code-import-tab:hover {
+	color: var(--text-normal);
+	background: var(--background-modifier-hover);
+}
+
+.code-import-tab.active {
+	color: var(--text-accent);
+	border-bottom-color: var(--text-accent);
+}
+
+.code-import-tab-panel {
+	display: none;
+}
+
+.code-import-tab-panel.active {
+	display: block;
+}
+
+/* Obsidian 1.13+ 的声明式设置把旧表单放进外层 Setting 的 control 区。
+   样式只作用于外层容器，避免影响内部 Setting 的标题、说明和控件布局。 */
+.code-import-definition-panel.code-import-definition-panel {
+	flex-direction: column;
+	align-items: stretch;
+}
+
+.code-import-definition-panel > .setting-item-info {
+	display: none;
+}
+
+.code-import-definition-panel > .setting-item-control {
+	display: block;
+	width: 100%;
+	text-align: left;
+}
+
+/* === Extension Table (Settings) === */
+
+.extension-table-section {
+	margin-top: 1em;
+}
+
+.extension-table-header {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr 60px 40px;
+	gap: 0.5em;
+	padding: 0.25em 0.75em;
+	font-weight: 600;
+	font-size: var(--font-smaller);
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.extension-table-row {
+	display: grid;
+	grid-template-columns: 1.2fr 0.8fr 60px 40px;
+	gap: 0.5em;
+	padding: 0 0.75em;
+	align-items: center;
+	border: none;
+}
+
+.extension-table-row.stripe-even {
+	background-color: var(--background-primary);
+}
+
+.extension-table-row.stripe-odd {
+	background-color: var(--background-secondary);
+}
+
+.extension-table-row:hover {
+	background-color: var(--background-modifier-hover);
+}
+
+/* Plain text inputs — borderless, blend into the row */
+.extension-table-row .extension-table-input.extension-table-input {
+	width: 100%;
+	height: var(--input-height, 32px);
+	padding: 0 0.25em;
+	margin: 0;
+	border: none;
+	border-radius: 0;
+	outline: none;
+	box-shadow: none;
+	background: transparent;
+	color: var(--text-normal);
+	font-size: var(--font-ui-small);
+	font-family: var(--font-interface);
+	-webkit-appearance: none;
+	appearance: none;
+	transition: background 0.15s;
+}
+
+.extension-table-row .extension-table-input.extension-table-input:hover {
+	background: var(--background-modifier-hover);
+}
+
+.extension-table-row .extension-table-input.extension-table-input:focus {
+	background: var(--background-modifier-hover);
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+input.extension-table-input::placeholder {
+	color: var(--text-faint);
+}
+
+/* Strip Obsidian's Setting-item chrome inside grid cells (toggle & delete columns) */
+.extension-table-row .extension-table-col .setting-item.setting-item {
+	border: none;
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	box-shadow: none;
+}
+
+.extension-table-col .setting-item-info {
+	display: none;
+}
+
+.extension-table-col .setting-item-control {
+	width: 100%;
+	justify-content: center;
+}
+
+.extension-table-col .setting-item-control {
+	display: flex;
+	align-items: center;
+}
+
+.extension-table-col.toggle-col,
+.extension-table-col.delete-col {
+	justify-content: center;
+}
+
+.extension-table-add {
+	margin-top: 0.75em;
+}
+
+.extension-table-add .setting-item-description {
+	margin-top: 0.25em;
+	color: var(--text-muted);
+	font-size: var(--font-smaller);
+}
+
+/* === Focus mode -- 点击代码区域全屏聚焦，再点/ESC 退出 === */
+.code-embed-container .code-embed-wrapper {
+	cursor: zoom-in;
+}
+
+/* 聚焦时给 .view-content 加的定位锚点（替代 JS 直接设 style.position） */
+.code-embed-focus-anchor {
+	position: relative;
+}
+
+.code-embed-focus-overlay {
+	position: absolute;
+	inset: 0;
+	z-index: 1000;
+	display: flex;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 2em;
+	cursor: zoom-out;
+	overflow: auto;
+}
+
+/* 聚焦卡片：toolbar + wrapper 同一背景容器，按钮不会超出背景 */
+.code-embed-focus-overlay .code-embed-focus-card {
+	max-width: 900px;
+	width: 100%;
+	max-height: 100%;
+	margin: auto;
+	background: var(--background-primary);
+	border-radius: 8px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	cursor: text;
+	-webkit-user-select: text;
+	user-select: text;
+}
+
+/* 卡片内 toolbar：顶部横排，不再 absolute */
+.code-embed-focus-overlay .code-embed-toolbar {
+	position: static;
+	flex-shrink: 0;
+	border-radius: 8px 8px 0 0;
+	overflow: hidden;
+}
+
+/* 卡片内 wrapper：填满剩余空间，内部滚动 */
+.code-embed-focus-overlay .code-embed-wrapper {
+	flex: 1;
+	min-height: 0;
+	max-height: none;
+	background: transparent;
+	overflow: auto;
+	border-radius: 0;
+}
+
+.code-embed-focus-overlay .code-embed-wrapper pre {
+	max-height: none;
+	background: transparent;
+}
+
+/* 聚焦态行号 gutter —— 聚焦卡片宽度更大，行号列同步加宽，保持与代码列分离 */
+.code-embed-focus-overlay .code-line-no {
+	width: 4em;
+	padding-right: 1.5em;
+	margin-right: 1em;
+}
