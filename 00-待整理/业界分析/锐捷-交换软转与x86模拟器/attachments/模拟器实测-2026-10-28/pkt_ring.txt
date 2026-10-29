@@ -1,0 +1,16 @@
+m 2>/dev/null | head
+pos:	0
+flags:	0100001
+mnt_id:	27
+DTM_DATA
+RAS-PSH-shm-001
+UTILS-ham-shm-001
+VSL_DATA
+VSL_DATA_BACKUP
+VSU_CFG_DATA
+app_dad
+app_gdp
+app_ldp
+dp_gdp
+~ # 
+~ # echo

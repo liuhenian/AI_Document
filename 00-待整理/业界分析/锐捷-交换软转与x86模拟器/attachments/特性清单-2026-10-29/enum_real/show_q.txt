@@ -1,0 +1,235 @@
+AggregatePort           AggregatePort IEEE 802.3ad
+  aaa                     AAA Information
+  access-control          Show access-control
+  access-group            Show ACL applied on interface
+  access-lists            Show access list
+  acl                     Show acl res 
+  acl-res-mode            Acl res mode
+  address-bind            Address binding table
+  address-manage          Ip address manage status
+  alarm                   Show alarm information
+  aliases                 Display alias commands
+  amaint-app              Show amaint-app information
+  anti-arp-spoofing       Anti arp spoofing
+  arp                     ARP table
+  authmanage              Show authmanage
+  base-on-scene           Base on error scenario
+  bfd                     BFD protocol info
+  bgp                     BGP information
+  boot                    Show boot system config
+  bridge                  Bridge status
+  calendar                Manage the calendar clock
+  card                    Show card info
+  checkpoint              Show configuration rollback checkpoints
+  class-map               Show QoS Class Map
+  cli                     Command-Line interface states
+  clns                    Connectionless-Mode Network Service (CLNS)
+  clock                   Manage the system clock
+  cmpnt                   Show component upgrade info
+  configuration           Show current configuration changes
+  coredump                Show coredump information
+  cpld-fpga               Show cpld fpga information
+  cpu                     Show system cpu info
+  cpu-monitor             Show system CPU monitoring information
+  cpu-protect             Cpu-protect
+  cpurule                 Kernel tied information
+  crypto                  Show crypto command
+  cwmp                    Cwmp keyword
+  dad                     Show dad information
+  dampening               Display dampening information
+  debugging               State of each debugging option
+  device-level            Show device-level
+  dhcp                    Dynamic Host Configuration Protocol status
+  diagnose                Show diagnose log info
+  direct-vlan             Show direct vlan list
+  disk                    Show disk information
+  dldp                    Show dldp information
+  dns                     Show dns
+  dot1q-tunnel            Dot1q-tunnel configuration
+  dot1x                   Show dot1x
+  efm                     Show efm information
+  efmp                    Show efmp info
+  elaborate               Show module elaborate information
+  enable                  Enable password information
+  erps                    Show erps
+  eth_parser              Ether parser show commands
+  eth_subif               Ether subif show commands
+  event                   Show event information
+  evpn                    Display information for Ethernet VPN
+  exception               Show exceptions
+  expert                  Expert extended ACL
+  fan                     Show fan
+  file                    Show file system information
+  flow-sampler            Display the flow samplers configured
+  frame-tag               Tag information
+  free-url                Show free-url
+  ftp-client              Ftp-client information
+  ftp-server              Ftp-server information
+  global-vrf              Global VPN instance information
+  grpc                    Google Remote Procedure Call Protocol (GRPC)
+  gvrp                    GVRP configure command
+  ham                     Show event
+  hdf                     Hardware diagnostic function
+  history                 Display the session command history
+  hostname                System hostname
+  hosts                   IP dns nameservers, and host table
+  ids                     Intelligent Diagnosis System
+  inner-priority-trust    Tag-priority-copy configuration
+  install                 Show smu install info
+  interfaces              Interface status and configuration
+  ip                      IP information
+  ipsec                   Show ipsec command
+  ipv6                    IPv6 information
+  isis                    Intermediate System - Intermediate System (IS-IS)
+  itunnel                 Show all tunnel's detail information
+  key                     Key information
+  l2protocol-tunnel       L2protocol tunnel
+  lacp                    Lacp aggregation information
+  language                Show system language
+  license                 Licensed service information
+  line                    TTY line information
+  link                    Show link information
+  lldp                    Link Layer Discovery Protocol
+  load-balance-profile    Load balance profile
+  logging                 Show the contents of logging buffers
+  login                   Display login information
+  loop-detect             Loop detect interface
+  lsm                     Show LSM commands
+  mac                     Mac extended ACL
+  mac-address-learning    MAC Address learning
+  mac-address-table       MAC forwarding table
+  mac-loopback            Show mac-loopback information
+  mac-vlan                Show mac vlan
+  macc                    MACC
+  manuinfo                Show manu information
+  memory                  Show the use of the system memory
+  memory-monitor          Show system memory monitoring information
+  mgmt                    Show MGMT virtual information
+  mgmt_mode               Show mgmt_mode
+  mlag                    VAP information
+  mls                     Show MultiLayer Switching information
+  mmu                     Show mmu information
+  monitor                 Show a SPAN session
+  monitor-version         Show monitor-version status
+  mount                   Show mount information
+  mpls                    MPLS information
+  mqtt                    Information on mqtt
+  msf                     Msf information
+  msf6                    Msf6 information
+  nac-author-user         Nac author user max number
+  nd                      IPv6 Neighbor
+  netconf                 Netconf show
+  nfpp                    Show NFPP information
+  nsm                     Nsm info
+  ntp                     Network time protocol
+  of                      OpenFlow
+  outflow-group           Outflow-group
+  packet                  Show packet
+  password                Show password information
+  patch                   Show patch info
+  pbi                     Proactive business insight
+  pci-bus                 Show pci-bus
+  pkt                     Show pkt info
+  policy-map              Show QoS Policy Map
+  port-security           Show secure port information
+  power                   Show power
+  privilege               Show current privilege level
+  processes               Manage processes item
+  protocol-vlan           Show Protocol-vlan information
+  psh                     System protect and self-healing
+  qinq                    The qinq statis
+  qos                     Show qos res 
+  queue-buffer            Show queue-buffer information
+  queue-counter           Show queue-counter information
+  queueing                Show queueing configuration
+  radius                  Show radius
+  radius-server           Show radius server
+  radsec                  Show radsec
+  rdnd                    Redundancy debug and diagnostic information
+  reboot-reason           Reboot reason
+  redirect                Show redirect
+  redundancy              Redundancy information
+  ref                     Show ref debugging
+  registration-table      Registration table
+  reload                  Show reload
+  rldp                    Show rldp information
+  rmon                    Show rmon statistics
+  role                    Show role configuration
+  route-map               Route-map information
+  route-res               Route resource
+  rpi                     Route protocol independent
+  rping                   Show rping detail
+  running-config          Current operating configuration
+  safe-verify             Show safe-verify info
+  savi                    Show SAVI information
+  security                Show security information
+  security-log            Show security-log info
+  security-mode           Show security mode info
+  service                 Show network management services
+  sessions                Information about Telnet connections
+  sflow                   Show sflow information
+  snmp                    SNMP statistics
+  snooping-client         The client of snooping entry synchronization
+  snooping-server         The server of snooping entry synchronization
+  sntp                    Show sntp configuration
+  span-info               Show span informations
+  spanning-tree           Spanning tree topology
+  split                   Interface split information
+  sprs                    Show suppress information
+  ssh                     Status of SSH server connections
+  ssh-sessions            Information about SSH connections
+  startup-config          Contents of startup configuration
+  storage                 Show storage message
+  storm-control           Show packet storm control configuration
+  storm-suppression       Show storm suppression
+  supervlan               SUPER VLAN status
+  svi                     State of svi router-acls
+  switch                  The switch's VSU information
+  switch-mode             Switch-mode
+  sysha                   Show system ha
+  sysmac                  Show sysmac
+  system-sn               Show system serial number
+  tacacs                  Shows tacacs+ server statistics
+  tcp                     IPv4 TCP
+  tcpip                   Show tcpip commands
+  telnet                  Information on telnet
+  temperature             Show temperature
+  terminal-identify       Show terminal identify
+  tftp-server             Tftp-server information
+  time-range              Timerange information
+  tipc                    Show tipc information
+  tir                     Show tir info
+  track                   Tracking information
+  traffic-index           Traffic index information
+  traffic-redirect        Traffic redirect configuration
+  translation-table       Translation table
+  tunnel                  Display tunnel's brief information
+  udp-helper              Udp-helper module exec cmd
+  ugp                     Show ugp info
+  upgrade                 Show upgrade
+  urpf                    Urpf module
+  urpfk                   Urpfk
+  usb                     Show usb information
+  usb-bus                 Show usb-bus
+  users                   Display information about terminal lines
+  vap                     VAP information
+  version                 Show version
+  virtual-group           Virtual-group
+  virtual-port            Virtual-port
+  vlan                    VLAN status
+  voice                   Show voice vlan information
+  vrf                     VPN Routing/Forwarding instance information
+  vrrp                    Virtual route redundancy protocol
+  vsd-summary             Show vsd-summary
+  vsl-dp                  Show vsl info
+  weak-password-wordlist  Show weak password wordlist information
+  web-api                 Web api
+  web-auth                Show web-auth commands
+  web-server              Ngx service
+  zam                     Zam keyword
+
+Ruijie#show 
+
+Translating "show"...
+% Unrecognized host or address, or protocol not running.
+Ruijie#echo

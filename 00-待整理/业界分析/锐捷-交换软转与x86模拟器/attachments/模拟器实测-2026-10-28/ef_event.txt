@@ -1,0 +1,3 @@
+_ctrl_dbg_flags 2>/dev/null; cat /proc/net/efmp_kern_ebuf_dbg_flags 2>/dev/null
+~ # 
+~ # echo

@@ -1,0 +1,5 @@
+-rwxr-xr-x    1 root     root        244504 Oct  9 10:19 /sbin/cmps.ctc.tcammng
+-rwxr-xr-x    1 root     root      41809920 Oct  9 10:19 /sbin/cmps.sda.sw
+-rwxr-xr-x    1 root     root          1077 Oct  9 10:19 /sbin/config.bcm
+~ # 
+~ # echo

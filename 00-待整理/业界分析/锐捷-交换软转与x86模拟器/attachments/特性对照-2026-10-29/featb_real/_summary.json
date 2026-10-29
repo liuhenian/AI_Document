@@ -1,0 +1,176 @@
+{
+ "vlan": {
+  "cmd": "show vlan",
+  "exists": true,
+  "len": 2464,
+  "head": "VLAN       Name                             Status    Ports | ---------- -------------------------------- --------- --------------------------"
+ },
+ "vlan_all": {
+  "cmd": "show vlan all",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "span": {
+  "cmd": "show monitor session",
+  "exists": false,
+  "len": 21,
+  "head": "% Incomplete command."
+ },
+ "mlag": {
+  "cmd": "show mlag",
+  "exists": false,
+  "len": 21,
+  "head": "% Incomplete command."
+ },
+ "poe": {
+  "cmd": "show poe status",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "env": {
+  "cmd": "show env",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "env_status": {
+  "cmd": "show environment status",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "ipfix": {
+  "cmd": "show ipfix statistics",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "nfpp": {
+  "cmd": "show nfpp summary",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "agg": {
+  "cmd": "show aggregates",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "lacp": {
+  "cmd": "show lacp summary",
+  "exists": true,
+  "len": 187,
+  "head": "System Id:32768, 00d0.f822.3595 |  | Flags:  S - Device is requesting Slow LACPDUs   F - Device is requesting Fast LACPDUs. | A - Device is in act"
+ },
+ "qos": {
+  "cmd": "show qos",
+  "exists": false,
+  "len": 21,
+  "head": "% Incomplete command."
+ },
+ "vxlan": {
+  "cmd": "show vxlan vlan 1",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "mpls": {
+  "cmd": "show mpls",
+  "exists": false,
+  "len": 21,
+  "head": "% Incomplete command."
+ },
+ "efmp_cnt": {
+  "cmd": "show efmp counter",
+  "exists": true,
+  "len": 1125,
+  "head": "------------------------------------------ |                Efmp  counter               | ------------------------------------------ |   RX       "
+ },
+ "dot1x": {
+  "cmd": "show dot1x",
+  "exists": true,
+  "len": 1007,
+  "head": "802.1X basic information: |   802.1X Status ......................... disable |   Authentication Mode ................... eap |   Authorization mo"
+ },
+ "cpp": {
+  "cmd": "show cpu-protect",
+  "exists": true,
+  "len": 18835,
+  "head": "%cpu port bandwidth: 4500(pps) | Rate(pps)  Drop(pps)  Total         Total Drop   | ---------  ---------  ---------     ----------   |  7         "
+ },
+ "sflow2": {
+  "cmd": "show sflow statistics",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "stack": {
+  "cmd": "show switch virtual topology",
+  "exists": true,
+  "len": 226,
+  "head": "Introduction: '[num]' means switch num, '(num/num)' means vsl-aggregateport num. |  | Chain topology: | [1](1/1)---(2/1)[2] |  | Switch[1]: master, MA"
+ },
+ "int_status": {
+  "cmd": "show interfaces status",
+  "exists": true,
+  "len": 8895,
+  "head": "Interface                                Status    Vlan   Duplex   Speed     Type   | ---------------------------------------- --------  ---- "
+ },
+ "power": {
+  "cmd": "show power",
+  "exists": true,
+  "len": 598,
+  "head": "Power-id Power-type           Status     Hardware-Version Serial                          Supply(W)  | -------- -------------------- ---------"
+ },
+ "fan": {
+  "cmd": "show fan",
+  "exists": true,
+  "len": 395,
+  "head": "Fan id Type             Status     Hardware Version Serial Number   | ------ ---------------- ---------- ---------------- --------------- | 1/1 "
+ },
+ "temp": {
+  "cmd": "show temperature",
+  "exists": true,
+  "len": 732,
+  "head": "Temperature: | --------------------------------------------------------------------------- | Slot    Temp_name     Warning         Shutdown     "
+ },
+ "trans": {
+  "cmd": "show interfaces transceiver",
+  "exists": true,
+  "len": 2948,
+  "head": "========Interface TenGigabitEthernet 1/0/49======== | Interface TenGigabitEthernet 1/0/49 : the transceiver is absent! |  | ========Interface TenG"
+ },
+ "hw": {
+  "cmd": "show hardware",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "dev": {
+  "cmd": "show version devices",
+  "exists": true,
+  "len": 124,
+  "head": "Device  Slots  Description |   ------  -----  ------------ |   1       2      S5760C-48GT4XS-X |   2       2      S5760C-48GT4XS-X"
+ },
+ "ipv4_route": {
+  "cmd": "show ip route",
+  "exists": true,
+  "len": 756,
+  "head": "Codes:  C - Connected, L - Local, S - Static |         R - RIP, O - OSPF, B - BGP, I - IS-IS, V - Overflow route |         N1 - OSPF NSSA extern"
+ },
+ "arp": {
+  "cmd": "show arp",
+  "exists": true,
+  "len": 695,
+  "head": "Protocol  Address          Age(min)  Hardware        Type   Interface                | Internet  10.104.0.1       29        0000.0000.0104  ar"
+ },
+ "span_cfg": {
+  "cmd": "show running-config | include monitor",
+  "exists": true,
+  "len": 0,
+  "head": ""
+ }
+}

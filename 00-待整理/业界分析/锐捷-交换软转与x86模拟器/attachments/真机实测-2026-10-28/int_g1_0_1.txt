@@ -1,0 +1,31 @@
+Index(dec):1 (hex):1
+GigabitEthernet 1/0/1 is UP  , line protocol is UP    
+  Hardware is GigabitEthernet, address is 00d0.f822.3596 (bia 00d0.f822.3596)
+  Interface address is: 10.104.36.146/16
+  ARP type: ARPA, ARP Timeout: 3600 seconds
+  Interface IPv6 address is:
+    No IPv6 address
+  MTU 1500 bytes, BW 1000000 Kbit
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2026-10-12 11:49:17
+    Time duration since last link state change: 16 days,  6 hours, 13 minutes, 50 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 1000M
+    Flow control admin status is OFF, flow control oper status is OFF
+    Admin negotiation mode is OFF, oper negotiation state is ON
+    Storm Control: Broadcast is OFF, Multicast is OFF, Unicast is OFF
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 13728165 bits/sec, at 2026-10-13 16:54:26
+  Output peak rate: 3911245 bits/sec, at 2026-10-10 09:21:28
+   10 seconds input rate 3791 bits/sec, 6 packets/sec
+   10 seconds output rate 741 bits/sec, 0 packets/sec
+    13383443 packets input, 2650628748 bytes, 0 no buffer, 0 dropped, 0 pause
+    Received 10797281 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    2717264 packets output, 2695150880 bytes, 0 underruns, 0 no buffer, 0 dropped, 0 pause
+    0 output errors, 0 collisions, 0 interface resets
+Ruijie#echo

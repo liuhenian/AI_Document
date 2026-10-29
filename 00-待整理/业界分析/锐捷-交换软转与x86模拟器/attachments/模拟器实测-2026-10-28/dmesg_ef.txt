@@ -1,0 +1,3 @@
+[   17.459686] igb_uio: Use MSIX interrupt by default
+~ # 
+~ # echo

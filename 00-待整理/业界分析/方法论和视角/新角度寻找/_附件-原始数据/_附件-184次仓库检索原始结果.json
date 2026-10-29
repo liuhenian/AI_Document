@@ -1,0 +1,2382 @@
+{
+ "M01|openwrt/openwrt": {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "repo": "openwrt/openwrt",
+  "term": "stale entry",
+  "total": 50,
+  "items": [
+   {
+    "num": 4721,
+    "title": "ipq40xx: introduce proper ethernet and DSA support",
+    "created": "2021-10-25"
+   },
+   {
+    "num": 5075,
+    "title": "lantiq: add support for AVM Fritzbox 3490, 5490 and 7490",
+    "created": "2022-02-12"
+   },
+   {
+    "num": 24806,
+    "title": "qualcommax: qca_ppe: host-driven PPE offload (routing, NAT, PPPoE, shaping, QoS, classification)",
+    "created": "2026-08-20"
+   }
+  ],
+  "ok": true
+ },
+ "M01|sonic-net/sonic-buildimage": {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "stale entry",
+  "total": 82,
+  "items": [
+   {
+    "num": 7488,
+    "title": "BGP fails to restore route table before reconciliation in warm reboot",
+    "created": "2021-04-29"
+   },
+   {
+    "num": 29997,
+    "title": "[warmboot-finalizer]: Remove stale counter entries after warm reboot",
+    "created": "2026-10-07"
+   },
+   {
+    "num": 26940,
+    "title": "Bug: Stale FlexCounters COUNTERS_DB Entries for ports after DPB or counterpoll <> disable",
+    "created": "2026-04-22"
+   }
+  ],
+  "ok": true
+ },
+ "M01|FRRouting/frr": {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "repo": "FRRouting/frr",
+  "term": "stale entry",
+  "total": 134,
+  "items": [
+   {
+    "num": 23638,
+    "title": "ospfd: unlink external info from its aggregate before freeing",
+    "created": "2026-10-10"
+   },
+   {
+    "num": 21468,
+    "title": "zebra: Add minimal kernel mode filtering for netlink events",
+    "created": "2026-04-07"
+   },
+   {
+    "num": 23280,
+    "title": "zebra: fix stale HREP entries and VTEP lifecycle inconsistencies",
+    "created": "2026-09-07"
+   }
+  ],
+  "ok": true
+ },
+ "M01|librenms/librenms": {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "repo": "librenms/librenms",
+  "term": "stale entry",
+  "total": 8,
+  "items": [
+   {
+    "num": 19966,
+    "title": "Fix per-OS module config:set validation (#19960)",
+    "created": "2026-06-25"
+   },
+   {
+    "num": 19960,
+    "title": "Bug: lnms config:set os.<os>.{poller,discovery}_modules.<module> rejects valid modules and blocks al",
+    "created": "2026-06-25"
+   },
+   {
+    "num": 9779,
+    "title": "Fixes constraint 'poller_cluster_node_id_unique'.",
+    "created": "2019-02-05"
+   }
+  ],
+  "ok": true
+ },
+ "M01|ytti/oxidized": {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "repo": "ytti/oxidized",
+  "term": "stale entry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M01|ktbyers/netmiko": {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "repo": "ktbyers/netmiko",
+  "term": "stale entry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M01|napalm-automation/napalm": {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "repo": "napalm-automation/napalm",
+  "term": "stale entry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M01|batfish/batfish": {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "repo": "batfish/batfish",
+  "term": "stale entry",
+  "total": 1,
+  "items": [
+   {
+    "num": 10440,
+    "title": "Javabdd cache init and reset fixes",
+    "created": "2026-10-20"
+   }
+  ],
+  "ok": true
+ },
+ "M03|openwrt/openwrt": {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "repo": "openwrt/openwrt",
+  "term": "dead metric",
+  "total": 2,
+  "items": [
+   {
+    "num": 21657,
+    "title": "BananaPi/BPi-R4 kernel warning/panic/ramoops with or without hardware flow offloading",
+    "created": "2026-01-23"
+   },
+   {
+    "num": 8692,
+    "title": "FS#3657 - dnsmasq listen on the wrong address after the PPP update",
+    "created": "2021-03-03"
+   }
+  ],
+  "ok": true
+ },
+ "M03|sonic-net/sonic-buildimage": {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "dead metric",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M03|FRRouting/frr": {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "repo": "FRRouting/frr",
+  "term": "dead metric",
+  "total": 7,
+  "items": [
+   {
+    "num": 23528,
+    "title": "[zebra]: Keep linkdown state of kernel routes in sync",
+    "created": "2026-10-05"
+   },
+   {
+    "num": 21294,
+    "title": "zebra: extend rib_compare_routes() metric check to KERNEL routes",
+    "created": "2026-03-23"
+   },
+   {
+    "num": 8466,
+    "title": "Feature Request:  learn default route and on-link route through ND in IPv6 network",
+    "created": "2021-04-14"
+   }
+  ],
+  "ok": true
+ },
+ "M03|librenms/librenms": {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "repo": "librenms/librenms",
+  "term": "dead metric",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M03|ytti/oxidized": {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "repo": "ytti/oxidized",
+  "term": "dead metric",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M03|ktbyers/netmiko": {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "repo": "ktbyers/netmiko",
+  "term": "dead metric",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M03|napalm-automation/napalm": {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "repo": "napalm-automation/napalm",
+  "term": "dead metric",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M03|batfish/batfish": {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "repo": "batfish/batfish",
+  "term": "dead metric",
+  "total": 1,
+  "items": [
+   {
+    "num": 9950,
+    "title": "Junos: warn on dead-config in policy-statement then actions",
+    "created": "2026-05-21"
+   }
+  ],
+  "ok": true
+ },
+ "M20|openwrt/openwrt": {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "repo": "openwrt/openwrt",
+  "term": "polling isolation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M20|sonic-net/sonic-buildimage": {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "polling isolation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M20|FRRouting/frr": {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "repo": "FRRouting/frr",
+  "term": "polling isolation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M20|librenms/librenms": {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "repo": "librenms/librenms",
+  "term": "polling isolation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M20|ytti/oxidized": {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "repo": "ytti/oxidized",
+  "term": "polling isolation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M20|ktbyers/netmiko": {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "repo": "ktbyers/netmiko",
+  "term": "polling isolation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M20|napalm-automation/napalm": {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "repo": "napalm-automation/napalm",
+  "term": "polling isolation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M20|batfish/batfish": {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "repo": "batfish/batfish",
+  "term": "polling isolation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M31|openwrt/openwrt": {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "repo": "openwrt/openwrt",
+  "term": "index allocation",
+  "total": 6,
+  "items": [
+   {
+    "num": 22809,
+    "title": "mediatek: add support for Airtel AirFiber AAP4221ZY",
+    "created": "2026-04-06"
+   },
+   {
+    "num": 20029,
+    "title": "realtek: Increase verbosity in rtldsa_fib4_add()",
+    "created": "2025-09-12"
+   },
+   {
+    "num": 24246,
+    "title": "swconfig: fix portmap memory leak and hardening",
+    "created": "2026-07-15"
+   }
+  ],
+  "ok": true
+ },
+ "M31|sonic-net/sonic-buildimage": {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "index allocation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M31|FRRouting/frr": {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "repo": "FRRouting/frr",
+  "term": "index allocation",
+  "total": 4,
+  "items": [
+   {
+    "num": 21266,
+    "title": "bgpd: RD caching",
+    "created": "2026-03-19"
+   },
+   {
+    "num": 22176,
+    "title": "bgpd: Fixes in comm/lcomm/ecomm str functions",
+    "created": "2026-06-02"
+   },
+   {
+    "num": 5865,
+    "title": "zebra: srv6 manager",
+    "created": "2020-02-26"
+   }
+  ],
+  "ok": true
+ },
+ "M31|librenms/librenms": {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "repo": "librenms/librenms",
+  "term": "index allocation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M31|ytti/oxidized": {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "repo": "ytti/oxidized",
+  "term": "index allocation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M31|ktbyers/netmiko": {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "repo": "ktbyers/netmiko",
+  "term": "index allocation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M31|napalm-automation/napalm": {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "repo": "napalm-automation/napalm",
+  "term": "index allocation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M31|batfish/batfish": {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "repo": "batfish/batfish",
+  "term": "index allocation",
+  "total": 1,
+  "items": [
+   {
+    "num": 9880,
+    "title": "BatfishParseTreeWalker: access children directly in walk()",
+    "created": "2026-04-15"
+   }
+  ],
+  "ok": true
+ },
+ "M36|openwrt/openwrt": {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "repo": "openwrt/openwrt",
+  "term": "post-incident evidence loss",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M36|sonic-net/sonic-buildimage": {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "post-incident evidence loss",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M36|FRRouting/frr": {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "repo": "FRRouting/frr",
+  "term": "post-incident evidence loss",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M36|librenms/librenms": {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "repo": "librenms/librenms",
+  "term": "post-incident evidence loss",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M36|ytti/oxidized": {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "repo": "ytti/oxidized",
+  "term": "post-incident evidence loss",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M36|ktbyers/netmiko": {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "repo": "ktbyers/netmiko",
+  "term": "post-incident evidence loss",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M36|napalm-automation/napalm": {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "repo": "napalm-automation/napalm",
+  "term": "post-incident evidence loss",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M36|batfish/batfish": {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "repo": "batfish/batfish",
+  "term": "post-incident evidence loss",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M37|openwrt/openwrt": {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "repo": "openwrt/openwrt",
+  "term": "missing telemetry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M37|sonic-net/sonic-buildimage": {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "missing telemetry",
+  "total": 24,
+  "items": [
+   {
+    "num": 30133,
+    "title": "Bug: countersyncd drops HFT telemetry messages due to receive-buffer overflow",
+    "created": "2026-10-13"
+   },
+   {
+    "num": 30278,
+    "title": "[docker-sonic-mgmt] Patch pygnmi IPv6 and double value handling",
+    "created": "2026-10-21"
+   },
+   {
+    "num": 26715,
+    "title": "Logger::linkToDbWithOutput writes LOGGER defaults to CONFIG_DB on daemon startup, causing race with ",
+    "created": "2026-04-11"
+   }
+  ],
+  "ok": true
+ },
+ "M37|FRRouting/frr": {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "repo": "FRRouting/frr",
+  "term": "missing telemetry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M37|librenms/librenms": {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "repo": "librenms/librenms",
+  "term": "missing telemetry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M37|ytti/oxidized": {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "repo": "ytti/oxidized",
+  "term": "missing telemetry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M37|ktbyers/netmiko": {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "repo": "ktbyers/netmiko",
+  "term": "missing telemetry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M37|napalm-automation/napalm": {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "repo": "napalm-automation/napalm",
+  "term": "missing telemetry",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M37|batfish/batfish": {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "repo": "batfish/batfish",
+  "term": "missing telemetry",
+  "total": 1,
+  "items": [
+   {
+    "num": 9716,
+    "title": "Implement Cisco PKI and telemetry support",
+    "created": "2026-01-21"
+   }
+  ],
+  "ok": true
+ },
+ "M29|openwrt/openwrt": {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "repo": "openwrt/openwrt",
+  "term": "interoperability",
+  "total": 28,
+  "items": [
+   {
+    "num": 12904,
+    "title": "[WIP,RFT,RFC] mac80211: add support for QAM-256 in 2.4GHz 802.11n",
+    "created": "2023-06-14"
+   },
+   {
+    "num": 23009,
+    "title": "Improve WPA 3 compatibility and add additional options",
+    "created": "2026-04-19"
+   },
+   {
+    "num": 24041,
+    "title": "wifi-scripts: ucode: disable options with interoperability problems ",
+    "created": "2026-07-02"
+   }
+  ],
+  "ok": true
+ },
+ "M29|sonic-net/sonic-buildimage": {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "interoperability",
+  "total": 3,
+  "items": [
+   {
+    "num": 27067,
+    "title": "[sonic-yang-models] Migrate IP prefix typedefs; preserve host bits where needed",
+    "created": "2026-04-29"
+   },
+   {
+    "num": 25941,
+    "title": "Enable IEEE 800G autoneg for QuicksilverP512",
+    "created": "2026-03-06"
+   },
+   {
+    "num": 4646,
+    "title": "Port status not reflected in SONiC",
+    "created": "2020-05-26"
+   }
+  ],
+  "ok": true
+ },
+ "M29|FRRouting/frr": {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "repo": "FRRouting/frr",
+  "term": "interoperability",
+  "total": 55,
+  "items": [
+   {
+    "num": 21434,
+    "title": "ospfd: Add configurable RFC 7474 compatibility",
+    "created": "2026-04-01"
+   },
+   {
+    "num": 12390,
+    "title": "vrrpd: add IPv4 pseudoheader option for VRRPv3",
+    "created": "2022-11-24"
+   },
+   {
+    "num": 23969,
+    "title": "isisd: extended sequence numbers (RFC 7602)",
+    "created": "2026-10-25"
+   }
+  ],
+  "ok": true
+ },
+ "M29|librenms/librenms": {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "repo": "librenms/librenms",
+  "term": "interoperability",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M29|ytti/oxidized": {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "repo": "ytti/oxidized",
+  "term": "interoperability",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M29|ktbyers/netmiko": {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "repo": "ktbyers/netmiko",
+  "term": "interoperability",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M29|napalm-automation/napalm": {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "repo": "napalm-automation/napalm",
+  "term": "interoperability",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M29|batfish/batfish": {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "repo": "batfish/batfish",
+  "term": "interoperability",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M02|openwrt/openwrt": {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "repo": "openwrt/openwrt",
+  "term": "counter sanity check",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M02|sonic-net/sonic-buildimage": {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "counter sanity check",
+  "total": 3,
+  "items": [
+   {
+    "num": 8290,
+    "title": "[acl] test_icmp_match_forwarded[ipv6-ingress-uplink->downlink] fails on 7050cx3 T1",
+    "created": "2021-07-30"
+   },
+   {
+    "num": 11158,
+    "title": "[202205][linkmgr][swss][utilities] advance submodule head",
+    "created": "2022-06-16"
+   },
+   {
+    "num": 11015,
+    "title": "[submodule][swss] advance swss submodule head",
+    "created": "2022-06-02"
+   }
+  ],
+  "ok": true
+ },
+ "M02|FRRouting/frr": {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "repo": "FRRouting/frr",
+  "term": "counter sanity check",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M02|librenms/librenms": {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "repo": "librenms/librenms",
+  "term": "counter sanity check",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M02|ytti/oxidized": {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "repo": "ytti/oxidized",
+  "term": "counter sanity check",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M02|ktbyers/netmiko": {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "repo": "ktbyers/netmiko",
+  "term": "counter sanity check",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M02|napalm-automation/napalm": {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "repo": "napalm-automation/napalm",
+  "term": "counter sanity check",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M02|batfish/batfish": {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "repo": "batfish/batfish",
+  "term": "counter sanity check",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M04|openwrt/openwrt": {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "repo": "openwrt/openwrt",
+  "term": "cross-validation",
+  "total": 3,
+  "items": [
+   {
+    "num": 25926,
+    "title": "generic: realtek: fix RTL8261BE/N binding generic PHY driver; mediatek: ltc_vl7m19k: fix LAN LED pol",
+    "created": "2026-10-16"
+   },
+   {
+    "num": 26190,
+    "title": "RTL83xx pie fixes",
+    "created": "2026-10-25"
+   },
+   {
+    "num": 23612,
+    "title": "Fix kernel 6.18 build on macOS hosts",
+    "created": "2026-06-01"
+   }
+  ],
+  "ok": true
+ },
+ "M04|sonic-net/sonic-buildimage": {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "cross-validation",
+  "total": 10,
+  "items": [
+   {
+    "num": 25641,
+    "title": "[yang-models] Add YANG model for PORT_TABLE in STATE_DB",
+    "created": "2026-02-24"
+   },
+   {
+    "num": 29832,
+    "title": "[build_templates]: Gate swss/syncd on ETHERNET_PORTS_PRESENT for no-ASIC devices",
+    "created": "2026-09-29"
+   },
+   {
+    "num": 30159,
+    "title": "[dhcp] dhcp server match mode cli commands",
+    "created": "2026-10-15"
+   }
+  ],
+  "ok": true
+ },
+ "M04|FRRouting/frr": {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "repo": "FRRouting/frr",
+  "term": "cross-validation",
+  "total": 7,
+  "items": [
+   {
+    "num": 23917,
+    "title": "ripd: validate indirect next hops against dead and off-interface routes",
+    "created": "2026-10-23"
+   },
+   {
+    "num": 22068,
+    "title": "bfdd, lib: extend ZEBRA_BFD_DEST_REGISTER with SBFD/SRv6 fields",
+    "created": "2026-05-26"
+   },
+   {
+    "num": 21098,
+    "title": "bgpd: improve packet parsing for EVPN and ENCAP/VNC",
+    "created": "2026-03-11"
+   }
+  ],
+  "ok": true
+ },
+ "M04|librenms/librenms": {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "repo": "librenms/librenms",
+  "term": "cross-validation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M04|ytti/oxidized": {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "repo": "ytti/oxidized",
+  "term": "cross-validation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M04|ktbyers/netmiko": {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "repo": "ktbyers/netmiko",
+  "term": "cross-validation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M04|napalm-automation/napalm": {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "repo": "napalm-automation/napalm",
+  "term": "cross-validation",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M04|batfish/batfish": {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "repo": "batfish/batfish",
+  "term": "cross-validation",
+  "total": 3,
+  "items": [
+   {
+    "num": 10113,
+    "title": "Arista EVPN: Issue multiple evpn import/export route-targets as collections instead of single string",
+    "created": "2026-07-21"
+   },
+   {
+    "num": 10072,
+    "title": "feat(juniper): extract syslog host and file attributes",
+    "created": "2026-07-13"
+   },
+   {
+    "num": 10019,
+    "title": "Non-transitive extended communities are not stripped on eBGP advertisement",
+    "created": "2026-06-26"
+   }
+  ],
+  "ok": true
+ },
+ "M11|openwrt/openwrt": {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "repo": "openwrt/openwrt",
+  "term": "data plane verification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M11|sonic-net/sonic-buildimage": {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "data plane verification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M11|FRRouting/frr": {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "repo": "FRRouting/frr",
+  "term": "data plane verification",
+  "total": 1,
+  "items": [
+   {
+    "num": 22343,
+    "title": "tests: add topotest for L3VNI in default VRF",
+    "created": "2026-06-12"
+   }
+  ],
+  "ok": true
+ },
+ "M11|librenms/librenms": {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "repo": "librenms/librenms",
+  "term": "data plane verification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M11|ytti/oxidized": {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "repo": "ytti/oxidized",
+  "term": "data plane verification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M11|ktbyers/netmiko": {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "repo": "ktbyers/netmiko",
+  "term": "data plane verification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M11|napalm-automation/napalm": {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "repo": "napalm-automation/napalm",
+  "term": "data plane verification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M11|batfish/batfish": {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "repo": "batfish/batfish",
+  "term": "data plane verification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M38|openwrt/openwrt": {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "repo": "openwrt/openwrt",
+  "term": "unobservable state",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M38|sonic-net/sonic-buildimage": {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "unobservable state",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M38|FRRouting/frr": {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "repo": "FRRouting/frr",
+  "term": "unobservable state",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M38|librenms/librenms": {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "repo": "librenms/librenms",
+  "term": "unobservable state",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M38|ytti/oxidized": {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "repo": "ytti/oxidized",
+  "term": "unobservable state",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M38|ktbyers/netmiko": {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "repo": "ktbyers/netmiko",
+  "term": "unobservable state",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M38|napalm-automation/napalm": {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "repo": "napalm-automation/napalm",
+  "term": "unobservable state",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M38|batfish/batfish": {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "repo": "batfish/batfish",
+  "term": "unobservable state",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M14|openwrt/openwrt": {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "repo": "openwrt/openwrt",
+  "term": "packet misclassification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M14|sonic-net/sonic-buildimage": {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "packet misclassification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M14|FRRouting/frr": {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "repo": "FRRouting/frr",
+  "term": "packet misclassification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M14|librenms/librenms": {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "repo": "librenms/librenms",
+  "term": "packet misclassification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M14|ytti/oxidized": {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "repo": "ytti/oxidized",
+  "term": "packet misclassification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M14|ktbyers/netmiko": {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "repo": "ktbyers/netmiko",
+  "term": "packet misclassification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M14|napalm-automation/napalm": {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "repo": "napalm-automation/napalm",
+  "term": "packet misclassification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M14|batfish/batfish": {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "repo": "batfish/batfish",
+  "term": "packet misclassification",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M34|openwrt/openwrt": {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "repo": "openwrt/openwrt",
+  "term": "timeout handling",
+  "total": 12,
+  "items": [
+   {
+    "num": 12143,
+    "title": " Bananapi BPI R3 periodic disconnect all (mtk_soc_eth: transmit queue 3 timed out)",
+    "created": "2023-03-09"
+   },
+   {
+    "num": 2588,
+    "title": "ramips: add support for Dlink DIR-878 A1",
+    "created": "2019-12-04"
+   },
+   {
+    "num": 26013,
+    "title": "realtek: proper L3 hardware offloading with multiple techniques",
+    "created": "2026-10-19"
+   }
+  ],
+  "ok": true
+ },
+ "M34|sonic-net/sonic-buildimage": {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "timeout handling",
+  "total": 24,
+  "items": [
+   {
+    "num": 30032,
+    "title": "dhcp_dos_logger: use Unix sockets for local Redis",
+    "created": "2026-10-08"
+   },
+   {
+    "num": 29494,
+    "title": "Bug: [CMIS] Decommission retry loops when module rejects AppSel 0 (Lumentum optic)",
+    "created": "2026-09-11"
+   },
+   {
+    "num": 29491,
+    "title": "[sonic-ctrmgrd]: Harden Kubernetes command execution",
+    "created": "2026-09-11"
+   }
+  ],
+  "ok": true
+ },
+ "M34|FRRouting/frr": {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "repo": "FRRouting/frr",
+  "term": "timeout handling",
+  "total": 5,
+  "items": [
+   {
+    "num": 22948,
+    "title": "mgmtd, grpc: Get, Execute, Subscribe and Commit support (rebase of #22158)",
+    "created": "2026-08-06"
+   },
+   {
+    "num": 23008,
+    "title": "bgpd: bmp: fix slower collectors missing route-monitoring updates",
+    "created": "2026-08-10"
+   },
+   {
+    "num": 20597,
+    "title": "update munet to latest version 0.17.2",
+    "created": "2026-01-26"
+   }
+  ],
+  "ok": true
+ },
+ "M34|librenms/librenms": {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "repo": "librenms/librenms",
+  "term": "timeout handling",
+  "total": 2,
+  "items": [
+   {
+    "num": 19421,
+    "title": "Bump axios from 1.13.5 to 1.15.0",
+    "created": "2026-04-10"
+   },
+   {
+    "num": 10219,
+    "title": "WIP Services Autodiscovery Update",
+    "created": "2019-05-13"
+   }
+  ],
+  "ok": true
+ },
+ "M34|ytti/oxidized": {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "repo": "ytti/oxidized",
+  "term": "timeout handling",
+  "total": 2,
+  "items": [
+   {
+    "num": 1044,
+    "title": "Timeout behaviour",
+    "created": "2017-09-27"
+   },
+   {
+    "num": 2296,
+    "title": "Telnet expect model function broken",
+    "created": "2021-04-27"
+   }
+  ],
+  "ok": true
+ },
+ "M34|ktbyers/netmiko": {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "repo": "ktbyers/netmiko",
+  "term": "timeout handling",
+  "total": 130,
+  "items": [
+   {
+    "num": 172,
+    "title": "SSH Proxy support not working",
+    "created": "2016-02-02"
+   },
+   {
+    "num": 2282,
+    "title": "Netmiko4 timeout specification",
+    "created": "2021-05-26"
+   },
+   {
+    "num": 3419,
+    "title": "Inconsistent execution of script error:paramiko.buffered_pipe.PipeTimeout",
+    "created": "2024-04-25"
+   }
+  ],
+  "ok": true
+ },
+ "M34|napalm-automation/napalm": {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "repo": "napalm-automation/napalm",
+  "term": "timeout handling",
+  "total": 4,
+  "items": [
+   {
+    "num": 1128,
+    "title": "Latest 2.5.0 failing to connect IOSXR devices with Netmiko 3",
+    "created": "2020-02-19"
+   },
+   {
+    "num": 963,
+    "title": "Exception not caught \"Socket exception: Connection reset by peer (104)\"",
+    "created": "2019-04-17"
+   },
+   {
+    "num": 1211,
+    "title": "nxos_ssh devices with Netmiko 3.1 fail on is_alive() call",
+    "created": "2020-05-12"
+   }
+  ],
+  "ok": true
+ },
+ "M34|batfish/batfish": {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "repo": "batfish/batfish",
+  "term": "timeout handling",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M21|openwrt/openwrt": {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "repo": "openwrt/openwrt",
+  "term": "OID mismatch",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M21|sonic-net/sonic-buildimage": {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "OID mismatch",
+  "total": 1,
+  "items": [
+   {
+    "num": 29554,
+    "title": "Bug: [swss] P4orch VerifyIpNextHopStateTest fails when sonic-swss is built with SONIC_PROFILING_ON",
+    "created": "2026-09-15"
+   }
+  ],
+  "ok": true
+ },
+ "M21|FRRouting/frr": {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "repo": "FRRouting/frr",
+  "term": "OID mismatch",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M21|librenms/librenms": {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "repo": "librenms/librenms",
+  "term": "OID mismatch",
+  "total": 1,
+  "items": [
+   {
+    "num": 20693,
+    "title": "Add sensors for Cisco Device Level Rings ",
+    "created": "2026-10-01"
+   }
+  ],
+  "ok": true
+ },
+ "M21|ytti/oxidized": {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "repo": "ytti/oxidized",
+  "term": "OID mismatch",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M21|ktbyers/netmiko": {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "repo": "ktbyers/netmiko",
+  "term": "OID mismatch",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M21|napalm-automation/napalm": {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "repo": "napalm-automation/napalm",
+  "term": "OID mismatch",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M21|batfish/batfish": {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "repo": "batfish/batfish",
+  "term": "OID mismatch",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M09|openwrt/openwrt": {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "repo": "openwrt/openwrt",
+  "term": "slow path",
+  "total": 22,
+  "items": [
+   {
+    "num": 24038,
+    "title": "generic: add nft_flow_offload bridge offload",
+    "created": "2026-07-02"
+   },
+   {
+    "num": 24806,
+    "title": "qualcommax: qca_ppe: host-driven PPE offload (routing, NAT, PPPoE, shaping, QoS, classification)",
+    "created": "2026-08-20"
+   },
+   {
+    "num": 22970,
+    "title": "mediatek: drop v6.12 and default to v6.18",
+    "created": "2026-04-17"
+   }
+  ],
+  "ok": true
+ },
+ "M09|sonic-net/sonic-buildimage": {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "slow path",
+  "total": 8,
+  "items": [
+   {
+    "num": 27751,
+    "title": "Bug: sonic-sairedis: libsai-dev missing from $(LIBSAIREDIS)_DEPENDS, races libsairedis ./configure u",
+    "created": "2026-06-07"
+   },
+   {
+    "num": 4479,
+    "title": "ICMPv6 type2 (A Packet Too Big) is not sent by SONiC switch in response to a packet that it cannot f",
+    "created": "2020-04-24"
+   },
+   {
+    "num": 28673,
+    "title": "[action] [PR:27739] [sflow] Fix hsflowd db_addWriteCB recursion / stack overflow on high-port-count ",
+    "created": "2026-07-29"
+   }
+  ],
+  "ok": true
+ },
+ "M09|FRRouting/frr": {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "repo": "FRRouting/frr",
+  "term": "slow path",
+  "total": 12,
+  "items": [
+   {
+    "num": 22643,
+    "title": "bfdd: bfd admin shut periodic tx",
+    "created": "2026-07-13"
+   },
+   {
+    "num": 20591,
+    "title": "zebra: skip route updates when link goes down",
+    "created": "2026-01-24"
+   },
+   {
+    "num": 23103,
+    "title": "bfdd: initialize DesiredMinTxInterval to at least 1 second",
+    "created": "2026-08-21"
+   }
+  ],
+  "ok": true
+ },
+ "M09|librenms/librenms": {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "repo": "librenms/librenms",
+  "term": "slow path",
+  "total": 2,
+  "items": [
+   {
+    "num": 17041,
+    "title": "Add device_stats table to store device related data for alerting",
+    "created": "2025-01-23"
+   },
+   {
+    "num": 14043,
+    "title": "Add new executable finder",
+    "created": "2022-06-14"
+   }
+  ],
+  "ok": true
+ },
+ "M09|ytti/oxidized": {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "repo": "ytti/oxidized",
+  "term": "slow path",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M09|ktbyers/netmiko": {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "repo": "ktbyers/netmiko",
+  "term": "slow path",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M09|napalm-automation/napalm": {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "repo": "napalm-automation/napalm",
+  "term": "slow path",
+  "total": 3,
+  "items": [
+   {
+    "num": 573,
+    "title": "Issue with BGP neighbors status",
+    "created": "2017-12-04"
+   },
+   {
+    "num": 603,
+    "title": "Track BGP state to report is_up",
+    "created": "2017-12-25"
+   },
+   {
+    "num": 572,
+    "title": "Error with parsing BGP summary ipv6 on napalm_ios ",
+    "created": "2017-12-04"
+   }
+  ],
+  "ok": true
+ },
+ "M09|batfish/batfish": {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "repo": "batfish/batfish",
+  "term": "slow path",
+  "total": 2,
+  "items": [
+   {
+    "num": 9943,
+    "title": "docs: add developer guide for the symbolic routing policy engine",
+    "created": "2026-05-15"
+   },
+   {
+    "num": 3049,
+    "title": "pipeline.sh: combine multiple fast maven steps",
+    "created": "2019-01-29"
+   }
+  ],
+  "ok": true
+ },
+ "M23|openwrt/openwrt": {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "repo": "openwrt/openwrt",
+  "term": "observability truth",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M23|sonic-net/sonic-buildimage": {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "observability truth",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M23|FRRouting/frr": {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "repo": "FRRouting/frr",
+  "term": "observability truth",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M23|librenms/librenms": {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "repo": "librenms/librenms",
+  "term": "observability truth",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M23|ytti/oxidized": {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "repo": "ytti/oxidized",
+  "term": "observability truth",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M23|ktbyers/netmiko": {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "repo": "ktbyers/netmiko",
+  "term": "observability truth",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M23|napalm-automation/napalm": {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "repo": "napalm-automation/napalm",
+  "term": "observability truth",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M23|batfish/batfish": {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "repo": "batfish/batfish",
+  "term": "observability truth",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M17|openwrt/openwrt": {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "repo": "openwrt/openwrt",
+  "term": "self-healing failure",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M17|sonic-net/sonic-buildimage": {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "self-healing failure",
+  "total": 1,
+  "items": [
+   {
+    "num": 29056,
+    "title": "Backport FRR commits to fix aggregate route counter",
+    "created": "2026-08-17"
+   }
+  ],
+  "ok": true
+ },
+ "M17|FRRouting/frr": {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "repo": "FRRouting/frr",
+  "term": "self-healing failure",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M17|librenms/librenms": {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "repo": "librenms/librenms",
+  "term": "self-healing failure",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M17|ytti/oxidized": {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "repo": "ytti/oxidized",
+  "term": "self-healing failure",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M17|ktbyers/netmiko": {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "repo": "ktbyers/netmiko",
+  "term": "self-healing failure",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M17|napalm-automation/napalm": {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "repo": "napalm-automation/napalm",
+  "term": "self-healing failure",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M17|batfish/batfish": {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "repo": "batfish/batfish",
+  "term": "self-healing failure",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M35|openwrt/openwrt": {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "repo": "openwrt/openwrt",
+  "term": "long-tail incident",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M35|sonic-net/sonic-buildimage": {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "long-tail incident",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M35|FRRouting/frr": {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "repo": "FRRouting/frr",
+  "term": "long-tail incident",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M35|librenms/librenms": {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "repo": "librenms/librenms",
+  "term": "long-tail incident",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M35|ytti/oxidized": {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "repo": "ytti/oxidized",
+  "term": "long-tail incident",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M35|ktbyers/netmiko": {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "repo": "ktbyers/netmiko",
+  "term": "long-tail incident",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M35|napalm-automation/napalm": {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "repo": "napalm-automation/napalm",
+  "term": "long-tail incident",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M35|batfish/batfish": {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "repo": "batfish/batfish",
+  "term": "long-tail incident",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M32|openwrt/openwrt": {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "repo": "openwrt/openwrt",
+  "term": "stale pointer",
+  "total": 12,
+  "items": [
+   {
+    "num": 19903,
+    "title": "leds: add \"network\" LED trigger (lan/wan/wlan)",
+    "created": "2025-08-30"
+   },
+   {
+    "num": 24435,
+    "title": "mediatek: MERCUSYS MR85X: add OpenWrt UBI layout and convert to DSA",
+    "created": "2026-07-26"
+   },
+   {
+    "num": 24417,
+    "title": "qualcommax: ath11k: restore missing dma_rmb() in RX completion",
+    "created": "2026-07-25"
+   }
+  ],
+  "ok": true
+ },
+ "M32|sonic-net/sonic-buildimage": {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "stale pointer",
+  "total": 7,
+  "items": [
+   {
+    "num": 28194,
+    "title": "Bug: Orchagent Bulker Dangling Pointers After ZMQ Timeout (ASAN)",
+    "created": "2026-07-01"
+   },
+   {
+    "num": 27683,
+    "title": "[EVPN-MH] Add FRR bgpd crash fix patch for EVPN MH path handling",
+    "created": "2026-06-02"
+   },
+   {
+    "num": 25839,
+    "title": "[FRR]: Upgrade FRR to version 10.5.1",
+    "created": "2026-03-02"
+   }
+  ],
+  "ok": true
+ },
+ "M32|FRRouting/frr": {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "repo": "FRRouting/frr",
+  "term": "stale pointer",
+  "total": 86,
+  "items": [
+   {
+    "num": 23638,
+    "title": "ospfd: unlink external info from its aggregate before freeing",
+    "created": "2026-10-10"
+   },
+   {
+    "num": 21785,
+    "title": " pimd: fix stale pointer during shutdown after VRF move",
+    "created": "2026-04-28"
+   },
+   {
+    "num": 23594,
+    "title": "zebra: don't add an L2-VNI on L3-VNI removal while EVPN is disabled",
+    "created": "2026-10-07"
+   }
+  ],
+  "ok": true
+ },
+ "M32|librenms/librenms": {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "repo": "librenms/librenms",
+  "term": "stale pointer",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M32|ytti/oxidized": {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "repo": "ytti/oxidized",
+  "term": "stale pointer",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M32|ktbyers/netmiko": {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "repo": "ktbyers/netmiko",
+  "term": "stale pointer",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M32|napalm-automation/napalm": {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "repo": "napalm-automation/napalm",
+  "term": "stale pointer",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M32|batfish/batfish": {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "repo": "batfish/batfish",
+  "term": "stale pointer",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M12|openwrt/openwrt": {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "repo": "openwrt/openwrt",
+  "term": "buffer drop",
+  "total": 19,
+  "items": [
+   {
+    "num": 16547,
+    "title": "generic, x86: Add support for 6.12 kernel version",
+    "created": "2024-09-30"
+   },
+   {
+    "num": 24178,
+    "title": "[RFC] qualcommbe: add PPE offload support",
+    "created": "2026-07-11"
+   },
+   {
+    "num": 13802,
+    "title": "hostapd: fix OWE association with mbedtls",
+    "created": "2023-10-26"
+   }
+  ],
+  "ok": true
+ },
+ "M12|sonic-net/sonic-buildimage": {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "buffer drop",
+  "total": 64,
+  "items": [
+   {
+    "num": 5231,
+    "title": "[sonic-swss] Update submodule",
+    "created": "2020-08-21"
+   },
+   {
+    "num": 29335,
+    "title": "Bug: [dualtor][vpp] Standby mux port reports ~99% RX_DRP — ACL policy denies are charged to the inte",
+    "created": "2026-09-03"
+   },
+   {
+    "num": 28015,
+    "title": "portstat/show interfaces counters returns N/A on all ports (Broadcom TD3, 202605): unsupported DOT3_",
+    "created": "2026-06-22"
+   }
+  ],
+  "ok": true
+ },
+ "M12|FRRouting/frr": {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "repo": "FRRouting/frr",
+  "term": "buffer drop",
+  "total": 6,
+  "items": [
+   {
+    "num": 23245,
+    "title": "isisd: Fix memory leak in MPLS-TE interface display",
+    "created": "2026-09-03"
+   },
+   {
+    "num": 21211,
+    "title": "bgpd: Check if we are not overusing error_data buffer when unknown cap received",
+    "created": "2026-03-17"
+   },
+   {
+    "num": 21456,
+    "title": "bgpd: Use `%pI4/%pI6` formatters in BGP-LS NLRI display",
+    "created": "2026-04-03"
+   }
+  ],
+  "ok": true
+ },
+ "M12|librenms/librenms": {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "repo": "librenms/librenms",
+  "term": "buffer drop",
+  "total": 4,
+  "items": [
+   {
+    "num": 19198,
+    "title": "WIP: add new application for systemd-timesyncd",
+    "created": "2026-03-10"
+   },
+   {
+    "num": 13352,
+    "title": "New sensors for huawei vrp <tested on NE8000 platform>",
+    "created": "2021-10-10"
+   },
+   {
+    "num": 8777,
+    "title": "Issue with loading Correct Mibs",
+    "created": "2018-05-28"
+   }
+  ],
+  "ok": true
+ },
+ "M12|ytti/oxidized": {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "repo": "ytti/oxidized",
+  "term": "buffer drop",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M12|ktbyers/netmiko": {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "repo": "ktbyers/netmiko",
+  "term": "buffer drop",
+  "total": 4,
+  "items": [
+   {
+    "num": 2451,
+    "title": "send_config_set() should cmd_verify auto disable if there is a newline embedded in the commands",
+    "created": "2021-08-18"
+   },
+   {
+    "num": 1714,
+    "title": "HP Comware doesn't support a \"terminal width\" setting",
+    "created": "2020-05-03"
+   },
+   {
+    "num": 1562,
+    "title": "Palo Alto enable \"set cli scripting-mode on\" by default in session_preparation",
+    "created": "2020-02-06"
+   }
+  ],
+  "ok": true
+ },
+ "M12|napalm-automation/napalm": {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "repo": "napalm-automation/napalm",
+  "term": "buffer drop",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M12|batfish/batfish": {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "repo": "batfish/batfish",
+  "term": "buffer drop",
+  "total": 3,
+  "items": [
+   {
+    "num": 9633,
+    "title": "Junos: add parsing for class-of-service scheduler options",
+    "created": "2025-11-22"
+   },
+   {
+    "num": 9624,
+    "title": "Junos: add parsing for class-of-service scheduler options",
+    "created": "2025-11-20"
+   },
+   {
+    "num": 9623,
+    "title": "Junos: add parsing for class-of-service scheduler options",
+    "created": "2025-11-20"
+   }
+  ],
+  "ok": true
+ },
+ "M18|openwrt/openwrt": {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "repo": "openwrt/openwrt",
+  "term": "link flap",
+  "total": 36,
+  "items": [
+   {
+    "num": 22563,
+    "title": "generic: net: phy: realtek: add 5G and 10G PHY support",
+    "created": "2026-03-22"
+   },
+   {
+    "num": 17351,
+    "title": "Periodic link down+up since 24.10.0-rc*",
+    "created": "2024-12-23"
+   },
+   {
+    "num": 24872,
+    "title": "airoha: grow the small RX rings to stop hw DMA past the ring",
+    "created": "2026-08-23"
+   }
+  ],
+  "ok": true
+ },
+ "M18|sonic-net/sonic-buildimage": {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "link flap",
+  "total": 87,
+  "items": [
+   {
+    "num": 24013,
+    "title": "Bug: zebra crash observed in link flap testing",
+    "created": "2025-09-16"
+   },
+   {
+    "num": 24880,
+    "title": "Bug: zebra is killed OOM after receiving a lot of link flapping notifications",
+    "created": "2025-12-17"
+   },
+   {
+    "num": 23121,
+    "title": "Bug: sonic-mgmt test_cont_link_flap.py::TestContLinkFlap fails after the FRR upgrade to 10.3",
+    "created": "2025-06-27"
+   }
+  ],
+  "ok": true
+ },
+ "M18|FRRouting/frr": {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "repo": "FRRouting/frr",
+  "term": "link flap",
+  "total": 54,
+  "items": [
+   {
+    "num": 23032,
+    "title": "zebra, lib, bgpd: BGP unnumbered on multi-access segments (ipv6 nd multi-access)",
+    "created": "2026-08-14"
+   },
+   {
+    "num": 23826,
+    "title": "zebra: do not keep an SR policy pointer to a freed LSP",
+    "created": "2026-10-21"
+   },
+   {
+    "num": 23747,
+    "title": "zebra: force NHG reinstall when kernel dropped nexthop on ifdown",
+    "created": "2026-10-16"
+   }
+  ],
+  "ok": true
+ },
+ "M18|librenms/librenms": {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "repo": "librenms/librenms",
+  "term": "link flap",
+  "total": 1,
+  "items": [
+   {
+    "num": 20080,
+    "title": "False `ifOperStatus: down -> up` events on Ubiquiti airFiber 11 (`airos-af`)",
+    "created": "2026-07-13"
+   }
+  ],
+  "ok": true
+ },
+ "M18|ytti/oxidized": {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "repo": "ytti/oxidized",
+  "term": "link flap",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M18|ktbyers/netmiko": {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "repo": "ktbyers/netmiko",
+  "term": "link flap",
+  "total": 1,
+  "items": [
+   {
+    "num": 1682,
+    "title": "PipeTimeout on script while same command works on nexus device",
+    "created": "2020-04-20"
+   }
+  ],
+  "ok": true
+ },
+ "M18|napalm-automation/napalm": {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "repo": "napalm-automation/napalm",
+  "term": "link flap",
+  "total": 2,
+  "items": [
+   {
+    "num": 1966,
+    "title": "Use `LastStateTransitionTime` to populate `last_flapped` for `get_interfaces()` in IOS-XR",
+    "created": "2023-06-16"
+   },
+   {
+    "num": 759,
+    "title": "Fix issue with LLDP neighbors when remote device lacks system name on older IOS version",
+    "created": "2018-07-03"
+   }
+  ],
+  "ok": true
+ },
+ "M18|batfish/batfish": {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "repo": "batfish/batfish",
+  "term": "link flap",
+  "total": 1,
+  "items": [
+   {
+    "num": 8880,
+    "title": "Junos: add parsing for  `set interfaces damping suppress` command",
+    "created": "2023-12-14"
+   }
+  ],
+  "ok": true
+ },
+ "M06|openwrt/openwrt": {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "repo": "openwrt/openwrt",
+  "term": "misdiagnosis",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M06|sonic-net/sonic-buildimage": {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "misdiagnosis",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M06|FRRouting/frr": {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "repo": "FRRouting/frr",
+  "term": "misdiagnosis",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M06|librenms/librenms": {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "repo": "librenms/librenms",
+  "term": "misdiagnosis",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M06|ytti/oxidized": {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "repo": "ytti/oxidized",
+  "term": "misdiagnosis",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M06|ktbyers/netmiko": {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "repo": "ktbyers/netmiko",
+  "term": "misdiagnosis",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M06|napalm-automation/napalm": {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "repo": "napalm-automation/napalm",
+  "term": "misdiagnosis",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M06|batfish/batfish": {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "repo": "batfish/batfish",
+  "term": "misdiagnosis",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M30|openwrt/openwrt": {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "repo": "openwrt/openwrt",
+  "term": "in-memory datastore inspection",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M30|sonic-net/sonic-buildimage": {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "repo": "sonic-net/sonic-buildimage",
+  "term": "in-memory datastore inspection",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M30|FRRouting/frr": {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "repo": "FRRouting/frr",
+  "term": "in-memory datastore inspection",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M30|librenms/librenms": {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "repo": "librenms/librenms",
+  "term": "in-memory datastore inspection",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M30|ytti/oxidized": {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "repo": "ytti/oxidized",
+  "term": "in-memory datastore inspection",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M30|ktbyers/netmiko": {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "repo": "ktbyers/netmiko",
+  "term": "in-memory datastore inspection",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M30|napalm-automation/napalm": {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "repo": "napalm-automation/napalm",
+  "term": "in-memory datastore inspection",
+  "total": 0,
+  "items": [],
+  "ok": true
+ },
+ "M30|batfish/batfish": {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "repo": "batfish/batfish",
+  "term": "in-memory datastore inspection",
+  "total": 0,
+  "items": [],
+  "ok": true
+ }
+}

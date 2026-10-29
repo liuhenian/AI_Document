@@ -1,0 +1,10 @@
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+System Name                 Local Intf          Port ID                          Capability   Aging-time
+WS7816C                     Gi1/0/1             105f.024b.a7e5                   B, R         1minutes 49seconds 
+14F-18排                    Gi1/0/1             9cce.88d7.0e36                   B, R         1minutes 35seconds 
+Unknown                     Gi1/0/1             7085.c460.ebd2                                49minutes 33seconds 
+
+Total entries displayed: 3
+Ruijie#echo

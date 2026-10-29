@@ -1,0 +1,49 @@
+------------------------------------------
+               Efmp  counter              
+------------------------------------------
+  RX           : 12745749
+  RX Speed     : 13 pps (Max 1161 pps at Oct 26 2026 10:34:56.084)
+  TX           : 2683087
+  TX Speed     : 2 pps (Max 585 pps at Oct 13 2026 18:10:49.629)
+  PARSER-STAGE:
+    RESV         : 10834644
+  FRAG-REASM-STAGE:
+  FW-STAGE:
+    RECEIVE      : 1911108
+    RESV         : 1911108
+  SKIP-STAGE:
+    RECEIVE      : 7
+    DISP         : 7
+  BCAST-STAGE:
+  MCAST-STAGE:
+  FRMPF-STAGE:
+    FRMPF        : 2683087
+    DISP         : 2683080
+    LOST         : 7
+  RSVD-STAGE:
+    RECEIVE      : 12745750
+    TOPF         : 12745652
+  ENCAP-STAGE:
+  DISPATCH-STAGE:
+    RECEIVE      : 2683087
+  VSU-STAGE:
+  FRAG-STAGE:
+  TOPF-STAGE:
+    TOPF AF PACKET: 10834644
+    TOPF TCPIPv4 : 1911108
+  TOPF-EXCEED-QUEUE-DROP:
+  AF-PACKET-QUE-INFO:
+  IP-PROXY-QUE-INFO:
+  SERV-RSVD-CNTS:
+  SERV-DROP-CNTS:
+  SERV-LOST-CNTS:
+    IN-SERV      : 7
+      L2 ENGINE:
+      IP ENGINE:
+        IP REF: 7
+      IPV6 ENGINE:
+      WLAN ENGINE:
+      MPLS ENGINE:
+      L2 MPLS ENGINE:
+--------------------End---------------------
+Ruijie#echo

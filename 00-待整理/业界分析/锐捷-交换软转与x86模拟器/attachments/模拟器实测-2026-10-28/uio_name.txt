@@ -1,0 +1,13 @@
+$i/name 2>/dev/null; done
+uio0: uio_pci_generic
+uio1: uio_pci_generic
+uio2: uio_pci_generic
+uio3: uio_pci_generic
+uio4: uio_pci_generic
+uio5: uio_pci_generic
+uio6: uio_pci_generic
+uio7: uio_pci_generic
+uio8: uio_pci_generic
+uio9: uio_pci_generic
+~ # 
+~ # echo

@@ -1,0 +1,8 @@
+kpageflags
+---
+ef_buff
+ef_msg_agent
+nf_defrag_ipv4
+nf_defrag_ipv6
+~ # 
+~ # echo

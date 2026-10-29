@@ -1,0 +1,10 @@
+Switch DHCP snooping status                     :   DISABLE
+DHCP snooping verify hardware address status    :   DISABLE
+DHCP snooping database write-delay time         :   0 seconds
+DHCP snooping option 82 status                  :   DISABLE
+DHCP snooping Support bootp bind status         :   DISABLE
+
+Interface                       Trusted         Rate limit (pps)
+------------------------        -------         ----------------
+Default                         No              unlimited       
+Ruijie#echo

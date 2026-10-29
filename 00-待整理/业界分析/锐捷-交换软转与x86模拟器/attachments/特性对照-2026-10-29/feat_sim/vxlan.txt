@@ -1,0 +1,4 @@
+VXLAN Total Count: 0
+VXLAN Capacity   : 8000
+
+Ruijie#echo

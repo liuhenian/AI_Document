@@ -1,0 +1,31 @@
+Index(dec):1 (hex):1
+GigabitEthernet 0/0 is UP  , line protocol is UP    
+  Hardware is GigabitEthernet, address is 5254.009e.f21b (bia 5254.009e.f21b)
+  Interface address is: 20.15.168.10/24
+  ARP type: ARPA, ARP Timeout: 3600 seconds
+  Interface IPv6 address is:
+    15::20:15:168:10/64
+    fe80::5054:ff:fe9e:f21b/64
+  MTU 1500 bytes, BW 1000000 Kbit
+  Max frame size 1526 bytes
+  Encapsulation protocol is Ethernet-II, loopback not set
+  Keepalive interval is 10 sec , set
+  Carrier delay is 2 sec
+  Ethernet attributes:
+    Last link state change time: 2026-10-10 14:54:24
+    Time duration since last link state change: 17 days, 18 hours, 44 minutes, 53 seconds
+    Priority is 0
+    Medium-type is Copper
+    Admin duplex mode is AUTO, oper duplex is Full
+    Admin speed is AUTO, oper speed is 1000M
+  Rxload is 1/255, Txload is 1/255
+  Input peak rate: 15433364 bits/sec, at 2026-10-10 17:51:28
+  Output peak rate: 436897 bits/sec, at 2026-10-10 17:51:28
+   10 seconds input rate 1635 bits/sec, 2 packets/sec
+   10 seconds output rate 6513 bits/sec, 2 packets/sec
+    580904 packets input, 111070311 bytes, 0 no buffer, 0 dropped
+    Received 0 broadcasts, 0 runts, 0 giants
+    0 input errors, 0 CRC, 0 frame, 0 overrun, 0 abort
+    113416 packets output, 20845712 bytes, 0 underruns, 0 no buffer, 0 dropped
+    0 output errors, 0 collisions, 0 interface resets
+Ruijie#echo

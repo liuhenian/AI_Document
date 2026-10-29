@@ -1,0 +1,15 @@
+ls /dev | grep -i -E 'uio|vfio'; echo '---'; ps -ef | grep -i -E 'l2fwd|dpdk
+|kni' | grep -v grep
+uio0
+uio1
+uio2
+uio3
+uio4
+uio5
+uio6
+uio7
+uio8
+uio9
+---
+~ # 
+~ # echo

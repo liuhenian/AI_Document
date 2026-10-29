@@ -1,0 +1,248 @@
+{
+ "vsu_role": {
+  "cmd": "show switch virtual role",
+  "exists": true,
+  "len": 463,
+  "head": "Switch_id     Domain_id     Priority     Position     Status     Role          Description                       | -------"
+ },
+ "vsu_config": {
+  "cmd": "show switch virtual config",
+  "exists": true,
+  "len": 453,
+  "head": "switch_id: 1 (mac: 00d0.f822.3595) | ! | switch virtual domain 1 | ! | switch 1 | switch 1 priority 200 | ! | port-member interface Te"
+ },
+ "redundancy": {
+  "cmd": "show redundancy",
+  "exists": true,
+  "len": 262,
+  "head": "Redundancy switching function: enabled | Redundancy role: master | Redundancy state: batch | Auto-sync time-period: 3600 s |  | Re"
+ },
+ "member": {
+  "cmd": "show member",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "span": {
+  "cmd": "show monitor session all",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "span_src": {
+  "cmd": "show monitor session 1",
+  "exists": true,
+  "len": 11,
+  "head": "Ruijie#echo"
+ },
+ "erspan": {
+  "cmd": "show monitor erspan session 1",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "sflow": {
+  "cmd": "show sflow",
+  "exists": true,
+  "len": 537,
+  "head": "sflow datagram version 5 | Global information: | Agent IP: NULL | sflow counter interval:30 | sflow flow max-header:64 | sflow sam"
+ },
+ "sflow_agent": {
+  "cmd": "show sflow agent",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "ipfix": {
+  "cmd": "show ipfix",
+  "exists": false,
+  "len": 34,
+  "head": "% Incomplete command. |  | Ruijie#echo"
+ },
+ "mlag": {
+  "cmd": "show mlag brief",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "poe": {
+  "cmd": "show poe",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "env": {
+  "cmd": "show environment",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "transceiver": {
+  "cmd": "show interfaces transceiver",
+  "exists": true,
+  "len": 2960,
+  "head": "========Interface TenGigabitEthernet 1/0/49======== | Interface TenGigabitEthernet 1/0/49 : the transceiver is absent! |  | =="
+ },
+ "ddm": {
+  "cmd": "show interfaces transceiver diagnosis",
+  "exists": true,
+  "len": 2292,
+  "head": "========Interface TenGigabitEthernet 1/0/49======== | Interface TenGigabitEthernet 1/0/49 : the transceiver is absent! |  | =="
+ },
+ "vlan": {
+  "cmd": "show vlan brief",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "stp": {
+  "cmd": "show spanning-tree summary",
+  "exists": true,
+  "len": 45,
+  "head": "No spanning tree instance exists. | Ruijie#echo"
+ },
+ "lacp": {
+  "cmd": "show link-aggregation summary",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "lldp": {
+  "cmd": "show lldp neighbors",
+  "exists": true,
+  "len": 635,
+  "head": "Capability codes: |     (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device |     (W) WLAN Access Point, (P) Repe"
+ },
+ "erps": {
+  "cmd": "show erps",
+  "exists": true,
+  "len": 105,
+  "head": "ERPS Information | Global Status               : Disabled | Link monitored by           : Not Oam | Ruijie#echo"
+ },
+ "mac": {
+  "cmd": "show mac-address-table",
+  "exists": true,
+  "len": 181,
+  "head": "Vlan        MAC Address          Type     Interface                      Live Time | ----------  -------------------- ----"
+ },
+ "route": {
+  "cmd": "show ip route summary",
+  "exists": true,
+  "len": 837,
+  "head": "Codes:  NORMAL - Normal route  ECMP - ECMP route  FRR - Fast-Reroute route |  |   Entries: 3, based on route prefixes |  |   Ent"
+ },
+ "ospf": {
+  "cmd": "show ip ospf neighbor",
+  "exists": true,
+  "len": 11,
+  "head": "Ruijie#echo"
+ },
+ "bgp": {
+  "cmd": "show ip bgp summary",
+  "exists": true,
+  "len": 11,
+  "head": "Ruijie#echo"
+ },
+ "acl": {
+  "cmd": "show access-lists",
+  "exists": true,
+  "len": 11,
+  "head": "Ruijie#echo"
+ },
+ "qos": {
+  "cmd": "show qos queuing",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "dot1x": {
+  "cmd": "show dot1x summary",
+  "exists": true,
+  "len": 342,
+  "head": "ID        Username                       MAC            IP               Interface VLAN Auth-State      Backend-state Po"
+ },
+ "dhcp_snp": {
+  "cmd": "show ip dhcp snooping",
+  "exists": true,
+  "len": 509,
+  "head": "Switch DHCP snooping status                     :   DISABLE | DHCP snooping verify hardware address status    :   DISABLE | "
+ },
+ "savi": {
+  "cmd": "show ip source binding",
+  "exists": true,
+  "len": 221,
+  "head": "NO.   MACADDRESS         IPADDRESS       LEASE(SEC)   TYPE          VLAN  INTERFACE | ----- ------------------ -----------"
+ },
+ "cpp": {
+  "cmd": "show cpu-protect summary",
+  "exists": true,
+  "len": 2490,
+  "head": "%cpu port bandwidth: 4500(pps) | Rate(pps)  Drop(pps)  Total         Total Drop   | ---------  ---------  ---------     ----"
+ },
+ "nfpp": {
+  "cmd": "show nfpp",
+  "exists": false,
+  "len": 34,
+  "head": "% Incomplete command. |  | Ruijie#echo"
+ },
+ "vxlan": {
+  "cmd": "show vxlan",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "mpls": {
+  "cmd": "show mpls ldp",
+  "exists": false,
+  "len": 34,
+  "head": "% Incomplete command. |  | Ruijie#echo"
+ },
+ "ipv6": {
+  "cmd": "show ipv6 route summary",
+  "exists": true,
+  "len": 837,
+  "head": "Codes:  NORMAL - Normal route  ECMP - ECMP route  FRR - Fast-Reroute route |  |   Entries: 1, based on route prefixes |  |   Ent"
+ },
+ "slots": {
+  "cmd": "show version slots",
+  "exists": true,
+  "len": 549,
+  "head": "Dev Slot Port Configured Module            Online Module                Software Status |   --- ---- ---- ----------------"
+ },
+ "modules": {
+  "cmd": "show version modules",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "devices": {
+  "cmd": "show devices",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "platform": {
+  "cmd": "show platform",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "efmp": {
+  "cmd": "show efmp",
+  "exists": false,
+  "len": 34,
+  "head": "% Incomplete command. |  | Ruijie#echo"
+ },
+ "ef_so": {
+  "cmd": "show efmp class",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ },
+ "ipv4_acct": {
+  "cmd": "show ip accounting",
+  "exists": false,
+  "len": 54,
+  "head": "^ | % Invalid input detected at '^' marker. |  | Ruijie#echo"
+ }
+}

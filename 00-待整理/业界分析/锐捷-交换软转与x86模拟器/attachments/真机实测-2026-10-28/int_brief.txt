@@ -1,0 +1,6 @@
+Interface                                IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+GigabitEthernet 1/0/1                    10.104.36.146/16     no address           up                     up       
+VLAN 1                                   no address           no address           down                   down     
+Mgmt 1/0                                 192.168.1.200/24     no address           down                   down     
+Mgmt 2/0                                 no address           no address           down                   down     
+Ruijie#echo

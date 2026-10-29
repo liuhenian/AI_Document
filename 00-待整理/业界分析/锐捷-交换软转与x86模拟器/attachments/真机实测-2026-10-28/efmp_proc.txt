@@ -1,0 +1,5 @@
+r '\0' ' '
+
+pid=3178
+/sbin/efmp_frame.elf --log-level=4 ~ # 
+~ # echo

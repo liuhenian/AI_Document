@@ -1,0 +1,15 @@
+IPv6 routing table name is -  Default(0) global scope - 5 entries
+IPv6 routing table default maximum-paths is 256
+Local           2
+Connected       3
+Static          0
+ND              0
+SID             0
+RIP             0
+OSPF            0
+ISIS            0
+BGP             0
+ADROUTE         0
+------------------------
+Total           5
+Ruijie#echo

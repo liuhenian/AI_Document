@@ -1,0 +1,5 @@
+Switch_id     Domain_id     Priority     Position     Status     Role          Description                      
+----------------------------------------------------------------------------------------------------------------
+1(1)          1(1)          200(200)     LOCAL        OK         ACTIVE                                         
+2(2)          1(1)          150(150)     REMOTE       OK         STANDBY                                        
+Ruijie#echo

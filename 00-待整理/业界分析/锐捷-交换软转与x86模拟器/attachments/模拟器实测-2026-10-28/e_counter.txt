@@ -1,0 +1,80 @@
+------------------------------------------
+               Efmp  counter              
+------------------------------------------
+    RX           : 82381264
+    RX Speed     : 4 pps
+    TX           : 2063828
+    TX Speed     : 2 pps
+  PARSER-STAGE:
+    RESV         : 4971664
+    LOST         : 795
+    DROP         : 6502
+    DROP-LINK    : 82
+  FRAG-REASM-STAGE:
+  FW-STAGE:
+    RECEIVE      : 77402303
+    DISP         : 26
+    DROP         : 65173465
+    RESV         : 7032448
+    LOST         : 5196161
+    BCAST        : 208
+  SKIP-STAGE:
+    RECEIVE      : 1633
+    DISP         : 1443
+    RESV         : 176
+    LOST         : 14
+  BCAST-STAGE:
+    BCAST-DROP       : 5
+  MCAST-STAGE:
+    MCAST-RX     : 223
+    MCAST-SERV   : 1624
+  FRMPF-STAGE:
+    FRMPF        : 2062455
+    DISP         : 2062405
+    LOST         : 30
+    BCAST        : 20
+  RSVD-STAGE:
+    RECEIVE      : 12004288
+    TOPF         : 11993875
+    RSVD-DROP    : 10413
+    QUEUE EXCEED : 10413
+  ENCAP-STAGE:
+  DISPATCH-STAGE:
+    RECEIVE      : 2063874
+    DROP         : 46
+    TX INDEX INVAILD    : 20
+  VSU-STAGE:
+  FRAG-STAGE:
+    FRAG_INV_LEN : 4
+  TOPF-STAGE:
+    TOPF AF PACKET: 2573669
+    TOPF TCPIPv4 : 4967535
+    TOPF TCPIPv6 : 2059599
+    TOPF ERROR   : 2393072
+  TOPF-EXCEED-QUEUE-DROP:
+  SERV-RSVD-CNTS:
+  SERV-DROP-CNTS:
+    IN-SERV      : 65173383
+      L2 ENGINE:
+      IP ENGINE:
+        FPM IN: 12068032
+        IP REF: 53099214
+      IPV6 ENGINE:
+        IPV6 REF: 6137
+      WLAN ENGINE:
+      MPLS ENGINE:
+      L2 MPLS ENGINE:
+  SERV-LOST-CNTS:
+    IN-SERV      : 5196205
+      L2 ENGINE:
+        L2 AF PACKET IN: 101
+      IP ENGINE:
+        IP REF: 12
+      IPV6 ENGINE:
+        IPV6 AF PACKET IN: 5196074
+        IPV6 REF: 18
+      WLAN ENGINE:
+      MPLS ENGINE:
+      L2 MPLS ENGINE:
+--------------------End---------------------
+Ruijie#echo

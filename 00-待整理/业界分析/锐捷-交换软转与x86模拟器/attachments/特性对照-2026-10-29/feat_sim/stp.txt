@@ -1,0 +1,17 @@
+Spanning tree enabled protocol mstp
+MST 0 vlans map : ALL
+  Root ID    Priority    32768
+             Address     5254.009e.f21b
+             this bridge is root
+             Hello Time   2 sec  Forward Delay 15 sec  Max Age 20 sec
+
+  Bridge ID  Priority    32768
+             Address     5254.009e.f21b
+             Hello Time   2 sec  Forward Delay 15 sec  Max Age 20 sec
+
+Interface        Role Sts Cost       Prio     OperEdge Type
+---------------- ---- --- ---------- -------- -------- ----------------
+Gi0/7            Desg FWD 20000      128      True     P2p                             
+Gi0/8            Desg FWD 20000      128      True     P2p                             
+
+Ruijie#echo

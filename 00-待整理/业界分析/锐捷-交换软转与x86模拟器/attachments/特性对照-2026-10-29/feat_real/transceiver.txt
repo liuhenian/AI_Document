@@ -1,0 +1,70 @@
+========Interface TenGigabitEthernet 1/0/49========
+Interface TenGigabitEthernet 1/0/49 : the transceiver is absent!
+
+========Interface TenGigabitEthernet 1/0/50========
+Interface TenGigabitEthernet 1/0/50 : the transceiver is absent!
+
+========Interface TenGigabitEthernet 1/0/51========
+Transceiver Type    :  10G-Active-Cable-SFP+
+Connector Type      :  No separable connector
+Mode                :  Multiple mode
+Wavelength(nm)      :  NA
+Transfer Distance   : 
+    Cable
+        -- 5m
+Digital Diagnostic Monitoring  : YES
+Vendor Serial Number           : G1UHBJ2000113   
+
+Current diagnostic parameters[AP:Average Power]:
+Temp(Celsius)   Voltage(V)      Bias(mA)            RX power(dBm)               TX power(dBm)
+37(OK)          3.31(OK)        6.46(OK)            -3.62(OK)[AP]               -2.75(OK)
+
+Diagnostic parameters threshold:
+                Low Alarm       Low Warn            High Warn           High Alarm
+Temp(Celsius)   -10             -3                  73                  80
+Voltage(V)      2.97            3.13                3.46                3.63
+Bias(mA)        2.00            3.00                12.00               15.00
+RX power(dBm)   -12.10          -11.10              2.50                3.50
+TX power(dBm)   -10.30          -9.30               1.00                2.00
+
+Transceiver current alarm information:
+None
+
+========Interface TenGigabitEthernet 1/0/52========
+Interface TenGigabitEthernet 1/0/52 : the transceiver is absent!
+
+========Interface TenGigabitEthernet 2/0/49========
+Interface TenGigabitEthernet 2/0/49 : the transceiver is absent!
+
+========Interface TenGigabitEthernet 2/0/50========
+Interface TenGigabitEthernet 2/0/50 : the transceiver is absent!
+
+========Interface TenGigabitEthernet 2/0/51========
+Transceiver Type    :  10G-Active-Cable-SFP+
+Connector Type      :  No separable connector
+Mode                :  Multiple mode
+Wavelength(nm)      :  NA
+Transfer Distance   : 
+    Cable
+        -- 5m
+Digital Diagnostic Monitoring  : YES
+Vendor Serial Number           : G1UHBJ2000113   
+
+Current diagnostic parameters[AP:Average Power]:
+Temp(Celsius)   Voltage(V)      Bias(mA)            RX power(dBm)               TX power(dBm)
+36(OK)          3.32(OK)        6.80(OK)            -3.62(OK)[AP]               -2.89(OK)
+
+Diagnostic parameters threshold:
+                Low Alarm       Low Warn            High Warn           High Alarm
+Temp(Celsius)   -10             -3                  73                  80
+Voltage(V)      2.97            3.13                3.46                3.63
+Bias(mA)        2.00            3.00                12.00               15.00
+RX power(dBm)   -12.10          -11.10              2.50                3.50
+TX power(dBm)   -10.30          -9.30               1.00                2.00
+
+Transceiver current alarm information:
+None
+
+========Interface TenGigabitEthernet 2/0/52========
+Interface TenGigabitEthernet 2/0/52 : the transceiver is absent!
+Ruijie#echo

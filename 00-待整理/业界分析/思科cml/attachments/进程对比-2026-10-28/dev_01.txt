@@ -1,0 +1,389 @@
+### CMD: ps -ef
+### RAW WITH SENTINEL
+{ ps -ef ; } 2>&1; echo __EOC1__
+
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Oct12 ?        00:00:18 /sbin/startup
+root         2     0  0 Oct12 ?        00:00:03 [kthreadd]
+root         3     2  0 Oct12 ?        00:00:00 [rcu_gp]
+root         4     2  0 Oct12 ?        00:00:00 [rcu_par_gp]
+root         8     2  0 Oct12 ?        00:00:00 [mm_percpu_wq]
+root         9     2  0 Oct12 ?        00:12:33 [ksoftirqd/0]
+root        10     2  0 Oct12 ?        00:56:32 [rcu_sched]
+root        11     2  0 Oct12 ?        00:00:13 [migration/0]
+root        12     2  0 Oct12 ?        00:00:00 [cpuhp/0]
+root        13     2  0 Oct12 ?        00:00:00 [cpuhp/1]
+root        14     2  0 Oct12 ?        00:00:12 [migration/1]
+root        15     2  0 Oct12 ?        00:08:17 [ksoftirqd/1]
+root        18     2  0 Oct12 ?        00:00:00 [kdevtmpfs]
+root        19     2  0 Oct12 ?        00:00:00 [netns]
+root        50     2  0 Oct12 ?        00:00:00 [kauditd]
+root       423     2  0 Oct12 ?        00:00:02 [khungtaskd]
+root       424     2  0 Oct12 ?        00:00:00 [oom_reaper]
+root       425     2  0 Oct12 ?        00:00:00 [writeback]
+root       427     2  0 Oct12 ?        00:00:00 [kcompactd0]
+root       428     2  0 Oct12 ?        00:00:00 [ksmd]
+root       438     2  0 Oct12 ?        00:00:00 [cryptd]
+root       461     2  0 Oct12 ?        00:00:00 [kintegrityd]
+root       462     2  0 Oct12 ?        00:00:00 [kblockd]
+root       464     2  0 Oct12 ?        00:00:00 [blkcg_punt_bio]
+root       526     2  0 Oct12 ?        00:00:00 [ata_sff]
+root       562     2  0 Oct12 ?        00:00:00 [watchdogd]
+root       645     2  0 Oct12 ?        00:00:00 [rpciod]
+root       648     2  0 Oct12 ?        00:00:00 [kworker/u5:0]
+root       649     2  0 Oct12 ?        00:00:00 [xprtiod]
+root       658     2  0 Oct12 ?        00:02:13 [kswapd0]
+root       806     2  0 Oct12 ?        00:00:00 [nfsiod]
+root      1125     2  0 Oct12 ?        00:00:00 [spi0]
+root      1393     2  0 Oct12 ?        00:00:00 [sdhci]
+root      1394     2  0 Oct12 ?        00:00:03 [irq/30-mmc0]
+root      1450     2  0 Oct12 ?        00:00:00 [ipv6_addrconf]
+root      1472     2  0 Oct12 ?        00:00:00 [mmc_complete]
+root      1537     2  0 Oct12 ?        00:00:52 [jbd2/mmcblk0p11]
+root      1538     2  0 Oct12 ?        00:00:00 [ext4-rsv-conver]
+root      1581     2  0 Oct12 ?        00:01:03 [jbd2/mmcblk0p12]
+root      1582     2  0 Oct12 ?        00:00:00 [ext4-rsv-conver]
+root      1598     2  0 Oct12 ?        00:00:00 [tcp_nss_s]
+root      1697     1  0 Oct12 ?        00:07:05 /sbin/cmps_app_schain
+root      1754     1  0 Oct12 ?        00:00:00 nginx: master process /sbin/ngin
+root      1755  1754  0 Oct12 ?        00:00:00 nginx: worker process
+root      1777     1  0 Oct12 ?        00:00:46 bash /etc/web/eweb/shell/emb_wat
+root      2003  2927  0 Oct12 ttyS0    01:23:20 rl-con -n 0 -t /dev/ttyS0 -i con
+root      2009  2003  0 Oct12 ttyS0    00:00:00 /bin/sh
+root      2063     2  0 Oct12 ?        00:00:00 [ext4-rsv-conver]
+root      2387     2  0 Oct12 ?        00:00:41 [dump_memoryinfo]
+root      2427     2  0 Oct12 ?        00:00:00 [lmk_cap_get_val]
+root      2428     2  0 Oct12 ?        00:00:51 [lmk_ham_mon_thr]
+root      2429     2  0 Oct12 ?        00:01:15 [lmk_event_task]
+root      2430     2  0 Oct12 ?        00:00:51 [lmk_task]
+root      2431     2  0 Oct12 ?        00:00:26 [lmk_cpu_stat]
+root      2484     1  0 Oct12 ?        02:41:43 /sbin/ham
+root      2491     1  0 Oct12 ?        00:02:12 /sbin/bspinfo.elf
+root      2631     2  0 Oct12 ?        00:00:00 [hamk_cap_get_va]
+root      2632     2  0 Oct12 ?        00:00:57 [hamk_cpu0]
+root      2633     2  0 Oct12 ?        00:00:55 [hamk_cpu1]
+root      2754     1  0 Oct12 ?        00:00:55 /sbin/demand_start.elf
+root      2885     1  0 Oct12 ?        00:00:05 /sbin/ce.tran.cap.sw
+root      2926     1  0 Oct12 ?        01:24:28 /sbin/cli-server
+root      2927     1  0 Oct12 ?        00:07:08 /sbin/rg-tty-admin
+root      2936     1  0 Oct12 ?        00:00:05 /sbin/fe.cfg.rt.sw
+root      2945     1  1 Oct12 ?        04:35:52 /sbin/redis-server /tmp/redis/re
+root      2951  2927  0 Oct12 ?        00:01:08 /sbin/rg-tty-admin
+root      2957     1  0 Oct12 ?        00:05:44 /sbin/rg-configd
+root      2959  2926  0 Oct12 ?        00:00:41 /sbin/cli-server
+root      2993     1  0 Oct12 ?        00:45:07 /sbin/rgmomd
+root      3009     1  0 Oct12 ?        00:00:06 /sbin/rg_cap
+root      3049     2  0 Oct12 ?        00:07:17 [ef_la_rx_ring]
+root      3050     2  0 Oct12 ?        00:04:12 [ef_lv4_rx_ring]
+root      3051     2  0 Oct12 ?        00:00:54 [ef_lv6_rx_ring]
+root      3066     2  0 Oct12 ?        00:01:49 [ref_ip_route]
+root      3076     2  0 Oct12 ?        00:01:49 [ref_ipv6_route]
+root      3093     2  0 Oct12 ?        00:00:05 [rg_packet_msg_t]
+root      3113     1  0 Oct12 ?        00:00:05 /sbin/tipc-tap
+root      3129     2  0 Oct12 ?        00:00:00 [lsm-kthread]
+root      3178     1  1 Oct12 ?        05:57:39 /sbin/efmp_frame.elf --log-level
+root      3189     1  0 Oct12 ?        00:00:05 /sbin/mom_rdnd_ctrl
+root      3197     1  0 Oct12 ?        01:08:29 redis_ctrl_host 17
+root      3253     1  0 Oct12 ?        02:39:25 /sbin/dm_dp
+root      3264     1  0 Oct12 ?        00:00:40 /sbin/rg-coredump-mon
+root      3276     1  3 Oct12 ?        13:34:17 /sbin/rg-sysmon
+root      3283     1  0 Oct12 ?        00:00:49 /sbin/safe_verify_svr
+root      3290     1  0 Oct12 ?        00:00:05 /sbin/app_df
+root      3297     1  0 Oct12 ?        00:00:05 /sbin/dfd_irq.elf
+root      3305     1  1 Oct12 ?        03:50:57 /sbin/dm_app_pd
+root      3313     1  0 Oct12 ?        00:43:04 /sbin/dm_ucm
+root      3321     1  0 Oct12 ?        00:31:16 /sbin/dfd_core.elf
+root      3329     1  0 Oct12 ?        00:07:31 /sbin/rldp.elf
+root      3336     1  0 Oct12 ?        00:00:24 /sbin/rbac
+root      3343     1  0 Oct12 ?        00:01:28 /sbin/rg_rdnd_server.elf
+root      3353     1  0 Oct12 ?        00:05:34 /sbin/aaad
+root      3360     1  0 Oct12 ?        00:00:50 /sbin/vsdm
+root      3392     1  0 Oct12 ?        00:00:50 /sbin/rg-mtdoops-cli
+root      3400     1  0 Oct12 ?        00:54:25 redis_host_fwd 8
+root      3422     1  0 Oct12 ?        00:50:26 redis_cfg_can 15
+root      3439     1  0 Oct12 ?        00:15:56 /sbin/ce.cli.cpp.dp
+root      3481     1  0 Oct12 ?        00:00:11 /sbin/ce.cpp.dp
+root      3483     1  0 Oct12 ?        01:02:54 redis_de_standalone 7
+root      3495     1  0 Oct12 ?        00:00:09 /sbin/ce.nfpp.dp
+root      3502     1  0 Oct12 ?        00:25:54 /sbin/fe.cpp.sw
+root      3509     1  0 Oct12 ?        00:22:55 /sbin/xe.cpp.dp
+root      3522     1  0 Oct12 ?        00:12:49 /sbin/subcard_power_ctl
+root      3529     1  0 Oct12 ?        00:00:04 /sbin/rg_cap_tran
+root      3547     2  0 Oct12 ?        00:00:00 [tcp_nss_send]
+root      3552     2  0 Oct12 ?        00:00:05 [kir thread]
+root      3553     2  0 Oct12 ?        00:00:20 [netk_openport]
+root      3555     2  0 Oct12 ?        00:00:21 [netk_tcpip_msg]
+root      3557     2  0 Oct12 ?        00:00:36 [IP_WebAH_Rcv_0]
+root      3558     2  0 Oct12 ?        00:00:40 [IP_WebAH_Rcv_1]
+root      3559     2  0 Oct12 ?        00:00:40 [IP_WebAH_Rcv_2]
+root      3560     2  0 Oct12 ?        00:00:40 [IP_WebAH_Rcv_3]
+root      3561     2  0 Oct12 ?        00:00:36 [icmp-err]
+root      3570     2  0 Oct12 ?        00:00:52 [IP6_WebAH_Rcv_0]
+root      3572     2  0 Oct12 ?        00:00:35 [IP6_WebAH_Rcv_1]
+root      3573     2  0 Oct12 ?        00:00:34 [IP6_WebAH_Rcv_2]
+root      3574     2  0 Oct12 ?        00:00:35 [IP6_WebAH_Rcv_3]
+root      3582     1  0 Oct12 ?        00:52:29 /sbin/tcpip.elf
+root      3589     1  0 Oct12 ?        00:00:48 /sbin/timerange
+root      3596     1  0 Oct12 ?        00:05:03 /sbin/nsm.elf
+root      3603     1  0 Oct12 ?        00:02:55 /sbin/arp_sprs.elf
+root      3610     1  0 Oct12 ?        00:05:20 /sbin/vxlan.elf
+root      3617     1  0 Oct12 ?        00:01:02 /sbin/lsm_kproxy.elf
+root      3624     1  0 Oct12 ?        01:14:06 /sbin/lsm.elf
+root      3631     1  0 Oct12 ?        01:00:26 /sbin/bridge.elf
+root      3639     1  0 Oct12 ?        00:01:26 /sbin/ping.elf
+root      3647     1  0 Oct12 ?        00:00:06 /sbin/tftp_tipc_server
+root      3655     1  0 Oct12 ?        00:10:00 /sbin/mstp.elf
+root      3662     1  0 Oct12 ?        00:00:53 /sbin/ref_proxy.elf
+root      3669     1  0 Oct12 ?        00:04:59 /sbin/rg-sshd
+root      3676     1  0 Oct12 ?        00:02:19 /sbin/rg-telnetd
+root      3683     1  0 Oct12 ?        00:01:04 /sbin/rpi.elf
+root      3691     1  0 Oct12 ?        00:09:07 /sbin/bgp.elf
+root      3700     1  0 Oct12 ?        00:25:37 /sbin/grpc.elf
+root      3707     1  0 Oct12 ?        00:16:35 /sbin/grpc_vty.elf
+root      3715     1  0 Oct12 ?        00:08:48 /sbin/ospf.elf
+root      3727     1  0 Oct12 ?        00:01:06 /sbin/rip.elf
+root      3737  3676  0 Oct27 pts/8    00:00:04 /sbin/rg-telnetd
+root      3738  3737  0 Oct27 pts/8    00:05:18 rl-con -n 263 -t /dev/pts/8 -i c
+root      3750     1  0 Oct12 ?        00:02:31 /sbin/dns_client.elf
+root      3767     1  0 Oct12 ?        00:02:29 /sbin/isis.elf
+root      3775     1  0 Oct12 ?        00:07:49 /sbin/ospfv3.elf
+root      3815     1  0 Oct12 ?        00:01:05 /sbin/ripng.elf
+root      3822     1  0 Oct12 ?        00:00:06 /sbin/ce.cap.sw
+root      3829     1  0 Oct12 ?        00:00:06 /sbin/fe.cap.sw
+root      3836     1  0 Oct12 ?        00:01:03 /sbin/nd_sprs.elf
+root      3843     1  0 Oct12 ?        00:00:50 /sbin/ipmix.elf
+root      3850     1  0 Oct12 ?        00:00:51 /sbin/rnsmib.elf
+root      3857     1  0 Oct12 ?        00:01:53 /sbin/ldp.elf
+root      3865     1  0 Oct12 ?        00:00:56 /sbin/rg_licns
+root      3873     1  0 Oct12 ?        00:50:08 /sbin/congestctrl_server
+root      3891     1  1 Oct12 ?        05:08:50 /sbin/rg-telnetc
+root      3898     1  0 Oct12 ?        00:00:49 /sbin/tunnel.elf
+root      3909     1  0 Oct12 ?        01:14:22 /sbin/rg-sshc
+root      3916     1  0 Oct12 ?        00:18:38 /sbin/diag_log.elf
+root      3926     1  0 Oct12 ?        00:31:03 /sbin/netconf.elf
+root      3939     1  0 Oct12 ?        00:04:12 /sbin/tech-support
+root      3947     1  0 Oct12 ?        00:00:06 /sbin/rg_mom_proto_pass
+root      3973     1  0 Oct12 ?        00:01:08 /sbin/mlag.elf
+root      3993     1  0 Oct12 ?        00:01:55 /sbin/ce.proxy.brg.dp
+root      4001     1  0 Oct12 ?        00:02:49 /sbin/ce.proxy.traf
+root      4008     1  0 Oct12 ?        00:00:00 /sbin/proxy-io2net-tipc -D -G -T
+root      4009  4008  0 Oct12 ?        00:00:00 /sbin/proxy-io2net-tipc -D -G -T
+root      4011     1  0 Oct12 ?        00:07:39 /sbin/rg_syslogd
+root      4018     1  0 Oct12 ?        00:01:46 /sbin/password_policy
+root      4026  4011  0 Oct12 ?        00:19:54 /sbin/rg_syslogd
+root      4027  4011  0 Oct12 ?        00:00:57 /sbin/rg_syslogd
+root      4051     1  0 Oct12 ?        00:17:39 /sbin/hdf_mgnt
+root      4060     1  0 Oct12 ?        00:00:44 /sbin/hdf_sys
+root      4069     1  0 Oct12 ?        00:01:15 /sbin/psh_server
+root      4084     1  0 Oct12 ?        00:04:03 /sbin/rg-fsui
+root      4091     1  1 Oct12 ?        04:40:55 /sbin/xe.mng.pkt.sw
+root      4098     1  0 Oct12 ?        00:00:09 /sbin/flinfod
+root      4116     1  0 Oct12 ?        00:05:25 /sbin/lda
+root      4125     1  0 Oct12 ?        00:01:01 /sbin/zam.elf
+root      4134     1  0 Oct12 ?        00:00:47 /sbin/python_shell.elf
+root      4151     1  0 Oct12 ?        00:01:05 /sbin/cwmp_gsoap.elf
+root      4158     1  0 Oct12 ?        00:00:07 /sbin/upgrade_global
+root      4165     1  0 Oct12 ?        00:00:06 /sbin/upgrade_local
+root      4173     1  0 Oct12 ?        00:00:12 /sbin/upgrade_app_download.elf
+root      4184     1  0 Oct12 ?        00:00:09 /sbin/upgrade_app_global.elf
+root      4191     1  0 Oct12 ?        00:00:06 /sbin/upgrade_app_local.elf
+root      4198     1  0 Oct12 ?        00:01:17 /sbin/upgrade_cli
+root      4205     1  0 Oct12 ?        00:00:53 /sbin/upgrade_auto_sync.elf
+root      4212     1  0 Oct12 ?        00:23:44 /sbin/efm.elf
+root      4220     1  0 Oct12 ?        00:00:53 /sbin/rns_server.elf
+root      4227     1  0 Oct12 ?        00:00:52 /sbin/ids.elf
+root      4234     1  0 Oct12 ?        01:54:03 /sbin/xe.ctrl.pkt.sw
+root      4243     1  0 Oct12 ?        00:15:02 /sbin/rg-resmon
+root      4252     1  0 Oct12 ?        00:04:21 /sbin/rg-snmpd
+root      4259     1  0 Oct12 ?        00:01:17 /sbin/rns.elf
+root      4269     1  0 Oct12 ?        00:01:21 /sbin/ipsec
+root      4280     1  0 Oct12 ?        00:03:09 /sbin/track.elf
+root      4287     1  0 Oct12 ?        00:01:56 /sbin/igmp.elf
+root      4295     1  0 Oct12 ?        00:03:15 /sbin/igmp_snp.elf
+root      4306     1  0 Oct12 ?        00:01:56 /sbin/mld.elf
+root      4313     1  0 Oct12 ?        00:02:41 /sbin/mld_snp.elf
+root      4320     1  0 Oct12 ?        00:01:52 /sbin/msdp.elf
+root      4327     1  0 Oct12 ?        00:03:15 /sbin/msf.elf
+root      4334     1  0 Oct12 ?        00:03:16 /sbin/msf6.elf
+root      4341     1  0 Oct12 ?        00:01:55 /sbin/pdmd.elf
+root      4348     1  0 Oct12 ?        00:01:56 /sbin/pim6d.elf
+root      4355     1  0 Oct12 ?        00:06:38 /sbin/pimd.elf
+root      4363     1  0 Oct12 ?        00:13:41 /sbin/lldp.elf
+root      4370     1  0 Oct12 ?        00:50:40 /sbin/lacp.elf
+root      4377     1  0 Oct12 ?        00:02:56 /sbin/gvrpd
+root      4385     1  0 Oct12 ?        00:01:06 /sbin/dldp.elf
+root      4392     1  0 Oct12 ?        00:14:53 /sbin/pbr.elf
+root      4406     1  2 Oct12 ?        08:38:43 /sbin/acld
+root      4415     1  0 Oct12 ?        00:03:46 /sbin/security_log.elf
+root      4423     1  0 Oct12 ?        00:39:00 /sbin/webauth
+root      4430     1  0 Oct12 ?        00:22:22 /sbin/rdsd
+root      4440     1  0 Oct12 ?        00:05:04 /sbin/tacplusd
+root      4447     1  0 Oct12 ?        01:03:38 /sbin/dot1x
+root      4455     1  0 Oct12 ?        00:35:29 /sbin/dhcp.elf
+root      4462     1  0 Oct12 ?        00:02:40 /sbin/vrrp.elf
+root      4471     1  0 Oct12 ?        00:02:42 /sbin/vrrp_plus.elf
+root      4479     1  0 Oct12 ?        00:02:55 /sbin/urpf.elf
+root      4494     1  0 Oct12 ?        00:17:27 /sbin/dhcp6.elf
+root      4502     1  0 Oct12 ?        00:05:31 /sbin/dhcpc.elf
+root      4510     1  0 Oct12 ?        00:07:11 /sbin/dns_snp.elf
+root      4520     1  0 Oct12 ?        00:03:14 /sbin/dhcp6c.elf
+root      4528     1  0 Oct12 ?        00:05:04 /sbin/dnsd.elf
+root      4537     1  0 Oct12 ?        00:00:06 /sbin/ver_agent
+root      4559     1  0 Oct12 ?        00:37:47 /sbin/bfd.elf
+root      4570     1  0 Oct12 ?        00:05:26 /sbin/qosd.elf
+root      4579     1  0 Oct12 ?        00:02:40 /sbin/ipfix_app
+root      4590     1  0 Oct12 ?        00:16:09 /sbin/ntp.elf
+root      4597     1  0 Oct12 ?        00:02:34 /sbin/sflow_app
+root      4608     1  0 Oct12 ?        00:06:04 /sbin/termid.elf
+root      4616     1  0 Oct12 ?        00:01:17 /sbin/ftpc_cli.elf
+root      4624     1  0 Oct12 ?        00:01:28 /sbin/rg-rmond
+root      4632     1  0 Oct12 ?        00:02:45 /sbin/tftpd.elf
+root      4639     1  0 Oct12 ?        00:00:59 /sbin/ce.trace.pkt.dp
+root      4648     1  0 Oct12 ?        00:00:05 /sbin/ce.ap.sw
+root      4655     1  0 Oct12 ?        00:00:05 /sbin/ce.ddm.sw
+root      4662     1  0 Oct12 ?        00:50:34 /sbin/ce.mgmt.sw
+root      4670     1  0 Oct12 ?        00:02:03 /sbin/ce.mng.poe.sw
+root      4677     1  0 Oct12 ?        00:49:19 /sbin/ce.ptm.sw
+root      4684     1  0 Oct12 ?        00:01:21 /sbin/ce.core.ptm.sw
+root      4702     1  0 Oct12 ?        00:00:48 /sbin/cli.ptm.sw
+root      4716  3676  0 Oct27 pts/6    00:00:02 /sbin/rg-telnetd
+root      4718     1  0 Oct12 ?        00:00:44 /sbin/fe.ap.sw
+root      4721  4716  0 Oct27 pts/6    00:03:30 rl-con -n 262 -t /dev/pts/6 -i c
+root      4725     1  0 Oct12 ?        00:00:05 /sbin/fe.ddm.sw
+root      4728  4721  0 Oct27 pts/6    00:00:00 /bin/sh
+root      4733     1  0 Oct12 ?        00:00:37 /sbin/fe.ipfix.sw
+root      4738  4728 40 Oct27 pts/6    07:40:52 /data/valgrind/bin/valgrind --to
+root      4741     1  0 Oct12 ?        00:00:05 /sbin/fe.mng.poe.sw
+root      4745     2  0 Oct27 ?        00:00:00 [kworker/0:5-events]
+root      4748     1  0 Oct12 ?        00:26:22 /sbin/fe.ptm.sw
+root      4755     1  0 Oct12 ?        00:00:17 /sbin/fe.core.ptm.sw
+root      4760     2  0 Oct27 ?        00:00:03 [kworker/0:18-events]
+root      4762     1  0 Oct12 ?        00:03:02 /sbin/fe.virpt.ptm.sw
+root      4771     1  0 Oct12 ?        00:03:17 /sbin/ftp_server.elf
+root      4791     1  0 Oct12 ?        00:01:53 /sbin/proxy.span.sw
+root      4799     1  0 Oct12 ?        00:01:23 /sbin/cmpnt_upgrade_server.elf
+root      4807     1  0 Oct12 ?        00:04:01 /sbin/cmpnt_upgrade_client.elf
+root      4822     1  0 Oct12 ?        00:00:05 /sbin/fe.fcnt.sw
+root      4830     1  0 Oct12 ?        00:07:57 /sbin/fe.fp.sw
+root      4837     1  0 Oct12 ?        00:05:46 /sbin/ce.ui.poe.sw
+root      4852     1  0 Oct12 ?        00:01:04 /sbin/ce.ddos.sw
+root      4860     1  0 Oct12 ?        00:01:20 /sbin/ce.nacm.sw
+root      4868     1  0 Oct12 ?        00:00:55 /sbin/ce.qos.sw
+root      4875     1  0 Oct12 ?        00:01:47 /sbin/fe.qos.sw
+root      4882     1  0 Oct12 ?        00:06:26 /sbin/ce.cli.nfpp.dp
+root      4889     1  0 Oct12 ?        00:00:14 /sbin/cmps.ctc.tcammng
+root      4897     1  0 Oct12 ?        00:02:35 /sbin/fe.nfpp.sw
+root      4904     1  0 Oct12 ?        00:37:16 /sbin/fe.pceinst.sw
+root      4911     1  0 Oct12 ?        00:06:25 /sbin/ce.ebrg.dp
+root      4918     1  0 Oct12 ?        00:03:30 /sbin/ce.emac.dp
+root      4926     1  0 Oct12 ?        00:00:05 /sbin/ce.qinq.dp
+root      4933     1  0 Oct12 ?        00:00:22 /sbin/fe.ebrg.sw
+root      4940     1  0 Oct12 ?        00:00:39 /sbin/fe.emac.sw
+root      4947     1  0 Oct12 ?        00:00:39 /sbin/fe.qinq.sw
+root      4954     1  0 Oct12 ?        00:00:53 /sbin/im_proxy.elf
+root      5018     1  8 Oct12 ?        1-09:37:44 /sbin/cmps.sda.sw
+root      5032     1  0 Oct12 ?        00:00:03 ihd_cpu.elf
+root      5039     1  0 Oct12 ?        00:09:22 /sbin/ihd_mng.elf
+root      5047     1  0 Oct12 ?        00:02:20 /sbin/im_core.elf
+root      5054     1  0 Oct12 ?        00:18:53 /sbin/openflow
+root      5061     1  0 Oct12 ?        00:04:31 /sbin/ce.cli.rt.sw
+root      5068     1  0 Oct12 ?        00:02:04 /sbin/ce.ef.sw
+root      5075     1  0 Oct12 ?        00:01:51 /sbin/ce.glb.l3tb.sw
+root      5082     1  0 Oct12 ?        00:02:49 /sbin/ce.l3intf.sw
+root      5089     1  0 Oct12 ?        00:01:51 /sbin/ce.nh.l3tb.sw
+root      5096     1  0 Oct12 ?        00:01:51 /sbin/fe.glb.l3tb.sw
+root      5103     1  0 Oct12 ?        00:00:06 /sbin/fe.iif.l3tb.sw
+root      5111     1  0 Oct12 ?        00:00:38 /sbin/fe.l3intf.sw
+root      5118     1  0 Oct12 ?        00:00:05 /sbin/fe.mac.l3tb.sw
+root      5125     1  0 Oct12 ?        00:02:32 /sbin/fe.mc.sw
+root      5132     1  0 Oct12 ?        00:01:54 /sbin/fe.nh.l3tb.sw
+root      5139     1  0 Oct12 ?        00:04:29 /sbin/fe.pbr.sw
+root      5146     1  0 Oct12 ?        00:00:06 /sbin/fe.rt_res.l3tb.sw
+root      5154     1  0 Oct12 ?        00:02:20 /sbin/fe.uc.sw
+root      5161     1  0 Oct12 ?        00:00:05 /sbin/ce.cfg.pktr.sw
+root      5168     1  0 Oct12 ?        00:04:59 /sbin/ce.dpm.dp
+root      5175     1  0 Oct12 ?        00:00:05 /sbin/fe.dpm.sw
+root      5183     1  0 Oct12 ?        00:05:08 /sbin/xe.cfg.pktr.sw
+root      5190     1  0 Oct12 ?        00:00:08 /sbin/xe.vhost.pkt.sw 0
+root      5191     1  0 Oct12 ?        00:02:02 /sbin/xe.vhost.pkt.sw 1
+root      5198     1  0 Oct12 ?        00:00:45 /sbin/ce.cli.pkt.dp
+root      5207     1  0 Oct12 ?        00:10:51 /sbin/amaint_app.elf
+root      5214     1  0 Oct12 ?        00:01:18 /sbin/tir.elf
+root      5223     1  0 Oct12 ?        00:01:15 /sbin/cid_mapper
+root      5230     1  0 Oct12 ?        00:06:03 /sbin/sw_app.snp_ds_c
+root      5238     1  0 Oct12 ?        00:02:02 /sbin/sw_app.snp_ds_s
+root      5245     1  0 Oct12 ?        00:09:23 /sbin/cmps.sln.sxauth
+root      5253     1  0 Oct12 ?        00:02:42 /sbin/mosquitto.elf
+root      5266     1  0 Oct12 ?        00:09:52 /sbin/ce.did.sw
+root      5273     1  0 Oct12 ?        00:03:44 /bin/sh /sbin/cls-sshd
+root      5286     1  0 Oct12 ?        00:06:52 /sbin/fe.did.sw
+root      5294     1  0 Oct12 ?        00:08:48 /sbin/reup.elf
+root      5309     1  0 Oct12 ?        00:04:35 /sbin/cli-proxy
+root      5332     1  0 Oct12 ?        00:01:50 /sbin/nginx_cmd.elf
+root      5347     1  0 Oct12 ?        00:00:00 /bin/sh /bin/sh_app
+root      5348     1  0 Oct12 ?        00:00:00 /sbin/proxy-io2net-tipc -D -G -T
+root      5349  5347  0 Oct12 ?        00:00:00 /bin/sh
+root      5350  5348  0 Oct12 ?        00:00:00 /sbin/proxy-io2net-tipc -D -G -T
+root      5358     1  0 Oct12 ?        00:10:29 /sbin/ugp
+root      5365     1  0 Oct12 ?        00:00:51 /sbin/zlogd
+root      5372     1  0 Oct12 ?        00:00:52 /sbin/alarm.elf
+root      5379     1  0 Oct12 ?        00:02:28 /sbin/cmdk.elf
+root      5386     1  0 Oct12 ?        00:08:11 /sbin/erps.elf
+root      5404     1  0 Oct12 ?        00:04:20 /sbin/rg_aof
+root      5416     1  0 Oct12 ?        02:30:14 /sbin/rg_oam_server.elf
+root      5423     1  0 Oct12 ?        01:06:00 /sbin/savi.elf
+root      5430     1  0 Oct12 ?        01:07:27 /sbin/snooping.elf
+root      5444     1  0 Oct12 ?        00:00:47 /sbin/rg_cpurule
+root      5453     1  0 Oct12 ?        00:00:51 /sbin/lsm_rpc_agent.elf
+root      5460     1  0 Oct12 ?        00:00:28 /sbin/macc
+root      5478     1  0 Oct12 ?        00:01:46 ash /sbin/maccmng.sh
+root      5504     1  0 Oct12 ?        00:04:53 /sbin/span.elf
+root      5515     1  0 Oct12 ?        00:01:00 /sbin/sntp.elf
+root      5526     1  1 Oct12 ?        04:13:25 /sbin/sysha
+root      5702     1  0 Oct12 ?        00:02:45 /sbin/ce.mergevlan.dp
+root      5719     1  0 Oct12 ?        02:42:29 redis_ce_global 2
+root      5729     1  0 Oct12 ?        01:02:09 redis_ce_fwd_global 3
+root      5742     1  0 Oct12 ?        01:15:35 redis_de_global 4
+root      5751     1  0 Oct12 ?        01:02:28 redis_de_fwd_global 5
+root      5760     1  0 Oct12 ?        01:22:52 redis_cfg_global 11
+root      5772     1  0 Oct12 ?        00:58:42 redis_cap 14 
+root      5789     1  0 Oct12 ?        00:54:50 redis_ctrl_global 16
+root      5801     1  0 Oct12 ?        00:00:37 /sbin/fe.mergevlan.sw
+root      5841     1  0 Oct12 ?        00:01:40 /sbin/fe.mmu.sw
+root      5873     1  0 Oct12 ?        00:01:58 /sbin/ce.mmu.dp
+root     14613  3676  0 Oct13 pts/4    00:01:03 /sbin/rg-telnetd
+root     14615 14613  0 Oct13 pts/4    01:30:42 rl-con -n 260 -t /dev/pts/4 -i c
+root     16178  3738  0 10:06 pts/8    00:00:00 /bin/sh
+root     16546  3676  0 Oct12 pts/2    00:01:10 /sbin/rg-telnetd
+root     16547 16546  0 Oct12 pts/2    01:24:15 rl-con -n 258 -t /dev/pts/2 -i c
+root     16573 16547  0 Oct12 pts/2    00:00:00 /bin/sh
+root     16778  3676  0 Oct12 pts/3    00:01:08 /sbin/rg-telnetd
+root     16779 16778  0 Oct12 pts/3    01:26:34 rl-con -n 259 -t /dev/pts/3 -i c
+root     18466  3676  0 11:02 pts/9    00:00:00 /sbin/rg-telnetd
+root     18467 18466  0 11:02 pts/9    00:00:05 rl-con -n 264 -t /dev/pts/9 -i c
+root     18472 18467  0 11:02 pts/9    00:00:00 /bin/sh
+root     18507     2  0 11:03 ?        00:00:00 [kworker/1:0+events_power_effici
+root     19107     2  0 11:18 ?        00:00:00 [kworker/1:0H-kblockd]
+root     19179     2  0 11:20 ?        00:00:00 [kworker/u4:0-events_unbound]
+root     19241     2  0 11:21 ?        00:00:00 [kworker/0:1H-mmc_complete]
+root     19322     2  0 11:23 ?        00:00:00 [kworker/1:2-events]
+root     19324     2  0 11:24 ?        00:00:00 [kworker/1:2H-kblockd]
+root     19390     2  0 11:26 ?        00:00:00 [kworker/u4:1-tipc_rcv]
+root     19447     2  0 11:26 ?        00:00:00 [kworker/0:2H-kblockd]
+root     19531     2  0 11:29 ?        00:00:00 [kworker/1:1-mm_percpu_wq]
+root     19552     2  0 11:29 ?        00:00:00 [kworker/1:1H-kblockd]
+root     19605  1777  0 11:31 ?        00:00:00 sleep 180
+root     19658     2  0 11:31 ?        00:00:00 [kworker/u4:2-events_unbound]
+root     19667     2  0 11:32 ?        00:00:00 [kworker/0:0H]
+root     19671  3676  0 11:32 pts/10   00:00:00 /sbin/rg-telnetd
+root     19672 19671  1 11:32 pts/10   00:00:00 rl-con -n 265 -t /dev/pts/10 -i 
+root     19682 19672  0 11:32 pts/10   00:00:00 /bin/sh
+root     19689 19682 99 11:32 pts/10   00:00:00 ps -ef
+root     20917  3676  0 Oct20 pts/7    00:00:29 /sbin/rg-telnetd
+root     20918 20917  0 Oct20 pts/7    01:06:11 rl-con -n 1113 -t /dev/pts/7 -i 
+root     22621     1  0 Oct20 ?        00:21:38 /sbin/cwmp.elf
+root     23610  3676  0 Oct14 pts/5    00:00:58 /sbin/rg-telnetd
+root     23611 23610  0 Oct14 pts/5    01:12:34 rl-con -n 261 -t /dev/pts/5 -i c
+__EOC1__
+~ # 
+~ # 

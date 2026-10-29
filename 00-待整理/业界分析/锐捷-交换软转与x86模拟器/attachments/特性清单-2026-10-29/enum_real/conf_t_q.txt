@@ -1,0 +1,197 @@
+Enter configuration commands, one per line.  End with CNTL/Z.
+Ruijie(config)#?
+Configure commands: 
+  aaa                          Authentication,  Authorization and Accounting
+  access-control               Access control
+  access-list                  Add an access list entry
+  address-bind                 Set a binding of IP and MAC address
+  address-manage               Configure address manage on interface
+  aggregateport                Aggregate port configuration
+  aggregateport-admin          Configure aggregate port admin
+  alarm                        Alarm
+  alias                        Create command alias
+  amaint-app                   Amaint-app keywords
+  apm-scene                    Set APM scene configuration
+  arp                          Set ARP information
+  arp-table                    Arp table
+  auth                         Auth command
+  auto-backup                  Configure auto-backup of configurations
+  auto-collect                 Auto collect device information 
+  auto-upgrade                 Auto-upgrade config
+  avoid-log-open               Open Avoidance plan of scc log
+  avoid-open                   Open Avoidance plan of scc
+  banner                       Define a login banner
+  bfd                          Bfd
+  bfd-session                  Indicate session name
+  bmp                          BGP Monitoring Protocol commands
+  boot                         Set boot system config
+  bridge-frame                 Bridge frame
+  class-map                    Configure QoS Class Map
+  clock                        Manage the clock timezone or summer-time
+  cpp-warn                     Cpp warning config
+  cpu                          Config cpu item
+  cpu-protect                  Cpu protect
+  crypto                       Crypto command
+  cwmp                         Enter CWMP Configure Mode.
+  default                      Set a command to its defaults
+  define                       Interface range macro definition
+  device-level                 Text for mib object device-level
+  direct-vlan                  Config direct vlan list
+  dldp                         Exec data link detection command
+  dns-sniffer                  Dns sniffer
+  do                           To run exec commands in config mode
+  dot1x                        Configure dot1x
+  drr-queue                    Configure Deficit Round Robin queues
+  efm                          Config efm
+  enable                       Modify nginx services
+  end                          Exit from configure mode
+  erps                         Ethernet ring protection switching protocol
+  errdisable                   Interface errdisable
+  ethernet-port                Set ethernet port sample period
+  ethernet-subport             Set ethernet port counter sample period
+  exit                         Exit from configure mode
+  expert                       Expert extended ACL
+  fib-install-mode             Set fib install mode
+  fib-overcap-recover          FIB overcap self-heal control
+  fiber                        Fiber
+  flow-sampler-map             Flow sampler configuration
+  flow-statistics              Set  port flow statis include interframe
+  free-dns                     Config webauth free dns
+  free-url                     Free-url
+  ftp-client                   Ftp-client config
+  ftp-server                   Ftp-server config
+  global                       Prohibit global application of ACL
+  grpc                         Enable a Google Remote Procedure Call Protocol
+                               (GRPC) process
+  gvrp                         GVRP configure command
+  ham                          High availability module
+  hdf                          Hardware diagnostic function
+  help                         Description of the interactive help system
+  hostname                     Set system's network name
+  http                         Config http
+  ids                          Intelligent Diagnosis System
+  install                      Component auto-sync configuration.
+  interface                    Select an interface to configure
+  ip                           Global IP configuration subcommands
+  ip-ref-load-balance-profile  Ref ip load-balance-profile configuration
+  ipsec                        Ipsec command
+  ipv6                         Global IPv6 configuration commands
+  isis                         Intermediate System - Intermediate System
+                               (IS-IS)
+  key                          Key management
+  l2protocol-tunnel            Tunnel protocol
+  lacp                         LACP configuration
+  language                     Set the system language
+  line                         Configure a terminal line
+  link                         Enable Link State Tracking feature
+  lldp                         Link Layer Discovery Protocol
+  load-balance-profile         Aggregateport load-balance-profile
+                               configuration
+  log-cmd                      Save which command to flash
+  logging                      Modify message logging facilities
+  login                        Enable password checking
+  loop-detect                  Loop detect config
+  mac                          Mac extended ACL
+  mac-address-learning         Configure MAC address learning ability
+  mac-address-table            Configure the MAC address table
+  mac-vlan                     Mac vlan
+  macc                         Macc
+  maximum                      Set a limit
+  maximum-paths                Configuration maximum paths
+  memory                       Sysha reclaim memory
+  memory-lack                  Out of memory situation
+  mgmt_mode                    Set Mgmt create mode
+  mls                          Global Multi-Layer Switching parameters
+  mmu                          Config mmu
+  monitor                      Configure SPAN monitoring
+  mpls                         Multi-Protocol Label Switching
+  mqtt-client                  Enable MQTT client
+  mqtt-server                  Specify mqtt-server options
+  msf                          MSF configuration
+  msf6                         MSF6 configuration
+  multicast                    Multicast
+  netconf                      Netconf config
+  nfpp                         Enter Network Foundation Protection Policy
+                               Configure Mode.
+  no                           Negate a command or set its defaults
+  ntp                          Configure NTP
+  of                           Set openflow
+  offline-detect               Set offline-detect
+  outflow-group                Create outflow-group
+  password                     Set password parameters
+  pbi                          Proactive business insight
+  physical-port                Physical port dither protect
+  plan                         Set the time to do some things
+  policy-map                   Configure QoS Policy Map
+  port                         Configure port
+  priority-queue               Configure priority scheduling
+  privilege                    Command privilege parameters
+  prompt                       Set system's prompt
+  protected-ports              Protect route ports
+  protocol-vlan                Global protocol-vlan configure
+  queueing                     Open or close WRED
+  radius                       Config radius
+  radius-server                Configure radius server
+  radsec                       Configure radsec
+  recursive-route              Recursive-route
+  redundancy                   Redundancy configuration
+  register                     Register keyword
+  remove                       Remove configuration
+  rg-log                       Rg-log
+  rldp                         Rldp global configuration
+  rmon                         Remote Monitoring
+  role                         Configure roles
+  route-map                    Create route-map or enter route-map command
+                               mode
+  router                       Enable a routing process
+  savi                         Source Address Validation Improvements
+  scc                          Config scc
+  security                     Configure the Security
+  security-log                 Security-log config
+  service                      Modify use of network based services
+  service-policy               Configure Global QoS Service Policy
+  set                          Set dscp
+  sflow                        Configure sflow
+  show                         Show running system information
+  sim dldp peerstate           Dldp mom pub peerstate test
+  snmp                         Modify SNMP interface parameters
+  snmp-agent                   Alarm snmp-agent trap config
+  snmp-server                  Modify SNMP engine parameters
+  snooping-client              The client of snooping entry synchronization
+  snooping-server              The server of snooping entry synchronization
+  sntp                         SNTP protocol configuration
+  spanning-tree                Spanning-tree subsystem
+  startup-config               Configure startup-config
+  station-move                 Config station move
+  svi                          Config svi router-acls
+  switch                       Enter VSU configuration mode
+  switch-mode                  Switch-mode
+  switchport                   Switchport port-security
+  sysmac                       Set system MAC
+  system                       Set system MTU size
+  tacacs-server                Modify TACACS query parameters
+  terminal-identify            Terminal identify
+  terminal-identify-template   Terminal identify
+  tftp-client                  Tftp client config
+  tftp-server                  Tftp-server config
+  time-range                   Configure time range entries
+  tir                          Terminal information report
+  track                        Object tracking configuration commands
+  udp-helper                   UDP broadcast packet relay
+  ugp                          Ugp
+  username                     Establish User Name Authentication
+  vap                          Virtual AggregatePort
+  virtual-group                Virtual group bundling configuration
+  vlan                         Configure VLAN
+  voice                        Specify voice vlan
+  vrf                          Configure Multi-af VPN Routing/Forwarding
+  vrrp                         VRRP configuration subcommands
+  vsl-port                     Config vsl-port
+  web-auth                     Web-auth command
+  webmaster                    Config web auth info
+  wfq-queue                    Configure Weighted Fair Queue queues
+  wrr-queue                    Configure Weighted Round Robin queues
+  zam                          Zam keyword
+
+Ruijie(config)#
+Ruijie(config)#echo

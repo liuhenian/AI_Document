@@ -1,0 +1,27 @@
+switch_id: 1 (mac: 00d0.f822.3595)
+!
+switch virtual domain 1
+!
+switch 1
+switch 1 priority 200
+!
+port-member interface TenGigabitEthernet 0/49
+port-member interface TenGigabitEthernet 0/51
+!
+switch convert mode virtual
+!
+
+switch_id: 2 (mac: 00d0.f822.3562)
+!
+switch virtual domain 1
+!
+switch 2
+switch 2 priority 150
+!
+port-member interface TenGigabitEthernet 0/49
+port-member interface TenGigabitEthernet 0/51
+!
+switch convert mode virtual
+!
+
+Ruijie#echo

@@ -1,0 +1,25 @@
+%cpu port bandwidth: 4500(pps)
+Rate(pps)  Drop(pps)  Total         Total Drop  
+---------  ---------  ---------     ----------  
+ 2          0          13229         0           
+Traffic-class	Bandwidth(pps)	Rate(pps)  Drop(pps)  Total         Total Drop  
+-------------	--------------	---------  ---------  ---------     ----------  
+ 0           	1500          	0          0          0             0           
+ 1           	1500          	2          0          11778         0           
+ 2           	1500          	0          0          2             0           
+ 3           	1500          	0          0          1332          0           
+ 4           	1500          	0          0          0             0           
+ 5           	1500          	0          0          117           0           
+ 6           	1500          	0          0          0             0           
+ 7           	2000          	0          0          0             0           
+Packet Type             Traffic-class  Bandwidth(pps)  Rate(pps)  Drop(pps)  Total         Total Drop    DropTime                      Drop Reason     
+----------------------  -------------  --------------  ---------  ---------  ---------     ----------    ----------------------------  --------------- 
+arp                     1              512             2          0          11778         0                                                           
+dhcp-relay-c            2              512             0          0          2             0                                                           
+dns-server              3              220             0          0          1             0                                                           
+lldp                    5              256             0          0          117           0                                                           
+local-ipv4              3              1100            0          0          449           0                                                           
+ssh                     3              1100            0          0          206           0                                                           
+tcp-syn                 3              1000            0          0          34            0                                                           
+telnet                  3              1100            0          0          642           0                                                           
+Ruijie#echo

@@ -1,0 +1,46 @@
+lrwxrwxrwx    1 root     root            21 Oct  9 14:49 /lib/libef_atomic.so -> libef_atomic.so.1.0.0
+-rwxr-xr-x    1 root     root         38896 Oct  9 14:49 /lib/libef_atomic.so.1.0.0
+lrwxrwxrwx    1 root     root            28 Oct  9 14:49 /lib/libef_diagnosis_lib.so -> libef_diagnosis_lib.so.1.0.0
+-rwxr-xr-x    1 root     root        286936 Oct  9 14:49 /lib/libef_diagnosis_lib.so.1.0.0
+-rwxr-xr-x    1 root     root       1329824 Oct  9 14:49 /lib/libef_fpm.so
+lrwxrwxrwx    1 root     root            18 Oct  9 14:49 /lib/libef_hal.so -> libef_hal.so.1.0.0
+-rwxr-xr-x    1 root     root        377552 Oct  9 14:49 /lib/libef_hal.so.1.0.0
+lrwxrwxrwx    1 root     root            25 Oct  9 14:49 /lib/libef_msg_client.so -> libef_msg_client.so.1.0.0
+-rwxr-xr-x    1 root     root         98632 Oct  9 14:49 /lib/libef_msg_client.so.1.0.0
+lrwxrwxrwx    1 root     root            29 Oct  9 14:49 /lib/libgrpc++_reflection.so -> libgrpc++_reflection.so.1.6.0
+lrwxrwxrwx    1 root     root            29 Oct  9 14:49 /lib/libgrpc++_reflection.so.1 -> libgrpc++_reflection.so.1.6.0
+-rwxr-xr-x    1 root     root      26922712 Oct  9 14:49 /lib/libgrpc++_reflection.so.1.6.0
+lrwxrwxrwx    1 root     root            22 Oct  9 14:49 /lib/librg_ef_bridge.so -> librg_ef_bridge.so.0.9
+lrwxrwxrwx    1 root     root            22 Oct  9 14:49 /lib/librg_ef_bridge.so -> librg_ef_bridge.so.0.9
+-rwxr-xr-x    1 root     root       1017352 Oct  9 14:49 /lib/librg_ef_bridge.so.0.9
+-rwxr-xr-x    1 root     root       1017352 Oct  9 14:49 /lib/librg_ef_bridge.so.0.9
+lrwxrwxrwx    1 root     root            21 Oct  9 14:49 /lib/librg_ef_mcast.so -> librg_ef_mcast.so.0.9
+lrwxrwxrwx    1 root     root            21 Oct  9 14:49 /lib/librg_ef_mcast.so -> librg_ef_mcast.so.0.9
+-rwxr-xr-x    1 root     root       1123152 Oct  9 14:49 /lib/librg_ef_mcast.so.0.9
+-rwxr-xr-x    1 root     root       1123152 Oct  9 14:49 /lib/librg_ef_mcast.so.0.9
+-rwxr-xr-x    1 root     root       2047752 Oct  9 14:49 /lib/librg_efacl.so
+-rwxr-xr-x    1 root     root       2047752 Oct  9 14:49 /lib/librg_efacl.so
+-rwxr-xr-x    1 root     root        322368 Oct  9 14:49 /lib/librg_efmp.so
+-rwxr-xr-x    1 root     root        322368 Oct  9 14:49 /lib/librg_efmp.so
+-rwxr-xr-x    1 root     root        651408 Oct  9 14:49 /lib/librg_efpbr.so
+-rwxr-xr-x    1 root     root        651408 Oct  9 14:49 /lib/librg_efpbr.so
+lrwxrwxrwx    1 root     root            23 Oct  9 14:49 /lib/librg_mpls_ref.so -> librg_mpls_ref.so.1.0.0
+-rwxr-xr-x    1 root     root       3792536 Oct  9 14:49 /lib/librg_mpls_ref.so.1.0.0
+lrwxrwxrwx    1 root     root            22 Oct  9 14:49 /lib/librg_srp_ref.so -> librg_srp_ref.so.1.0.0
+-rwxr-xr-x    1 root     root       1170592 Oct  9 14:49 /lib/librg_srp_ref.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct  9 14:49 /lib/librg_srv6_ref.so -> librg_srv6_ref.so.1.0.0
+-rwxr-xr-x    1 root     root       1242808 Oct  9 14:49 /lib/librg_srv6_ref.so.1.0.0
+lrwxrwxrwx    1 root     root            25 Oct  9 14:49 /lib/librg_tunnelk_ef.so -> librg_tunnelk_ef.so.1.2.0
+lrwxrwxrwx    1 root     root            25 Oct  9 14:49 /lib/librg_tunnelk_ef.so -> librg_tunnelk_ef.so.1.2.0
+-rwxr-xr-x    1 root     root        840128 Oct  9 14:49 /lib/librg_tunnelk_ef.so.1.2.0
+-rwxr-xr-x    1 root     root        840128 Oct  9 14:49 /lib/librg_tunnelk_ef.so.1.2.0
+lrwxrwxrwx    1 root     root            23 Oct  9 14:49 /lib/librg_urpfk_ef.so -> librg_urpfk_ef.so.1.2.0
+lrwxrwxrwx    1 root     root            23 Oct  9 14:49 /lib/librg_urpfk_ef.so -> librg_urpfk_ef.so.1.2.0
+-rwxr-xr-x    1 root     root        346976 Oct  9 14:49 /lib/librg_urpfk_ef.so.1.2.0
+-rwxr-xr-x    1 root     root        346976 Oct  9 14:49 /lib/librg_urpfk_ef.so.1.2.0
+lrwxrwxrwx    1 root     root            23 Oct  9 14:49 /lib/librg_vxlan_ef.so -> librg_vxlan_ef.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct  9 14:49 /lib/librg_vxlan_ef.so -> librg_vxlan_ef.so.1.0.0
+-rwxr-xr-x    1 root     root       1081184 Oct  9 14:49 /lib/librg_vxlan_ef.so.1.0.0
+-rwxr-xr-x    1 root     root       1081184 Oct  9 14:49 /lib/librg_vxlan_ef.so.1.0.0
+~ # 
+~ # echo

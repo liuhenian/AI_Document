@@ -1,0 +1,4 @@
+cat /proc/$(pidof efmp_frame.elf)/cmdline 2>/dev/null | tr '\0' ' '; echo
+/sbin/efmp_frame.elf -c 3 -b 0000:00:03.0 --log-level=4 
+~ # 
+~ # echo

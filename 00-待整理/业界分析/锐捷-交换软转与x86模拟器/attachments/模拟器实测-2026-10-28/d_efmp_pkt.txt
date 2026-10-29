@@ -1,0 +1,10 @@
+filter  Debug efmp filter
+  length  Packet data area length
+  log     Debug efmp packet record log
+  ping    Debug efmp packet ping
+  wlan    Debug efmp packet wlan
+
+Ruijie#debug efmp packet 
+% Incomplete command.
+
+Ruijie#echo

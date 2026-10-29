@@ -1,0 +1,3 @@
+cat /proc/net/ef* 2>/dev/null | head -30; ls /proc/ef* 2>/dev/null
+~ # 
+~ # echo

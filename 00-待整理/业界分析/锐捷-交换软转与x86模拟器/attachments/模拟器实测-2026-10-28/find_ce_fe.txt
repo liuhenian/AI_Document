@@ -1,0 +1,3 @@
+ls /sbin | grep -c -E '^ce\.|^fe\.'; ls /sbin | grep -E '^ce\.|^fe\.' | head -20
+
+echo

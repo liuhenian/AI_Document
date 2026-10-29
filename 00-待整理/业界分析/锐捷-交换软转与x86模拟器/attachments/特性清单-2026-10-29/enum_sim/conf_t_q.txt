@@ -1,0 +1,156 @@
+Enter configuration commands, one per line.  End with CNTL/Z.
+Ruijie(config)#?
+Configure commands: 
+  aaa                       Authentication, Authorization and Accounting
+  access-list               Add an access list entry
+  address-bind              Set a binding of IP and MAC address
+  address-manage            Configure address manage on interface
+  aggregateport             Aggregate port configuration
+  aggregateport-admin       Configure aggregate port admin
+  alarm                     Alarm
+  alias                     Create command alias
+  arp                       Set ARP information
+  arp-passby                Set arp-passby
+  auto-backup               Auto-backup config
+  auto-provision            Auto-provision keyword
+  automatic-switching-mode  Set system's automatic switching mode
+  banner                    Define a login banner
+  bfd                       Bfd
+  bmp                       BGP Monitoring Protocol commands
+  boot                      Set boot system config
+  bridge-frame              Bridge frame
+  carrier-delay             Specify delay for interface transitions
+  class-map                 Configure QoS Class Map
+  cli                       Command-line interface
+  clock                     Manage the clock timezone or summer-time
+  cnp                       Configure cnp
+  container                 Config container
+  cpu                       Config cpu item
+  crypto                    Crypto command
+  default                   Set a command to its defaults
+  define                    Interface range macro definition
+  diagnose-log              Diagnose-log
+  direct-vlan               Config direct vlan list
+  dldp                      Exec data link detection command
+  dmesg                     Configure dmesg related options
+  do                        To run exec commands in config mode
+  dqpn                      Configure BGP QP Policy
+  drr-queue                 Configure Deficit Round Robin queues
+  enable                    Modify enable parameters
+  end                       Exit from configure mode
+  errdisable                Error disable
+  ethernet-port             Set ethernet port sample period
+  ethernet-subport          Set ethernet port counter sample period
+  evpn                      Configure Ethernet VPN
+  exit                      Exit from configure mode
+  expert                    Expert extended ACL
+  fabric                    Configure fabric anycast gateway mac
+  flow-statistics           Set  port flow statis include interframe
+  flowrule                  Configure flowspec
+  flowspec                  Configure flowspec
+  flowspec-interface-group  Configure flowspec-interface-group
+  ftp-client                Ftp-client config
+  ftp-server                Ftp-server config
+  global                    Prohibit global application of ACL
+  grpc                      Enable a Google Remote Procedure Call Protocol (GRPC) process
+  gvrp                      GVRP configure command
+  ham                       High availability module
+  hdf                       Hardware diagnostic function
+  help                      Description of the interactive help system
+  hostname                  Set system's network name
+  hungtask                  Set hung_task
+  install                   Component auto-sync configuration.
+  interface                 Select an interface to configure
+  ip                        Global IP configuration subcommands
+  ip-vrf-forwarding-if      Configure ip vrf forwarding interface
+  ipv6                      Global IPv6 configuration commands
+  key                       Key management
+  l2                        Config L2 attribute
+  lacp                      LACP configuration
+  language                  Set the system language
+  line                      Configure a terminal line
+  link                      Enable Link State Tracking feature
+  lldp                      Link Layer Discovery Protocol
+  log-cmd                   Save which command to flash
+  logging                   Modify message logging facilities
+  login                     Enable password checking
+  mac                       Mac extended ACL
+  mac-address-table         Configure the MAC address table
+  mac-vlan                  Mac vlan
+  maximum                   Set a limit
+  maximum-paths             Configuration maximum paths
+  memory                    Configure memory related options
+  memory-lack               Out of memory situation
+  mls                       Global Multi-Layer Switching parameters
+  monitor                   Configure SPAN monitoring
+  mpls                      Multi-Protocol Label Switching
+  msf                       MSF configuration
+  msf6                      MSF6 configuration
+  nak                       Configure nak
+  netconf                   Netconf config
+  no                        Negate a command or set its defaults
+  ntp                       Configure NTP
+  of                        Set openflow
+  packet                    Packet configure
+  password                  Set password parameters
+  physical-port             Physical port dither protect
+  plan                      Set the time to do some things
+  policy-map                Configure QoS Policy Map
+  priority-flow-control     Configure priority-flow-control
+  priority-queue            Configure priority scheduling
+  privilege                 Command privilege parameters
+  prompt                    Set system's prompt
+  protocol-trace            Configure ip packet reassemble
+  psar                      Configure PSAR
+  qos                       Configure qos information
+  qos-queue                 Configure global qos queue compatible
+  queueing                  Open or close WRED
+  radius                    Config radius
+  radius-server             Configure radius server
+  radsec                    Configure radsec
+  recursive-route           Recursive-route
+  redundancy                Redundancy configuration
+  rldp                      Rldp global configuration
+  rmon                      Remote Monitoring
+  role                      Configure roles
+  route-map                 Create route-map or enter route-map command mode
+  router                    Enable a routing process
+  savi                      Source Address Validation Improvements
+  sbfd                      Sbfd
+  security-log              Security-log config
+  segment-routing           Configure segment routing
+  service                   Modify use of network based services
+  service-policy            Configure Global QoS Service Policy
+  show                      Show running system information
+  shutdown                  Shutdown all interfaces exclude
+  sim dldp peerstate        Dldp mom pub peerstate test
+  smart                     Smart Embedded Manager configuration commands
+  snmp-server               Modify SNMP engine parameters
+  sntp                      SNTP protocol configuration
+  spanning-tree             Spanning-tree subsystem
+  split                     Interface split information
+  station-move              Config station move
+  svi                       Config svi router-acls
+  switch                    Enter VSU configuration mode
+  switchport                Switchport port-security
+  sysmac                    Set system MAC
+  system                    Set system MTU size
+  tacacs-server             Modify TACACS query parameters
+  tftp-client               Tftp client config
+  tftp-server               Tftp-server config
+  time-range                Configure time range entries
+  track                     Object tracking configuration commands
+  username                  Establish User Name Authentication
+  virtual-group             Virtual group bundling configuration
+  vlan                      Configure VLAN
+  vrf                       Configure Multi-af VPN Routing/Forwarding
+  vrrp                      VRRP configuration subcommands
+  vsl-port                  Config vsl-port
+  vtep                      Configure vtep global information
+  vxlan                     Configure vxlan
+  wfq-queue                 Configure Weighted Fair Queue queues
+  wrr-queue                 Configure Weighted Round Robin queues
+  zam                       Zam keyword
+
+Ruijie(config)#
+Ruijie(config)#echo

@@ -1,0 +1,8 @@
+ce.ef.sw
+ce.efm.sw
+efm.elf
+efmp_frame.elf
+fe.efm.sw
+fe.uc.sw
+~ # 
+~ # echo

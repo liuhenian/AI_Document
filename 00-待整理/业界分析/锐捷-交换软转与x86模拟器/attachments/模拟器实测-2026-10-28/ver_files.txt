@@ -1,0 +1,404 @@
+d -20
+==============================================
+Type    : rootfs
+Product : x86-64
+Version : v1.0
+Git SHA1: b00d4f98d
+Build   : 2026/10/09 22:48:19
+
+
+==============================================
+
+=======================================================================
+==============================================
+Type    : rootfs
+Product : x86
+Version : v1.0
+Git SHA1: 577ecb3e
+Build   : 2026/10/09 21:05:47
+
+
+linux git@git.ruijie.net:linux commitid d52d375465590586ccd26c35544f18614998f5c4 linux-custom-1.18.100.91
+==============================================
+
+=======================================================================
+==============================================
+Type    : rootfs
+Product : rgos
+Version : v1.0
+Git SHA1: 583ffe39
+Build   : 2026/10/09 21:23:58
+
+
+sdk_header http://svn.ruijie.net/ssvn12/ppf_support_lib/sdk_header/custom/1.18.100.91/code version 20944 NA
+bsp-platform-dep-header git@git.ruijie.net:ppf_bsp commitid bb150a25d171b1c3b550077a3a37040385ead5f3 ppf_bsp-custom-1.18.100.91
+rg-openssl http://svn.ruijie.net/ssvn12/ppf_libpub/rg-openssl/custom/1.18.100.91/code version 55750 NA
+rg_dprintk-kernel http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg_dprintk-kernel/custom/1.18.100.91/code version 56030 NA
+cpurule-lib http://svn.ruijie.net/ssvn12/ppf_rg_utils/cpurule-lib/custom/1.18.100.91/code version 56002 NA
+utils-platform-dep-git git@git.ruijie.net:ppf_utils commitid fc9666aebad48beca43e02448208c711f1a5f73b ppf_utils-custom-1.18.100.91
+rg-mom-header http://svn.ruijie.net/ssvn12/ppf_libpub/rg-mom/custom/1.18.100.91/code version 55769 NA
+rg_cap_header http://svn.ruijie.net/ssvn12/ppf_libpub/rg_cap/custom/1.18.100.91/code/rg_cap_header version 55754 NA
+rg_cap_lib_mini http://svn.ruijie.net/ssvn12/ppf_libpub/rg_cap/custom/1.18.100.91/code/rg_cap_lib_mini version 55754 NA
+librg-fsui http://svn.ruijie.net/ssvn12/ppf_rg_utils/librg-fsui/custom/1.18.100.91/code version 56045 NA
+librg_proc_ham http://svn.ruijie.net/ssvn12/ppf_ras/librg_proc_ham/custom/1.18.100.91/code version 29656 NA
+mng-rbac-lib-header http://svn.ruijie.net/ssvn12/ppf_mng/rbac-lib/custom/1.18.100.91/code/header version 80080 NA
+mng-cli-lib-header http://svn.ruijie.net/ssvn12/ppf_mng/cli-lib/custom/1.18.100.91/code/header version 80066 NA
+rg-protobuf-tool http://svn.ruijie.net/ssvn12/ppf_libpub/rg-protobuf/custom/1.18.100.91/code/protobuf version 55756 NA
+rg-protobuf http://svn.ruijie.net/ssvn12/ppf_libpub/rg-protobuf/custom/1.18.100.91/code/rg_protobuf_rt version 56339 NA
+mng-syslog-lib-header http://svn.ruijie.net/ssvn12/ppf_mng/syslog-lib/custom/1.18.100.91/code/ version 80043 NA
+rg_thread http://svn.ruijie.net/ssvn12/ppf_libpub/rg_thread/custom/1.18.100.91/code version 55749 NA
+mng-syslog-lib http://svn.ruijie.net/ssvn12/ppf_mng/syslog-lib/custom/1.18.100.91/code version 80043 NA
+dm_header http://svn.ruijie.net/ssvn12/ppf_dev/dm_header/custom/1.18.100.91/code version 18835 NA
+ras_common-lib http://svn.ruijie.net/ssvn12/ppf_ras/ras_common_lib/custom/1.18.100.91/code version 29664 NA
+psh_common-lib http://svn.ruijie.net/ssvn12/ppf_ras/psh_common_lib/custom/1.18.100.91/code version 29657 NA
+psh-lib http://svn.ruijie.net/ssvn12/ppf_ras/psh_lib/custom/1.18.100.91/code version 29667 NA
+rg_public_libs http://svn.ruijie.net/ssvn12/ppf_libpub/rg_public_libs/custom/1.18.100.91/code version 55760 NA
+librg-sys http://svn.ruijie.net/ssvn12/ppf_rg_utils/librg-sys/custom/1.18.100.91/code version 56042 NA
+ef-header http://svn.ruijie.net/ssvn12/ppf_ef/ef-header/custom/1.18.100.91/code version 22964 NA
+net-header http://svn.ruijie.net/ssvn12/ppf_net/net-header/custom/1.18.100.91/code version 22952 NA
+mng-rg_zlog http://svn.ruijie.net/ssvn12/ppf_mng/rg_zlog/custom/1.18.100.91/code version 80063 NA
+mng-rg_at http://svn.ruijie.net/ssvn12/ppf_mng/rg_at/custom/1.18.100.91/code version 80047 NA
+rg_cap_lib http://svn.ruijie.net/ssvn12/ppf_libpub/rg_cap/custom/1.18.100.91/code/rg_cap_lib version 55754 NA
+lsm-lib http://svn.ruijie.net/ssvn12/ppf_intf/intf-lib/custom/1.18.100.91/code version 17995 NA
+librg_app_dmdb http://svn.ruijie.net/ssvn12/ppf_dev/librg_app_dmdb/custom/1.18.100.91/code version 18839 NA
+librg-sys-xml http://svn.ruijie.net/ssvn12/ppf_rg_utils/librg-sys-xml/custom/1.18.100.91/code version 56022 NA
+librg_dm_cmn http://svn.ruijie.net/ssvn12/ppf_dev/librg_dm_cmn/custom/1.18.100.91/code version 18829 NA
+librg_dm http://svn.ruijie.net/ssvn12/ppf_dev/librg_dm/custom/1.18.100.91/code version 18833 NA
+mng-tty-lib_tty-header http://svn.ruijie.net/ssvn12/ppf_mng/tty-lib_tty/custom/1.18.100.91/code/header version 80072 NA
+af_key-header http://svn.ruijie.net/ssvn12/ppf_vpn/af_key-header/custom/1.18.100.91/code version 12722 NA
+ap-ef-lib http://svn.ruijie.net/ssvn12/ppf_intf/ap-ef-lib/custom/1.18.100.91/code version 17988 NA
+cpurule-ko http://svn.ruijie.net/ssvn12/ppf_rg_utils/cpurule-ko/custom/1.18.100.91/code version 56005 NA
+rg-utils-adjust_memory http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-utils-adjust_memory/custom/1.18.100.91/code version 56016 NA
+lsm-kernel http://svn.ruijie.net/ssvn12/ppf_intf/intf-kernel/custom/1.18.100.91/code version 17990 NA
+ef_msg http://svn.ruijie.net/ssvn12/ppf_ef/ef_msg/custom/1.18.100.91/code version 22966 NA
+bridge-header http://svn.ruijie.net/ssvn12/ppf_bridge/bridge-header/custom/1.18.100.91/code version 19346 NA
+net-lib http://svn.ruijie.net/ssvn12/ppf_net/net-lib/custom/1.18.100.91/code version 22948 NA
+rg_lib http://svn.ruijie.net/ssvn12/ppf_libpub/rg_lib/custom/1.18.100.91/code version 55758 NA
+password_policy-lib http://svn.ruijie.net/ssvn12/ppf_libpub/password_policy-lib/custom/1.18.100.91/code version 55764 NA
+password_policy-lib_msg http://svn.ruijie.net/ssvn12/ppf_libpub/password_policy-lib_msg/custom/1.18.100.91/code version 55752 NA
+security-aaa-header http://svn.ruijie.net/ssvn12/ppf_auth/aaa-lib/custom/1.18.100.91/code version 18731 NA
+bridge-lib http://svn.ruijie.net/ssvn12/ppf_bridge/bridge-lib/custom/1.18.100.91/code version 19354 NA
+security-acl-header http://svn.ruijie.net/ssvn12/ppf_policy/acld-lib/custom/1.18.100.91/code version 11632 NA
+security-scc-header http://svn.ruijie.net/ssvn12/ppf_auth/scc-lib/custom/1.18.100.91/code version 18732 NA
+security-acld-lib http://svn.ruijie.net/ssvn12/ppf_policy/acld-lib/custom/1.18.100.91/code version 11632 NA
+mng-rbac-lib http://svn.ruijie.net/ssvn12/ppf_mng/rbac-lib/custom/1.18.100.91/code version 80080 NA
+security-aaa-lib http://svn.ruijie.net/ssvn12/ppf_auth/aaa-lib/custom/1.18.100.91/code version 18731 NA
+mng-tty-lib_tty http://svn.ruijie.net/ssvn12/ppf_mng/tty-lib_tty/custom/1.18.100.91/code version 80072 NA
+oam-trancode-lib http://svn.ruijie.net/ssvn12/ppf_rg_utils/trancode-lib/custom/1.18.100.91/code/trancode version 56013 NA
+rdnd_pub-lib http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_pub_lib/custom/1.18.100.91/code version 29655 NA
+rdnd-lib-mom http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_lib/custom/1.18.100.91/code/librg_rdnd_mom version 29665 NA
+rdnd-lib http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_lib/custom/1.18.100.91/code/librg_rdnd version 29665 NA
+mng-cli-lib http://svn.ruijie.net/ssvn12/ppf_mng/cli-lib/custom/1.18.100.91/code version 80066 NA
+tftp_client_lib http://svn.ruijie.net/ssvn12/ppf_app/tftp_client_lib/custom/1.18.100.91/code version 31082 NA
+mng-tech_support-lib http://svn.ruijie.net/ssvn12/ppf_mng/tech_support-lib/custom/1.18.100.91/code version 80074 NA
+mng-tech_support-lib_msg http://svn.ruijie.net/ssvn12/ppf_mng/tech_support-lib_msg/custom/1.18.100.91/code version 80089 NA
+rgconf http://svn.ruijie.net/ssvn12/ppf_rg_utils/rgconf/custom/1.18.100.91/code version 56010 NA
+tftp-tipc-lib http://svn.ruijie.net/ssvn12/ppf_rg_utils/tftp-tipc-lib/custom/1.18.100.91/code version 56025 NA
+rg_dev_def_g_cap http://svn.ruijie.net/ssvn12/ppf_libpub/cap_file/custom/1.18.100.91/code/dev_cap/g version 55759 NA
+rg_dev_def_p_cap http://svn.ruijie.net/ssvn12/ppf_libpub/cap_file/custom/1.18.100.91/code/dev_cap/p version 55759 NA
+mcast-header http://svn.ruijie.net/ssvn12/ppf_mcast/mcast-header/custom/1.18.100.91/code version 19645 NA
+mng-snmp-lib-header http://svn.ruijie.net/ssvn12/ppf_mng/snmp-lib/custom/1.18.100.91/code/header version 80061 NA
+librg_dm_indep http://svn.ruijie.net/ssvn12/ppf_dev/librg_dm_indep/custom/1.18.100.91/code version 18834 NA
+mng-syslog-lib_lc http://svn.ruijie.net/ssvn12/ppf_mng/syslog-lib_lc/custom/1.18.100.91/code/ version 80045 NA
+rg-proc-ham http://svn.ruijie.net/ssvn12/ppf_ras/rg-proc-ham/custom/1.18.100.91/code version 29670 NA
+dns_client_lib http://svn.ruijie.net/ssvn12/ppf_app/dns_client_lib/custom/1.18.100.91/code version 31066 NA
+mng-tty-lib_vty http://svn.ruijie.net/ssvn12/ppf_mng/tty-lib_vty/custom/1.18.100.91/code version 80042 NA
+pi_app_lib http://svn.ruijie.net/ssvn12/ppf_app/pi_app_lib/custom/1.18.100.91/code version 31081 NA
+dhcp6_client http://svn.ruijie.net/ssvn12/ppf_app/dhcp6_client/custom/1.18.100.91/code version 31069 NA
+dhcp6_client_lib http://svn.ruijie.net/ssvn12/ppf_app/dhcp6_client_lib/custom/1.18.100.91/code version 31078 NA
+ip-header http://svn.ruijie.net/ssvn12/ppf_ip/ip-header/custom/1.18.100.91/code version 15444 NA
+rg_zebos http://svn.ruijie.net/ssvn12/ppf_libpub/rg_zebos/custom/1.18.100.91/code version 55763 NA
+mng-snmp-lib http://svn.ruijie.net/ssvn12/ppf_mng/snmp-lib/custom/1.18.100.91/code version 80061 NA
+vrrp-lib http://svn.ruijie.net/ssvn12/ppf_ip/vrrp-lib/custom/1.18.100.91/code version 15435 NA
+dhcp6_server http://svn.ruijie.net/ssvn12/ppf_app/dhcp6_server/custom/1.18.100.91/code version 31083 NA
+dhcp_client http://svn.ruijie.net/ssvn12/ppf_app/dhcp_client/custom/1.18.100.91/code version 31075 NA
+dhcp_client_lib http://svn.ruijie.net/ssvn12/ppf_app/dhcp_client_lib/custom/1.18.100.91/code version 31086 NA
+dhcp_server_public_lib http://svn.ruijie.net/ssvn12/ppf_app/dhcp_server_public_lib/custom/1.18.100.91/code version 31077 NA
+mng-netconf-lib http://svn.ruijie.net/ssvn12/ppf_mng/netconf-lib/custom/1.18.100.91/code version 80048 NA
+mng-syslog-lib_rfc5424 http://svn.ruijie.net/ssvn12/ppf_mng/syslog-lib_rfc5424/custom/1.18.100.91/code version 80071 NA
+security-scc-lib http://svn.ruijie.net/ssvn12/ppf_auth/scc-lib/custom/1.18.100.91/code version 18732 NA
+dhcp_server http://svn.ruijie.net/ssvn12/ppf_app/dhcp_server/custom/1.18.100.91/code version 31085 NA
+dns_client http://svn.ruijie.net/ssvn12/ppf_app/dns_client/custom/1.18.100.91/code version 31068 NA
+dns_server http://svn.ruijie.net/ssvn12/ppf_app/dns_server/custom/1.18.100.91/code version 31079 NA
+ftp_client_lib http://svn.ruijie.net/ssvn12/ppf_app/ftp_client_lib/custom/1.18.100.91/code version 31071 NA
+ftp_client http://svn.ruijie.net/ssvn12/ppf_app/ftp_client/custom/1.18.100.91/code version 31073 NA
+ftp_server http://svn.ruijie.net/ssvn12/ppf_app/ftp_server/custom/1.18.100.91/code version 31072 NA
+congestctrl http://svn.ruijie.net/ssvn12/ppf_libpub/congestctrl/custom/1.18.100.91/code version 55748 NA
+ipv4_check_lib http://svn.ruijie.net/ssvn12/ppf_app/ipv4_check_lib/custom/1.18.100.91/code version 31070 NA
+vxlan-header http://svn.ruijie.net/ssvn12/ppf_dc/vxlan-header/custom/1.18.100.91/code version 7381 NA
+vxlan-lib http://svn.ruijie.net/ssvn12/ppf_dc/vxlan-lib/custom/1.18.100.91/code version 7379 NA
+ipv4_check http://svn.ruijie.net/ssvn12/ppf_app/ipv4_check/custom/1.18.100.91/code version 31067 NA
+bsp-eg-header git@git.ruijie.net:ppf_plat_drv commitid e77f1a203f5e900b96b512a72a5ae649955a99af ppf_plat_drv-custom-1.18.100.91
+efmp-lib http://svn.ruijie.net/ssvn12/ppf_ef/efmp-lib/custom/1.18.100.91/code version 22968 NA
+ping http://svn.ruijie.net/ssvn12/ppf_detect/ping/custom/1.18.100.91/code version 19884 NA
+librg-sysmon http://svn.ruijie.net/ssvn12/ppf_rg_utils/librg-sysmon/custom/1.18.100.91/code version 56040 NA
+rg_ntp http://svn.ruijie.net/ssvn12/ppf_app/rg_ntp/custom/1.18.100.91/code version 31074 NA
+savi http://svn.ruijie.net/ssvn12/ppf_app/savi/custom/1.18.100.91/code version 31076 NA
+sntp http://svn.ruijie.net/ssvn12/ppf_app/sntp/custom/1.18.100.91/code version 31080 NA
+tftp_server http://svn.ruijie.net/ssvn12/ppf_app/tftp_server/custom/1.18.100.91/code version 31084 NA
+eth-parser-ef-lib http://svn.ruijie.net/ssvn12/ppf_intf/eth-parser-ef-lib/custom/1.18.100.91/code version 17993 NA
+ref-mpls http://svn.ruijie.net/ssvn12/ppf_mpls/ref-mpls/custom/1.18.100.91/code version 20545 NA
+bridge-ef-lib http://svn.ruijie.net/ssvn12/ppf_bridge/bridge-ef-lib/custom/1.18.100.91/code version 19356 NA
+bridge-script-lib http://svn.ruijie.net/ssvn12/ppf_bridge/bridge-script-lib/custom/1.18.100.91/code version 19355 NA
+mng-grpc-lib http://svn.ruijie.net/ssvn12/ppf_mng/grpc-lib/custom/1.18.100.91/code version 81131 NA
+oam-cwmp-lib http://svn.ruijie.net/ssvn12/ppf_mng/cwmp-lib/custom/1.18.100.91/code version 80049 NA
+bridge-usr http://svn.ruijie.net/ssvn12/ppf_bridge/bridge-usr/custom/1.18.100.91/code version 19350 NA
+dldp-usr http://svn.ruijie.net/ssvn12/ppf_detect/dldp-usr/custom/1.18.100.91/code version 19890 NA
+erps-usr http://svn.ruijie.net/ssvn12/ppf_bridge/erps-usr/custom/1.18.100.91/code version 19353 NA
+gvrp-usr http://svn.ruijie.net/ssvn12/ppf_bridge/gvrp-usr/custom/1.18.100.91/code version 19348 NA
+lldp-lib http://svn.ruijie.net/ssvn12/ppf_bridge/lldp-lib/custom/1.18.100.91/code version 19352 NA
+lldp-usr http://svn.ruijie.net/ssvn12/ppf_bridge/lldp-usr/custom/1.18.100.91/code version 19349 NA
+mng-syslog-lib_pack http://svn.ruijie.net/ssvn12/ppf_mng/syslog-lib_pack/custom/1.18.100.91/code version 80078 NA
+libcscm http://svn.ruijie.net/ssvn12/ppf_ras/libcscm/custom/1.18.100.91/code version 29669 NA
+rg_log_lib http://svn.ruijie.net/ssvn12/ppf_mng/rg_log/custom/1.18.100.91/code/rg_log/rg_log_lib version 80091 NA
+mstp-usr http://svn.ruijie.net/ssvn12/ppf_bridge/mstp-usr/custom/1.18.100.91/code version 19347 NA
+reup-usr http://svn.ruijie.net/ssvn12/ppf_bridge/reup-usr/custom/1.18.100.91/code version 19351 NA
+librg-memui http://svn.ruijie.net/ssvn12/ppf_rg_utils/librg-memui/custom/1.18.100.91/code version 56034 NA
+rldp-usr http://svn.ruijie.net/ssvn12/ppf_bridge/rldp-usr/custom/1.18.100.91/code version 19357 NA
+librg-license http://svn.ruijie.net/ssvn12/ppf_rg_utils/librg-license/custom/1.18.100.91/code version 56044 NA
+pfc http://svn.ruijie.net/ssvn12/ppf_dc/pfc/custom/1.18.100.91/code version 7378 NA
+rdma http://svn.ruijie.net/ssvn12/ppf_dc/rdma/custom/1.18.100.91/code version 7382 NA
+vxlan http://svn.ruijie.net/ssvn12/ppf_dc/vxlan/custom/1.18.100.91/code version 7380 NA
+vxlan-kernel http://svn.ruijie.net/ssvn12/ppf_dc/vxlan-kernel/custom/1.18.100.91/code version 7377 NA
+bmc_mng http://svn.ruijie.net/ssvn12/ppf_dev/bmc_mng/yjy/custom/1.18.100.91/code version 18831 NA
+dfd_stub http://svn.ruijie.net/ssvn12/ppf_dev/dfd_stub/custom/1.18.100.91/code version 18837 NA
+rg-license http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-license/custom/1.18.100.91/code version 56018 NA
+dm_app_pd http://svn.ruijie.net/ssvn12/ppf_dev/dm_app_pd/custom/1.18.100.91/code version 18836 NA
+upgrade_lib http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_lib/custom/1.18.100.91/code version 56035 NA
+dm_dp http://svn.ruijie.net/ssvn12/ppf_dev/dm_dp/custom/1.18.100.91/code version 18838 NA
+dm_ucm http://svn.ruijie.net/ssvn12/ppf_dev/dm_ucm/custom/1.18.100.91/code version 18840 NA
+librg_dcm http://svn.ruijie.net/ssvn12/ppf_dev/librg_dcm/custom/1.18.100.91/code version 18830 NA
+vsd http://svn.ruijie.net/ssvn12/ppf_dev/vsd/custom/1.18.100.91/code version 18832 NA
+efmp-kernel http://svn.ruijie.net/ssvn12/ppf_ef/efmp-kernel/custom/1.18.100.91/code version 22962 NA
+af_packet http://svn.ruijie.net/ssvn12/ppf_ef/af_packet/custom/1.18.100.91/code version 22961 NA
+bfd-lib http://svn.ruijie.net/ssvn12/ppf_detect/bfd-lib/custom/1.18.100.91/code version 19889 NA
+fpm http://svn.ruijie.net/ssvn12/ppf_ef/fpm/custom/1.18.100.91/code version 22967 NA
+ip-proxy-lib http://svn.ruijie.net/ssvn12/ppf_net/ip-proxy-lib/custom/1.18.100.91/code version 22950 NA
+ref_ip http://svn.ruijie.net/ssvn12/ppf_ef/ref_ip/custom/1.18.100.91/code version 22963 NA
+ref_ipv6 http://svn.ruijie.net/ssvn12/ppf_ef/ref_ipv6/custom/1.18.100.91/code version 22965 NA
+efmp http://svn.ruijie.net/ssvn12/ppf_ef/efmp/custom/1.18.100.91/code version 22969 NA
+ref_proxy http://svn.ruijie.net/ssvn12/ppf_ef/ref_proxy/custom/1.18.100.91/code version 22970 NA
+hotpatch_test http://svn.ruijie.net/ssvn12/ppf_rg_utils/utils_tests/custom/1.18.100.91/code version 56006 NA
+mpls-lib http://svn.ruijie.net/ssvn12/ppf_mpls/mpls-lib/custom/1.18.100.91/code version 20541 NA
+lspv-lib http://svn.ruijie.net/ssvn12/ppf_mpls/lspv-lib/custom/1.18.100.91/code version 20544 NA
+bfd-usr http://svn.ruijie.net/ssvn12/ppf_detect/bfd-usr/custom/1.18.100.91/code/usr version 20132 NA
+tunnel-kernel http://svn.ruijie.net/ssvn12/ppf_ip/tunnel-kernel/custom/1.18.100.91/code version 15442 NA
+tunnel-lib http://svn.ruijie.net/ssvn12/ppf_ip/tunnel-lib/custom/1.18.100.91/code version 15441 NA
+tunnel-usr http://svn.ruijie.net/ssvn12/ppf_ip/tunnel-usr/custom/1.18.100.91/code/usr version 15437 NA
+urpf-kernel http://svn.ruijie.net/ssvn12/ppf_ip/urpf-kernel/custom/1.18.100.91/code version 15440 NA
+urpf-lib http://svn.ruijie.net/ssvn12/ppf_ip/urpf-lib/custom/1.18.100.91/code version 15436 NA
+urpf-usr http://svn.ruijie.net/ssvn12/ppf_ip/urpf-usr/custom/1.18.100.91/code version 15443 NA
+vrrp-usr http://svn.ruijie.net/ssvn12/ppf_ip/vrrp-usr/custom/1.18.100.91/code version 15438 NA
+oam-track-lib http://svn.ruijie.net/ssvn12/ppf_detect/track-lib/custom/1.18.100.91/code version 19881 NA
+vrrp_plus-usr http://svn.ruijie.net/ssvn12/ppf_ip/vrrp_plus-usr/custom/1.18.100.91/code version 15439 NA
+ipfix-lib http://svn.ruijie.net/ssvn12/ppf_monitor/ipfix-lib/custom/1.18.100.91/code version 8799 NA
+ipfix-usr http://svn.ruijie.net/ssvn12/ppf_monitor/ipfix-usr/custom/1.18.100.91/code version 8802 NA
+sampling-usr http://svn.ruijie.net/ssvn12/ppf_monitor/sampling-usr/custom/1.18.100.91/code version 8801 NA
+sflow-lib http://svn.ruijie.net/ssvn12/ppf_monitor/sflow-lib/custom/1.18.100.91/code version 8800 NA
+sflow-usr http://svn.ruijie.net/ssvn12/ppf_monitor/sflow-usr/custom/1.18.100.91/code version 8805 NA
+app_df http://svn.ruijie.net/ssvn12/ppf_libpub/app_df/custom/1.18.100.91/code version 55766 NA
+common_script http://svn.ruijie.net/ssvn12/ppf_libpub/common_script/custom/1.18.100.91/code version 55767 NA
+group http://svn.ruijie.net/ssvn12/ppf_libpub/group/custom/1.18.100.91/code version 55768 NA
+rg_cap_xml_lib http://svn.ruijie.net/ssvn12/ppf_libpub/rg_cap/custom/1.18.100.91/code/rg_cap_xml_lib version 55754 NA
+librg_cap_test http://svn.ruijie.net/ssvn12/ppf_libpub/rg_cap/custom/1.18.100.91/code/librg_cap_test version 55754 NA
+password_policy-usr http://svn.ruijie.net/ssvn12/ppf_libpub/password_policy-usr/custom/1.18.100.91/code version 55751 NA
+pcre-lib http://svn.ruijie.net/ssvn12/ppf_libpub/pcre-lib/custom/1.18.100.91/code version 55761 NA
+rg-mom-rdndctrl http://svn.ruijie.net/ssvn12/ppf_libpub/rg-mom-rdndctrl/custom/1.18.100.91/code version 55755 NA
+rg-mom-proto-pass http://svn.ruijie.net/ssvn12/ppf_libpub/rg-mom-proto-pass/custom/1.18.100.91/code version 55762 NA
+rg-sdk http://svn.ruijie.net/ssvn12/ppf_libpub/rg-sdk/custom/1.18.100.91/code version 55753 NA
+rg_cap http://svn.ruijie.net/ssvn12/ppf_libpub/rg_cap/custom/1.18.100.91/code/rg_cap version 55754 NA
+rg_cap_tran http://svn.ruijie.net/ssvn12/ppf_libpub/rg_cap/custom/1.18.100.91/code/rg_cap_tran version 55754 NA
+timerange-lib http://svn.ruijie.net/ssvn12/ppf_libpub/timerange-lib/custom/1.18.100.91/code version 55757 NA
+timerange http://svn.ruijie.net/ssvn12/ppf_libpub/timerange/custom/1.18.100.91/code version 55765 NA
+eth-subif-ef-lib http://svn.ruijie.net/ssvn12/ppf_intf/eth-subif-ef-lib/custom/1.18.100.91/code version 17989 NA
+lacp-usr http://svn.ruijie.net/ssvn12/ppf_intf/lacp-usr/custom/1.18.100.91/code version 17991 NA
+alarm_common_lib http://svn.ruijie.net/ssvn12/ppf_ras/alarm_common_lib/custom/1.18.100.91/code version 29662 NA
+alarm_lib http://svn.ruijie.net/ssvn12/ppf_ras/alarm_lib/custom/1.18.100.91/code/ version 29661 NA
+lsm-usr http://svn.ruijie.net/ssvn12/ppf_intf/intf-usr/custom/1.18.100.91/code version 17992 NA
+mlag-usr http://svn.ruijie.net/ssvn12/ppf_intf/mlag-usr/custom/1.18.100.91/code version 17994 NA
+qos-lib http://svn.ruijie.net/ssvn12/ppf_policy/qos-lib/custom/1.18.100.91/code version 11804 NA
+qos-usr http://svn.ruijie.net/ssvn12/ppf_policy/qos-usr/custom/1.18.100.91/code version 11805 NA
+span-lib http://svn.ruijie.net/ssvn12/ppf_monitor/span-lib/custom/1.18.100.91/code version 8804 NA
+span-usr http://svn.ruijie.net/ssvn12/ppf_monitor/span-usr/custom/1.18.100.91/code version 8903 NA
+ef-mcast http://svn.ruijie.net/ssvn12/ppf_mcast/ef-mcast/custom/1.18.100.91/code version 19647 NA
+msf-lib http://svn.ruijie.net/ssvn12/ppf_mcast/msf-lib/custom/1.18.100.91/code version 19650 NA
+igmp-snp http://svn.ruijie.net/ssvn12/ppf_mcast/igmp-snp/custom/1.18.100.91/code version 19652 NA
+igmp http://svn.ruijie.net/ssvn12/ppf_mcast/igmp/custom/1.18.100.91/code version 19648 NA
+mld-snp http://svn.ruijie.net/ssvn12/ppf_mcast/mld-snp/custom/1.18.100.91/code version 19657 NA
+mld http://svn.ruijie.net/ssvn12/ppf_mcast/mld/custom/1.18.100.91/code version 19646 NA
+msdpd http://svn.ruijie.net/ssvn12/ppf_mcast/msdpd/custom/1.18.100.91/code version 19655 NA
+msf http://svn.ruijie.net/ssvn12/ppf_mcast/msf/custom/1.18.100.91/code version 19653 NA
+msf6 http://svn.ruijie.net/ssvn12/ppf_mcast/msf6/custom/1.18.100.91/code version 19654 NA
+pdmd http://svn.ruijie.net/ssvn12/ppf_mcast/pdmd/custom/1.18.100.91/code version 19656 NA
+pim6d http://svn.ruijie.net/ssvn12/ppf_mcast/pim6d/custom/1.18.100.91/code version 19649 NA
+pimd http://svn.ruijie.net/ssvn12/ppf_mcast/pimd/custom/1.18.100.91/code version 19651 NA
+libyang-lib http://svn.ruijie.net/ssvn12/ppf_mng/libyang-lib/custom/1.18.100.91/code version 80060 NA
+mng-pub-lib http://svn.ruijie.net/ssvn12/ppf_mng/pub-lib/custom/1.18.100.91/code/mng version 80073 NA
+mng-security-log http://svn.ruijie.net/ssvn12/ppf_mng/security-log/custom/1.18.100.91/code version 80081 NA
+mng-cli-usr http://svn.ruijie.net/ssvn12/ppf_mng/cli-usr/custom/1.18.100.91/code version 80085 NA
+mng-cli_proxy-usr http://svn.ruijie.net/ssvn12/ppf_mng/cli_proxy-usr/custom/1.18.100.91/code version 80057 NA
+mng-config-usr http://svn.ruijie.net/ssvn12/ppf_mng/config-usr/custom/1.18.100.91/code version 80069 NA
+mng-remote_api-lib http://svn.ruijie.net/ssvn12/ppf_mng/remote_api-lib/custom/1.18.100.91/code version 80087 NA
+mng-grpc-usr http://svn.ruijie.net/ssvn12/ppf_mng/grpc-usr/custom/1.18.100.91/code version 81130 NA
+oam-oampub-lib http://svn.ruijie.net/ssvn12/ppf_mng/pub-lib/custom/1.18.100.91/code/oam version 80073 NA
+mng-ipmix-usr http://svn.ruijie.net/ssvn12/ppf_mng/ipmix-usr/custom/1.18.100.91/code/ version 80065 NA
+mng-tty-lib_tty_security http://svn.ruijie.net/ssvn12/ppf_mng/tty-lib_tty_security/custom/1.18.100.91/code version 80086 NA
+mng-netconf-usr http://svn.ruijie.net/ssvn12/ppf_mng/netconf-usr/custom/1.18.100.91/code version 80062 NA
+mng-openssh-usr http://svn.ruijie.net/ssvn12/ppf_mng/openssh-usr/custom/1.18.100.91/code version 80077 NA
+mng-python_shell-usr http://svn.ruijie.net/ssvn12/ppf_mng/python_shell-usr/custom/1.18.100.91/code version 80039 NA
+mng-rbac-usr http://svn.ruijie.net/ssvn12/ppf_mng/rbac-usr/custom/1.18.100.91/code version 80068 NA
+mng-rg_drdb http://svn.ruijie.net/ssvn12/ppf_mng/rg_drdb/custom/1.18.100.91/code version 80079 NA
+mng-rgcli_tool http://svn.ruijie.net/ssvn12/ppf_mng/rgcli_tool/custom/1.18.100.91/code/ version 80082 NA
+mng-rl_con-usr http://svn.ruijie.net/ssvn12/ppf_mng/rl_con-usr/custom/1.18.100.91/code version 80041 NA
+mng-rmon-usr http://svn.ruijie.net/ssvn12/ppf_mng/rmon-usr/custom/1.18.100.91/code version 80090 NA
+mng-snmp-usr http://svn.ruijie.net/ssvn12/ppf_mng/snmp-usr/custom/1.18.100.91/code version 80083 NA
+mng-ssh-usr http://svn.ruijie.net/ssvn12/ppf_mng/ssh-usr/custom/1.18.100.91/code version 80056 NA
+mng-ssh_client-usr http://svn.ruijie.net/ssvn12/ppf_mng/ssh_client-usr/custom/1.18.100.91/code version 80053 NA
+sem http://svn.ruijie.net/ssvn12/ppf_ras/sem/custom/1.18.100.91/code version 29675 NA
+mng-syslog-usr http://svn.ruijie.net/ssvn12/ppf_mng/syslog-usr/custom/1.18.100.91/code version 80088 NA
+mng-tech_support-usr http://svn.ruijie.net/ssvn12/ppf_mng/tech_support-usr/custom/1.18.100.91/code version 80038 NA
+mng-telnetc-usr http://svn.ruijie.net/ssvn12/ppf_mng/telnetc-usr/custom/1.18.100.91/code version 80054 NA
+mng-telnetd-usr http://svn.ruijie.net/ssvn12/ppf_mng/telnetd-usr/custom/1.18.100.91/code version 80052 NA
+mng-tty-usr http://svn.ruijie.net/ssvn12/ppf_mng/tty-usr/custom/1.18.100.91/code version 80055 NA
+mng-zlogd http://svn.ruijie.net/ssvn12/ppf_mng/zlogd/custom/1.18.100.91/code version 80058 NA
+rg_log http://svn.ruijie.net/ssvn12/ppf_mng/rg_log/custom/1.18.100.91/code/rg_log version 80091 NA
+rg_oam_agent http://svn.ruijie.net/ssvn12/ppf_mng/rg_oam/custom/1.18.100.91/code/rg_oam_agent version 80084 NA
+rg_oam_server http://svn.ruijie.net/ssvn12/ppf_mng/rg_oam/custom/1.18.100.91/code/rg_oam_server version 80084 NA
+ldpd http://svn.ruijie.net/ssvn12/ppf_mpls/ldpd/custom/1.18.100.91/code version 20542 NA
+mpls-rib http://svn.ruijie.net/ssvn12/ppf_mpls/mpls/custom/1.18.100.91/code version 20736 NA
+ref-srp http://svn.ruijie.net/ssvn12/ppf_mpls/ref-srp/custom/1.18.100.91/code version 20547 NA
+ref-srv6 http://svn.ruijie.net/ssvn12/ppf_mpls/ref-srv6/custom/1.18.100.91/code version 20540 NA
+srp http://svn.ruijie.net/ssvn12/ppf_mpls/srp/custom/1.18.100.91/code version 20543 NA
+arp_suppress http://svn.ruijie.net/ssvn12/ppf_net/arp_suppress/custom/1.18.100.91/code version 22954 NA
+inpath-lib http://svn.ruijie.net/ssvn12/ppf_net/inpath-lib/custom/1.18.100.91/code version 22953 NA
+ipv4-kernel http://svn.ruijie.net/ssvn12/ppf_net/ipv4-kernel/custom/1.18.100.91/code version 22946 NA
+ipv6-kernel http://svn.ruijie.net/ssvn12/ppf_net/ipv6-kernel/custom/1.18.100.91/code version 22949 NA
+nd_suppress http://svn.ruijie.net/ssvn12/ppf_net/nd_suppress/custom/1.18.100.91/code version 22947 NA
+net-usr http://svn.ruijie.net/ssvn12/ppf_net/net-usr/custom/1.18.100.91/code version 22951 NA
+oam-auto_provision-usr http://svn.ruijie.net/ssvn12/ppf_mng/auto_provision-usr/custom/1.18.100.91/code version 80059 NA
+oam-efm-lib http://svn.ruijie.net/ssvn12/ppf_detect/efm-lib/custom/1.18.100.91/code version 19891 NA
+oam-efm-usr http://svn.ruijie.net/ssvn12/ppf_detect/efm-usr/custom/1.18.100.91/code version 19886 NA
+oam-http_agent-lib http://svn.ruijie.net/ssvn12/ppf_mng/http_agent-lib/custom/1.18.100.91/code version 80067 NA
+oam-http_fpm-usr http://svn.ruijie.net/ssvn12/ppf_mng/http_fpm-usr/custom/1.18.100.91/code version 80040 NA
+oam-http_update-lib http://svn.ruijie.net/ssvn12/ppf_mng/http_update-lib/custom/1.18.100.91/code version 80050 NA
+oam-http_util-lib http://svn.ruijie.net/ssvn12/ppf_mng/http_util-lib/custom/1.18.100.91/code version 80044 NA
+oam-packet_probe-usr http://svn.ruijie.net/ssvn12/ppf_detect/packet_probe/custom/1.18.100.91/code version 19885 NA
+oam-rns-lib http://svn.ruijie.net/ssvn12/ppf_detect/rns-lib/custom/1.18.100.91/code version 19883 NA
+oam-rns-usr http://svn.ruijie.net/ssvn12/ppf_detect/rns-usr/custom/1.18.100.91/code version 19892 NA
+oam-rns_server-usr http://svn.ruijie.net/ssvn12/ppf_detect/rns-server/custom/1.18.100.91/code version 19887 NA
+oam-rnsmib-usr http://svn.ruijie.net/ssvn12/ppf_detect/rns-mib/custom/1.18.100.91/code version 19882 NA
+oam-track-usr http://svn.ruijie.net/ssvn12/ppf_detect/track-usr/custom/1.18.100.91/code version 19888 NA
+oam-trancode-lib_lua http://svn.ruijie.net/ssvn12/ppf_rg_utils/trancode-lib/custom/1.18.100.91/code/trancode-lua version 56013 NA
+oam-zam-usr http://svn.ruijie.net/ssvn12/ppf_mng/zam-usr/custom/1.18.100.91/code/zam version 80070 NA
+oam-zam_cli-usr http://svn.ruijie.net/ssvn12/ppf_mng/zam-usr/custom/1.18.100.91/code/zam_cli version 80070 NA
+openflow-lib http://svn.ruijie.net/ssvn12/ppf_mng/openflow-lib/custom/1.18.100.91/code version 80046 NA
+openflow http://svn.ruijie.net/ssvn12/ppf_mng/openflow/custom/1.18.100.91/code version 80075 NA
+os_debug-git git@git.ruijie.net:ppf_os_debug commitid 0f886ff9bd7c2eaaba3cf567b9a8b659d428504f ppf_os_debug-custom-1.18.100.91
+os_utils-git git@git.ruijie.net:ppf_os_utils commitid 53a532d72d55415e7357431ff26933101313a2e5 ppf_os_utils-custom-1.18.100.91
+alarm http://svn.ruijie.net/ssvn12/ppf_ras/alarm/custom/1.18.100.91/code/ version 29660 NA
+cmdk http://svn.ruijie.net/ssvn12/ppf_ras/cmdk/custom/1.18.100.91/code version 29672 NA
+hdf-lib http://svn.ruijie.net/ssvn12/ppf_ras/hdf/custom/1.18.100.91/code/hdf-lib version 29671 NA
+hdf_dev http://svn.ruijie.net/ssvn12/ppf_ras/hdf/custom/1.18.100.91/code/hdf_dev version 29671 NA
+hdf_mgnt http://svn.ruijie.net/ssvn12/ppf_ras/hdf/custom/1.18.100.91/code/hdf_mgnt version 29671 NA
+hdf_ods http://svn.ruijie.net/ssvn12/ppf_ras/hdf/custom/1.18.100.91/code/hdf_ods version 29671 NA
+hdf_sys http://svn.ruijie.net/ssvn12/ppf_ras/hdf/custom/1.18.100.91/code/hdf_sys version 29671 NA
+psh_proxy http://svn.ruijie.net/ssvn12/ppf_ras/psh_proxy/custom/1.18.100.91/code version 29673 NA
+psh_server http://svn.ruijie.net/ssvn12/ppf_ras/psh_usr/custom/1.18.100.91/code/user_server version 29658 NA
+psh_toolkit http://svn.ruijie.net/ssvn12/ppf_ras/psh_usr/custom/1.18.100.91/code/user_toolkit version 29658 NA
+pshk http://svn.ruijie.net/ssvn12/ppf_ras/pshk/custom/1.18.100.91/code version 29663 NA
+rbmc_monitor http://svn.ruijie.net/ssvn12/ppf_ras/rbmc_monitor/custom/1.18.100.91/code version 29668 NA
+rdnd_proxy http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_usr/custom/1.18.100.91/code/user_proxy version 29659 NA
+rg-lowmem-killer http://svn.ruijie.net/ssvn12/ppf_ras/rg-lowmem-killer/custom/1.18.100.91/code version 29674 NA
+rg-sysha http://svn.ruijie.net/ssvn12/ppf_ras/rg-sysha/custom/1.18.100.91/code version 29676 NA
+rg_rdnd_demo http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_usr/custom/1.18.100.91/code/user_demo version 29659 NA
+rg_rdnd_faultinjection http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_usr/custom/1.18.100.91/code/user_faultinjection version 29659 NA
+rg_rdnd_mom_demo http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_usr/custom/1.18.100.91/code/user_mom_demo version 29659 NA
+rg_rdnd_server http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_usr/custom/1.18.100.91/code/user_server version 29659 NA
+rg_rdnd_statctrl http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_usr/custom/1.18.100.91/code/user_statctrl version 29659 NA
+rg_rdnd_stubclient http://svn.ruijie.net/ssvn12/ppf_ras/rdnd_usr/custom/1.18.100.91/code/user_stubclient version 29659 NA
+proc_info http://svn.ruijie.net/ssvn12/ppf_rg_utils/proc_info/custom/1.18.100.91/code version 56014 NA
+rg_thread_det http://svn.ruijie.net/ssvn12/ppf_ras/rg_thread_det/custom/1.18.100.91/code version 29666 NA
+serial_record http://svn.ruijie.net/ssvn12/ppf_ras/hdf/custom/1.18.100.91/code/hdf_ods/serial_record/ version 29671 NA
+cmpnt_upgrade_db http://svn.ruijie.net/ssvn12/ppf_rg_utils/cmpnt_upgrade/custom/1.18.100.91/code version 56012 NA
+libhotpatch_ctrl http://svn.ruijie.net/ssvn12/ppf_rg_utils/libhotpatch_manager/custom/1.18.100.91/code version 56007 NA
+cmpnt_upgrade_begin http://svn.ruijie.net/ssvn12/ppf_rg_utils/cmpnt_upgrade/custom/1.18.100.91/code version 56012 NA
+cmpnt_upgrade_client http://svn.ruijie.net/ssvn12/ppf_rg_utils/cmpnt_upgrade/custom/1.18.100.91/code version 56012 NA
+cmpnt_upgrade_server http://svn.ruijie.net/ssvn12/ppf_rg_utils/cmpnt_upgrade/custom/1.18.100.91/code version 56012 NA
+cpconfig http://svn.ruijie.net/ssvn12/ppf_rg_utils/cpconfig/custom/1.18.100.91/code version 56048 NA
+cpurule-cli http://svn.ruijie.net/ssvn12/ppf_rg_utils/cpurule-cli/custom/1.18.100.91/code version 56015 NA
+flinfod http://svn.ruijie.net/ssvn12/ppf_rg_utils/flinfod/custom/1.18.100.91/code version 56020 NA
+ifnet http://svn.ruijie.net/ssvn12/ppf_rg_utils/ifnet/custom/1.18.100.91/code version 56046 NA
+kernel_debug_script http://svn.ruijie.net/ssvn12/ppf_rg_utils/comm_script/custom/1.18.100.91/code version 56039 NA
+libhotpatch_app http://svn.ruijie.net/ssvn12/ppf_rg_utils/libhotpatch_manager/custom/1.18.100.91/code version 56007 NA
+mdev-logger http://svn.ruijie.net/ssvn12/ppf_rg_utils/mdev-logger/custom/1.18.100.91/code version 56029 NA
+rg-coredump-mon http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-coredump-mon/custom/1.18.100.91/code version 56011 NA
+rg-ftp-tipc http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-ftp-tipc/custom/1.18.100.91/code/ version 56032 NA
+rg-fsui http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-fsui/custom/1.18.100.91/code version 56037 NA
+rg-ftpd-tipc http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-ftpd-tipc/custom/1.18.100.91/code version 56027 NA
+rg-resmon http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-resmon/custom/1.18.100.91/code version 56031 NA
+rg-sysfs http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-sysfs/custom/1.18.100.91/code version 56038 NA
+rg-sysmon http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-sysmon/custom/1.18.100.91/code version 56024 NA
+rg_issu http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg-issu/custom/1.18.100.91/code version 56017 NA
+rg_process_mem http://svn.ruijie.net/ssvn12/ppf_rg_utils/rg_process_mem/custom/1.18.100.69/code version 48108 NA
+startup http://svn.ruijie.net/ssvn12/ppf_rg_utils/startup/custom/1.18.100.91/code version 56003 NA
+tftp-tipc-client-elf http://svn.ruijie.net/ssvn12/ppf_rg_utils/tftp-tipc-client-elf/custom/1.18.100.91/code version 56043 NA
+tftp-tipc-server http://svn.ruijie.net/ssvn12/ppf_rg_utils/tftp-tipc-server/custom/1.18.100.91/code version 56036 NA
+tipc-drv http://svn.ruijie.net/ssvn12/ppf_rg_utils/tipc-drv/custom/1.18.100.91/code version 56026 NA
+tipc-tap http://svn.ruijie.net/ssvn12/ppf_rg_utils/tipc-tap/custom/1.18.100.91/code version 56021 NA
+upgrade_app_download http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_app_download/custom/1.18.100.91/code version 56028 NA
+upgrade_app_global http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_app_global/custom/1.18.100.91/code version 56023 NA
+upgrade_app_local http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_app_local/custom/1.18.100.91/code version 56009 NA
+upgrade_app_local_spec http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_app_local_spec/custom/1.18.100.91/code version 56019 NA
+upgrade_message http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_platform/custom/1.18.100.91/code version 56004 NA
+upgrade_auto_sync http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_auto_sync/custom/1.18.100.91/code version 56047 NA
+upgrade_cli http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_cli/custom/1.18.100.91/code version 56008 NA
+upgrade_domain http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_platform/custom/1.18.100.91/code version 56004 NA
+upgrade_global http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_platform/custom/1.18.100.91/code version 56004 NA
+upgrade_local http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_platform/custom/1.18.100.91/code version 56004 NA
+upgrade_sync_server http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_sync_server/custom/1.18.100.91/code version 56033 NA
+upgrade_tipc http://svn.ruijie.net/ssvn12/ppf_rg_utils/upgrade_platform/custom/1.18.100.91/code version 56004 NA
+ver_agent http://svn.ruijie.net/ssvn12/ppf_rg_utils/ver_agent/custom/1.18.100.91/code version 56041 NA
+macsec-usr http://svn.ruijie.net/ssvn12/ppf_sec/macsec/custom/1.18.100.91/code version 2453 NA
+security-aaa-app http://svn.ruijie.net/ssvn12/ppf_auth/aaa-app/custom/1.18.100.91/code version 18733 NA
+security-acld-app http://svn.ruijie.net/ssvn12/ppf_policy/acld-app/custom/1.18.100.91/code version 11701 NA
+security-aclk-kernel http://svn.ruijie.net/ssvn12/ppf_policy/aclk-kernel/custom/1.18.100.91/code version 11635 NA
+security-radius-app http://svn.ruijie.net/ssvn12/ppf_auth/radius-app/custom/1.18.100.91/code version 18729 NA
+security-scc-app http://svn.ruijie.net/ssvn12/ppf_auth/scc-app/custom/1.18.100.91/code version 18730 NA
+security-tacplus-app http://svn.ruijie.net/ssvn12/ppf_auth/tacplus-app/custom/1.18.100.91/code version 18734 NA
+support_lib http://svn.ruijie.net/ssvn12/ppf_support_lib/support_lib/custom/1.18.100.91/code version 20701 NA
+bgp http://svn.ruijie.net/ssvn12/ppf_ucast/bgp/custom/1.18.100.91/code version 62497 NA
+ef-pbr http://svn.ruijie.net/ssvn12/ppf_ucast/ef-pbr/custom/1.18.100.91/code version 61925 NA
+isis http://svn.ruijie.net/ssvn12/ppf_ucast/isis/custom/1.18.100.91/code version 62496 NA
+nsm http://svn.ruijie.net/ssvn12/ppf_ucast/nsm/custom/1.18.100.91/code version 61920 NA
+ospf http://svn.ruijie.net/ssvn12/ppf_ucast/ospf/custom/1.18.100.91/code version 61915 NA
+ospfv3 http://svn.ruijie.net/ssvn12/ppf_ucast/ospfv3/custom/1.18.100.91/code version 61919 NA
+pbr http://svn.ruijie.net/ssvn12/ppf_ucast/pbr/custom/1.18.100.91/code version 61923 NA
+psar http://svn.ruijie.net/ssvn12/ppf_ucast/psar/yjy/custom/1.18.100.91/code version 61916 NA
+rip http://svn.ruijie.net/ssvn12/ppf_ucast/rip/custom/1.18.100.91/code version 61922 NA
+ripng http://svn.ruijie.net/ssvn12/ppf_ucast/ripng/custom/1.18.100.91/code version 61917 NA
+rpi http://svn.ruijie.net/ssvn12/ppf_ucast/rpi/custom/1.18.100.91/code version 61918 NA
+af_key-kernel http://svn.ruijie.net/ssvn12/ppf_vpn/af_key-kernel/custom/1.18.100.91/code version 12723 NA
+==============================================
+
+Magdir
+TZ
+adduser.sh
+alarm
+baseline.config
+board.d
+cfg
+cli
+cli_start
+cmdmap
+cmpnt
+cmpnt_product.conf
+config
+corrected
+cpurule_config
+crontabs
+dcm.conf
+device_info
+dfx
+diag.sh
+~ # 
+~ # echo

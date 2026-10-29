@@ -1,0 +1,22 @@
+CPU0       CPU1       
+  1:          9          0   IO-APIC   1-edge      i8042
+  3:      12480          0   IO-APIC   3-edge      UART0, serial
+  8:          0          0   IO-APIC   8-edge      rtc0
+  9:          0          0   IO-APIC   9-fasteoi   acpi
+ 10:          0         22   IO-APIC  10-fasteoi   ehci_hcd:usb1, uio_pci_generic, uio_pci_generic, uio_pci_generic, uio_pci_generic, uio_pci_generic
+ 11:          0          0   IO-APIC  11-fasteoi   uio_pci_generic, uio_pci_generic, uio_pci_generic, uio_pci_generic, uio_pci_generic
+ 12:          0          3   IO-APIC  12-edge      i8042
+ 14:     561365          0   IO-APIC  14-edge      ata_piix
+ 15:          0          0   IO-APIC  15-edge      ata_piix
+ 24:          0          0   PCI-MSI 49152-edge      virtio0-config
+ 25:          0          0   PCI-MSI 49153-edge      virtio0-input.0
+ 26:         82          0   PCI-MSI 49154-edge      virtio0-output.0
+ 27:          0          0   PCI-MSI 49155-edge      virtio0-input.1
+ 28:          0          0   PCI-MSI 49156-edge      virtio0-output.1
+NMI:          0          0   Non-maskable interrupts
+LOC: 1717050172  157486649   Local timer interrupts
+SPU:          0          0   Spurious interrupts
+PMI:          0          0   Performance monitoring interrupts
+IWI:          0          0   IRQ work interrupts
+~ # 
+~ # echo

@@ -1,0 +1,6 @@
+Power-id Power-type           Status     Hardware-Version Serial                          Supply(W) 
+-------- -------------------- ---------- ---------------- ------------------------------- --------- 
+1/1      N/A                  no-present N/A              N/A                             N/A       
+1/2      RG-PA150I-F          ok         1.50             R253A2342150308                 150       
+2/1      N/A                  no-present N/A              N/A                             N/A       
+2/2      RG-PA150I-F          ok         1.50             R253A2342150644                 150

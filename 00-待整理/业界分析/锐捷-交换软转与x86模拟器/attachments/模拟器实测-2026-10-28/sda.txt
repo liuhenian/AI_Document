@@ -1,0 +1,3 @@
+ls /sbin | grep -i -E 'sda|sdk|bcm|ctc|dal' ; echo '---ko---'; lsmod | grep -i -E 'bcm|ctc|dal|sdk'
+
+echo

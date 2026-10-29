@@ -1,0 +1,288 @@
+Building configuration...
+Current configuration: 5637 bytes
+
+version S5760X_RGOS 12.6(4)B0706
+!
+ids
+!
+snmp-agent trap disable event-name DemoEvent
+snmp-agent trap disable alarm-name DemoGlobalAlarm
+snmp-agent trap disable alarm-name DemoLocalAlarm
+snmp-agent trap disable alarm-name ObjAlarm
+!
+cwmp
+ cpe inform interval 30
+!
+install switch 1 S5760C-48GT4XS-X
+install switch 2 S5760C-48GT4XS-X
+install 1/0 S5760C-48GT4XS-X
+install 2/0 S5760C-48GT4XS-X
+!
+system-sn 1234942570080
+sysmac 00d0.f822.3595
+!
+webmaster level 0 username admin secret 8 $1c$7eyy23uMQk$0`4,rb0jf0#(&4|~<:l~,,d#.>l0z.td(nfxv2v!$
+enable service web-server https
+!
+no mqtt-client use-tls
+no mqtt-client broker username
+no mqtt-client broker password
+no mqtt-server enable
+!
+nfpp
+!
+password policy printable-character-check
+password policy min-size 8
+password policy strong
+service password-encryption
+!
+redundancy
+!
+no enable service snmp-agent
+ip ssh key-exchange dh_group14_sha1 ecdh_sha2_nistp256 ecdh_sha2_nistp384 ecdh_sha2_nistp521 sm2dh_sm3
+ip ssh cipher-mode ctr gcm
+ip ssh hmac-algorithm sha2-256 sha2-512 sm3
+!
+login privilege log
+enable secret 8 $1c$7eyy23uMQk$0`4,rb0jf0#(&4|~<:l~,,d#.>l0z.td(nfxv2v!$ 
+enable service ssh-server
+enable service telnet-server
+!
+vlan 1
+!
+interface GigabitEthernet 1/0/1
+ no switchport
+ ip address dhcp
+!
+interface GigabitEthernet 1/0/2
+!
+interface GigabitEthernet 1/0/3
+!
+interface GigabitEthernet 1/0/4
+!
+interface GigabitEthernet 1/0/5
+!
+interface GigabitEthernet 1/0/6
+!
+interface GigabitEthernet 1/0/7
+!
+interface GigabitEthernet 1/0/8
+!
+interface GigabitEthernet 1/0/9
+!
+interface GigabitEthernet 1/0/10
+!
+interface GigabitEthernet 1/0/11
+!
+interface GigabitEthernet 1/0/12
+!
+interface GigabitEthernet 1/0/13
+!
+interface GigabitEthernet 1/0/14
+!
+interface GigabitEthernet 1/0/15
+!
+interface GigabitEthernet 1/0/16
+!
+interface GigabitEthernet 1/0/17
+!
+interface GigabitEthernet 1/0/18
+!
+interface GigabitEthernet 1/0/19
+!
+interface GigabitEthernet 1/0/20
+!
+interface GigabitEthernet 1/0/21
+!
+interface GigabitEthernet 1/0/22
+!
+interface GigabitEthernet 1/0/23
+!
+interface GigabitEthernet 1/0/24
+!
+interface GigabitEthernet 1/0/25
+!
+interface GigabitEthernet 1/0/26
+!
+interface GigabitEthernet 1/0/27
+!
+interface GigabitEthernet 1/0/28
+!
+interface GigabitEthernet 1/0/29
+!
+interface GigabitEthernet 1/0/30
+!
+interface GigabitEthernet 1/0/31
+!
+interface GigabitEthernet 1/0/32
+!
+interface GigabitEthernet 1/0/33
+!
+interface GigabitEthernet 1/0/34
+!
+interface GigabitEthernet 1/0/35
+!
+interface GigabitEthernet 1/0/36
+!
+interface GigabitEthernet 1/0/37
+!
+interface GigabitEthernet 1/0/38
+!
+interface GigabitEthernet 1/0/39
+!
+interface GigabitEthernet 1/0/40
+!
+interface GigabitEthernet 1/0/41
+!
+interface GigabitEthernet 1/0/42
+!
+interface GigabitEthernet 1/0/43
+!
+interface GigabitEthernet 1/0/44
+!
+interface GigabitEthernet 1/0/45
+!
+interface GigabitEthernet 1/0/46
+!
+interface GigabitEthernet 1/0/47
+!
+interface GigabitEthernet 1/0/48
+!
+interface GigabitEthernet 2/0/1
+!
+interface GigabitEthernet 2/0/2
+!
+interface GigabitEthernet 2/0/3
+!
+interface GigabitEthernet 2/0/4
+!
+interface GigabitEthernet 2/0/5
+!
+interface GigabitEthernet 2/0/6
+!
+interface GigabitEthernet 2/0/7
+!
+interface GigabitEthernet 2/0/8
+!
+interface GigabitEthernet 2/0/9
+!
+interface GigabitEthernet 2/0/10
+!
+interface GigabitEthernet 2/0/11
+!
+interface GigabitEthernet 2/0/12
+!
+interface GigabitEthernet 2/0/13
+!
+interface GigabitEthernet 2/0/14
+!
+interface GigabitEthernet 2/0/15
+!
+interface GigabitEthernet 2/0/16
+!
+interface GigabitEthernet 2/0/17
+!
+interface GigabitEthernet 2/0/18
+!
+interface GigabitEthernet 2/0/19
+!
+interface GigabitEthernet 2/0/20
+!
+interface GigabitEthernet 2/0/21
+!
+interface GigabitEthernet 2/0/22
+!
+interface GigabitEthernet 2/0/23
+!
+interface GigabitEthernet 2/0/24
+!
+interface GigabitEthernet 2/0/25
+!
+interface GigabitEthernet 2/0/26
+!
+interface GigabitEthernet 2/0/27
+!
+interface GigabitEthernet 2/0/28
+!
+interface GigabitEthernet 2/0/29
+!
+interface GigabitEthernet 2/0/30
+!
+interface GigabitEthernet 2/0/31
+!
+interface GigabitEthernet 2/0/32
+!
+interface GigabitEthernet 2/0/33
+!
+interface GigabitEthernet 2/0/34
+!
+interface GigabitEthernet 2/0/35
+!
+interface GigabitEthernet 2/0/36
+!
+interface GigabitEthernet 2/0/37
+!
+interface GigabitEthernet 2/0/38
+!
+interface GigabitEthernet 2/0/39
+!
+interface GigabitEthernet 2/0/40
+!
+interface GigabitEthernet 2/0/41
+!
+interface GigabitEthernet 2/0/42
+!
+interface GigabitEthernet 2/0/43
+!
+interface GigabitEthernet 2/0/44
+!
+interface GigabitEthernet 2/0/45
+!
+interface GigabitEthernet 2/0/46
+!
+interface GigabitEthernet 2/0/47
+!
+interface GigabitEthernet 2/0/48
+!
+interface TenGigabitEthernet 1/0/49
+!
+interface TenGigabitEthernet 1/0/50
+!
+interface TenGigabitEthernet 1/0/51
+!
+interface TenGigabitEthernet 1/0/52
+!
+interface TenGigabitEthernet 2/0/49
+!
+interface TenGigabitEthernet 2/0/50
+!
+interface TenGigabitEthernet 2/0/51
+!
+interface TenGigabitEthernet 2/0/52
+!
+interface VLAN 1
+!
+interface Mgmt 1/0
+ ip address mix dhcp
+ ip address mix 192.168.1.200 255.255.255.0
+!
+interface Mgmt 2/0
+!
+switch virtual domain 1
+!
+snmp-server logging set-operation
+no snmp-server enable version v1
+no snmp-server enable version v2c
+snmp-server enable version v3
+snmp-server enable secret-dictionary-check
+snmp-server authentication attempt 3 exceed lock-time 5
+!
+line console 0
+ privilege level 0
+line vty 0 35
+ exec-timeout 0 0
+ privilege level 15
+ no login
+!
+end
+Ruijie#echo

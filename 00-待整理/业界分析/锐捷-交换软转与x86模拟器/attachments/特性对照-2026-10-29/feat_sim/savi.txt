@@ -1,0 +1,6 @@
+NO.   MACADDRESS         IPADDRESS       LEASE(SEC)   TYPE          VLAN  INTERFACE
+----- ------------------ --------------- ------------ ------------- ----- --------------------
+
+Total number of bindings: 0 
+
+Ruijie#echo

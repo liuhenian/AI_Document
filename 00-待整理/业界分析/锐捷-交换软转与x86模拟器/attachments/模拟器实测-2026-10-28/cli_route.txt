@@ -1,0 +1,21 @@
+Codes:  NORMAL - Normal route  ECMP - ECMP route  FRR - Fast-Reroute route
+
+  Memory: 352 bytes
+  Entries: 2, based on route prefixes
+
+  Entries: 2, based on route nexthops
+
+                 NORMAL     ECMP       FRR        TOTAL     
+       Connected 2          0          0          2         
+       Static    0          0          0          0         
+       AGGREGATE 0          0          0          0         
+       RIP       0          0          0          0         
+       OSPF      0          0          0          0         
+       ISIS      0          0          0          0         
+       BGP       0          0          0          0         
+         EVPN    0          0          0          0         
+       ARPHOST   0          0          0          0         
+       ADROUTE   0          0          0          0         
+       TOTAL     2          0          0          2         
+
+Ruijie#echo

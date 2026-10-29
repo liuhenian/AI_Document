@@ -1,0 +1,13 @@
+mac: 5254.009e.f21b
+!
+switch virtual domain 100
+!
+switch 1
+switch 1 priority 100
+!
+port-member interface GigabitEthernet 0/9
+!
+switch convert mode standalone
+!
+
+Ruijie#echo

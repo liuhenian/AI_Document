@@ -1,0 +1,7 @@
+Introduction: '[num]' means switch num, '(num/num)' means vsl-aggregateport num.
+
+Chain topology:
+[1](1/1)---(2/1)[2]
+
+Switch[1]: master, MAC: 00d0.f822.3595, Description: 
+Switch[2]: standby, MAC: 00d0.f822.3562, Description:

@@ -1,0 +1,12 @@
+Interface                                Status         Vlan   Duplex   Speed     Type  
+---------------------------------------- -------------  ----   -------  --------- ------
+GigabitEthernet 0/0                      up             routed Full     1000M     copper
+GigabitEthernet 0/1                      up             routed Full     1000M     copper
+GigabitEthernet 0/2                      up             routed Full     1000M     copper
+GigabitEthernet 0/3                      up             routed Full     1000M     copper
+GigabitEthernet 0/4                      up             routed Full     1000M     copper
+GigabitEthernet 0/5                      up             routed Full     1000M     copper
+GigabitEthernet 0/6                      up             routed Full     1000M     copper
+GigabitEthernet 0/7                      up             1      Full     1000M     copper
+GigabitEthernet 0/8                      up             1      Full     1000M     copper
+GigabitEthernet 0/9                      up                    Full     1000M     copper

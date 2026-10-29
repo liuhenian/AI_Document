@@ -1,0 +1,2 @@
+show running-config | include ^hostname|^!|^version
+Ruijie#echo

@@ -1,0 +1,84 @@
+Building configuration...
+Current configuration: 1623 bytes
+
+version X86_RGOS 12.5(1)B1418S1
+!
+spanning-tree
+qos-queue compatible disable
+!
+install 0 X86
+!
+sysmac 5254.009e.f21b
+!
+no password policy printable-character-check
+no password policy min-size
+no password policy strong
+no service password-encryption
+!
+redundancy
+!
+no enable service snmp-agent
+ip ssh key-exchange dh_group14_sha1 ecdh_sha2_nistp256 ecdh_sha2_nistp384 ecdh_sha2_nistp521
+ip ssh cipher-mode ctr gcm
+ip ssh hmac-algorithm sha2-256 sha2-512
+no logging on
+logging file flash:syslog 
+no logging monitor
+dmesg collect enable
+dmesg size set 100
+!
+login privilege log
+enable service telnet-server
+!
+vlan 1
+!
+interface GigabitEthernet 0/0
+ no switchport
+ ip address 20.15.168.10 255.255.255.0
+ ipv6 address 15::20:15:168:10/64
+!
+interface GigabitEthernet 0/1
+ no switchport
+!
+interface GigabitEthernet 0/2
+ no switchport
+!
+interface GigabitEthernet 0/3
+ no switchport
+!
+interface GigabitEthernet 0/4
+ no switchport
+!
+interface GigabitEthernet 0/5
+ no switchport
+!
+interface GigabitEthernet 0/6
+ no switchport
+!
+interface GigabitEthernet 0/7
+!
+interface GigabitEthernet 0/8
+!
+interface GigabitEthernet 0/9
+!
+snmp-server local-engineid 80001311035254009ef21b
+snmp-server logging set-operation
+no snmp-server enable version v1
+no snmp-server enable version v2c
+snmp-server enable version v3
+snmp-server enable secret-dictionary-check
+snmp-server authentication attempt 3 exceed lock-time 10
+!
+line console 0
+ exec-timeout 0 0
+ width 256
+ length 512
+line vty 0 35
+ exec-timeout 0 0
+ privilege level 15
+ no login
+ width 256
+ length 512
+!
+end
+Ruijie#echo

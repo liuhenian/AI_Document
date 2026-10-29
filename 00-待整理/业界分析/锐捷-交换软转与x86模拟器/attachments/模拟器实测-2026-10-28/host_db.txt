@@ -1,0 +1,3 @@
+find / -maxdepth 5 -name '*fwd_db*' -o -maxdepth 5 -name 'host_db*' 2>/dev/n
+ull | head -20
+echo

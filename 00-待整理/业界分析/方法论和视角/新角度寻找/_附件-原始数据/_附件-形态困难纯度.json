@@ -1,0 +1,254 @@
+[
+ {
+  "id": "M01",
+  "name": "表项残留不老化",
+  "count": 50,
+  "hard": 50,
+  "purity": 100
+ },
+ {
+  "id": "M20",
+  "name": "一个坏对象污染整轮采集",
+  "count": 11,
+  "hard": 11,
+  "purity": 100
+ },
+ {
+  "id": "M36",
+  "name": "恢复动作销毁现场",
+  "count": 9,
+  "hard": 9,
+  "purity": 100
+ },
+ {
+  "id": "M03",
+  "name": "该动的数长期不动",
+  "count": 4,
+  "hard": 4,
+  "purity": 100
+ },
+ {
+  "id": "M31",
+  "name": "索引分配错乱",
+  "count": 4,
+  "hard": 4,
+  "purity": 100
+ },
+ {
+  "id": "M37",
+  "name": "失败不产生任何日志",
+  "count": 2,
+  "hard": 2,
+  "purity": 100
+ },
+ {
+  "id": "M29",
+  "name": "第三方对接属性失配",
+  "count": 30,
+  "hard": 28,
+  "purity": 93
+ },
+ {
+  "id": "M02",
+  "name": "数值超出物理可能",
+  "count": 13,
+  "hard": 12,
+  "purity": 92
+ },
+ {
+  "id": "M04",
+  "name": "同量两源结论相反",
+  "count": 55,
+  "hard": 50,
+  "purity": 90
+ },
+ {
+  "id": "M11",
+  "name": "表里对但转不对",
+  "count": 31,
+  "hard": 28,
+  "purity": 90
+ },
+ {
+  "id": "M38",
+  "name": "研发承认没有定位手段",
+  "count": 6,
+  "hard": 5,
+  "purity": 83
+ },
+ {
+  "id": "M14",
+  "name": "报文被错误模块拿走",
+  "count": 23,
+  "hard": 19,
+  "purity": 82
+ },
+ {
+  "id": "M34",
+  "name": "组件繁忙超时被当失败",
+  "count": 5,
+  "hard": 4,
+  "purity": 80
+ },
+ {
+  "id": "M21",
+  "name": "应答与请求不匹配",
+  "count": 9,
+  "hard": 7,
+  "purity": 77
+ },
+ {
+  "id": "M09",
+  "name": "下发成功但走软转",
+  "count": 4,
+  "hard": 3,
+  "purity": 75
+ },
+ {
+  "id": "M23",
+  "name": "平台状态与设备实际脱钩",
+  "count": 4,
+  "hard": 3,
+  "purity": 75
+ },
+ {
+  "id": "M17",
+  "name": "自愈机制本身是故障源",
+  "count": 15,
+  "hard": 11,
+  "purity": 73
+ },
+ {
+  "id": "M35",
+  "name": "故障寿命以天计",
+  "count": 15,
+  "hard": 11,
+  "purity": 73
+ },
+ {
+  "id": "M32",
+  "name": "指针不一致致配置不生效",
+  "count": 11,
+  "hard": 8,
+  "purity": 72
+ },
+ {
+  "id": "M12",
+  "name": "丢包但无错误帧",
+  "count": 7,
+  "hard": 5,
+  "purity": 71
+ },
+ {
+  "id": "M18",
+  "name": "协议反复震荡",
+  "count": 20,
+  "hard": 14,
+  "purity": 70
+ },
+ {
+  "id": "M06",
+  "name": "现象定性本身就错",
+  "count": 13,
+  "hard": 9,
+  "purity": 69
+ },
+ {
+  "id": "M30",
+  "name": "集中状态库表项异常",
+  "count": 13,
+  "hard": 9,
+  "purity": 69
+ },
+ {
+  "id": "M15",
+  "name": "收敛时间不是定值",
+  "count": 5,
+  "hard": 3,
+  "purity": 60
+ },
+ {
+  "id": "M19",
+  "name": "主备表项不同步",
+  "count": 7,
+  "hard": 4,
+  "purity": 57
+ },
+ {
+  "id": "M26",
+  "name": "未认证却拿到权限",
+  "count": 20,
+  "hard": 11,
+  "purity": 55
+ },
+ {
+  "id": "M28",
+  "name": "认证进程崩溃",
+  "count": 42,
+  "hard": 23,
+  "purity": 54
+ },
+ {
+  "id": "M25",
+  "name": "认证通过但授权未生效",
+  "count": 11,
+  "hard": 6,
+  "purity": 54
+ },
+ {
+  "id": "M22",
+  "name": "会话数或资源超限",
+  "count": 6,
+  "hard": 3,
+  "purity": 50
+ },
+ {
+  "id": "M07",
+  "name": "配置写入但模块未解析",
+  "count": 37,
+  "hard": 18,
+  "purity": 48
+ },
+ {
+  "id": "M13",
+  "name": "概率性比特跳变",
+  "count": 15,
+  "hard": 7,
+  "purity": 46
+ },
+ {
+  "id": "M16",
+  "name": "双主与分裂后残留",
+  "count": 12,
+  "hard": 5,
+  "purity": 41
+ },
+ {
+  "id": "M27",
+  "name": "固定时长后掉线",
+  "count": 10,
+  "hard": 4,
+  "purity": 40
+ },
+ {
+  "id": "M05",
+  "name": "身份变更致语义漂移",
+  "count": 53,
+  "hard": 21,
+  "purity": 39
+ },
+ {
+  "id": "M08",
+  "name": "解析了但下发失败",
+  "count": 53,
+  "hard": 20,
+  "purity": 37
+ },
+ {
+  "id": "M33",
+  "name": "文件未落地即被引用",
+  "count": 9,
+  "hard": 1,
+  "purity": 11
+ }
+]

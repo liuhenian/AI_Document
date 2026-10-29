@@ -1,0 +1,4 @@
+System Id:32768, 00d0.f822.3595
+
+Flags:  S - Device is requesting Slow LACPDUs   F - Device is requesting Fast LACPDUs.
+A - Device is in active mode.        P - Device is in passive mode.

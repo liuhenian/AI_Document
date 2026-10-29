@@ -1,0 +1,176 @@
+{
+ "vlan": {
+  "cmd": "show vlan",
+  "exists": true,
+  "len": 312,
+  "head": "VLAN       Name                                                             Status    Ports | ---------- -------------------------------------"
+ },
+ "vlan_all": {
+  "cmd": "show vlan all",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "span": {
+  "cmd": "show monitor session",
+  "exists": false,
+  "len": 21,
+  "head": "% Incomplete command."
+ },
+ "mlag": {
+  "cmd": "show mlag",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "poe": {
+  "cmd": "show poe status",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "env": {
+  "cmd": "show env",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "env_status": {
+  "cmd": "show environment status",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "ipfix": {
+  "cmd": "show ipfix statistics",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "nfpp": {
+  "cmd": "show nfpp summary",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "agg": {
+  "cmd": "show aggregates",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "lacp": {
+  "cmd": "show lacp summary",
+  "exists": true,
+  "len": 187,
+  "head": "System Id:32768, 5254.009e.f21b |  | Flags:  S - Device is requesting Slow LACPDUs   F - Device is requesting Fast LACPDUs. | A - Device is in act"
+ },
+ "qos": {
+  "cmd": "show qos",
+  "exists": false,
+  "len": 21,
+  "head": "% Incomplete command."
+ },
+ "vxlan": {
+  "cmd": "show vxlan vlan 1",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "mpls": {
+  "cmd": "show mpls",
+  "exists": false,
+  "len": 21,
+  "head": "% Incomplete command."
+ },
+ "efmp_cnt": {
+  "cmd": "show efmp counter",
+  "exists": true,
+  "len": 1839,
+  "head": "------------------------------------------ |                Efmp  counter               | ------------------------------------------ |     RX     "
+ },
+ "dot1x": {
+  "cmd": "show dot1x",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "cpp": {
+  "cmd": "show cpu-protect",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "sflow2": {
+  "cmd": "show sflow statistics",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "stack": {
+  "cmd": "show switch virtual topology",
+  "exists": true,
+  "len": 47,
+  "head": "Current system is running in \"STANDALONE\" mode."
+ },
+ "int_status": {
+  "cmd": "show interfaces status",
+  "exists": true,
+  "len": 1067,
+  "head": "Interface                                Status         Vlan   Duplex   Speed     Type   | ---------------------------------------- ----------"
+ },
+ "power": {
+  "cmd": "show power",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "fan": {
+  "cmd": "show fan",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "temp": {
+  "cmd": "show temperature",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "trans": {
+  "cmd": "show interfaces transceiver",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "hw": {
+  "cmd": "show hardware",
+  "exists": false,
+  "len": 41,
+  "head": "^ | % Invalid input detected at '^' marker."
+ },
+ "dev": {
+  "cmd": "show version devices",
+  "exists": true,
+  "len": 77,
+  "head": "Device  Slots  Description |   ------  -----  ------------ |   1       1      X86"
+ },
+ "ipv4_route": {
+  "cmd": "show ip route",
+  "exists": true,
+  "len": 592,
+  "head": "Codes:  C - Connected, L - Local, S - Static |         R - RIP, O - OSPF, B - BGP, I - IS-IS, V - Overflow route |         N1 - OSPF NSSA extern"
+ },
+ "arp": {
+  "cmd": "show arp",
+  "exists": true,
+  "len": 540,
+  "head": "Protocol  Address          Age(sec)  Hardware        Type   Interface                | Internet  20.15.168.10     --        5254.009e.f21b  ar"
+ },
+ "span_cfg": {
+  "cmd": "show running-config | include monitor",
+  "exists": true,
+  "len": 18,
+  "head": "no logging monitor"
+ }
+}

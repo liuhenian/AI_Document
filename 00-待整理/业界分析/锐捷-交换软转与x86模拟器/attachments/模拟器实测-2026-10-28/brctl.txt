@@ -1,0 +1,7 @@
+brctl show 2>/dev/null; echo '---'; ls /sys/class/net
+bridge name	bridge id		STP enabled	interfaces
+docker0		8000.0242f802957c	no		
+---
+docker0  eth0
+~ # 
+~ # echo

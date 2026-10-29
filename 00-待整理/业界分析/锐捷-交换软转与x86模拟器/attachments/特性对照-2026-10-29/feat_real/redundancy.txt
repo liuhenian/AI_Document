@@ -1,0 +1,11 @@
+Redundancy switching function: enabled
+Redundancy role: master
+Redundancy state: batch
+Auto-sync time-period: 3600 s
+
+Redundancy management role: master
+Redundancy control role: active
+Redundancy control state: realtime
+Auto-sync time-period: 3600 s
+
+Ruijie#echo

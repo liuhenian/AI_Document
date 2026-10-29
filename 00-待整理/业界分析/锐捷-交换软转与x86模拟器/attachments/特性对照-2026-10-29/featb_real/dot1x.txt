@@ -1,0 +1,20 @@
+802.1X basic information:
+  802.1X Status ......................... disable
+  Authentication Mode ................... eap
+  Authorization mode .................... disable
+  Total User Number ..................... 0 (exclude dynamic user)
+  Authenticated User Number ............. 0 (exclude dynamic user)
+  Dynamic User Number ................... 0
+  IAB author User Number ................ 0
+  Re-authentication ..................... disable
+  Re-authentication Period .............. 3600 seconds
+  Re-authentication max ................. 3 times
+  Quiet Period .......................... 10 seconds
+  Tx Period ............................. 3 seconds
+  Supplicant Timeout .................... 3 seconds
+  Server Timeout ........................ 5 seconds
+  Maximum Request ....................... 3 times
+  Client Online Probe ................... disable
+  Eapol Tag ............................. disable
+  802.1x redirect ....................... disable
+  Private supplicant only ............... disable

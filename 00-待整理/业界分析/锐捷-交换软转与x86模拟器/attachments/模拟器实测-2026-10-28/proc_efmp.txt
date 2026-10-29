@@ -1,0 +1,23 @@
+ls -la /proc/$(pidof efmp_frame.elf)/ 2>/dev/null | head -20
+dr-xr-xr-x    9 root     root             0 Oct 10 14:54 .
+dr-xr-xr-x  336 root     root             0 Oct 10 14:53 ..
+-r--r--r--    1 root     root             0 Oct 28 09:36 arch_status
+dr-xr-xr-x    2 root     root             0 Oct 28 09:36 attr
+-rw-r--r--    1 root     root             0 Oct 28 09:36 autogroup
+-r--------    1 root     root             0 Oct 28 09:36 auxv
+-r--r--r--    1 root     root             0 Oct 28 09:36 cgroup
+--w-------    1 root     root             0 Oct 28 09:36 clear_refs
+-r--r--r--    1 root     root             0 Oct 10 14:54 cmdline
+-rw-r--r--    1 root     root             0 Oct 10 14:54 comm
+-rw-r--r--    1 root     root             0 Oct 28 09:36 core_pattern_type
+-rw-r--r--    1 root     root             0 Oct 28 09:36 core_time_limit
+-rw-r--r--    1 root     root             0 Oct 28 09:36 coredump_filter
+-r--r--r--    1 root     root             0 Oct 28 09:36 cpuset
+lrwxrwxrwx    1 root     root             0 Oct 28 09:36 cwd -> /
+-r--------    1 root     root             0 Oct 10 18:33 environ
+lrwxrwxrwx    1 root     root             0 Oct 10 14:54 exe -> /sbin/efmp_frame.elf
+dr-x------    2 root     root             0 Oct 10 14:54 fd
+dr-x------    2 root     root             0 Oct 28 09:36 fdinfo
+-rw-r--r--    1 root     root             0 Oct 28 09:36 gid_map
+~ # 
+~ # echo

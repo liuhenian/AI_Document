@@ -1,0 +1,5 @@
+POOL INFO: 
+  Normal pool: Amount=32767, AvBufNum=32767.
+  Large pool: Amount=4095, AvBufNum=4095.
+  Super pool: Amount=511, AvBufNum=511.
+Ruijie#echo

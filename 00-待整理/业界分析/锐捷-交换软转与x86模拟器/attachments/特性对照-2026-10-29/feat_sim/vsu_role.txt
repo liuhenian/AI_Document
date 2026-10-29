@@ -1,0 +1,2 @@
+Current system is running in "STANDALONE" mode.
+Ruijie#echo

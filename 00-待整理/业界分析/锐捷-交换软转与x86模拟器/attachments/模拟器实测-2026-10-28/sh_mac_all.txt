@@ -1,0 +1,3 @@
+VLAN/VSI/VNI   MAC Address          Type     Learned-From                         Live Time
+-------------- -------------------- -------- ------------------------------------ -------------
+Ruijie#echo

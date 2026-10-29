@@ -1,0 +1,9 @@
+Protocol  Address          Age(min)  Hardware        Type   Interface               
+Internet  10.104.0.1       29        0000.0000.0104  arpa   GigabitEthernet 1/0/1   
+Internet  10.104.11.158    4         0000.0000.0104  arpa   GigabitEthernet 1/0/1   
+Internet  10.104.14.188    19        0000.0000.0104  arpa   GigabitEthernet 1/0/1   
+Internet  10.104.25.103    0         7085.c460.ebd2  arpa   GigabitEthernet 1/0/1   
+Internet  10.104.36.146    --        00d0.f822.3596  arpa   GigabitEthernet 1/0/1   
+Internet  10.104.136.111   13        0000.0000.0104  arpa   GigabitEthernet 1/0/1   
+Total number of ARP entries: 6
+Interface: 1          Static: 0          Dynamic: 5          Trust: 0

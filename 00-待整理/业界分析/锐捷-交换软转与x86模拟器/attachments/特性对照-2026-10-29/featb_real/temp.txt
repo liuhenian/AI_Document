@@ -1,0 +1,11 @@
+Temperature:
+---------------------------------------------------------------------------
+Slot    Temp_name     Warning         Shutdown       Current       Status
+                     (Celsius)        (Celsius)     (Celsius)
+---------------------------------------------------------------------------
+1/0     air_inlet       60              70              35           ok
+1/0     board           69              79              62           ok
+1/0     switch          100             110             89           ok
+2/0     air_inlet       60              70              38           ok
+2/0     board           69              79              59           ok
+2/0     switch          100             110             87           ok

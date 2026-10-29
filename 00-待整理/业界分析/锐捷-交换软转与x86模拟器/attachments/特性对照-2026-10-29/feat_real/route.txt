@@ -1,0 +1,19 @@
+Codes:  NORMAL - Normal route  ECMP - ECMP route  FRR - Fast-Reroute route
+
+  Entries: 3, based on route prefixes
+
+  Entries: 3, based on route nexthops
+
+                 NORMAL     ECMP       FRR        TOTAL     
+       Local     1          0          0          1         
+       Connected 1          0          0          1         
+       Static    1          0          0          1         
+       AGGREGATE 0          0          0          0         
+       RIP       0          0          0          0         
+       OSPF      0          0          0          0         
+       ISIS      0          0          0          0         
+       BGP       0          0          0          0         
+       ARPHOST   0          0          0          0         
+       TOTAL     3          0          0          3         
+
+Ruijie#echo

@@ -1,0 +1,8 @@
+1: Gi0-0    inet 20.15.168.10/24 scope global noprefixroute Gi0-0\       valid_lft forever preferred_lft forever
+1: Gi0-0    inet6 15::20:15:168:10/64 scope global nodad noprefixroute \       valid_lft forever preferred_lft forever
+1: Gi0-0    inet6 fe80::5054:ff:fe9e:f21b/64 scope link nodad noprefixroute \       valid_lft forever preferred_lft forever
+1048587: docker0    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0\       valid_lft forever preferred_lft forever
+4095: lo    inet 127.0.0.1/8 scope global noprefixroute lo\       valid_lft forever preferred_lft forever
+4095: lo    inet6 ::1/128 scope host \       valid_lft forever preferred_lft forever
+~ # 
+~ # echo

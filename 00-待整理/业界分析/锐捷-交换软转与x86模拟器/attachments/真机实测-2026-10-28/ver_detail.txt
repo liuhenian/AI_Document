@@ -1,0 +1,29 @@
+System description      : Ruijie 10G Ethernet Switch(S5760C-48GT4XS-X) By Ruijie Networks
+System start time       : 2026-10-09 10:25:52
+System uptime           : 19:07:35:26
+System hardware version : 1.00
+System software version : S5760X_RGOS 12.6(4)B0706
+System patch number     : NA
+System software number  : MJN0AFS10092026
+System serial number    : 1234942570080
+System boot version     : 1.4.80(Master) 1.4.58(Slave)
+System rboot version    : 2.0.53
+System core version     : 5.4.241+
+Module information:
+  Slot 1/0 : S5760C-48GT4XS-X
+    System uptime       : 16:06:13:28
+    Hardware version    : 1.00
+    Boot version        : 1.4.80(Master) 1.4.58(Slave)
+    Rboot version       : 2.0.53
+    Software version    : S5760X_RGOS 12.6(4)B0706
+    Software number     : MJN0AFS10092026
+    Serial number       : 1234942570080
+  Slot 2/0 : S5760C-48GT4XS-X
+    System uptime       : 16:03:49:22
+    Hardware version    : 3.00
+    Boot version        : 1.4.80(Master) 1.4.68(Slave)
+    Rboot version       : 2.0.53
+    Software version    : S5760X_RGOS 12.6(4)B0706
+    Software number     : MJN0AFS10092026
+    Serial number       : 1234942570063
+Ruijie#echo

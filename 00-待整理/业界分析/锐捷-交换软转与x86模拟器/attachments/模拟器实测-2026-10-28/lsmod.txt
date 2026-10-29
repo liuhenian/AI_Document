@@ -1,0 +1,100 @@
+xt_conntrack 16384 1 - Live 0xffffffffc0ffc000
+xt_MASQUERADE 20480 1 - Live 0xffffffffc1009000
+bridge 200704 0 - Live 0xffffffffc0fca000
+stp 16384 1 bridge, Live 0xffffffffc0fc5000
+llc 16384 2 bridge,stp, Live 0xffffffffc0faf000
+nfnetlink 16384 1 - Live 0xffffffffc0f9a000
+xfrm_user 45056 1 - Live 0xffffffffc0fb9000
+xfrm_algo 16384 1 xfrm_user, Live 0xffffffffc0f95000
+iptable_nat 16384 1 - Live 0xffffffffc0fb4000
+nf_nat 49152 2 xt_MASQUERADE,iptable_nat, Live 0xffffffffc0fa2000
+nf_conntrack 163840 3 xt_conntrack,xt_MASQUERADE,nf_nat, Live 0xffffffffc0f6c000
+nf_defrag_ipv4 16384 1 nf_conntrack, Live 0xffffffffc0f67000
+nf_defrag_ipv6 24576 1 nf_conntrack, Live 0xffffffffc0f60000
+xt_addrtype 16384 2 - Live 0xffffffffc0f5b000
+overlay 135168 0 - Live 0xffffffffc0f39000
+iptable_filter 16384 1 - Live 0xffffffffc0f34000
+ip_tables 32768 2 iptable_nat,iptable_filter, Live 0xffffffffc0f2b000
+x_tables 45056 5 xt_conntrack,xt_MASQUERADE,xt_addrtype,iptable_filter,ip_tables, Live 0xffffffffc0ccf000
+rg_ipv6 2383872 0 [permanent], Live 0xffffffffc0ce4000 (O)
+adjust_memory 16384 0 - Live 0xffffffffc0cdf000 (O)
+ipv4 2699264 23 rg_ipv6, Live 0xffffffffc0a3b000 (O)
+rg_time 16384 0 - Live 0xffffffffc0a36000 (O)
+igb_uio 20480 0 - Live 0xffffffffc09c2000 (O)
+lsm_ko 335872 238 rg_ipv6,ipv4, Live 0xffffffffc09e3000 (O)
+af_packet 65536 0 - Live 0xffffffffc09d2000 (O)
+ef_msg_agent 16384 3 rg_ipv6,ipv4,af_packet, Live 0xffffffffc09cd000 (O)
+ef_buff 1675264 19 rg_ipv6,ipv4,af_packet, Live 0xffffffffc0828000 (O)
+rg_utils_cpurule 28672 1 lsm_ko, Live 0xffffffffc0820000 (O)
+lsm_cbb 16384 0 - Live 0xffffffffc081b000 (O)
+rg_edac 90112 0 - Live 0xffffffffc0804000 (O)
+tipc 352256 134 - Live 0xffffffffc07ad000 (O)
+rg_sysfs 20480 0 - Live 0xffffffffc07a7000 (O)
+rg_thread_det 32768 0 - Live 0xffffffffc079e000 (O)
+rg_status_notifier 16384 0 - Live 0xffffffffc078a000 (O)
+product_info_utils 32768 0 - Live 0xffffffffc0795000 (O)
+aer_print 16384 0 - Live 0xffffffffc0790000 (O)
+rg_lowmem_killer 65536 0 - Live 0xffffffffc0779000 (O)
+pshk 16384 0 - Live 0xffffffffc0768000 (O)
+aer_attach 16384 0 - Live 0xffffffffc0750000 (O)
+rg_dprintk 16384 7 rg_ipv6,ipv4,lsm_ko,af_packet,ef_msg_agent,ef_buff,tipc, Live 0xffffffffc06d3000 (O)
+ivr 16384 0 - Live 0xffffffffc0672000 (O)
+proc_info 24576 1 rg_thread_det, Live 0xffffffffc06cc000 (O)
+loop 40960 0 - Live 0xffffffffc076e000
+usbhid 65536 0 - Live 0xffffffffc0757000
+hid 143360 1 usbhid, Live 0xffffffffc072c000
+uas 32768 0 - Live 0xffffffffc0723000
+usb_storage 94208 1 uas, Live 0xffffffffc070b000
+ohci_pci 20480 0 - Live 0xffffffffc067e000
+ohci_hcd 61440 1 ohci_pci, Live 0xffffffffc06fb000
+ehci_pci 20480 0 - Live 0xffffffffc0678000
+ehci_hcd 98304 1 ehci_pci, Live 0xffffffffc06e2000
+xhci_pci 20480 0 - Live 0xffffffffc06dc000
+xhci_hcd 278528 1 xhci_pci, Live 0xffffffffc0687000
+usbcore 319488 9 usbhid,uas,usb_storage,ohci_pci,ohci_hcd,ehci_pci,ehci_hcd,xhci_pci,xhci_hcd, Live 0xffffffffc0623000
+usb_common 16384 4 ohci_hcd,ehci_hcd,xhci_hcd,usbcore, Live 0xffffffffc05bb000
+i2c_smbus 20480 0 - Live 0xffffffffc061d000
+i2c_mux_pca954x 20480 0 - Live 0xffffffffc0617000
+i2c_mux 16384 1 i2c_mux_pca954x, Live 0xffffffffc0612000
+i2c_dev 24576 0 - Live 0xffffffffc0607000
+tun 61440 10 - Live 0xffffffffc05f7000
+uio_pci_generic 16384 10 - Live 0xffffffffc05b6000
+uio 20480 22 igb_uio,uio_pci_generic, Live 0xffffffffc0572000
+vmxnet3 65536 0 - Live 0xffffffffc05e6000
+virtio_net 57344 0 - Live 0xffffffffc05d7000
+net_failover 20480 1 virtio_net, Live 0xffffffffc056c000
+failover 16384 1 net_failover, Live 0xffffffffc0567000
+virtio_pci 28672 0 - Live 0xffffffffc05cf000
+virtio_ring 40960 2 virtio_net,virtio_pci, Live 0xffffffffc05c4000
+virtio 16384 2 virtio_net,virtio_pci, Live 0xffffffffc0515000
+igb 249856 0 - Live 0xffffffffc0578000
+i2c_algo_bit 16384 1 igb, Live 0xffffffffc040c000
+e1000e 290816 0 - Live 0xffffffffc051f000
+e1000 155648 0 - Live 0xffffffffc04ee000
+dca 16384 1 igb, Live 0xffffffffc04d9000
+ptp 20480 2 igb,e1000e, Live 0xffffffffc044e000
+pps_core 24576 1 ptp, Live 0xffffffffc0456000
+pci_stub 16384 0 - Live 0xffffffffc03b0000
+mdio 16384 0 - Live 0xffffffffc0393000
+mii 16384 0 - Live 0xffffffffc0361000
+mtd 77824 2 rg_edac,rg_sysfs, Live 0xffffffffc04ba000
+ata_piix 36864 4 - Live 0xffffffffc04e0000
+ahci 40960 0 - Live 0xffffffffc04ce000
+libahci 40960 1 ahci, Live 0xffffffffc03e5000
+libata 294912 3 ata_piix,ahci,libahci, Live 0xffffffffc0471000
+sd_mod 49152 5 - Live 0xffffffffc045f000
+scsi_mod 237568 4 uas,usb_storage,libata,sd_mod, Live 0xffffffffc0413000
+sdhci_pci 61440 0 - Live 0xffffffffc03fc000
+cqhci 32768 1 sdhci_pci, Live 0xffffffffc03f3000
+sdhci 69632 1 sdhci_pci, Live 0xffffffffc0367000
+mmc_block 53248 0 - Live 0xffffffffc0353000
+mmc_core 188416 4 sdhci_pci,cqhci,sdhci,mmc_block, Live 0xffffffffc03b6000
+squashfs 65536 0 - Live 0xffffffffc039f000
+vfat 20480 0 - Live 0xffffffffc0399000
+fat 86016 1 vfat, Live 0xffffffffc037d000
+ext4 778240 4 - Live 0xffffffffc0294000
+crc16 16384 1 ext4, Live 0xffffffffc028f000
+jbd2 131072 1 ext4, Live 0xffffffffc026e000
+mbcache 16384 1 ext4, Live 0xffffffffc0265000
+~ # 
+~ # echo

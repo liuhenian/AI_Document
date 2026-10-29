@@ -1,0 +1,34 @@
+------------------------------------------
+           Efmp flow counter              
+------------------------------------------
+    RX           : 0
+    TX           : 0
+  PARSER-STAGE:
+  FRAG-REASM-STAGE:
+  FW-STAGE:
+  SKIP-STAGE:
+  BCAST-STAGE:
+  MCAST-STAGE:
+  FRMPF-STAGE:
+  RSVD-STAGE:
+  ENCAP-STAGE:
+  DISPATCH-STAGE:
+  VSU-STAGE:
+  FRAG-STAGE:
+  TOPF-STAGE:
+  SERV-RSVD-CNTS:
+  SERV-DROP-CNTS:
+  SERV-LOST-CNTS:
+------------ efmp deal pkt time stat -------
+  RX    --> TOPF    : 0(us), max time 0(us)
+  TOPF  --> TOLRING : 0(us), max time 0(us)
+  OUTPUT--> FRMPF   : 0(us), max time 0(us)
+  FRMPF --> TX      : 0(us), max time 0(us)
+------------- latest pkt time stamp --------
+  RX TIME           : 
+  TOPF TIME         : 
+  TOLRING TIME      : 
+  OUTPUT TIME       : 
+  TX TIME           : 
+--------------------End---------------------
+Ruijie#echo

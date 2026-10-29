@@ -1,0 +1,2 @@
+find / -maxdepth 4 -name '*asic*db*' 2>/dev/null | head -20
+echo

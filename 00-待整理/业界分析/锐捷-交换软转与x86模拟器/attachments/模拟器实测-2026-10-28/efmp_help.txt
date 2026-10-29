@@ -1,0 +1,6 @@
+ls /sbin | wc -l; echo '---'; ls /lib | wc -l
+338
+---
+547
+~ # 
+~ # echo

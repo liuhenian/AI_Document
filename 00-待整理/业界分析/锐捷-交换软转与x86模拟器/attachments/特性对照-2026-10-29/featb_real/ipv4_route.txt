@@ -1,0 +1,14 @@
+Codes:  C - Connected, L - Local, S - Static
+        R - RIP, O - OSPF, B - BGP, I - IS-IS, V - Overflow route
+        N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+        E1 - OSPF external type 1, E2 - OSPF external type 2
+        SU - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+        IA - Inter area, EV - BGP EVPN, A - Arp to host
+        LA - Local aggregate route
+        * - candidate default
+
+Gateway of last resort is 10.104.0.1 to network 0.0.0.0
+S*     0.0.0.0/0 [1/0] via 10.104.0.1
+                (recursive via 10.104.0.1, GigabitEthernet 1/0/1), 00:29:23
+C      10.104.0.0/16 is directly connected, GigabitEthernet 1/0/1, 00:29:23
+L      10.104.36.146/32 is directly connected, GigabitEthernet 1/0/1, 00:29:23

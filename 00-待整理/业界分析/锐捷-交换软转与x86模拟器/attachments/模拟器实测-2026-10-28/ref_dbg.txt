@@ -1,0 +1,4 @@
+roc/net/ref_ipv6_route_dbg 2>/dev/null | head -10
+--v6--
+~ # 
+~ # echo

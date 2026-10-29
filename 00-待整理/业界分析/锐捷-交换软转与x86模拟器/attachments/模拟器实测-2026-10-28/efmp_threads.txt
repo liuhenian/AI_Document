@@ -1,0 +1,34 @@
+s
+29
+Name:	efmp_frame.elf
+Umask:	0000
+State:	S (sleeping)
+Tgid:	3947
+Ngid:	0
+Pid:	3947
+PPid:	1
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	512
+Groups:	 
+NStgid:	3947
+NSpid:	3947
+NSpgid:	1
+NSsid:	1
+VmPeak:	67925184 kB
+VmSize:	67921128 kB
+VmLck:	     328 kB
+VmPin:	       0 kB
+VmHWM:	  467152 kB
+VmRSS:	  467152 kB
+RssAnon:	  445384 kB
+RssFile:	   18676 kB
+RssShmem:	    3092 kB
+VmData:	  721952 kB
+VmStk:	     132 kB
+VmExe:	   13584 kB
+VmLib:	    7820 kB
+VmPTE:	    1212 kB
+~ # 
+~ # echo

@@ -1,0 +1,7 @@
+% Unrecognized command.
+
+Ruijie#show efmp class counter 
+                  ^
+% Invalid input detected at '^' marker.
+
+Ruijie#echo

@@ -1,0 +1,7 @@
+Protocol  Address          Age(sec)  Hardware        Type   Interface               
+Internet  20.15.168.10     --        5254.009e.f21b  arpa   GigabitEthernet 0/0     
+Internet  20.15.168.20     138       5254.0056.31f7  arpa   GigabitEthernet 0/0     
+Internet  20.15.168.30     170       5254.00d4.68c1  arpa   GigabitEthernet 0/0     
+Internet  20.15.168.40     156       5254.007a.0cb5  arpa   GigabitEthernet 0/0     
+Internet  20.15.168.168    16        5254.000e.9084  arpa   GigabitEthernet 0/0     
+Total number of ARP entries: 5

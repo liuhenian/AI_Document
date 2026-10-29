@@ -1,0 +1,9 @@
+Interface                                IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol 
+GigabitEthernet 0/0                      20.15.168.10/24      no address           up                     up       
+GigabitEthernet 0/1                      no address           no address           up                     down     
+GigabitEthernet 0/2                      no address           no address           up                     down     
+GigabitEthernet 0/3                      no address           no address           up                     down     
+GigabitEthernet 0/4                      no address           no address           up                     down     
+GigabitEthernet 0/5                      no address           no address           up                     down     
+GigabitEthernet 0/6                      no address           no address           up                     down     
+Ruijie#echo

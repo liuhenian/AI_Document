@@ -1,0 +1,4 @@
+Device  Slots  Description
+  ------  -----  ------------
+  1       2      S5760C-48GT4XS-X
+  2       2      S5760C-48GT4XS-X

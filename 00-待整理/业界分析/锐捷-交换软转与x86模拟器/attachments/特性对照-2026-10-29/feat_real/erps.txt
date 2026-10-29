@@ -1,0 +1,4 @@
+ERPS Information
+Global Status               : Disabled
+Link monitored by           : Not Oam
+Ruijie#echo

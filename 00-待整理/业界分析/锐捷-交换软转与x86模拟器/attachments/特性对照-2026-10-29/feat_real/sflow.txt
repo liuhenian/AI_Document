@@ -1,0 +1,13 @@
+sflow datagram version 5
+Global information:
+Agent IP: NULL
+sflow counter interval:30
+sflow flow max-header:64
+sflow sampling-rate:8192
+Collector information:
+ID   IP                                           Port  Size VRF                             
+1    NULL                                         0     1400                                 
+2    NULL                                         0     1400                                 
+Port information
+Interface                       CID       FID       Enable         
+Ruijie#echo

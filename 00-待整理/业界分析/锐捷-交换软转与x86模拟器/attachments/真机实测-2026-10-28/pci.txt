@@ -1,0 +1,5 @@
+ci/devices 2>/dev/null | head -15
+
+---
+~ # 
+~ # echo

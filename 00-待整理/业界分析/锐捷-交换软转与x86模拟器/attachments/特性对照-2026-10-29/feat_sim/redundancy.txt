@@ -1,0 +1,10 @@
+Redundancy role: master
+Redundancy state: alone
+Auto-sync time-period: 3600 s
+
+Redundancy management role: master
+Redundancy control role: active
+Redundancy control state: alone
+Auto-sync time-period: 3600 s
+
+Ruijie#echo

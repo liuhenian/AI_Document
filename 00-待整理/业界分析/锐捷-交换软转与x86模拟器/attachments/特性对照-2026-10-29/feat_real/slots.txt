@@ -1,0 +1,7 @@
+Dev Slot Port Configured Module            Online Module                Software Status
+  --- ---- ---- ---------------------------- ---------------------------- ---------------
+  1   0    52   S5760C-48GT4XS-X             S5760C-48GT4XS-X             master         
+  1   1    0    none                         none                         none           
+  2   0    52   S5760C-48GT4XS-X             S5760C-48GT4XS-X             backup         
+  2   1    0    none                         none                         none           
+Ruijie#echo

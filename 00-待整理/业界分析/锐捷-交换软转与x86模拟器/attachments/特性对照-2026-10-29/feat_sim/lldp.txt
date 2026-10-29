@@ -1,0 +1,10 @@
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+System Name                 Local Intf          Port ID                          Capability   Aging-time
+Ruijie                      Gi0/0               Gi0/0                            B, R         1minutes 35seconds 
+Ruijie                      Gi0/0               Gi0/0                            B, R         1minutes 50seconds 
+Ruijie                      Gi0/0               Gi0/0                            B, R         1minutes 42seconds 
+
+Total entries displayed: 3
+Ruijie#echo

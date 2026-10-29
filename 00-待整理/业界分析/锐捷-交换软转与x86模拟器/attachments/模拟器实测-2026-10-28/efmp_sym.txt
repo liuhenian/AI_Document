@@ -1,0 +1,27 @@
+ort -u
+librg_af_key.so
+librg_ap.so
+librg_at.so
+librg_bfd.so
+librg_cap_mini_real.so
+librg_cap_real.so
+librg_datastruct.so
+librg_ef_bridge.so
+librg_ef_mcast.so
+librg_efacl.so
+librg_efpbr.so
+librg_eth_subif.so
+librg_ether_parser.so
+librg_ham.so
+librg_ip_proxy.so
+librg_lib.so
+librg_lsm_impl.so
+librg_mom_impl.so
+librg_osal.so
+librg_srp_ref.so
+librg_srv6_ref.so
+librg_tunnelk_ef.so
+librg_urpfk_ef.so
+librg_vxlan_ef.so
+~ # 
+~ # echo

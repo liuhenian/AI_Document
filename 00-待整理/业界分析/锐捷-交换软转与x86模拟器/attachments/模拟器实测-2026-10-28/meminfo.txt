@@ -1,0 +1,5 @@
+MemTotal:        5566204 kB
+MemFree:         3003868 kB
+MemAvailable:    3401144 kB
+~ # 
+~ # echo

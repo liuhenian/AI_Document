@@ -1,0 +1,1312 @@
+[
+ {
+  "key": "vlan",
+  "cn": "VLAN 与二层隔离",
+  "cli_real": "5/6",
+  "cli_sim": "3/6",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 9,
+  "impl_sim": 2,
+  "r_sample": [
+   "ce.emac.dp",
+   "ce.mergevlan.dp",
+   "ce.qinq.dp",
+   "fe.emac.sw",
+   "fe.mergevlan.sw"
+  ],
+  "s_sample": [
+   "librg_ef_bridge.so",
+   "librg_ef_bridge.so.0.9"
+  ],
+  "doc": {
+   "title": "Super Vlan",
+   "id": "356779030",
+   "by": "代田皓",
+   "updated": "2022-12-05",
+   "space": "成都-高端路由转发开发部-SDK知识库"
+  }
+ },
+ {
+  "key": "stp",
+  "cn": "STP/MSTP 生成树",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 1,
+  "impl_sim": 1,
+  "r_sample": [
+   "mstp.elf"
+  ],
+  "s_sample": [
+   "mstp.elf"
+  ],
+  "doc": {
+   "title": "MSTP（Multiple Spanning Tree Protocol，多生成树协议）",
+   "id": "659228384",
+   "by": "邓涛",
+   "updated": "2024-02-22",
+   "space": "邓涛"
+  }
+ },
+ {
+  "key": "lacp",
+  "cn": "链路聚合 LACP",
+  "cli_real": "2/2",
+  "cli_sim": "2/2",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 1,
+  "impl_sim": 1,
+  "r_sample": [
+   "lacp.elf"
+  ],
+  "s_sample": [
+   "lacp.elf"
+  ],
+  "doc": {
+   "title": "LACP协议基础和AP接口",
+   "id": "181534953",
+   "by": "任建春",
+   "updated": "2022-05-25",
+   "space": "交换路由产品事业部-运营商业务测试知识域与技能域建设"
+  }
+ },
+ {
+  "key": "lldp",
+  "cn": "LLDP 邻居发现",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 3,
+  "impl_sim": 3,
+  "r_sample": [
+   "libdm_stub_lldp.so",
+   "libdm_stub_lldp.so.",
+   "lldp.elf"
+  ],
+  "s_sample": [
+   "libdm_stub_lldp.so",
+   "libdm_stub_lldp.so.",
+   "lldp.elf"
+  ],
+  "doc": {
+   "title": "LLDP",
+   "id": "181535192",
+   "by": "任建春",
+   "updated": "2022-05-25",
+   "space": "交换路由产品事业部-运营商业务测试知识域与技能域建设"
+  }
+ },
+ {
+  "key": "rldp",
+  "cn": "RLDP 单向链路检测",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 1,
+  "impl_sim": 1,
+  "r_sample": [
+   "rldp.elf"
+  ],
+  "s_sample": [
+   "rldp.elf"
+  ],
+  "doc": {
+   "title": "02-RLDP",
+   "id": "207850097",
+   "by": "翁琪芬",
+   "updated": "2022-04-13",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "erps",
+  "cn": "ERPS 环网保护",
+  "cli_real": "1/1",
+  "cli_sim": "0/1",
+  "show_real": "1/1",
+  "show_sim": "0/1",
+  "impl_real": 1,
+  "impl_sim": 0,
+  "r_sample": [
+   "erps.elf"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "15-ERPS",
+   "id": "207849238",
+   "by": "翁琪芬",
+   "updated": "2022-04-13",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "gvrp",
+  "cn": "GVRP VLAN 注册",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 1,
+  "impl_sim": 1,
+  "r_sample": [
+   "gvrpd"
+  ],
+  "s_sample": [
+   "gvrpd"
+  ],
+  "doc": {
+   "title": "16-GVRP",
+   "id": "207849242",
+   "by": "翁琪芬",
+   "updated": "2022-04-13",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "span",
+  "cn": "端口镜像 SPAN/RSPAN",
+  "cli_real": "2/3",
+  "cli_sim": "1/3",
+  "show_real": "2/2",
+  "show_sim": "1/2",
+  "impl_real": 9,
+  "impl_sim": 1,
+  "r_sample": [
+   "fe.span.sw",
+   "libce_pcap.dp.so",
+   "libef_pcap.so",
+   "libef_pcap.so.1.0.0",
+   "libfe_pcap.dp.so"
+  ],
+  "s_sample": [
+   "span.elf"
+  ],
+  "doc": {
+   "title": "rspan & erspan封装",
+   "id": "32228160",
+   "by": "梁积",
+   "updated": "2019-10-30",
+   "space": "DCN安全组"
+  }
+ },
+ {
+  "key": "route_base",
+  "cn": "路由管理与 FIB 下发",
+  "cli_real": "4/4",
+  "cli_sim": "3/4",
+  "show_real": "3/3",
+  "show_sim": "1/3",
+  "impl_real": 29,
+  "impl_sim": 13,
+  "r_sample": [
+   "ce.en.l3tb.sw",
+   "ce.glb.l3tb.sw",
+   "ce.hit.l3tb.sw",
+   "ce.mc.l3tb.sw",
+   "ce.nh.l3tb.sw"
+  ],
+  "s_sample": [
+   "kernel_fib.ko",
+   "kernel_fib_monitor.elf",
+   "libdm_stub_lsm.so",
+   "libdm_stub_lsm.so.",
+   "librg_lsm.so"
+  ],
+  "doc": {
+   "title": "NSM-设计文档",
+   "id": "93807256",
+   "by": "卢继伟",
+   "updated": "2021-08-02",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "rip",
+  "cn": "RIP/RIPng",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 2,
+  "impl_sim": 2,
+  "r_sample": [
+   "rip.elf",
+   "ripng.elf"
+  ],
+  "s_sample": [
+   "rip.elf",
+   "ripng.elf"
+  ],
+  "doc": {
+   "title": "09-RIP/Ripng",
+   "id": "176095532",
+   "by": "纪姮",
+   "updated": "2022-03-03",
+   "space": "交换路由产品事业部-运营商业务测试知识域与技能域建设"
+  }
+ },
+ {
+  "key": "ospf",
+  "cn": "OSPF/OSPFv3",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 2,
+  "impl_sim": 2,
+  "r_sample": [
+   "ospf.elf",
+   "ospfv3.elf"
+  ],
+  "s_sample": [
+   "ospf.elf",
+   "ospfv3.elf"
+  ],
+  "doc": {
+   "title": "OSPF-设计文档",
+   "id": "93807282",
+   "by": "卢继伟",
+   "updated": "2021-08-02",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "isis",
+  "cn": "IS-IS",
+  "cli_real": "2/2",
+  "cli_sim": "1/2",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 1,
+  "impl_sim": 1,
+  "r_sample": [
+   "isis.elf"
+  ],
+  "s_sample": [
+   "isis.elf"
+  ],
+  "doc": {
+   "title": "ISIS",
+   "id": "180653125",
+   "by": "任建春",
+   "updated": "2022-05-25",
+   "space": "交换路由产品事业部-运营商业务测试知识域与技能域建设"
+  }
+ },
+ {
+  "key": "bgp",
+  "cn": "BGP",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 1,
+  "impl_sim": 1,
+  "r_sample": [
+   "bgp.elf"
+  ],
+  "s_sample": [
+   "bgp.elf"
+  ],
+  "doc": {
+   "title": "BGP-LLD",
+   "id": "93807215",
+   "by": "卢继伟",
+   "updated": "2021-08-02",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "pbr",
+  "cn": "策略路由 PBR",
+  "cli_real": "2/2",
+  "cli_sim": "2/2",
+  "show_real": "2/2",
+  "show_sim": "2/2",
+  "impl_real": 3,
+  "impl_sim": 1,
+  "r_sample": [
+   "ce.pbr.sw",
+   "fe.pbr.sw",
+   "pbr.elf"
+  ],
+  "s_sample": [
+   "pbr.elf"
+  ],
+  "doc": {
+   "title": "PBR & EF-PBR组件",
+   "id": "18911332",
+   "by": "林惠珍",
+   "updated": "2020-05-09",
+   "space": "MCAST"
+  }
+ },
+ {
+  "key": "bfd",
+  "cn": "BFD 双向转发检测",
+  "cli_real": "2/2",
+  "cli_sim": "1/2",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 9,
+  "impl_sim": 3,
+  "r_sample": [
+   "bfd.elf",
+   "ce.bfd.sw",
+   "fe.bfd.sw",
+   "libce_bfd_pkt.so",
+   "libcom_bfd.so"
+  ],
+  "s_sample": [
+   "bfd.elf",
+   "librg_bfd.so",
+   "librg_bfd.so.1.0.0"
+  ],
+  "doc": {
+   "title": "BFD性能测试（软件bfd）",
+   "id": "40281633",
+   "by": "陈进步",
+   "updated": "2020-05-20",
+   "space": "平台八部--交换6组"
+  }
+ },
+ {
+  "key": "cfm_efm",
+  "cn": "CFM/EFM 故障管理",
+  "cli_real": "1/1",
+  "cli_sim": "0/1",
+  "show_real": "1/1",
+  "show_sim": "0/1",
+  "impl_real": 3,
+  "impl_sim": 0,
+  "r_sample": [
+   "ce.efm.sw",
+   "efm.elf",
+   "fe.efm.sw"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "CTC-DP-EFM-CFM-LDD",
+   "id": "64741240",
+   "by": "卢立刚",
+   "updated": "2020-11-16",
+   "space": "12.5PL2项目信息"
+  }
+ },
+ {
+  "key": "dldp",
+  "cn": "DLDP 数据链路检测",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 5,
+  "impl_sim": 1,
+  "r_sample": [
+   "ce.dldp.sw",
+   "dldp.elf",
+   "fe.dldp.sw",
+   "libcom_dldp.so",
+   "libfe_dldp_pkt.so"
+  ],
+  "s_sample": [
+   "dldp.elf"
+  ],
+  "doc": {
+   "title": "03-DLDP",
+   "id": "18914633",
+   "by": "于孙汛",
+   "updated": "2022-11-22",
+   "space": "Switch Knowledge Base"
+  }
+ },
+ {
+  "key": "track",
+  "cn": "Track/RNS 状态跟踪",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 4,
+  "impl_sim": 4,
+  "r_sample": [
+   "rns.elf",
+   "rns_server.elf",
+   "rnsmib.elf",
+   "track.elf"
+  ],
+  "s_sample": [
+   "rns.elf",
+   "rns_server.elf",
+   "rnsmib.elf",
+   "track.elf"
+  ],
+  "doc": {
+   "title": "10 RNS-TRACK",
+   "id": "98367796",
+   "by": "翁琪芬",
+   "updated": "2022-05-12",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "arp",
+  "cn": "ARP/ND 邻居",
+  "cli_real": "3/3",
+  "cli_sim": "2/3",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 2,
+  "impl_sim": 2,
+  "r_sample": [
+   "arp_sprs.elf",
+   "nd_sprs.elf"
+  ],
+  "s_sample": [
+   "arp_sprs.elf",
+   "nd_sprs.elf"
+  ],
+  "doc": {
+   "title": "ARP/ARP代理-DEBUG",
+   "id": "93804042",
+   "by": "卢继伟",
+   "updated": "2021-07-30",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "vrrp",
+  "cn": "VRRP",
+  "cli_real": "2/2",
+  "cli_sim": "2/2",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 4,
+  "impl_sim": 4,
+  "r_sample": [
+   "librg_vrrp.so",
+   "librg_vrrp.so.1.0.0",
+   "vrrp.elf",
+   "vrrp_plus.elf"
+  ],
+  "s_sample": [
+   "librg_vrrp.so",
+   "librg_vrrp.so.1.0.0",
+   "vrrp.elf",
+   "vrrp_plus.elf"
+  ],
+  "doc": {
+   "title": "VRRP",
+   "id": "181534806",
+   "by": "任建春",
+   "updated": "2022-05-25",
+   "space": "交换路由产品事业部-运营商业务测试知识域与技能域建设"
+  }
+ },
+ {
+  "key": "urpf",
+  "cn": "uRPF",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "2/2",
+  "show_sim": "0/2",
+  "impl_real": 5,
+  "impl_sim": 5,
+  "r_sample": [
+   "librg_urpf.so",
+   "librg_urpf.so.1.0.0",
+   "librg_urpfk_ef.so",
+   "librg_urpfk_ef.so.1.2.0",
+   "urpf.elf"
+  ],
+  "s_sample": [
+   "librg_urpf.so",
+   "librg_urpf.so.1.0.0",
+   "librg_urpfk_ef.so",
+   "librg_urpfk_ef.so.1.2.0",
+   "urpf.elf"
+  ],
+  "doc": {
+   "title": "1.2.1 URPF",
+   "id": "181537032",
+   "by": "任建春",
+   "updated": "2022-05-25",
+   "space": "交换路由产品事业部-运营商业务测试知识域与技能域建设"
+  }
+ },
+ {
+  "key": "dhcp",
+  "cn": "DHCP Server/Relay/Snooping",
+  "cli_real": "3/3",
+  "cli_sim": "1/3",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 6,
+  "impl_sim": 4,
+  "r_sample": [
+   "dhcp.elf",
+   "dhcp6.elf",
+   "dhcp6c.elf",
+   "dhcpc.elf",
+   "librg_udph_ef.so"
+  ],
+  "s_sample": [
+   "dhcp.elf",
+   "dhcp6.elf",
+   "dhcp6c.elf",
+   "dhcpc.elf"
+  ],
+  "doc": {
+   "title": "dhcp工作包",
+   "id": "875954743",
+   "by": "魏奇",
+   "updated": "2026-10-28",
+   "space": "魏奇"
+  }
+ },
+ {
+  "key": "nat",
+  "cn": "NAT 地址转换",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "0/1",
+  "impl_real": 0,
+  "impl_sim": 0,
+  "r_sample": [],
+  "s_sample": [],
+  "doc": {
+   "title": "NAT",
+   "id": "80093354",
+   "by": "翁琪芬",
+   "updated": "2021-03-18",
+   "space": "企业平台测试部"
+  }
+ },
+ {
+  "key": "dot1x",
+  "cn": "802.1X 认证",
+  "cli_real": "1/1",
+  "cli_sim": "0/1",
+  "show_real": "1/1",
+  "show_sim": "0/1",
+  "impl_real": 1,
+  "impl_sim": 0,
+  "r_sample": [
+   "dot1x"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "13-802.1x",
+   "id": "207849963",
+   "by": "翁琪芬",
+   "updated": "2022-04-13",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "webauth",
+  "cn": "Web 认证",
+  "cli_real": "4/4",
+  "cli_sim": "0/4",
+  "show_real": "1/1",
+  "show_sim": "0/1",
+  "impl_real": 1,
+  "impl_sim": 0,
+  "r_sample": [
+   "webauth"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "WEBAUTH-REALNAME-LDD",
+   "id": "96517250",
+   "by": "高建辉",
+   "updated": "2021-08-18",
+   "space": "无线项目设计晾晒"
+  }
+ },
+ {
+  "key": "macc",
+  "cn": "MAC 认证/无感知",
+  "cli_real": "1/1",
+  "cli_sim": "0/1",
+  "show_real": "1/1",
+  "show_sim": "0/1",
+  "impl_real": 14,
+  "impl_sim": 0,
+  "r_sample": [
+   "ce.nacm.sw",
+   "macc",
+   "macc_auth.sh",
+   "macc_auth_telnet.py",
+   "macc_dev_timestamp.sh"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "MACC",
+   "id": "174490028",
+   "by": "林翔",
+   "updated": "2022-02-28",
+   "space": "园区交换-方案组"
+  }
+ },
+ {
+  "key": "aaa",
+  "cn": "AAA 认证计费",
+  "cli_real": "5/5",
+  "cli_sim": "5/5",
+  "show_real": "2/2",
+  "show_sim": "1/2",
+  "impl_real": 3,
+  "impl_sim": 3,
+  "r_sample": [
+   "aaad",
+   "librg_aaa-1.0.0.so",
+   "librg_aaa.so"
+  ],
+  "s_sample": [
+   "aaad",
+   "librg_aaa-1.0.0.so",
+   "librg_aaa.so"
+  ],
+  "doc": {
+   "title": "AAA",
+   "id": "78009737",
+   "by": "翁琪芬",
+   "updated": "2021-03-15",
+   "space": "企业平台测试部"
+  }
+ },
+ {
+  "key": "acl",
+  "cn": "ACL 访问控制",
+  "cli_real": "3/3",
+  "cli_sim": "2/3",
+  "show_real": "2/2",
+  "show_sim": "2/2",
+  "impl_real": 5,
+  "impl_sim": 3,
+  "r_sample": [
+   "acld",
+   "librg_acl-1.0.0.so",
+   "librg_acl.so",
+   "librg_acl_real.so",
+   "sw_app_acl"
+  ],
+  "s_sample": [
+   "acld",
+   "librg_acl-1.0.0.so",
+   "librg_acl.so"
+  ],
+  "doc": {
+   "title": "1 ACL",
+   "id": "98367743",
+   "by": "翁琪芬",
+   "updated": "2022-05-12",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "savi",
+  "cn": "SAVI 源地址校验",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 1,
+  "impl_sim": 1,
+  "r_sample": [
+   "savi.elf"
+  ],
+  "s_sample": [
+   "savi.elf"
+  ],
+  "doc": {
+   "title": "34-SAVI",
+   "id": "207850047",
+   "by": "翁琪芬",
+   "updated": "2022-04-13",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "bridge",
+  "cn": "二层转发（bridge/emac）",
+  "cli_real": "4/4",
+  "cli_sim": "4/4",
+  "show_real": "3/3",
+  "show_sim": "2/3",
+  "impl_real": 8,
+  "impl_sim": 3,
+  "r_sample": [
+   "bridge.elf",
+   "ce.ebrg.dp",
+   "ce.emac.dp",
+   "fe.ebrg.sw",
+   "fe.emac.sw"
+  ],
+  "s_sample": [
+   "bridge.elf",
+   "librg_ef_bridge.so",
+   "librg_ef_bridge.so.0.9"
+  ],
+  "doc": {
+   "title": "02_网桥",
+   "id": "5178011",
+   "by": "陈建鹏",
+   "updated": "2021-09-22",
+   "space": "Switch Knowledge Base"
+  }
+ },
+ {
+  "key": "l3fwd",
+  "cn": "三层转发（l3intf/uc）",
+  "cli_real": "3/3",
+  "cli_sim": "3/3",
+  "show_real": "2/2",
+  "show_sim": "2/2",
+  "impl_real": 3,
+  "impl_sim": 0,
+  "r_sample": [
+   "ce.l3intf.sw",
+   "fe.l3intf.sw",
+   "fe.uc.sw"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "L3INTF知识点整理",
+   "id": "43077786",
+   "by": " 林洪冰",
+   "updated": "2025-04-17",
+   "space": "Switch Knowledge Base"
+  }
+ },
+ {
+  "key": "cpp",
+  "cn": "CPP/NFPP CPU 保护",
+  "cli_real": "3/3",
+  "cli_sim": "0/3",
+  "show_real": "2/2",
+  "show_sim": "0/2",
+  "impl_real": 12,
+  "impl_sim": 0,
+  "r_sample": [
+   "ce.cli.cpp.dp",
+   "ce.cli.nfpp.dp",
+   "ce.cpp.dp",
+   "ce.nfpp.dp",
+   "fe.cpp.sw"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "CPP/NFPP",
+   "id": "1029799966",
+   "by": "任朝辉",
+   "updated": "2025-11-08",
+   "space": "任朝辉"
+  }
+ },
+ {
+  "key": "qos",
+  "cn": "QoS 队列与调度",
+  "cli_real": "8/8",
+  "cli_sim": "8/8",
+  "show_real": "4/4",
+  "show_sim": "2/4",
+  "impl_real": 3,
+  "impl_sim": 1,
+  "r_sample": [
+   "ce.qos.sw",
+   "fe.qos.sw",
+   "qosd.elf"
+  ],
+  "s_sample": [
+   "qosd.elf"
+  ],
+  "doc": {
+   "title": "02-QoS",
+   "id": "5178047",
+   "by": "李兰英",
+   "updated": "2023-02-07",
+   "space": "Switch Knowledge Base"
+  }
+ },
+ {
+  "key": "mmu",
+  "cn": "MMU 缓存管理",
+  "cli_real": "2/2",
+  "cli_sim": "1/2",
+  "show_real": "1/1",
+  "show_sim": "0/1",
+  "impl_real": 4,
+  "impl_sim": 0,
+  "r_sample": [
+   "ce.mmu.dp",
+   "ce.proxy.traf",
+   "fe.mmu.sw",
+   "libtraf_mmu.so"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "MMU",
+   "id": "18219178",
+   "by": "柯彤",
+   "updated": "2020-11-11",
+   "space": "Switch Knowledge Base"
+  }
+ },
+ {
+  "key": "mcast",
+  "cn": "组播 IGMP/PIM",
+  "cli_real": "2/2",
+  "cli_sim": "1/2",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 6,
+  "impl_sim": 6,
+  "r_sample": [
+   "igmp.elf",
+   "igmp_snp.elf",
+   "librg_ef_mcast.so",
+   "librg_ef_mcast.so.0.9",
+   "pim6d.elf"
+  ],
+  "s_sample": [
+   "igmp.elf",
+   "igmp_snp.elf",
+   "librg_ef_mcast.so",
+   "librg_ef_mcast.so.0.9",
+   "pim6d.elf"
+  ],
+  "doc": {
+   "title": "IGMP-CREF",
+   "id": "80093945",
+   "by": "翁琪芬",
+   "updated": "2021-03-19",
+   "space": "企业平台测试部"
+  }
+ },
+ {
+  "key": "mpls",
+  "cn": "MPLS",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 6,
+  "impl_sim": 3,
+  "r_sample": [
+   "ce.mpls.sw",
+   "fe.mpls.sw",
+   "libnsm_mpls.so",
+   "libnsm_mpls.so.1.0.0",
+   "librg_mpls_ref.so"
+  ],
+  "s_sample": [
+   "librg_mpls_ref.so",
+   "librg_mpls_ref.so.1.0.0",
+   "mpls.elf"
+  ],
+  "doc": {
+   "title": "数据面路由融合MPLS总体设计",
+   "id": "93789503",
+   "by": "张琳琳",
+   "updated": "2021-10-12",
+   "space": "平台9部-5组"
+  }
+ },
+ {
+  "key": "vxlan",
+  "cn": "VXLAN/Overlay",
+  "cli_real": "0/2",
+  "cli_sim": "1/2",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 11,
+  "impl_sim": 10,
+  "r_sample": [
+   "ce.vxlan.sw",
+   "librg_tunnel.so",
+   "librg_tunnel.so.1.0.0",
+   "librg_tunnelk_ef.so",
+   "librg_tunnelk_ef.so.1.2.0"
+  ],
+  "s_sample": [
+   "librg_tunnel.so",
+   "librg_tunnel.so.1.0.0",
+   "librg_tunnelk_ef.so",
+   "librg_tunnelk_ef.so.1.2.0",
+   "librg_vxlan.so"
+  ],
+  "doc": {
+   "title": "VXLAN-LLD/HLD",
+   "id": "93803896",
+   "by": "卢继伟",
+   "updated": "2021-07-30",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "vsu",
+  "cn": "VSU 虚拟交换单元",
+  "cli_real": "3/3",
+  "cli_sim": "3/3",
+  "show_real": "3/3",
+  "show_sim": "1/3",
+  "impl_real": 1,
+  "impl_sim": 2,
+  "r_sample": [
+   "maccmng_vsu.sh"
+  ],
+  "s_sample": [
+   "stack_helper",
+   "stack_parser"
+  ],
+  "doc": {
+   "title": "【SIP7】【VSU】DM-VSU",
+   "id": "827523967",
+   "by": "效能坐席",
+   "updated": "2024-11-20",
+   "space": "12.6RPJ20项目空间"
+  }
+ },
+ {
+  "key": "mlag",
+  "cn": "MLAG 跨设备聚合",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "0/1",
+  "impl_real": 3,
+  "impl_sim": 0,
+  "r_sample": [
+   "ce.mlag.sw",
+   "fe.mlag.sw",
+   "mlag.elf"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "06-MLAG",
+   "id": "192678599",
+   "by": "张华北",
+   "updated": "2022-03-24",
+   "space": "交换路由产品事业部-运营商业务测试知识域与技能域建设"
+  }
+ },
+ {
+  "key": "rdnd",
+  "cn": "RDND 主控冗余热备",
+  "cli_real": "2/2",
+  "cli_sim": "2/2",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 15,
+  "impl_sim": 15,
+  "r_sample": [
+   "ham",
+   "ham-init",
+   "ham.sh",
+   "ham_start_proc",
+   "hamk_demo.ko"
+  ],
+  "s_sample": [
+   "ham",
+   "ham-init",
+   "ham.sh",
+   "ham_start_proc",
+   "hamk_demo.ko"
+  ],
+  "doc": {
+   "title": "RDND",
+   "id": "284134551",
+   "by": "童欢",
+   "updated": "2022-08-19",
+   "space": "企业平台测试部"
+  }
+ },
+ {
+  "key": "sysmon",
+  "cn": "系统监控与环境",
+  "cli_real": "3/3",
+  "cli_sim": "3/3",
+  "show_real": "4/4",
+  "show_sim": "1/4",
+  "impl_real": 5,
+  "impl_sim": 2,
+  "r_sample": [
+   "alarm.elf",
+   "alarmDemo",
+   "alarmDemoGlobal",
+   "alarmObjectDeleteDemo",
+   "subcard_power_ctl"
+  ],
+  "s_sample": [
+   "alarm.elf",
+   "alarm_test_demo"
+  ],
+  "doc": {
+   "title": "监控子系统",
+   "id": "692749131",
+   "by": "陈杰",
+   "updated": "2024-04-15",
+   "space": "无线交换事业部测试1部"
+  }
+ },
+ {
+  "key": "upgrade",
+  "cn": "版本/补丁/组件升级",
+  "cli_real": "3/3",
+  "cli_sim": "2/3",
+  "show_real": "2/2",
+  "show_sim": "2/2",
+  "impl_real": 18,
+  "impl_sim": 11,
+  "r_sample": [
+   "cmpnt_upgrade_begin.elf",
+   "cmpnt_upgrade_client.elf",
+   "cmpnt_upgrade_server.elf",
+   "cmpnt_upgrade_test1",
+   "cmpnt_upgrade_test2"
+  ],
+  "s_sample": [
+   "cmpnt_upgrade_begin.elf",
+   "cmpnt_upgrade_client.elf",
+   "cmpnt_upgrade_server.elf",
+   "upgrade",
+   "upgrade_app_download.elf"
+  ],
+  "doc": {
+   "title": "[5GNR12.0PJ1] 5G-SYSUTILS软件设计规格",
+   "id": "80096456",
+   "by": "卢继伟",
+   "updated": "2021-03-20",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "ddm",
+  "cn": "光模块 DDM 诊断",
+  "cli_real": "2/2",
+  "cli_sim": "1/2",
+  "show_real": "1/3",
+  "show_sim": "1/3",
+  "impl_real": 4,
+  "impl_sim": 2,
+  "r_sample": [
+   "ce.ddm.sw",
+   "fe.ddm.sw",
+   "librg_fiber_decode.so",
+   "librg_fiber_decode.so.1.0.0"
+  ],
+  "s_sample": [
+   "librg_fiber_decode.so",
+   "librg_fiber_decode.so.1.0.0"
+  ],
+  "doc": {
+   "title": "INTF-DDM",
+   "id": "18910818",
+   "by": "林培辉",
+   "updated": "2024-12-06",
+   "space": "Switch Knowledge Base"
+  }
+ },
+ {
+  "key": "poe",
+  "cn": "PoE 供电",
+  "cli_real": "1/1",
+  "cli_sim": "1/1",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 4,
+  "impl_sim": 0,
+  "r_sample": [
+   "ce.mng.poe.sw",
+   "ce.ui.poe.sw",
+   "fe.mng.poe.sw",
+   "fe.poe.drv.sw"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "INTF-POE数通验收",
+   "id": "340396388",
+   "by": "陈星晨",
+   "updated": "2022-11-18",
+   "space": "Switch Knowledge Base"
+  }
+ },
+ {
+  "key": "ntp",
+  "cn": "NTP/SNTP 时钟",
+  "cli_real": "3/3",
+  "cli_sim": "3/3",
+  "show_real": "2/2",
+  "show_sim": "2/2",
+  "impl_real": 2,
+  "impl_sim": 1,
+  "r_sample": [
+   "ntp.elf",
+   "ntpdate"
+  ],
+  "s_sample": [
+   "ntp.elf"
+  ],
+  "doc": {
+   "title": "NTP",
+   "id": "181535146",
+   "by": "任建春",
+   "updated": "2022-05-25",
+   "space": "交换路由产品事业部-运营商业务测试知识域与技能域建设"
+  }
+ },
+ {
+  "key": "snmp",
+  "cn": "SNMP/RMON 网管",
+  "cli_real": "3/3",
+  "cli_sim": "2/3",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 7,
+  "impl_sim": 6,
+  "r_sample": [
+   "libdm_stub_snmp.so",
+   "libdm_stub_snmp.so.",
+   "librg-snmp.so",
+   "librg_snmp.so",
+   "librg_snmp.so.1.0.0"
+  ],
+  "s_sample": [
+   "libdm_stub_snmp.so",
+   "libdm_stub_snmp.so.",
+   "librg-snmp.so",
+   "librg-snmp.so.1.0.0",
+   "rg-rmond"
+  ],
+  "doc": {
+   "title": "SNMP组件交互",
+   "id": "196412837",
+   "by": "陈明锋",
+   "updated": "2022-03-28",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "syslog",
+  "cn": "Syslog/日志",
+  "cli_real": "3/3",
+  "cli_sim": "2/3",
+  "show_real": "1/1",
+  "show_sim": "1/1",
+  "impl_real": 10,
+  "impl_sim": 11,
+  "r_sample": [
+   "diag_log.elf",
+   "klogd",
+   "librg_syslog.so",
+   "librg_syslog_lc.so",
+   "librg_syslog_pack.so"
+  ],
+  "s_sample": [
+   "klogd",
+   "librg_syslog.so",
+   "librg_syslog_lc.so",
+   "librg_syslog_lc.so.1.0.0",
+   "librg_syslog_pack.so"
+  ],
+  "doc": {
+   "title": "SYSLOG",
+   "id": "170298398",
+   "by": "翁琪芬",
+   "updated": "2022-02-22",
+   "space": "测试平台知识体系"
+  }
+ },
+ {
+  "key": "netconf",
+  "cn": "NETCONF/GRPC/REST",
+  "cli_real": "5/5",
+  "cli_sim": "2/5",
+  "show_real": "2/2",
+  "show_sim": "2/2",
+  "impl_real": 11,
+  "impl_sim": 9,
+  "r_sample": [
+   "cwmp.elf",
+   "cwmp_gsoap.elf",
+   "grpc.elf",
+   "grpc_vty.elf",
+   "libdm_stub_cwmp.so"
+  ],
+  "s_sample": [
+   "grpc.elf",
+   "grpc_vty.elf",
+   "libdm_stub_cwmp.so",
+   "libdm_stub_cwmp.so.",
+   "libdm_stub_grpc.so"
+  ],
+  "doc": {
+   "title": "补丁netconf与grpc",
+   "id": "772702836",
+   "by": "郑伟强1",
+   "updated": "2026-08-20",
+   "space": "郑伟强1"
+  }
+ },
+ {
+  "key": "sflow",
+  "cn": "sFlow/IPFIX 采样",
+  "cli_real": "2/2",
+  "cli_sim": "0/2",
+  "show_real": "2/2",
+  "show_sim": "0/2",
+  "impl_real": 11,
+  "impl_sim": 0,
+  "r_sample": [
+   "ce.ipfix.sw",
+   "ce.sflow.sw",
+   "fe.ipfix.sw",
+   "fe.sflow.sw",
+   "ipfix_app"
+  ],
+  "s_sample": [],
+  "doc": {
+   "title": "SFLOW.",
+   "id": "59337453",
+   "by": "林培辉",
+   "updated": "2020-09-11",
+   "space": "平台八部--交换6组"
+  }
+ },
+ {
+  "key": "diag",
+  "cn": "诊断工具/debug",
+  "cli_real": "2/4",
+  "cli_sim": "0/4",
+  "show_real": "2/2",
+  "show_sim": "0/2",
+  "impl_real": 5,
+  "impl_sim": 2,
+  "r_sample": [
+   "core_collect.sh",
+   "diag_log.elf",
+   "ids.elf",
+   "libef_diagnosis_lib.so",
+   "libef_diagnosis_lib.so.1.0.0"
+  ],
+  "s_sample": [
+   "libef_diagnosis_lib.so",
+   "libef_diagnosis_lib.so.1.0.0"
+  ],
+  "doc": {
+   "title": "IDS",
+   "id": "284134099",
+   "by": "童欢",
+   "updated": "2022-08-29",
+   "space": "企业平台测试部"
+  }
+ }
+]

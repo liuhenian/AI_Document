@@ -1,0 +1,5 @@
+cat /proc/$P/cmdline | tr '\0' ' '
+pid=3947
+300
+/sbin/efmp_frame.elf -c 3 -b 0000:00:03.0 --log-level=4 ~ # 
+~ # echo

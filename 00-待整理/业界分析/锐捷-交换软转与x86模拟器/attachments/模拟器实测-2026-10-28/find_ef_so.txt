@@ -1,0 +1,3 @@
+find / -name '*_ef.so*' 2>/dev/null | head -40
+
+echo

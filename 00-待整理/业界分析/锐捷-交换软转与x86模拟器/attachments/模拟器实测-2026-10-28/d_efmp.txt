@@ -1,0 +1,6 @@
+packet  Debug efmp packet
+
+Ruijie#debug efmp 
+% Incomplete command.
+
+Ruijie#echo

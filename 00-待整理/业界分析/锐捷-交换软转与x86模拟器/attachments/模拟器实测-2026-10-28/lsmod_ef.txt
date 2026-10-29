@@ -1,0 +1,10 @@
+nf_defrag_ipv4 16384 1 nf_conntrack, Live 0xffffffffc0f67000
+nf_defrag_ipv6 24576 1 nf_conntrack, Live 0xffffffffc0f60000
+igb_uio 20480 0 - Live 0xffffffffc09c2000 (O)
+ef_msg_agent 16384 3 rg_ipv6,ipv4,af_packet, Live 0xffffffffc09cd000 (O)
+ef_buff 1675264 19 rg_ipv6,ipv4,af_packet, Live 0xffffffffc0828000 (O)
+rg_dprintk 16384 7 rg_ipv6,ipv4,lsm_ko,af_packet,ef_msg_agent,ef_buff,tipc, Live 0xffffffffc06d3000 (O)
+uio_pci_generic 16384 10 - Live 0xffffffffc05b6000
+uio 20480 22 igb_uio,uio_pci_generic, Live 0xffffffffc0572000
+~ # 
+~ # echo

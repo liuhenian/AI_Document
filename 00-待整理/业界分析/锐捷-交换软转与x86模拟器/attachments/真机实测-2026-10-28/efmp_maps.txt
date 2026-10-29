@@ -1,0 +1,44 @@
+/$P/maps 2>/dev/null | sort -u | head -40
+
+/lib/ld-2.31.so
+/lib/libboundscheck.so
+/lib/libbox_crypto_raw.so
+/lib/libbridge_impl.so.0.9
+/lib/libc-2.31.so
+/lib/libcallfun.so
+/lib/libcgstctrl.so
+/lib/libclient_new.so.1.0.0
+/lib/libcpurule.so
+/lib/libcrypto.so.3
+/lib/libdl-2.31.so
+/lib/libef_atomic.so.1.0.0
+/lib/libef_diagnosis_lib.so.1.0.0
+/lib/libef_fpm.so
+/lib/libef_hal.so.1.0.0
+/lib/libef_msg_client.so.1.0.0
+/lib/libhiredis.so
+/lib/libhotpatch_app.so.0.1
+/lib/libiconv.so.2.6.1
+/lib/libjemalloc.so.1
+/lib/libjson-c.so.5.2.0
+/lib/liblog_common_essence.so.1.0.0
+/lib/libm-2.31.so
+/lib/libnet.so.1.0.0
+/lib/libnetconf_lib_new.so
+/lib/libpassword_policy.so.1.0.0
+/lib/libpassword_policy_msg.so.1.0.0
+/lib/libprotobuf-c.so
+/lib/libpsh_common.so.1.0.0
+/lib/libpsh_essence.so.1.0.0
+/lib/libpthread-2.31.so
+/lib/libras_common_essence.so.1.0.0
+/lib/librbac_new.so.1.0.0
+/lib/librdnd_mom_essence.so.1.0.0
+/lib/libref_fib.so
+/lib/librg-fsui_real.so
+/lib/librg-thread.so.1.0.0
+/lib/librg_acl-1.0.0.so
+/lib/librg_af_key.so.1.1.0
+/lib/librg_ap.so.1.0.0
+~ # 
+~ # echo

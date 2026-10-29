@@ -1,0 +1,4 @@
+model name	: ARMv8 Processor rev 4
+2
+~ # 
+~ # echo

@@ -1,0 +1,17 @@
+Inter-|   Receive                                                |  Transmit
+ face |bytes    packets errs drop fifo frame compressed multicast|bytes    packets errs drop fifo colls carrier compressed
+ Gi0-4:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ Gi0-0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+  eth0:       0       0    0    0    0     0          0         0    27168      83    0    0    0     0       0          0
+ Gi0-7:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ Gi0-3:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ Gi0-6:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+docker0:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ Gi0-2:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ Gi0-9:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ Gi0-5:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ Gi0-1:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+    lo:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+ Gi0-8:       0       0    0    0    0     0          0         0        0       0    0    0    0     0       0          0
+~ # 
+~ # echo

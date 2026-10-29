@@ -1,0 +1,9 @@
+cmps.ctc.tcammng
+cmps.sda.sw
+cmps.sln.sxauth
+cmps_app_schain
+config.bcm
+dal.ko
+knet.ko
+~ # 
+~ # echo

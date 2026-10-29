@@ -1,0 +1,4 @@
+Dev Slot Port Configured Module            Online Module                Software Status
+  --- ---- ---- ---------------------------- ---------------------------- ---------------
+  1   0    10   X86                          X86                          master         
+Ruijie#echo

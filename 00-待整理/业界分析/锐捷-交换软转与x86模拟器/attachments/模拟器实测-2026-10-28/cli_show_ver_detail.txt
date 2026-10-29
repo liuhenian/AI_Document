@@ -1,0 +1,13 @@
+System description      : Ruijie (X86 TESTBENCH) by Ruijie Networks.
+System start time       : 2026-10-10 14:53:46
+System uptime           : 17:18:42:17
+System hardware version : 1.00
+System software version : X86_RGOS 12.5(1)B1418S1
+System patch number     : NA
+System software number  : M22481910092026
+System serial number    : R5254009EF21A
+System bios version     : UNKNOWN
+System rboot version    : N/A
+System cpu partition    : 1
+Module information:
+Ruijie#echo

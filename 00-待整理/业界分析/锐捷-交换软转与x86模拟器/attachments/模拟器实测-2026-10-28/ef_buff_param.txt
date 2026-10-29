@@ -1,0 +1,13 @@
+dule/ef_buff/parameters/*; do printf '%s=' $f; cat $f 2>/dev/null; done
+efmp_kcap_dbg              efmp_kern_event_dbg_flags
+efmp_kern_ctrl_dbg_flags   ref_ip_route_dbg
+efmp_kern_ebuf_dbg_flags   ref_ipv6_route_dbg
+---
+/sys/module/ef_buff/parameters/efmp_kcap_dbg=0
+/sys/module/ef_buff/parameters/efmp_kern_ctrl_dbg_flags=0
+/sys/module/ef_buff/parameters/efmp_kern_ebuf_dbg_flags=0
+/sys/module/ef_buff/parameters/efmp_kern_event_dbg_flags=0
+/sys/module/ef_buff/parameters/ref_ip_route_dbg=0
+/sys/module/ef_buff/parameters/ref_ipv6_route_dbg=0
+~ # 
+~ # echo

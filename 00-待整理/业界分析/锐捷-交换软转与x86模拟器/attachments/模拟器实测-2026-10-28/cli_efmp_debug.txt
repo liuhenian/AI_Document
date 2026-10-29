@@ -1,0 +1,12 @@
+class           Show efmp class
+  counter         Show efmp counter info
+  diagnosis       Show efmp diagnosis
+  flow            Show efmp flow info
+  forward         Change efmp forward mode
+  fpa             Show efmp fpa info
+  pkt-statistics  Show efmp packet statistics info
+
+Ruijie#show efmp 
+% Incomplete command.
+
+Ruijie#echo

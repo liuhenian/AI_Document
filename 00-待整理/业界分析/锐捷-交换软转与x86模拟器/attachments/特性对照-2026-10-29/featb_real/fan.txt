@@ -1,0 +1,6 @@
+Fan id Type             Status     Hardware Version Serial Number  
+------ ---------------- ---------- ---------------- ---------------
+1/1    RG_FAN           ok         N/A              N/A            
+1/2    RG_FAN           ok         N/A              N/A            
+2/1    RG_FAN           ok         N/A              N/A            
+2/2    RG_FAN           ok         N/A              N/A

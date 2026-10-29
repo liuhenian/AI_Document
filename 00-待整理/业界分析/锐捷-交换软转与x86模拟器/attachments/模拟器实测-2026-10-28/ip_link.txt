@@ -1,0 +1,15 @@
+1048576: eth0: <BROADCAST,MULTICAST,PROMISC> mtu 9000 qdisc mq state DOWN mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1a brd ff:ff:ff:ff:ff:ff
+1: Gi0-0: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1b brd ff:ff:ff:ff:ff:ff
+2: Gi0-1: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1c brd ff:ff:ff:ff:ff:ff
+3: Gi0-2: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1d brd ff:ff:ff:ff:ff:ff
+4: Gi0-3: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1e brd ff:ff:ff:ff:ff:ff
+5: Gi0-4: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1f brd ff:ff:ff:ff:ff:ff
+6: Gi0-5: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:20 brd ff:ff:ff:ff:ff:ff
+7: Gi0-6: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:21 brd ff:ff:ff:ff:ff:ff
+8: Gi0-7: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1b brd ff:ff:ff:ff:ff:ff
+9: Gi0-8: <BROADCAST,MULTICAST,UP> mtu 1500 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1b brd ff:ff:ff:ff:ff:ff
+10: Gi0-9: <BROADCAST,MULTICAST,UP> mtu 1522 qdisc pfifo_fast state UP mode DEFAULT group default qlen 1000\    link/ether 52:54:00:9e:f2:1b brd ff:ff:ff:ff:ff:ff
+1048587: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN mode DEFAULT group default \    link/ether 02:42:f8:02:95:7c brd ff:ff:ff:ff:ff:ff
+4095: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000\    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+~ # 
+~ # echo

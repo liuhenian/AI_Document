@@ -1,0 +1,39 @@
+-rw-r--r--    1 root     root          4120 Oct  9 14:49 /sbin/adjust_memory.ko
+-rw-r--r--    1 root     root         25224 Oct  9 14:49 /sbin/aer_attach.ko
+-rw-r--r--    1 root     root          9176 Oct  9 14:49 /sbin/aer_print.ko
+-rw-r--r--    1 root     root        121712 Oct  9 14:49 /sbin/af_packet.ko
+lrwxrwxrwx    1 root     root            19 Oct  9 14:49 /sbin/cpurule_k.ko -> rg-utils-cpurule.ko
+-rw-r--r--    1 root     root        412032 Oct  9 14:49 /sbin/ef_buff.ko
+-rw-r--r--    1 root     root        412032 Oct  9 14:49 /sbin/ef_buff.ko
+-rw-r--r--    1 root     root         20728 Oct  9 14:49 /sbin/ef_msg_agent.ko
+-rw-r--r--    1 root     root         20728 Oct  9 14:49 /sbin/ef_msg_agent.ko
+-rwxr-xr-x    1 root     root      49422424 Oct  9 14:49 /sbin/efmp_frame.elf
+-rwxr-xr-x    1 root     root         22696 Oct  9 14:49 /sbin/flashio_probe.ko
+-rw-r--r--    1 root     root         26224 Oct  9 14:49 /sbin/hamk_demo.ko
+-rw-r--r--    1 root     root         21368 Oct  9 14:49 /sbin/igb_uio.ko
+-rw-r--r--    1 root     root         13672 Oct  9 14:49 /sbin/int_restrain_test.ko
+-rw-r--r--    1 root     root        775400 Oct  9 14:49 /sbin/ipv4.ko
+-rw-r--r--    1 root     root         13104 Oct  9 14:49 /sbin/ivr.ko
+-rw-r--r--    1 root     root          2784 Oct  9 14:49 /sbin/kernel_fib.ko
+-rw-r--r--    1 root     root         16072 Oct  9 14:49 /sbin/lsm_cbb.ko
+-rw-r--r--    1 root     root        565592 Oct  9 14:49 /sbin/lsm_ko.ko
+-rw-r--r--    1 root     root         34688 Oct  9 14:49 /sbin/proc_info.ko
+-rw-r--r--    1 root     root         41576 Oct  9 14:49 /sbin/product_info_utils.ko
+-rw-r--r--    1 root     root         11232 Oct  9 14:49 /sbin/pshk.ko
+-rwxr-xr-x    1 root     root       1168760 Oct  9 14:49 /sbin/ref_proxy.elf
+-rw-r--r--    1 root     root          8744 Oct  9 14:49 /sbin/rg-status-notifier.ko
+-rw-r--r--    1 root     root         28952 Oct  9 14:49 /sbin/rg-sysfs.ko
+-rw-r--r--    1 root     root         36800 Oct  9 14:49 /sbin/rg-utils-cpurule.ko
+-rw-r--r--    1 root     root        104368 Oct  9 14:49 /sbin/rg-utils-lmk.ko
+lrwxrwxrwx    1 root     root            12 Oct  9 14:49 /sbin/rg-utils-sysrq.ko -> proc_info.ko
+-rw-r--r--    1 root     root         14224 Oct  9 14:49 /sbin/rg_dprintk.ko
+-rw-r--r--    1 root     root        103504 Oct  9 14:49 /sbin/rg_edac.ko
+-rw-r--r--    1 root     root        243096 Oct  9 14:49 /sbin/rg_ipv6.ko
+lrwxrwxrwx    1 root     root            15 Oct  9 14:49 /sbin/rg_lowmem_killer.ko -> rg-utils-lmk.ko
+-rw-r--r--    1 root     root         56080 Oct  9 14:49 /sbin/rg_thread_det.ko
+-rw-r--r--    1 root     root          9376 Oct  9 14:49 /sbin/rg_time.ko
+-rw-r--r--    1 root     root         56704 Oct  9 14:49 /sbin/rte_kni.ko
+-rw-r--r--    1 root     root         48512 Oct  9 14:49 /sbin/texception.ko
+-rw-r--r--    1 root     root        674704 Oct  9 14:49 /sbin/tipc.ko
+~ # 
+~ # echo

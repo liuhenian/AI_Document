@@ -1,0 +1,34 @@
+libef_atomic.so
+libef_atomic.so.1.0.0
+libef_diagnosis_lib.so
+libef_diagnosis_lib.so.1.0.0
+libef_fpm.so
+libef_hal.so
+libef_hal.so.1.0.0
+libef_msg_client.so
+libef_msg_client.so.1.0.0
+libef_pcap.so
+libef_pcap.so.1.0.0
+libgrpc++_reflection.so
+libgrpc++_reflection.so.1
+libgrpc++_reflection.so.1.6.0
+libref_fib.so
+librg_ef_bridge.so
+librg_ef_bridge.so.0.9
+librg_ef_mcast.so
+librg_ef_mcast.so.0.9
+librg_efacl.so
+librg_efmp.so
+librg_efpbr.so
+librg_mpls_ref.so
+librg_mpls_ref.so.1.0.0
+librg_tunnelk_ef.so
+librg_tunnelk_ef.so.1.2.0
+librg_udph_ef.so
+librg_udph_ef.so.1.0
+librg_urpfk_ef.so
+librg_urpfk_ef.so.1.2.0
+librg_vxlan_ef.so
+librg_vxlan_ef.so.1.0.0
+~ # 
+~ # echo

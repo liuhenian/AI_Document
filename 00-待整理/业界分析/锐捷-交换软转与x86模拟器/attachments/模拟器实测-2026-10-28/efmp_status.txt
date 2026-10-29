@@ -1,0 +1,15 @@
+cat /proc/$(pidof efmp_frame.elf)/status 2>/dev/null | head -12
+Name:	efmp_frame.elf
+Umask:	0000
+State:	S (sleeping)
+Tgid:	3947
+Ngid:	0
+Pid:	3947
+PPid:	1
+TracerPid:	0
+Uid:	0	0	0	0
+Gid:	0	0	0	0
+FDSize:	512
+Groups:	 
+~ # 
+~ # echo
