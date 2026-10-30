@@ -29,3 +29,19 @@
   color: var(--text-error);
   font-family: var(--font-monospace);
 }
+
+/* 大文件截断提示条：位于代码块上方，不参与横向滚动 */
+.code-reader-notice {
+  margin: 0 28px 12px 28px;
+  padding: 10px 14px;
+  border-left: 3px solid var(--color-orange, #e0a030);
+  background-color: var(--background-secondary);
+  border-radius: var(--radius-s);
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.code-reader-notice strong {
+  color: var(--text-normal);
+}
