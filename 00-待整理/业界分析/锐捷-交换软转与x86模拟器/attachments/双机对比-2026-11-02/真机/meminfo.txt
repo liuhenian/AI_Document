@@ -1,0 +1,11 @@
+head -8 /proc/meminfo
+MemTotal:         996168 kB
+MemFree:          125368 kB
+MemAvailable:     174184 kB
+Buffers:           10572 kB
+Cached:           189992 kB
+SwapCached:         1840 kB
+Active:           259936 kB
+Inactive:         242032 kB
+~ #
+~ #

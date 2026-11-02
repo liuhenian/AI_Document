@@ -1,0 +1,31 @@
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 addgroup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 adduser -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 chat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 chroot -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 crond -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 delgroup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 deluser -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ftpd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ifplugd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 killall5 -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 lspci -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 nanddump -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 nandwrite -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 powertop -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 rdate -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 rdev -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 readprofile -> ../../bin/busybox
+-rwxr-xr-x    1 root     root            28 Oct  9 10:19 reboot
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 rpm2cpio -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 rtcwake -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         59992 Oct  9 10:19 setpci
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 sysctl -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 tftpd -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         53248 Oct  9 10:19 tree
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ubiattach -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ubidetach -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ubimkvol -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ubirmvol -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ubirsvol -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ubiupdatevol -> ../../bin/busybox
+-rwxr-xr-x    1 root     root          1757 Oct  9 10:19 update-pciids

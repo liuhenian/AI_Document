@@ -1,0 +1,4 @@
+grep -m1 'model name' /proc/cpuinfo
+model name	: Intel Xeon Processor (Cascadelake)
+~ #
+~ #

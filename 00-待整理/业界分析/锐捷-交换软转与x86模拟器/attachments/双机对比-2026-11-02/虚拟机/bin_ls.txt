@@ -1,0 +1,47 @@
+ls /bin
+ash                    genl                   pmap
+base64                 getopt                 printenv
+bash                   grep                   ps
+board_detect           gunzip                 pwd
+bridge                 gzip                   pwdx
+busybox                hostname               python
+cat                    ifstat                 python3
+chgrp                  iostat                 python3-config
+chmod                  ip                     python3.12
+chown                  ipcalc.sh              python3.12-config
+config_generate        kill                   python3.4
+cp                     lib                    rm
+cpio                   linux32                rmdir
+ctstat                 linux64                routel
+cttyhack               ln                     rtacct
+date                   lnstat                 rtmon
+dd                     lock                   rtstat
+df                     login                  run-parts
+dmesg                  lrb                    scriptreplay
+dnsdomainname          lrx                    sed
+echo                   lrz                    setarch
+ed                     ls                     sh
+egrep                  lsb                    slabtop
+eu-addr2line           lspci                  sleep
+eu-ar                  lsx                    ss
+eu-elfclassify         lsz                    stat
+eu-elfcmp              lzop                   stty
+eu-elfcompress         mkdir                  su
+eu-elflint             mknod                  sync
+eu-findtextrel         mktemp                 tar
+eu-make-debug-archive  more                   tc
+eu-nm                  mount                  tload
+eu-objdump             mpstat                 top
+eu-ranlib              mv                     touch
+eu-readelf             netstat                true
+eu-size                nice                   umount
+eu-stack               nstat                  uname
+eu-strings             pgrep                  uptime
+eu-strip               pidof                  usleep
+eu-unstrip             pidwait                vi
+false                  ping                   vmstat
+fgrep                  ping6                  w
+free                   pipe_progress          watch
+fsync                  pkill                  zcat
+~ #
+~ #

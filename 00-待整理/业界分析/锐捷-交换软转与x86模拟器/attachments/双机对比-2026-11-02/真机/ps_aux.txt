@@ -1,0 +1,9 @@
+ps
+
+  PID TTY          TIME CMD
+17326 pts/5    00:00:00 telnetd-main
+17327 pts/5    00:00:00 rl-con/260
+17344 pts/5    00:00:00 sh
+17356 pts/5    00:00:00 ps
+~ #
+~ #

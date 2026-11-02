@@ -1,0 +1,600 @@
+-rw-r--r--    1 root     root             5 Oct 26 20:30 cmpnt_upgrade_test1
+-rw-r--r--    1 root     root             5 Oct 26 20:30 cmpnt_upgrade_test2
+drwxr-xr-x    2 root     root          4096 Oct 26 20:30 functions
+-rw-r--r--    1 root     root          8076 Oct 26 20:30 functions.sh
+drwxr-xr-x    2 root     root          4096 Oct 26 20:30 hdf
+-rwxr-xr-x    1 root     root       1499480 Oct 26 20:30 ld-2.31.so
+lrwxrwxrwx    1 root     root            10 Oct 26 20:30 ld-linux-x86-64.so.2 -> ld-2.31.so
+-rwxr-xr-x    1 root     root         33952 Oct 26 20:30 libBrokenLocale-2.31.so
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 libBrokenLocale.so.1 -> libBrokenLocale-2.31.so
+-rwxr-xr-x    1 root     root        109424 Oct 26 20:30 libSegFault.so
+-rwxr-xr-x    1 root     root           182 Oct 26 20:30 libalarm.so
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 libalarm_common.so -> libalarm_common.so.1.0.0
+-rwxr-xr-x    1 root     root         58024 Oct 26 20:30 libalarm_common.so.1.0.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libalarm_essence.so -> libalarm_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        212664 Oct 26 20:30 libalarm_essence.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 libalarm_model.so -> libalarm_model.so.1.0.0
+-rwxr-xr-x    1 root     root       2100696 Oct 26 20:30 libalarm_model.so.1.0.0
+-rwxr-xr-x    1 root     root        147472 Oct 26 20:30 libanl-2.31.so
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libanl.so.1 -> libanl-2.31.so
+-rwxr-xr-x    1 root     root        406248 Oct 26 20:30 libarch_group.so
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libarchive.so -> libarchive.so.13.8.8
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libarchive.so.13 -> libarchive.so.13.8.8
+-rwxr-xr-x    1 root     root       1115608 Oct 26 20:30 libarchive.so.13.8.8
+-rwxr-xr-x    1 root     root         50120 Oct 26 20:30 libasm-0.186.so
+lrwxrwxrwx    1 root     root            11 Oct 26 20:30 libasm.so -> libasm.so.1
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libasm.so.1 -> libasm-0.186.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libatomic.so -> libatomic.so.1.2.0
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libatomic.so.1 -> libatomic.so.1.2.0
+-rwxr-xr-x    1 root     root        180640 Oct 26 20:30 libatomic.so.1.2.0
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libbfd.so -> librg_bfd.so.1.0.0
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libbfd.so.1.0.0 -> librg_bfd.so.1.0.0
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libblkid.so.1 -> libblkid.so.1.1.0
+-rwxr-xr-x    1 root     root        493184 Oct 26 20:30 libblkid.so.1.1.0
+-rwxr-xr-x    1 root     root         80008 Oct 26 20:30 libboundscheck.so
+-rw-r--r--    1 root     root            40 Oct 26 20:30 libbox_crypto.so
+-rwxr-xr-x    1 root     root        120696 Oct 26 20:30 libbox_crypto_raw.so
+-rw-r--r--    1 root     root            37 Oct 26 20:30 libbox_ssl.so
+-rwxr-xr-x    1 root     root         22320 Oct 26 20:30 libbox_ssl_raw.so
+-rw-r--r--    1 root     root            92 Oct 26 20:30 libbridge.so
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 libbridge_impl.so -> libbridge_impl.so.0.9
+-rwxr-xr-x    1 root     root       1626736 Oct 26 20:30 libbridge_impl.so.0.9
+-rwxr-xr-x    1 root     root      18535576 Oct 26 20:30 libc-2.31.so
+lrwxrwxrwx    1 root     root            12 Oct 26 20:30 libc.so.6 -> libc-2.31.so
+-rwxr-xr-x    1 root     root         24408 Oct 26 20:30 libcallfun.so
+lrwxrwxrwx    1 root     root            11 Oct 26 20:30 libcap.so -> libcap.so.2
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libcap.so.2 -> libcap.so.2.69
+-rwxr-xr-x    1 root     root         66968 Oct 26 20:30 libcap.so.2.69
+-rwxr-xr-x    1 root     root        171800 Oct 26 20:30 libcgstctrl.so
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libcharset.so -> libcharset.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libcharset.so.1 -> libcharset.so.1.0.0
+-rwxr-xr-x    1 root     root         17472 Oct 26 20:30 libcharset.so.1.0.0
+-rwxr-xr-x    1 root     root           147 Oct 26 20:30 libcli-client.so
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libclient_new.so -> libclient_new.so.1.0.0
+-rwxr-xr-x    1 root     root       3976160 Oct 26 20:30 libclient_new.so.1.0.0
+-rwxr-xr-x    1 root     root       1146520 Oct 26 20:30 libcmpnt_db.so
+-rwxr-xr-x    1 root     root        197568 Oct 26 20:30 libconfig_cli.so
+-rwxr-xr-x    1 root     root         65728 Oct 26 20:30 libcpurule.so
+-rwxr-xr-x    1 root     root        180608 Oct 26 20:30 libcrypt-2.31.so
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libcrypt.so.1 -> libcrypt-2.31.so
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libcrypto.so -> libcrypto.so.3
+-rwxr-xr-x    1 root     root       4623240 Oct 26 20:30 libcrypto.so.3
+-rwxr-xr-x    1 root     root            98 Oct 26 20:30 libcscm.so
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 libcscm_essence.so -> libcscm_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        173352 Oct 26 20:30 libcscm_essence.so.1.0.0
+-rwxr-xr-x    1 root     root          1209 Oct 26 20:30 libcurl.la
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libcurl.so -> libcurl.so.4.8.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libcurl.so.4 -> libcurl.so.4.8.0
+-rwxr-xr-x    1 root     root       5061472 Oct 26 20:30 libcurl.so.4.8.0
+-rwxr-xr-x    1 root     root        569120 Oct 26 20:30 libcwmp_cli.so
+-rwxr-xr-x    1 root     root        302768 Oct 26 20:30 libcwmp_dm.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libdcm_essence.so -> libdcm_essence.so.
+-rwxr-xr-x    1 root     root        599328 Oct 26 20:30 libdcm_essence.so.
+-rw-r--r--    1 root     root            32 Oct 26 20:30 libdemand.so
+-rwxr-xr-x    1 root     root         49576 Oct 26 20:30 libdemand_org.so
+-rwxr-xr-x    1 root     root        124816 Oct 26 20:30 libdev_drv.so
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 libdhcp6client.so -> libdhcp6client.so.0.1
+-rwxr-xr-x    1 root     root         97192 Oct 26 20:30 libdhcp6client.so.0.1
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 libdhcp_snp_api.so -> libdhcp_snp_api.so.1.0.0
+-rwxr-xr-x    1 root     root         40984 Oct 26 20:30 libdhcp_snp_api.so.1.0.0
+-rwxr-xr-x    1 root     root            66 Oct 26 20:30 libdhcpclient.so
+lrwxrwxrwx    1 root     root            28 Oct 26 20:30 libdhcpclient_essence.so -> libdhcpclient_essence.so.0.1
+-rwxr-xr-x    1 root     root         74008 Oct 26 20:30 libdhcpclient_essence.so.0.1
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libdhcppublic.so -> libdhcppublic.so.0.1
+-rwxr-xr-x    1 root     root         58976 Oct 26 20:30 libdhcppublic.so.0.1
+-rwxr-xr-x    1 root     root         95112 Oct 26 20:30 libdiag_log.so
+-rwxr-xr-x    1 root     root        252608 Oct 26 20:30 libdl-2.31.so
+lrwxrwxrwx    1 root     root            13 Oct 26 20:30 libdl.so.2 -> libdl-2.31.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libdm_stub_cli.so -> libdm_stub_cli.so.
+-rwxr-xr-x    1 root     root         55504 Oct 26 20:30 libdm_stub_cli.so.
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libdm_stub_cwmp.so -> libdm_stub_cwmp.so.
+-rwxr-xr-x    1 root     root         23008 Oct 26 20:30 libdm_stub_cwmp.so.
+-rwxr-xr-x    1 root     root            39 Oct 26 20:30 libdm_stub_drv.so
+lrwxrwxrwx    1 root     root            26 Oct 26 20:30 libdm_stub_drv_essence.so -> libdm_stub_drv_essence.so.
+-rwxr-xr-x    1 root     root         84880 Oct 26 20:30 libdm_stub_drv_essence.so.
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libdm_stub_grpc.so -> libdm_stub_grpc.so.
+-rwxr-xr-x    1 root     root         23128 Oct 26 20:30 libdm_stub_grpc.so.
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libdm_stub_lldp.so -> libdm_stub_lldp.so.
+-rwxr-xr-x    1 root     root         23936 Oct 26 20:30 libdm_stub_lldp.so.
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libdm_stub_lsm.so -> libdm_stub_lsm.so.
+-rwxr-xr-x    1 root     root         38992 Oct 26 20:30 libdm_stub_lsm.so.
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libdm_stub_snmp.so -> libdm_stub_snmp.so.
+-rwxr-xr-x    1 root     root         24720 Oct 26 20:30 libdm_stub_snmp.so.
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libdm_stub_tech.so -> libdm_stub_tech.so.
+-rwxr-xr-x    1 root     root         23656 Oct 26 20:30 libdm_stub_tech.so.
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libdnsclient.so -> libdnsclient.so.0.1
+-rwxr-xr-x    1 root     root        112144 Oct 26 20:30 libdnsclient.so.0.1
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libds_ipc.so -> libds_ipc.so.1.0
+-rwxr-xr-x    1 root     root         79776 Oct 26 20:30 libds_ipc.so.1.0
+-rwxr-xr-x    1 root     root        909408 Oct 26 20:30 libdw-0.186.so
+lrwxrwxrwx    1 root     root            10 Oct 26 20:30 libdw.so -> libdw.so.1
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libdw.so.1 -> libdw-0.186.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libedit.so -> libedit.so.0.0.72
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libedit.so.0 -> libedit.so.0.0.72
+-rwxr-xr-x    1 root     root        309984 Oct 26 20:30 libedit.so.0.0.72
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 libef_atomic.so -> libef_atomic.so.1.0.0
+-rwxr-xr-x    1 root     root         42424 Oct 26 20:30 libef_atomic.so.1.0.0
+lrwxrwxrwx    1 root     root            28 Oct 26 20:30 libef_diagnosis_lib.so -> libef_diagnosis_lib.so.1.0.0
+-rwxr-xr-x    1 root     root        169136 Oct 26 20:30 libef_diagnosis_lib.so.1.0.0
+-rwxr-xr-x    1 root     root       1318360 Oct 26 20:30 libef_fpm.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libef_hal.so -> libef_hal.so.1.0.0
+-rwxr-xr-x    1 root     root        365432 Oct 26 20:30 libef_hal.so.1.0.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libef_msg_client.so -> libef_msg_client.so.1.0.0
+-rwxr-xr-x    1 root     root         93912 Oct 26 20:30 libef_msg_client.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libef_pcap.so -> libef_pcap.so.1.0.0
+-rwxr-xr-x    1 root     root         32768 Oct 26 20:30 libef_pcap.so.1.0.0
+-rwxr-xr-x    1 root     root        180296 Oct 26 20:30 libelf-0.186.so
+lrwxrwxrwx    1 root     root            11 Oct 26 20:30 libelf.so -> libelf.so.1
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libelf.so.1 -> libelf-0.186.so
+-rwxr-xr-x    1 root     root        176544 Oct 26 20:30 libfcgi.so
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libffi.so -> libffi.so.8.1.4
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libffi.so.8 -> libffi.so.8.1.4
+-rwxr-xr-x    1 root     root         92432 Oct 26 20:30 libffi.so.8.1.4
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libform.so -> libform.so.6.5
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libform.so.6 -> libform.so.6.5
+-rwxr-xr-x    1 root     root        101880 Oct 26 20:30 libform.so.6.5
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libftp_client.so -> libftp_client.so.0.1
+-rwxr-xr-x    1 root     root        275160 Oct 26 20:30 libftp_client.so.0.1
+-rw-r--r--    1 root     root           132 Oct 26 20:30 libgcc_s.so
+-rw-r--r--    1 root     root        812856 Oct 26 20:30 libgcc_s.so.1
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libgmp.so -> libgmp.so.10.4.1
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libgmp.so.10 -> libgmp.so.10.4.1
+-rwxr-xr-x    1 root     root        851760 Oct 26 20:30 libgmp.so.10.4.1
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libgomp.so -> libgomp.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libgomp.so.1 -> libgomp.so.1.0.0
+-rwxr-xr-x    1 root     root       1068216 Oct 26 20:30 libgomp.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libgpr.so -> libgpr.so.4.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libgpr.so.4 -> libgpr.so.4.0.0
+-rwxr-xr-x    1 root     root        249264 Oct 26 20:30 libgpr.so.4.0.0
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libgrpc++.so -> libgrpc++.so.1.6.0
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libgrpc++.so.1 -> libgrpc++.so.1.6.0
+-rwxr-xr-x    1 root     root       6457040 Oct 26 20:30 libgrpc++.so.1.6.0
+lrwxrwxrwx    1 root     root            29 Oct 26 20:30 libgrpc++_reflection.so -> libgrpc++_reflection.so.1.6.0
+lrwxrwxrwx    1 root     root            29 Oct 26 20:30 libgrpc++_reflection.so.1 -> libgrpc++_reflection.so.1.6.0
+-rwxr-xr-x    1 root     root      25440520 Oct 26 20:30 libgrpc++_reflection.so.1.6.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libgrpc.so -> libgrpc.so.4.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libgrpc.so.4 -> libgrpc.so.4.0.0
+-rwxr-xr-x    1 root     root       5907672 Oct 26 20:30 libgrpc.so.4.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libhdf.so -> libhdf.so.1.0.0
+-rwxr-xr-x    1 root     root        617272 Oct 26 20:30 libhdf.so.1.0.0
+-rwxr-xr-x    1 root     root         54712 Oct 26 20:30 libhdf_emmc.so
+-rwxr-xr-x    1 root     root         68112 Oct 26 20:30 libhdf_eusb.so
+-rwxr-xr-x    1 root     root         60472 Oct 26 20:30 libhdf_ssd.so
+lrwxrwxrwx    1 root     root            30 Oct 26 20:30 libhdf_storage_common.so -> libhdf_storage_common.so.1.0.0
+-rwxr-xr-x    1 root     root        148072 Oct 26 20:30 libhdf_storage_common.so.1.0.0
+-rwxr-xr-x    1 root     root        338200 Oct 26 20:30 libhiredis.so
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libhistory.so -> libhistory.so.8
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libhistory.so.8 -> libhistory.so.8.2
+-rwxr-xr-x    1 root     root         68872 Oct 26 20:30 libhistory.so.8.2
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libhotpatch_app.so -> libhotpatch_app.so.0.1
+-rwxr-xr-x    1 root     root        223736 Oct 26 20:30 libhotpatch_app.so.0.1
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 libhotpatch_ctrl.so -> libhotpatch_ctrl.so.0.1
+-rwxr-xr-x    1 root     root        357136 Oct 26 20:30 libhotpatch_ctrl.so.0.1
+-rwxr-xr-x    1 root     root         20280 Oct 26 20:30 libhotpatch_test.so
+-rwxr-xr-x    1 root     root         20304 Oct 26 20:30 libhotpatch_test_dlopen.so
+-rwxr-xr-x    1 root     root            45 Oct 26 20:30 libhttp_agent.so
+-rwxr-xr-x    1 root     root        115784 Oct 26 20:30 libhttp_agent_new.so
+-rwxr-xr-x    1 root     root        105912 Oct 26 20:30 libhttp_update.so
+-rwxr-xr-x    1 root     root        305552 Oct 26 20:30 libhttp_util.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libiconv.so -> libiconv.so.2.6.1
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libiconv.so.2 -> libiconv.so.2.6.1
+-rwxr-xr-x    1 root     root       1035184 Oct 26 20:30 libiconv.so.2.6.1
+-rwxr-xr-x    1 root     root           138 Oct 26 20:30 libids.so
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libids_common.so -> libids_common.so.1.0.0
+-rwxr-xr-x    1 root     root         56616 Oct 26 20:30 libids_common.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 libids_essence.so -> libids_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        146936 Oct 26 20:30 libids_essence.so.1.0.0
+-rwxr-xr-x    1 root     root         38424 Oct 26 20:30 libinpath_nl.so
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libipcheck.so -> libipcheck.so.1.0.0
+-rwxr-xr-x    1 root     root        244856 Oct 26 20:30 libipcheck.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libitm.so -> libitm.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libitm.so.1 -> libitm.so.1.0.0
+-rwxr-xr-x    1 root     root        959488 Oct 26 20:30 libitm.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libjemalloc.so -> libjemalloc.so.1
+-rwxr-xr-x    1 root     root       1346120 Oct 26 20:30 libjemalloc.so.1
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libjson-c.so -> libjson-c.so.5
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libjson-c.so.5 -> libjson-c.so.5.2.0
+-rw-r--r--    1 root     root        197560 Oct 26 20:30 libjson-c.so.5.2.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 liblldp.so -> liblldp.so.1.0.0
+-rwxr-xr-x    1 root     root         70752 Oct 26 20:30 liblldp.so.1.0.0
+-rwxr-xr-x    1 root     root           143 Oct 26 20:30 liblog_agent.so
+lrwxrwxrwx    1 root     root            29 Oct 26 20:30 liblog_agent_essence.so -> liblog_agent_essence.so.1.0.0
+-rwxr-xr-x    1 root     root       1297800 Oct 26 20:30 liblog_agent_essence.so.1.0.0
+-rwxr-xr-x    1 root     root            88 Oct 26 20:30 liblog_common.so
+lrwxrwxrwx    1 root     root            30 Oct 26 20:30 liblog_common_essence.so -> liblog_common_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        291456 Oct 26 20:30 liblog_common_essence.so.1.0.0
+-rwxr-xr-x    1 root     root         30160 Oct 26 20:30 liblog_debug.so
+-rwxr-xr-x    1 root     root           170 Oct 26 20:30 liblog_server.so
+lrwxrwxrwx    1 root     root            30 Oct 26 20:30 liblog_server_essence.so -> liblog_server_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        286184 Oct 26 20:30 liblog_server_essence.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 liblsan.so -> liblsan.so.0.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 liblsan.so.0 -> liblsan.so.0.0.0
+-rwxr-xr-x    1 root     root       2687488 Oct 26 20:30 liblsan.so.0.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 liblspv.so -> liblspv.so.1.0.0
+-rwxr-xr-x    1 root     root         98120 Oct 26 20:30 liblspv.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 liblua.so -> liblua.so.5.3.0
+-rwxr-xr-x    1 root     root       1152408 Oct 26 20:30 liblua.so.5.3.0
+-rwxr-xr-x    1 root     root       6017264 Oct 26 20:30 libm-2.31.so
+lrwxrwxrwx    1 root     root            12 Oct 26 20:30 libm.so.6 -> libm-2.31.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libmagic.so -> libmagic.so.1.0.0
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libmagic.so.1 -> libmagic.so.1.0.0
+-rwxr-xr-x    1 root     root        232416 Oct 26 20:30 libmagic.so.1.0.0
+-rwxr-xr-x    1 root     root         68312 Oct 26 20:30 libmemusage.so
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libmenu.so -> libmemu.so.6.5
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libmenu.so.6 -> libmenu.so.6.5
+-rwxr-xr-x    1 root     root         51448 Oct 26 20:30 libmenu.so.6.5
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libmib_platform.so -> libmib_platform.so.0.1
+-rwxr-xr-x    1 root     root         36120 Oct 26 20:30 libmib_platform.so.0.1
+-rwxr-xr-x    1 root     root         74512 Oct 26 20:30 libmngpkt_server.so
+-rwxr-xr-x    1 root     root         81864 Oct 26 20:30 libmngpub.so
+-rw-r--r--    1 root     root            80 Oct 26 20:30 libmosquitto.so
+-rwxr-xr-x    1 root     root        658136 Oct 26 20:30 libmosquitto_new.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libmount.so.1 -> libmount.so.1.1.0
+-rwxr-xr-x    1 root     root        518424 Oct 26 20:30 libmount.so.1.1.0
+lrwxrwxrwx    1 root     root            13 Oct 26 20:30 libmsf.so -> libmsf.so.0.9
+-rwxr-xr-x    1 root     root        995352 Oct 26 20:30 libmsf.so.0.9
+-rwxr-xr-x    1 root     root        881832 Oct 26 20:30 libmvec-2.31.so
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libmvec.so.1 -> libmvec-2.31.so
+-rw-r--r--    1 root     root            37 Oct 26 20:30 libncurses.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libncurses.so.6 -> libncurses.so.6.5
+-rwxr-xr-x    1 root     root        224064 Oct 26 20:30 libncurses.so.6.5
+-rwxr-xr-x    1 root     root        365104 Oct 26 20:30 libnet.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libnet_new.so -> libnet.so.1.0.0
+-rwxr-xr-x    1 root     root            36 Oct 26 20:30 libnetconf.so
+-rwxr-xr-x    1 root     root        122528 Oct 26 20:30 libnetconf_lib_new.so
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libnl-3.so -> libnl-3.so.200.20.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libnl-3.so.200 -> libnl-3.so.200.20.0
+-rwxr-xr-x    1 root     root        525400 Oct 26 20:30 libnl-3.so.200.20.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 libnl-cli-3.so -> libnl-cli-3.so.200.20.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 libnl-cli-3.so.200 -> libnl-cli-3.so.200.20.0
+-rwxr-xr-x    1 root     root        179320 Oct 26 20:30 libnl-cli-3.so.200.20.0
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 libnl-genl-3.so -> libnl-genl-3.so.200.20.0
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 libnl-genl-3.so.200 -> libnl-genl-3.so.200.20.0
+-rwxr-xr-x    1 root     root        125360 Oct 26 20:30 libnl-genl-3.so.200.20.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libnl-idiag-3.so -> libnl-idiag-3.so.200.20.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libnl-idiag-3.so.200 -> libnl-idiag-3.so.200.20.0
+-rwxr-xr-x    1 root     root        130608 Oct 26 20:30 libnl-idiag-3.so.200.20.0
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libnl-nf-3.so -> libnl-nf-3.so.200.20.0
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libnl-nf-3.so.200 -> libnl-nf-3.so.200.20.0
+-rwxr-xr-x    1 root     root        450080 Oct 26 20:30 libnl-nf-3.so.200.20.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libnl-route-3.so -> libnl-route-3.so.200.20.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libnl-route-3.so.200 -> libnl-route-3.so.200.20.0
+-rwxr-xr-x    1 root     root       1990336 Oct 26 20:30 libnl-route-3.so.200.20.0
+-rwxr-xr-x    1 root     root        787840 Oct 26 20:30 libnsl-2.31.so
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libnsl.so.1 -> libnsl-2.31.so
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libnsm_base.so -> libnsm_base.so.1.0.0
+-rwxr-xr-x    1 root     root       2318896 Oct 26 20:30 libnsm_base.so.1.0.0
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libnsm_mpls.so -> libnsm_mpls.so.1.0.0
+-rwxr-xr-x    1 root     root      21418728 Oct 26 20:30 libnsm_mpls.so.1.0.0
+-rwxr-xr-x    1 root     root        210264 Oct 26 20:30 libnss_compat-2.31.so
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 libnss_compat.so.2 -> libnss_compat-2.31.so
+-rwxr-xr-x    1 root     root        288592 Oct 26 20:30 libnss_db-2.31.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libnss_db.so.2 -> libnss_db-2.31.so
+-rwxr-xr-x    1 root     root        155112 Oct 26 20:30 libnss_dns-2.31.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libnss_dns.so.2 -> libnss_dns-2.31.so
+-rwxr-xr-x    1 root     root        426256 Oct 26 20:30 libnss_files-2.31.so
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libnss_files.so.2 -> libnss_files-2.31.so
+-rwxr-xr-x    1 root     root        139520 Oct 26 20:30 libnss_hesiod-2.31.so
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 libnss_hesiod.so.2 -> libnss_hesiod-2.31.so
+-rwxr-xr-x    1 root     root         73968 Oct 26 20:30 liboampub.so
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libofss.so -> libofss.so.0.9
+-rwxr-xr-x    1 root     root         52704 Oct 26 20:30 libofss.so.0.9
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libopkg.so -> libopkg.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libopkg.so.1 -> libopkg.so.1.0.0
+-rwxr-xr-x    1 root     root        285600 Oct 26 20:30 libopkg.so.1.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libpanel.so -> libpanel.so.6.5
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libpanel.so.6 -> libpanel.so.6.5
+-rwxr-xr-x    1 root     root         31048 Oct 26 20:30 libpanel.so.6.5
+-rwxr-xr-x    1 root     root            95 Oct 26 20:30 libpassword_policy.so
+-rwxr-xr-x    1 root     root        168680 Oct 26 20:30 libpassword_policy.so.1.0.0
+lrwxrwxrwx    1 root     root            31 Oct 26 20:30 libpassword_policy_msg.so -> libpassword_policy_msg.so.1.0.0
+-rwxr-xr-x    1 root     root        200536 Oct 26 20:30 libpassword_policy_msg.so.1.0.0
+lrwxrwxrwx    1 root     root            27 Oct 26 20:30 libpassword_policy_new.so -> libpassword_policy.so.1.0.0
+-rwxr-xr-x    1 root     root         21808 Oct 26 20:30 libpcprofile.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libpcre.so -> libpcre.so.1.2.13
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libpcre.so.1 -> libpcre.so.1.2.13
+-rwxr-xr-x    1 root     root        352168 Oct 26 20:30 libpcre.so.1.2.13
+-rwxr-xr-x    1 root     root         20984 Oct 26 20:30 libperm.so
+-rwxr-xr-x    1 root     root            39 Oct 26 20:30 libpi_app_lib.so
+lrwxrwxrwx    1 root     root            28 Oct 26 20:30 libpi_app_lib_essence.so -> libpi_app_lib_essence.so.0.1
+-rwxr-xr-x    1 root     root        307808 Oct 26 20:30 libpi_app_lib_essence.so.0.1
+-rwxr-xr-x    1 root     root        100248 Oct 26 20:30 libpki_client.so
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libpopt.so -> libpopt.so.0.0.2
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libpopt.so.0 -> libpopt.so.0.0.2
+-rwxr-xr-x    1 root     root         79968 Oct 26 20:30 libpopt.so.0.0.2
+-rwxr-xr-x    1 root     root        215128 Oct 26 20:30 libprotobuf-c.so
+-rwxr-xr-x    1 root     root           171 Oct 26 20:30 libpsh.so
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libpsh_common.so -> libpsh_common.so.1.0.0
+-rwxr-xr-x    1 root     root         90736 Oct 26 20:30 libpsh_common.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 libpsh_essence.so -> libpsh_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        157544 Oct 26 20:30 libpsh_essence.so.1.0.0
+lrwxrwxrwx    1 root     root            11 Oct 26 20:30 libpsx.so -> libpsx.so.2
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libpsx.so.2 -> libpsx.so.2.69
+-rwxr-xr-x    1 root     root         53664 Oct 26 20:30 libpsx.so.2.69
+-rwxr-xr-x    1 root     root       2677008 Oct 26 20:30 libpthread-2.31.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libpthread.so.0 -> libpthread-2.31.so
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libpython3.12.so -> libpython3.12.so.1.0
+-rw-r--r--    1 root     root      39601048 Oct 26 20:30 libpython3.12.so.1.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libpython3.4m.so -> libpython3.12.so
+-rwxr-xr-x    1 root     root         16904 Oct 26 20:30 libpython3.so
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libquadmath.so -> libquadmath.so.0.0.0
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libquadmath.so.0 -> libquadmath.so.0.0.0
+-rwxr-xr-x    1 root     root        951584 Oct 26 20:30 libquadmath.so.0.0.0
+-rwxr-xr-x    1 root     root           101 Oct 26 20:30 libras_common.so
+lrwxrwxrwx    1 root     root            30 Oct 26 20:30 libras_common_essence.so -> libras_common_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        201592 Oct 26 20:30 libras_common_essence.so.1.0.0
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 libras_sync.so -> libras_sync.so.1.0.0
+-rwxr-xr-x    1 root     root        457128 Oct 26 20:30 libras_sync.so.1.0.0
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 librbac-cli.so -> librbac-cli.so.1.0.0
+-rwxr-xr-x    1 root     root        326864 Oct 26 20:30 librbac-cli.so.1.0.0
+-rwxr-xr-x    1 root     root            81 Oct 26 20:30 librbac.so
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 librbac_new.so -> librbac_new.so.1.0.0
+-rwxr-xr-x    1 root     root        739808 Oct 26 20:30 librbac_new.so.1.0.0
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 librdnd_essence.so -> librdnd_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        552560 Oct 26 20:30 librdnd_essence.so.1.0.0
+lrwxrwxrwx    1 root     root            28 Oct 26 20:30 librdnd_mom_essence.so -> librdnd_mom_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        459912 Oct 26 20:30 librdnd_mom_essence.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libreadline.so -> libreadline.so.8
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libreadline.so.8 -> libreadline.so.8.2
+-rwxr-xr-x    1 root     root        452392 Oct 26 20:30 libreadline.so.8.2
+-rwxr-xr-x    1 root     root        203728 Oct 26 20:30 libref_fib.so
+-rwxr-xr-x    1 root     root       1242536 Oct 26 20:30 libremote_api.so
+-rwxr-xr-x    1 root     root        511208 Oct 26 20:30 libresolv-2.31.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libresolv.so.2 -> libresolv-2.31.so
+-rw-r--r--    1 root     root            84 Oct 26 20:30 librg-fsui.so
+-rwxr-xr-x    1 root     root        205232 Oct 26 20:30 librg-fsui_real.so
+-rw-r--r--    1 root     root            71 Oct 26 20:30 librg-snmp.so
+-rw-r--r--    1 root     root            51 Oct 26 20:30 librg-sysmon.so
+-rwxr-xr-x    1 root     root        138600 Oct 26 20:30 librg-sysmon_real.so
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 librg-thread.so -> librg-thread.so.1.0.0
+-rwxr-xr-x    1 root     root        304472 Oct 26 20:30 librg-thread.so.1.0.0
+-rwxr-xr-x    1 root     root        599760 Oct 26 20:30 librg_aaa-1.0.0.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 librg_aaa.so -> librg_aaa-1.0.0.so
+-rwxr-xr-x    1 root     root        487984 Oct 26 20:30 librg_acl-1.0.0.so
+-rw-r--r--    1 root     root            65 Oct 26 20:30 librg_acl.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 librg_acl_real.so -> librg_acl-1.0.0.so
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 librg_af_key.so -> librg_af_key.so.1.1.0
+-rwxr-xr-x    1 root     root        619952 Oct 26 20:30 librg_af_key.so.1.1.0
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 librg_ap.so -> librg_ap.so.1.0.0
+-rwxr-xr-x    1 root     root        725560 Oct 26 20:30 librg_ap.so.1.0.0
+-rwxr-xr-x    1 root     root        255072 Oct 26 20:30 librg_at.so
+-rwxr-xr-x    1 root     root        413528 Oct 26 20:30 librg_authmng.so
+-rwxr-xr-x    1 root     root        188304 Oct 26 20:30 librg_authx.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 librg_bfd.so -> librg_bfd.so.1.0.0
+-rwxr-xr-x    1 root     root        105920 Oct 26 20:30 librg_bfd.so.1.0.0
+-rwxr-xr-x    1 root     root            91 Oct 26 20:30 librg_cap.so
+-rwxr-xr-x    1 root     root            43 Oct 26 20:30 librg_cap_mini.so
+-rwxr-xr-x    1 root     root         43856 Oct 26 20:30 librg_cap_mini_real.so
+-rwxr-xr-x    1 root     root        417640 Oct 26 20:30 librg_cap_real.so
+-rwxr-xr-x    1 root     root        128296 Oct 26 20:30 librg_cap_xml.so
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 librg_datastruct.so -> librg_datastruct.so.1.0.0
+-rwxr-xr-x    1 root     root         30624 Oct 26 20:30 librg_datastruct.so.1.0.0
+-rwxr-xr-x    1 root     root            64 Oct 26 20:30 librg_dcm.so
+-rwxr-xr-x    1 root     root           190 Oct 26 20:30 librg_dm.so
+-rwxr-xr-x    1 root     root            83 Oct 26 20:30 librg_dm_cache.so
+lrwxrwxrwx    1 root     root            31 Oct 26 20:30 librg_dm_cache_essence.so -> librg_dm_cache_essence.so.1.0.0
+-rwxr-xr-x    1 root     root       1686352 Oct 26 20:30 librg_dm_cache_essence.so.1.0.0
+-rwxr-xr-x    1 root     root           102 Oct 26 20:30 librg_dm_cmn.so
+lrwxrwxrwx    1 root     root            29 Oct 26 20:30 librg_dm_cmn_essence.so -> librg_dm_cmn_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        173544 Oct 26 20:30 librg_dm_cmn_essence.so.1.0.0
+-rwxr-xr-x    1 root     root            37 Oct 26 20:30 librg_dm_dfd.so
+lrwxrwxrwx    1 root     root            29 Oct 26 20:30 librg_dm_dfd_essence.so -> librg_dm_dfd_essence.so.1.0.0
+-rwxr-xr-x    1 root     root        324776 Oct 26 20:30 librg_dm_dfd_essence.so.1.0.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 librg_dm_essence.so -> librg_dm_essence.so.1.0.0
+-rwxr-xr-x    1 root     root       1204824 Oct 26 20:30 librg_dm_essence.so.1.0.0
+-rwxr-xr-x    1 root     root           126 Oct 26 20:30 librg_dm_indep.so
+lrwxrwxrwx    1 root     root            26 Oct 26 20:30 librg_dm_indep_essence.so -> librg_dm_indep_essence.so.
+-rwxr-xr-x    1 root     root        133384 Oct 26 20:30 librg_dm_indep_essence.so.
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 librg_ef_bridge.so -> librg_ef_bridge.so.0.9
+-rwxr-xr-x    1 root     root       1391288 Oct 26 20:30 librg_ef_bridge.so.0.9
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 librg_ef_mcast.so -> librg_ef_mcast.so.0.9
+-rwxr-xr-x    1 root     root       1355144 Oct 26 20:30 librg_ef_mcast.so.0.9
+-rwxr-xr-x    1 root     root       2215344 Oct 26 20:30 librg_efacl.so
+-rwxr-xr-x    1 root     root        294056 Oct 26 20:30 librg_efmp.so
+-rwxr-xr-x    1 root     root        659616 Oct 26 20:30 librg_efpbr.so
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 librg_eth_subif.so -> librg_eth_subif.so.1.0.0
+-rwxr-xr-x    1 root     root        222352 Oct 26 20:30 librg_eth_subif.so.1.0.0
+lrwxrwxrwx    1 root     root            27 Oct 26 20:30 librg_ether_parser.so -> librg_ether_parser.so.1.0.0
+-rwxr-xr-x    1 root     root        290744 Oct 26 20:30 librg_ether_parser.so.1.0.0
+lrwxrwxrwx    1 root     root            27 Oct 26 20:30 librg_fiber_decode.so -> librg_fiber_decode.so.1.0.0
+-rwxr-xr-x    1 root     root        198712 Oct 26 20:30 librg_fiber_decode.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 librg_grpc.so -> librg_grpc.so.1.0.0
+-rwxr-xr-x    1 root     root        533088 Oct 26 20:30 librg_grpc.so.1.0.0
+-rwxr-xr-x    1 root     root        266960 Oct 26 20:30 librg_ham.so
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_iniparse.so -> librg_iniparse.so.1.0.0
+-rwxr-xr-x    1 root     root         56992 Oct 26 20:30 librg_iniparse.so.1.0.0
+-rwxr-xr-x    1 root     root            82 Oct 26 20:30 librg_initframe.so
+lrwxrwxrwx    1 root     root            32 Oct 26 20:30 librg_initframe_essence.so -> librg_initframe_essence.so.1.0.0
+-rwxr-xr-x    1 root     root         73352 Oct 26 20:30 librg_initframe_essence.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_ip_proxy.so -> librg_ip_proxy.so.1.0.0
+-rwxr-xr-x    1 root     root       1230680 Oct 26 20:30 librg_ip_proxy.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_ipsec_ef.so -> librg_ipsec_ef.so.1.1.0
+-rwxr-xr-x    1 root     root       2125360 Oct 26 20:30 librg_ipsec_ef.so.1.1.0
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 librg_l2vpn_ref.so -> librg_l2vpn_ref.so.1.0.0
+-rwxr-xr-x    1 root     root       1549400 Oct 26 20:30 librg_l2vpn_ref.so.1.0.0
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 librg_lib.so -> librg_lib.so.1.0.0
+-rwxr-xr-x    1 root     root       5849592 Oct 26 20:30 librg_lib.so.1.0.0
+-rwxr-xr-x    1 root     root         77792 Oct 26 20:30 librg_licns_client.so
+lrwxrwxrwx    1 root     root            29 Oct 26 20:30 librg_log_msg_record.so -> librg_log_msg_record.so.1.0.0
+-rwxr-xr-x    1 root     root         90800 Oct 26 20:30 librg_log_msg_record.so.1.0.0
+-rw-r--r--    1 root     root            90 Oct 26 20:30 librg_lsm.so
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 librg_lsm_com.so -> librg_lsm_com.so.1.0.0
+-rwxr-xr-x    1 root     root        145608 Oct 26 20:30 librg_lsm_com.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_lsm_impl.so -> librg_lsm_impl.so.1.0.0
+-rwxr-xr-x    1 root     root       1306600 Oct 26 20:30 librg_lsm_impl.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_lsm_test.so -> librg_lsm_test.so.1.0.0
+-rwxr-xr-x    1 root     root         57488 Oct 26 20:30 librg_lsm_test.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_memtrack.so -> librg_memtrack.so.1.0.0
+-rwxr-xr-x    1 root     root         78920 Oct 26 20:30 librg_memtrack.so.1.0.0
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 librg_mom.so -> librg_mom.so.0.0.1
+-rw-r--r--    1 root     root           113 Oct 26 20:30 librg_mom.so.0.0.1
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_mom_impl.so -> librg_mom_impl.so.0.0.1
+-rwxr-xr-x    1 root     root       4284976 Oct 26 20:30 librg_mom_impl.so.0.0.1
+-rwxr-xr-x    1 root     root         46056 Oct 26 20:30 librg_mom_proto_pass.so
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_mpls_ref.so -> librg_mpls_ref.so.1.0.0
+-rwxr-xr-x    1 root     root       2914360 Oct 26 20:30 librg_mpls_ref.so.1.0.0
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 librg_natk_ef.so -> librg_natk_ef.so.1.2.0
+-rwxr-xr-x    1 root     root       3211504 Oct 26 20:30 librg_natk_ef.so.1.2.0
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 librg_netlink.so -> librg_netlink.so.1.0.0
+-rwxr-xr-x    1 root     root        111120 Oct 26 20:30 librg_netlink.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 librg_osal.so -> librg_osal.so.1.0.0
+-rwxr-xr-x    1 root     root         89536 Oct 26 20:30 librg_osal.so.1.0.0
+-rwxr-xr-x    1 root     root        548064 Oct 26 20:30 librg_pl_sdk_impl.so
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 librg_ppp_ef.so -> librg_ppp_ef.so.1.0
+-rwxr-xr-x    1 root     root        126424 Oct 26 20:30 librg_ppp_ef.so.1.0
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 librg_pppoe_ef.so -> librg_pppoe_ef.so.1.0
+-rwxr-xr-x    1 root     root        680360 Oct 26 20:30 librg_pppoe_ef.so.1.0
+-rw-r--r--    1 root     root            26 Oct 26 20:30 librg_proc_ham.so
+-rwxr-xr-x    1 root     root           179 Oct 26 20:30 librg_rdnd.so
+-rwxr-xr-x    1 root     root           164 Oct 26 20:30 librg_rdnd_mom.so
+-rwxr-xr-x    1 root     root       1189112 Oct 26 20:30 librg_scc-1.0.0.so
+-rw-r--r--    1 root     root            64 Oct 26 20:30 librg_scc.so
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 librg_scc_real.so -> librg_scc-1.0.0.so
+-rw-r--r--    1 root     root            89 Oct 26 20:30 librg_sdk.so
+-rwxr-xr-x    1 root     root         90264 Oct 26 20:30 librg_sdk_impl.so
+-rwxr-xr-x    1 root     root           231 Oct 26 20:30 librg_sftpc.so
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 librg_sftpc_new.so -> librg_sftpc_new.so.1.0.0
+-rwxr-xr-x    1 root     root       5427016 Oct 26 20:30 librg_sftpc_new.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 librg_snmp.so -> librg_snmp.so.1.0.0
+-rwxr-xr-x    1 root     root        468408 Oct 26 20:30 librg_snmp.so.1.0.0
+-rw-r--r--    1 root     root           124 Oct 26 20:30 librg_sys.so
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 librg_sys_raw.so -> librg_sys_raw.so.1.1
+-rwxr-xr-x    1 root     root        220024 Oct 26 20:30 librg_sys_raw.so.1.1
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 librg_sys_xml.so -> librg_sys_xml.so.1.1
+-rwxr-xr-x    1 root     root         43280 Oct 26 20:30 librg_sys_xml.so.1.1
+-rwxr-xr-x    1 root     root           114 Oct 26 20:30 librg_syslog.so
+-rwxr-xr-x    1 root     root            39 Oct 26 20:30 librg_syslog_lc.so
+lrwxrwxrwx    1 root     root            26 Oct 26 20:30 librg_syslog_pack.so -> librg_syslog_pack.so.1.0.0
+-rwxr-xr-x    1 root     root         56168 Oct 26 20:30 librg_syslog_pack.so.1.0.0
+lrwxrwxrwx    1 root     root            29 Oct 26 20:30 librg_syslog_rfc5424.so -> librg_syslog_rfc5424.so.1.0.0
+-rwxr-xr-x    1 root     root        121944 Oct 26 20:30 librg_syslog_rfc5424.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 librg_time.so -> librg_osal.so.1.0.0
+-rwxr-xr-x    1 root     root        174136 Oct 26 20:30 librg_tty-real.so
+-rw-r--r--    1 root     root            36 Oct 26 20:30 librg_tty.so
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 librg_tunnel.so -> librg_tunnel.so.1.0.0
+-rwxr-xr-x    1 root     root        137536 Oct 26 20:30 librg_tunnel.so.1.0.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 librg_tunnelk_ef.so -> librg_tunnelk_ef.so.1.2.0
+-rwxr-xr-x    1 root     root       1075224 Oct 26 20:30 librg_tunnelk_ef.so.1.2.0
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 librg_udph_ef.so -> librg_udph_ef.so.1.0
+-rwxr-xr-x    1 root     root        337120 Oct 26 20:30 librg_udph_ef.so.1.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 librg_urpf.so -> librg_urpf.so.1.0.0
+-rwxr-xr-x    1 root     root         55824 Oct 26 20:30 librg_urpf.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_urpfk_ef.so -> librg_urpfk_ef.so.1.2.0
+-rwxr-xr-x    1 root     root        343104 Oct 26 20:30 librg_urpfk_ef.so.1.2.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 librg_vrrp.so -> librg_vrrp.so.1.0.0
+-rwxr-xr-x    1 root     root         51592 Oct 26 20:30 librg_vrrp.so.1.0.0
+-rwxr-xr-x    1 root     root            83 Oct 26 20:30 librg_vty.so
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 librg_vty_new.so -> librg_vty_new.so.1.0.0
+-rwxr-xr-x    1 root     root        384008 Oct 26 20:30 librg_vty_new.so.1.0.0
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 librg_vxlan.so -> librg_vxlan.so.1.0.0
+-rwxr-xr-x    1 root     root        386960 Oct 26 20:30 librg_vxlan.so.1.0.0
+lrwxrwxrwx    1 root     root            23 Oct 26 20:30 librg_vxlan_ef.so -> librg_vxlan_ef.so.1.0.0
+-rwxr-xr-x    1 root     root       1064424 Oct 26 20:30 librg_vxlan_ef.so.1.0.0
+lrwxrwxrwx    1 root     root            20 Oct 26 20:30 librg_zebos.so -> librg_zebos.so.1.0.0
+-rwxr-xr-x    1 root     root       5407840 Oct 26 20:30 librg_zebos.so.1.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 librgconf.so -> librgconf.so.1.0
+-rwxr-xr-x    1 root     root        181816 Oct 26 20:30 librgconf.so.1.0
+-rwxr-xr-x    1 root     root         50360 Oct 26 20:30 librns.so
+-rwxr-xr-x    1 root     root        376008 Oct 26 20:30 librt-2.31.so
+lrwxrwxrwx    1 root     root            13 Oct 26 20:30 librt.so.1 -> librt-2.31.so
+lrwxrwxrwx    1 root     root            11 Oct 26 20:30 librtr.so -> librtr.so.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 librtr.so.0 -> librtr.so.0.8.0
+-rw-r--r--    1 root     root        497672 Oct 26 20:30 librtr.so.0.8.0
+-rw-r--r--    1 root     root            93 Oct 26 20:30 libsafe_verify.so
+-rwxr-xr-x    1 root     root         64696 Oct 26 20:30 libsafe_verify_raw.so
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libsecurity_log.so -> libsecurity_log.so.1.0
+-rwxr-xr-x    1 root     root         43504 Oct 26 20:30 libsecurity_log.so.1.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libsnooping4.so -> libipcheck.so.1.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libsqlite3.so -> libsqlite3.so.0.8.6
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libsqlite3.so.0 -> libsqlite3.so.0.8.6
+-rwxr-xr-x    1 root     root       1784296 Oct 26 20:30 libsqlite3.so.0.8.6
+lrwxrwxrwx    1 root     root            11 Oct 26 20:30 libssl.so -> libssl.so.3
+-rwxr-xr-x    1 root     root        792576 Oct 26 20:30 libssl.so.3
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libssp.so -> libssp.so.0.0.0
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libssp.so.0 -> libssp.so.0.0.0
+-rwxr-xr-x    1 root     root         48504 Oct 26 20:30 libssp.so.0.0.0
+-rw-r--r--    1 root     root            32 Oct 26 20:30 libstartup.a
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libstartup.so.0 -> libstartup.so.0.0.0
+-rw-r--r--    1 root     root         99848 Oct 26 20:30 libstartup.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libstdc++.so -> libstdc++.so.6.0.28
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libstdc++.so.6 -> libstdc++.so.6.0.28
+-rwxr-xr-x    1 root     root      13131872 Oct 26 20:30 libstdc++.so.6.0.28
+-rw-r--r--    1 root     root          2540 Oct 26 20:30 libstdc++.so.6.0.28-gdb.py
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libsyslog_lc_new.so -> libsyslog_lc_new.so.1.0.0
+-rwxr-xr-x    1 root     root        132192 Oct 26 20:30 libsyslog_lc_new.so.1.0.0
+lrwxrwxrwx    1 root     root            22 Oct 26 20:30 libsyslog_new.so -> libsyslog_new.so.1.0.0
+-rwxr-xr-x    1 root     root        223072 Oct 26 20:30 libsyslog_new.so.1.0.0
+-rwxr-xr-x    1 root     root        177808 Oct 26 20:30 libtech-support-msg-real.so
+-rw-r--r--    1 root     root            46 Oct 26 20:30 libtech-support-msg.so
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 libtech-support.so -> libtech-support.so.1.0.0
+-rwxr-xr-x    1 root     root        142344 Oct 26 20:30 libtech-support.so.1.0.0
+-rwxr-xr-x    1 root     root         55936 Oct 26 20:30 libtechapi.so
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libtftp.so -> libtftp.so.0.1
+-rwxr-xr-x    1 root     root        251344 Oct 26 20:30 libtftp.so.0.1
+lrwxrwxrwx    1 root     root            26 Oct 26 20:30 libtftp_tipc_client.so -> libtftp_tipc_client.so.1.0
+-rwxr-xr-x    1 root     root         77624 Oct 26 20:30 libtftp_tipc_client.so.1.0
+-rwxr-xr-x    1 root     root        625984 Oct 26 20:30 libthread_db-1.0.so
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libthread_db.so.1 -> libthread_db-1.0.so
+lrwxrwxrwx    1 root     root            21 Oct 26 20:30 libtimerange.so -> libtimerange.so.1.0.0
+-rwxr-xr-x    1 root     root        235408 Oct 26 20:30 libtimerange.so.1.0.0
+-rw-r--r--    1 root     root            21 Oct 26 20:30 libtinfo.so
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libtinfo.so.6 -> libtinfo.so.6.5
+-rwxr-xr-x    1 root     root        247272 Oct 26 20:30 libtinfo.so.6.5
+-rw-r--r--    1 root     root            75 Oct 26 20:30 libtipc_drv.so
+-rw-r--r--    1 root     root        209048 Oct 26 20:30 libtipc_drv_real.so
+-rwxr-xr-x    1 root     root         60096 Oct 26 20:30 libtipc_info_cli.so
+-rwxr-xr-x    1 root     root         60520 Oct 26 20:30 libtrack.so
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libtsan.so -> libtsan.so.0.0.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libtsan.so.0 -> libtsan.so.0.0.0
+-rwxr-xr-x    1 root     root       7098160 Oct 26 20:30 libtsan.so.0.0.0
+lrwxrwxrwx    1 root     root            24 Oct 26 20:30 libtty_security.so -> libtty_security.so.1.0.0
+-rw-r--r--    1 root     root            42 Oct 26 20:30 libtty_security.so.1.0.0
+-rwxr-xr-x    1 root     root        351080 Oct 26 20:30 libtty_security_real.so
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libubsan.so -> libubsan.so.1.0.0
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libubsan.so.1 -> libubsan.so.1.0.0
+-rwxr-xr-x    1 root     root       2433152 Oct 26 20:30 libubsan.so.1.0.0
+lrwxrwxrwx    1 root     root            27 Oct 26 20:30 libunwind-coredump.so -> libunwind-coredump.so.0.0.0
+lrwxrwxrwx    1 root     root            27 Oct 26 20:30 libunwind-coredump.so.0 -> libunwind-coredump.so.0.0.0
+-rwxr-xr-x    1 root     root         46864 Oct 26 20:30 libunwind-coredump.so.0.0.0
+lrwxrwxrwx    1 root     root            19 Oct 26 20:30 libunwind-generic.so -> libunwind-x86_64.so
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libunwind-ptrace.so -> libunwind-ptrace.so.0.0.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libunwind-ptrace.so.0 -> libunwind-ptrace.so.0.0.0
+-rwxr-xr-x    1 root     root         31064 Oct 26 20:30 libunwind-ptrace.so.0.0.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libunwind-setjmp.so -> libunwind-setjmp.so.0.0.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libunwind-setjmp.so.0 -> libunwind-setjmp.so.0.0.0
+-rwxr-xr-x    1 root     root         23464 Oct 26 20:30 libunwind-setjmp.so.0.0.0
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libunwind-x86_64.so -> libunwind-x86_64.so.8.0.1
+lrwxrwxrwx    1 root     root            25 Oct 26 20:30 libunwind-x86_64.so.8 -> libunwind-x86_64.so.8.0.1
+-rwxr-xr-x    1 root     root        172128 Oct 26 20:30 libunwind-x86_64.so.8.0.1
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libunwind.so -> libunwind.so.8.0.1
+lrwxrwxrwx    1 root     root            18 Oct 26 20:30 libunwind.so.8 -> libunwind.so.8.0.1
+-rwxr-xr-x    1 root     root        163632 Oct 26 20:30 libunwind.so.8.0.1
+-rw-r--r--    1 root     root           194 Oct 26 20:30 libupgrade_common.so
+-rwxr-xr-x    1 root     root        644648 Oct 26 20:30 libupgrade_common_raw.so
+-rwxr-xr-x    1 root     root        131384 Oct 26 20:30 libupgrade_message.so
+-rwxr-xr-x    1 root     root         99192 Oct 26 20:30 libupgrade_pipe_domain.so
+-rwxr-xr-x    1 root     root        118472 Oct 26 20:30 libupgrade_pipe_tipc.so
+-rwxr-xr-x    1 root     root        255392 Oct 26 20:30 libutf8_gb2312.so
+-rwxr-xr-x    1 root     root         46648 Oct 26 20:30 libutil-2.31.so
+lrwxrwxrwx    1 root     root            15 Oct 26 20:30 libutil.so.1 -> libutil-2.31.so
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libuuid.so -> libuuid.so.1.3.0
+lrwxrwxrwx    1 root     root            16 Oct 26 20:30 libuuid.so.1 -> libuuid.so.1.3.0
+-rwxr-xr-x    1 root     root         42520 Oct 26 20:30 libuuid.so.1.3.0
+lrwxrwxrwx    1 root     root            13 Oct 26 20:30 libxml2.so -> libxml2.so.16
+lrwxrwxrwx    1 root     root            17 Oct 26 20:30 libxml2.so.16 -> libxml2.so.16.0.3
+-rw-r--r--    1 root     root       1774360 Oct 26 20:30 libxml2.so.16.0.3
+drwxr-xr-x    2 root     root          4096 Oct 26 20:30 libyang
+-rwxr-xr-x    1 root     root       4533848 Oct 26 20:30 libyang.so
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libz.so -> libz.so.1.2.13
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libz.so.1 -> libz.so.1.2.13
+-rwxr-xr-x    1 root     root        156776 Oct 26 20:30 libz.so.1.2.13
+-rwxr-xr-x    1 root     root         29840 Oct 26 20:30 libzct.so
+-rwxr-xr-x    1 root     root         76592 Oct 26 20:30 libzformat.so
+-rw-r--r--    1 root     root            44 Oct 26 20:30 libzlog.so
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libzlog.so.1 -> libzlog.so.1.2
+-rwxr-xr-x    1 root     root        436792 Oct 26 20:30 libzlog.so.1.2
+lrwxrwxrwx    1 root     root            14 Oct 26 20:30 libzlog_raw.so -> libzlog.so.1.2
+drwxr-xr-x    3 root     root          4096 Oct 26 20:30 modules
+drwxr-xr-x    2 root     root          4096 Oct 26 20:30 pkgconfig
+drwxr-xr-x    2 root     root          4096 Oct 26 20:30 preinit
+drwxr-xr-x    3 root     root          4096 Oct 26 20:30 upgrade

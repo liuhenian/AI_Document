@@ -1,0 +1,2 @@
+drwxrwxrwx    3 root     root          4096 Oct 26 20:30 vsd
+drwxrwxrwx    5 root     root          4096 Oct 30 08:37 vsd_common

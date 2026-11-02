@@ -1,0 +1,27 @@
+/data:
+drwxrwxrwx    2 root     root          4096 Oct 30 08:39 addr
+-rw-rw-rw-    1 root     root             0 Oct 30 08:44 ap-config.text
+drwxr-xr-x    3 root     root          4096 Oct 30 08:39 apm
+drwxr-xr-x    3 root     root          4096 Oct 30 08:39 cmpnt
+-rw-rw-rw-    1 root     root          2486 Oct 30 08:44 config.text
+-rw-rw-rw-    1 root     root          2486 Oct 30 08:44 config.text.bak
+-rwxrwxrwx    1 root     root            79 Oct 30 08:44 config_vsu.dat
+drwxrwxrwx    2 root     root          4096 Oct 30 08:39 dev
+drwxr-xr-x    2 root     root          4096 Oct 30 08:39 dfx_pcie_cfg
+drwx------    2 root     root         16384 Oct 30 08:32 lost+found
+drwxrwxrwx    2 root     root          4096 Oct 30 08:43 pkg_download_tmp
+drwxr-xr-x    2 root     root          4096 Oct 30 08:37 rep
+drwxr--r--    4 root     root          4096 Oct 30 08:42 rg_licns
+-rw-rw-rw-    1 root     root         12251 Nov  2 02:46 rg_resmon_history.info
+drwxr-xr-x    2 root     root          4096 Oct 30 08:39 safe-verify
+drwxrwxrwx    3 root     root          4096 Oct 30 08:39 security
+drwxrwxrwx    2 root     root          4096 Oct 30 08:39 security_log
+drwxrwxrwx    2 root     root          4096 Oct 30 08:39 sshckey
+drwxr-xr-x    3 root     root          4096 Oct 30 08:37 startup
+drwxrwxrwx    4 root     root          4096 Oct 30 08:39 syslog
+-rwxrwxrwx    1 root     root            21 Oct 30 08:44 syslog_rfc5424_flag.txt
+drwxr-xr-x    3 root     root          4096 Oct 30 08:37 tipc
+drwxrwxrwx    3 root     root          4096 Oct 30 08:39 upgrade
+drwxrwxrwx    3 root     root          4096 Oct 30 08:37 var
+drwxrwxrwx    3 root     root          4096 Oct 30 08:39 vsd
+drwxrwxrwx    2 root     root          4096 Oct 30 08:40 zam

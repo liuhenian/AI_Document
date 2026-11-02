@@ -1,0 +1,30 @@
+##### show mls qos
+% Incomplete command.
+
+##### show monitor session
+% Incomplete command.
+
+##### show sflow
+sflow datagram version 5
+Global information:
+Agent IP: NULL
+sflow counter interval:30
+sflow flow max-header:64
+sflow sampling-rate:8192
+Collector information:
+ID   IP                                           Port  Size VRF
+1    NULL                                         0     1400
+2    NULL                                         0     1400
+Port information
+Interface                       CID       FID       Enable
+
+##### show queue-buffer
+% Incomplete command.
+
+##### show nfpp
+% Incomplete command.
+
+##### show macc
+% Incomplete command.
+
+##### show efmp counter

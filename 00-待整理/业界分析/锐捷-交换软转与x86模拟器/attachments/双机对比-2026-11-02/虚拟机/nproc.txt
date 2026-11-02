@@ -1,0 +1,4 @@
+nproc
+/bin/sh: nproc: not found
+~ #
+~ #

@@ -1,0 +1,15 @@
+Interface                                IP-Address(Pri)      IP-Address(Sec)      Status                 Protocol
+GigabitEthernet 1/0/0                    20.170.111.10/24     no address           up                     up
+GigabitEthernet 1/0/1                    no address           no address           up                     down
+GigabitEthernet 1/0/2                    no address           no address           up                     down
+GigabitEthernet 1/0/3                    no address           no address           up                     down
+GigabitEthernet 1/0/4                    no address           no address           up                     down
+GigabitEthernet 1/0/5                    no address           no address           up                     down
+GigabitEthernet 1/0/6                    no address           no address           up                     down
+GigabitEthernet 2/0/1                    no address           no address           up                     down
+GigabitEthernet 2/0/2                    no address           no address           up                     down
+GigabitEthernet 2/0/3                    no address           no address           up                     down
+GigabitEthernet 2/0/4                    no address           no address           up                     down
+GigabitEthernet 2/0/5                    no address           no address           up                     down
+VLAN 1                                   no address           no address           up                     down
+Ruijie#

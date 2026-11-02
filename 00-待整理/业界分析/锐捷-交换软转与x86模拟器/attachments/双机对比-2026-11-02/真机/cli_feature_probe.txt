@@ -1,0 +1,12 @@
+show environment	True	
+show fan	True	
+show power	True	Power-id Power-type           Status     Hardware-Version Serial                          Supply(W) || -------- -------------------- ---------- ---------------- -------------------
+show transceiver	True	
+show mac-address-table count	True	Dynamic Address Count  : 0 || EVPN    Address Count  : 0 || MLAG    Address Count  : 0
+show hardware	True	
+show version slots	True	
+show efmp	True	
+show platform	True	
+show cpu	True	=============================================== || [Slot 1/0: S5760C-48GT4XS-X] || CPU Using Rate Information
+show memory	True	
+show spanning-tree summary	True	

@@ -1,0 +1,7 @@
+/rgos/vsd:
+drwxrwxrwx   10 root     root          4096 Oct 30 08:39 0
+
+/rgos/vsd_common:
+drwxrwxrwx    2 root     root          4096 Oct 30 08:37 dev
+drwxrwxrwx    2 root     root          4096 Oct 30 08:46 ham
+drwxr-xr-x    4 root     root          4096 Oct 30 08:37 ras

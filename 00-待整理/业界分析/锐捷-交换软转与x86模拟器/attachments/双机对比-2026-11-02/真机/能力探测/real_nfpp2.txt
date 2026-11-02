@@ -1,0 +1,9 @@
+##### show nfpp arp-guard summary
+(Format of column Rate-limit and Attack-threshold is per-src-ip/per-src-mac/per-port.)
+Interface Status  Isolate-period Rate-limit      Attack-threshold Scan-threshold
+Global    Enable  0              30/30/256       200/200/400      100
+Maximum count of monitored hosts: 20000
+Monitor period: 600s
+Suppress-mode: disable
+Suppress-threshold: 5pps
+Suppress-period: 5s

@@ -1,0 +1,1193 @@
+##### show temperature
+Temperature:
+---------------------------------------------------------------------------
+Slot    Temp_name     Warning         Shutdown       Current       Status
+                     (Celsius)        (Celsius)     (Celsius)
+---------------------------------------------------------------------------
+1/0     air_inlet       60              70              35           ok
+1/0     board           69              79              61           ok
+1/0     switch          100             110             87           ok
+2/0     air_inlet       60              70              39           ok
+2/0     board           69              79              63           ok
+2/0     switch          100             110             98           ok
+
+##### show card
+% Incomplete command.
+
+##### show usb
+
+
+##### show split
+% Incomplete command.
+
+##### show sata
+^
+% Invalid input detected at '^' marker.
+
+##### show version slot
+Dev Slot Port Configured Module            Online Module                Software Status
+  --- ---- ---- ---------------------------- ---------------------------- ---------------
+  1   0    52   S5760C-48GT4XS-X             S5760C-48GT4XS-X             master
+  1   1    0    none                         none                         none
+  2   0    52   S5760C-48GT4XS-X             S5760C-48GT4XS-X             backup
+  2   1    0    none                         none                         none
+
+##### show cpu
+===============================================
+[Slot 2/0: S5760C-48GT4XS-X]
+CPU Using Rate Information
+CPU utilization in five seconds:   9.60%
+CPU utilization in one minute:     6.40%
+CPU utilization in five minutes:  16.60%
+===============================================
+[Slot 1/0: S5760C-48GT4XS-X]
+CPU Using Rate Information
+CPU utilization in five seconds:  19.90%
+CPU utilization in one minute:    10.90%
+CPU utilization in five minutes:  25.80%
+ NO      5Sec    1Min    5Min Process
+    1   0.00%   0.00%   0.00% startup
+    2   0.00%   0.00%   0.00% kthreadd
+    3   0.00%   0.00%   0.00% rcu_gp
+    4   0.00%   0.00%   0.00% rcu_par_gp
+    5   0.00%   0.00%   0.00% kworker/0:0-rcu_gp
+    6   0.00%   0.00%   0.00% kworker/0:0H-kblockd
+    7   0.00%   0.00%   0.00% kworker/u4:0-tipc_rcv
+    8   0.00%   0.00%   0.00% mm_percpu_wq
+    9   0.00%   0.00%   0.20% ksoftirqd/0
+   10   0.10%   0.00%   0.00% rcu_sched
+   11   0.00%   0.00%   0.00% migration/0
+   12   0.00%   0.00%   0.00% cpuhp/0
+   13   0.00%   0.00%   0.00% cpuhp/1
+   14   0.00%   0.00%   0.00% migration/1
+   15   0.00%   0.00%   0.10% ksoftirqd/1
+   18   0.00%   0.00%   0.00% kdevtmpfs
+   19   0.00%   0.00%   0.00% netns
+   20   0.00%   0.00%   0.00% kworker/u4:1-events_unbound
+   46   0.00%   0.00%   0.00% kworker/u4:2-flush-253:0
+   48   0.00%   0.00%   0.00% kworker/1:1-events
+   49   0.00%   0.00%   0.00% kworker/0:1-events
+   50   0.00%   0.00%   0.00% kauditd
+  423   0.00%   0.00%   0.00% khungtaskd
+  424   0.00%   0.00%   0.00% oom_reaper
+  425   0.00%   0.00%   0.00% writeback
+  427   0.00%   0.00%   0.00% kcompactd0
+  428   0.00%   0.00%   0.00% ksmd
+  438   0.00%   0.00%   0.00% cryptd
+  461   0.00%   0.00%   0.00% kintegrityd
+  462   0.00%   0.00%   0.00% kblockd
+  464   0.00%   0.00%   0.00% blkcg_punt_bio
+  527   0.00%   0.00%   0.00% ata_sff
+  544   0.00%   0.00%   0.00% watchdogd
+  647   0.00%   0.00%   0.00% rpciod
+  648   0.00%   0.00%   0.00% kworker/u5:0
+  649   0.00%   0.00%   0.00% xprtiod
+  670   0.00%   0.00%   3.60% kswapd0
+  806   0.00%   0.00%   0.00% nfsiod
+ 1125   0.00%   0.00%   0.00% spi0
+ 1393   0.00%   0.00%   0.00% sdhci
+ 1394   0.00%   0.00%   0.00% irq/30-mmc0
+ 1451   0.00%   0.00%   0.00% ipv6_addrconf
+ 1456   0.00%   0.00%   0.00% kworker/1:2-rcu_gp
+ 1472   0.00%   0.00%   0.00% mmc_complete
+ 1475   0.00%   0.00%   0.00% kworker/1:1H-kblockd
+ 1476   0.00%   0.00%   0.10% kworker/0:1H-mmc_complete
+ 1536   0.00%   0.00%   0.00% jbd2/mmcblk0p11
+ 1537   0.00%   0.00%   0.00% ext4-rsv-conver
+ 1581   0.00%   0.00%   0.10% kworker/1:2H-kblockd
+ 1582   0.00%   0.00%   0.00% jbd2/mmcblk0p12
+ 1583   0.00%   0.00%   0.00% ext4-rsv-conver
+ 1585   0.00%   0.00%   0.00% kworker/0:2H-kblockd
+ 2065   0.00%   0.00%   0.00% ext4-rsv-conver
+ 2138   0.00%   0.00%   0.00% startup
+ 2389   0.00%   0.00%   0.00% dump_memoryinfo
+ 2429   0.00%   0.00%   0.00% lmk_cap_get_val
+ 2430   0.00%   0.00%   0.00% lmk_ham_mon_thr
+ 2431   0.00%   0.00%   0.00% lmk_event_task
+ 2432   0.00%   0.00%   0.00% lmk_task
+ 2433   0.00%   0.00%   0.00% lmk_cpu_stat
+ 2484   0.00%   0.00%   0.00% ham
+ 2491   0.00%   0.00%   0.00% bspinfo.elf
+ 2638   0.00%   0.00%   0.00% ras_logfile_tim
+ 2640   0.20%   0.20%   0.30% ham_cnmsg_handl
+ 2641   0.70%   0.00%   0.00% ham_process_net
+ 2642   0.00%   0.00%   0.00% ham_process_dom
+ 2643   0.10%   0.00%   0.10% ham_thread_noti
+ 2644   0.00%   0.00%   0.00% ham_availabilit
+ 2645   0.00%   0.00%   0.00% ham_inotify_for
+ 2646   0.00%   0.00%   0.00% ham_delay_resta
+ 2647   0.00%   0.00%   0.00% ham_alarm_deal
+ 2648   0.00%   0.00%   0.00% ham-cli
+ 2668   0.00%   0.00%   0.00% hamk_cap_get_va
+ 2669   0.00%   0.00%   0.00% hamk_cpu0
+ 2670   0.00%   0.00%   0.00% hamk_cpu1
+ 2678   0.00%   0.00%   0.00% clear_boot_env_
+ 2808   0.00%   0.00%   0.00% demand_start.el
+ 2931   0.00%   0.00%   0.00% ce.tran.cap.sw
+ 2973   0.00%   0.00%   0.00% cli-server
+ 2974   0.00%   0.00%   0.00% tty-admin
+ 2983   0.00%   0.00%   0.00% fe.cfg.rt.sw
+ 2992   0.50%   0.50%   2.00% redis-server
+ 2999   0.00%   0.00%   0.00% tty_secu_enable
+ 3003   0.00%   0.00%   0.00% configd
+ 3005   0.00%   0.00%   0.00% 2999_aaalib_th
+ 3011   0.00%   0.00%   0.00% cli-srv-main-si
+ 3013   0.00%   0.00%   0.00% redis-server
+ 3014   0.00%   0.00%   0.00% redis-server
+ 3015   0.00%   0.00%   0.00% redis-server
+ 3016   0.00%   0.00%   0.00% cli-dump
+ 3017   0.00%   0.00%   0.00% log_send_buf-29
+ 3019   0.00%   0.40%   0.40% cli-server
+ 3020   0.00%   0.00%   0.00% cli-srv-sig-pro
+ 3022   0.00%   0.00%   0.00% configd-auto-ba
+ 3039   0.10%   0.00%   0.00% rgmomd
+ 3047   0.00%   0.00%   0.00% ce_apm_sw
+ 3054   0.00%   0.00%   0.00% cap
+ 3095   0.00%   0.00%   0.00% ef_la_rx_ring
+ 3096   0.00%   0.00%   0.00% ef_lv4_rx_ring
+ 3097   0.00%   0.00%   0.00% ef_lv6_rx_ring
+ 3114   0.00%   0.00%   0.00% ref_ip_route
+ 3116   0.00%   0.00%   0.00% ref_ipv6_route
+ 3139   0.00%   0.00%   0.00% packet_msg_t
+ 3140   0.00%   0.00%   0.00% kworker/0:2-events_power_effici
+ 3160   0.00%   0.00%   0.00% tipc-tap
+ 3175   0.00%   0.00%   0.00% log_send_buf-29
+ 3177   0.00%   0.00%   0.00% lsm-kthread
+ 3234   0.10%   0.00%   0.20% redis_ctrl_host
+ 3238   0.00%   0.00%   0.00% redis_ctrl_host
+ 3239   0.00%   0.00%   0.00% redis_ctrl_host
+ 3240   0.00%   0.00%   0.00% redis_ctrl_host
+ 3242   0.00%   0.00%   0.00% mom_rdnd_ctrl
+ 3297   0.00%   0.00%   0.00% dm_dp
+ 3311   0.00%   0.00%   0.00% dm_logfile_time
+ 3321   0.00%   0.00%   0.00% coredump-mon
+ 3332   1.50%   0.90%   1.00% sysmon
+ 3339   0.00%   0.00%   0.00% safe_verify_svr
+ 3347   0.00%   0.00%   0.00% app_df
+ 3354   0.00%   0.00%   0.00% dfd_irq.elf
+ 3362   0.00%   0.00%   0.00% dm_app_pd
+ 3370   0.00%   0.00%   0.00% dm_ucm
+ 3376   0.00%   0.00%   0.00% dm_logfile_time
+ 3378   0.00%   0.00%   0.00% dfd_core.elf
+ 3384   0.00%   0.00%   0.00% dm_logfile_time
+ 3386   0.00%   0.00%   0.00% rldp.elf
+ 3389   0.00%   0.00%   0.00% dp_mfast_thread
+ 3390   0.20%   0.10%   0.10% dp_mom_thread
+ 3395   0.00%   0.00%   0.00% rbac
+ 3402   0.00%   0.00%   0.00% rdnd_server.
+ 3404   0.00%   0.00%   0.00% dp_global_db_th
+ 3405   0.00%   0.00%   0.00% log_send_buf-32
+ 3406   0.00%   0.00%   0.00% dm_timer_task
+ 3411   0.00%   0.00%   0.00% ras_logfile_tim
+ 3413   0.00%   0.00%   0.00% ldp_mb_task
+ 3414   0.00%   0.00%   0.00% ldp_lc_task
+ 3415   0.00%   0.00%   0.00% ldp_proxy_task
+ 3416   0.00%   0.00%   0.00% dm_rdnd_task
+ 3417   0.00%   0.00%   0.00% gdp_task
+ 3418   0.00%   0.00%   0.00% vsl_timer_task
+ 3419   0.00%   0.00%   0.00% vsl-db-mngpkt
+ 3420   0.00%   0.00%   0.00% vsl-db-sync-tas
+ 3421   0.00%   0.00%   0.00% vsl_lmp
+ 3422   0.00%   0.00%   0.00% vsl_cli_thread
+ 3423   0.00%   0.00%   0.00% dtm_timer_task
+ 3424   0.00%   0.00%   0.00% dtm_tm_task
+ 3425   0.00%   0.00%   0.00% dtm_pkt_task
+ 3426   0.00%   0.00%   0.00% vsu_cfg_local
+ 3427   0.00%   0.00%   0.00% vsu_cfg_global
+ 3428   0.00%   0.00%   0.00% vsu_cfg_l_sync
+ 3429   0.00%   0.00%   0.00% dm_rebuild_thre
+ 3430   0.00%   0.00%   0.00% dm_rebuild_pkt
+ 3431   0.00%   0.00%   0.00% aaad
+ 3438   0.00%   0.00%   0.00% log_send_buf-33
+ 3441   0.00%   0.00%   0.00% vsdm
+ 3443   0.10%   0.00%   0.10% redis_de_standa
+ 3450   0.00%   0.00%   0.00% redis_de_standa
+ 3451   0.00%   0.00%   0.00% redis_de_standa
+ 3452   0.00%   0.00%   0.00% redis_de_standa
+ 3455   0.00%   0.00%   0.00% mtdoops-cli
+ 3457   0.00%   0.00%   0.00% log_send_buf-34
+ 3458   0.00%   0.00%   0.00% aaad
+ 3462   0.10%   0.10%   0.10% redis_host_fwd
+ 3468   0.00%   0.00%   0.00% redis_host_fwd
+ 3469   0.00%   0.00%   0.00% redis_host_fwd
+ 3470   0.00%   0.00%   0.00% redis_host_fwd
+ 3473   0.00%   0.00%   0.00% dm_logfile_time
+ 3477   0.10%   0.00%   0.00% redis_cfg_can
+ 3479   0.00%   0.00%   0.00% aaa_logmsg
+ 3480   0.00%   0.00%   0.00% aaa_other_th
+ 3481   0.00%   0.00%   0.00% aaa_core_0
+ 3482   0.00%   0.00%   0.00% aaa_core_1
+ 3483   0.00%   0.00%   0.00% aaa_other_msg_0
+ 3484   0.00%   0.00%   0.00% aaa_inner_msg_1
+ 3486   0.00%   0.00%   0.00% redis_cfg_can
+ 3487   0.00%   0.00%   0.00% redis_cfg_can
+ 3488   0.00%   0.00%   0.00% redis_cfg_can
+ 3495   0.00%   0.00%   0.10% ce.cli.cpp.dp
+ 3498   0.00%   0.00%   0.00% dm_timer_task
+ 3503   0.00%   0.00%   0.20% ce.cpp.dp
+ 3505   0.00%   0.00%   0.00% dp_mfast_thread
+ 3506   0.10%   0.00%   0.00% dm_app_mom_thre
+ 3511   0.00%   0.00%   0.00% dp_global_db_th
+ 3512   0.00%   0.00%   0.00% log_send_buf-33
+ 3514   0.00%   0.00%   0.00% ce.nfpp.dp
+ 3516   0.00%   0.00%   0.00% ras_logfile_tim
+ 3517   0.00%   0.00%   0.00% dm_lsm_client_t
+ 3518   0.00%   0.00%   0.00% gdp_work_task
+ 3519   0.00%   0.00%   0.00% gdp_power
+ 3520   0.10%   0.00%   0.00% gdp_fan
+ 3522   0.00%   0.00%   0.00% dm_tech_tac_sup
+ 3523   0.00%   0.00%   0.00% addr_mngpkt_dea
+ 3524   0.00%   0.00%   0.00% dm_grpc_thread
+ 3525   0.00%   0.00%   0.00% dm_tipc_server_
+ 3526   0.00%   0.00%   0.00% dm_tipc_client_
+ 3527   0.00%   0.00%   0.00% dm_board_tipc_t
+ 3528   0.00%   0.00%   0.00% intp_mngpkt_tas
+ 3529   0.00%   0.00%   0.00% intp_task
+ 3530   0.00%   0.00%   0.00% intp_event_task
+ 3531   0.00%   0.00%   0.00% dcs_card_temp
+ 3532   0.10%   0.10%   0.10% card_mon_info
+ 3533   0.00%   0.00%   0.00% dev_mon_info
+ 3534   0.00%   0.00%   0.00% dm_fe_offline
+ 3535   0.00%   0.00%   0.00% dcs_mem_info
+ 3536   0.00%   0.00%   0.00% dcs_cpu_info
+ 3537   0.00%   0.00%   0.00% dcs_fs_info
+ 3538   0.00%   0.00%   0.00% dad_tx_dtct_pkt
+ 3539   0.00%   0.00%   0.00% dad_mng_thrd
+ 3540   0.00%   0.00%   0.00% dad_tmr_thrd
+ 3542   0.00%   0.00%   0.00% dad_lldp_thrd
+ 3545   0.00%   0.00%   0.00% dad_af_packet_t
+ 3546   0.00%   0.00%   0.00% dm_vsd0-mib_thr
+ 3547   0.00%   0.00%   0.00% dm-trap-thrd
+ 3548   0.00%   0.00%   0.00% dm-cwmp-VSD0
+ 3549   0.00%   0.00%   0.00% dm_rebuild_thre
+ 3550   0.00%   0.00%   0.00% dm_rebuild_pkt
+ 3551   0.00%   0.00%   0.00% dm-mon-reset
+ 3553   0.00%   0.00%   0.30% fe.cpp.sw
+ 3560   0.00%   0.00%   0.00% xe.cpp.dp
+ 3573   0.00%   0.00%   0.00% subcard_power_c
+ 3580   0.00%   0.00%   0.00% cap_tran
+ 3598   0.00%   0.00%   0.00% tcp_nss_send
+ 3599   0.00%   0.00%   0.00% kir thread
+ 3604   0.00%   0.00%   0.00% netk_openport
+ 3606   0.00%   0.00%   0.00% netk_tcpip_msg
+ 3608   0.00%   0.00%   0.00% IP_WebAH_Rcv_0
+ 3609   0.00%   0.00%   0.00% IP_WebAH_Rcv_1
+ 3610   0.00%   0.00%   0.00% IP_WebAH_Rcv_2
+ 3611   0.00%   0.00%   0.00% IP_WebAH_Rcv_3
+ 3612   0.00%   0.00%   0.00% icmp-err
+ 3622   0.00%   0.00%   0.00% IP6_WebAH_Rcv_0
+ 3623   0.00%   0.00%   0.00% IP6_WebAH_Rcv_1
+ 3624   0.00%   0.00%   0.00% IP6_WebAH_Rcv_2
+ 3625   0.00%   0.00%   0.00% IP6_WebAH_Rcv_3
+ 3633   0.10%   0.00%   0.10% tcpip.elf
+ 3640   0.00%   0.00%   0.00% timerange
+ 3647   0.00%   0.00%   0.10% nsm.elf
+ 3654   0.00%   0.00%   0.00% arp_sprs.elf
+ 3661   0.00%   0.00%   0.00% vxlan.elf
+ 3668   0.00%   0.00%   0.00% lsm_kproxy.elf
+ 3675   0.10%   0.20%   0.70% lsm.elf
+ 3683   0.00%   0.10%   0.40% bridge.elf
+ 3690   0.00%   0.00%   0.00% ping.elf
+ 3696   0.00%   0.00%   0.00% lsm.elf
+ 3698   0.00%   0.00%   0.00% tftp_tipc_serve
+ 3704   0.00%   0.00%   0.00% log_send_buf-36
+ 3706   0.00%   0.00%   0.10% mstp.elf
+ 3713   0.00%   0.00%   0.00% ref_proxy.elf
+ 3720   0.00%   0.00%   0.00% sshd
+ 3727   0.00%   0.00%   0.00% telnetd
+ 3734   0.00%   0.00%   0.00% rpi.elf
+ 3736   0.00%   0.00%   0.00% sshd-main
+ 3742   0.00%   0.00%   0.20% bgp.elf
+ 3745   0.00%   0.00%   0.00% telnetd-main
+ 3749   0.00%   0.00%   0.00% telnetd-cli
+ 3751   0.00%   0.00%   1.20% grpc.elf
+ 3758   0.00%   0.00%   0.00% grpc_vty.elf
+ 3764   0.00%   0.00%   0.00% grpc_vty_cli_wo
+ 3765   0.00%   0.00%   0.00% grpc_vty_cli_wo
+ 3766   0.00%   0.00%   0.00% grpc_vty_cli_wo
+ 3767   0.00%   0.00%   0.00% grpc_vty_cli_wo
+ 3769   0.00%   0.00%   0.00% ospf.elf
+ 3776   0.00%   0.00%   0.00% rip.elf
+ 3792   0.00%   0.00%   0.00% log_send_buf-36
+ 3798   0.00%   0.00%   0.00% ras_logfile_tim
+ 3799   0.00%   0.00%   0.00% ids_lib
+ 3800   0.00%   0.00%   0.00% dns_client.elf
+ 3806   0.00%   0.00%   0.00% tty-admin
+ 3808   0.00%   0.00%   0.00% isis.elf
+ 3816   0.00%   0.00%   0.00% ospfv3.elf
+ 3819   0.00%   0.00%   0.00% log_send_buf-38
+ 3827   0.00%   0.00%   0.00% ssh-cli
+ 3828   0.00%   0.00%   0.00% ssh-main-sync
+ 3829   0.00%   0.00%   0.00% ssh-key-regener
+ 3830   0.00%   0.00%   0.00% ssh-trap
+ 3831   0.00%   0.00%   0.00% ssh-rdnd
+ 3843   0.00%   0.00%   0.00% ripng.elf
+ 3850   0.00%   0.00%   0.30% ce.cap.sw
+ 3861   0.00%   0.00%   0.10% fe.cap.sw
+ 3868   0.00%   0.00%   0.00% nd_sprs.elf
+ 3875   0.00%   0.00%   0.00% ipmix.elf
+ 3882   0.00%   0.00%   0.00% rnsmib.elf
+ 3889   0.00%   0.00%   0.00% ldp.elf
+ 3892   0.00%   0.00%   0.00% rns-mib-snmp
+ 3897   0.00%   0.00%   0.00% licns
+ 3906   0.00%   0.00%   0.00% kworker/u4:4-events_unbound
+ 3910   0.00%   0.00%   0.00% ef_m_rx_ring
+ 3911   0.00%   0.00%   0.00% ef_nmv4_rx_ring
+ 3912   0.00%   0.00%   0.00% ef_nmv6_rx_ring
+ 3913   0.00%   0.00%   0.00% ef_nm_rx_ring
+ 3914   0.00%   0.00%   0.00% ef_nmh_rx_ring
+ 3915   0.00%   0.00%   0.00% EFMP-1
+ 3916   0.00%   0.00%   0.00% ef_la_tx_ring
+ 3917   0.00%   0.00%   0.00% ef_lv4_tx_ring
+ 3918   0.00%   0.00%   0.00% ef_lv6_tx_ring
+ 3919   0.00%   0.00%   0.00% efmp-topf
+ 3920   0.00%   0.00%   0.00% efmp_ipfrag_ref
+ 3921   0.00%   0.00%   0.00% efmp_ipv6frag_r
+ 3924   0.00%   0.00%   0.00% congestctrl_ser
+ 3931   0.00%   0.00%   0.00% lic_cli_hdl
+ 3932   0.00%   0.00%   0.00% licns_refres
+ 3936   0.00%   0.00%   0.00% core_monitor
+ 3943   0.00%   0.00%   0.00% telnetc
+ 3950   0.00%   0.00%   0.00% tunnel.elf
+ 3957   0.00%   0.00%   0.00% sshc
+ 3959   0.00%   0.00%   0.00% telnetc-cli
+ 3960   0.10%   0.10%   0.10% telnetc-check
+ 3961   0.00%   0.00%   0.00% dns_agent_routi
+ 3962   0.00%   0.00%   0.00% acllib-rcv1-394
+ 3968   0.00%   0.00%   0.30% diag_log.elf
+ 3975   0.00%   0.00%   0.00% ssh-client-cli
+ 3976   0.10%   0.10%   0.10% ssh-client-chec
+ 3977   0.00%   0.00%   0.00% dns_agent_routi
+ 3978   0.00%   0.00%   1.20% netconf.elf
+ 3980   0.00%   0.00%   0.00% acllib-rcv1-395
+ 3981   0.00%   0.00%   0.00% ras_logfile_tim
+ 3982   0.00%   0.00%   0.00% ids_lib
+ 3983   0.00%   0.00%   0.00% tty-admin-cmds
+ 3984   0.00%   0.00%   0.00% tty-admin-inoti
+ 3985   0.00%   0.00%   0.00% tty-rdnd
+ 3991   0.00%   0.00%   0.10% tech-support
+ 3998   0.00%   0.00%   0.00% mom_proto_pa
+ 4004   0.00%   0.00%   0.00% nc-rpc-commit
+ 4008   0.00%   0.00%   0.00% nc-notification
+ 4009   0.00%   0.00%   0.00% nc-rpc_status-n
+ 4010   0.00%   0.00%   0.00% nc-session-loop
+ 4016   0.00%   0.00%   0.00% tech-module_pro
+ 4017   0.00%   0.00%   0.00% tech-reg_inpath
+ 4018   0.00%   0.00%   0.00% tech-diag
+ 4019   0.00%   0.00%   0.00% tech-cli_proces
+ 4020   0.00%   0.00%   0.00% tech-hotkey_pro
+ 4021   0.00%   0.00%   0.00% tech-vsd_proces
+ 4023   0.00%   0.00%   0.00% tech-rdnd_proce
+ 4025   0.00%   0.00%   0.00% mlag.elf
+ 4044   0.00%   0.00%   0.00% ce.proxy.brg.dp
+ 4052   0.00%   0.00%   0.00% ce.proxy.traf
+ 4061   0.00%   0.00%   0.00% demo_proxy-io2n
+ 4062   0.00%   0.00%   0.00% run_proxy-io2ne
+ 4063   0.00%   0.00%   0.00% log-guard
+ 4070   0.00%   0.00%   0.00% password_policy
+ 4079   0.00%   0.00%   0.00% syslogd
+ 4080   0.00%   0.00%   0.00% klogd
+ 4081   0.00%   0.00%   0.00% ras_logfile_tim
+ 4082   0.00%   0.00%   0.00% pwd_policy-cli
+ 4094   0.00%   0.00%   0.00% hdf_mgnt
+ 4096   0.00%   0.00%   0.00% syslogd-cmds
+ 4097   0.00%   0.00%   0.00% syslogd-file
+ 4098   0.00%   0.00%   0.00% syslogd-trap
+ 4099   0.00%   0.00%   0.00% syslogd-module
+ 4100   0.00%   0.00%   0.00% syslogd-ds
+ 4101   0.00%   0.00%   0.00% syslogd-pwd
+ 4102   0.00%   0.00%   0.00% syslogd-mib
+ 4103   0.00%   0.00%   0.00% syslogd-rdnd
+ 4104   0.00%   0.00%   0.00% syslogd-rd
+ 4105   0.00%   0.00%   0.00% syslogd-read
+ 4106   0.00%   0.00%   0.00% client-debug
+ 4112   0.00%   0.00%   0.00% hdf_sys
+ 4115   0.00%   0.00%   0.00% hdf_lib
+ 4116   0.00%   0.00%   0.00% ras_logfile_tim
+ 4121   0.00%   0.00%   0.00% psh_server
+ 4130   0.00%   0.00%   0.00% ras_logfile_tim
+ 4134   0.00%   0.00%   0.00% log_send_buf-41
+ 4136   0.10%   0.00%   0.00% fsui
+ 4143   0.50%   0.50%   0.90% xe.mng.pkt.sw
+ 4150   0.00%   0.00%   0.00% flinfod
+ 4152   0.00%   0.00%   0.00% fsui_moni_fs
+ 4165   0.00%   0.00%   0.00% fsui_snmp_mib
+ 4166   0.00%   0.00%   0.00% lda
+ 4168   0.00%   0.00%   0.00% 4136_aaalib_th
+ 4175   0.00%   0.00%   0.00% zam.elf
+ 4183   0.00%   0.00%   0.00% log_send_buf-41
+ 4186   0.00%   0.00%   0.00% python_shell.el
+ 4195   0.00%   0.00%   0.00% cwmp.elf
+ 4202   0.00%   0.00%   0.00% cwmp_gsoap.elf
+ 4209   0.00%   0.00%   0.00% ras_logfile_tim
+ 4210   0.00%   0.00%   0.00% upgrade_global
+ 4217   0.00%   0.00%   0.00% upgrade_local
+ 4219   0.00%   0.00%   0.00% cwmp.elf
+ 4220   0.00%   0.00%   0.00% cwmp.elf
+ 4221   0.00%   0.00%   0.00% cwmp.elf
+ 4222   0.00%   0.00%   0.00% cwmp.elf
+ 4228   0.00%   0.00%   0.00% upgrade_app_dow
+ 4235   0.00%   0.00%   0.60% upgrade_app_glo
+ 4243   0.00%   0.00%   0.00% upgrade_app_loc
+ 4252   0.00%   0.00%   0.00% upgrade_cli
+ 4259   0.00%   0.00%   0.00% upgrade_auto_sy
+ 4266   0.00%   0.00%   0.00% efm.elf
+ 4272   0.00%   0.00%   0.00% dns_agent_routi
+ 4274   0.00%   0.00%   0.00% rns_server.elf
+ 4281   0.00%   0.00%   0.00% ids.elf
+ 4288   0.20%   0.10%   0.20% xe.ctrl.pkt.sw
+ 4290   0.00%   0.00%   0.00% ras_logfile_tim
+ 4297   0.00%   0.00%   0.10% resmon
+ 4306   0.00%   0.00%   0.00% snmpd
+ 4313   0.00%   0.00%   0.00% rns.elf
+ 4320   0.00%   0.00%   0.00% log_send_buf-43
+ 4322   0.00%   0.00%   0.00% ipsec
+ 4327   0.00%   0.00%   0.00% snmp_mib_cmd_pr
+ 4331   0.10%   0.00%   0.00% track.elf
+ 4333   0.50%   0.00%   0.00% taskexit-netlin
+ 4341   0.00%   0.00%   0.00% igmp.elf
+ 4345   0.00%   0.00%   0.00% log_send_buf-43
+ 4353   0.00%   0.00%   0.00% igmp_snp.elf
+ 4360   0.00%   0.00%   0.00% mld.elf
+ 4367   0.00%   0.00%   0.00% mld_snp.elf
+ 4374   0.00%   0.00%   0.00% msdp.elf
+ 4381   0.00%   0.00%   0.00% msf.elf
+ 4388   0.00%   0.00%   0.00% msf6.elf
+ 4395   0.00%   0.00%   0.00% pdmd.elf
+ 4402   0.00%   0.00%   0.00% pim6d.elf
+ 4409   0.00%   0.00%   0.00% pimd.elf
+ 4416   0.00%   0.00%   0.00% lldp.elf
+ 4423   0.00%   0.00%   0.00% lacp.elf
+ 4430   0.00%   0.00%   0.00% gvrpd
+ 4437   0.00%   0.00%   0.00% dldp.elf
+ 4443   0.00%   0.00%   0.00% lacp.elf
+ 4445   0.00%   0.00%   0.00% pbr.elf
+ 4453   0.00%   0.00%   0.00% sccd
+ 4460   0.00%   0.00%   0.10% acld
+ 4467   0.00%   0.00%   0.00% security_log.el
+ 4469   0.00%   0.00%   0.00% log_send_buf-44
+ 4476   0.00%   0.00%   0.00% log_send_buf-44
+ 4477   0.00%   0.00%   0.00% webauth
+ 4484   0.00%   0.00%   0.00% scc-msgq
+ 4485   0.10%   0.00%   0.10% scc-extern
+ 4486   0.00%   0.00%   0.00% scc-buf-chk
+ 4487   0.00%   0.00%   0.00% rdsd
+ 4494   0.00%   0.00%   0.00% tacplusd
+ 4501   0.00%   0.00%   0.00% dot1x
+ 4508   0.00%   0.00%   0.00% dhcp.elf
+ 4514   0.00%   0.00%   0.00% hp_dot1x
+ 4515   0.00%   0.00%   0.00% log_send_buf-45
+ 4517   0.00%   0.00%   0.00% vrrp.elf
+ 4523   0.00%   0.10%   0.00% security_log.el
+ 4525   0.00%   0.00%   0.00% log_send_buf-45
+ 4526   0.00%   0.00%   0.00% vrrp_plus.elf
+ 4533   0.00%   0.00%   0.00% dot1x_core_1
+ 4534   0.00%   0.00%   0.00% rdnd_proxy
+ 4535   0.00%   0.00%   0.00% urpf.elf
+ 4537   0.10%   0.00%   0.10% dot1x_other
+ 4538   0.00%   0.00%   0.00% dot1x_flow
+ 4539   0.00%   0.00%   0.00% dot1x_second_ma
+ 4540   0.00%   0.00%   0.00% dot1x_backup
+ 4541   0.00%   0.00%   0.00% dot1x_eapolrx
+ 4549   0.00%   0.00%   0.00% dhcp6.elf
+ 4552   0.00%   0.00%   0.00% scclib-1
+ 4557   0.00%   0.00%   0.00% dhcpc.elf
+ 4563   0.00%   0.00%   0.00% log_send_buf-45
+ 4565   0.00%   0.00%   0.00% dns_snp.elf
+ 4566   0.00%   0.00%   0.00% scc-momret
+ 4568   0.00%   0.00%   0.00% log_send_buf-45
+ 4574   0.00%   0.00%   0.00% dhcp6c.elf
+ 4581   0.00%   0.00%   0.00% dnsd.elf
+ 4583   0.00%   0.00%   0.00% log_send_buf-45
+ 4585   0.00%   0.00%   0.00% log_send_buf-44
+ 4590   0.00%   0.00%   0.00% log_send_buf-45
+ 4591   0.00%   0.00%   0.00% ver_agent
+ 4593   0.00%   0.00%   0.00% log_send_buf-44
+ 4594   0.00%   0.00%   0.00% tacplusd
+ 4595   0.00%   0.00%   0.00% tacplus_acct_ta
+ 4596   0.00%   0.00%   0.00% tacplus_task
+ 4597   0.00%   0.00%   0.00% tacplus_other_t
+ 4602   0.00%   0.00%   0.00% log_send_buf-44
+ 4603   0.00%   0.00%   0.00% rdsd
+ 4604   0.00%   0.00%   0.00% rds_logmsg
+ 4605   0.00%   0.00%   0.00% rds_core0
+ 4606   0.00%   0.00%   0.00% rds_core1
+ 4607   0.00%   0.00%   0.00% rds_core2
+ 4608   0.00%   0.00%   0.00% rds_core3
+ 4609   0.00%   0.00%   0.00% rds_other_th
+ 4610   0.00%   0.00%   0.00% rds recv packet
+ 4611   0.00%   0.00%   0.00% log_send_buf-45
+ 4613   0.00%   0.00%   0.00% bfd.elf
+ 4615   0.00%   0.00%   0.00% wba-db
+ 4616   0.00%   0.00%   0.00% webauth
+ 4621   0.00%   0.00%   0.00% wbacore0
+ 4622   0.00%   0.00%   0.00% wbacore1
+ 4623   0.00%   0.00%   0.00% wbav2
+ 4624   0.00%   0.00%   0.00% cpweb.http
+ 4626   0.00%   0.00%   0.00% rdsec_rev
+ 4627   0.00%   0.00%   0.00% radsec_mgmt
+ 4628   0.00%   0.00%   0.00% rds_tcp_send_pa
+ 4629   0.00%   0.00%   0.00% rds tcp recv pa
+ 4630   0.00%   0.00%   0.10% qosd.elf
+ 4637   0.00%   0.00%   0.00% wbard_0
+ 4638   0.00%   0.00%   0.00% ipfix_app
+ 4640   0.00%   0.00%   0.00% wba_mom
+ 4646   0.00%   0.00%   0.00% ntp.elf
+ 4653   0.00%   0.00%   0.00% sflow_app
+ 4660   0.00%   0.00%   0.00% termid.elf
+ 4669   0.00%   0.00%   0.00% log_send_buf-46
+ 4670   0.00%   0.00%   0.00% ftpc_cli.elf
+ 4677   0.00%   0.00%   0.00% rmond
+ 4683   0.00%   0.00%   0.00% log_send_buf-46
+ 4685   0.00%   0.00%   0.00% tftpd.elf
+ 4692   0.00%   0.00%   0.00% ce.trace.pkt.dp
+ 4700   0.00%   0.00%   0.00% log_send_buf-46
+ 4701   0.00%   0.00%   0.00% ce.ap.sw
+ 4703   0.00%   0.00%   0.00% tftpd_cli
+ 4709   0.00%   0.00%   0.00% ce.ddm.sw
+ 4715   0.00%   0.00%   0.00% QosThread0
+ 4717   0.00%   0.00%   0.10% ce.mgmt.sw
+ 4724   0.00%   0.00%   0.00% ce.mng.poe.sw
+ 4731   0.10%   0.00%   0.20% ce.ptm.sw
+ 4738   0.00%   0.00%   0.10% ce.core.ptm.sw
+ 4750   0.00%   0.00%   0.00% ras_logfile_tim
+ 4752   0.00%   0.00%   0.00% ids_lib
+ 4753   0.00%   0.00%   0.00% ras_logfile_tim
+ 4754   0.00%   0.00%   0.00% ids_lib
+ 4756   0.00%   0.00%   0.10% cli.ptm.sw
+ 4772   0.00%   0.00%   0.00% fe.ap.sw
+ 4779   0.00%   0.00%   0.00% fe.ddm.sw
+ 4786   0.00%   0.00%   0.00% QosThread0
+ 4787   0.00%   0.00%   0.00% fe.ipfix.sw
+ 4794   0.00%   0.00%   0.00% fe.mng.poe.sw
+ 4801   0.00%   0.00%   0.00% fe.ptm.sw
+ 4809   0.00%   0.00%   0.30% fe.core.ptm.sw
+ 4816   0.00%   0.00%   0.00% fe.virpt.ptm.sw
+ 4823   0.00%   0.00%   0.00% ftp_server.elf
+ 4828   0.00%   0.00%   0.00% ras_logfile_tim
+ 4830   0.00%   0.00%   0.00% ids_lib
+ 4832   0.00%   0.00%   0.00% ras_logfile_tim
+ 4833   0.00%   0.00%   0.00% ids_lib
+ 4834   0.00%   0.00%   0.00% ras_logfile_tim
+ 4835   0.00%   0.00%   0.00% log_send_buf-48
+ 4838   0.00%   0.00%   0.00% ids_lib
+ 4839   0.00%   0.00%   0.00% QosThread0
+ 4843   0.00%   0.00%   0.00% 4823_aaalib_th
+ 4846   0.00%   0.00%   0.00% ftps_main
+ 4847   0.00%   0.00%   0.00% proxy.span.sw
+ 4854   0.00%   0.00%   0.00% cmpnt_upgrade_s
+ 4861   0.00%   0.00%   0.00% cmpnt_upgrade_c
+ 4868   0.00%   0.00%   0.00% ce.fp.sw
+ 4877   0.00%   0.00%   0.00% fe.fcnt.sw
+ 4884   0.00%   0.00%   0.30% fe.fp.sw
+ 4891   0.00%   0.00%   0.40% ce.ui.poe.sw
+ 4906   0.00%   0.00%   0.00% ce.ddos.sw
+ 4914   0.00%   0.00%   0.00% ce.nacm.sw
+ 4921   0.00%   0.00%   0.10% ce.qos.sw
+ 4928   0.00%   0.00%   0.00% fe.qos.sw
+ 4935   0.00%   0.00%   0.00% ce.cli.nfpp.dp
+ 4943   0.00%   0.00%   0.00% cmps.ctc.tcammn
+ 4950   0.00%   0.00%   0.00% fe.nfpp.sw
+ 4958   0.10%   0.00%   0.00% fe.pceinst.sw
+ 4965   0.00%   0.00%   0.00% ce.ebrg.dp
+ 4972   0.00%   0.00%   0.00% ce.emac.dp
+ 4979   0.00%   0.00%   0.00% ce.qinq.dp
+ 4987   0.00%   0.00%   0.00% fe.ebrg.sw
+ 4994   0.00%   0.00%   0.00% fe.emac.sw
+ 5001   0.00%   0.00%   0.00% fe.qinq.sw
+ 5008   0.00%   0.00%   0.00% im_proxy.elf
+ 5072   0.00%   0.00%   0.00% cmps.sda.sw
+ 5079   0.00%   0.00%   0.00% cmps_app_schain
+ 5086   0.00%   0.00%   0.00% ihd_cpu.elf
+ 5093   0.00%   0.00%   0.00% ihd_mng.elf
+ 5095   0.00%   0.00%   0.00% log_send_buf-50
+ 5101   0.00%   0.00%   0.00% im_core.elf
+ 5108   0.00%   0.00%   0.00% openflow
+ 5115   0.00%   0.00%   0.00% ce.cli.rt.sw
+ 5122   0.00%   0.00%   0.00% ce.ef.sw
+ 5129   0.00%   0.00%   0.00% ce.glb.l3tb.sw
+ 5136   0.00%   0.00%   0.00% ce.l3intf.sw
+ 5143   0.00%   0.00%   0.00% ce.nh.l3tb.sw
+ 5150   0.00%   0.00%   0.00% fe.glb.l3tb.sw
+ 5157   0.00%   0.00%   0.00% fe.iif.l3tb.sw
+ 5164   0.00%   0.00%   0.00% fe.l3intf.sw
+ 5171   0.00%   0.00%   0.00% fe.mac.l3tb.sw
+ 5178   0.00%   0.00%   0.00% fe.mc.sw
+ 5185   0.00%   0.00%   0.00% fe.nh.l3tb.sw
+ 5192   0.00%   0.00%   0.00% fe.pbr.sw
+ 5199   0.00%   0.00%   0.00% ras_logfile_tim
+ 5201   0.00%   0.00%   0.00% fe.rt_res.l3tb.
+ 5208   0.00%   0.00%   0.00% fe.uc.sw
+ 5215   0.00%   0.00%   0.00% ce.cfg.pktr.sw
+ 5217   0.00%   0.00%   0.00% cmps.sda.sw
+ 5223   0.00%   0.00%   0.00% ce.dpm.dp
+ 5230   0.00%   0.00%   0.00% fe.dpm.sw
+ 5237   0.00%   0.00%   0.00% xe.cfg.pktr.sw
+ 5244   0.00%   0.00%   0.00% xe.vhost.pkt.sw
+ 5245   0.00%   0.00%   0.00% xe.vhost.pkt.sw
+ 5252   0.00%   0.00%   0.00% ce.cli.pkt.dp
+ 5261   0.00%   0.00%   0.00% amaint_app.elf
+ 5268   0.00%   0.00%   0.00% tir.elf
+ 5275   0.00%   0.00%   0.00% log_send_buf-52
+ 5276   0.00%   0.00%   0.00% cid_mapper
+ 5278   0.00%   0.00%   0.00% sf_app_async
+ 5279   0.00%   0.00%   0.00% log_send_buf-52
+ 5285   0.00%   0.00%   0.00% sw_app.snp_ds_c
+ 5292   0.00%   0.00%   0.00% sw_app.snp_ds_s
+ 5299   0.00%   0.00%   0.00% cmps.sln.sxauth
+ 5302   0.00%   0.00%   0.00% log_send_buf-52
+ 5306   0.00%   0.00%   0.00% log_send_buf-52
+ 5308   0.00%   0.00%   0.00% mosquitto.elf
+ 5319   0.00%   0.00%   0.00% ce.did.sw
+ 5326   0.00%   0.00%   0.00% cls-sshd
+ 5328   0.00%   0.00%   0.00% mqtt_cmd
+ 5340   0.00%   0.00%   0.00% fe.did.sw
+ 5347   0.00%   0.00%   0.00% reup.elf
+ 5349   0.00%   0.00%   0.00% authapp_grpc
+ 5355   0.00%   0.00%   0.00% apm
+ 5362   0.00%   0.20%   0.10% cli-proxy
+ 5386   0.00%   0.00%   0.00% log_send_buf-53
+ 5397   0.00%   0.00%   0.00% nginx_cmd.elf
+ 5408   0.00%   0.00%   0.00% sh_app
+ 5410   0.00%   0.00%   0.00% demo_proxy-io2n
+ 5411   0.00%   0.00%   0.00% run_proxy-io2ne
+ 5412   0.00%   0.00%   0.00% sh
+ 5420   0.00%   0.00%   0.00% ugp
+ 5427   0.00%   0.00%   0.00% zlogd
+ 5434   0.00%   0.00%   0.00% alarm.elf
+ 5441   0.00%   0.00%   0.00% cmdk.elf
+ 5444   0.00%   0.00%   0.00% log_send_buf-54
+ 5448   0.70%   0.60%   0.50% ctclnkMon 0
+ 5450   0.00%   0.00%   0.00% erps.elf
+ 5454   0.00%   0.00%   0.00% ras_logfile_tim
+ 5457   0.00%   0.00%   0.00% ras_logfile_tim
+ 5466   0.00%   0.00%   0.00% aof
+ 5472   0.20%   0.10%   0.20% ctcIntr19
+ 5473   0.00%   0.00%   0.00% redis_cfg_can
+ 5475   0.00%   0.00%   0.00% redis_host_fwd
+ 5476   0.00%   0.00%   0.00% de_standalone
+ 5477   0.00%   0.00%   0.00% redis_ctrl_host
+ 5478   0.00%   0.00%   0.00% redis_host
+ 5479   0.00%   0.00%   0.00% ctcPktRx-0
+ 5480   0.20%   0.10%   0.00% ctcPktRxC2C-0
+ 5482   0.00%   0.00%   0.00% DmaStats0 0
+ 5483   0.00%   0.00%   0.00% oam_server.e
+ 5484   0.00%   0.00%   0.00% TcamScan 0
+ 5485   0.00%   0.00%   0.00% DmaInfo0 0
+ 5493   0.10%   0.00%   0.10% savi.elf
+ 5500   0.00%   0.00%   0.00% snooping.elf
+ 5507   0.00%   0.00%   0.00% cpurule
+ 5509   0.00%   0.00%   0.00% log_send_buf-54
+ 5515   0.00%   0.00%   0.00% lsm_rpc_agent.e
+ 5522   0.00%   0.00%   0.00% macc
+ 5531   0.00%   0.00%   0.00% ND_SNP
+ 5532   0.00%   0.00%   0.00% DHCPV6_SNP
+ 5533   0.00%   0.00%   0.00% SAVI_MIX
+ 5534   0.00%   0.00%   0.00% SAVI_MSG
+ 5535   0.00%   0.00%   0.00% exe
+ 5537   0.00%   0.00%   0.00% scclib-30
+ 5545   0.00%   0.00%   0.00% log_send_buf-55
+ 5546   0.00%   0.00%   0.00% IPv4Snp_Alarm
+ 5547   0.00%   0.00%   0.00% IPv4Snp_Capture
+ 5548   0.00%   0.00%   0.00% IPv4Snp_Capture
+ 5560   0.00%   0.00%   0.00% scclib-4
+ 5564   0.00%   0.00%   0.00% span.elf
+ 5572   0.00%   0.00%   0.00% log_send_buf-55
+ 5576   0.00%   0.00%   0.00% sntp.elf
+ 5592   0.00%   0.00%   0.00% sysha
+ 5594   0.00%   0.00%   0.00% ras_logfile_tim
+ 5595   0.00%   0.00%   0.00% ctc_cli_thread
+ 5601   0.10%   0.00%   0.00% sda_mac_thread
+ 5623   0.60%   0.60%   0.20% sda_pktd
+ 5624   0.00%   0.00%   0.00% sda_pktd_slow
+ 5627   0.60%   0.60%   0.60% ptd_link_thread
+ 5628   0.20%   0.20%   0.20% ptd_ha_thread
+ 5629   0.40%   0.50%   0.20% unit0_thread
+ 5631   0.90%   0.80%   0.80% waMon 1000
+ 5632   0.00%   0.00%   0.00% hdf_lib
+ 5638   0.00%   0.00%   0.00% cli-rdnd
+ 5639   0.00%   0.00%   0.00% cli-logcmd
+ 5640   0.00%   0.00%   0.00% cli-srv-cmds
+ 5641   0.00%   0.00%   0.00% cli-srv-record
+ 5642   0.00%   0.00%   0.00% cli-grpc-loop
+ 5643   0.00%   0.00%   0.00% psh_syslock_ka
+ 5644   0.00%   0.00%   0.00% security-log-ta
+ 5646   0.00%   0.00%   0.10% dlog_wr_file
+ 5647   0.00%   0.00%   0.00% dlog_wr_file_ti
+ 5648   0.00%   0.00%   0.00% tty-admin-passw
+ 5649   0.00%   0.00%   0.00% log_send_buf-39
+ 5650   0.00%   0.00%   0.00% dlog_diag_log
+ 5651   0.00%   0.00%   0.00% tty-admin-acct
+ 5652   0.00%   0.00%   0.00% dhcp6_ha_thread
+ 5653   0.00%   0.00%   0.00% pwd_policy-clie
+ 5654   0.00%   0.00%   0.00% reup_updt_mac
+ 5655   0.00%   0.00%   0.00% ospf6_rdnd_thre
+ 5656   0.00%   0.00%   0.00% dhcp6_sql_threa
+ 5657   0.00%   0.00%   0.10% kworker/0:3H-kblockd
+ 5659   0.00%   0.00%   0.00% ras_logfile_tim
+ 5660   0.00%   0.00%   0.00% psh_server
+ 5661   0.00%   0.00%   0.00% dcm_lib_5441
+ 5662   0.00%   0.00%   0.00% dns_agent_routi
+ 5663   0.00%   0.00%   0.00% log_send_buf-41
+ 5664   0.00%   0.00%   0.00% dcm_app_27
+ 5665   0.00%   0.00%   0.00% dns_agent_routi
+ 5666   0.00%   0.00%   0.00% ids_lib
+ 5667   0.00%   0.00%   0.00% dlog_bgp
+ 5668   0.00%   0.00%   0.00% dhcp_msg_proc
+ 5669   0.00%   0.00%   0.00% pcap_thread
+ 5670   0.00%   0.00%   0.00% cwmp_gsoap.elf
+ 5671   0.00%   0.00%   0.00% cwmp_gsoap.elf
+ 5672   0.00%   0.00%   0.00% 2974_aaalib_th
+ 5673   0.20%   0.20%   0.20% efmp-task
+ 5674   0.00%   0.00%   0.00% authmng_lib
+ 5679   0.00%   0.00%   0.00% log_send_buf-37
+ 5683   0.00%   0.00%   0.00% dhcp_local_msg_
+ 5684   0.00%   0.00%   0.00% dcm_lib_2974
+ 5685   0.00%   0.00%   0.00% cwmp.elf
+ 5686   0.00%   0.00%   0.00% cwmp_cloud_reg_
+ 5687   0.00%   0.00%   0.00% dcm_lib_2973
+ 5689   0.00%   0.00%   0.00% log_send_buf-38
+ 5691   0.00%   0.00%   0.00% nsm_ex
+ 5692   0.00%   0.00%   0.00% nsm_server
+ 5693   0.00%   0.00%   0.00% nsm_lpm
+ 5696   0.00%   0.00%   0.00% sysmon-snmp
+ 5697   0.00%   0.00%   0.00% nsm_rtm
+ 5698   0.00%   0.00%   0.00% nsm_mcast
+ 5700   0.00%   0.00%   0.00% rmon_tech_proc
+ 5701   0.00%   0.00%   0.00% RMON_RDND
+ 5702   0.00%   0.00%   0.00% log_send_buf-46
+ 5703   0.00%   0.00%   0.00% isis_rdnd_threa
+ 5704   0.00%   0.00%   0.00% mem_utilize
+ 5705   0.00%   0.00%   0.00% isis_ka_thread
+ 5707   0.00%   0.00%   0.00% dhcp_ha_thread
+ 5708   0.00%   0.00%   0.00% ref_rt_search
+ 5709   0.00%   0.00%   0.00% ref_res_thread
+ 5711   0.00%   0.00%   0.00% bgp.elf
+ 5715   0.00%   0.00%   0.00% ras_logfile_tim
+ 5716   0.00%   0.00%   0.00% nsm_rtm
+ 5717   4.60%   0.40%   0.30% sysha_netlink
+ 5718   0.00%   0.00%   0.00% sysha-group
+ 5719   0.00%   0.00%   0.00% sysha-fast-mon
+ 5720   0.10%   0.10%   0.20% sysha-comm-mon
+ 5721   0.00%   0.00%   0.00% sysha-inotify
+ 5722   0.00%   0.00%   0.00% bgp_io-0
+ 5730   0.00%   0.00%   0.00% dm_logfile_time
+ 5731   0.00%   0.00%   0.00% log_send_buf-53
+ 5732   0.00%   0.00%   0.00% newcmd_chk_ngx
+ 5734   0.00%   0.00%   0.00% dns_agent_routi
+ 5735   0.00%   0.00%   0.00% ref_mom_thread
+ 5736   0.00%   0.00%   0.00% refv6_res_threa
+ 5737   0.00%   0.00%   0.00% refv6_mom_threa
+ 5738   0.00%   0.00%   0.00% ef_path_thread
+ 5739   0.00%   0.00%   0.00% packet-fwd
+ 5740   0.00%   0.00%   0.00% ras_logfile_tim
+ 5741   0.00%   0.00%   0.00% ras_logfile_tim
+ 5742   0.00%   0.00%   0.00% ids_lib
+ 5743   0.00%   0.00%   0.00% dlog_ospfv3
+ 5744   0.00%   0.00%   0.00% ids_lib
+ 5745   0.00%   0.00%   0.00% dlog_ospf
+ 5746   0.00%   0.00%   0.00% lsm.elf
+ 5747   0.00%   0.00%   0.00% log_send_buf-37
+ 5748   0.00%   0.00%   0.00% ospf_ka_thread
+ 5749   0.00%   0.00%   0.00% ospf_rdnd_threa
+ 5750   0.00%   0.00%   0.00% dm_logfile_time
+ 5751   0.00%   0.00%   0.00% telnet-rdnd
+ 5752   0.00%   0.00%   0.00% dm_logfile_time
+ 5755   0.00%   0.00%   0.00% ip_proxy
+ 5756   0.00%   0.00%   0.00% ef_output_thd
+ 5757   1.00%   0.10%   0.00% monitor_netlink
+ 5758   0.00%   0.00%   0.00% snmp_rdnd
+ 5759   0.50%   0.40%   0.50% monitor_procps
+ 5763   0.00%   0.00%   0.00% tech-master_pro
+ 5764   0.30%   0.90%   0.90% redis_ce_global
+ 5767   0.00%   0.00%   0.00% redis_ce_global
+ 5768   0.00%   0.00%   0.00% redis_ce_global
+ 5769   0.00%   0.00%   0.00% redis_ce_global
+ 5771   0.10%   0.10%   0.10% redis_ce_fwd_gl
+ 5774   0.00%   0.00%   0.00% redis_ce_fwd_gl
+ 5775   0.00%   0.00%   0.00% redis_ce_fwd_gl
+ 5776   0.00%   0.00%   0.00% redis_ce_fwd_gl
+ 5778   0.20%   0.10%   0.30% redis_de_global
+ 5781   0.00%   0.00%   0.00% redis_de_global
+ 5782   0.00%   0.00%   0.00% redis_de_global
+ 5783   0.00%   0.00%   0.00% redis_de_global
+ 5784   0.00%   0.00%   0.00% redis_de_global
+ 5785   0.00%   0.00%   0.00% ce_fwd_global
+ 5786   0.00%   0.00%   0.00% redis_ce_global
+ 5788   0.00%   0.00%   0.10% redis_de_fwd_gl
+ 5791   0.00%   0.00%   0.00% redis_de_fwd_gl
+ 5792   0.00%   0.00%   0.00% redis_de_fwd_gl
+ 5793   0.00%   0.00%   0.00% redis_de_fwd_gl
+ 5796   0.20%   0.10%   0.20% redis_cfg_globa
+ 5799   0.00%   0.00%   0.00% redis_cfg_globa
+ 5800   0.00%   0.00%   0.00% redis_cfg_globa
+ 5801   0.00%   0.00%   0.00% redis_cfg_globa
+ 5803   0.00%   0.00%   0.00% log_send_buf-38
+ 5805   0.00%   0.00%   0.00% ospf6_ka_thread
+ 5806   0.10%   0.10%   0.40% redis_cap
+ 5809   0.00%   0.00%   0.00% redis_cap
+ 5810   0.00%   0.00%   0.00% redis_cap
+ 5811   0.00%   0.00%   0.00% redis_cap
+ 5814   0.10%   0.00%   0.10% redis_ctrl_glob
+ 5816   0.00%   0.00%   0.00% redis_ctrl_glob
+ 5817   0.00%   0.00%   0.00% redis_ctrl_glob
+ 5818   0.00%   0.00%   0.00% redis_ctrl_glob
+ 5819   0.00%   0.00%   0.00% cli_tech_proc
+ 5822   0.00%   0.00%   0.00% ctrl_global
+ 5823   0.00%   0.00%   0.00% redis_cap
+ 5824   0.00%   0.00%   0.00% cfg_global
+ 5825   0.00%   0.00%   0.00% de_fwd_global
+ 5827   0.00%   0.00%   0.00% dns_agent_routi
+ 5828   0.40%   0.30%   0.40% acld-snd
+ 5829   0.70%   0.60%   0.70% acld-syncsnd
+ 5831   0.00%   0.00%   0.00% ssc_fp_res
+ 5837   0.00%   0.00%   0.00% snp_ds_app_s
+ 5838   0.00%   0.00%   0.00% snp_ds_life_tim
+ 5839   0.00%   0.00%   0.00% snp_ds_server_d
+ 5844   0.00%   0.00%   0.00% udp_echo_server
+ 5854   0.00%   0.00%   0.00% log_send_buf-53
+ 5856   0.00%   0.00%   0.00% scclib-2
+ 5857   0.00%   0.00%   0.00% DNS_SNP_Capture
+ 5863   0.00%   0.00%   0.00% capture_thread
+ 5864   0.00%   0.00%   0.00% scan_thread
+ 5869   0.00%   0.00%   0.00% of_ss
+ 5870   0.00%   0.00%   0.00% ras_logfile_tim
+ 5872   0.00%   0.00%   0.00% ids_lib
+ 5873   0.00%   0.00%   0.00% lda_cli_deliver
+ 5879   0.00%   0.00%   0.00% ras_logfile_tim
+ 5880   0.00%   0.00%   0.00% vxlan.elf
+ 5882   0.00%   0.00%   0.00% hdf_mgnt
+ 5884   0.00%   0.00%   0.00% scclib-3
+ 5885   0.00%   0.00%   0.00% authmng_lib
+ 5886   0.00%   0.00%   0.00% acl-snmp
+ 5887   0.00%   0.00%   0.00% hdf_mgnt
+ 5888   0.00%   0.00%   0.00% hdf_mgnt
+ 5889   0.00%   0.00%   0.00% schain_cli_deli
+ 5890   0.00%   0.00%   0.00% hdf_lib
+ 5891   0.00%   0.00%   0.00% ras_logfile_tim
+ 5892   0.00%   0.00%   0.00% kworker/0:3
+ 5894   0.00%   0.00%   0.00% ihd_mng.elf
+ 5908   0.00%   0.00%   0.00% tcp_nss_s
+ 5920   0.10%   0.00%   0.00% IPv4Snp_Notice
+ 5921   0.10%   0.10%   0.30% recv_module_reg
+ 5922   0.10%   0.10%   0.10% read_shm_log
+ 5923   0.00%   0.00%   0.00% write_bin_log
+ 5924   0.00%   0.00%   0.00% write_msg_bin_l
+ 5925   0.00%   0.00%   0.00% flash_write_bin
+ 5926   0.00%   0.00%   0.00% msg_log_tar
+ 5927   0.00%   0.00%   0.00% log_tar
+ 5928   0.00%   0.00%   0.00% ras_logfile_tim
+ 5965   0.00%   0.00%   0.00% vxlan.elf
+ 5970   0.00%   0.00%   0.00% ras_logfile_tim
+ 5973   0.00%   0.00%   0.00% ldp.elf
+ 6007   0.00%   0.00%   0.00% nginx
+ 6008   0.00%   0.00%   0.00% nginx
+ 6031   0.00%   0.00%   0.00% bash
+ 6068   0.00%   0.00%   0.00% unit0_thread
+ 6069   0.00%   0.00%   0.00% mac_account_che
+ 6071   0.00%   0.00%   0.00% rmt-apm-server
+ 6073   0.00%   0.00%   0.00% remote-module
+ 6074   0.00%   0.00%   0.00% remote-sem-ck
+ 6082   0.00%   0.00%   0.00% rmt-apm-server
+ 6096   0.00%   0.00%   0.00% remote-module
+ 6097   0.00%   0.00%   0.00% remote-sem-ck
+ 6098   0.00%   0.00%   0.00% grpc_yang_timer
+ 6305   0.10%   0.10%   0.00% rl-con/0
+ 6306   0.00%   0.00%   0.00% rl-trap
+ 6307   0.00%   0.00%   0.00% 6305_aaalib_th
+ 6308   0.00%   0.00%   0.00% readline/0
+ 6359   0.00%   0.00%   0.00% telnetd-main
+ 6360   0.20%   0.00%   0.00% rl-con/258
+ 6367   0.00%   0.00%   0.00% rl-trap
+ 6368   0.00%   0.00%   0.00% 6360_aaalib_th
+ 6369   0.00%   0.00%   0.00% readline/258
+ 6379   0.00%   0.00%   0.00% kworker/1:0H
+ 6383   0.00%   0.00%   0.00% sleep
+ 6393   0.00%   0.00%   0.00% telnetd-main
+ 6394   0.30%   0.00%   0.00% rl-con/259
+ 6396   0.00%   0.00%   0.00% rl-trap
+ 6397   0.00%   0.00%   0.00% 6394_aaalib_th
+ 6398   0.20%   0.00%   0.00% readline/259
+
+##### show memory
+System Memory: 996168KB total, 598744KB used, 397424KB free, 544179KB available, 45.30% used rate
+Swap: 7969340KB total, 7352380KB free
+Used detail:   188624KB active, 253860KB inactive, 116768KB mapped, 146884KB slab, 122120KB others
+PID	Vsd	Text	Rss	Data	Stack	Total	Process
+6394	0	148	7308	45664	132	64240	rl-con/259
+6393	0	296	6904	45812	132	66308	telnetd-main
+6383	0	676	2008	8320	132	12456	sleep
+6360	0	148	6916	45664	132	64240	rl-con/258
+6359	0	296	6856	45812	132	66308	telnetd-main
+6305	0	148	6860	45664	132	64424	rl-con/0
+6031	0	1480	3192	8404	132	13628	bash
+6008	0	816	4236	8988	132	23852	nginx
+6007	0	816	3652	8988	132	23852	nginx
+5814	0	1420	4180	45860	132	53612	redis_ctrl_glob
+5806	0	1420	10040	56612	132	64364	redis_cap
+5796	0	1420	5880	45860	268	53748	redis_cfg_globa
+5788	0	1420	4136	45860	132	53612	redis_de_fwd_gl
+5778	0	1420	7824	48932	132	56684	redis_de_global
+5771	0	1420	4236	45860	132	53612	redis_ce_fwd_gl
+5764	0	1420	17476	61732	268	69620	redis_ce_global
+5592	0	764	6084	61616	132	538852	sysha
+5576	0	32	5380	8804	132	27132	sntp.elf
+5564	0	368	6480	8948	132	68560	span.elf
+5535	0	676	1884	516	132	4392	exe
+5522	0	72	6064	16980	132	37396	macc
+5515	0	76	5256	8756	132	26392	lsm_rpc_agent.e
+5507	0	12	4820	1972	132	19368	cpurule
+5500	0	2532	9612	78772	132	142700	snooping.elf
+5493	0	796	9124	78656	132	140368	savi.elf
+5483	0	12	8404	103120	132	190052	oam_server.e
+5466	0	24	2804	101368	132	895204	aof
+5450	0	132	7356	10420	132	70072	erps.elf
+5441	0	36	5504	45740	132	63652	cmdk.elf
+5434	0	220	6436	21320	132	41196	alarm.elf
+5427	0	20	2188	348	132	8084	zlogd
+5420	0	1600	7388	17260	132	80784	ugp
+5412	0	676	336	252	132	4128	sh
+5411	0	16	216	284	132	3688	run_proxy-io2ne
+5410	0	16	216	284	132	3688	demo_proxy-io2n
+5408	0	676	396	252	132	4128	sh_app
+5397	0	60	7284	29264	132	47168	nginx_cmd.elf
+5362	0	116	8136	18732	132	84568	cli-proxy
+5355	0	1416	4356	2280	272	16724	apm
+5347	0	220	6324	29488	132	89656	reup.elf
+5340	0	152	5228	8828	132	28948	fe.did.sw
+5326	0	676	1648	252	132	4128	cls-sshd
+5319	0	476	6704	8944	132	31000	ce.did.sw
+5308	0	296	7232	21092	132	39144	mosquitto.elf
+5299	0	700	8244	21300	132	84624	cmps.sln.sxauth
+5292	0	400	7772	55600	132	77536	sw_app.snp_ds_s
+5285	0	832	9404	23296	236	84720	sw_app.snp_ds_c
+5276	0	48	4884	16960	132	35908	cid_mapper
+5268	0	180	5648	17004	132	35620	tir.elf
+5261	0	412	7852	38064	132	98240	amaint_app.elf
+5252	0	72	5792	8812	132	27436	ce.cli.pkt.dp
+5245	0	232	12728	18388	132	54708	xe.vhost.pkt.sw
+5244	0	232	4632	8624	132	46868	xe.vhost.pkt.sw
+5237	0	284	4076	8532	132	20324	xe.cfg.pktr.sw
+5230	0	368	4344	8496	132	20372	fe.dpm.sw
+5223	0	544	4536	8508	132	20796	ce.dpm.dp
+5215	0	260	3348	8444	132	17224	ce.cfg.pktr.sw
+5208	0	2180	6476	8692	132	23400	fe.uc.sw
+5201	0	280	3916	8496	132	17732	fe.rt_res.l3tb.
+5192	0	688	4392	8548	132	20740	fe.pbr.sw
+5185	0	224	3916	8492	132	17672	fe.nh.l3tb.sw
+5178	0	1276	4804	8604	132	21632	fe.mc.sw
+5171	0	196	3728	8568	132	19592	fe.mac.l3tb.sw
+5164	0	1064	5776	8908	132	23820	fe.l3intf.sw
+5157	0	168	3668	8492	132	17616	fe.iif.l3tb.sw
+5150	0	124	4672	8804	132	27536	fe.glb.l3tb.sw
+5143	0	212	3792	8524	132	19496	ce.nh.l3tb.sw
+5136	0	1336	5372	8604	132	23212	ce.l3intf.sw
+5129	0	128	3664	8524	132	19412	ce.glb.l3tb.sw
+5122	0	1292	5100	8616	132	22192	ce.ef.sw
+5115	0	552	6476	8884	132	28724	ce.cli.rt.sw
+5108	0	796	8280	21824	132	83328	openflow
+5101	0	520	6776	3008	132	22232	im_core.elf
+5093	0	184	5940	29304	132	246104	ihd_mng.elf
+5086	0	20	2696	1492	132	9508	ihd_cpu.elf
+5079	0	216	6680	25256	132	85300	cmps_app_schain
+5072	0	29480	52048	196900	132	371844	cmps.sda.sw
+5008	0	276	3296	1632	132	12796	im_proxy.elf
+5001	0	788	4536	8540	132	21968	fe.qinq.sw
+4994	0	1204	4868	8572	132	22824	fe.emac.sw
+4987	0	384	3736	1828	132	12524	fe.ebrg.sw
+4979	0	320	3948	8504	132	20372	ce.qinq.dp
+4972	0	776	5096	8564	132	22924	ce.emac.dp
+4965	0	776	6720	8836	132	30264	ce.ebrg.dp
+4958	0	388	5004	9820	132	23264	fe.pceinst.sw
+4950	0	656	4696	8532	132	21128	fe.nfpp.sw
+4943	0	232	4920	9808	132	23624	cmps.ctc.tcammn
+4935	0	528	6192	8876	132	66964	ce.cli.nfpp.dp
+4928	0	868	4368	16016	132	28556	fe.qos.sw
+4921	0	1260	5624	8696	132	24740	ce.qos.sw
+4914	0	1244	5200	12636	132	24840	ce.nacm.sw
+4906	0	228	5992	8828	132	28616	ce.ddos.sw
+4891	0	752	7040	8888	132	29876	ce.ui.poe.sw
+4884	0	1644	9876	14432	132	30836	fe.fp.sw
+4877	0	220	3848	8476	132	18420	fe.fcnt.sw
+4868	0	576	7464	21204	132	42436	ce.fp.sw
+4861	0	516	5852	2376	132	25028	cmpnt_upgrade_c
+4854	0	528	7200	2460	132	24464	cmpnt_upgrade_s
+4847	0	108	5164	8852	132	68272	proxy.span.sw
+4823	0	144	5868	41628	132	60548	ftp_server.elf
+4816	0	256	5684	33372	132	53464	fe.virpt.ptm.sw
+4809	0	964	6384	45732	132	67360	fe.core.ptm.sw
+4801	0	628	6628	33568	132	54692	fe.ptm.sw
+4794	0	120	4692	8500	132	20220	fe.mng.poe.sw
+4787	0	104	4096	8484	132	18784	fe.ipfix.sw
+4779	0	312	3664	8460	132	18812	fe.ddm.sw
+4772	0	492	4264	20768	132	31380	fe.ap.sw
+4756	0	500	7020	8916	132	29900	cli.ptm.sw
+4738	0	700	6764	37472	132	58632	ce.core.ptm.sw
+4731	0	684	7036	33384	132	54528	ce.ptm.sw
+4724	0	820	5408	25536	132	40080	ce.mng.poe.sw
+4717	0	496	5644	8780	132	27632	ce.mgmt.sw
+4709	0	484	4016	8500	132	19704	ce.ddm.sw
+4701	0	780	5248	20812	132	33764	ce.ap.sw
+4692	0	156	4092	8596	132	20692	ce.trace.pkt.dp
+4685	0	64	5588	29556	132	47740	tftpd.elf
+4677	0	144	7248	41624	132	62012	rmond
+4670	0	84	5448	17000	132	35292	ftpc_cli.elf
+4660	0	544	6552	46336	132	106072	termid.elf
+4653	0	136	5756	8884	132	27880	sflow_app
+4646	0	824	7500	17308	132	38124	ntp.elf
+4638	0	328	6988	9072	132	29864	ipfix_app
+4630	0	920	8332	9292	132	71424	qosd.elf
+4613	0	592	6808	9064	132	29836	bfd.elf
+4591	0	40	3176	1612	132	12544	ver_agent
+4581	0	116	5896	17140	132	38664	dnsd.elf
+4574	0	260	7444	17100	132	38332	dhcp6c.elf
+4565	0	144	7460	29416	132	90348	dns_snp.elf
+4557	0	256	6500	17080	132	36560	dhcpc.elf
+4549	0	796	8924	41804	132	102944	dhcp6.elf
+4535	0	224	6056	8924	132	67928	urpf.elf
+4526	0	220	7088	8928	132	29768	vrrp_plus.elf
+4517	0	448	6300	8984	132	68464	vrrp.elf
+4508	0	1336	9536	54508	132	117472	dhcp.elf
+4501	0	1724	22712	157356	132	221312	dot1x
+4494	0	228	6120	31024	132	50552	tacplusd
+4487	0	1024	10812	122252	132	145476	rdsd
+4477	0	2484	18884	146596	132	213592	webauth
+4467	0	184	7384	49776	132	69668	security_log.el
+4460	0	1264	7904	59420	132	121252	acld
+4453	0	3292	10016	66452	132	128832	sccd
+4445	0	380	8780	9008	132	32152	pbr.elf
+4437	0	252	5976	8928	132	29900	dldp.elf
+4430	0	140	6584	9164	132	67068	gvrpd
+4423	0	284	7096	21200	132	81164	lacp.elf
+4416	0	624	9008	9796	132	71028	lldp.elf
+4409	0	1300	10060	9140	132	41048	pimd.elf
+4402	0	844	9768	9100	132	40552	pim6d.elf
+4395	0	428	8580	8972	132	35472	pdmd.elf
+4388	0	428	6612	8908	132	69540	msf6.elf
+4381	0	452	6808	8920	132	69772	msf.elf
+4374	0	208	7168	8996	132	36028	msdp.elf
+4367	0	208	6216	8944	132	69300	mld_snp.elf
+4360	0	336	7816	9076	132	40020	mld.elf
+4353	0	312	6384	8956	132	69512	igmp_snp.elf
+4341	0	396	7868	9100	132	40104	igmp.elf
+4331	0	240	5704	8840	132	27816	track.elf
+4322	0	1432	7072	20416	132	110312	ipsec
+4313	0	1156	8040	9012	132	30856	rns.elf
+4306	0	788	8800	42732	132	63632	snmpd
+4297	0	112	7144	25368	132	44796	resmon
+4288	0	772	8296	13124	132	55264	xe.ctrl.pkt.sw
+4281	0	84	6036	21100	132	39988	ids.elf
+4274	0	48	5412	21048	132	38628	rns_server.elf
+4266	0	200	6100	8900	132	68668	efm.elf
+4259	0	236	5432	2120	132	20664	upgrade_auto_sy
+4252	0	232	6472	21368	132	43248	upgrade_cli
+4243	0	172	4160	1752	132	19984	upgrade_app_loc
+4235	0	156	7192	2112	132	20316	upgrade_app_glo
+4228	0	96	6548	21356	132	44216	upgrade_app_dow
+4217	0	64	4304	1832	132	20124	upgrade_local
+4210	0	120	4704	1868	132	20416	upgrade_global
+4202	0	680	8112	37724	132	56748	cwmp_gsoap.elf
+4195	0	752	11000	103252	132	125860	cwmp.elf
+4186	0	16	5192	8768	132	26520	python_shell.el
+4175	0	212	5660	8824	132	27548	zam.elf
+4166	0	144	6228	25220	132	84524	lda
+4150	0	16	2248	1380	132	9376	flinfod
+4143	0	620	4696	8620	132	43760	xe.mng.pkt.sw
+4136	0	424	8960	70948	132	95312	fsui
+4121	0	68	6144	53868	132	72576	psh_server
+4112	0	112	5240	2116	132	20456	hdf_sys
+4094	0	12	5368	45580	132	261748	hdf_mgnt
+4080	0	604	4248	9468	132	31780	klogd
+4079	0	604	10708	73012	132	95552	syslogd
+4070	0	68	6092	45664	132	64040	password_policy
+4063	0	604	4480	9468	132	31780	log-guard
+4062	0	16	1072	284	132	3688	run_proxy-io2ne
+4061	0	16	220	284	132	3688	demo_proxy-io2n
+4052	0	344	6752	2888	132	23320	ce.proxy.traf
+4044	0	896	5756	8804	132	69440	ce.proxy.brg.dp
+4025	0	820	6468	21488	132	41524	mlag.elf
+3998	0	36	3508	1716	132	12224	mom_proto_pa
+3991	0	232	9688	103172	132	123636	tech-support
+3978	0	744	28872	119560	132	141272	netconf.elf
+3968	0	144	6264	74340	132	92616	diag_log.elf
+3957	0	620	8432	62816	132	84484	sshc
+3950	0	332	6500	8924	132	28536	tunnel.elf
+3943	0	268	6796	50360	132	70580	telnetc
+3924	0	20	3100	1648	132	9944	congestctrl_ser
+3897	0	380	14564	25276	4272	179780	licns
+3889	0	1564	10528	33896	132	62680	ldp.elf
+3882	0	204	5552	21160	132	39504	rnsmib.elf
+3875	0	96	5456	8784	132	26928	ipmix.elf
+3868	0	72	5952	9092	132	29188	nd_sprs.elf
+3861	0	92	3572	8440	132	16712	fe.cap.sw
+3850	0	244	4976	12572	132	22892	ce.cap.sw
+3843	0	384	7788	9144	132	36972	ripng.elf
+3816	0	2180	11028	78944	132	108596	ospfv3.elf
+3808	0	3348	10572	42192	132	73336	isis.elf
+3800	0	140	5956	17092	132	36632	dns_client.elf
+3776	0	660	8412	9004	132	36076	rip.elf
+3769	0	3032	11308	78968	132	109468	ospf.elf
+3758	0	24	4464	57868	132	75532	grpc_vty.elf
+3751	0	3508	35692	76340	132	116528	grpc.elf
+3742	0	8764	13332	83644	132	121556	bgp.elf
+3734	0	908	8464	9064	132	31992	rpi.elf
+3727	0	296	7308	45812	132	66308	telnetd
+3720	0	688	9384	82736	132	103656	sshd
+3713	0	224	5692	8868	132	27060	ref_proxy.elf
+3706	0	616	10092	13816	132	74440	mstp.elf
+3698	0	20	2288	16864	132	90196	tftp_tipc_serve
+3690	0	208	5760	29364	132	48944	ping.elf
+3683	0	1976	25952	9260	132	70800	bridge.elf
+3675	0	2316	13116	108592	132	133584	lsm.elf
+3668	0	60	5512	8800	132	26948	lsm_kproxy.elf
+3661	0	1456	9132	46356	132	108520	vxlan.elf
+3654	0	100	6024	9092	132	27780	arp_sprs.elf
+3647	0	3740	16236	104320	132	141468	nsm.elf
+3640	0	60	5480	8788	132	26676	timerange
+3633	0	3524	13592	35572	132	102420	tcpip.elf
+3580	0	52	2892	1528	132	9500	cap_tran
+3573	0	20	3332	1556	132	11396	subcard_power_c
+3560	0	460	4500	8520	132	20956	xe.cpp.dp
+3553	0	752	5480	8536	132	21380	fe.cpp.sw
+3514	0	344	3968	8564	132	19704	ce.nfpp.dp
+3503	0	452	4752	8512	132	20748	ce.cpp.dp
+3495	0	656	10688	13212	132	33772	ce.cli.cpp.dp
+3477	0	1420	3716	43300	132	51052	redis_cfg_can
+3462	0	1420	3936	43300	132	51052	redis_host_fwd
+3455	0	44	5228	2108	132	20512	mtdoops-cli
+3443	0	1420	3820	43300	132	51052	redis_de_standa
+3441	0	608	5952	19564	132	169272	vsdm
+3431	0	692	9896	57660	132	79504	aaad
+3402	0	408	5992	9012	132	27704	rdnd_server.
+3395	0	160	5568	17168	132	36276	rbac
+3386	0	176	7120	8916	132	68984	rldp.elf
+3378	0	640	3996	1696	132	14000	dfd_core.elf
+3370	0	684	6356	21304	132	41760	dm_ucm
+3362	0	1932	10688	366324	132	388576	dm_app_pd
+3354	0	144	3044	1584	132	11272	dfd_irq.elf
+3347	0	64	3320	8444	132	16688	app_df
+3339	0	72	4872	2048	132	19580	safe_verify_svr
+3332	0	556	9340	78532	132	98548	sysmon
+3321	0	24	2928	9856	132	83484	coredump-mon
+3297	0	1692	9468	242684	132	264264	dm_dp
+3242	0	12	3432	8448	132	18096	mom_rdnd_ctrl
+3234	0	1420	9560	55076	132	62828	redis_ctrl_host
+3228	0	1724	28764	263008	132	354944	efmp_frame.elf
+3160	0	24	2200	344	132	8188	tipc-tap
+3054	0	56	4908	3616	132	11684	cap
+3047	0	192	5468	8828	132	28380	ce_apm_sw
+3039	0	200	3680	8424	132	16704	rgmomd
+3016	0	756	4052	17848	132	40108	cli-dump
+3003	0	196	5496	21068	132	39864	configd
+2999	0	404	4432	21532	132	42288	tty_secu_enable
+2992	0	1420	16608	61732	132	69484	redis-server
+2983	0	384	4452	8572	132	20264	fe.cfg.rt.sw
+2974	0	404	9504	111692	132	132648	tty-admin
+2973	0	756	13908	124392	132	146872	cli-server
+2931	0	16	3312	8440	132	16636	ce.tran.cap.sw
+2808	0	84	4168	1644	132	13052	demand_start.el
+2678	0	676	344	252	132	4128	clear_boot_env_
+2491	0	60	2336	8676	132	81964	bspinfo.elf
+2484	0	92	5808	86036	132	626388	ham
+1	0	64	1752	8836	132	77612	startup
+6869	0	556	9280	78532	132	98548	mem_show_task

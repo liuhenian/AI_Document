@@ -1,0 +1,19 @@
+======================================================================
+### 镜像 SPAN
+  [monitor session 1 source interface GigabitEthernet 1/0/1 both] -> monitor session 1 source interface GigabitEthernet 1/0/1 both / % Unknown command.
+  [monitor session 1 destination interface GigabitEthernet 1/0/2] -> monitor session 1 destination interface GigabitEthernet 1/0/2 / % Unknown command.
+  VERIFY show running-config | include monitor session:
+      
+======================================================================
+### sFlow
+  [sflow agent address 1.1.1.1] -> sflow agent address 1.1.1.1 / % Unknown command.
+  [sflow collector 1 destination 2.2.2.2 6343] -> sflow collector 1 destination 2.2.2.2 6343 / % Unknown command.
+  VERIFY show running-config | include sflow:
+      
+======================================================================
+### 风暴控制
+  [interface GigabitEthernet 1/0/1] -> interface GigabitEthernet 1/0/1 / Ruijie(config-if-GigabitEthernet 1/0/1)#
+  [storm-control broadcast level 1] -> storm-control broadcast level 1 / % Unknown command. / Ruijie(config-if-GigabitEthernet 1/0/1)#
+  [exit] -> exit
+  VERIFY show running-config | include storm-control:
+      

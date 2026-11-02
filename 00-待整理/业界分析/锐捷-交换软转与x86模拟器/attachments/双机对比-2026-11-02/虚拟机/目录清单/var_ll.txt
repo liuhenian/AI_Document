@@ -1,0 +1,18 @@
+drwxr-xr-x    2 root     root          4096 Oct 30 08:37 asan
+drwxr-xr-x    3 root     root          4096 Oct 26 20:30 cache
+drw-r--r--    3 root     root          4096 Oct 30 08:37 hotpatch
+drwxr-xr-x    4 root     root          4096 Oct 30 08:37 lib
+drwxr-xr-x    3 root     root          4096 Oct 30 08:37 liblog_debug
+drwxr-xr-x    3 root     root          4096 Oct 26 20:30 log
+-rw-r--r--    1 root     root             5 Oct 30 08:42 proto_pass.pid
+drwxr-xr-x    2 root     root          4096 Oct 30 08:42 redis
+drw-r--r--    4 root     root          4096 Nov  2 03:28 rg_log
+lrwxrwxrwx    1 root     root             4 Oct 26 20:30 run -> /tmp
+drwxr-xr-x    5 root     root          4096 Oct 26 20:30 safe-verify
+drwxr-xr-x    3 root     root          4096 Oct 30 08:37 startup
+drwxr-xr-x    5 root     root          4096 Oct 30 08:39 storage
+drwxr-xr-x    3 root     root          4096 Oct 30 08:37 tmp
+drwxrwxrwt    2 root     root            40 Oct 30 08:42 upgrade_mount
+-rw-r--r--    1 root     root        468113 Oct 26 20:30 usb.ids
+drwxr-xr-x    2 root     root          4096 Oct 30 08:39 utils_debug
+drwxr-xr-x   43 root     root          4096 Oct 30 08:39 zlog

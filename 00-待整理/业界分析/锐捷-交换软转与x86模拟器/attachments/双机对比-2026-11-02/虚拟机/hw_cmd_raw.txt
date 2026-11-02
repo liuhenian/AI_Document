@@ -1,0 +1,23 @@
+### show environment
+
+
+
+
+Ruijie#
+### show fan
+
+
+
+
+Ruijie#
+### show transceiver
+
+
+
+
+Ruijie#
+### show efmp
+
+
+
+Ruijie#

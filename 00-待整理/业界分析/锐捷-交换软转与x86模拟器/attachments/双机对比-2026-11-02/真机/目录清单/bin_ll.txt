@@ -1,0 +1,134 @@
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 ash -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 base64 -> busybox
+-rwxr-xr-x    1 root     root       1557168 Oct  9 10:18 bash
+-rw-r--r--    1 root     root           265 Oct  9 10:18 board_detect
+-rwxr-xr-x    1 root     root        699032 Oct  9 10:18 busybox
+-rwxr-xr-x    1 root     root           234 Oct  9 10:18 card_name
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 cat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 chgrp -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 chmod -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 chown -> busybox
+-rw-r--r--    1 root     root          7637 Oct  9 10:18 config_generate
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 cp -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 cpio -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 cttyhack -> busybox
+-rwxr-xr-x    1 root     root          1495 Oct  9 10:18 daemon4debug-ssa
+-rwxr-xr-x    1 root     root           333 Oct  9 10:18 daemon4lc
+-rwxr-xr-x    1 root     root           489 Oct  9 10:18 daemon4lc-cmps
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 date -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 dd -> busybox
+-rwxr-xr-x    1 root     root            54 Oct  9 10:18 debug-show
+-rwxr-xr-x    1 root     root           395 Oct  9 10:18 debug-ssa
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 df -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 dmesg -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 dnsdomainname -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 echo -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 ed -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 egrep -> busybox
+-rwxr-xr-x    1 root     root         23224 Oct  9 10:18 eu-addr2line
+-rwxr-xr-x    1 root     root         43784 Oct  9 10:18 eu-ar
+-rwxr-xr-x    1 root     root         27072 Oct  9 10:18 eu-elfclassify
+-rwxr-xr-x    1 root     root        353240 Oct  9 10:18 eu-elfcmp
+-rwxr-xr-x    1 root     root         31408 Oct  9 10:18 eu-elfcompress
+-rwxr-xr-x    1 root     root        444344 Oct  9 10:18 eu-elflint
+-rwxr-xr-x    1 root     root         19000 Oct  9 10:18 eu-findtextrel
+-rwxr-xr-x    1 root     root          3214 Oct  9 10:18 eu-make-debug-archive
+-rwxr-xr-x    1 root     root        366232 Oct  9 10:18 eu-nm
+-rwxr-xr-x    1 root     root        357648 Oct  9 10:18 eu-objdump
+-rwxr-xr-x    1 root     root         23112 Oct  9 10:18 eu-ranlib
+-rwxr-xr-x    1 root     root        580568 Oct  9 10:18 eu-readelf
+-rwxr-xr-x    1 root     root         23024 Oct  9 10:18 eu-size
+-rwxr-xr-x    1 root     root         27312 Oct  9 10:18 eu-stack
+-rwxr-xr-x    1 root     root         23136 Oct  9 10:18 eu-strings
+-rwxr-xr-x    1 root     root        382272 Oct  9 10:18 eu-strip
+-rwxr-xr-x    1 root     root         64328 Oct  9 10:18 eu-unstrip
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 false -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 fgrep -> busybox
+-rwxr-xr-x    1 root     root         45264 Oct  9 10:18 free
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 fsync -> busybox
+-rwxr-xr-x    1 root     root           202 Oct  9 10:18 gdb-thread-all
+-rwxr-xr-x    1 root     root           201 Oct  9 10:18 get_lc_base
+-rwxr-xr-x    1 root     root           216 Oct  9 10:18 get_ssa_base
+-rwxr-xr-x    1 root     root           252 Oct  9 10:18 get_subcard_num
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 getopt -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 grep -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 gunzip -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 gzip -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 hostname -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 iostat -> busybox
+-rw-r--r--    1 root     root          1550 Oct  9 10:18 ipcalc.sh
+-rwxr-xr-x    1 root     root         18496 Oct  9 10:18 kill
+-rwxr-xr-x    1 root     root           778 Oct  9 10:18 lc
+drwxr-xr-x    4 root     root          4096 Oct  9 10:18 lib
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 linux32 -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 linux64 -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 ln -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 lock -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 login -> busybox
+-rwxr-xr-x    1 root     root         74768 Oct  9 10:18 lrb
+-rwxr-xr-x    1 root     root         74768 Oct  9 10:18 lrx
+-rwxr-xr-x    1 root     root         74768 Oct  9 10:18 lrz
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 ls -> busybox
+-rwxr-xr-x    1 root     root         82984 Oct  9 10:18 lsb
+-rwxr-xr-x    1 root     root        131280 Oct  9 10:18 lspci
+-rwxr-xr-x    1 root     root         82984 Oct  9 10:18 lsx
+-rwxr-xr-x    1 root     root         82984 Oct  9 10:18 lsz
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 lzop -> busybox
+-rwxr-xr-x    1 root     root            80 Oct  9 10:18 me
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 mkdir -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 mknod -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 mktemp -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 more -> busybox
+-rwxr-xr-x    1 root     root         63656 Oct  9 10:18 mount
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 mpstat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 mv -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 netstat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 nice -> busybox
+-rwxr-xr-x    1 root     root        112720 Oct  9 10:18 pgrep
+-rwxr-xr-x    1 root     root         92160 Oct  9 10:18 pidof
+-rwxr-xr-x    1 root     root        112720 Oct  9 10:18 pidwait
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 ping -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 ping6 -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 pipe_progress -> busybox
+-rwxr-xr-x    1 root     root        112720 Oct  9 10:18 pkill
+-rwxr-xr-x    1 root     root        108576 Oct  9 10:18 pmap
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 printenv -> busybox
+-rwxr-xr-x    1 root     root        272208 Oct  9 10:18 ps
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 pwd -> busybox
+-rwxr-xr-x    1 root     root         10304 Oct  9 10:18 pwdx
+lrwxrwxrwx    1 root     root            10 Oct  9 10:18 python -> python3.12
+lrwxrwxrwx    1 root     root            10 Oct  9 10:18 python3 -> python3.12
+lrwxrwxrwx    1 root     root            17 Oct  9 10:18 python3-config -> python3.12-config
+-rwxr-xr-x    1 root     root          6216 Oct  9 10:18 python3.12
+-rwxr-xr-x    1 root     root          3293 Oct  9 10:18 python3.12-config
+lrwxrwxrwx    1 root     root            10 Oct  9 10:18 python3.4 -> python3.12
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 rm -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 rmdir -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 run-parts -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 scriptreplay -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 sed -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 setarch -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 sh -> busybox
+-rwxr-xr-x    1 root     root           116 Oct  9 10:18 sh_app
+-rwxr-xr-x    1 root     root         31704 Oct  9 10:18 slabtop
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 sleep -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 stat -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 stty -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 su -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 sync -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 tar -> busybox
+-rwxr-xr-x    1 root     root          1342 Oct  9 10:18 telnet-cmd
+-rwxr-xr-x    1 root     root           900 Oct  9 10:18 telnet-node
+-rwxr-xr-x    1 root     root         18584 Oct  9 10:18 tload
+-rwxr-xr-x    1 root     root        269112 Oct  9 10:18 top
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 touch -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 true -> busybox
+-rwxr-xr-x    1 root     root         34960 Oct  9 10:18 umount
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 uname -> busybox
+-rwxr-xr-x    1 root     root         18568 Oct  9 10:18 uptime
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 usleep -> busybox
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 vi -> busybox
+-rwxr-xr-x    1 root     root        147392 Oct  9 10:18 vmstat
+-rwxr-xr-x    1 root     root        100344 Oct  9 10:18 w
+-rwxr-xr-x    1 root     root         27168 Oct  9 10:18 watch
+lrwxrwxrwx    1 root     root             7 Oct  9 10:18 zcat -> busybox

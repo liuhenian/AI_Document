@@ -1,0 +1,46 @@
+##### show temperature
+^
+% Invalid input detected at '^' marker.
+
+##### show card
+^
+% Invalid input detected at '^' marker.
+
+##### show usb
+^
+% Invalid input detected at '^' marker.
+
+##### show split
+^
+% Invalid input detected at '^' marker.
+
+##### show sata
+Disk Partitions:
+/dev/sda3 ---> /data
+Disk /dev/sda3: 28.6 GB(28607523840 bytes), Available size: 28.0 GB(28020232192 bytes)
+255 heads, 63 sectors/track, 3478 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk Partitions:
+/dev/sda5 ---> /bootloader
+Disk /dev/sda5: 127 MB(127999488 bytes), Available size: 117 MB(117537792 bytes)
+255 heads, 63 sectors/track, 15 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk Partitions:
+/dev/sda6 ---> /boot
+Disk /dev/sda6: 1407 MB(1407999488 bytes), Available size: 1314 MB(1314436096 bytes)
+255 heads, 63 sectors/track, 171 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+Disk Partitions:
+/dev/sda7 ---> /
+Disk /dev/sda7: 6144 MB(6144251904 bytes), Available size: 4578 MB(4578381824 bytes)
+255 heads, 63 sectors/track, 746 cylinders
+Units = cylinders of 16065 * 512 = 8225280 bytes
+
+##### show device
+Device level is unknown
+
+##### show version slot
+Dev Slot Port Configured Module            Online Module                Software Status
+  --- ---- ---- ---------------------------- ---------------------------- ---------------
+  1   0    10   X86                          X86                          master
+  2   0    10   X86                          X86                          backup

@@ -1,0 +1,528 @@
+ls -l /sbin
+-rw-r--r--    1 root     root          9696 Oct  9 10:19 8250_port.ko
+-rwxr-xr-x    1 root     root        782784 Oct  9 10:19 aaad
+-rwxr-xr-x    1 root     root       1945264 Oct  9 10:19 acld
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 adjtimex -> ../bin/busybox
+-rw-r--r--    1 root     root         20336 Oct  9 10:19 aer_attach.ko
+-rwxr-xr-x    1 root     root         31304 Oct  9 10:19 aer_inject
+-rw-r--r--    1 root     root          8840 Oct  9 10:19 aer_print.ko
+-rw-r--r--    1 root     root         85872 Oct  9 10:19 af_packet.ko
+-rwxr-xr-x    1 root     root         69792 Oct  9 10:19 agent.pkt.sw.ko
+-rwxr-xr-x    1 root     root         76056 Oct  9 10:19 agetty
+-rwxr-xr-x    1 guest    guest      1164184 Oct 28 19:30 alarm.elf
+-rwxr-xr-x    1 guest    guest        46320 Oct 28 19:30 alarmDemo
+-rwxr-xr-x    1 guest    guest        44976 Oct 28 19:30 alarmDemoGlobal
+-rwxr-xr-x    1 guest    guest        47152 Oct 28 19:30 alarmObjectDeleteDemo
+-rwxr-xr-x    1 root     root        442432 Oct  9 10:19 amaint_app.elf
+-rwxr-xr-x    1 root     root           719 Oct  9 10:19 aof.sh
+-rwxr-xr-x    1 root     root         72368 Oct  9 10:19 app_df
+-rwxr-xr-x    1 root     root       1736576 Oct  9 10:19 ar
+-rwxr-xr-x    1 root     root        125592 Oct  9 10:19 arp_sprs.elf
+-rwxr-xr-x    1 root     root        496112 Oct  9 10:19 asan_wrapper
+-rwxr-xr-x    1 root     root        682832 Oct  9 10:19 bfd.elf
+-rwxr-xr-x    1 root     root       9487152 Oct  9 10:19 bgp.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 blkid -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 blockdev -> ../bin/busybox
+-rwxr-xr-x    1 root     root       2253304 Oct  9 10:19 bridge.elf
+-rwxr-xr-x    1 root     root         67808 Oct  9 10:19 bspinfo.elf
+-rwxr-xr-x    1 root     root           478 Oct  9 10:19 call_rc6
+-rwxr-xr-x    1 root     root         49800 Oct  9 10:19 capsh
+-rwxr-xr-x    1 root     root        803208 Oct  9 10:19 ce.ap.sw
+-rwxr-xr-x    1 root     root        768168 Oct  9 10:19 ce.appmac.sw
+-rwxr-xr-x    1 root     root        307704 Oct  9 10:19 ce.bfd.sw
+-rwxr-xr-x    1 root     root        252928 Oct  9 10:19 ce.cap.sw
+-rwxr-xr-x    1 root     root        268880 Oct  9 10:19 ce.cfg.pktr.sw
+-rwxr-xr-x    1 root     root        736056 Oct  9 10:19 ce.cli.cpp.dp
+-rwxr-xr-x    1 root     root        604496 Oct  9 10:19 ce.cli.nfpp.dp
+-rwxr-xr-x    1 root     root         91056 Oct  9 10:19 ce.cli.pkt.dp
+-rwxr-xr-x    1 root     root        590888 Oct  9 10:19 ce.cli.rt.sw
+-rwxr-xr-x    1 root     root        722376 Oct  9 10:19 ce.core.ptm.sw
+-rwxr-xr-x    1 root     root        465760 Oct  9 10:19 ce.cpp.dp
+-rwxr-xr-x    1 root     root         32296 Oct  9 10:19 ce.dad.sw
+-rwxr-xr-x    1 root     root        503616 Oct  9 10:19 ce.ddm.sw
+-rwxr-xr-x    1 root     root        251904 Oct  9 10:19 ce.ddos.sw
+-rwxr-xr-x    1 root     root        548008 Oct  9 10:19 ce.did.sw
+-rwxr-xr-x    1 root     root         85640 Oct  9 10:19 ce.dldp.sw
+-rwxr-xr-x    1 root     root        565472 Oct  9 10:19 ce.dpm.dp
+-rwxr-xr-x    1 root     root        801152 Oct  9 10:19 ce.ebrg.dp
+-rwxr-xr-x    1 root     root       1340328 Oct  9 10:19 ce.ef.sw
+-rwxr-xr-x    1 root     root         40520 Oct  9 10:19 ce.efm.sw
+-rwxr-xr-x    1 root     root        801096 Oct  9 10:19 ce.emac.dp
+-rwxr-xr-x    1 root     root        154640 Oct  9 10:19 ce.en.l3tb.sw
+-rwxr-xr-x    1 root     root        110392 Oct  9 10:19 ce.erspan.sw
+-rwxr-xr-x    1 root     root        602760 Oct  9 10:19 ce.fp.sw
+-rwxr-xr-x    1 root     root        134120 Oct  9 10:19 ce.glb.l3tb.sw
+-rwxr-xr-x    1 root     root        155600 Oct  9 10:19 ce.hit.l3tb.sw
+-rwxr-xr-x    1 root     root        334352 Oct  9 10:19 ce.ipfix.sw
+-rwxr-xr-x    1 root     root        246560 Oct  9 10:19 ce.iptnl.sw
+-rwxr-xr-x    1 root     root       1383928 Oct  9 10:19 ce.l3intf.sw
+-rwxr-xr-x    1 root     root         85768 Oct  9 10:19 ce.lspan.sw
+-rwxr-xr-x    1 root     root        154496 Oct  9 10:19 ce.mc.l3tb.sw
+-rwxr-xr-x    1 root     root        660000 Oct  9 10:19 ce.mc.sw
+-rwxr-xr-x    1 root     root         24128 Oct  9 10:19 ce.mergevlan.dp
+-rwxr-xr-x    1 root     root        512368 Oct  9 10:19 ce.mgmt.sw
+-rwxr-xr-x    1 root     root        421640 Oct  9 10:19 ce.mlag.sw
+-rwxr-xr-x    1 root     root        384736 Oct  9 10:19 ce.mmu.dp
+-rwxr-xr-x    1 root     root        849392 Oct  9 10:19 ce.mng.poe.sw
+-rwxr-xr-x    1 root     root        659856 Oct  9 10:19 ce.mpls.sw
+-rwxr-xr-x    1 root     root         69888 Oct  9 10:19 ce.mtp.sw
+-rwxr-xr-x    1 root     root       1280520 Oct  9 10:19 ce.nacm.sw
+-rwxr-xr-x    1 root     root        374184 Oct  9 10:19 ce.nfpp.dp
+-rwxr-xr-x    1 root     root        220200 Oct  9 10:19 ce.nh.l3tb.sw
+-rwxr-xr-x    1 root     root        740808 Oct  9 10:19 ce.ofdpa.sw
+-rwxr-xr-x    1 root     root        300520 Oct  9 10:19 ce.pbr.sw
+-rwxr-xr-x    1 root     root        926728 Oct  9 10:19 ce.proxy.brg.dp
+-rwxr-xr-x    1 root     root        391808 Oct  9 10:19 ce.proxy.traf
+-rwxr-xr-x    1 root     root        710080 Oct  9 10:19 ce.ptm.sw
+-rwxr-xr-x    1 root     root        332712 Oct  9 10:19 ce.qinq.dp
+-rwxr-xr-x    1 root     root       1295848 Oct  9 10:19 ce.qos.sw
+-rwxr-xr-x    1 root     root         98160 Oct  9 10:19 ce.rspan.sw
+-rwxr-xr-x    1 root     root        630640 Oct  9 10:19 ce.sflow.sw
+-rwxr-xr-x    1 root     root        445112 Oct  9 10:19 ce.sp.sw
+-rwxr-xr-x    1 root     root        240168 Oct  9 10:19 ce.termid.sw
+-rwxr-xr-x    1 root     root        167072 Oct  9 10:19 ce.trace.pkt.dp
+-rwxr-xr-x    1 root     root         18912 Oct  9 10:19 ce.tran.cap.sw
+-rwxr-xr-x    1 root     root        814320 Oct  9 10:19 ce.ui.poe.sw
+-rwxr-xr-x    1 root     root        698728 Oct  9 10:19 ce.vxlan.sw
+-rwxr-xr-x    1 root     root        200496 Oct  9 10:19 ce_apm_sw
+-rwxr-xr-x    1 root     root           513 Oct  9 10:19 cgilua.cgi
+-rwxr-xr-x    1 root     root          1173 Oct  9 10:19 cgilua.fcgi
+-rwxr-xr-x    1 root     root         51792 Oct  9 10:19 cid_mapper
+-rwxr-xr-x    1 root     root        123448 Oct  9 10:19 cli-proxy
+-rwxr-xr-x    1 root     root        820624 Oct  9 10:19 cli-server
+-rwxr-xr-x    1 root     root        102200 Oct  9 10:19 cli.ap.sw
+-rwxr-xr-x    1 root     root        527720 Oct  9 10:19 cli.ptm.sw
+-rwxr-xr-x    1 root     root           644 Oct  9 10:19 cls-create-sshkey
+-rwxr-xr-x    1 root     root          9530 Oct  9 10:19 cls-create-sshtunnel-v4
+-rwxr-xr-x    1 root     root          1151 Oct  9 10:19 cls-sshd
+-rwxr-xr-x    1 root     root         46088 Oct  9 10:19 cmdk.elf
+-rwxr-xr-x    1 root     root          2916 Oct  9 10:19 cmpnt_backup.sh
+-rwxr-xr-x    1 root     root          1402 Oct  9 10:19 cmpnt_overwrite_file.sh
+-rwxr-xr-x    1 root     root           526 Oct  9 10:19 cmpnt_reload.sh
+-rwxr-xr-x    1 root     root        197288 Oct  9 10:19 cmpnt_upgrade_begin.elf
+-rwxr-xr-x    1 root     root        553120 Oct  9 10:19 cmpnt_upgrade_client.elf
+-rwxr-xr-x    1 root     root        594232 Oct  9 10:19 cmpnt_upgrade_server.elf
+-rwxr-xr-x    1 root     root        244504 Oct  9 10:19 cmps.ctc.tcammng
+-rwxr-xr-x    1 root     root      41809920 Oct  9 10:19 cmps.sda.sw
+-rwxr-xr-x    1 root     root        721088 Oct  9 10:19 cmps.sln.sxauth
+-rwxr-xr-x    1 root     root        227040 Oct  9 10:19 cmps_app_schain
+-rwxr-xr-x    1 root     root          1077 Oct  9 10:19 config.bcm
+-rwxr-xr-x    1 root     root         23168 Oct  9 10:19 congestctrl_server
+-rwxr-xr-x    1 root     root          1809 Oct  9 10:19 core_collect.sh
+-rwxr-xr-x    1 root     root          5865 Oct  9 10:19 core_dump
+-rwxr-xr-x    1 root     root          2204 Oct  9 10:19 core_upload.sh
+-rwxr-xr-x    1 root     root          1190 Oct  9 10:19 coredump_cps
+-rwxr-xr-x    1 root     root         10520 Oct  9 10:19 cpld_version
+lrwxrwxrwx    1 root     root            19 Oct  9 10:19 cpurule_k.ko -> rg-utils-cpurule.ko
+-rwxr-xr-x    1 root     root        244968 Oct  9 10:19 curl
+-rwxr-xr-x    1 root     root          7049 Oct  9 10:19 curl-config
+-rwxr-xr-x    1 root     root        804384 Oct  9 10:19 cwmp.elf
+-rwxr-xr-x    1 root     root        726264 Oct  9 10:19 cwmp_gsoap.elf
+-rwxr-xr-x    1 root     root         72080 Oct  9 10:19 dal.ko
+-rwxr-xr-x    1 root     root          1696 Oct  9 10:19 dbmap
+-rwxr-xr-x    1 root     root        163208 Oct  9 10:19 dcmd
+-rwxr-xr-x    1 root     root         88992 Oct  9 10:19 demand_start.elf
+-rwxr-xr-x    1 root     root         10728 Oct  9 10:19 dev_info
+drwxr-xr-x    2 root     root          4096 Oct  9 10:19 devkmem
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 devmem -> ../bin/busybox
+-rwxr-xr-x    1 root     root        659080 Oct  9 10:19 dfd_core.elf
+-rwxr-xr-x    1 root     root        138736 Oct  9 10:19 dfd_debug
+-rw-r--r--    1 root     root         21816 Oct  9 10:19 dfd_interrupt.ko
+-rwxr-xr-x    1 root     root        150344 Oct  9 10:19 dfd_irq.elf
+-rwxr-xr-x    1 root     root       1522128 Oct  9 10:19 dhcp.elf
+-rwxr-xr-x    1 root     root        925552 Oct  9 10:19 dhcp6.elf
+-rwxr-xr-x    1 root     root        284248 Oct  9 10:19 dhcp6c.elf
+-rwxr-xr-x    1 root     root        281344 Oct  9 10:19 dhcpc.elf
+-rwxr-xr-x    1 root     root        152728 Oct  9 10:19 diag_log.elf
+-rwxr-xr-x    1 root     root        285128 Oct  9 10:19 dldp.elf
+-rwxr-xr-x    1 root     root           401 Oct  9 10:19 dm_app
+-rwxr-xr-x    1 root     root       2082816 Oct  9 10:19 dm_app_pd
+-rwxr-xr-x    1 root     root       1762984 Oct  9 10:19 dm_dp
+-rwxr-xr-x    1 root     root           834 Oct  9 10:19 dm_fileinit.sh
+drwxr-xr-x    2 root     root          4096 Oct  9 10:19 dm_find_warning
+-rwxr-xr-x    1 root     root            79 Oct  9 10:19 dm_fw_fileinit.sh
+-rwxr-xr-x    1 root     root        709000 Oct  9 10:19 dm_ucm
+-rwxr-xr-x    1 root     root        164728 Oct  9 10:19 dns_client.elf
+-rwxr-xr-x    1 root     root        164808 Oct  9 10:19 dns_snp.elf
+-rwxr-xr-x    1 root     root        134264 Oct  9 10:19 dnsd.elf
+-rwxr-xr-x    1 root     root       1931896 Oct  9 10:19 dot1x
+-rw-r--r--    1 root     root         24704 Oct  9 10:19 dram_hwtest.ko
+-rwxr-xr-x    1 root     root          6336 Oct  9 10:19 drv_dev_type
+-rwxr-xr-x    1 root     root        924912 Oct  9 10:19 e2fsck
+-rw-r--r--    1 root     root        409240 Oct  9 10:19 ef_buff.ko
+-rw-r--r--    1 root     root         22456 Oct  9 10:19 ef_msg_agent.ko
+-rwxr-xr-x    1 root     root        243672 Oct  9 10:19 efm.elf
+-rwxr-xr-x    1 root     root       2042240 Oct  9 10:19 efmp_frame.elf
+-rwxr-xr-x    1 root     root        156128 Oct  9 10:19 erps.elf
+-rw-r--r--    1 root     root        738704 Oct  9 10:19 eth-drv.ko
+-rwxr-xr-x    1 guest    guest        42704 Oct 28 19:30 eventDemo
+-rw-r--r--    1 root     root         25216 Oct  9 10:19 exception_regs.ko
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 fdisk -> ../bin/busybox
+-rwxr-xr-x    1 root     root        508176 Oct  9 10:19 fe.ap.sw
+-rwxr-xr-x    1 root     root        230832 Oct  9 10:19 fe.bfd.sw
+-rwxr-xr-x    1 root     root         97016 Oct  9 10:19 fe.cap.sw
+-rwxr-xr-x    1 root     root        397584 Oct  9 10:19 fe.cfg.rt.sw
+-rwxr-xr-x    1 root     root       1021248 Oct  9 10:19 fe.core.ptm.sw
+-rwxr-xr-x    1 root     root        776584 Oct  9 10:19 fe.cpp.sw
+-rwxr-xr-x    1 root     root         40496 Oct  9 10:19 fe.dad.sw
+-rwxr-xr-x    1 root     root        323176 Oct  9 10:19 fe.ddm.sw
+-rwxr-xr-x    1 root     root        167040 Oct  9 10:19 fe.did.sw
+-rwxr-xr-x    1 root     root         81704 Oct  9 10:19 fe.dldp.sw
+-rwxr-xr-x    1 root     root        380192 Oct  9 10:19 fe.dpm.sw
+-rwxr-xr-x    1 root     root        405848 Oct  9 10:19 fe.ebrg.sw
+-rwxr-xr-x    1 root     root        106152 Oct  9 10:19 fe.efm.sw
+-rwxr-xr-x    1 root     root       1242240 Oct  9 10:19 fe.emac.sw
+-rwxr-xr-x    1 root     root        166976 Oct  9 10:19 fe.en.l3tb.sw
+-rwxr-xr-x    1 root     root        228184 Oct  9 10:19 fe.fcnt.sw
+-rwxr-xr-x    1 root     root       1715008 Oct  9 10:19 fe.fp.sw
+-rwxr-xr-x    1 root     root        134112 Oct  9 10:19 fe.glb.l3tb.sw
+-rwxr-xr-x    1 root     root        126648 Oct  9 10:19 fe.hit.l3tb.sw
+-rwxr-xr-x    1 root     root        174912 Oct  9 10:19 fe.iif.l3tb.sw
+-rwxr-xr-x    1 root     root        110632 Oct  9 10:19 fe.ipfix.sw
+-rwxr-xr-x    1 root     root       1106512 Oct  9 10:19 fe.l3intf.sw
+-rwxr-xr-x    1 root     root        203832 Oct  9 10:19 fe.mac.l3tb.sw
+-rwxr-xr-x    1 root     root        351064 Oct  9 10:19 fe.mc.l3tb.sw
+-rwxr-xr-x    1 root     root       1317232 Oct  9 10:19 fe.mc.sw
+-rwxr-xr-x    1 root     root         40832 Oct  9 10:19 fe.mergevlan.sw
+-rwxr-xr-x    1 root     root        499456 Oct  9 10:19 fe.mlag.sw
+-rwxr-xr-x    1 root     root        729048 Oct  9 10:19 fe.mmu.sw
+-rwxr-xr-x    1 root     root        126752 Oct  9 10:19 fe.mng.poe.sw
+-rwxr-xr-x    1 root     root       1216528 Oct  9 10:19 fe.mpls.sw
+-rwxr-xr-x    1 root     root        677520 Oct  9 10:19 fe.nfpp.sw
+-rwxr-xr-x    1 root     root        232576 Oct  9 10:19 fe.nh.l3tb.sw
+-rwxr-xr-x    1 root     root        941504 Oct  9 10:19 fe.ofdpa.sw
+-rwxr-xr-x    1 root     root        786360 Oct  9 10:19 fe.olbridge.sw
+-rwxr-xr-x    1 root     root       1613608 Oct  9 10:19 fe.olintf.sw
+-rwxr-xr-x    1 root     root        712256 Oct  9 10:19 fe.pbr.sw
+-rwxr-xr-x    1 root     root        400528 Oct  9 10:19 fe.pceinst.sw
+-rwxr-xr-x    1 root     root       1925112 Oct  9 10:19 fe.poe.drv.sw
+-rwxr-xr-x    1 root     root        360448 Oct  9 10:19 fe.prefp.sw
+-rwxr-xr-x    1 root     root        684792 Oct  9 10:19 fe.ptm.sw
+-rwxr-xr-x    1 root     root        816640 Oct  9 10:19 fe.qinq.sw
+-rwxr-xr-x    1 root     root        892096 Oct  9 10:19 fe.qos.sw
+-rwxr-xr-x    1 root     root        342984 Oct  9 10:19 fe.rfappi.fp.sw
+-rwxr-xr-x    1 root     root        317848 Oct  9 10:19 fe.rfrsc.fp.sw
+-rwxr-xr-x    1 root     root        290448 Oct  9 10:19 fe.rt_res.l3tb.sw
+-rwxr-xr-x    1 root     root         98400 Oct  9 10:19 fe.sflow.sw
+-rwxr-xr-x    1 root     root        477824 Oct  9 10:19 fe.sp.sw
+-rwxr-xr-x    1 root     root        706760 Oct  9 10:19 fe.span.sw
+-rwxr-xr-x    1 root     root       2261744 Oct  9 10:19 fe.uc.sw
+-rwxr-xr-x    1 root     root        289992 Oct  9 10:19 fe.virpt.ptm.sw
+-rwxr-xr-x    1 root     root            43 Oct  9 10:19 finish.time
+drwxr-xr-x    2 root     root          4096 Oct  9 10:19 firmware
+-rw-r--r--    1 root     root        154784 Oct  9 10:19 firmware_driver.ko
+-rwxr-xr-x    1 root     root         72520 Oct  9 10:19 firmware_upgrade
+-rw-r--r--    1 root     root            31 Oct  9 10:19 firstboot
+-rwxr-xr-x    1 root     root         22080 Oct  9 10:19 flashio_probe.ko
+-rwxr-xr-x    1 root     root         19248 Oct  9 10:19 flinfod
+-rwxr-xr-x    1 root     root         14840 Oct  9 10:19 foo_1
+-rwxr-xr-x    1 root     root         14840 Oct  9 10:19 foo_2
+-rwxr-xr-x    1 root     root         14840 Oct  9 10:19 foo_3
+-rwxr-xr-x    1 root     root        168648 Oct  9 10:19 ftp_server.elf
+-rwxr-xr-x    1 root     root        101872 Oct  9 10:19 ftpc_cli.elf
+-rwxr-xr-x    1 root     root          1472 Oct  9 10:19 ftrace_set.sh
+-rwxr-xr-x    1 root     root         23288 Oct  9 10:19 fw_printenv
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 fw_setenv -> /sbin/fw_printenv
+-rwxr-xr-x    1 root     root          6344 Oct  9 10:19 get_slotid
+-rwxr-xr-x    1 root     root         10312 Oct  9 10:19 getcap
+-rwxr-xr-x    1 root     root         10312 Oct  9 10:19 getpcaps
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 getty -> ../bin/busybox
+-rw-r--r--    1 root     root          8296 Oct  9 10:19 gpio_hwhb.ko
+-rwxr-xr-x    1 root     root       3678952 Oct  9 10:19 grpc.elf
+-rwxr-xr-x    1 root     root         27304 Oct  9 10:19 grpc_vty.elf
+-rwxr-xr-x    1 root     root        163312 Oct  9 10:19 gvrpd
+-rwxr-xr-x    1 root     root        106744 Oct  9 10:19 ham
+-rwxr-xr-x    1 root     root           693 Oct  9 10:19 ham-init
+-rwxr-xr--    1 root     root           101 Oct  9 10:19 ham.sh
+-rwxr-xr-x    1 root     root           646 Oct  9 10:19 ham_start_proc
+-rw-r--r--    1 root     root         24472 Oct  9 10:19 hamk_demo.ko
+-rwxr-xr-x    1 root     root           275 Oct  9 10:19 hamk_test_reload_loop.sh
+-rwxr-xr-x    1 root     root         14760 Oct  9 10:19 hdf_mgnt
+-rwxr-xr-x    1 root     root        127144 Oct  9 10:19 hdf_sys
+-rwxr-xr-x    1 root     root         72808 Oct  9 10:19 hotpatch_create
+-rwxr-xr-x    1 root     root         14776 Oct  9 10:19 hotpatch_test
+-rw-r--r--    1 root     root           354 Oct  9 10:19 hotplug-call
+-rwxr-xr-x    1 root     root         86984 Oct  9 10:19 hw_test.bin
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 hwclock -> ../bin/busybox
+-rwxr-xr-x    1 root     root         93712 Oct  9 10:19 ids.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 ifconfig -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 ifdown -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 ifenslave -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 ifup -> ../bin/busybox
+-rwxr-xr-x    1 root     root        465488 Oct  9 10:19 igmp.elf
+-rwxr-xr-x    1 root     root        365752 Oct  9 10:19 igmp_snp.elf
+-rwxr-xr-x    1 root     root         23088 Oct  9 10:19 ihd_cpu.elf
+-rwxr-xr-x    1 root     root        222112 Oct  9 10:19 ihd_mng.elf
+-rwxr-xr-x    1 root     root        634392 Oct  9 10:19 im_core.elf
+-rwxr-xr-x    1 root     root        286776 Oct  9 10:19 im_proxy.elf
+-rwxr-xr-x    1 root     root           387 Oct  9 10:19 init
+-rwxr-xr-x    1 root     root           856 Oct  9 10:19 initrd_do_upgrade.sh
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 insmod -> ../bin/busybox
+-rw-r--r--    1 root     root         12224 Oct  9 10:19 int_restrain_test.ko
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 ipaddr -> ../bin/busybox
+-rwxr-xr-x    1 root     root        417376 Oct  9 10:19 ipfix_app
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 iplink -> ../bin/busybox
+-rwxr-xr-x    1 root     root        103168 Oct  9 10:19 ipmix.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 iproute -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 iprule -> ../bin/busybox
+-rwxr-xr-x    1 root     root       1631816 Oct  9 10:19 ipsec
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 iptunnel -> ../bin/busybox
+-rw-r--r--    1 root     root        646568 Oct  9 10:19 ipv4.ko
+-rw-rw-rw-    1 root     root          8456 Oct 10 09:32 irq_softirq_test.ko
+-rwxr-xr-x    1 root     root       3729056 Oct  9 10:19 isis.elf
+-rwxr-xr-x    1 root     root         14936 Oct  9 10:19 kill.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 klogd -> ../bin/busybox
+-rwxr-xr-x    1 root     root         87104 Oct  9 10:19 knet.ko
+-rwxr-xr-x    1 root     root        309400 Oct  9 10:19 lacp.elf
+-rwxr-xr-x    1 root     root        163728 Oct  9 10:19 lda
+-rwxr-xr-x    1 root     root       1762392 Oct  9 10:19 ldp.elf
+-rw-r--r--    1 root     root           496 Oct  9 10:19 led.sh
+-rwxr-xr-x    1 root     root        772536 Oct  9 10:19 lldp.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 losetup -> ../bin/busybox
+-rwxr-xr-x    1 root     root       2604024 Oct  9 10:19 lsm.elf
+-rw-r--r--    1 root     root         15216 Oct  9 10:19 lsm_cbb.ko
+-rw-r--r--    1 root     root        505088 Oct  9 10:19 lsm_ko.ko
+-rwxr-xr-x    1 root     root         74016 Oct  9 10:19 lsm_kproxy.elf
+-rwxr-xr-x    1 root     root         81600 Oct  9 10:19 lsm_rpc_agent.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 lsmod -> ../bin/busybox
+drwxr-xr-x    5 root     root          4096 Oct  9 10:19 lua_mom_api
+-rwxr-xr-x    1 root     root         76488 Oct  9 10:19 macc
+-rwxr-xr-x    1 root     root          5257 Oct  9 10:19 macc_auth.sh
+-rwxr-xr-x    1 root     root           564 Oct  9 10:19 macc_auth_telnet.py
+-rwxr-xr-x    1 root     root          1455 Oct  9 10:19 macc_dev_timestamp.sh
+-rwxr-xr-x    1 root     root          1184 Oct  9 10:19 macc_shell_log.sh
+-rwxr-xr-x    1 root     root         61114 Oct  9 10:19 maccmng.sh
+-rwxr-xr-x    1 root     root          5485 Oct  9 10:19 maccmng_conf.sh
+-rwxr-xr-x    1 root     root          5037 Oct  9 10:19 maccmng_get_interface_flow.py
+-rwxr-xr-x    1 root     root          1107 Oct  9 10:19 maccmng_modifyConfig.sh
+-rwxr-xr-x    1 root     root           510 Oct  9 10:19 maccmng_set_modifyConfig.sh
+-rwxr-xr-x    1 root     root          3714 Oct  9 10:19 maccmng_show.sh
+-rwxr-xr-x    1 root     root          5448 Oct  9 10:19 maccmng_upload_interface_flow.py
+-rwxr-xr-x    1 root     root         10782 Oct  9 10:19 maccmng_vsu.sh
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 mdev -> ../bin/busybox
+-rwxr-xr-x    1 root     root         18960 Oct  9 10:19 mdev_logger
+-rw-r--r--    1 root     root         12480 Oct  9 10:19 mem_reclm_watermark.ko
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 mkdosfs -> ../bin/busybox
+-rwxr-xr-x    1 root     root        595544 Oct  9 10:19 mke2fs
+lrwxrwxrwx    1 root     root            12 Oct  9 10:19 mkfs.ext3 -> /sbin/mke2fs
+lrwxrwxrwx    1 root     root            12 Oct  9 10:19 mkfs.ext4 -> /sbin/mke2fs
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 mkfs.vfat -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 mkswap -> ../bin/busybox
+-rwxr-xr-x    1 root     root        871248 Oct  9 10:19 mlag.elf
+-rwxr-xr-x    1 root     root        374944 Oct  9 10:19 mld.elf
+-rwxr-xr-x    1 root     root        245936 Oct  9 10:19 mld_snp.elf
+-rwxr-xr-x    1 root     root        103640 Oct  9 10:19 mmc
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 modinfo -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 modprobe -> ../bin/busybox
+-rwxr-xr-x    1 root     root         18968 Oct  9 10:19 mom_rdnd_ctrl
+-rwxr-xr-x    1 root     root        320568 Oct  9 10:19 mosquitto.elf
+-rwxr-xr-x    1 root     root        240640 Oct  9 10:19 msdp.elf
+-rwxr-xr-x    1 root     root        497416 Oct  9 10:19 msf.elf
+-rwxr-xr-x    1 root     root        465272 Oct  9 10:19 msf6.elf
+-rwxr-xr-x    1 root     root        696080 Oct  9 10:19 mstp.elf
+-rw-r--r--    1 root     root         40616 Oct  9 10:19 mtdoops.ko
+-rwxr-xr-x    1 root     root         83928 Oct  9 10:19 nd_sprs.elf
+-rw-r--r--    1 root     root        103912 Oct  9 10:19 net_cbb.ko
+-rwxr-xr-x    1 root     root        796960 Oct  9 10:19 netconf.elf
+-rwxr-xr-x    1 root     root        920928 Oct  9 10:19 nginx
+-rwxr-xr-x    1 root     root         71640 Oct  9 10:19 nginx_cmd.elf
+-rwxr-xr-x    1 root     root       4261528 Oct  9 10:19 nsm.elf
+-rwxr-xr-x    1 root     root        890488 Oct  9 10:19 ntp.elf
+-rwxr-xr-x    1 root     root        254136 Oct  9 10:19 ntpdate
+-rwxr-xr-x    1 root     root          1731 Oct  9 10:19 of_copy.sh
+-rwxr-xr-x    1 root     root          5664 Oct  9 10:19 oob_agent.pktd.sw.ko
+-rwxr-xr-x    1 root     root         10296 Oct  9 10:19 openbox
+-rwxr-xr-x    1 root     root        851496 Oct  9 10:19 openflow
+-rwxr-xr-x    1 root     root       3326216 Oct  9 10:19 ospf.elf
+-rwxr-xr-x    1 root     root       2436320 Oct  9 10:19 ospfv3.elf
+-rwxr-xr-x    1 root     root         86096 Oct  9 10:19 password_policy
+-rw-r--r--    1 root     root       1847032 Oct  9 10:19 patchelf
+-rwxr-xr-x    1 root     root        443296 Oct  9 10:19 pbr.elf
+-rwxr-xr-x    1 root     root        495840 Oct  9 10:19 pdmd.elf
+-rwxr-xr-x    1 root     root        920784 Oct  9 10:19 pim6d.elf
+-rwxr-xr-x    1 root     root       1430216 Oct  9 10:19 pimd.elf
+-rwxr-xr-x    1 root     root        242400 Oct  9 10:19 ping.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 pivot_root -> ../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 proc_info.ko -> rg-utils-sysrq.ko
+-rwxr-xr-x    1 root     root         10320 Oct  9 10:19 process_trigger
+-rw-r--r--    1 root     root         21480 Oct  9 10:19 product_info_utils.ko
+-rwxr-xr-x    1 root     root         19104 Oct  9 10:19 proxy-io2net-tipc
+-rwxr-xr-x    1 root     root         10872 Oct  9 10:19 proxy.bfd.sw
+-rwxr-xr-x    1 root     root        116856 Oct  9 10:19 proxy.span.sw
+-rwxr-xr-x    1 root     root         75160 Oct  9 10:19 psh_server
+-rwxr-xr-x    1 root     root         18872 Oct  9 10:19 psh_toolkit
+-rw-r--r--    1 root     root          9960 Oct  9 10:19 pshk.ko
+drwxr-xr-x    5 root     root          4096 Oct  9 10:19 python_mom_api
+-rwxr-xr-x    1 root     root         19672 Oct  9 10:19 python_shell.elf
+-rwxr-xr-x    1 root     root       1153448 Oct  9 10:19 qosd.elf
+-rwxr-xr-x    1 root     root        167432 Oct  9 10:19 rbac
+-rwxr-xr-x    1 root     root           251 Oct  9 10:19 rc6
+-rwxr-xr-x    1 root     root       1156952 Oct  9 10:19 rdsd
+-rwxr-xr-x    1 root     root          2048 Oct  9 10:19 reboot
+-rwxr-xr-x    1 root     root        603008 Oct  9 10:19 redis-cli
+-rwxr-xr-x    1 root     root       1486624 Oct  9 10:19 redis-server
+drwxr-xr-x    2 root     root          4096 Oct  9 10:19 redis_cli_plugin
+-rwxr-xr-x    1 root     root        240816 Oct  9 10:19 ref_proxy.elf
+-rwxr-xr-x    1 root     root        450064 Oct  9 10:19 resize2fs
+-rwxr-xr-x    1 root     root        252560 Oct  9 10:19 reup.elf
+-rwxr-xr-x    1 root     root        204336 Oct  9 10:19 rg-configd
+-rwxr-xr-x    1 root     root         31376 Oct  9 10:19 rg-coredump-mon
+-rw-r--r--    1 root     root         11592 Oct  9 10:19 rg-cpld-mux.ko
+-rw-r--r--    1 root     root        177912 Oct  9 10:19 rg-dev-resume.ko
+-rwxr-xr-x    1 root     root        535912 Oct  9 10:19 rg-fsui
+-rw-r--r--    1 root     root         13616 Oct  9 10:19 rg-i2c-cpld.ko
+-rw-r--r--    1 root     root         12424 Oct  9 10:19 rg-ihd-drivers-core.ko
+-rw-r--r--    1 root     root         12056 Oct  9 10:19 rg-ihd-drivers-i2c.ko
+-rw-r--r--    1 root     root         10536 Oct  9 10:19 rg-ihd-drivers-mmc.ko
+-rw-r--r--    1 root     root          8456 Oct  9 10:19 rg-ihd-drivers-pci.ko
+-rw-r--r--    1 root     root         10992 Oct  9 10:19 rg-ihd-drivers-smi.ko
+-rw-r--r--    1 root     root          8888 Oct  9 10:19 rg-ihd-drivers-spi.ko
+-rwxr-xr-x    1 root     root         49920 Oct  9 10:19 rg-mtdoops-cli
+-rwxr-xr-x    1 root     root        119752 Oct  9 10:19 rg-resmon
+-rwxr-xr-x    1 root     root        163384 Oct  9 10:19 rg-rmond
+-rwxr-xr-x    1 root     root        941280 Oct  9 10:19 rg-snmpd
+-rwxrwxrwx    1 root     root       5125008 Nov  2 11:32 rg-sshc
+-rwxr-xr-x    1 root     root        690680 Nov  2 11:31 rg-sshc.bk
+-rwxrwxrwx    1 root     root       4178888 Nov  2 11:32 rg-sshd
+-rwxr-xr-x    1 root     root        747680 Nov  2 11:31 rg-sshd.bk
+-rw-r--r--    1 root     root          8224 Oct  9 10:19 rg-status-notifier.ko
+-rwxr-xr-x    1 root     root        613648 Oct  9 10:19 rg-sysmon
+-rwxr-xr-x    1 root     root        289216 Oct  9 10:19 rg-telnetc
+-rwxr-xr-x    1 root     root        317768 Oct  9 10:19 rg-telnetd
+-rwxr-xr-x    1 root     root        480488 Oct  9 10:19 rg-tty-admin
+-rw-r--r--    1 root     root         35192 Oct  9 10:19 rg-utils-cpurule.ko
+-rw-r--r--    1 root     root        103928 Oct  9 10:19 rg-utils-lmk.ko
+-rw-r--r--    1 root     root         31248 Oct  9 10:19 rg-utils-sysrq.ko
+-rwxr-xr-x    1 root     root         31568 Oct  9 10:19 rg_aof
+-rwxr-xr-x    1 root     root         60328 Oct  9 10:19 rg_at
+-rwxr-xr-x    1 root     root         64224 Oct  9 10:19 rg_cap
+-rwxr-xr-x    1 root     root         59976 Oct  9 10:19 rg_cap_tran
+-rwxr-xr-x    1 root     root         15296 Oct  9 10:19 rg_cpurule
+-rw-r--r--    1 root     root         12984 Oct  9 10:19 rg_dprintk.ko
+-rw-r--r--    1 root     root         47112 Oct  9 10:19 rg_edac.ko
+-rw-r--r--    1 root     root        200280 Oct  9 10:19 rg_ipv6.ko
+-rwxr-xr-x    1 root     root        418024 Oct  9 10:19 rg_licns
+lrwxrwxrwx    1 root     root            15 Oct  9 10:19 rg_lowmem_killer.ko -> rg-utils-lmk.ko
+-rwxr-xr-x    1 root     root         39760 Oct  9 10:19 rg_mom_proto_pass
+-rw-r--r--    1 root     root         40296 Oct  9 10:19 rg_mtdoops.ko
+-rwxr-xr-x    1 root     root         14752 Oct  9 10:19 rg_oam-msg_record_parser
+-rwxr-xr-x    1 root     root         14696 Oct  9 10:19 rg_oam_server.elf
+-rwxr-xr-x    1 root     root         14848 Oct  9 10:19 rg_osal_test
+-rwxr-xr-x    1 root     root         10544 Oct  9 10:19 rg_rdnd_demo.elf
+-rwxr-xr-x    1 root     root          6328 Oct  9 10:19 rg_rdnd_faultinjection.elf
+-rwxr-xr-x    1 root     root         25640 Oct  9 10:19 rg_rdnd_mom_demo.elf
+-rwxr-xr-x    1 root     root        440816 Oct  9 10:19 rg_rdnd_server.elf
+-rwxr-xr-x    1 root     root         10528 Oct  9 10:19 rg_rdnd_statctrl.elf
+-rwxr-xr-x    1 root     root          6328 Oct  9 10:19 rg_rdnd_stubclient.elf
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 rg_setmac -> /sbin/tool_setmac
+-rwxr-xr-x    1 root     root        725408 Oct  9 10:19 rg_syslogd
+-rw-r--r--    1 root     root         61024 Oct  9 10:19 rg_thread_det.ko
+-rw-r--r--    1 root     root         10256 Oct  9 10:19 rg_time.ko
+-rwxr-xr-x    1 root     root        208368 Oct  9 10:19 rgmomd
+-rwxr-xr-x    1 root     root         18888 Oct  9 10:19 rgos_log_offline_parse_bin_log
+-rwxr-xr-x    1 root     root         10480 Oct  9 10:19 rgos_log_write_demo
+-rwxr-xr-x    1 root     root         10464 Oct  9 10:19 rgos_log_write_demo1
+-rwxr-xr-x    1 root     root         18768 Oct  9 10:19 rgos_log_write_demo2
+-rwxr-xr-x    1 root     root         10504 Oct  9 10:19 rgos_log_write_demo3
+-rwxr-xr-x    1 root     root        731056 Oct  9 10:19 rip.elf
+-rwxr-xr-x    1 root     root        426264 Oct  9 10:19 ripng.elf
+-rwxr-xr-x    1 root     root        160944 Oct  9 10:19 rl-con
+-rwxr-xr-x    1 root     root        195936 Oct  9 10:19 rldp.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 rmmod -> ../bin/busybox
+-rwxr-xr-x    1 root     root       1271480 Oct  9 10:19 rns.elf
+-rwxr-xr-x    1 root     root         60496 Oct  9 10:19 rns_server.elf
+-rwxr-xr-x    1 root     root        216040 Oct  9 10:19 rnsmib.elf
+-rwxr-xr-x    1 root     root       1057584 Oct  9 10:19 rpi.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 runlevel -> ../bin/busybox
+-rwxr-xr-x    1 root     root         23808 Oct  9 10:19 safe_verify.elf
+-rwxr-xr-x    1 root     root         79872 Oct  9 10:19 safe_verify_svr
+-rwxr-xr-x    1 root     root        900216 Oct  9 10:19 savi.elf
+-rwxr-xr-x    1 root     root       3427768 Oct  9 10:19 sccd
+-rwxr-xr-x    1 root     root        203816 Oct  9 10:19 security_log.elf
+-rwxr-xr-x    1 root     root         14408 Oct  9 10:19 setcap
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 setcountry -> /sbin/tool_setmac
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 setenv -> /sbin/fw_printenv
+-rwxr-xr-x    1 root     root         64600 Oct  9 10:19 setmac
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 setproduct -> /sbin/tool_setmac
+-rwxr-xr-x    1 root     root        157856 Oct  9 10:19 sflow_app
+-rwxr-xr-x    1 root     root         18904 Oct  9 10:19 shell_cli
+-rwxr-xr-x    1 root     root         18808 Oct  9 10:19 show_version
+-rwxr-xr-x    1 root     root         15680 Oct  9 10:19 sigcfg
+-rw-r--r--    1 root     root         32744 Oct  9 10:19 smi_gpio.ko
+-rwxr-xr-x    1 root     root          6376 Oct  9 10:19 smi_test
+-rwxr-xr-x    1 root     root       2690048 Oct  9 10:19 snooping.elf
+-rwxr-xr-x    1 root     root         42864 Oct  9 10:19 sntp.elf
+-rwxr-xr-x    1 root     root        413128 Oct  9 10:19 span.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 start-stop-daemon -> ../bin/busybox
+-rwxr-xr-x    1 root     root         67720 Oct  9 10:19 startup
+-rwxr-xr-x    1 root     root          8820 Oct  9 10:19 startup-loader
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 std_fw_printenv -> /sbin/fw_printenv
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 std_fw_setenv -> /sbin/fw_printenv
+-rwxr-xr-x    1 root     root         23056 Oct  9 10:19 subcard_power_ctl
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 sulogin -> ../bin/busybox
+-rwxr-xr-x    1 root     root        880912 Oct  9 10:19 sw_app.snp_ds_c
+-rwxr-xr-x    1 root     root        428928 Oct  9 10:19 sw_app.snp_ds_s
+-rwxr-xr-x    1 root     root         10552 Oct  9 10:19 sw_app_acl
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 swapoff -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 swapon -> ../bin/busybox
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 switch_root -> ../bin/busybox
+drwxr-xr-x    2 root     root          4096 Oct  9 10:19 sysbench
+-rwxr-xr-x    1 root     root         30856 Oct  9 10:19 sysctl
+-rwxr-xr-x    1 root     root        790536 Oct  9 10:19 sysha
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 syslogd -> ../bin/busybox
+-rw-r--r--    1 root     root          6239 Oct  9 10:19 sysupgrade
+-rwxr-xr-x    1 root     root        256552 Oct  9 10:19 tacplusd
+-rwxr-xr-x    1 root     root       4103864 Oct  9 10:19 tcpip.elf
+-rwxr-xr-x    1 root     root        262368 Oct  9 10:19 tech-support
+-rwxr-xr-x    1 root     root         14736 Oct  9 10:19 telnet-client-tipc
+-rwxr-xr-x    1 root     root        582712 Oct  9 10:19 termid.elf
+-rwxr-xr-x    1 root     root         22800 Oct  9 10:19 test-char
+drwxr-xr-x    2 root     root          4096 Oct  9 10:19 test2
+-rwxr-xr-x    1 root     root          6360 Oct  9 10:19 test_app
+-rwxr-xr-x    1 root     root         10464 Oct  9 10:19 tftp_tipc_client_elf
+-rwxr-xr-x    1 root     root         27840 Oct  9 10:19 tftp_tipc_server
+-rwxr-xr-x    1 root     root         78376 Oct  9 10:19 tftpd.elf
+-rwxr-xr-x    1 root     root         77672 Oct  9 10:19 timerange
+-rwxr-xr-x    1 root     root         62624 Oct  9 10:19 tipc-config
+-rwxr-xr-x    1 root     root         10552 Oct  9 10:19 tipc-debuger
+-rwxr-xr-x    1 root     root         27584 Oct  9 10:19 tipc-tap
+-rw-r--r--    1 root     root        565472 Oct  9 10:19 tipc.ko
+-rwxr-xr-x    1 root     root        200552 Oct  9 10:19 tir.elf
+-rwxr-xr-x    1 root     root         76536 Oct  9 10:19 tool_setmac
+-rwxr-xr-x    1 root     root        260296 Oct  9 10:19 track.elf
+-rwxr-xr-x    1 root     root        375368 Oct  9 10:19 tunnel.elf
+-rw-rw-rw-    1 root     root           334 Oct 12 14:10 typescript
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 udhcpc -> ../bin/busybox
+-rwxr-xr-x    1 root     root       1741736 Oct  9 10:19 ugp
+-rwxr-xr-x    1 root     root        105544 Oct  9 10:19 upgrade_app_download.elf
+-rwxr-xr-x    1 root     root        163008 Oct  9 10:19 upgrade_app_global.elf
+-rwxr-xr-x    1 root     root        183528 Oct  9 10:19 upgrade_app_local.elf
+-rwxr-xr-x    1 root     root        254056 Oct  9 10:19 upgrade_auto_sync.elf
+-rwxr-xr-x    1 root     root        256048 Oct  9 10:19 upgrade_cli
+-rwxr-xr-x    1 root     root         10407 Oct  9 10:19 upgrade_emmc_firmware
+-rwxr-xr-x    1 root     root         65408 Oct  9 10:19 upgrade_flash_image
+-rwxr-xr-x    1 root     root        130072 Oct  9 10:19 upgrade_global
+-rwxr-xr-x    1 root     root         68328 Oct  9 10:19 upgrade_local
+-rwxr-xr-x    1 root     root        264856 Oct  9 10:19 urpf.elf
+-rwxr-xr-x    1 root     root        386424 Oct  9 10:19 utils-ssh
+-rwxr-xr-x    1 root     root         43504 Oct  9 10:19 ver_agent
+-rwxr-xr-x    1 root     root        505640 Oct  9 10:19 vrrp.elf
+-rwxr-xr-x    1 root     root        251840 Oct  9 10:19 vrrp_plus.elf
+-rwxr-xr-x    1 root     root        654976 Oct  9 10:19 vsdm
+-rwxr-xr-x    1 root     root       1608664 Oct  9 10:19 vxlan.elf
+lrwxrwxrwx    1 root     root            14 Oct  9 10:19 watchdog -> ../bin/busybox
+-rwxr-xr-x    1 root     root           298 Oct  9 10:19 web_cli
+-rwxr-xr-x    1 root     root       2770360 Oct  9 10:19 webauth
+-rw-r--r--    1 root     root          4591 Oct  9 10:19 wifi
+-rwxr-xr-x    1 root     root        293680 Oct  9 10:19 xe.cfg.pktr.sw
+-rwxr-xr-x    1 root     root        473840 Oct  9 10:19 xe.cpp.dp
+-rwxr-xr-x    1 root     root        795328 Oct  9 10:19 xe.ctrl.pkt.sw
+-rwxr-xr-x    1 root     root        639696 Oct  9 10:19 xe.mng.pkt.sw
+-rwxr-xr-x    1 root     root         31184 Oct  9 10:19 xe.trace.pkt.sw
+-rwxr-xr-x    1 root     root        244920 Oct  9 10:19 xe.vhost.pkt.sw
+-rwxr-xr-x    1 root     root        222008 Oct  9 10:19 zam.elf
+-rwxr-xr-x    1 root     root         14896 Oct  9 10:19 zam_cli.elf
+-rwxr-xr-x    1 root     root         22888 Oct  9 10:19 zlogd
+lrwxrwxrwx    1 root     root            13 Oct  9 10:19 zstd -> /sbin/openbox
+~ #
+~ #

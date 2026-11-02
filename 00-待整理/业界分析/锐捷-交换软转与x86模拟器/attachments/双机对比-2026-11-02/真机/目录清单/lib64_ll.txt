@@ -1,0 +1,2 @@
+lrwxrwxrwx    1 root     root             3 Oct  9 10:19 /lib64 -> lib
+5.4.241+

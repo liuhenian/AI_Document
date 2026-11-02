@@ -1,0 +1,4 @@
+cat /proc/cmdline
+BOOT_IMAGE=/vmlinux-5.4.241.a55761ea3182b0 root=/dev/sda7 isolcpus=1 console=ttyS1,115200 console=tty1 console=tty2 board_name=x86-64 nopku crashkernel=0M-2G:128M,2G-16G:192M,16G-64G:256M,64G-:512M
+~ #
+~ #

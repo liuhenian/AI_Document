@@ -1,0 +1,20 @@
+cat /proc/mounts
+/dev/sda7 / ext3 rw,relatime 0 0
+/dev/sda3 /data ext3 rw,relatime 0 0
+proc /proc proc rw,nosuid,nodev,noexec,noatime 0 0
+sysfs /sys sysfs rw,nosuid,nodev,noexec,noatime 0 0
+cgroup /sys/fs/cgroup cgroup rw,nosuid,nodev,noexec,relatime,cpuset,cpu,cpuacct,blkio,memory,devices,freezer,net_cls,perf_event,net_prio,hugetlb,pids,debug 0 0
+tmpfs /tmp tmpfs rw,nosuid,nodev,noatime,size=2942876k 0 0
+tmpfs /private_tmp tmpfs rw,nosuid,nodev,noexec,noatime 0 0
+tmpfs /dev tmpfs rw,nosuid,noatime,size=512k,mode=755 0 0
+devpts /dev/pts devpts rw,nosuid,noexec,noatime,mode=600,ptmxmode=000 0 0
+tmpfs /dev/shm tmpfs rw,nosuid,nodev,noexec,noatime 0 0
+/dev/sda6 /boot ext3 rw,relatime 0 0
+/dev/sda5 /bootloader ext3 rw,relatime 0 0
+nodev /mnt/hugetlbfs hugetlbfs rw,relatime,pagesize=2M 0 0
+tmpfs /tmp/netns tmpfs rw,nosuid,nodev,noatime,size=2942876k 0 0
+nsfs /tmp/netns/default nsfs rw 0 0
+none /var/upgrade_mount tmpfs rw,relatime 0 0
+none /sys/kernel/debug debugfs rw,relatime 0 0
+~ #
+~ #

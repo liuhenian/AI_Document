@@ -1,0 +1,163 @@
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 [ -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 [[ -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 awk -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 basename -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 beep -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 blockdev -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 bunzip2 -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 bzcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 bzip2 -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 cal -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 chrt -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 cksum -> ../../bin/busybox
+-rwxr-xr-x    1 root     root           141 Oct  9 10:19 clock.sh
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 cmp -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 comm -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 crontab -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 cut -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 dc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 diff -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 dirname -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 dos2unix -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 du -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 eject -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 env -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 expand -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 expr -> ../../bin/busybox
+drwxr-xr-x    5 root     root          4096 Oct  9 10:19 factory_config
+-rwxr-xr-x    1 root     root         27016 Oct  9 10:19 file
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 find -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         51288 Oct  9 10:19 flash_erase
+-rwxr-xr-x    1 root     root         14432 Oct  9 10:19 flash_lock
+-rwxr-xr-x    1 root     root         14440 Oct  9 10:19 flash_unlock
+-rwxr-xr-x    1 root     root         18520 Oct  9 10:19 flashcp
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 flock -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 fold -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 free -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ftpget -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ftpput -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 fuser -> ../../bin/busybox
+-rwxr-xr-x    1 root     root      11087376 Oct  9 10:19 gdb
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 groups -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 hd -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 head -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 hexdump -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 id -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 init -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 install -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ip -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ipcrm -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ipcs -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 kill -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 killall -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 last -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 less -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 logger -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 logname -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 lsof -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 lsusb -> ../../bin/busybox
+lrwxrwxrwx    1 root     root             9 Oct  9 10:19 lua -> lua.5.3.0
+-rwxr-xr-x    1 root     root         19000 Oct  9 10:19 lua.5.3.0
+lrwxrwxrwx    1 root     root            10 Oct  9 10:19 luac -> luac.5.3.0
+-rwxr-xr-x    1 root     root        125456 Oct  9 10:19 luac.5.3.0
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 lzcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 lzma -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 lzopcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 md5sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 mkfifo -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        129128 Oct  9 10:19 mkfs.ubifs
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 mount -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         14496 Oct  9 10:19 mtd_debug
+-rwxr-xr-x    1 root     root         51280 Oct  9 10:19 nanddump
+-rwxr-xr-x    1 root     root         14408 Oct  9 10:19 nandtest
+-rwxr-xr-x    1 root     root         51288 Oct  9 10:19 nandwrite
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 nmeter -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 nohup -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 od -> ../../bin/busybox
+-rwxr-xr-x    1 root     root           704 Oct  9 10:19 opkg
+-rwxr-xr-x    1 root     root         24328 Oct  9 10:19 opkg_real
+-rwxr-xr-x    1 root     root         14672 Oct  9 10:19 osal_stat_test
+-rwxr-xr-x    1 root     root         14696 Oct  9 10:19 osal_time_test
+-rwxr-xr-x    1 root     root         14712 Oct  9 10:19 osal_timer_test
+-rwxr-xr-x    1 root     root         10584 Oct  9 10:19 osal_timer_tst_s
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 passwd -> ../../bin/busybox
+-rwxr-xr-x    1 root     root       2497160 Oct  9 10:19 perf
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 pgrep -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 pidof -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 pkill -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 pmap -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 printf -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ps -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 pstree -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 pwdx -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 readlink -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 realpath -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 renice -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 rpm -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 script -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 seq -> ../../bin/busybox
+-rwxr-xr-x    1 root     root           918 Oct  9 10:19 set_system_reboot
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 setsid -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 sha1sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 sha256sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 sha3sum -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 sha512sum -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        802472 Oct  9 10:19 smartctl
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 smemcap -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 sort -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 split -> ../../bin/busybox
+-rwxr-xr-x    1 root     root       1992032 Oct  9 10:19 sqlite3
+-rwxr-xr-x    1 root     root       1404776 Oct  9 10:19 strace
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 strings -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 sum -> ../../bin/busybox
+-rwxr-xr-x    1 root     root        108856 Oct  9 10:19 sysbench
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 tac -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 tail -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 tee -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 test -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 tftp -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 time -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 timeout -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 top -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 tr -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 tree -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 tty -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 ttysize -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         43120 Oct  9 10:19 ubiattach
+-rwxr-xr-x    1 root     root         34888 Oct  9 10:19 ubiblock
+-rwxr-xr-x    1 root     root         34912 Oct  9 10:19 ubidetach
+-rwxr-xr-x    1 root     root        100496 Oct  9 10:19 ubiformat
+-rwxr-xr-x    1 root     root         43128 Oct  9 10:19 ubimkvol
+-rwxr-xr-x    1 root     root         43112 Oct  9 10:19 ubinfo
+-rwxr-xr-x    1 root     root         47240 Oct  9 10:19 ubinize
+-rwxr-xr-x    1 root     root         34888 Oct  9 10:19 ubirename
+-rwxr-xr-x    1 root     root         34912 Oct  9 10:19 ubirmvol
+-rwxr-xr-x    1 root     root         39024 Oct  9 10:19 ubirsvol
+-rwxr-xr-x    1 root     root         38984 Oct  9 10:19 ubiupdatevol
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 umount -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 unexpand -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 uniq -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 unix2dos -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 unlzma -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 unlzop -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 unxz -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 unzip -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 uptime -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 users -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 uudecode -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 uuencode -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 vlock -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 volname -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 wall -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 watch -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 wc -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 wget -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 which -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 who -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 whoami -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 whois -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 xargs -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 xz -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 xzcat -> ../../bin/busybox
+lrwxrwxrwx    1 root     root            17 Oct  9 10:19 yes -> ../../bin/busybox
+-rwxr-xr-x    1 root     root         68192 Oct  9 10:19 zic

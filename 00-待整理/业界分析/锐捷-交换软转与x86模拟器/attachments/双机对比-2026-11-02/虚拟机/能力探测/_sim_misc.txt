@@ -1,0 +1,99 @@
+##### show spanning-tree
+No spanning tree instance exists.
+
+##### show vlan
+VLAN       Name                             Status    Ports
+---------- -------------------------------- --------- -----------------------------------
+         1 VLAN0001                         STATIC    Gi1/0/7, Gi1/0/8, Gi2/0/0, Gi2/0/6
+                                                      Gi2/0/7, Gi2/0/8
+
+##### show mac-address-table count
+Dynamic Address Count  : 0
+EVPN    Address Count  : 0
+MLAG    Address Count  : 0
+Static  Address Count  : 0
+Filtering Address Count: 0
+Other   Address Count  : 0
+Security Address Count : 0
+Total Mac Addresses    : 0
+Total Mac Address Space Available: 64000
+
+##### show ip route summary
+Codes:  NORMAL - Normal route  ECMP - ECMP route  FRR - Fast-Reroute route
+  Entries: 2, based on route prefixes
+  Entries: 2, based on route nexthops
+                 NORMAL     ECMP       FRR        TOTAL
+       Local     1          0          0          1
+       Connected 1          0          0          1
+       Static    0          0          0          0
+       AGGREGATE 0          0          0          0
+       RIP       0          0          0          0
+       OSPF      0          0    
+
+##### show ipv6 route summary
+Codes:  NORMAL - Normal route  ECMP - ECMP route  FRR - Fast-Reroute route
+  Entries: 5, based on route prefixes
+  Entries: 5, based on route nexthops
+                 NORMAL     ECMP       FRR        TOTAL
+       Local     2          0          0          2
+       Connected 3          0          0          3
+       Static    0          0          0          0
+       ND        0          0          0          0
+       SID       0          0          0          0
+       AGGREGATE 0          0    
+
+##### show lacp summary
+System Id:32768, 5254.00bb.e00a
+Flags:  S - Device is requesting Slow LACPDUs   F - Device is requesting Fast LACPDUs.
+A - Device is in active mode.        P - Device is in passive mode.
+
+##### show lldp neighbors
+Capability codes:
+    (R) Router, (B) Bridge, (T) Telephone, (C) DOCSIS Cable Device
+    (W) WLAN Access Point, (P) Repeater, (S) Station, (O) Other
+System Name                 Local Intf          Port ID                          Capability   Aging-time
+Ruijie                      Gi1/0/0             Gi0/0                            B, R         1minutes 41seconds
+Ruijie                      Gi1/0/0             Gi0/0                            B, R         1minutes 36seconds
+Ruijie              
+
+##### show dot1x summary
+ID        Username                       MAC            IP               Interface VLAN Auth-State      Backend-state Port-Status User-Type Time               Type
+--------- ------------------------------ -------------- --------------- --------- ---- --------------- ------------- ----------- --------- ------------------ ------
+
+##### show ip dhcp snooping
+Switch DHCP snooping status                     :   DISABLE
+DHCP snooping verify hardware address status    :   DISABLE
+DHCP snooping database write-delay time         :   0 seconds
+DHCP snooping option 82 status                  :   DISABLE
+DHCP snooping Support bootp bind status         :   DISABLE
+Interface                       Trusted         Rate limit (pps)
+------------------------        -------         ----------------
+Default                         No              unlimited
+
+##### show efmp counter
+------------------------------------------
+               Efmp  counter
+------------------------------------------
+  RX           : 882342
+  RX Speed     : 3 pps (Max 1165 pps at Oct 31 2026 02:20:52.382)
+  TX           : 291913
+  TX Speed     : 3 pps (Max 90 pps at Oct 30 2026 08:43:42.968)
+  PARSER-STAGE:
+    RESV         : 584510
+  FRAG-REASM-STAGE:
+  FW-STAGE:
+    RECEIVE      : 297588
+    DROP         : 23
+    RESV         : 297370
+    LOST         : 40
+    BCAST        : 155
+  SKIP-STAGE:
+
+
+##### show interface GigabitEthernet 1/0/1 counters summary
+Interface       InOctets             InUcastPkts          InMulticastPkts      InBroadcastPkts
+--------------- -------------------- -------------------- -------------------- --------------------
+Gi1/0/1         0                    0                    0                    0
+Interface       OutOctets            OutUcastPkts         OutMulticastPkts     OutBroadcastPkts
+--------------- -------------------- -------------------- -------------------- --------------------
+Gi1/0/1         2184485     

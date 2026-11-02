@@ -1,0 +1,24 @@
+======================================================================
+### ACL 配置与下发
+  [ip access-list extended TMP_ACL_TEST] -> ip access-list extended TMP_ACL_TEST
+  [permit tcp any any eq 80] -> permit tcp any any eq 80
+  [permit ip host 1.1.1.1 any log] -> permit ip host 1.1.1.1 any log
+  [deny icmp any any] -> deny icmp any any
+  [exit] -> exit
+  [interface GigabitEthernet 1/0/1] -> interface GigabitEthernet 1/0/1 / Ruijie(config-if-GigabitEthernet 1/0/1)#
+  [ip access-group TMP_ACL_TEST in] -> ip access-group TMP_ACL_TEST in / Ruijie(config-if-GigabitEthernet 1/0/1)#
+  [exit] -> exit
+  VERIFY show running-config | include TMP_ACL_TEST:
+      ip access-list extended TMP_ACL_TEST
+       ip access-group TMP_ACL_TEST in
+  VERIFY show acl res:
+      ^
+      % Invalid input detected at '^' marker.
+======================================================================
+### QoS 配置
+  [mls qos] -> mls qos / % Unknown command.
+  [interface GigabitEthernet 1/0/1] -> interface GigabitEthernet 1/0/1 / Ruijie(config-if-GigabitEthernet 1/0/1)#
+  [mls qos trust dscp] -> mls qos trust dscp / % Unknown command. / Ruijie(config-if-GigabitEthernet 1/0/1)#
+  [exit] -> exit
+  VERIFY show running-config | include mls qos:
+      

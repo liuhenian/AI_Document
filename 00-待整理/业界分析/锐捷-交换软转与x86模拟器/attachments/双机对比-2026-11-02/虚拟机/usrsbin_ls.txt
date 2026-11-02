@@ -1,0 +1,10 @@
+ls /usr/sbin
+addgroup       ftpd           rdate          sysctl         ubirsvol
+adduser        ifplugd        rdev           tftpd          ubiupdatevol
+chat           killall5       readprofile    tree           update-pciids
+chroot         lspci          reboot         ubiattach
+crond          nanddump       rpm2cpio       ubidetach
+delgroup       nandwrite      rtcwake        ubimkvol
+deluser        powertop       setpci         ubirmvol
+~ #
+~ #

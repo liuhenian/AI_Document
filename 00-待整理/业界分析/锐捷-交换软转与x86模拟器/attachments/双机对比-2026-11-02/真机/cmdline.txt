@@ -1,0 +1,5 @@
+cat /proc/cmdline
+
+quiet console=ttyS0,9600n8 mtdparts=spi0.0:16M@0M(rom),1M@0M(slave_bootloader),1M@1M(master_bootloader),64k@2048k(ddr_para_slave0),64k@2112k(bootloader_env),64k@2176k(product_info),128k@2240k(factory_test0),512k@2368k(ttyMTD),64k@2944k(ddr_para_master0),13M@3M(rboot);spi0.1:16M@0M(rom_other),1M@0M(slave_bootloader_other),1M@1M(master_bootloader_other),64k@2048k(ddr_para_slave1),64k@2112k(bootloader_env_other),64k@2176k(product_info_other),128k@2240k(factory_test1),512k@2368k(ttyMTD2),64k@2944k(ddr_para_master1),13M@3M(rboot_other)
+~ #
+~ #

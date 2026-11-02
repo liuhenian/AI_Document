@@ -1,0 +1,14 @@
+drwxr-xr-x   11 root     root          4096 Oct 26 20:30 kernel
+-rw-r--r--    1 root     root        421619 Oct 26 20:30 modules.alias
+-rw-r--r--    1 root     root        409099 Oct 26 20:30 modules.alias.bin
+-rw-r--r--    1 root     root          5519 Oct 26 20:30 modules.builtin
+-rw-r--r--    1 root     root          7207 Oct 26 20:30 modules.builtin.bin
+-rw-r--r--    1 root     root         41905 Oct 26 20:30 modules.builtin.modinfo
+-rw-r--r--    1 root     root        123006 Oct 26 20:30 modules.dep
+-rw-r--r--    1 root     root        504410 Oct 30 08:37 modules.dep.bb
+-rw-r--r--    1 root     root        188683 Oct 26 20:30 modules.dep.bin
+-rw-r--r--    1 root     root           244 Oct 26 20:30 modules.devname
+-rw-r--r--    1 root     root         58218 Oct 26 20:30 modules.order
+-rw-r--r--    1 root     root           607 Oct 26 20:30 modules.softdep
+-rw-r--r--    1 root     root        222428 Oct 26 20:30 modules.symbols
+-rw-r--r--    1 root     root        268713 Oct 26 20:30 modules.symbols.bin

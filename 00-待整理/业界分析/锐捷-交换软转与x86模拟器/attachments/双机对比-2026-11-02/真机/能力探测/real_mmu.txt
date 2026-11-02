@@ -1,0 +1,27 @@
+##### show queue-buffer interface GigabitEthernet 1/0/1
+Dev/slot   Port-group   Total-shared(%)   Guarantee-used(%)   Share-used(%)   Available(%)   Warn-limit(%)
+1/-        1            100.0000          NA                  0.0000          100.0000       NA
+Interface GigabitEthernet 1/0/1:
+Type        Queue   Admin-shared(%)   Total-used(%)   Available(%)   Warn-limit(%)   Peak-usage(%)   Peak-time
+Unicast     1       (default)         0.0000          50.0000        NA              0.0000          NA
+Unicast     2       (default)         0.0000          50.0000        NA              0.0000          NA
+Unicast     3       (default)         0.0000          50.0000        NA              0.0000          NA
+Unicast     4       (default)         0.0000          50.0000        NA              0.0000          NA
+Unicast     5       (default)         0.0000          50.0000        NA              0.0000          NA
+Unicast     6       (default)         0.0000          50.0000        NA              0.0000          NA
+Unicast     7       (default)         0.0000          50.0000        NA              0.0000          NA
+Unicast     8       (default)         0.0000          50.0000        NA              0.0000          NA
+
+##### show monitor session 1
+
+
+##### show card voltage
+Not support.
+
+##### show split summary
+*  means restart or reset is to be needed.
+Port          SplitStatus  SplitPorts
+------------- ------------ -------------------------------------------
+
+##### show mls qos maps
+% Incomplete command.

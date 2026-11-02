@@ -1,0 +1,55 @@
+##### show version
+!
+System description      : Ruijie 10G Ethernet Switch(S5760C-48GT4XS-X) By Ruijie Networks
+System start time       : 2026-11-02 14:02:16
+System uptime           : 00:00:17:25
+System hardware version : 1.00
+System software version : S5760X_RGOS 12.6(4)B0706
+System patch number     : NA
+System serial number    : 1234942570080
+System boot version     : 1.4.80(Master) 1.4.58(Slave)
+System rboot version    : 2.0.53
+Module information:
+  Slot 1/0 : S5760C-48GT4XS-X
+    System uptime       : 00:00:17:25
+    Hardware version    : 1.00
+    Boot version        : 1.4.80(Master) 1.4.58(Slave)
+    Rboot version       : 2.0.53
+    Software version    : S5760X_RGOS 12.6(4)B0706
+    Serial number       : 1234942570080
+  Slot 2/0 : S5760C-48GT4XS-X
+    System uptime       : 00:00:17:14
+    Hardware version    : 3.00
+    Boot version        : 1.4.80(Master) 1.4.68(Slave)
+    Rboot version       : 2.0.53
+    Software version    : S5760X_RGOS 12.6(4)B0706
+    Serial number       : 1234942570063
+!!!!!!!!!!!!!!!!!!!!!!!
+
+##### show environment
+!
+              ^
+% Invalid input detected at '^' marker.
+!!!!!!!!!!!100%
+Upgrade success
+< The terminal is unlock >
+
+##### show fan
+Fan id Type             Status     Hardware Version Serial Number
+------ ---------------- ---------- ---------------- ---------------
+1/1    RG_FAN           ok         N/A              N/A
+1/2    RG_FAN           ok         N/A              N/A
+2/1    RG_FAN           ok         N/A              N/A
+2/2    RG_FAN           ok         N/A              N/A
+
+##### show power
+Power-id Power-type           Status     Hardware-Version Serial                          Supply(W)
+-------- -------------------- ---------- ---------------- ------------------------------- ---------
+1/1      N/A                  no-present N/A              N/A                             N/A
+1/2      RG-PA150I-F          ok         1.50             R253A2342150308                 150
+2/1      N/A                  no-present N/A              N/A                             N/A
+2/2      RG-PA150I-F          ok         1.50             R253A2342150644                 150
+
+##### show transceiver
+^
+% Invalid input detected at '^' marker.

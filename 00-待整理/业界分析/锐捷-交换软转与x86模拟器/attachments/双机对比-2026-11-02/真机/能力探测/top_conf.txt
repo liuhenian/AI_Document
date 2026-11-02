@@ -1,0 +1,4 @@
+configure terminal ?
+% Unrecognized command.
+
+Ruijie(config)#configure terminal

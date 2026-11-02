@@ -1,0 +1,13 @@
+df -h
+Filesystem                Size      Used Available Use% Mounted on
+/dev/mmcblk0p11           1.6G    616.0M    982.7M  39% /
+/dev/mmcblk0p12           3.6G    697.3M      2.8G  20% /data
+tmpfs                   486.4M     19.2M    467.2M   4% /tmp
+/dev/zram0              455.2M     32.0M    413.5M   7% /tmp/zram_vsd
+tmpfs                   486.4M      2.9M    483.6M   1% /private_tmp
+tmpfs                   512.0K         0    512.0K   0% /dev
+tmpfs                   486.4M      5.3M    481.1M   1% /dev/shm
+tmpfs                   486.4M     19.2M    467.2M   4% /tmp/netns
+none                    486.4M         0    486.4M   0% /var/upgrade_mount
+~ #
+~ #

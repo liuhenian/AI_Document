@@ -1,0 +1,283 @@
+ps -ef
+UID        PID  PPID  C STIME TTY          TIME CMD
+root         1     0  0 Oct30 ?        00:00:08 /sbin/startup
+root         2     0  0 Oct30 ?        00:00:00 [kthreadd]
+root         3     2  0 Oct30 ?        00:00:00 [rcu_gp]
+root         4     2  0 Oct30 ?        00:00:00 [rcu_par_gp]
+root         6     2  0 Oct30 ?        00:00:00 [kworker/0:0H-kblockd]
+root         8     2  0 Oct30 ?        00:00:00 [mm_percpu_wq]
+root         9     2  0 Oct30 ?        00:30:45 [ksoftirqd/0]
+root        10     2  0 Oct30 ?        00:01:39 [rcu_sched]
+root        11     2  0 Oct30 ?        00:00:05 [migration/0]
+root        12     2  0 Oct30 ?        00:00:00 [kworker/0:1-events]
+root        13     2  0 Oct30 ?        00:00:00 [cpuhp/0]
+root        14     2  0 Oct30 ?        00:00:00 [cpuhp/1]
+root        15     2  0 Oct30 ?        00:00:04 [migration/1]
+root        16     2  0 Oct30 ?        00:00:00 [ksoftirqd/1]
+root        17     2  0 Oct30 ?        00:00:00 [kworker/1:0-mm_percpu_wq]
+root        18     2  0 Oct30 ?        00:00:00 [kworker/1:0H-events_highpri]
+root        19     2  0 Oct30 ?        00:00:00 [kdevtmpfs]
+root        20     2  0 Oct30 ?        00:00:00 [netns]
+root        22     2  0 Oct30 ?        00:00:00 [kauditd]
+root       278     2  0 Oct30 ?        00:00:00 [khungtaskd]
+root       279     2  0 Oct30 ?        00:00:00 [oom_reaper]
+root       280     2  0 Oct30 ?        00:00:00 [writeback]
+root       282     2  0 Oct30 ?        00:00:00 [kcompactd0]
+root       283     2  0 Oct30 ?        00:00:00 [ksmd]
+root       284     2  0 Oct30 ?        00:00:00 [khugepaged]
+root       306     2  0 Oct30 ?        00:00:00 [kintegrityd]
+root       308     2  0 Oct30 ?        00:00:00 [kblockd]
+root       309     2  0 Oct30 ?        00:00:00 [blkcg_punt_bio]
+root       460     2  0 Oct30 ?        00:00:00 [tpm_dev_wq]
+root       466     2  0 Oct30 ?        00:00:00 [ata_sff]
+root       486     2  0 Oct30 ?        00:00:00 [edac-poller]
+root       492     2  0 Oct30 ?        00:00:00 [devfreq_wq]
+root       495     2  0 Oct30 ?        00:00:00 [watchdogd]
+root       590     2  0 Oct30 ?        00:00:00 [kworker/1:1]
+root       610     2  0 Oct30 ?        00:00:11 [kswapd0]
+root       786     2  0 Oct30 ?        00:00:00 [kthrotld]
+root       907     2  0 Oct30 ?        00:00:00 [ipv6_addrconf]
+root       915     2  0 Oct30 ?        00:13:31 [kmemleak]
+root       916     2  0 Oct30 ?        00:00:00 [kworker/u5:0]
+root       952     2  0 Oct30 ?        00:00:00 [scsi_eh_0]
+root       953     2  0 Oct30 ?        00:00:00 [scsi_tmf_0]
+root       957     2  0 Oct30 ?        00:00:00 [scsi_eh_1]
+root       958     2  0 Oct30 ?        00:00:00 [scsi_tmf_1]
+root       976     2  0 Oct30 ?        00:06:43 [kworker/0:1H-kblockd]
+root       988     2  0 Oct30 ?        00:00:45 [kworker/0:2-events]
+root       994     2  0 Oct30 ?        00:00:20 [jbd2/sda7-8]
+root       995     2  0 Oct30 ?        00:00:00 [ext4-rsv-conver]
+root       998     2  0 Oct30 ?        00:00:02 [jbd2/sda3-8]
+root       999     2  0 Oct30 ?        00:00:00 [ext4-rsv-conver]
+root      1668     2  0 Oct30 ?        00:00:00 [jbd2/sda6-8]
+root      1669     2  0 Oct30 ?        00:00:00 [ext4-rsv-conver]
+root      1671     2  0 Oct30 ?        00:00:00 [jbd2/sda5-8]
+root      1672     2  0 Oct30 ?        00:00:00 [ext4-rsv-conver]
+root      1673     1  0 Oct30 tty3     00:00:00 /bin/bash --
+root      1862     2  0 Oct30 ?        00:00:00 [uas]
+root      2012     2  0 Oct30 ?        00:00:00 [dump_memoryinfo]
+root      2052     2  0 Oct30 ?        00:00:00 [lmk_cap_get_val]
+root      2053     2  0 Oct30 ?        00:00:00 [lmk_ham_mon_thr]
+root      2054     2  0 Oct30 ?        00:00:00 [lmk_event_task]
+root      2055     2  0 Oct30 ?        00:00:00 [lmk_task]
+root      2056     2  0 Oct30 ?        00:00:02 [lmk_cpu_stat]
+root      2108     1  0 Oct30 ?        00:11:45 /sbin/ham
+root      2115     1  0 Oct30 ?        00:00:15 /sbin/bspinfo.elf
+root      2140     2  0 Oct30 ?        00:00:00 [hamk_cap_get_va]
+root      2141     2  0 Oct30 ?        00:00:01 [hamk_cpu0]
+root      2371     1  0 Oct30 ?        00:00:04 /sbin/demand_start.elf
+root      2498     1  0 Oct30 ?        00:02:55 /sbin/cli-server
+root      2499     1  0 Oct30 ?        00:00:37 /sbin/rg-tty-admin
+root      2508  2499  0 Oct30 ?        00:00:10 /sbin/rg-tty-admin
+root      2513  2498  0 Oct30 ?        00:00:03 /sbin/cli-server
+root      2532     1  0 Oct30 ?        00:06:31 /sbin/redis-server /tmp/redis/re
+root      2541     1  0 Oct30 ?        00:00:19 /sbin/rg-configd
+root      2552     1  0 Oct30 ?        00:08:09 /sbin/rgmomd
+root      2561     1  0 Oct30 ?        00:00:05 /sbin/ce_apm_sw
+root      2568     1  0 Oct30 ?        00:00:00 /sbin/rg_cap
+root      2602     2  0 Oct30 ?        00:00:02 [ref_ip_route]
+root      2626     2  0 Oct30 ?        00:00:02 [ref_ipv6_route]
+root      2650     2  0 Oct30 ?        00:00:00 [rg_packet_msg_t]
+root      2670     1  0 Oct30 ?        00:04:26 redis_ctrl_host 17
+root      2672     1  0 Oct30 ?        00:00:01 /sbin/tipc-tap
+root      2683     1  0 Oct30 ?        00:03:24 redis_qos_host 22
+root      2695     2  0 Oct30 ?        00:00:00 [lsm-kthread]
+root      2776     2  0 Oct30 ?        00:00:00 [kworker/1:1H-kblockd]
+root      2984     1 99 Oct30 ?        2-19:07:35 /sbin/efmp_frame.elf -c 3 -b 0
+root      2996     1  0 Oct30 ?        00:00:01 /sbin/mom_rdnd_ctrl
+root      3011     1  1 Oct30 ?        00:44:12 /sbin/dm_dp
+root      3030     1  0 Oct30 ?        00:00:07 /sbin/rg-coredump-mon
+root      3041     1  1 Oct30 ?        00:47:27 /sbin/rg-sysmon
+root      3048     1  0 Oct30 ?        00:00:02 /sbin/safe_verify_svr
+root      3055     1  0 Oct30 ?        00:00:01 /sbin/app_df
+root      3063     1  0 Oct30 ?        00:28:14 /sbin/dm_app_pd
+root      3072     1  0 Oct30 ?        00:00:14 /sbin/rldp.elf
+root      3104     1  0 Oct30 ?        00:00:02 /sbin/rbac
+root      3115     1  0 Oct30 ?        00:03:40 redis_de_standalone 7
+root      3116     1  0 Oct30 ?        00:00:07 /sbin/rg_rdnd_server.elf
+root      3132     1  0 Oct30 ?        00:00:20 /sbin/aaad
+root      3174     1  0 Oct30 ?        00:03:39 redis_host_fwd 8
+root      3185     1  0 Oct30 ?        00:00:03 /sbin/vsdm
+root      3191     1  0 Oct30 ?        00:03:38 redis_cfg_cp 12
+root      3205     1  0 Oct30 ?        00:03:38 redis_ibc_host 13
+root      3208     1  0 Oct30 ?        00:00:02 /sbin/rg-mtdoops-cli
+root      3227     1  0 Oct30 ?        00:03:38 redis_cfg_can 15
+root      3241     1  0 Oct30 ?        00:03:37 redis_cfg_load 20
+root      3259     1  0 Oct30 ?        00:00:00 /sbin/rg_cap_tran
+root      3282     2  0 Oct30 ?        00:00:00 [tcp_nss_send]
+root      3287     2  0 Oct30 ?        00:00:00 [kir thread]
+root      3288     2  0 Oct30 ?        00:00:00 [netk_openport]
+root      3291     2  0 Oct30 ?        00:00:00 [netk_tcpip_msg]
+root      3292     2  0 Oct30 ?        00:00:00 [IP_WebAH_Rcv_0]
+root      3293     2  0 Oct30 ?        00:00:00 [IP_WebAH_Rcv_1]
+root      3294     2  0 Oct30 ?        00:00:00 [IP_WebAH_Rcv_2]
+root      3295     2  0 Oct30 ?        00:00:00 [IP_WebAH_Rcv_3]
+root      3296     2  0 Oct30 ?        00:00:00 [icmp-err]
+root      3307     2  0 Oct30 ?        00:00:00 [IP6_WebAH_Rcv_0]
+root      3308     2  0 Oct30 ?        00:00:00 [IP6_WebAH_Rcv_1]
+root      3309     2  0 Oct30 ?        00:00:00 [IP6_WebAH_Rcv_2]
+root      3310     2  0 Oct30 ?        00:00:00 [IP6_WebAH_Rcv_3]
+root      3318     1  0 Oct30 ?        00:00:42 /sbin/tcpip.elf
+root      3330     1  0 Oct30 ?        00:00:01 /sbin/timerange
+root      3337     1  0 Oct30 ?        00:00:22 /sbin/nsm.elf
+root      3344     1  0 Oct30 ?        00:00:04 /sbin/arp_sprs.elf
+root      3351     1  0 Oct30 ?        00:00:16 /sbin/vxlan.elf
+root      3358     1  0 Oct30 ?        00:00:03 /sbin/lsm_kproxy.elf
+root      3366     1  0 Oct30 ?        00:00:03 /sbin/fiber_test.elf
+root      3373     1  0 Oct30 ?        00:03:14 /sbin/lsm.elf
+root      3380     1  0 Oct30 ?        00:02:47 /sbin/bridge.elf
+root      3388     1  0 Oct30 ?        00:00:03 /sbin/ping.elf
+root      3398     1  0 Oct30 ?        00:00:01 /sbin/tftp_tipc_server
+root      3406     1  0 Oct30 ?        00:00:26 /sbin/mstp.elf
+root      3415     1  0 Oct30 ?        00:00:03 /sbin/ref_proxy.elf
+root      3423     1  0 Oct30 ?        00:00:17 /sbin/rg-sshd
+root      3430     1  0 Oct30 ?        00:00:12 /sbin/rg-telnetd
+root      3438     1  0 Oct30 ?        00:00:04 /sbin/rpi.elf
+root      3447     1  0 Oct30 ?        00:00:32 /sbin/bgp.elf
+root      3454     1  0 Oct30 ?        00:00:43 /sbin/grpc.elf
+root      3461     1  0 Oct30 ?        00:01:56 /sbin/grpc_vty.elf
+root      3478     1  0 Oct30 ?        00:00:33 /sbin/ospf.elf
+root      3485     1  0 Oct30 ?        00:00:27 /sbin/psar.elf
+root      3492     1  0 Oct30 ?        00:00:04 /sbin/rip.elf
+root      3499     1  0 Oct30 ?        00:00:07 /sbin/dns_client.elf
+root      3506     1  0 Oct30 ?        00:00:11 /sbin/isis.elf
+root      3514     1  0 Oct30 ?        00:00:30 /sbin/ospfv3.elf
+root      3529     1  0 Oct30 ?        00:00:04 /sbin/ripng.elf
+root      3536     1  0 Oct30 ?        00:00:03 /sbin/nd_sprs.elf
+root      3544     1  0 Oct30 ?        00:00:02 /sbin/ipmix.elf
+root      3551     1  0 Oct30 ?        00:00:02 /sbin/rnsmib.elf
+root      3559     1  0 Oct30 ?        00:00:07 /sbin/ldp.elf
+root      3567     1  0 Oct30 ?        00:00:03 /sbin/rg_licns
+root      3574     1  0 Oct30 ?        00:04:29 /sbin/congestctrl_server
+root      3583     1  0 Oct30 ?        00:26:24 /sbin/rg-telnetc
+root      3590     1  0 Oct30 ?        00:00:01 /sbin/tunnel.elf
+root      3601     1  0 Oct30 ?        00:02:56 /sbin/rg-sshc
+root      3608     1  0 Oct30 ?        00:01:13 /sbin/diag_log.elf
+root      3619     1  0 Oct30 ?        00:01:01 /sbin/netconf.elf
+root      3628     1  0 Oct30 ?        00:00:14 /sbin/tech-support
+root      3635     1  0 Oct30 ?        00:00:00 /sbin/mom_trace
+root      3654     1  0 Oct30 ?        00:00:01 /sbin/rg_mom_proto_pass
+root      3661     1  0 Oct30 ?        00:00:03 /sbin/eap.elf
+root      3668     1  0 Oct30 ?        00:00:29 /sbin/rg_syslogd
+root      3675     1  0 Oct30 ?        00:00:05 /sbin/password_policy
+root      3677  3668  0 Oct30 ?        00:01:28 /sbin/rg_syslogd
+root      3679  3668  0 Oct30 ?        00:00:00 /sbin/rg_syslogd
+root      3706     1  0 Oct30 ?        00:04:48 /sbin/sem
+root      3727     1  0 Oct30 ?        00:01:31 /sbin/hdf_mgnt
+root      3736     1  0 Oct30 ?        00:00:01 /sbin/hdf_sys
+root      3743     1  0 Oct30 ?        00:00:04 /sbin/psh_server
+root      3758     1  0 Oct30 ?        00:00:15 /sbin/rg-fsui
+root      3765     1  0 Oct30 ?        00:00:02 /sbin/flinfod
+root      3772     1  0 Oct30 ?        00:00:03 /sbin/zam.elf
+root      3783     1  0 Oct30 ?        00:00:01 /sbin/python_shell.elf
+root      3791     1  0 Oct30 ?        00:03:05 /sbin/cwmp.elf
+root      3799     1  0 Oct30 ?        00:00:03 /sbin/cwmp_gsoap.elf
+root      3806     1  0 Oct30 ?        00:00:01 /sbin/upgrade_global
+root      3814     1  0 Oct30 ?        00:00:01 /sbin/upgrade_local
+root      3825     1  0 Oct30 ?        00:00:02 /sbin/upgrade_app_download.elf
+root      3832     1  0 Oct30 ?        00:00:01 /sbin/upgrade_app_global.elf
+root      3839     1  0 Oct30 ?        00:00:05 /sbin/upgrade_cli
+root      3847     1  0 Oct30 ?        00:00:03 /sbin/upgrade_auto_sync.elf
+root      3854     1  0 Oct30 ?        00:00:01 /sbin/upgrade_app_local_spec.elf
+root      3864     1  0 Oct30 ?        00:00:08 /sbin/cfm.elf
+root      3871     1  0 Oct30 ?        00:01:15 /sbin/efm.elf
+root      3878     1  0 Oct30 ?        00:00:02 /sbin/rns_server.elf
+root      3885     1  0 Oct30 ?        00:00:02 /sbin/ids.elf
+root      3892     1  0 Oct30 ?        00:00:37 /sbin/ppp.elf
+root      3900     1  0 Oct30 ?        00:00:02 /sbin/pppoe.elf
+root      3910     1  0 Oct30 ?        00:00:34 /sbin/rg-resmon
+root      3917     1  0 Oct30 ?        00:00:17 /sbin/rg-snmpd
+root      3925     1  0 Oct30 ?        00:00:04 /sbin/rns.elf
+root      3933     1  0 Oct30 ?        00:00:14 /sbin/ipsec
+root      3941     1  0 Oct30 ?        00:00:10 /sbin/track.elf
+root      3948     1  0 Oct30 ?        00:00:07 /sbin/igmp.elf
+root      3956     1  0 Oct30 ?        00:00:10 /sbin/igmp_snp.elf
+root      3963     1  0 Oct30 ?        00:00:07 /sbin/mld.elf
+root      3970     1  0 Oct30 ?        00:00:08 /sbin/mld_snp.elf
+root      3977     1  0 Oct30 ?        00:00:07 /sbin/msdp.elf
+root      3984     1  0 Oct30 ?        00:00:10 /sbin/msf.elf
+root      3991     1  0 Oct30 ?        00:00:10 /sbin/msf6.elf
+root      3998     1  0 Oct30 ?        00:00:07 /sbin/pdmd.elf
+root      4005     1  0 Oct30 ?        00:00:07 /sbin/pim6d.elf
+root      4012     1  0 Oct30 ?        00:00:44 /sbin/pimd.elf
+root      4019     1  0 Oct30 ?        00:00:41 /sbin/lldp.elf
+root      4026     1  0 Oct30 ?        00:02:22 /sbin/lacp.elf
+root      4033     1  0 Oct30 ?        00:00:09 /sbin/gvrpd
+root      4042     1  0 Oct30 ?        00:00:04 /sbin/dldp.elf
+root      4049     1  0 Oct30 ?        00:00:02 /sbin/nat.elf
+root      4056     1  0 Oct30 ?        00:00:02 /sbin/pbr.elf
+root      4063     1  0 Oct30 ?        00:04:08 /sbin/sccd
+root      4071     1  0 Oct30 ?        00:15:12 /sbin/acld
+root      4083     1  0 Oct30 ?        00:00:21 /sbin/security_log.elf
+root      4093     1  0 Oct30 ?        00:00:56 /sbin/webauth
+root      4101     1  0 Oct30 ?        00:02:17 /sbin/rdsd
+root      4108     1  0 Oct30 ?        00:00:13 /sbin/tacplusd
+root      4116     1  0 Oct30 ?        00:03:11 /sbin/dot1x
+root      4125     1  0 Oct30 ?        00:00:33 /sbin/rdsproxy
+root      4140     1  0 Oct30 ?        00:01:48 /sbin/dhcp.elf
+root      4157     1  0 Oct30 ?        00:00:08 /sbin/vrrp.elf
+root      4165     1  0 Oct30 ?        00:00:08 /sbin/vrrp_plus.elf
+root      4172     1  0 Oct30 ?        00:00:09 /sbin/urpf.elf
+root      4180     1  0 Oct30 ?        00:00:47 /sbin/dhcp6.elf
+root      4187     1  0 Oct30 ?        00:00:21 /sbin/dhcpc.elf
+root      4196     1  0 Oct30 ?        00:00:13 /sbin/dns_snp.elf
+root      4204     1  0 Oct30 ?        00:00:10 /sbin/dhcp6c.elf
+root      4212     1  0 Oct30 ?        00:00:14 /sbin/dnsd.elf
+root      4219     1  0 Oct30 ?        00:00:01 /sbin/ver_agent
+root      4227     1  0 Oct30 ?        00:09:47 /sbin/bfd.elf
+root      4250     1  0 Oct30 ?        00:00:50 /sbin/ntp.elf
+root      4266     1  0 Oct30 ?        00:00:13 /sbin/termid.elf
+root      4277     1  0 Oct30 ?        00:00:03 /sbin/ftpc_cli.elf
+root      4285     1  0 Oct30 ?        00:00:06 /sbin/rg-rmond
+root      4292     1  0 Oct30 ?        00:00:08 /sbin/tftpd.elf
+root      4301     1  0 Oct30 ?        00:00:11 /sbin/ftp_server.elf
+root      4309     1  0 Oct30 ?        00:00:05 /sbin/cmpnt_upgrade_server.elf
+root      4317     1  0 Oct30 ?        00:00:26 /sbin/cmpnt_upgrade_client.elf
+root      4327     1  0 Oct30 ?        00:00:43 /sbin/openflow
+root      4334     1  0 Oct30 ?        00:00:05 /sbin/tir.elf
+root      4341     1  0 Oct30 ?        00:00:09 /sbin/mosquitto.elf
+root      4349     1  0 Oct30 ?        00:00:49 /sbin/reup.elf
+root      4359     1  0 Oct30 ?        00:00:31 /sbin/rg_apm
+root      4366     1  0 Oct30 ?        00:00:12 /sbin/cli-proxy
+root      4373     1  0 Oct30 ?        00:00:05 /sbin/nginx_cmd.elf
+root      4380     1  0 Oct30 ?        00:00:04 /sbin/zlogd
+root      4391     1  0 Oct30 ?        00:00:02 /sbin/alarm.elf
+root      4403     1  0 Oct30 ?        00:00:09 /sbin/cmdk.elf
+root      4417     1  0 Oct30 ?        00:00:47 /sbin/erps.elf
+root      4431     1  0 Oct30 ?        00:00:04 /sbin/rbs.elf
+root      4438     1  0 Oct30 ?        00:00:18 /sbin/rg_aof
+root      4454     1  0 Oct30 ?        00:08:11 /sbin/rg_oam_server.elf
+root      4461     1  0 Oct30 ?        00:03:00 /sbin/savi.elf
+root      4468     1  0 Oct30 ?        00:03:16 /sbin/snooping.elf
+root      4481     1  0 Oct30 ?        00:00:01 /sbin/rg_cpurule
+root      4492     1  0 Oct30 ?        00:00:02 /sbin/lsm_rpc_agent.elf
+root      4500     1  0 Oct30 ?        00:00:12 /sbin/mdns.elf
+root      4521     1  0 Oct30 ?        00:00:02 /sbin/sntp.elf
+root      4529     1  0 Oct30 ?        00:07:53 /sbin/sysha
+root      4638     1  0 Oct30 ?        00:06:19 redis_ce_global 2
+root      4655     1  0 Oct30 ?        00:04:04 redis_ce_fwd_global 3
+root      4663     1  0 Oct30 ?        00:03:59 redis_de_global 4
+root      4669     1  0 Oct30 ?        00:03:59 redis_de_fwd_global 5
+root      4675     1  0 Oct30 ?        00:04:47 redis_monitor_global 6
+root      4698     1  0 Oct30 ?        00:03:55 redis_ms_global 9
+root      4704     1  0 Oct30 ?        00:04:03 redis_ms_fwd_global 10
+root      4709     1  0 Oct30 ?        00:06:41 redis_cfg_global 11
+root      4715     1  0 Oct30 ?        00:03:58 redis_cap 14
+root      4726     1  0 Oct30 ?        00:03:41 redis_ctrl_global 16
+root      4742     1  0 Oct30 ?        00:04:25 redis_dev_global 18
+root      4756     1  0 Oct30 ?        00:03:40 redis_cap_cfg_load 19
+root      4767     1  0 Oct30 ?        00:03:41 redis_qos_global 23
+root      4815     2  0 Oct30 ?        00:00:00 [tcp_nss_s]
+root      4901  2499  0 Oct30 ttyS1    00:06:34 rl-con -n 0 -t /dev/ttyS1 -i con
+root      5565  3430  0 Oct30 pts/0    00:00:04 /sbin/rg-telnetd
+root      5566  5565  0 Oct30 pts/0    00:04:28 rl-con -n 258 -t /dev/pts/0 -i c
+root     23936  5566  0 03:05 pts/0    00:00:00 /bin/sh
+root     24567     2  0 03:12 ?        00:00:00 [kworker/u4:2-events_unbound]
+root     27201     2  0 03:17 ?        00:00:00 [kworker/u4:1-events_unbound]
+root     27407     2  0 03:22 ?        00:00:00 [kworker/u4:0-events_unbound]
+root     27457  3430  0 03:23 pts/1    00:00:00 /sbin/rg-telnetd
+root     27458 27457  0 03:23 pts/1    00:00:00 rl-con -n 259 -t /dev/pts/1 -i c
+root     27470 27458  0 03:24 pts/1    00:00:00 /bin/sh
+root     27481 27470 99 03:24 pts/1    00:00:00 ps -ef
+~ #
+~ #

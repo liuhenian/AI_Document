@@ -1,0 +1,9 @@
+ls /
+bin           gcov_deb      linuxrc       proto.tar.xz  sys
+boot          home          lost+found    rg_cfg        tmp
+bootloader    install       mnt           rgos          usr
+data          lib           overlay       root          var
+dev           lib64         private_tmp   rootfs
+etc           libexec       proc          sbin
+~ #
+~ #

@@ -1,0 +1,60 @@
+lsmod
+mem_reclm_watermark 16384 0 - Live 0xffffffffc08ee000 (O)
+rg_ipv6 110592 0 [permanent], Live 0xffffffffc08d2000 (O)
+ipv4 761856 17 rg_ipv6, Live 0xffffffffc0817000 (O)
+rg_time 16384 0 - Live 0xffffffffc07ad000 (O)
+igb_uio 20480 0 - Live 0xffffffffc07a7000 (O)
+lsm_ko 335872 268 rg_ipv6,ipv4, Live 0xffffffffc07c4000 (O)
+af_packet 49152 0 - Live 0xffffffffc07b7000 (O)
+ef_msg_agent 16384 3 rg_ipv6,ipv4,af_packet, Live 0xffffffffc07b2000 (O)
+ef_buff 1572864 21 rg_ipv6,ipv4,af_packet, Live 0xffffffffc0626000 (O)
+rg_utils_cpurule 28672 1 lsm_ko, Live 0xffffffffc061e000 (O)
+lsm_cbb 16384 0 - Live 0xffffffffc0619000 (O)
+net_cbb 65536 2 rg_ipv6,ipv4, Live 0xffffffffc0608000 (O)
+tipc 344064 1240 - Live 0xffffffffc05b3000 (O)
+rg_thread_det 36864 0 - Live 0xffffffffc05a9000 (O)
+rg_status_notifier 16384 0 - Live 0xffffffffc0595000 (O)
+product_info_utils 32768 0 - Live 0xffffffffc05a0000 (O)
+aer_print 16384 0 - Live 0xffffffffc059b000 (O)
+rg_lowmem_killer 69632 0 - Live 0xffffffffc0583000 (O)
+pshk 16384 0 - Live 0xffffffffc056b000 (O)
+aer_attach 16384 0 - Live 0xffffffffc04fa000 (O)
+rg_dprintk 16384 6 rg_ipv6,ipv4,lsm_ko,af_packet,ef_msg_agent,ef_buff, Live 0xffffffffc04dc000 (O)
+proc_info 24576 1 rg_thread_det, Live 0xffffffffc0532000 (O)
+usbhid 65536 0 - Live 0xffffffffc0572000
+hid 143360 1 usbhid, Live 0xffffffffc0547000
+uas 32768 0 - Live 0xffffffffc053e000
+usb_storage 94208 1 uas, Live 0xffffffffc051a000
+ohci_pci 20480 0 - Live 0xffffffffc04d6000
+ohci_hcd 61440 1 ohci_pci, Live 0xffffffffc050a000
+ehci_pci 20480 0 - Live 0xffffffffc0500000
+ehci_hcd 98304 1 ehci_pci, Live 0xffffffffc04e1000
+xhci_pci 20480 0 - Live 0xffffffffc042f000
+xhci_hcd 274432 1 xhci_pci, Live 0xffffffffc048d000
+i2c_smbus 20480 0 - Live 0xffffffffc047e000
+i2c_mux_pca954x 32768 0 - Live 0xffffffffc0484000
+tun 61440 21 - Live 0xffffffffc046e000
+uio_pci_generic 16384 10 - Live 0xffffffffc0469000
+uio 20480 22 igb_uio,uio_pci_generic, Live 0xffffffffc044e000
+vmxnet3 65536 0 - Live 0xffffffffc0454000
+virtio_net 57344 0 - Live 0xffffffffc043f000
+net_failover 20480 1 virtio_net, Live 0xffffffffc0429000
+failover 16384 1 net_failover, Live 0xffffffffc038d000
+virtio_pci 28672 0 - Live 0xffffffffc0437000
+virtio_ring 40960 2 virtio_net,virtio_pci, Live 0xffffffffc03de000
+virtio 16384 2 virtio_net,virtio_pci, Live 0xffffffffc03d9000
+igb 253952 0 - Live 0xffffffffc03ea000
+i2c_algo_bit 16384 1 igb, Live 0xffffffffc0388000
+e1000e 286720 0 - Live 0xffffffffc0392000
+e1000 155648 0 - Live 0xffffffffc0361000
+dca 16384 1 igb, Live 0xffffffffc035c000
+ptp 24576 2 igb,e1000e, Live 0xffffffffc0351000
+pps_core 24576 1 ptp, Live 0xffffffffc0346000
+pci_stub 16384 0 - Live 0xffffffffc033d000
+mdio 16384 0 - Live 0xffffffffc0336000
+mii 16384 0 - Live 0xffffffffc0331000
+zram 24576 1 - Live 0xffffffffc032a000
+zsmalloc 32768 1 zram, Live 0xffffffffc031d000
+ata_piix 36864 4 - Live 0xffffffffc0313000
+~ #
+~ #

@@ -1,0 +1,443 @@
+##### show mls qos capacity
+supp_ap_pxe       : 1
+supp_svi          : 1
+supp_dc_vxlan     : 1
+supp_qid_0_7      : 0
+supp_fwdmode_soft : 0
+supp_cos2dscp_def : 0
+nosup_vir_group   : 0
+supp_outflow_group_min: 1
+supp_outflow_group_max: 128
+g_outflow_span_ap_dest: 1
+
+##### show mls qos features
+========== QOS FEATURES ==========
+ qos_ability_trust_cos
+ qos_ability_trust_ippre
+ qos_ability_trust_dscp
+ qos_ability_intf_cos
+ qos_ability_class
+ qos_ability_policy_in
+ qos_ability_policy_out
+ qos_ability_sch_wrr
+ qos_ability_sch_sp
+ qos_ability_sch_rr
+ qos_ability_sch_drr
+ qos_ability_sch_wfq
+ qos_ability_cos_queue
+ qos_ability_intf_ratelimit
+ qos_ability_sch_sp_drr
+ qos_ability_sch_sp_wrr
+ qos_ability_sch_sp_wfq
+ qos_ability_wred
+ qos_ability_mpls
+ qos_ability_policy_set_exp
+ qos_ability_mpls_dscp2exp
+ qos_ability_mc_sch_sp
+ qos_ability_mc_sch_rr
+ qos_ability_mc_sch_sp_drr
+ qos_ability_mc_sch_sp_wrr
+ qos_ability_intf_queue_bw
+ qos_ability_cos_threshold_glb
+ qos_ability_intf_uc_queue_bw
+ qos_ability_intf_sch
+ qos_ability_global_policy_in
+ qos_ability_global_policy_out
+ qos_ability_intf_dscp
+ qos_ability_glb_enable
+ qos_ability_wred_ecn_ap
+ qos_ability_eth_subif
+ qos_ability_intf_queue_bw_ap_ecn
+ qos_ability_drop_pkt
+ qos_ability_policy_match_exp
+ qos_ability_trust_exp
+ qos_ability_eth_subif_rl_in
+ qos_ability_eth_subif_rl_out
+ qos_ability_eth_subif_bw
+ qos_ability_set_cos
+ qos_ability_set_ipdscp
+ qos_ability_eth_ap_subif_not_supp
+ qos_ability_rl_in_statis
+ qos_ability_outflow_group
+
+##### show mls qos status
+========== QOSD GLOBAL STATUS ==========
+ g_qos_lsm_ready: 1
+ g_qos_scc_ready: 1
+ g_qos_acl_ready: 1/0
+ g_qos_ssp_ready: 1
+ g_qos_ssp_cap_ready: 1
+ g_qos_cli_dr_status: 2
+ g_qos_vmsup_dr_status: 0
+ g_qos_dr_finish: 1
+ g_qos_ready: 1
+ g_qos_timer_status: 0
+ ========== QOSD GLOBAL ABILITY ==========
+ g_police_bps_min: 0
+ g_police_bps_max: 100000000
+ g_police_burst_min: 0
+ g_police_burst_max: 8192
+ g_outflow_group_min: 1
+ g_outflow_group_max: 128
+ g_glb_mc_queue_num: 0
+ g_glb_mc_queue_bw_maxnum:  0 0 0 0 0 0 0 0
+ g_glb_mc_queue_bw_minnum:  0 0 0 0 0 0 0 0
+ g_glb_mc_queue_ability:
+    g_glb_mc_queue_maximum_bw_max:  1 1 1
+    g_glb_mc_queue_maximum_bw_min:  1 1 1
+    g_glb_mc_queue_minimum_bw_max:  1 1 1
+    g_glb_mc_queue_minimum_bw_min:  1 1 1
+    g_glb_mc_queue_max_def:  1 1 1
+ IF TYPE: FastEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: GigabitEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 1000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 1000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 1000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 1000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 1000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: MTGigabitEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: FiveGigabitEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: TenGigabitEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 10000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 10000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 10000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 10000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 10000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: TwentyGigabitEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: TFGigabitEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: FortyGigabitEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: HundredGigabitEthernet
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: Wireless
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: AggregatePort
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 4294967295
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 4294967295
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: VLAN
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: XTS
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 100000000
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 8192
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ IF TYPE: Protected-group
+ g_ratelimit_min_bps: 64
+ g_ratelimit_max_bps: 4294967295
+ g_ratelimit_min_burst: 4
+ g_ratelimit_max_burst: 4294967295
+ g_queue_maximum_bw_max: 100000000
+ g_queue_maximum_bw_min: 64
+ g_queue_minimum_bw_max: 100000000
+ g_queue_minimum_bw_min: 64
+ g_mc_queue_maximum_bw_max: 100000000
+ g_mc_queue_maximum_bw_min: 64
+ g_mc_queue_minimum_bw_max: 100000000
+ g_mc_queue_minimum_bw_min: 64
+ ---------- QOSD QUEUE STATUS ----------
+ g_queue_num: 8
+ g_queue_type: 1
+ g_queue_type_def: 1
+ g_wrr_weight_max: 15
+ g_wrr_queue: 1 1 1 1 1 1 1 1
+ g_wrr_queue_def: 1 1 1 1 1 1 1 1
+ g_drr_weight_max: 15
+ g_drr_queue: 1 1 1 1 1 1 1 1
+ g_drr_queue_def: 1 1 1 1 1 1 1 1
+ g_wfq_weight_max: 15
+ g_wfq_queue: 1 1 1 1 1 1 1 1
+ g_wfq_queue_def: 1 1 1 1 1 1 1 1
+ ---------- QOSD MC-QUEUE STATUS ----------
+ g_mc_queue_num: 0
+ g_mc_queue_type: 4
+ g_mc_queue_type_def: 4
+ g_mc_queue_weight_max: 255
+ g_mc_queue_weights: g_mc_queue_weights_def: g_cos_mc_queue: 1 1 1 1 1 1 1 1
+ g_cos_mc_queue_def: 1 1 1 1 1 1 1 1
+ ---------- QOSD WRED STATUS ----------
+ wred_threshold_num: 2
+ wred_threshold_min_def: 100 80
+ wred_threshold_max_def: 100 90
+ wred_threshold_min_cell_def: 0 0
+ wred_threshold_max_cell_def: 0 0
+ wred_threshold_maximum_cell_def: 0 0
+ wred_threshold_prob_def: 60 80
+ wred_thresh_cos_def: 0 0 0 0 0 0 0 0
+ wred_sample_weight_def:0
+ wred_sample_weight_min_def:0
+ wred_sample_weight_max_def:15
+ wred_sample_period_def:0
+ wred_sample_period_min_def:0
+ wred_sample_period_max_def:0
+ wred_ecn_statis_period_def:0
+ wred_ecn_statis_period_min_def:0
+ wred_ecn_statis_period_max_def:0
+ ---------- QOSD MAP STATUS ----------
+ cos to queue: 1 2 3 4 5 6 7 8
+ default cos to queue: 1 2 3 4 5 6 7 8
+ dscp to cos:
+dscp cos     dscp cos     dscp cos     dscp cos
+---- ---     ---- ---     ---- ---     ---- ---
+ 0   0        1   0        2   0        3   0
+ 4   0        5   0        6   0        7   0
+ 8   1        9   1       10   1       11   1
+12   1       13   1       14   1       15   1
+16   2       17   2       18   2       19   2
+20   2       21   2       22   2       23   2
+24   3       25   3       26   3       27   3
+28   3       29   3       30   3       31   3
+32   4       33   4       34   4       35   4
+36   4       37   4       38   4       39   4
+40   5       41   5       42   5       43   5
+44   5       45   5       46   5       47   5
+48   6       49   6       50   6       51   6
+52   6       53   6       54   6       55   6
+56   7       57   7       58   7       59   7
+60   7       61   7       62   7       63   7
+ default dscp to cos:
+dscp cos     dscp cos     dscp cos     dscp cos
+---- ---     ---- ---     ---- ---     ---- ---
+ 0   0        1   0        2   0        3   0
+ 4   0        5   0        6   0        7   0
+ 8   1        9   1       10   1       11   1
+12   1       13   1       14   1       15   1
+16   2       17   2       18   2       19   2
+20   2       21   2       22   2       23   2
+24   3       25   3       26   3       27   3
+28   3       29   3       30   3       31   3
+32   4       33   4       34   4       35   4
+36   4       37   4       38   4       39   4
+40   5       41   5       42   5       43   5
+44   5       45   5       46   5       47   5
+48   6       49   6       50   6       51   6
+52   6       53   6       54   6       55   6
+56   7       57   7       58   7       59   7
+60   7       61   7       62   7       63   7
+ cos to dscp: 0 8 16 24 32 40 48 56
+ default cos to dscp: 0 8 16 24 32 40 48 56
+ ippre to dscp: 0 8 16 24 32 40 48 56
+ default ippre to dscp: 0 8 16 24 32 40 48 56
+ exp to dscp: 0 8 16 24 32 40 48 56
+ default exp to dscp: 0 8 16 24 32 40 48 56
+ exp to cos: 0 1 2 3 4 5 6 7
+ default exp to cos: 0 1 2 3 4 5 6 7
+ dscp to exp:
+dscp exp     dscp exp     dscp exp     dscp exp
+---- ---     ---- ---     ---- ---     ---- ---
+ 0   0        1   0        2   0        3   0
+ 4   0        5   0        6   0        7   0
+ 8   1        9   1       10   1       11   1
+12   1       13   1       14   1       15   1
+16   2       17   2       18   2       19   2
+20   2       21   2       22   2       23   2
+24   3       25   3       26   3       27   3
+28   3       29   3       30   3       31   3
+32   4       33   4       34   4       35   4
+36   4       37   4       38   4       39   4
+40   5       41   5       42   5       43   5
+44   5       45   5       46   5       47   5
+48   6       49   6       50   6       51   6
+52   6       53   6       54   6       55   6
+56   7       57   7       58   7       59   7
+60   7       61   7       62   7       63   7
+ default dscp to exp:
+dscp exp     dscp exp     dscp exp     dscp exp
+---- ---     ---- ---     ---- ---     ---- ---
+ 0   0        1   0        2   0        3   0
+ 4   0        5   0        6   0        7   0
+ 8   1        9   1       10   1       11   1
+12   1       13   1       14   1       15   1
+16   2       17   2       18   2       19   2
+20   2       21   2       22   2       23   2
+24   3       25   3       26   3       27   3
+28   3       29   3       30   3       31   3
+32   4       33   4       34   4       35   4
+36   4       37   4       38   4       39   4
+40   5       41   5       42   5       43   5
+44   5       45   5       46   5       47   5
+48   6       49   6       50   6       51   6
+52   6       53   6       54   6       55   6
+56   7       57   7       58   7       59   7
+60   7       61   7       62   7       63   7
+
+##### show mls qos queueing
+Cos-queue map:
+cos qid
+--- ---
+0   1
+1   2
+2   3
+3   4
+4   5
+5   6
+6   7
+7   8
+wrr bandwidth weights:
+qid weights
+--- -------
+1   1
+2   1
+3   1
+4   1
+5   1
+6   1
+7   1
+8   1
+drr bandwidth weights:
+qid weights
+--- -------
+1   1
+2   1
+3   1
+4   1
+5   1
+6   1
+7   1
+8   1
+wfq bandwidth weights:
+qid weights
+--- -------
+1   1
+2   1
+3   1
+4   1
+5   1
+6   1
+7   1
+8   1

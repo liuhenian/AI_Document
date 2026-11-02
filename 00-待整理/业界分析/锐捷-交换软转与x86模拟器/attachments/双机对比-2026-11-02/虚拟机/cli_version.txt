@@ -1,0 +1,25 @@
+System description      : Ruijie (X86 TESTBENCH) by Ruijie Networks.
+System start time       : 2026-10-30 08:41:05
+System uptime           : 02:18:42:44
+System hardware version : 1.00
+System software version : X86_RGOS 12.6(4)B0101
+System patch number     : NA
+System serial number    : R525400BBE009
+System boot version     : NA
+System rboot version    : N/A
+Module information:
+  Slot 1/0 : X86
+
+    Hardware version    : 1.00
+    Boot version        : NA
+    Rboot version       : N/A
+    Software version    : X86_RGOS 12.6(4)B0101
+    Serial number       : R525400BBE009
+  Slot 2/0 : X86
+
+    Hardware version    : 1.00
+    Boot version        : NA
+    Rboot version       : N/A
+    Software version    : X86_RGOS 12.6(4)B0101
+    Serial number       : R525400DD11AB
+Ruijie#

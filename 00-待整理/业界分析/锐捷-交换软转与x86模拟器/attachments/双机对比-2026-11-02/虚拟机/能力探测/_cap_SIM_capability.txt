@@ -1,0 +1,53 @@
+
+acld capability:
+    named acl max num:                  39701
+    named acl extend max num:           500
+    ace max num:                        30000
+    ip extend acl:                      enable
+    mac extend acl:                     enable
+    expert acl:                         enable
+    expert advanced acl(acl80):         enable
+    ipv6 support:                       enable
+    arp acl:                            disable
+    global acl:                         enable
+    counter support:                    disable
+    logging support:                    enable
+    redirect support:                   disable
+    secure channel support:             enable
+    fwmode software:                    enable
+    reflect apply:                      disable
+    mpls:                               disable
+    apply vxlan:                        enable
+    udf:                                disable
+    counter-only:                       disable
+    fragment ipid:                      disable
+    svi router:                         enable
+    ace op neq:                         disable
+    tcp established:                    enable
+    ipv4 fragment support:              enable
+    ipv6 fragment support:              enable
+    ipv6 cos support:                   enable
+    ipv6 vid support:                   enable
+    ipv6 addr2 support:                 enable
+    svi acl apply out:                  enable
+    vlan acl apply:                     enable
+    vlan acl apply out:                 enable
+    l2 port support:                    enable
+    l3 subintf support:                 enable
+    l3 mac apply support:               enable
+    l3 expert apply support:            enable
+    umg apply support:                  disable
+    srv6 inner support:                 disable
+    int flag support:                   disable
+    expert ace vxlan support:           disable
+    ace ecn support:                    disable
+    ace arp support:                    disable
+    ace ahp support:                    enable
+    ace si:                             disable
+    mpls numbers:                       6
+    udf numbers:                        8
+    vlan acl apply out num:             0
+    vlan acl apply out num(enhance):    0
+    acl res mode:                       disable
+    global counter-only:                disable
+Ruijie#

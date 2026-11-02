@@ -1,0 +1,9 @@
+ls /
+bin           etc           libexec       rg_cfg        tmp
+boot          gcov_deb      linuxrc       rgos          typescript
+bootloader    home          mnt           root          usr
+data          install       private_tmp   rootfs        var
+data_back     lib           proc          sbin
+dev           lib64         proto.tar.xz  sys
+~ #
+~ #

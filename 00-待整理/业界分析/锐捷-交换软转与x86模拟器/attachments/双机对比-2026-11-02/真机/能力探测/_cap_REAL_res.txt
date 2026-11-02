@@ -1,0 +1,46 @@
+
+acl usage warn limit: 100%
+type        	total   	used    	free    	usage
+------------	--------	--------	--------	--------
+##Dev=1,Slot=0,unit=0 ACL RES
+VFP ACL     	1024    	0       	1024    	0%
+    slice0  	512     	0       	512     	0%
+    slice1  	512     	0       	512     	0%
+IFP ACL     	8176    	100     	8076    	1%
+    slice0  	508     	100     	408     	19%
+    slice1  	508     	0       	508     	0%
+    slice2  	508     	0       	508     	0%
+    slice3  	508     	0       	508     	0%
+    slice4  	1536    	0       	1536    	0%
+    slice5  	1536    	0       	1536    	0%
+    slice6  	1536    	0       	1536    	0%
+    slice7  	1536    	0       	1536    	0%
+EFP ACL     	1532    	0       	1532    	0%
+    slice0  	508     	0       	508     	0%
+    slice1  	512     	0       	512     	0%
+    slice2  	512     	0       	512     	0%
+##Dev=1,Slot=0,unit=0 TOP3
+IFP ACL      time:2026/10/09 18:02:49: used=96
+IFP ACL      time:2026/11/02 11:21:40: used=100
+IFP ACL      time:2026/11/02 11:23:36: used=88
+##Dev=2,Slot=0,unit=0 ACL RES
+VFP ACL     	1024    	0       	1024    	0%
+    slice0  	512     	0       	512     	0%
+    slice1  	512     	0       	512     	0%
+IFP ACL     	8176    	100     	8076    	1%
+    slice0  	508     	100     	408     	19%
+    slice1  	508     	0       	508     	0%
+    slice2  	508     	0       	508     	0%
+    slice3  	508     	0       	508     	0%
+    slice4  	1536    	0       	1536    	0%
+    slice5  	1536    	0       	1536    	0%
+    slice6  	1536    	0       	1536    	0%
+    slice7  	1536    	0       	1536    	0%
+EFP ACL     	1532    	0       	1532    	0%
+    slice0  	508     	0       	508     	0%
+    slice1  	512     	0       	512     	0%
+    slice2  	512     	0       	512     	0%
+##Dev=2,Slot=0,unit=0 TOP3
+IFP ACL      time:2026/10/09 18:02:49: used=96
+IFP ACL      time:2026/11/02 11:21:40: used=100
+Ruijie#

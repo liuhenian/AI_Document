@@ -1,0 +1,20 @@
+##### show mls qos maps cos-dscp
+cos dscp
+--- ----
+0   0
+1   8
+2   16
+3   24
+4   32
+5   40
+6   48
+7   56
+
+##### show mls qos interface GigabitEthernet 1/0/1
+Interface: GigabitEthernet 1/0/1
+Ratelimit input:
+Ratelimit output:
+Attached input  policy-map:
+Attached output policy-map:
+Default trust: none
+Default cos: 0
