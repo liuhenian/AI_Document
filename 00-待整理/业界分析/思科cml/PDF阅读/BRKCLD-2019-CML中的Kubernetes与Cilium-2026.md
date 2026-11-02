@@ -30,7 +30,7 @@ tags: [业界分析, 思科, CML, Kubernetes, Cilium, eBPF]
 
 幻灯片用一整页做"讲者介绍"，但重点不在头衔，而在背景标签：
 
-![S8 CML 把云原生软件带进网络领域——全场唯一一句"论点句"](deck-images/brkcld2019-S08_cml-brings-cloudnative.png)
+![S8 CML 把云原生软件带进网络领域——全场唯一一句"论点句"|620](deck-images/brkcld2019-S08_cml-brings-cloudnative.png)
 
 **图上看到什么**：整页只有一句话——"**Cisco Modeling Labs brings cloud-native software into the networking domain**"。
 
@@ -42,7 +42,7 @@ tags: [业界分析, 思科, CML, Kubernetes, Cilium, eBPF]
 
 ## 2. 为什么要在 CML 里跑 Kubernetes
 
-![S9 六个理由：看见 K8s 如何建立在 Linux 网络之上、可重复的破坏与修复环境、掌握整张网络织物、练真实的云原生网络问题](deck-images/brkcld2019-S09_see-under-the-hood.png)
+![S9 六个理由：看见 K8s 如何建立在 Linux 网络之上、可重复的破坏与修复环境、掌握整张网络织物、练真实的云原生网络问题|620](deck-images/brkcld2019-S09_see-under-the-hood.png)
 
 **图上看到什么**：标题 "See Under the Hood"，六条理由：
 1. 看清 **Kubernetes 如何建立在传统 Linux 网络之上**
@@ -60,7 +60,7 @@ tags: [业界分析, 思科, CML, Kubernetes, Cilium, eBPF]
 
 ## 3. 部署：k3s + Ansible，六个步骤
 
-![S10 章节页：Deploying the Kubernetes Cluster](deck-images/brkcld2019-S10_deploy-k8s-cluster.png)
+![S10 章节页：Deploying the Kubernetes Cluster|620](deck-images/brkcld2019-S10_deploy-k8s-cluster.png)
 
 **图上看到什么**：纯章节过渡页。
 
@@ -68,7 +68,7 @@ tags: [业界分析, 思科, CML, Kubernetes, Cilium, eBPF]
 
 ### 3.1 第一个拓扑：四台 Ubuntu
 
-![S12 首个拓扑：3 台 K8s 节点 + 1 台管理跳板机，全部接在一台交换机上，地址规划在 CML 边缘路由器子网内](deck-images/brkcld2019-S12_first-topology.png)
+![S12 首个拓扑：3 台 K8s 节点 + 1 台管理跳板机，全部接在一台交换机上，地址规划在 CML 边缘路由器子网内|620](deck-images/brkcld2019-S12_first-topology.png)
 
 **图上看到什么**：3 台 Ubuntu 作为 Kubernetes 节点，1 台 Ubuntu 作为管理跳板机（mgmt jump host），四台全部连到一台交换机；地址直接放进 CML 边缘路由器的子网；K8s 发行版用 **SUSE k3s**，走标准默认安装。
 
@@ -114,7 +114,7 @@ tags: [业界分析, 思科, CML, Kubernetes, Cilium, eBPF]
 
 ### 4.1 先看这张"半成品"表
 
-![S17 传统网络 vs Kubernetes 网络需求对照表——Kubernetes 列刻意空白](deck-images/brkcld2019-S17_trad-vs-k8s.png)
+![S17 传统网络 vs Kubernetes 网络需求对照表——Kubernetes 列刻意空白|620](deck-images/brkcld2019-S17_trad-vs-k8s.png)
 
 **图上看到什么**：七行需求对照，左边"Traditional"列填满了（DHCP Server、Switch/Router、FW/ACL、Load Balancer、MacSec/VPN、Ping/NetFlow/CLI、VXLAN/EVPN），右边 **"Kubernetes"列完全是空的**。
 
@@ -122,7 +122,7 @@ tags: [业界分析, 思科, CML, Kubernetes, Cilium, eBPF]
 
 ### 4.2 三十页后的答案：一个 logo
 
-![S49 同一张表，Kubernetes 列被一个 Cilium logo 整体占据](deck-images/brkcld2019-S49_trad-vs-k8s-filled.png)
+![S49 同一张表，Kubernetes 列被一个 Cilium logo 整体占据|620](deck-images/brkcld2019-S49_trad-vs-k8s-filled.png)
 
 **图上看到什么**：与 S17 完全相同的表，但右侧空白的 "Kubernetes" 列现在只放了一个东西——**Cilium 的六边形蜂巢 logo**。
 
@@ -132,7 +132,7 @@ tags: [业界分析, 思科, CML, Kubernetes, Cilium, eBPF]
 
 ### 4.3 Kubernetes 网络模型的三条硬约束
 
-![S20 Kubernetes 网络模型：每个 Pod 有集群内唯一 IP，跨节点可直接通信且不经 NAT，这要求 CNI 插件实现](deck-images/brkcld2019-S20_k8s-networking-model.png)
+![S20 Kubernetes 网络模型：每个 Pod 有集群内唯一 IP，跨节点可直接通信且不经 NAT，这要求 CNI 插件实现|620](deck-images/brkcld2019-S20_k8s-networking-model.png)
 
 **图上看到什么**：左侧文字说明——每个 Pod 获得**集群范围内唯一的 IP**，可以与任意节点上的其他 Pod 通信**且不使用 NAT**；实现这个模型需要 **CNI（Container Network Interface）插件**。
 
@@ -143,7 +143,7 @@ tags: [业界分析, 思科, CML, Kubernetes, Cilium, eBPF]
 
 ### 4.4 两种互联方式：原生路由 vs 叠加封装
 
-![S31 节点间通信的两种实现：左侧 Native Routing（底层网络直接承载 Pod 网段），右侧 Network Overlay（VXLAN/GENEVE 封装）](deck-images/brkcld2019-S31_inter-node.png)
+![S31 节点间通信的两种实现：左侧 Native Routing（底层网络直接承载 Pod 网段），右侧 Network Overlay（VXLAN/GENEVE 封装）|620](deck-images/brkcld2019-S31_inter-node.png)
 
 **图上看到什么**：左右两套对称的集群拓扑，各有 4 个节点、每节点 3 个 Pod（`10.244.1.x` ~ `10.244.4.x`）。
 - **左（绿）Native Routing**：节点之间直接承载 Pod 网段，标注 "Direct Pod Communication / **No NAT**"；
@@ -184,13 +184,13 @@ Cilium 用一组"重复出现的目录页"来组织六项能力：**IP 地址分
 
 ### 5.2 负载均衡：先分清三种 Service
 
-![S28 Kubernetes 三种 Service 类型对比：ClusterIP（内部）、NodePort（外部，简单但需手工）、LoadBalancer（外部，生产推荐）](deck-images/brkcld2019-S28_service-types.png)
+![S28 Kubernetes 三种 Service 类型对比：ClusterIP（内部）、NodePort（外部，简单但需手工）、LoadBalancer（外部，生产推荐）|620](deck-images/brkcld2019-S28_service-types.png)
 
 **图上看到什么**：三列对比——ClusterIP 用于内部访问；NodePort 用于外部访问，借助节点 IP + 固定高端口，简单但需要手工做负载均衡和 IP 管理；LoadBalancer 用于外部访问，比 NodePort 略复杂，但提供**单一稳定外部 IP**，生产推荐。
 
 **怎么理解"为什么还需要一个 CNI 来做 LB"**：K8s 的 Service 只是**声明**，真正把流量送达需要实现者。云上用云厂商的 LB；自建环境里，传统做法是再装一个 MetalLB。Cilium 的价值是**把这些能力内建**——用 eBPF 在数据面直接完成 DNAT 和负载均衡，不必额外部署组件，这也解释了为什么它能"一个 logo 顶一列"。
 
-![S29 LoadBalancer Service 的流量路径：流量到达外部 IP → 命中 LB → 转发到任意健康 Pod](deck-images/brkcld2019-S29_loadbalancer-svc.png)
+![S29 LoadBalancer Service 的流量路径：流量到达外部 IP → 命中 LB → 转发到任意健康 Pod|620](deck-images/brkcld2019-S29_loadbalancer-svc.png)
 
 **图上看到什么**：一句话描述流量路径——"Traffic arrives at the external IP → hits the LB → forwarded to one of the healthy pods, **wherever they're running in the cluster**"。
 
@@ -200,7 +200,7 @@ Cilium 用一组"重复出现的目录页"来组织六项能力：**IP 地址分
 
 Cilium 的可观测性组件叫 **Hubble**，材料给了 UI 和 CLI 两种视图。
 
-![S33 Hubble UI 的 Service Map：左侧筛选器（集群/命名空间/流判定/聚合），中间是 argocd 各组件间的调用关系图，底部是逐条流记录表](deck-images/brkcld2019-S33_hubble-ui.png)
+![S33 Hubble UI 的 Service Map：左侧筛选器（集群/命名空间/流判定/聚合），中间是 argocd 各组件间的调用关系图，底部是逐条流记录表|620](deck-images/brkcld2019-S33_hubble-ui.png)
 
 **图上看到什么**：一个真实的 Hubble 界面截图。
 - **左侧筛选**：Cluster、Namespace（选了 `argocd`）、Flow verdict（Any verdict）、Aggregate flows；还有几个开关——Host network、Kube DNS、Remote node、Prometheus app；
@@ -214,7 +214,7 @@ Cilium 的可观测性组件叫 **Hubble**，材料给了 UI 和 CLI 两种视�
 
 **这张 UI 的现实意义**：在传统网络里，跨主机的容器间调用基本是"看不见的"（VXLAN 一封装，NetFlow 就失效）。Hubble 把这一层重新变得可见——**这就是"网络可观测性"这项能力的具体形态**。
 
-![S34 Hubble CLI：用 hubble observe 逐条跟踪某个 Pod 的流，能看到 DNS 查询、HTTPS 请求，以及被策略 DROP 的连接](deck-images/brkcld2019-S34_hubble-cli.png)
+![S34 Hubble CLI：用 hubble observe 逐条跟踪某个 Pod 的流，能看到 DNS 查询、HTTPS 请求，以及被策略 DROP 的连接|620](deck-images/brkcld2019-S34_hubble-cli.png)
 
 **图上看到什么**：一段真实终端输出。先用 `kubectl get pods` 看到 `tiefighter`、`xwing`、两个 `deathstar-*`，然后 `hubble observe --follow -l class=xwing` 跟踪流量，输出三类事件：
 
@@ -246,7 +246,7 @@ default/xwing:49610 -> default/deathstar:80 Policy denied DROPPED (TCP Flags: SY
 
 **第一层：L3/L4 —— 只控制"哪个端口"**
 
-![S39 L3/4 策略：frontend 允许出向到 backend 的 TCP 80](deck-images/brkcld2019-S39_l3l4-policy.png)
+![S39 L3/4 策略：frontend 允许出向到 backend 的 TCP 80|620](deck-images/brkcld2019-S39_l3l4-policy.png)
 
 **图上看到什么**：左边是 `CiliumNetworkPolicy` 的 YAML，`endpointSelector` 选中 `role: frontend`，`egress` 里 `toPorts` → `port: "80"`、`protocol: TCP`；右边图示 frontend → backend，标 "Port 80"。
 
@@ -254,7 +254,7 @@ default/xwing:49610 -> default/deathstar:80 Policy denied DROPPED (TCP Flags: SY
 
 **第二层：L7 —— 控制到"什么方法、什么路径"**
 
-![S40 L7 策略：在 80 端口的基础上增加 HTTP rules，只允许 GET /public](deck-images/brkcld2019-S40_l7-policy.png)
+![S40 L7 策略：在 80 端口的基础上增加 HTTP rules，只允许 GET /public|620](deck-images/brkcld2019-S40_l7-policy.png)
 
 **图上看到什么**：YAML 与上一页几乎相同，只在 `toPorts` 下多了一段：
 ```yaml
@@ -269,7 +269,7 @@ rules:
 
 **第三层：FQDN —— 控制到"访问哪个域名"**
 
-![S41 DNS 感知策略：用 toFQDNs 匹配 *.mydomain.io，只放行到 443](deck-images/brkcld2019-S41_dns-aware-policy.png)
+![S41 DNS 感知策略：用 toFQDNs 匹配 *.mydomain.io，只放行到 443|620](deck-images/brkcld2019-S41_dns-aware-policy.png)
 
 **图上看到什么**：左侧拓扑显示 frontend 向 kube-dns 查询 `www.mydomain.io`，得到 `130.57.66.19`，然后被允许出向访问该 IP；右侧 YAML 使用：
 ```yaml
@@ -288,7 +288,7 @@ egress:
 
 ### 5.5 为什么 L7 需要 Envoy
 
-![S42 Envoy：eBPF 在 L3/L4 做高速决策，但无法解析 L7 协议，因此 L7 过滤交给 Envoy](deck-images/brkcld2019-S42_envoy.png)
+![S42 Envoy：eBPF 在 L3/L4 做高速决策，但无法解析 L7 协议，因此 L7 过滤交给 Envoy|620](deck-images/brkcld2019-S42_envoy.png)
 
 **图上看到什么**：六条要点，核心是前两条——eBPF 在 L3/L4 能做出高速决策，但**尚不能解析 L7 协议**；当需要 L7 过滤时，Cilium 用 **Envoy** 来执行 HTTP 等应用层规则。
 
@@ -315,7 +315,7 @@ L2 Announcement 的定位很清楚：
 1. **节点间通信**：节点可以通告 PodCIDR；
 2. **LoadBalancer/Service IP 直接通告给外部路由器**。
 
-![S46 Cilium BGP 的配置模型：用 Kubernetes CRD 做声明式配置，CiliumBGPClusterConfig 选节点与实例，CiliumBGPPeerConfig 定可复用对端参数，CiliumBGPAdvertisement 控制通告内容](deck-images/brkcld2019-S46_cilium-bgp.png)
+![S46 Cilium BGP 的配置模型：用 Kubernetes CRD 做声明式配置，CiliumBGPClusterConfig 选节点与实例，CiliumBGPPeerConfig 定可复用对端参数，CiliumBGPAdvertisement 控制通告内容|620](deck-images/brkcld2019-S46_cilium-bgp.png)
 
 **图上看到什么**：三个 CRD 的分工：
 - `CiliumBGPClusterConfig` —— 选择节点，定义 BGP 实例与 peer；
@@ -324,7 +324,7 @@ L2 Announcement 的定位很清楚：
 
 **怎么理解"用 CRD 配 BGP"这件事**：传统 BGP 配置是"设备本地配置"（在路由器上 `router bgp`），Cilium 把它变成**Kubernetes 资源**——这意味着 BGP 配置跟着 Git 走、能被 `kubectl get` 查、能被 CI 校验。这是 NetDevOps 思路在协议配置上的落地。
 
-![S48 两个 Cilium BGP CRD 通过 label 松耦合：CiliumBGPPeerConfig 里 advertisements.matchLabels 指向 CiliumBGPAdvertisement 的 metadata.labels](deck-images/brkcld2019-S48_cilium-bgp-diagram.png)
+![S48 两个 Cilium BGP CRD 通过 label 松耦合：CiliumBGPPeerConfig 里 advertisements.matchLabels 指向 CiliumBGPAdvertisement 的 metadata.labels|620](deck-images/brkcld2019-S48_cilium-bgp-diagram.png)
 
 **图上看到什么**：两份 YAML 并排放置，蓝色箭头把左侧 `advertisements.matchLabels.advertise: "bgp"` 指向右侧 `metadata.labels.advertise: "bgp"`。
 
@@ -339,7 +339,7 @@ L2 Announcement 的定位很清楚：
 
 ## 6. 落地：改 k3s 安装，让 Cilium 接手
 
-![S51 为 Cilium 改造 Kubernetes 安装：必须先禁用自带核心组件，且节点 Ready 与 Pod 可运行都以 Cilium 就绪为前提](deck-images/brkcld2019-S51_modify-k8s-install.png)
+![S51 为 Cilium 改造 Kubernetes 安装：必须先禁用自带核心组件，且节点 Ready 与 Pod 可运行都以 Cilium 就绪为前提|620](deck-images/brkcld2019-S51_modify-k8s-install.png)
 
 **图上看到什么**：五条前置条件，末尾一句加粗结论：
 1. 必须**禁用安装包里自带的核心组件**（对应 k3s 的 kube-proxy、Flannel、Traefik）；
@@ -354,7 +354,7 @@ L2 Announcement 的定位很清楚：
 
 **Ansible Playbook 的八步**（同比基础版多了两步关键动作）：
 
-![S52 Cilium 版 Playbook 的八个步骤：第 3 步禁用 kube-proxy/Flannel/Traefik，第 5 步加装 Helm CLI，第 7 步用 Helm 装 Cilium，第 8 步部署含策略与 BGP 的 Cilium 配置](deck-images/brkcld2019-S52_playbook-cilium.png)
+![S52 Cilium 版 Playbook 的八个步骤：第 3 步禁用 kube-proxy/Flannel/Traefik，第 5 步加装 Helm CLI，第 7 步用 Helm 装 Cilium，第 8 步部署含策略与 BGP 的 Cilium 配置|620](deck-images/brkcld2019-S52_playbook-cilium.png)
 
 1. 等 SSH 可达
 2. 准备内核模块
@@ -373,7 +373,7 @@ L2 Announcement 的定位很清楚：
 
 这是全场立场最强的一节。
 
-![S54 "The Gap"：K8s 长期被沙箱化在它所依附的网络之外，认证关注点全在沙箱内部](deck-images/brkcld2019-S54_the-gap.png)
+![S54 "The Gap"：K8s 长期被沙箱化在它所依附的网络之外，认证关注点全在沙箱内部|620](deck-images/brkcld2019-S54_the-gap.png)
 
 **图上看到什么**：五条判断——
 1. Kubernetes 一直**被沙箱化**在它所依托的网络之外；
@@ -384,7 +384,7 @@ L2 Announcement 的定位很清楚：
 
 **怎么理解"gap（鸿沟）"的确切含义**：不是"K8s 网络很复杂"，而是**责任被人为切断了**。网络工程师负责"把服务器接通"，容器团队负责"沙箱里面"，中间那层（Pod 网段怎么路由、Service IP 怎么让外部知道、跨站点怎么通）**没人认领**。而这一层恰恰是故障最多发的地方。
 
-![S55 Who Owns the Network：云厂商掌握底层网络全权；Minikube/Kind 用内部容器网络；本地部署受成本、规模、用量限制](deck-images/brkcld2019-S55_who-owns-network.png)
+![S55 Who Owns the Network：云厂商掌握底层网络全权；Minikube/Kind 用内部容器网络；本地部署受成本、规模、用量限制|620](deck-images/brkcld2019-S55_who-owns-network.png)
 
 **图上看到什么**：三栏对比——云厂商对底层网络有**完全控制**；本地工具如 Minikube 和 Kind 使用**内部容器网络**；on-prem 网络则**受成本、规模和用量限制**。
 
@@ -397,7 +397,7 @@ L2 Announcement 的定位很清楚：
 
 ### 最终拓扑：双站点 + 双集群 + BGP
 
-![S58 最终拓扑的六条特征：两个集群代表两个业务站点，各接一台 CSR1000 边缘路由器，站点路由器间 BGP 对等，每个集群的 overlay 通过 Cilium 与本地边缘路由器 BGP 对等](deck-images/brkcld2019-S58_final-topology.png)
+![S58 最终拓扑的六条特征：两个集群代表两个业务站点，各接一台 CSR1000 边缘路由器，站点路由器间 BGP 对等，每个集群的 overlay 通过 Cilium 与本地边缘路由器 BGP 对等|620](deck-images/brkcld2019-S58_final-topology.png)
 
 **图上看到什么**：六条特征，最后一句结论 "**The gap is officially bridged**"（鸿沟被正式填平）：
 1. 两个 Kubernetes 集群代表**两个业务站点**
@@ -420,13 +420,13 @@ L2 Announcement 的定位很清楚：
 
 ## 8. 延伸资源
 
-![S61 配套仓库：可在 CML 中重建整个 lab，从 k3s/Cilium/Hubble 基础开始，再扩展到策略、BGP 与多集群](deck-images/brkcld2019-S61_repo.png)
+![S61 配套仓库：可在 CML 中重建整个 lab，从 k3s/Cilium/Hubble 基础开始，再扩展到策略、BGP 与多集群|620](deck-images/brkcld2019-S61_repo.png)
 
 **图上看到什么**：仓库地址 `https://github.com/colinjlacy/BRKCLD-2019-K8s-in-CML`，以及一条**学习路径建议**：重建 lab → 从 k3s/Cilium/Hubble 基础开始 → 扩展到策略、BGP、多集群。
 
 **怎么理解这条路径的价值**：它是一个**明确的分级**。不要一上来就搭双站点 BGP——先跑通单集群 + Cilium + Hubble 观察，再加策略，最后才做跨站点。这与 BRKCRT-2059 里"布鲁姆分类法分层"的思路是一致的。
 
-![S66 两张认证徽章：Cilium Certified Associate，以及 Certified Kubernetes Network Engineer](deck-images/brkcld2019-S66_certification.png)
+![S66 两张认证徽章：Cilium Certified Associate，以及 Certified Kubernetes Network Engineer|620](deck-images/brkcld2019-S66_certification.png)
 
 **图上看到什么**：两枚徽章——**Cilium Certified Associate**（CCA）与 **Certified Kubernetes Network Engineer**。
 

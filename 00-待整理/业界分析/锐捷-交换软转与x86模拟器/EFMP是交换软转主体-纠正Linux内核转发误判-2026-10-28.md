@@ -102,7 +102,7 @@ number headings: off
 > 快转可以简单的理解为**一个应用层之下，驱动层之上的中间件，用来处理 CPU 转发的报文**的工具。
 > —— `12.X EFMP（快转）业务学习记录`（田光清，2022-06-08，[pageId 217222533](http://conf.ruijie.work/pages/viewpage.action?pageId=217222533)，**B 级**）
 
-![EFMP 全称与中间件定位](images/E5-EFMP全称与中间件定位.png)
+![EFMP 全称与中间件定位|900](images/E5-EFMP全称与中间件定位.png)
 
 ### 3.2 它在 RGOS 里的层次
 
@@ -140,12 +140,12 @@ number headings: off
 > **EF 为快转框架，属于 PI 维护模块。** 对于有收发帧需求的 PI 业务，EF 提供统一接口对接 PD 驱动。
 > —— `3 硬件架构及交换机通路介绍`（朱雨涛，2022-08-25，[pageId 286261516](http://conf.ruijie.work/pages/viewpage.action?pageId=286261516)，**A 级**）
 
-![EF 属于 PI 维护模块](images/E3-EF属于PI维护模块.png)
+![EF 属于 PI 维护模块|900](images/E3-EF属于PI维护模块.png)
 
 > EFMP（Express Forward Management Platform）**为 PI 侧**，属于研究院平台。而各事业部则属于 PD 侧。
 > —— `12.X转发框架浅谈`（dengjing，2022-05-16，[pageId 231539707](http://conf.ruijie.work/pages/viewpage.action?pageId=231539707)，**B 级**）
 
-![EFMP 为 PI 侧](images/E2-EFMP为PI侧.png)
+![EFMP 为 PI 侧|900](images/E2-EFMP为PI侧.png)
 
 **推论（B 级）**：既然 EFMP 属 PI，那么「模拟器上没有 PD」这件事，**天然不会导致 EFMP 消失**。这与实测完全吻合——`efmp_frame.elf` 在 CI 上不但存在，而且是 CPU 占用最高的进程：
 
@@ -237,7 +237,7 @@ http://svn.ruijie.net/svn12/ppf_ef/docs/SE/REF_PROXY_ADAPT_KERNEL_ROUTE_LLD2.doc
 
 （`REF_PROXY组件`，三层域，[pageId 88936460](http://conf.ruijie.work/pages/viewpage.action?pageId=88936460)，**A 级**）
 
-![REF_PROXY 适配内核路由](images/E7-REF_PROXY适配内核路由.png)
+![REF_PROXY 适配内核路由|900](images/E7-REF_PROXY适配内核路由.png)
 
 `ADAPT_KERNEL_ROUTE`（适配内核路由）——**REF_PROXY 的职责是让 Linux 内核路由与快转 REF 表保持一致**，服务于本机收发（socket 选路、管理面流量）。方向是「快转 → 内核」，不是「内核 → 转发」。
 
@@ -272,7 +272,7 @@ http://svn.ruijie.net/svn12/ppf_ef/docs/SE/REF_PROXY_ADAPT_KERNEL_ROUTE_LLD2.doc
 
 **x86 上能直接跑 `debug efmp packet` 抓快转流跟踪**——如果 x86 上转发走的是 Linux 内核，这个命令根本无从谈起。
 
-![x86 上的快转流跟踪](images/E6-x86上的快转流跟踪.png)
+![x86 上的快转流跟踪|900](images/E6-x86上的快转流跟踪.png)
 
 ---
 

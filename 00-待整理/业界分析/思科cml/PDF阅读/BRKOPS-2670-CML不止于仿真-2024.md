@@ -47,7 +47,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 2.1 定位与规格
 
-![S14 CML v2.7 的八项产品属性：浏览器化点击式、完全可编程、快速搭建拆除、与物理网络无缝连通、实验跨会话保留、自带思科与开源镜像、API 优先](deck-images/brkops2670-S14_cml-v27-features.png)
+![S14 CML v2.7 的八项产品属性：浏览器化点击式、完全可编程、快速搭建拆除、与物理网络无缝连通、实验跨会话保留、自带思科与开源镜像、API 优先|620](deck-images/brkops2670-S14_cml-v27-features.png)
 
 **图上看到什么**：与 BRKCRT-2059 中同一套产品属性描述（八个卖点），只是标注了版本 **v2.7**。
 
@@ -57,7 +57,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 同一个 CML，对不同听众说不同的话——这是技术营销里值得学的"同一事实、多种切面"。
 
-![S17 CML 提供的五种业务价值：虚拟设备与配置测试、生产变更的安全试验场、改善日常运维、测试与演示新技术、加速平台上线](deck-images/brkops2670-S17_cml-provides.png)
+![S17 CML 提供的五种业务价值：虚拟设备与配置测试、生产变更的安全试验场、改善日常运维、测试与演示新技术、加速平台上线|620](deck-images/brkops2670-S17_cml-provides.png)
 
 **图上看到什么**：五条价值主张——
 1. Virtual Cisco device and configuration testing（虚拟设备与配置测试）
@@ -70,13 +70,13 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 2.2 硬件要求与节点清单
 
-![S18 硬件要求：x86_64、裸金属或 VMware、CPU/内存按节点数量与类型决定、AMD 可用但部分平台（如 XRv9k）可能无法运行](deck-images/brkops2670-S18_requirements.png)
+![S18 硬件要求：x86_64、裸金属或 VMware、CPU/内存按节点数量与类型决定、AMD 可用但部分平台（如 XRv9k）可能无法运行|620](deck-images/brkops2670-S18_requirements.png)
 
 **图上看到什么**：三条要求 + 一条警告：AMD 平台可用，但某些平台可能无法运行（例：XRv9k）。
 
 **为什么这条警告重要**：它不是"性能问题"，而是**指令集/虚拟化特性兼容问题**——XRv9k 这类重载镜像依赖特定 CPU 特性。这意味着：**买服务器前必须先确认你要跑哪些节点**，否则会出现"机器买回来了，最关键的镜像跑不起来"。
 
-![S19 CML 2.7 的节点清单：左侧为 Reference 镜像（12 个），右侧为 Supplemental Platform 镜像（12 个）](deck-images/brkops2670-S19_available-nodes.png)
+![S19 CML 2.7 的节点清单：左侧为 Reference 镜像（12 个），右侧为 Supplemental Platform 镜像（12 个）|620](deck-images/brkops2670-S19_available-nodes.png)
 
 **图上看到什么**：24 个节点的图标网格，分两组——
 
@@ -93,7 +93,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 2.3 Workbench：把拓扑当文档画
 
-![S20 CML Workbench 实际界面：OSPF Area 0 用椭圆注释圈出，两个 VLAN 用橙/绿色块圈出，左侧 OoB 管理口与外部连接器](deck-images/brkops2670-S20_workbench.png)
+![S20 CML Workbench 实际界面：OSPF Area 0 用椭圆注释圈出，两个 VLAN 用橙/绿色块圈出，左侧 OoB 管理口与外部连接器|620](deck-images/brkops2670-S20_workbench.png)
 
 **图上看到什么**：真实的工作台截图，lab 名为 "CISCO CATALYST CENTER DEMO"。
 - 蓝色椭圆注释标出 **OSPF Area 0**，圈住 `CatCenter-demo-sw1/sw2` 与 `OoB-MGMT`；
@@ -112,7 +112,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 这一章是整个 deck 的技术核心，标题叫 **"Escape the simulation"**。
 
-![S22 外部连通性的两种模式与三种用途：NAT 让节点单向访问外网，Bridge 让节点与外部系统互相可达；另有连接外部平台设备、建立带外管理、暴露节点 Web UI 三种用途](deck-images/brkops2670-S22_external-conn-options.png)
+![S22 外部连通性的两种模式与三种用途：NAT 让节点单向访问外网，Bridge 让节点与外部系统互相可达；另有连接外部平台设备、建立带外管理、暴露节点 Web UI 三种用途|620](deck-images/brkops2670-S22_external-conn-options.png)
 
 **图上看到什么**：两张对比卡片 + 三条用途。
 
@@ -129,23 +129,23 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 这是本 deck 附录里最有干货的部分，值得完整走一遍。
 
-![S65 给 CML 虚拟机添加网卡：编辑 VM 设置 → 添加新设备 → 选择网络适配器](deck-images/brkops2670-S65_add-adapters.png)
+![S65 给 CML 虚拟机添加网卡：编辑 VM 设置 → 添加新设备 → 选择网络适配器|620](deck-images/brkops2670-S65_add-adapters.png)
 
-![S66 两块新增网卡的分工：一块给"CML 节点用的额外 IP 空间"，一块给"要连到 CML 的 VM"](deck-images/brkops2670-S66_adapter-purpose.png)
+![S66 两块新增网卡的分工：一块给"CML 节点用的额外 IP 空间"，一块给"要连到 CML 的 VM"|620](deck-images/brkops2670-S66_adapter-purpose.png)
 
 **图上看到什么**：两块新增适配器的用途区分——一块提供**额外的 IP 空间给 CML 节点**，另一块给**你想接进 CML 的那些 VM**。
 
 **为什么必须分开**：这两类流量语义不同。CML 节点的管理网段是"lab 内部网络"，而外部 VM 所在网段是"真实业务网络"。混在一起会造成地址冲突与广播域污染。
 
-![S67 在 CML Cockpit 里识别到两块新网卡（ens192、ens224），点 Add Bridge 开始绑定](deck-images/brkops2670-S67_cockpit-new-interfaces.png)
+![S67 在 CML Cockpit 里识别到两块新网卡（ens192、ens224），点 Add Bridge 开始绑定|620](deck-images/brkops2670-S67_cockpit-new-interfaces.png)
 
 **图上看到什么**：Cockpit 界面（`https://<cml-host-ip>:9090`）的 Interfaces 区域，出现两块新接口，提示"我们将把每块接口关联到一个唯一的 bridge"。
 
 **关键概念**：**Cockpit 是 CML 的"宿主机层"管理界面，不是 CML 应用层**。网卡、bridge 这些 Linux 层面的东西在 Cockpit 里配；而"这个 bridge 叫 System Bridge 还是 NAT"这种 CML 层面的语义，在 CML 应用界面里配。**两级要配对，缺一不可**。
 
-![S68 在 Cockpit 里 Add Bridge：把 ens192 绑到 Bridge1、ens224 绑到 Bridge2](deck-images/brkops2670-S68_cockpit-add-bridge.png)
+![S68 在 Cockpit 里 Add Bridge：把 ens192 绑到 Bridge1、ens224 绑到 Bridge2|620](deck-images/brkops2670-S68_cockpit-add-bridge.png)
 
-![S69 两级配置完成后的对照：上半部 Cockpit 显示 bridge0/bridge1/bridge2/virbr0 及各自 IP，下半部 CML 的 External Connectors 页面把每个 bridge 映射成 System Bridge / NAT / 10.82.128.128_hosts / External_VM_hosts](deck-images/brkops2670-S69_new-bridges.png)
+![S69 两级配置完成后的对照：上半部 Cockpit 显示 bridge0/bridge1/bridge2/virbr0 及各自 IP，下半部 CML 的 External Connectors 页面把每个 bridge 映射成 System Bridge / NAT / 10.82.128.128_hosts / External_VM_hosts|620](deck-images/brkops2670-S69_new-bridges.png)
 
 **图上看到什么**（这张是全场信息密度最高的截图）：
 
@@ -174,7 +174,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 3.2 把 API 和 GUI 暴露出来
 
-![S24 在虚拟节点上暴露 API 与 GUI：Catalyst SD-WAN 图形界面、Cisco Secure Firewall 图形界面、NX-API Sandbox](deck-images/brkops2670-S24_expose-apis-guis.png)
+![S24 在虚拟节点上暴露 API 与 GUI：Catalyst SD-WAN 图形界面、Cisco Secure Firewall 图形界面、NX-API Sandbox|620](deck-images/brkops2670-S24_expose-apis-guis.png)
 
 **图上看到什么**：三张并排的产品界面截图——Catalyst SD-WAN 的 Web 管理界面、Cisco Secure Firewall 的 GUI、以及 **NX-API Sandbox**（Nexus 的 API 调试页）。
 
@@ -188,7 +188,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 4.1 收益矩阵
 
-![S26 建模的五种收益：Training、Testing、Collaboration、Automation、Prototyping](deck-images/brkops2670-S26_benefits.png)
+![S26 建模的五种收益：Training、Testing、Collaboration、Automation、Prototyping|620](deck-images/brkops2670-S26_benefits.png)
 
 **图上看到什么**：五个词——培训、测试、协作、自动化、原型验证。
 
@@ -201,7 +201,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 4.2 可规划的技术范围
 
-![S27 CML 里可做的网络规划主题：MPLS、IPv6、防火墙 ACL、迁移、路由协议、VLAN/交换、Catalyst SD-WAN、VXLAN、Segment Routing](deck-images/brkops2670-S27_planning-areas.png)
+![S27 CML 里可做的网络规划主题：MPLS、IPv6、防火墙 ACL、迁移、路由协议、VLAN/交换、Catalyst SD-WAN、VXLAN、Segment Routing|620](deck-images/brkops2670-S27_planning-areas.png)
 
 **图上看到什么**：九个技术标签——MPLS、IPv6、Firewall ACLs、Migration、Routing Protocols、VLANs/Switching、Catalyst SD-WAN、VXLAN、Segment Routing。
 
@@ -209,7 +209,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 4.3 场景一：网络迁移
 
-![S28 用 6VPE（IPv6 over MPLS IPv4）演示"网络迁移"：CML 里搭 PE/MPLS 核心与 VRF redv6，配内建抓包验证 MPLS 封装，右侧终端为 PE 的 ipv6 route vrf redv6 输出](deck-images/brkops2670-S28_migration.png)
+![S28 用 6VPE（IPv6 over MPLS IPv4）演示"网络迁移"：CML 里搭 PE/MPLS 核心与 VRF redv6，配内建抓包验证 MPLS 封装，右侧终端为 PE 的 ipv6 route vrf redv6 输出|620](deck-images/brkops2670-S28_migration.png)
 
 **图上看到什么**：一个信息密度极高的真实工作台截图——
 - 拓扑：`ext-conn-0` → `ubuntu-0` → `unmanaged-switch-0`；下方 `alpine-0`、`mpls_pe1`、`mpls_p1`、`mpls_p2`、`mpls_pe2`、`alpine-1` 组成 MPLS 核心，`mpls_p1` 上标注 **OSPF Area 0**、**GWE | IPv4 MPLS / IPv6**；
@@ -226,13 +226,13 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 材料的论证分两页递进：
 
-![S30 反面剧本：自动化工程师直接在"牛气哄哄的生产网络"上跑 ansible-playbook -i prod.yml，风险由生产承担](deck-images/brkops2670-S30_automate-with-model.png)
+![S30 反面剧本：自动化工程师直接在"牛气哄哄的生产网络"上跑 ansible-playbook -i prod.yml，风险由生产承担|620](deck-images/brkops2670-S30_automate-with-model.png)
 
 **图上看到什么**：一个幽默但真实的场景图——左边"Automation Coder"说"我要自动化我的网络设备！"，右边标注 "offline"（离线跑），下方是"你牛气哄哄的生产网络"。
 
 **怎么理解这张图在批判什么**：它批判的是**"拿生产当测试环境"**这个行业陋习。playbook 写错一次，可能就是全网震荡。而"offline 运行"这个标注是反讽——**自动化脚本从来不是真的离线**，它一执行就直达生产。
 
-![S31 正面剧本：先在"你牛气哄哄的模型网络"上开发自动化，验证通过后再部署到生产](deck-images/brkops2670-S31_test-env-topology.png)
+![S31 正面剧本：先在"你牛气哄哄的模型网络"上开发自动化，验证通过后再部署到生产|620](deck-images/brkops2670-S31_test-env-topology.png)
 
 **图上看到什么**：同一个场景的两半——左边"我要在网络模型上开发我的自动化，**在部署到生产之前**"，右边是"你的生产网络"；同时标出了测试环境的三层结构：**bootstrap 节点**（负责初始配置注入）、**你的工作站/笔记本**（通过 WSL、SSH 或 VSCode Remote-SSH 接入一台 Ubuntu 节点）、**CML 生产模型**（被操作的对象）。
 
@@ -242,7 +242,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 4.5 场景三：原型验证与扩容（虚实混合）
 
-![S32 CML 里的 VXLAN Fabric 实际拓扑：站点 C/D 为虚拟（fab-c-* / fab-d-*），WAN 云通过绿色箭头接到硬件拓扑（NCS-5508 + Nexus 9504/93180YC-EX/9336C-FX2）](deck-images/brkops2670-S32_prototyping-scale.png)
+![S32 CML 里的 VXLAN Fabric 实际拓扑：站点 C/D 为虚拟（fab-c-* / fab-d-*），WAN 云通过绿色箭头接到硬件拓扑（NCS-5508 + Nexus 9504/93180YC-EX/9336C-FX2）|620](deck-images/brkops2670-S32_prototyping-scale.png)
 
 **图上看到什么**：真实工作台截图，lab 名 "VXLAN FABRIC CD W SR"。
 - 中部是完整的 VXLAN Fabric：`fab-c-spine1/spine2`、`fab-c-leaf1~leaf3`、`fab-c-bd1~bd2`、`fab-c-server1~3`（站点 C），对称的 `fab-d-*`（站点 D）；
@@ -264,9 +264,9 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 5.1 为什么要把平台接到 CML
 
-![S34 三个可接入的平台：NDFC、Catalyst Center、Catalyst SD-WAN](deck-images/brkops2670-S34_connect-platforms.png)
+![S34 三个可接入的平台：NDFC、Catalyst Center、Catalyst SD-WAN|620](deck-images/brkops2670-S34_connect-platforms.png)
 
-![S35 接平台的四条理由：理解平台的工作流/操作/排障、测试拟议的平台拓扑变更、上线前先配置和改设置、探索模拟故障场景](deck-images/brkops2670-S35_why-connect.png)
+![S35 接平台的四条理由：理解平台的工作流/操作/排障、测试拟议的平台拓扑变更、上线前先配置和改设置、探索模拟故障场景|620](deck-images/brkops2670-S35_why-connect.png)
 
 **图上看到什么**：四条理由——
 1. **理解平台的工作流、操作与排障**（Understand workflow, operation, and troubleshooting）
@@ -278,7 +278,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 5.2 设计建议：哪些进 CML，哪些留在外面
 
-![S36 设计建议：SD-WAN 控制器可跑在 lab 内（三个节点合计 12 vCPU / 40GB 内存）；NDFC 和 Catalyst Center 建议部署在 CML 之外，用 bridge 模式的外部连接器让它们访问 CML 节点管理 IP](deck-images/brkops2670-S36_design-recommendations.png)
+![S36 设计建议：SD-WAN 控制器可跑在 lab 内（三个节点合计 12 vCPU / 40GB 内存）；NDFC 和 Catalyst Center 建议部署在 CML 之外，用 bridge 模式的外部连接器让它们访问 CML 节点管理 IP|620](deck-images/brkops2670-S36_design-recommendations.png)
 
 **图上看到什么**：三行关键建议——
 
@@ -296,7 +296,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 5.3 环境搭建：两个 lab、一条 GRE
 
-![S37 环境拓扑：硬件 Catalyst Center（10.82.6.169/26）↔ CML Lab A VM（System Bridge0 10.82.9.30/25）；CML Lab B VM（System Bridge0 10.82.128.35/25）与 Lab A 之间用 GRE 隧道相连；Lab B 内跑 SD-WAN，其 NDFC OoB Bridge 为 10.82.128.128/26，NDFC 虚拟设备为 10.82.128.165/26](deck-images/brkops2670-S37_env-setup.png)
+![S37 环境拓扑：硬件 Catalyst Center（10.82.6.169/26）↔ CML Lab A VM（System Bridge0 10.82.9.30/25）；CML Lab B VM（System Bridge0 10.82.128.35/25）与 Lab A 之间用 GRE 隧道相连；Lab B 内跑 SD-WAN，其 NDFC OoB Bridge 为 10.82.128.128/26，NDFC 虚拟设备为 10.82.128.165/26|620](deck-images/brkops2670-S37_env-setup.png)
 
 **图上看到什么**：这是全 deck 最"工程化"的一张图，把地址规划一次讲清：
 
@@ -318,13 +318,13 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 5.4 用 NDFC 管虚拟 Nexus
 
-![S38 NDFC 建模的三步初始设置：bootstrap 节点、部署 NDFC OVA、在 CML 里建 lab，并强调"别忘了你的 bridge"](deck-images/brkops2670-S38_ndfc-setup.png)
+![S38 NDFC 建模的三步初始设置：bootstrap 节点、部署 NDFC OVA、在 CML 里建 lab，并强调"别忘了你的 bridge"|620](deck-images/brkops2670-S38_ndfc-setup.png)
 
 **图上看到什么**：三个编号步骤（1 Bootstrap nodes → 2 Deploy NDFC OVA → 3 Create lab in CML），外加一句醒目的提醒 "**Don't forget your bridge**"。
 
 **"别忘 bridge"是针对什么**：NDFC 部署在 CML 之外，要访问 CML 里的 Nexus 管理 IP，**必须**有桥接模式的外部连接器。忘了这一步，NDFC 里一切正常、但永远发现不到设备——这是最典型的"卡一整天"的坑。
 
-![S41 在 NDFC 里添加 CML 虚拟节点：虚拟 Nexus 与真实交换机在同一个 fabric 视图里被纳管](deck-images/brkops2670-S41_ndfc-virtual-nodes.png)
+![S41 在 NDFC 里添加 CML 虚拟节点：虚拟 Nexus 与真实交换机在同一个 fabric 视图里被纳管|620](deck-images/brkops2670-S41_ndfc-virtual-nodes.png)
 
 **图上看到什么**：NDFC 的 fabric 管理界面，把 CML 中的虚拟 Nexus 加进 fabric。
 
@@ -339,7 +339,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 5.5 用 Catalyst SD-WAN 建模
 
-![S45 SD-WAN 三台控制器的初始配置对照：Manager/Validator/Controller 的 system-ip、site-id、组织名、vbond，以及 vpn 0（eth0）与 vpn 512（eth1）的接口与默认路由](deck-images/brkops2670-S45_sdwan-controller-config.png)
+![S45 SD-WAN 三台控制器的初始配置对照：Manager/Validator/Controller 的 system-ip、site-id、组织名、vbond，以及 vpn 0（eth0）与 vpn 512（eth1）的接口与默认路由|620](deck-images/brkops2670-S45_sdwan-controller-config.png)
 
 **图上看到什么**：三列并排的配置清单，关键参数横向对齐：
 
@@ -362,13 +362,13 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 **为什么这张图比文字讲义更有效**：三列横向对齐的版式，让"哪些参数相同、哪些必须不同"一目了然。自己配的时候照着这个版式检查，能避免 90% 的"设备起不来"问题。
 
-![S48 SD-WAN 管理套件起来了：可以开始部署 WAN Edge、探索 SD-Routing、测试网络故障切换的阈值](deck-images/brkops2670-S48_sdwan-up.png)
+![S48 SD-WAN 管理套件起来了：可以开始部署 WAN Edge、探索 SD-Routing、测试网络故障切换的阈值|620](deck-images/brkops2670-S48_sdwan-up.png)
 
 **图上看到什么**：管理套件就绪后的三个下一步动作——部署 WAN Edge、探索 **SD-Routing**、测试**故障切换的阈值**。
 
 **注意 "test thresholds for network failover"**：这是 SD-WAN 实验的真正价值点。故障切换阈值（丢包率/时延/抖动）是**理论值好写、实际值难调**的东西——设太松，业务已经受影响才切；设太紧，链路轻微抖动就频繁切换。只有在可控的环境里注入链路条件，才能把阈值调准。
 
-![S50 SD-WAN 隧道统计与故障切换：18:18 公网隧道丢包 5%、时延 91ms、抖动 3ms，18:22 蓝色（专线）隧道接管](deck-images/brkops2670-S50_tunnel-failover.png)
+![S50 SD-WAN 隧道统计与故障切换：18:18 公网隧道丢包 5%、时延 91ms、抖动 3ms，18:22 蓝色（专线）隧道接管|620](deck-images/brkops2670-S50_tunnel-failover.png)
 
 **图上看到什么**：一张真实的 SD-WAN 隧道监控曲线图，六个纵向指标面板（Loss Percentage、Latency、Jitter、Rx Octets、Tx Octets）：
 
@@ -385,7 +385,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 **这张图与 BRKCRT-2059 的 S38（链路条件化）构成了完整闭环**：先用链路条件化**注入** 5% 丢包，再用 SD-WAN 监控**观察**切换行为，最后**调阈值**。这条链在真机上几乎不可能练——你没法让生产链路按你的意愿丢包。
 
-![S51 Catalyst Center 与 Cat 9000v 的初始设置：bootstrap 节点、在 CML 建 lab、部署 Catalyst Center](deck-images/brkops2670-S51_catcenter-setup.png)
+![S51 Catalyst Center 与 Cat 9000v 的初始设置：bootstrap 节点、在 CML 建 lab、部署 Catalyst Center|620](deck-images/brkops2670-S51_catcenter-setup.png)
 
 **图上看到什么**：与 NDFC 相同的三步式初始设置，但对象换成 Catalyst Center + Cat 9000v 交换机。
 
@@ -393,9 +393,9 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 **为什么序列号是个坑**：Catalyst Center 靠**序列号**识别设备。如果克隆出的虚拟交换机共用同一个序列号，Catalyst Center 会认为它们是同一台设备，导致设备发现失败或互相覆盖。这个"预先改序列号"的动作在 CML 界面里是节点属性，很容易被忽略。
 
-![S53 用 Catalyst Center 统一管理：CML 里的虚拟交换机与生产交换机出现在同一个设备清单里](deck-images/brkops2670-S53_catcenter-manage.png)
+![S53 用 Catalyst Center 统一管理：CML 里的虚拟交换机与生产交换机出现在同一个设备清单里|620](deck-images/brkops2670-S53_catcenter-manage.png)
 
-![S55 用 Catalyst Center 验证模板配置与合规性：在建模环境里先跑一遍模板下发与合规检查](deck-images/brkops2670-S55_catcenter-compliance.png)
+![S55 用 Catalyst Center 验证模板配置与合规性：在建模环境里先跑一遍模板下发与合规检查|620](deck-images/brkops2670-S55_catcenter-compliance.png)
 
 **图上看到什么**：两张 Catalyst Center 的真实界面截图——设备清单（虚拟与生产混排）、以及模板配置/合规性校验页面。
 
@@ -406,7 +406,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 **这就是"CML 作为变更管理工具"的最终形态**——不是"练手"，而是**生产变更的预演环节**（呼应 S17 的第 2 条价值主张）。
 
-![S57 CML 平台实验环境的双站点布局：Lab A VM 与 Lab B VM 通过 GRE 隧道连接（与 S37 同一套环境的简化视图）](deck-images/brkops2670-S57_platform-lab-env.png)
+![S57 CML 平台实验环境的双站点布局：Lab A VM 与 Lab B VM 通过 GRE 隧道连接（与 S37 同一套环境的简化视图）|620](deck-images/brkops2670-S57_platform-lab-env.png)
 
 ---
 
@@ -416,7 +416,7 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 6.1 Cockpit 的 Bridge 机制（详见 3.1）
 
-![S64 CML Cockpit 入口：https://<cml-host-ip>:9090，在这里做宿主机层的网络配置](deck-images/brkops2670-S64_cockpit.png)
+![S64 CML Cockpit 入口：https://<cml-host-ip>:9090，在这里做宿主机层的网络配置|620](deck-images/brkops2670-S64_cockpit.png)
 
 **图上看到什么**：Cockpit 登录/概览页，标注访问地址为 `https://your-cml-host-ip:9090`。
 
@@ -424,13 +424,13 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 ### 6.2 6VPE 与 VXLAN 的抓包实证
 
-![S72 6VPE 实验拓扑：PE1/P1/P2/PE2 组成 MPLS 核心，两端 alpine 主机分属 VRF redv6，标注各接口 IPv6 地址与 EB/VRF 关系](deck-images/brkops2670-S72_6vpe-topology.png)
+![S72 6VPE 实验拓扑：PE1/P1/P2/PE2 组成 MPLS 核心，两端 alpine 主机分属 VRF redv6，标注各接口 IPv6 地址与 EB/VRF 关系|620](deck-images/brkops2670-S72_6vpe-topology.png)
 
 **图上看到什么**：`alpine-0`、`mpls_pe1`、`mpls_p1`、`mpls_p2`、`mpls_pe2`、`alpine-1` 六个节点的 MPLS 拓扑，标注 `G1/G2/EB` 接口地址（2001:db8:100::/2001:db8:200:: 两个网段）、`OSPF Area 0`、`GWE | IPv4 MPLS / IPv6`，以及两端 `VRF redv6`。
 
 **怎么看这个拓扑的"考点密度"**：这个六节点小拓扑同时压了四件事——OSPF（underlay 收敛）、MPLS LDP（标签分发）、BGP VPNv6（VPN 路由）、VRF（客户隔离）。**一个拓扑覆盖四层技术**，这就是为什么它被反复用作"迁移验证"的载体。
 
-![S75 6VPE over MPLSv4 的抓包详情：第 10 号包层层展开为 Ethernet II → MPLS（Label 20, Exp 2, S 1, TTL 61）→ IPv6（2001:db8:200:::→2001:db8:100::...）→ SSH](deck-images/brkops2670-S75_pcap-6vpe.png)
+![S75 6VPE over MPLSv4 的抓包详情：第 10 号包层层展开为 Ethernet II → MPLS（Label 20, Exp 2, S 1, TTL 61）→ IPv6（2001:db8:200:::→2001:db8:100::...）→ SSH|620](deck-images/brkops2670-S75_pcap-6vpe.png)
 
 **图上看到什么**：CML 内建抓包窗口的完整界面——
 - 抓包列表（No. / Time / Source / Destination / Protocol / Length / Info）里能看到 LDP Hello、OSPF Hello、DNS 查询、SSH 会话；
@@ -439,15 +439,15 @@ tags: [业界分析, 思科, CML, NDFC, SD-WAN, Catalyst Center]
 
 **这张图证明了什么**：**6VPE 的封装在 CML 里是逐字节真实的**。MPLS 标签（Label 20）真实存在、IPv6 真实承载在标签之下、SSH 会话真实跑在上面。也就是说，CML 的仿真不是"行为级近似"，**协议栈是完整的**——这直接支撑了"CML 可以用来验证迁移方案"的论断。
 
-![S77 VXLAN 抓包：同样能看到 VXLAN 头部与内层原始帧的完整嵌套](deck-images/brkops2670-S77_pcap-vxlan.png)
+![S77 VXLAN 抓包：同样能看到 VXLAN 头部与内层原始帧的完整嵌套|620](deck-images/brkops2670-S77_pcap-vxlan.png)
 
 **说明**：与 6VPE 同理，VXLAN 的抓包能看到外层 UDP → VXLAN 头 → 内层以太帧的完整嵌套。**对做数据中心网络的人来说，这是验证"VXLAN 转发是否真的按预期封装"的最直接手段**。
 
 ### 6.3 培训环境的自动化生成
 
-![S78 用网络模型建培训环境：一台 CML 服务器为每位新工程师分配独立的 lab 环境](deck-images/brkops2670-S78_training-env.png)
+![S78 用网络模型建培训环境：一台 CML 服务器为每位新工程师分配独立的 lab 环境|620](deck-images/brkops2670-S78_training-env.png)
 
-![S79 培训环境的实现细节：每个用户分配唯一 lab（用 Python + Jinja + Ansible 批量生成）；Ubuntu 节点承载 Ansible/git/pip；bootstrap 时自动 clone Git 仓库；用 VSCode Remote-SSH 接入工作](deck-images/brkops2670-S79_training-env-detail.png)
+![S79 培训环境的实现细节：每个用户分配唯一 lab（用 Python + Jinja + Ansible 批量生成）；Ubuntu 节点承载 Ansible/git/pip；bootstrap 时自动 clone Git 仓库；用 VSCode Remote-SSH 接入工作|620](deck-images/brkops2670-S79_training-env-detail.png)
 
 **图上看到什么**：培训环境的三个实现要点——每个用户拿到唯一 lab（用 **Python + Jinja + Ansible** 批量生成）、Ubuntu 节点上装好 Ansible/git/pip、bootstrap 时自动 clone Git 仓库、用 VSCode Remote-SSH 接入。
 

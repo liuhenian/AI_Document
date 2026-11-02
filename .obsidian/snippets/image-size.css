@@ -1,0 +1,74 @@
+/* ==========================================================================
+   图片尺寸控制
+   两类图分开治：
+     · 横版超宽图（架构图、表格截图）—— 限制宽度
+     · 竖版手机长图（600x1066 这类菜谱截图）—— 限制高度，否则一屏放不下
+   ========================================================================== */
+
+body {
+  --pic-max: 620px;      /* 横图最大宽度 */
+  --pic-max-h: 68vh;     /* 竖图最大高度：占屏幕高度的比例。想更矮改 55vh */
+  --pic-max-table: 240px;
+}
+
+/* 1. 正文图片：宽度和高度双限，等比缩放不裁切 */
+.markdown-preview-view img,
+.markdown-rendered img,
+.markdown-source-view.mod-cm6 .cm-content img {
+  max-width: min(100%, var(--pic-max)) !important;
+  max-height: var(--pic-max-h) !important;
+  object-fit: contain;
+}
+
+/* 2. 容器居中 */
+.image-embed {
+  max-width: min(100%, var(--pic-max)) !important;
+  margin-inline: auto !important;
+}
+
+/* 3. 表格内一律压小 */
+.markdown-preview-view table img,
+.markdown-preview-view table video,
+.markdown-preview-view table iframe,
+.cm-table-widget img,
+.cm-table-widget video,
+.cm-table-widget iframe {
+  max-width: var(--pic-max-table) !important;
+  max-height: calc(var(--pic-max-table) * 0.75) !important;
+  object-fit: contain;
+  vertical-align: middle;
+}
+
+/* 4. emoji / 图标保护 —— 必须放最后
+      Obsidian 会把 ‼️ 这类 emoji 渲染成 <img>，一旦被上面规则波及
+      就会变成 200px 的大红块。这里强制回到文字大小。 */
+img.emoji,
+.emoji img,
+img[src*="twemoji"],
+img[src*="emoji"],
+img[alt*="‼"],
+img[alt*="️"] {
+  width: 1em !important;
+  height: 1em !important;
+  max-width: 1.2em !important;
+  max-height: 1.2em !important;
+  display: inline !important;
+  vertical-align: -0.12em !important;
+  margin: 0 !important;
+  border-radius: 0 !important;
+  object-fit: fill !important;
+}
+
+
+/* ==========================================================================
+   5. 文件列表过滤：隐藏非 Markdown 文件（.py / .sh / .json 等）
+   背景：code-reader 插件用 registerExtensions() 把代码文件注册成了
+        Obsidian「支持的文件」，所以「设置 → 检测所有文件扩展名」关不掉它们。
+        这里从文件树里隐藏，但文件本身还在，仍可用 Ctrl+O 搜索打开。
+   想恢复显示：删掉下面这一整段。
+   ========================================================================== */
+
+.nav-file:has(.nav-file-tag),
+.tree-item:has(> .nav-file-title .nav-file-tag) {
+  display: none !important;
+}

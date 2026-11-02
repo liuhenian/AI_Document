@@ -32,7 +32,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 讲者没有直接讲功能，而是先抛一个问题给 ChatGPT：**"怎么才能通过思科认证考试？"** 然后把 ChatGPT 的回答原文投在屏幕上——答案里最关键的一句是 **"Hands-on practice: Set up a home lab…"**。
 
-![S3 标题页：讲者身份与场次编号，即全场唯一"署名"](deck-images/brkcrt2059-S03_title.png)
+![S3 标题页：讲者身份与场次编号，即全场唯一"署名"|620](deck-images/brkcrt2059-S03_title.png)
 
 **图上看到什么**：极简标题页，只有标题、讲者姓名/头衔/CCIE 编号与场次号 BRKCRT-2059。
 
@@ -44,7 +44,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 2.1 四个版本：先算清你的并发规模
 
-![S11 CML 四个版本（Personal / Personal Plus / Enterprise / Education）的并发节点数与用户模型对比](deck-images/brkcrt2059-S11_flavours.png)
+![S11 CML 四个版本（Personal / Personal Plus / Enterprise / Education）的并发节点数与用户模型对比|620](deck-images/brkcrt2059-S11_flavours.png)
 
 **图上看到什么**：四列对比。Personal 单用户、最多 20 个并发运行节点；Personal Plus 单用户、最多 40 个；Enterprise 多用户、可集群、最多 320 个；Education 多用户、可集群、按学生人数授权。
 
@@ -52,7 +52,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 2.2 架构：API 与 UI 是平级的
 
-![S13 CML 架构：HTML5 界面与 Python 客户端库/自定义应用，共同通过 REST API 访问 Linux 上的 CML 平台](deck-images/brkcrt2059-S13_architecture.png)
+![S13 CML 架构：HTML5 界面与 Python 客户端库/自定义应用，共同通过 REST API 访问 Linux 上的 CML 平台|620](deck-images/brkcrt2059-S13_architecture.png)
 
 **图上看到什么**：自下而上三层——Linux 底座 → CML Platform → REST API；API 之上并列着 HTML5 界面、Python 客户端库、自定义应用，旁侧还有 Swagger 文档。
 
@@ -60,7 +60,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 2.3 访问模拟设备：四条路径
 
-![S16 访问模拟设备的四种方式：Breakout/PATty 端口映射、外部连接器接物理网、cmlutils 远程接入，以及 TLS 加密复用通道](deck-images/brkcrt2059-S16_access-devices.png)
+![S16 访问模拟设备的四种方式：Breakout/PATty 端口映射、外部连接器接物理网、cmlutils 远程接入，以及 TLS 加密复用通道|620](deck-images/brkcrt2059-S16_access-devices.png)
 
 **图上看到什么**：左侧三条要点，右侧是一张设备端到 CML 控制器的拓扑示意图——PuTTY / iTerm 通过本地连接接入"Breakout Tool"，再经一把锁（TLS，标注 Encrypted, authenticated, multiplexed）到达 CML 控制器上的设备。
 
@@ -73,7 +73,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 2.4 与考试的关系：练的就是考的
 
-![S17 官方示例题：给 R1 的 Gi1/Gi2/Gi3 做 VLSM 子网划分，三个方向分别 15/30/7 台客户端](deck-images/brkcrt2059-S17_exam-topology.png)
+![S17 官方示例题：给 R1 的 Gi1/Gi2/Gi3 做 VLSM 子网划分，三个方向分别 15/30/7 台客户端|620](deck-images/brkcrt2059-S17_exam-topology.png)
 
 **图上看到什么**：一道完整的 CCNA 风格题面 + 拓扑（R1 下挂 SW1/SW2/SW3），标出 15 clients / 30 clients / 7 clients 三个需求；页面右下角一句关键结论："**The performance-based lablets use CML. You'll be practicing on the same kit.**"
 
@@ -87,7 +87,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 3.1 PATty 的成立条件：不是装上就能用
 
-![S24 PATty 端口映射的拓扑前提：ext-conn 必须是 NAT 模式，且节点要二层直连或被嗅探器看见，否则不同子网的节点无法映射](deck-images/brkcrt2059-S24_patty-port-access.png)
+![S24 PATty 端口映射的拓扑前提：ext-conn 必须是 NAT 模式，且节点要二层直连或被嗅探器看见，否则不同子网的节点无法映射|620](deck-images/brkcrt2059-S24_patty-port-access.png)
 
 **图上看到什么**：`ext-conn` 处于 NAT 模式；`desktop-0`、`desktop-1`、`iosv-0` 二层直连 ext-conn；`desktop-2` 经 `iosvl2-0` 二层接入；而 `iosv-1`、`desktop-3`、`desktop-4` 位于**不同子网**，从 CML 主机无法直接访问。
 
@@ -99,7 +99,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 3.2 配置的真正入口是 tag
 
-![S26 PATty 的六种节点 tag 语法：pat / pat:tcp / pat:udp / serial / serial:linenum / vnc](deck-images/brkcrt2059-S26_patty-tags.png)
+![S26 PATty 的六种节点 tag 语法：pat / pat:tcp / pat:udp / serial / serial:linenum / vnc|620](deck-images/brkcrt2059-S26_patty-tags.png)
 
 **图上看到什么**：六行 tag 语法清单：`pat:outside:inside`、`pat:tcp:outside:inside`、`pat:udp:outside:inside`、`serial:outside`、`serial:outside:linenum`、`vnc:outside`。
 
@@ -109,7 +109,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 3.3 外部连通性：三种模式对应三种真实网络形态
 
-![S28 外部连通性三模式：NAT（L3，类比家庭上网）、Bridge（L2，共享 CML 服务器所在网段）、Custom（L2，接任意二层段）](deck-images/brkcrt2059-S28_external-connectivity.png)
+![S28 外部连通性三模式：NAT（L3，类比家庭上网）、Bridge（L2，共享 CML 服务器所在网段）、Custom（L2，接任意二层段）|620](deck-images/brkcrt2059-S28_external-connectivity.png)
 
 **图上看到什么**：三个并排的选项，分别标注 NAT（L3，"think home networking"）、Bridge（L2，"share the segment on which the CML server sits"）、Custom（L2，"connect your labs to any layer 2 segment"）。
 
@@ -123,7 +123,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 3.4 Day 0 配置：配置随拓扑一起分发
 
-![S31 Day 0 配置：首次启动即加载，并保存在 lab 的 YAML 中可下载分享](deck-images/brkcrt2059-S31_day0-configs.png)
+![S31 Day 0 配置：首次启动即加载，并保存在 lab 的 YAML 中可下载分享|620](deck-images/brkcrt2059-S31_day0-configs.png)
 
 **图上看到什么**：左侧是"Config to load the first time the device boots"（首次启动加载的配置），可以随时拉入最新配置；下方强调 **Day 0 配置保存在 lab 的 YAML 文件里，可下载分享**。
 
@@ -131,7 +131,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 3.5 用真实故障练排障：OSPF 卡在 EXSTART
 
-![S32 故障注入示例：R1 与 R2 的 OSPF 邻居都卡在 EXSTART 状态](deck-images/brkcrt2059-S32_ospf-exstart.png)
+![S32 故障注入示例：R1 与 R2 的 OSPF 邻居都卡在 EXSTART 状态|620](deck-images/brkcrt2059-S32_ospf-exstart.png)
 
 **图上看到什么**：R1、R2 两台路由器之间连线，两侧都标注 `OSPF: Stuck in EXSTART`，中间一个大问号。
 
@@ -141,7 +141,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 3.6 一个必须知道的坑：链路全是 GE
 
-![S37 数据面真相：CML 所有链路都是 Gigabit Ethernet，N9Kv 只是"显示"10Gbps，仅 Cat9Kv 可改 TenGE](deck-images/brkcrt2059-S37_dataplane-gotchas.png)
+![S37 数据面真相：CML 所有链路都是 Gigabit Ethernet，N9Kv 只是"显示"10Gbps，仅 Cat9Kv 可改 TenGE|620](deck-images/brkcrt2059-S37_dataplane-gotchas.png)
 
 **图上看到什么**：标题写着"Public service announcement: dataplane gotchas"（公告：数据面的坑）。正文列出：所有链路类型都是 Gigabit Ethernet；N9Kv 显示为 10 Gbps 但不可改；不能命名接口为 TenGE/HunGE；Cat9Kv 允许改成 TenGE；Linux 节点可达约 1 Gbps，**但大多数节点数据面是限速的**。
 
@@ -152,7 +152,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 3.7 链路条件化：把"距离"变成可调参数
 
-![S38 链路条件化：给链路注入时延，模拟 3635 英里的长距离传输](deck-images/brkcrt2059-S38_link-conditioning.png)
+![S38 链路条件化：给链路注入时延，模拟 3635 英里的长距离传输|620](deck-images/brkcrt2059-S38_link-conditioning.png)
 
 **图上看到什么**：一条链路上标注 `3635 mi`（3635 英里，约北京到洛杉矶的直线距离量级）。
 
@@ -162,7 +162,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 3.8 打流：ping 不够用的时候
 
-![S41 TRex GUI 界面结构：操作按钮区、数据/抓包端口区、可自定义的流列表](deck-images/brkcrt2059-S41_trex-gui.png)
+![S41 TRex GUI 界面结构：操作按钮区、数据/抓包端口区、可自定义的流列表|620](deck-images/brkcrt2059-S41_trex-gui.png)
 
 **图上看到什么**：TRex 的图形界面分三块——顶部操作按钮、中部 Data（或 dump）Port(s)、下部可自定义的 streams（流）。
 
@@ -172,7 +172,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ## 4. 方法论核心：用布鲁姆分类法读考试大纲
 
-![S47 思科动词与认知层级的映射：Analyse 层（Diagnose/Verify/Optimise）被标注 "CML Here!"](deck-images/brkcrt2059-S47_cisco-verbs.png)
+![S47 思科动词与认知层级的映射：Analyse 层（Diagnose/Verify/Optimise）被标注 "CML Here!"|620](deck-images/brkcrt2059-S47_cisco-verbs.png)
 
 **图上看到什么**：三层动词分组，右侧标注对应认知层级——
 
@@ -203,19 +203,19 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 5.1 实验一（CCNA）：多 VLAN 与单臂路由
 
-![S52 CCNA 实验拓扑：Desktop 在 VLAN 10、Server 在 VLAN 20，中间是 IOSvL2 交换机与 IOSv 路由器](deck-images/brkcrt2059-S52_ccna-topology.png)
+![S52 CCNA 实验拓扑：Desktop 在 VLAN 10、Server 在 VLAN 20，中间是 IOSvL2 交换机与 IOSv 路由器|620](deck-images/brkcrt2059-S52_ccna-topology.png)
 
 **图上看到什么**：两端主机（Desktop / Server）分属 VLAN 10 与 VLAN 20，中间一台 IOSvL2（二层交换机）与一台 IOSv（路由器）。
 
 **怎么理解**：这是最经典的"单臂路由（Router-on-a-Stick）"拓扑——交换机与路由器之间用一条 trunk，路由器上起子接口做各 VLAN 的网关。**它的考点不是配置，而是"验证流量确实经过了路由器"**：如果不做验证，很容易出现"主机间能通，但其实是二层直通、路由器没起作用"的假通过。
 
-![S53 两台交换机的 VLAN 与 trunk 配置对照，右侧打勾确认两项任务完成](deck-images/brkcrt2059-S53_ccna-switch-config.png)
+![S53 两台交换机的 VLAN 与 trunk 配置对照，右侧打勾确认两项任务完成|620](deck-images/brkcrt2059-S53_ccna-switch-config.png)
 
 **图上看到什么**：左右两份交换机配置，右侧叠加了任务勾选（✓ Implement VLAN assignments on two switches / ✓ Configure a dot1q trunk between those switches）。注意两台交换机的**端口角色是镜像的**——一台的 gi0/0 是 trunk、gi0/1 是 VLAN10 接入；另一台的 gi0/3 才是 trunk、gi0/0 是 VLAN20 接入。
 
 **怎么理解**：这个镜像设计不是凑数，而是**防止你背端口号**。真实考试里端口编号是随机的，你必须能"看图判断哪条线该配 trunk"。这是 Apply 层的典型考法：不是考记忆，是考**把需求翻译成配置**的能力。
 
-![S54 路由器侧配置：gi0/0.10 与 gi0/0.20 两个子接口分别做 VLAN 10/20 的网关](deck-images/brkcrt2059-S54_ccna-router-config.png)
+![S54 路由器侧配置：gi0/0.10 与 gi0/0.20 两个子接口分别做 VLAN 10/20 的网关|620](deck-images/brkcrt2059-S54_ccna-router-config.png)
 
 **图上看到什么**：`interface gi0/0.10` 配 `encap dot1q 10` + `192.168.10.1/24`；`gi0/0.20` 配 `encap dot1q 20` + `192.168.20.1/24`。
 
@@ -223,7 +223,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 ### 5.2 实验二（ENARSI）：BGP 排障 —— 全场最有教学价值的示范
 
-![S57 BGP 排障实验拓扑：AS 65001 内部全互联 IBGP，外部连接 AS 65004/65005/65006/65008，全部 IOSv](deck-images/brkcrt2059-S57_enarsi-topology.png)
+![S57 BGP 排障实验拓扑：AS 65001 内部全互联 IBGP，外部连接 AS 65004/65005/65006/65008，全部 IOSv|620](deck-images/brkcrt2059-S57_enarsi-topology.png)
 
 **图上看到什么**：五个 AS（65001 内部，65004/65005/65006/65008 外部），全部使用 IOSv 节点。
 
@@ -232,7 +232,7 @@ tags: [业界分析, 思科, CML, 认证备考, 实验环境]
 
 **注意题面的措辞**："使用 Loopback1"这句话既是**需求**，也是**判据**——它暗示了后面 R1 配置里 `update-source` 写错的可能。
 
-![S62 在 R2 上验证与 R4 的邻居关系，输出明确报出"not directly connected"与"configured for connected checks"](deck-images/brkcrt2059-S62_enarsi-ebgp-check.png)
+![S62 在 R2 上验证与 R4 的邻居关系，输出明确报出"not directly connected"与"configured for connected checks"|620](deck-images/brkcrt2059-S62_enarsi-ebgp-check.png)
 
 **图上看到什么**：`show ip bgp neighbours 172.16.4.4 | inc BGP neighbour` 的输出：
 ```
@@ -261,19 +261,19 @@ External BGP neighbour configured for connected checks (single-hop no-disable-co
 
 ### 5.3 实验三（DEVCOR）：用 RESTCONF 改配置
 
-![S74 DEVCOR 实验拓扑：单台 Catalyst 8000v，工作在桥接模式](deck-images/brkcrt2059-S74_devcor-topology.png)
+![S74 DEVCOR 实验拓扑：单台 Catalyst 8000v，工作在桥接模式|620](deck-images/brkcrt2059-S74_devcor-topology.png)
 
 **图上看到什么**：只有一台 **Catalyst 8000v**，标注 "In Bridge Mode"。
 
 **为什么强调 Bridge 模式**：因为要用 **Postman 从外部**发 RESTCONF 请求，虚拟路由器必须和你的 Postman 处在可达的网段——Bridge 模式让它直接接入 CML 服务器所在网段，省去 NAT 端口映射的麻烦。
 
-![S76 RESTCONF 取回配置：模型选用 Cisco-IOS-XE-native:native，Accept 为 application/yang-data+json，使用 Basic 认证](deck-images/brkcrt2059-S76_restconf-config.png)
+![S76 RESTCONF 取回配置：模型选用 Cisco-IOS-XE-native:native，Accept 为 application/yang-data+json，使用 Basic 认证|620](deck-images/brkcrt2059-S76_restconf-config.png)
 
 **图上看到什么**：Postman 请求界面——模型路径 `Cisco-IOS-XE-native:native`（等价于 `show run` 的完整原生配置）、`Accept: application/yang-data+json`、以及一句提醒"RESTCONF uses Basic auth"。
 
 **怎么理解**：`Cisco-IOS-XE-native:native` 是**"把整份 running-config 变成一个 JSON"**的那个模型——它最大的用途是"读取现状"，而不是"精确修改"。真要做精细化配置，应该用结构化模型（如 `Cisco-IOS-XE-interfaces`）。这个区别在新手用 RESTCONF 时最容易踩。
 
-![S78 提交配置：Content-Type 设为 application/yang-data+json，返回 201 表示资源创建成功](deck-images/brkcrt2059-S78_restconf-201.png)
+![S78 提交配置：Content-Type 设为 application/yang-data+json，返回 201 表示资源创建成功|620](deck-images/brkcrt2059-S78_restconf-201.png)
 
 **图上看到什么**：Postman 响应区显示状态码 **201**，旁注 "201 means the resource was created"；请求头 Content-Type 为 `application/yang-data+json`。
 

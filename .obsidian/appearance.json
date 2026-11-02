@@ -7,7 +7,9 @@
     "minimal-headings",
     "table-center",
     "TreeFocus高亮改为文字色",
-    "附件链接卡片"
+    "附件链接卡片",
+    "image-size",
+    "图与图表尺寸控制"
   ],
   "accentColor": ""
 }
