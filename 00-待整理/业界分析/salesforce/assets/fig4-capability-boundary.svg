@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <rect width="1200" height="720" fill="#FFFFFF"/>
+  <text x="40" y="46" font-size="24" font-weight="700" fill="#032D60">图 4｜能力边界：能做什么，不能做什么，以及为什么不能</text>
+  <text x="40" y="76" font-size="15" fill="#5B6B7C">这张图是全文最该拿去评审的一页。上面两行是官方文档可查的事实，最下一行是本文的归因（D）。</text>
+
+  <!-- headers -->
+  <rect x="40" y="100" width="170" height="40" rx="6" fill="#EEF2F6"/>
+  <rect x="230" y="100" width="450" height="40" rx="6" fill="#EAF3FB"/>
+  <rect x="700" y="100" width="460" height="40" rx="6" fill="#E7F4F0"/>
+  <text x="56" y="126" font-size="14" font-weight="700" fill="#5B6B7C">能力</text>
+  <text x="246" y="126" font-size="14" font-weight="700" fill="#0176D3">代码级：Apex / LWC 单元测试</text>
+  <text x="716" y="126" font-size="14" font-weight="700" fill="#0E7C66">行为级：Agentforce Agent 测试</text>
+
+  <!-- CAN -->
+  <rect x="40" y="152" width="170" height="212" rx="6" fill="#F4F9F4"/>
+  <text x="56" y="180" font-size="14" font-weight="700" fill="#0E6B3A">AI 能做</text>
+  <text x="56" y="204" font-size="12" fill="#4B6B52">有明确输入输出、</text>
+  <text x="56" y="222" font-size="12" fill="#4B6B52">有大量同类样本</text>
+  <text x="56" y="240" font-size="12" fill="#4B6B52">的任务</text>
+
+  <rect x="230" y="152" width="450" height="212" rx="6" fill="#FFFFFF" stroke="#DCE7F2"/>
+  <g font-size="12.8" fill="#1F2328">
+    <circle cx="248" cy="180" r="3" fill="#0176D3"/><text x="262" y="185">生成可编译的 @isTest 骨架（含 startTest / stopTest 位置）</text>
+    <circle cx="248" cy="210" r="3" fill="#0176D3"/><text x="262" y="215">按分支生成正向 / 负向 / 批量（200 条）三类用例</text>
+    <circle cx="248" cy="240" r="3" fill="#0176D3"/><text x="262" y="245">生成 LWC 的 Jest 用例（TDX 2025 起支持右键生成）</text>
+    <circle cx="248" cy="270" r="3" fill="#0176D3"/><text x="262" y="275">把已勾选的既有测试作为上下文，降低重复</text>
+    <circle cx="248" cy="300" r="3" fill="#0176D3"/><text x="262" y="305">从项目 schema / 元数据推断必填字段与依赖（Dev Assistant 起）</text>
+    <circle cx="248" cy="330" r="3" fill="#0176D3"/><text x="262" y="335">把“写测试”从创作任务降级为“审查任务”（官方定位）</text>
+  </g>
+
+  <rect x="700" y="152" width="460" height="212" rx="6" fill="#FFFFFF" stroke="#B7D9CF"/>
+  <g font-size="12.8" fill="#1F2328">
+    <circle cx="718" cy="180" r="3" fill="#0E7C66"/><text x="732" y="185">从子代理 / 动作清单批量合成问法（单次 100–200 条）</text>
+    <circle cx="718" cy="210" r="3" fill="#0E7C66"/><text x="732" y="215">覆盖多轮对话；语音场景可生成音频并模拟口音、噪声</text>
+    <circle cx="718" cy="240" r="3" fill="#0E7C66"/><text x="732" y="245">把“路由是否正确”变成可统计的命中率</text>
+    <circle cx="718" cy="270" r="3" fill="#0E7C66"/><text x="732" y="275">改完指令后用同一批用例回归，验证是否真的修好</text>
+    <circle cx="718" cy="300" r="3" fill="#0E7C66"/><text x="732" y="305">在上线前暴露“哪些子代理几乎没人命中”这类设计问题</text>
+  </g>
+
+  <!-- CANNOT -->
+  <rect x="40" y="376" width="170" height="212" rx="6" fill="#FDF3F2"/>
+  <text x="56" y="404" font-size="14" font-weight="700" fill="#B03A2E">AI 不能</text>
+  <text x="56" y="428" font-size="12" fill="#7B4A44">需要“真实世界答案”</text>
+  <text x="56" y="446" font-size="12" fill="#7B4A44">或需要跨系统推理</text>
+  <text x="56" y="464" font-size="12" fill="#7B4A44">的任务</text>
+
+  <rect x="230" y="376" width="450" height="212" rx="6" fill="#FFFFFF" stroke="#EED3CF"/>
+  <g font-size="12.8" fill="#1F2328">
+    <circle cx="248" cy="404" r="3" fill="#C0392B"/><text x="262" y="409">不生成测试数据 → 对象有复杂校验规则时，测试直接跑不通</text>
+    <circle cx="248" cy="434" r="3" fill="#C0392B"/><text x="262" y="439">断言来自“实现现在怎么跑”，可能把 bug 固化成预期</text>
+    <circle cx="248" cy="464" r="3" fill="#C0392B"/><text x="262" y="469">不自动运行失败再修复（文档只有 Accept / Try Again / Clear）</text>
+    <circle cx="248" cy="494" r="3" fill="#C0392B"/><text x="262" y="499">方法越复杂，生成质量越差（官方自述，只保证“给个骨架”）</text>
+    <circle cx="248" cy="524" r="3" fill="#C0392B"/><text x="262" y="529">不做变异测试，因此无法证明“测试能不能抓到 bug”</text>
+    <circle cx="248" cy="554" r="3" fill="#C0392B"/><text x="262" y="559">不覆盖 Flow / Aura / 端到端 UI / 跨系统集成</text>
+  </g>
+
+  <rect x="700" y="376" width="460" height="212" rx="6" fill="#FFFFFF" stroke="#EED3CF"/>
+  <g font-size="12.8" fill="#1F2328">
+    <circle cx="718" cy="404" r="3" fill="#C0392B"/><text x="732" y="409">不证明回复“事实正确”，只证明“路由对 + 评分过”</text>
+    <circle cx="718" cy="434" r="3" fill="#C0392B"/><text x="732" y="439">合成问法不等于真实用户分布，偏差无法自证</text>
+    <circle cx="718" cy="464" r="3" fill="#C0392B"/><text x="732" y="469">不定位根因：只告诉你“选错了”，不告诉你为什么</text>
+    <circle cx="718" cy="494" r="3" fill="#C0392B"/><text x="732" y="499">不能在生产跑（会改 CRM 数据），只能在 sandbox</text>
+    <circle cx="718" cy="524" r="3" fill="#C0392B"/><text x="732" y="529">换模型 / 换版本后通过率不可直接比较</text>
+    <circle cx="718" cy="554" r="3" fill="#C0392B"/><text x="732" y="559">不覆盖 Agent 之外的系统：Apex 动作内部的逻辑仍要靠单测</text>
+  </g>
+
+  <!-- root causes -->
+  <rect x="40" y="608" width="1120" height="92" rx="6" fill="#F7FAFD" stroke="#C9DCEF"/>
+  <text x="58" y="634" font-size="13.5" font-weight="700" fill="#032D60">三条根因（为什么这些“不能”不是产品缺陷，而是方法本身的边界）</text>
+  <text x="58" y="654" font-size="12.6" fill="#1F2328">① 判定基准（oracle）来自被测代码本身 → 代码错，测试跟着错。</text>
+  <text x="58" y="678" font-size="12.6" fill="#1F2328">② 上下文预算有限 → 看得越少越重复，看得越多越报错（官方明确 token 预算报错）。</text>
+  <text x="660" y="654" font-size="12.6" fill="#1F2328">③ 判定信号是代理指标 → 覆盖率、通过率都不等于“有效”。</text>
+  <text x="660" y="678" font-size="12.6" fill="#5B6B7C">（①②③ 均为本文归因，D）</text>
+</svg>

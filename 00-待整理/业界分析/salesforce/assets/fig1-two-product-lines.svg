@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="660" viewBox="0 0 1200 660" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <rect width="1200" height="660" fill="#FFFFFF"/>
+  <text x="40" y="46" font-size="24" font-weight="700" fill="#032D60">图 1｜同一家公司，两类完全不同的问题</text>
+  <text x="40" y="76" font-size="15" fill="#5B6B7C">代码级单元测试是“通关门槛”问题；Agent 行为测试是“非确定性系统如何验收”问题。混为一谈会得出错误结论。</text>
+
+  <!-- header -->
+  <rect x="40" y="100" width="190" height="44" rx="6" fill="#EAF3FB"/>
+  <rect x="240" y="100" width="450" height="44" rx="6" fill="#EAF3FB"/>
+  <rect x="700" y="100" width="460" height="44" rx="6" fill="#E7F4F0"/>
+  <text x="56" y="127" font-size="15" font-weight="700" fill="#032D60">维度</text>
+  <text x="256" y="127" font-size="15" font-weight="700" fill="#0176D3">代码级：Apex / LWC 单元测试</text>
+  <text x="716" y="127" font-size="15" font-weight="700" fill="#0E7C66">行为级：Agentforce 对话式 Agent</text>
+
+  <!-- rows -->
+  <g font-size="13.5" fill="#1F2328">
+    <text x="56" y="177" font-weight="700" fill="#032D60">被测对象</text>
+    <text x="256" y="172">确定的代码：类、触发器、方法、LWC 组件</text>
+    <text x="256" y="192" fill="#5B6B7C">输入 → 输出可复现</text>
+    <text x="716" y="172">非确定的推理系统：子代理（subagent）路由 +</text>
+    <text x="716" y="192">动作（action）调用 + 自然语言回复</text>
+
+    <line x1="40" y1="205" x2="1160" y2="205" stroke="#E3E8EF"/>
+
+    <text x="56" y="247" font-weight="700" fill="#032D60">失败形态</text>
+    <text x="256" y="242">空指针、分支未处理、批量 200 条超 governor</text>
+    <text x="256" y="262" fill="#5B6B7C">limit、CRUD/FLS 越权、异步未 flush</text>
+    <text x="716" y="242">答非所问、选错子代理、该转人工没转、</text>
+    <text x="716" y="262" fill="#5B6B7C">幻觉、同一问题两次回答不一致</text>
+
+    <line x1="40" y1="275" x2="1160" y2="275" stroke="#E3E8EF"/>
+
+    <text x="56" y="317" font-weight="700" fill="#032D60">旧手段</text>
+    <text x="256" y="312">手写 @isTest 类：造数据、mock callout、</text>
+    <text x="256" y="332" fill="#5B6B7C">runAs 验权限、startTest/stopTest 切限</text>
+    <text x="716" y="312">人工想 100 条用户问法，逐条手测；</text>
+    <text x="716" y="332" fill="#5B6B7C">或只看 demo 表现，凭感觉上线</text>
+
+    <line x1="40" y1="345" x2="1160" y2="345" stroke="#E3E8EF"/>
+
+    <text x="56" y="387" font-weight="700" fill="#032D60">AI 产品</text>
+    <text x="256" y="382" font-weight="600" fill="#0176D3">Agentforce for Developers</text>
+    <text x="256" y="402" fill="#5B6B7C">（原 Einstein for Developers，2026 演进为 Agentforce Vibes）</text>
+    <text x="716" y="382" font-weight="600" fill="#0E7C66">Agentforce Testing Center</text>
+    <text x="716" y="402" fill="#5B6B7C">（2024-11 发布，2024-12 沙箱 GA，2026 为 Studio Beta）</text>
+
+    <line x1="40" y1="415" x2="1160" y2="415" stroke="#E3E8EF"/>
+
+    <text x="56" y="457" font-weight="700" fill="#032D60">判定信号</text>
+    <text x="256" y="452">代码覆盖率（平台计算）+ 测试是否通过</text>
+    <text x="256" y="472" fill="#5B6B7C">门槛：≥75%，且每个触发器至少 1 行</text>
+    <text x="716" y="452">预期子代理 / 动作是否被选中 + 回复评分，</text>
+    <text x="716" y="472" fill="#5B6B7C">按通过率看，不存在“通过即正确”</text>
+
+    <line x1="40" y1="485" x2="1160" y2="485" stroke="#E3E8EF"/>
+
+    <text x="56" y="527" font-weight="700" fill="#032D60">硬约束</text>
+    <text x="256" y="522">必须在 org 内跑；数据默认回滚；</text>
+    <text x="256" y="542" fill="#5B6B7C">部署时全量跑本命名空间所有测试</text>
+    <text x="716" y="522" font-weight="600" fill="#B54708">只能在 sandbox 跑（会改 CRM 数据）；</text>
+    <text x="716" y="542" fill="#B54708">消耗请求与额度；单次生成 100–200 条</text>
+  </g>
+  <rect x="40" y="560" width="1120" height="62" rx="6" fill="#FFF8EB" stroke="#F7C56B"/>
+  <text x="56" y="584" font-size="13.5" fill="#7A4A00">读法：左列的产品卖点是“让你通过部署门槛”，右列的产品卖点是“让你敢把 Agent 放出去”。</text>
+  <text x="56" y="606" font-size="13.5" fill="#7A4A00">本文把两条线拆开讲，因为它们的输入、判定信号、能力边界没有一处相同。</text>
+</svg>

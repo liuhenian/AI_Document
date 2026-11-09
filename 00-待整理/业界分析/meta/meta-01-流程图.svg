@@ -1,0 +1,67 @@
+<svg viewBox="0 0 680 616" width="680" height="616" role="img" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI','Microsoft YaHei',sans-serif">
+<title>Meta Catching JiTTests 五阶段流水线</title>
+<desc>前一日的风险 diff 经两条生成路径生成测试，通过父版本通过、变异体失败、真实 diff 失败三道闸门后成为 weak catch，再经 LLM 裁判与规则库打分排序，只把高分推给工程师确认行为变化是否为预期。</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+<path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</marker>
+</defs>
+<rect x="0" y="0" width="680" height="616" fill="#ffffff"/>
+
+<rect x="40" y="40" width="600" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="64" y="62" font-size="13" font-weight="500" fill="#042C53" dominant-baseline="central">① 定位与触发（targeting）</text>
+<text x="64" y="80" font-size="12" fill="#185FA5" dominant-baseline="central">前一日全量 diff → 风险模型打分（类似 DRS）→ 只取高风险，夜间用闲置算力</text>
+
+<path d="M340 96 L340 118" fill="none" stroke="#185FA5" stroke-width="1.5"/>
+<path d="M185 118 L495 118" fill="none" stroke="#185FA5" stroke-width="1.5"/>
+<path d="M185 118 L185 138" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M495 118 L495 138" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="40" y="140" width="290" height="84" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="60" y="162" font-size="13" font-weight="500" fill="#042C53" dominant-baseline="central">②a dodgy diff：把 diff 当变异体</text>
+<text x="60" y="186" font-size="12" fill="#185FA5" dominant-baseline="central">输入：父版本 + diff + 测试规范</text>
+<text x="60" y="206" font-size="12" fill="#185FA5" dominant-baseline="central">不推断意图，只找父子行为差异</text>
+
+<rect x="350" y="140" width="290" height="84" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="370" y="162" font-size="13" font-weight="500" fill="#042C53" dominant-baseline="central">②b intent-aware：意图感知</text>
+<text x="370" y="186" font-size="12" fill="#185FA5" dominant-baseline="central">输入：代码 + diff 标题 + 摘要</text>
+<text x="370" y="206" font-size="12" fill="#185FA5" dominant-baseline="central">推意图 → 列风险 → 造 mutants</text>
+
+<path d="M185 224 L185 256" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M495 224 L495 256" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="40" y="258" width="420" height="88" rx="8" fill="#FAEEDA" stroke="#854F0B" stroke-width="0.5"/>
+<text x="64" y="280" font-size="13" font-weight="500" fill="#412402" dominant-baseline="central">③ 有效性闸门：三者同时满足</text>
+<text x="64" y="304" font-size="12" fill="#854F0B" dominant-baseline="central">父版本 build 且通过 → 对应 mutant 失败</text>
+<text x="64" y="324" font-size="12" fill="#854F0B" dominant-baseline="central">→ 真实 diff 失败，收为 weak catch</text>
+
+<path d="M462 302 L478 302" fill="none" stroke="#3B6D11" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="480" y="270" width="160" height="64" rx="8" fill="#EAF3DE" stroke="#3B6D11" stroke-width="0.5"/>
+<text x="500" y="292" font-size="12" font-weight="500" fill="#173404" dominant-baseline="central">通过的那批测试</text>
+<text x="500" y="312" font-size="12" fill="#3B6D11" dominant-baseline="central">→ 硬化测试，约占 91%</text>
+
+<path d="M250 346 L250 356 L340 356 L340 366" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="40" y="368" width="600" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="64" y="390" font-size="13" font-weight="500" fill="#042C53" dominant-baseline="central">④ 双评估器打分：−1 假阳性 … +1 真阳性</text>
+<text x="64" y="408" font-size="12" fill="#185FA5" dominant-baseline="central">LLM 裁判集成（Llama3.3-70B / Gemini 3 Pro / Claude Sonnet 4）+ RubFake 规则库</text>
+
+<path d="M340 424 L340 442" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="40" y="444" width="600" height="56" rx="8" fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"/>
+<text x="64" y="466" font-size="13" font-weight="500" fill="#042C53" dominant-baseline="central">⑤ human-on-the-loop：只把高分推给人</text>
+<text x="64" y="484" font-size="12" fill="#185FA5" dominant-baseline="central">不展示测试代码，只问一句：这个行为变化是你预期的吗</text>
+
+<path d="M340 500 L340 522" fill="none" stroke="#888780" stroke-width="1.5"/>
+<path d="M185 522 L495 522" fill="none" stroke="#888780" stroke-width="1.5"/>
+<path d="M185 522 L185 538" fill="none" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M495 522 L495 538" fill="none" stroke="#888780" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+<rect x="40" y="540" width="290" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="60" y="562" font-size="13" font-weight="500" fill="#2C2C2A" dominant-baseline="central">否 → 确认缺陷，先修复再合入</text>
+<text x="60" y="580" font-size="12" fill="#5F5E5A" dominant-baseline="central">捕获测试本身不随改动进仓库</text>
+
+<rect x="350" y="540" width="290" height="56" rx="8" fill="#F1EFE8" stroke="#5F5E5A" stroke-width="0.5"/>
+<text x="370" y="562" font-size="13" font-weight="500" fill="#2C2C2A" dominant-baseline="central">是 → 判为误报</text>
+<text x="370" y="580" font-size="12" fill="#5F5E5A" dominant-baseline="central">工程师几分钟内驳回，代价可控</text>
+</svg>

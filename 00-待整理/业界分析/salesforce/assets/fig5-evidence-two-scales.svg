@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <rect width="1200" height="640" fill="#FFFFFF"/>
+  <text x="40" y="46" font-size="24" font-weight="700" fill="#032D60">图 5｜两组数字，两个口径：产品很受欢迎，但方法上限不高</text>
+  <text x="40" y="76" font-size="15" fill="#5B6B7C">左图是“人愿不愿意用”，右图是“模型能不能做对”。两组数字不能相加，也不能互相证明。</text>
+
+  <!-- Panel A -->
+  <rect x="40" y="104" width="540" height="400" rx="8" fill="#FCFDFE" stroke="#DCE7F2"/>
+  <text x="62" y="132" font-size="14.5" font-weight="700" fill="#0176D3">A. 官方唯一公布的效果数字：首轮接受率</text>
+  <text x="62" y="154" font-size="12" fill="#6B7A8C">口径：开发者第一次生成即点“Accept”的比例（2024-05 官方工程博客）</text>
+
+  <!-- y axis -->
+  <line x1="110" y1="470" x2="540" y2="470" stroke="#B8C4D2"/>
+  <line x1="110" y1="180" x2="110" y2="470" stroke="#B8C4D2"/>
+  <g font-size="11" fill="#8A99AB">
+    <text x="92" y="475" text-anchor="end">0</text>
+    <text x="92" y="403" text-anchor="end">25%</text>
+    <text x="92" y="331" text-anchor="end">50%</text>
+    <text x="92" y="259" text-anchor="end">75%</text>
+    <text x="92" y="187" text-anchor="end">100%</text>
+  </g>
+  <g stroke="#EDF1F5">
+    <line x1="110" y1="398" x2="540" y2="398"/>
+    <line x1="110" y1="326" x2="540" y2="326"/>
+    <line x1="110" y1="254" x2="540" y2="254"/>
+    <line x1="110" y1="182" x2="540" y2="182"/>
+  </g>
+
+  <!-- expectation band 40-50 -->
+  <rect x="150" y="326" width="330" height="29" fill="#FFE9C7" opacity="0.75"/>
+  <line x1="150" y1="326" x2="480" y2="326" stroke="#E39A2B" stroke-dasharray="4 3"/>
+  <line x1="150" y1="355" x2="480" y2="355" stroke="#E39A2B" stroke-dasharray="4 3"/>
+  <text x="490" y="330" font-size="11.5" fill="#B54708">官方内部预期</text>
+  <text x="490" y="348" font-size="11.5" fill="#B54708">40–50%</text>
+
+  <!-- actual bar 75 -->
+  <rect x="300" y="260" width="96" height="210" rx="3" fill="#0176D3"/>
+  <text x="348" y="248" font-size="17" font-weight="700" fill="#0176D3" text-anchor="middle">75%</text>
+  <text x="348" y="492" font-size="12.5" fill="#1F2328" text-anchor="middle">首轮即被接受</text>
+  <text x="348" y="510" font-size="11.5" fill="#6B7A8C" text-anchor="middle">（超出预期上限 25 个百分点）</text>
+
+  <!-- Panel B -->
+  <rect x="610" y="104" width="550" height="400" rx="8" fill="#FCFDFE" stroke="#DCE7F2"/>
+  <text x="632" y="132" font-size="14.5" font-weight="700" fill="#0E7C66">B. 能力上限的实验证据：CLOVER Task III</text>
+  <text x="632" y="154" font-size="12" fill="#6B7A8C">口径：给定目标代码块，生成能覆盖它的测试；已提供“标准答案级”检索上下文</text>
+
+  <line x1="660" y1="470" x2="1140" y2="470" stroke="#B8C4D2"/>
+  <line x1="660" y1="180" x2="660" y2="470" stroke="#B8C4D2"/>
+  <g font-size="11" fill="#8A99AB">
+    <text x="644" y="475" text-anchor="end">0</text>
+    <text x="644" y="403" text-anchor="end">10%</text>
+    <text x="644" y="331" text-anchor="end">20%</text>
+    <text x="644" y="259" text-anchor="end">30%</text>
+    <text x="644" y="187" text-anchor="end">40%</text>
+  </g>
+  <g stroke="#EDF1F5">
+    <line x1="660" y1="400" x2="1140" y2="400"/>
+    <line x1="660" y1="330" x2="1140" y2="330"/>
+    <line x1="660" y1="260" x2="1140" y2="260"/>
+  </g>
+
+  <!-- 35% ceiling -->
+  <line x1="660" y1="225" x2="1140" y2="225" stroke="#C0392B" stroke-dasharray="6 4"/>
+  <text x="1140" y="218" font-size="11.5" fill="#C0392B" text-anchor="end">35% 上限：所有参测模型均未越过</text>
+
+  <!-- bars: 7px per 1% -->
+  <g>
+    <rect x="676" y="241.1" width="62" height="228.9" rx="2" fill="#0E7C66"/>
+    <text x="707" y="265" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">32.7%</text>
+    <text x="707" y="490" font-size="11.5" fill="#1F2328" text-anchor="middle">GPT-4o</text>
+
+    <rect x="770" y="254.4" width="62" height="215.6" rx="2" fill="#3E9C88"/>
+    <text x="801" y="278" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">30.8%</text>
+    <text x="801" y="490" font-size="11.5" fill="#1F2328" text-anchor="middle">Claude 3.5</text>
+
+    <rect x="864" y="274" width="62" height="196" rx="2" fill="#6FB4A5"/>
+    <text x="895" y="298" font-size="12.5" font-weight="700" fill="#FFFFFF" text-anchor="middle">28.0%</text>
+    <text x="895" y="490" font-size="11.5" fill="#1F2328" text-anchor="middle">Gemini 1.5F</text>
+
+    <rect x="958" y="424.5" width="62" height="45.5" rx="2" fill="#B7BFC9"/>
+    <text x="989" y="416" font-size="12" font-weight="700" fill="#5B6B7C" text-anchor="middle">6.5%</text>
+    <text x="989" y="490" font-size="11.5" fill="#1F2328" text-anchor="middle">Llama 70B</text>
+
+    <rect x="1052" y="456.7" width="62" height="13.3" rx="2" fill="#B7BFC9"/>
+    <text x="1083" y="448" font-size="12" font-weight="700" fill="#5B6B7C" text-anchor="middle">1.9%</text>
+    <text x="1083" y="490" font-size="11.5" fill="#1F2328" text-anchor="middle">Llama 8B</text>
+  </g>
+
+  <!-- warning -->
+  <rect x="40" y="520" width="1120" height="104" rx="6" fill="#FFF8EB" stroke="#F7C56B"/>
+  <text x="58" y="544" font-size="13.5" font-weight="700" fill="#7A4A00">三个必须说清楚的口径问题（否则这张图会被误用）</text>
+  <text x="58" y="568" font-size="12.4" fill="#7A4A00">① 左图不是“正确率”，是“第一次生成就被接受的比例”；接受 ≠ 测试有效，官方未披露样本量与统计方法。</text>
+  <text x="58" y="590" font-size="12.4" fill="#7A4A00">② 右图是 Python 仓库上的基准，不是 Apex；它衡量“模型能力上限”，不能推成“Salesforce 产品只能做到 32%”。</text>
+  <text x="58" y="612" font-size="12.4" fill="#7A4A00">③ 两图样本、任务、判定方式全不同，禁止相加或互证；灰柱为开源模型，均低于 10%，上下文加长后部分模型反而退化。</text>
+</svg>

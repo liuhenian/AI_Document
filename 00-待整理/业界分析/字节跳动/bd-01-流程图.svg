@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 600" width="1040" height="600" font-family="'Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif">
+  <rect x="0" y="0" width="1040" height="600" fill="#ffffff"/>
+
+  <text x="30" y="34" font-size="19" font-weight="700" fill="#111827">NL2Test Agent：两阶段、七步，LLM 只做语义判断，程序做所有精确操作</text>
+  <text x="30" y="56" font-size="12.5" fill="#6b7280">本文依据字节跳动团队原文与 ISSTA 2026 论文绘制，为流程示意，非官方原图</text>
+
+  <!-- 图例 -->
+  <rect x="762" y="20" width="14" height="12" rx="2" fill="#dbeafe" stroke="#2f6fb3"/>
+  <text x="782" y="31" font-size="12" fill="#374151">LLM 参与</text>
+  <rect x="862" y="20" width="14" height="12" rx="2" fill="#f3f4f6" stroke="#9ca3af"/>
+  <text x="882" y="31" font-size="12" fill="#374151">确定性程序/模板</text>
+
+  <!-- 输入 -->
+  <text x="30" y="96" font-size="13" font-weight="700" fill="#374151">输入（两项，缺一不可）</text>
+  <rect x="30" y="108" width="150" height="58" rx="6" fill="#fff" stroke="#9ca3af"/>
+  <text x="42" y="132" font-size="12.5" fill="#111827">自然语言场景描述</text>
+  <text x="42" y="152" font-size="11.5" fill="#6b7280">QA 写：要验什么</text>
+
+  <rect x="30" y="176" width="150" height="58" rx="6" fill="#fff" stroke="#9ca3af"/>
+  <text x="42" y="200" font-size="12.5" fill="#111827">真实流量捕获</text>
+  <text x="42" y="220" font-size="11.5" fill="#6b7280">HAR：请求与响应</text>
+
+  <line x1="180" y1="137" x2="214" y2="168" stroke="#9ca3af" stroke-width="1.5"/>
+  <line x1="180" y1="205" x2="214" y2="176" stroke="#9ca3af" stroke-width="1.5"/>
+  <polygon points="214,172 204,178 212,182" fill="#9ca3af"/>
+
+  <!-- 阶段一 -->
+  <rect x="216" y="86" width="396" height="330" rx="10" fill="#f8fafc" stroke="#2f6fb3" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="232" y="110" font-size="14" font-weight="700" fill="#1e3a8a">阶段一　Test Script Carving（测试脚本雕刻）</text>
+  <text x="232" y="128" font-size="11.5" fill="#6b7280">目标：从噪声流量里挑出这条业务流真正用到的那几个 API，并恢复可重放的调用顺序</text>
+
+  <!-- step1 -->
+  <rect x="232" y="142" width="168" height="56" rx="6" fill="#f3f4f6" stroke="#9ca3af"/>
+  <text x="244" y="163" font-size="12.5" font-weight="600" fill="#111827">① 流量过滤</text>
+  <text x="244" y="181" font-size="11" fill="#4b5563">规则：后缀/类型/轮询</text>
+  <text x="244" y="194" font-size="10.5" fill="#9ca3af">拿不准的一律保留</text>
+
+  <!-- step2 -->
+  <rect x="428" y="142" width="168" height="56" rx="6" fill="#dbeafe" stroke="#2f6fb3"/>
+  <text x="440" y="163" font-size="12.5" font-weight="600" fill="#1e3a8a">② LLM 语义对齐</text>
+  <text x="440" y="181" font-size="11" fill="#1e40af">步骤 → 端点映射</text>
+  <text x="440" y="194" font-size="10.5" fill="#3b82f6">每步最多对 1 个端点</text>
+
+  <line x1="400" y1="170" x2="426" y2="170" stroke="#6b7280" stroke-width="1.5"/>
+  <polygon points="426,170 418,166 418,174" fill="#6b7280"/>
+
+  <!-- step3 -->
+  <rect x="232" y="216" width="364" height="86" rx="6" fill="#f8fafc" stroke="#6b7280"/>
+  <text x="244" y="237" font-size="12.5" font-weight="600" fill="#111827">③ 动态数据参数化（两个子步骤，缺一不可）</text>
+  <rect x="244" y="246" width="164" height="44" rx="5" fill="#dbeafe" stroke="#2f6fb3"/>
+  <text x="254" y="264" font-size="11.5" fill="#1e3a8a">LLM：识别候选字段</text>
+  <text x="254" y="280" font-size="10.5" fill="#1e40af">只缩小范围，不判依赖</text>
+  <rect x="420" y="246" width="164" height="44" rx="5" fill="#f3f4f6" stroke="#9ca3af"/>
+  <text x="430" y="264" font-size="11.5" fill="#111827">程序：值一致性校验</text>
+  <text x="430" y="280" font-size="10.5" fill="#4b5563">同值 + 同语义才接受</text>
+  <line x1="408" y1="268" x2="418" y2="268" stroke="#6b7280" stroke-width="1.5"/>
+  <polygon points="418,268 411,264 411,272" fill="#6b7280"/>
+
+  <!-- step4 -->
+  <rect x="232" y="318" width="364" height="52" rx="6" fill="#f3f4f6" stroke="#9ca3af"/>
+  <text x="244" y="339" font-size="12.5" font-weight="600" fill="#111827">④ 脚本组装（不调用 LLM）</text>
+  <text x="244" y="357" font-size="11" fill="#4b5563">按模板拼骨架，硬编码值换成变量引用，预留断言插入点</text>
+
+  <line x1="414" y1="198" x2="414" y2="214" stroke="#6b7280" stroke-width="1.5"/>
+  <polygon points="414,214 410,206 418,206" fill="#6b7280"/>
+  <line x1="414" y1="302" x2="414" y2="316" stroke="#6b7280" stroke-width="1.5"/>
+  <polygon points="414,316 410,308 418,308" fill="#6b7280"/>
+
+  <!-- 中间产物 -->
+  <rect x="640" y="196" width="132" height="104" rx="6" fill="#fff" stroke="#2f6fb3" stroke-width="1.5"/>
+  <text x="652" y="218" font-size="12" font-weight="600" fill="#1e3a8a">中间产物</text>
+  <text x="652" y="238" font-size="11" fill="#374151">步骤对齐的</text>
+  <text x="652" y="253" font-size="11" fill="#374151">API 序列</text>
+  <text x="652" y="272" font-size="11" fill="#374151">+ 测试骨架</text>
+  <text x="652" y="288" font-size="10.5" fill="#9ca3af">（断言位置留空）</text>
+  <line x1="614" y1="248" x2="638" y2="248" stroke="#2f6fb3" stroke-width="1.6"/>
+  <polygon points="638,248 630,244 630,252" fill="#2f6fb3"/>
+
+  <!-- 阶段二 -->
+  <rect x="216" y="432" width="556" height="112" rx="10" fill="#f8fafc" stroke="#2f6fb3" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="232" y="456" font-size="14" font-weight="700" fill="#1e3a8a">阶段二　Assertion Generation（断言生成）</text>
+
+  <rect x="232" y="468" width="160" height="60" rx="6" fill="#dbeafe" stroke="#2f6fb3"/>
+  <text x="242" y="489" font-size="12" font-weight="600" fill="#1e3a8a">⑤ 断言意图提取</text>
+  <text x="242" y="506" font-size="10.5" fill="#1e40af">字段/操作符/期望值</text>
+  <text x="242" y="520" font-size="10.5" fill="#3b82f6">exact 或 abstract</text>
+
+  <rect x="412" y="468" width="160" height="60" rx="6" fill="#f3f4f6" stroke="#9ca3af"/>
+  <text x="422" y="489" font-size="12" font-weight="600" fill="#111827">⑥ 确定性校验</text>
+  <text x="422" y="506" font-size="10.5" fill="#4b5563">路径存在？字段唯一？</text>
+  <text x="422" y="520" font-size="10.5" fill="#6b7280">否则直接丢弃</text>
+
+  <rect x="592" y="468" width="164" height="60" rx="6" fill="#dbeafe" stroke="#2f6fb3"/>
+  <text x="602" y="489" font-size="12" font-weight="600" fill="#1e3a8a">⑦ 受约束代码生成</text>
+  <text x="602" y="506" font-size="10.5" fill="#1e40af">禁止新增目标/辅助函数</text>
+  <text x="602" y="520" font-size="10.5" fill="#3b82f6">只在插入点写断言</text>
+
+  <line x1="392" y1="498" x2="410" y2="498" stroke="#6b7280" stroke-width="1.5"/>
+  <polygon points="410,498 402,494 402,502" fill="#6b7280"/>
+  <line x1="572" y1="498" x2="590" y2="498" stroke="#6b7280" stroke-width="1.5"/>
+  <polygon points="590,498 582,494 582,502" fill="#6b7280"/>
+
+  <line x1="706" y1="300" x2="706" y2="430" stroke="#2f6fb3" stroke-width="1.6"/>
+  <polygon points="706,430 702,422 710,422" fill="#2f6fb3"/>
+
+  <!-- 输出 -->
+  <rect x="800" y="432" width="210" height="112" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="1.5"/>
+  <text x="814" y="456" font-size="13" font-weight="700" fill="#065f46">可执行回归测试</text>
+  <text x="814" y="478" font-size="11" fill="#047857">能独立重放，脱离 Agent 运行</text>
+  <text x="814" y="496" font-size="11" fill="#047857">进仓库、进 CI/CD 每日回归</text>
+  <text x="814" y="518" font-size="11" fill="#047857">业务流/契约/断言变化才需重生成</text>
+  <line x1="756" y1="488" x2="798" y2="488" stroke="#059669" stroke-width="1.6"/>
+  <polygon points="798,488 790,484 790,492" fill="#059669"/>
+
+  <!-- 底部提示 -->
+  <text x="30" y="576" font-size="11.5" fill="#6b7280">判据差别：Meta 的产物必须「失败」（证明行为变了），NL2Test 的产物必须「通过」（锁住已有行为）。两者方向相反，不可混用。</text>
+</svg>

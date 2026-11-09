@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif">
+  <defs>
+    <marker id="ar2" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#8A99AB"/>
+    </marker>
+    <marker id="ar2g" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto">
+      <path d="M0,0 L9,4.5 L0,9 z" fill="#0E7C66"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="680" fill="#FFFFFF"/>
+  <text x="40" y="46" font-size="24" font-weight="700" fill="#032D60">图 3｜行为级测试的真实闭环：从“断言”退化为“通过率”</text>
+  <text x="40" y="76" font-size="15" fill="#5B6B7C">Agentforce Testing Center 不验证某句话对不对，只统计“该走 A 子代理的请求，有多少比例真的走了 A”。</text>
+
+  <!-- inputs -->
+  <rect x="40" y="120" width="220" height="242" rx="8" fill="#F2F9F7" stroke="#B7D9CF"/>
+  <text x="56" y="146" font-size="14" font-weight="700" fill="#0E7C66">① 元数据即测试来源</text>
+  <text x="56" y="172" font-size="12.5" fill="#1F2328">子代理（subagent）指令</text>
+  <text x="56" y="192" font-size="12.5" fill="#1F2328">动作（action）定义与入参</text>
+  <text x="56" y="212" font-size="12.5" fill="#1F2328">知识库文章 / 上传文件</text>
+  <text x="56" y="232" font-size="12.5" fill="#1F2328">你写的一句“测试重点描述”</text>
+  <text x="56" y="256" font-size="11.5" fill="#6B7A8C">还可选客户人设（口音、背景噪声、</text>
+  <text x="56" y="274" font-size="11.5" fill="#6B7A8C">信息不全），用于语音场景</text>
+  <rect x="56" y="288" width="188" height="62" rx="5" fill="#FFFFFF" stroke="#CFE3D2"/>
+  <text x="66" y="305" font-size="10.8" fill="#B54708">标准对象：Account / Lead /</text>
+  <text x="66" y="321" font-size="10.8" fill="#B54708">Opportunity / Contact 可直接生成；</text>
+  <text x="66" y="338" font-size="10.8" fill="#B54708">自定义对象需显式举例</text>
+
+  <!-- generate -->
+  <rect x="290" y="150" width="180" height="170" rx="8" fill="#F2F9F7" stroke="#B7D9CF"/>
+  <text x="306" y="176" font-size="14" font-weight="700" fill="#0E7C66">② 合成用例</text>
+  <text x="306" y="202" font-size="12.5" fill="#1F2328">生成的是“用户会怎么问”，</text>
+  <text x="306" y="222" font-size="12.5" fill="#1F2328">不是“预期答案文本”</text>
+  <text x="306" y="250" font-size="12.5" fill="#1F2328">单次上限：</text>
+  <text x="306" y="270" font-size="12.5" fill="#5B6B7C">新版 Studio 200 条 / 次</text>
+  <text x="306" y="288" font-size="12.5" fill="#5B6B7C">旧版 Setup 100 条 / 次</text>
+  <text x="306" y="306" font-size="11.5" fill="#6B7A8C">CSV 方式最多 1,000 条</text>
+
+  <!-- run -->
+  <rect x="500" y="150" width="180" height="170" rx="8" fill="#F2F9F7" stroke="#B7D9CF"/>
+  <text x="516" y="176" font-size="14" font-weight="700" fill="#0E7C66">③ 并行执行</text>
+  <text x="516" y="202" font-size="12.5" fill="#1F2328">批量把对话打进 Agent</text>
+  <text x="516" y="222" font-size="12.5" fill="#1F2328">记录每次选中了哪个</text>
+  <text x="516" y="242" font-size="12.5" fill="#1F2328">子代理、调了哪个动作</text>
+  <text x="516" y="270" font-size="12.5" fill="#B54708">必须在 sandbox 跑</text>
+  <text x="516" y="290" font-size="11.5" fill="#B54708">测试会真实改动 CRM 数据</text>
+  <text x="516" y="308" font-size="11.5" fill="#6B7A8C">并消耗请求与额度</text>
+
+  <!-- judge -->
+  <rect x="710" y="150" width="200" height="170" rx="8" fill="#EEF6FF" stroke="#9CC3E8"/>
+  <text x="726" y="176" font-size="14" font-weight="700" fill="#0176D3">④ 判定</text>
+  <text x="726" y="202" font-size="12.5" fill="#1F2328">预期子代理是否被选中？</text>
+  <text x="726" y="222" font-size="12.5" fill="#1F2328">预期动作是否被调用？</text>
+  <text x="726" y="242" font-size="12.5" fill="#1F2328">回复是否被评分器判为合格？</text>
+  <rect x="726" y="256" width="168" height="48" rx="5" fill="#FFFFFF" stroke="#C9DCEF"/>
+  <text x="736" y="274" font-size="11.5" fill="#0176D3">输出不是 pass / fail，</text>
+  <text x="736" y="291" font-size="11.5" fill="#0176D3">而是 N 条里对了 M 条的通过率</text>
+
+  <!-- result -->
+  <rect x="940" y="150" width="220" height="170" rx="8" fill="#FFF8EB" stroke="#F7C56B"/>
+  <text x="956" y="176" font-size="14" font-weight="700" fill="#B54708">⑤ 人看结果再改</text>
+  <text x="956" y="202" font-size="12.5" fill="#1F2328">按失败簇定位：</text>
+  <text x="956" y="222" font-size="12.5" fill="#5B6B7C">哪个子代理没被命中、</text>
+  <text x="956" y="240" font-size="12.5" fill="#5B6B7C">哪类问法被误路由</text>
+  <text x="956" y="264" font-size="12.5" fill="#1F2328">改指令 / 改动作 / 改护栏</text>
+  <text x="956" y="284" font-size="12.5" fill="#1F2328">→ 重跑同一套测试</text>
+  <text x="956" y="306" font-size="11" fill="#6B7A8C">唯一自动之处：可重复执行</text>
+
+  <line x1="260" y1="235" x2="284" y2="235" stroke="#8A99AB" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <line x1="470" y1="235" x2="494" y2="235" stroke="#8A99AB" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <line x1="680" y1="235" x2="704" y2="235" stroke="#8A99AB" stroke-width="1.6" marker-end="url(#ar2)"/>
+  <line x1="910" y1="235" x2="934" y2="235" stroke="#8A99AB" stroke-width="1.6" marker-end="url(#ar2)"/>
+
+  <!-- feedback loop -->
+  <path d="M1050,320 L1050,380 L380,380 L380,330" fill="none" stroke="#0E7C66" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#ar2g)"/>
+  <rect x="580" y="362" width="264" height="26" rx="4" fill="#E7F4F0"/>
+  <text x="592" y="380" font-size="12.5" fill="#0E7C66">改完指令，再用同一批用例回归</text>
+
+  <!-- comparison -->
+  <rect x="40" y="430" width="1120" height="150" rx="8" fill="#F7FAFD" stroke="#C9DCEF"/>
+  <text x="60" y="458" font-size="14" font-weight="700" fill="#032D60">与单元测试的本质区别（决定了两者的能力边界不可能相同）</text>
+  <line x1="60" y1="470" x2="1140" y2="470" stroke="#DCE7F2"/>
+  <text x="60" y="494" font-size="12.5" font-weight="700" fill="#5B6B7C">维度</text>
+  <text x="300" y="494" font-size="12.5" font-weight="700" fill="#0176D3">代码级单元测试</text>
+  <text x="720" y="494" font-size="12.5" font-weight="700" fill="#0E7C66">Agent 行为测试</text>
+
+  <text x="60" y="522" font-size="12.5" fill="#1F2328">正确性定义</text>
+  <text x="300" y="522" font-size="12.5" fill="#1F2328">断言 expected == actual</text>
+  <text x="720" y="522" font-size="12.5" fill="#1F2328">路由命中 + 回复被评分，允许措辞不同</text>
+
+  <text x="60" y="546" font-size="12.5" fill="#1F2328">可重复性</text>
+  <text x="300" y="546" font-size="12.5" fill="#1F2328">确定，同输入同输出</text>
+  <text x="720" y="546" font-size="12.5" fill="#1F2328">非确定，同一用例多次跑结果可能不同</text>
+
+  <text x="60" y="570" font-size="12.5" fill="#1F2328">失败可解释性</text>
+  <text x="300" y="570" font-size="12.5" fill="#1F2328">堆栈直接指向行号</text>
+  <text x="720" y="570" font-size="12.5" fill="#1F2328">只能看到“选错了”，不知道为什么</text>
+
+  <text x="40" y="612" font-size="12.5" fill="#5B6B7C">依据：Salesforce 官方文档「Generate Tests from Subagents and Actions」（新版 200 条 / 旧版 100 条）、Trailhead 模块（CSV 最多 1,000 条、仅限 sandbox、消耗额度）。</text>
+  <text x="40" y="634" font-size="12.5" fill="#5B6B7C">“允许措辞不同”“失败只能看到选错”为本文基于机制的解释（D），不是官方原话。</text>
+</svg>
