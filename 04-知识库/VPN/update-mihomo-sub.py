@@ -20,8 +20,8 @@ v2 相对 v1 的关键改动
 用法
 --------------------------------------------------------------------------------
     python3 update-mihomo-sub.py                    # 更新并安装 config.yaml
-    python3 update-mihomo-sub.py --restart          # 更新 + 重启 + 启动测速选节点
-    python3 update-mihomo-sub.py --restart --no-probe  # 更新 + 重启，不测速
+    python3 update-mihomo-sub.py --restart          # 更新 + 重启 + 测速并切到最快节点
+    python3 update-mihomo-sub.py --restart --no-probe  # 只更新 + 重启，不测速不改节点
     python3 update-mihomo-sub.py --dry-run          # 只下载并检查，不写 config.yaml
     python3 update-mihomo-sub.py --auto-select      # 备选：生成 url-test 常驻探测组
 
@@ -33,6 +33,13 @@ v2 相对 v1 的关键改动
   · 选择结果存 cache.db，运行期间保持不变，节点挂了不会自动切换（需重新跑 pick-node.py）。
 `--auto-select` 是另一条路：生成 url-test 组让内核按 interval 常驻探测 + 自动切换，
 代价是常态探测流量，与「启动测一次」互斥，一般不用。
+
+`--restart` 的重启方式
+--------------------------------------------------------------------------------
+内核已由 systemd 托管（mihomo.service，开机自启）：
+  · 装了单元 → 走 `systemctl restart mihomo.service`，重启后跑 pick-node.py（--always-switch）并实测连通性；
+  · 没装单元 → 回退到旧的 kill + Popen 方式。
+注意：systemd 下不要再用 kill + nohup 手工重启，会和 Restart=always 抢同一份内核，出现双实例抢 7890。
 """
 
 import http.client
@@ -67,7 +74,7 @@ SEED_IPS = [
     "112.48.144.130",
 ]
 
-BASE_DIR = "/mnt/disk/henian/vpn"
+BASE_DIR = "/home/u/VPN"
 WORKDIR = os.path.join(BASE_DIR, "sub-work")
 CORE = os.path.join(BASE_DIR, "mihomo")
 TARGET_CFG = os.path.join(BASE_DIR, "config.yaml")
@@ -75,6 +82,11 @@ RAW_YAML = os.path.join(WORKDIR, "sub-raw.yaml")
 GOOD_IPS = os.path.join(WORKDIR, "good-ips.txt")
 TEST_DIR = os.path.join(WORKDIR, "test-run")
 KEEP_BACKUPS = 5
+
+# 内核已交给 systemd 托管（开机自启）；重启必须走 systemctl，
+# 否则 kill + Popen 会和 systemd 的 Restart=always 抢同一份内核，出现双实例抢 7890。
+SYSTEMD_UNIT = "mihomo.service"
+BOOT_PICK_UNIT = "mihomo-pick.service"
 
 HTTP_TIMEOUT = 15
 
@@ -103,6 +115,13 @@ AUTO_GROUP_NAME = "自动选择"
 AUTO_TEST_URL = "http://www.gstatic.com/generate_204"
 AUTO_TEST_INTERVAL = 300      # 秒
 AUTO_TEST_TOLERANCE = 50      # ms，延迟差在此范围内不切换，避免抖动
+
+# 订阅模板里会带 url-test / fallback 组（例如「自动选择」interval=86400、
+# 「故障转移」interval=7200），内核会按该间隔对全部节点发探测包。
+# 用户的诉求是「只在启动时测一次，不做后台定期探测」→ 给这些组补 lazy: true，
+# 组未被实际选用时不探测。选节点仍由 pick-node.py 在启动时完成。
+LAZY_PROBE_GROUPS = True
+PROBE_GROUP_TYPES = ("url-test", "fallback", "load-balance")
 
 TOP_KEY_RE = re.compile(r"^([A-Za-z][A-Za-z0-9_-]*):")
 
@@ -191,7 +210,7 @@ def save_cached_ips(ip):
 def count_nodes(text):
     """统计 proxies 段内的节点数与类型分布。"""
     in_block = False
-    total = 0
+    names = 0
     types = {}
     for ln in text.splitlines():
         if TOP_KEY_RE.match(ln):
@@ -199,11 +218,13 @@ def count_nodes(text):
             continue
         if not in_block:
             continue
-        if re.match(r"^\s*-\s", ln):
-            total += 1
+        if re.match(r"^\s*-\s+name:", ln) or re.match(r"^\s*-\s*\{\s*name:", ln):
+            names += 1
         m = re.match(r"^\s+(?:-\s+)?type:\s*['\"]?([A-Za-z0-9._-]+)", ln)
         if m:
             types[m.group(1)] = types.get(m.group(1), 0) + 1
+    # 类型统计只覆盖 proxies 段内的 type 字段，比「数 - 行」可靠（alpn 等列表项会被误计）
+    total = sum(types.values()) or names
     return total, types
 
 
@@ -342,6 +363,63 @@ def download_subscription():
     )
 
 
+def make_groups_lazy(text):
+    """给 url-test / fallback / load-balance 组补 `lazy: true`。
+
+    内核会对这三类组按 `interval` 周期探测全部成员。订阅自带的
+    「自动选择」(86400s) 和「故障转移」(7200s) 就属于这类，
+    MATCH 指向的是 Flybit，它们平时并不承载流量，探测纯属浪费。
+    lazy: true 表示「只有该组被使用时才探测」。
+    """
+    if not LAZY_PROBE_GROUPS:
+        return text, 0
+
+    lines = text.splitlines()
+    start = None
+    end = len(lines)
+    for i, ln in enumerate(lines):
+        if re.match(r"^proxy-groups:", ln):
+            start = i
+            continue
+        if start is not None and i > start and TOP_KEY_RE.match(ln):
+            end = i
+            break
+    if start is None:
+        return text, 0
+
+    name_re = re.compile(r"^(\s*)-\s+name:")
+    all_name_idx = [i for i in range(start + 1, end) if name_re.match(lines[i])]
+    if not all_name_idx:
+        return text, 0
+
+    # 组条目从「最浅缩进的 - name:」开始；更深缩进的是组内 proxies 列表项
+    base = min(len(name_re.match(lines[i]).group(1)) for i in all_name_idx)
+    starts = [i for i in all_name_idx if len(name_re.match(lines[i]).group(1)) == base]
+
+    insert_after = {}
+    for k, s in enumerate(starts):
+        e = starts[k + 1] if k + 1 < len(starts) else end
+        ptype, pindent, type_line, has_lazy = None, None, None, False
+        for i in range(s, e):
+            m = re.match(r"^(\s*)type:\s*['\"]?([A-Za-z0-9_-]+)", lines[i])
+            if m and ptype is None:
+                ptype, pindent, type_line = m.group(2), m.group(1), i
+            if re.match(r"^\s+lazy\s*:", lines[i]):
+                has_lazy = True
+        if ptype in PROBE_GROUP_TYPES and not has_lazy and type_line is not None:
+            insert_after[type_line] = pindent + "lazy: true"
+
+    if not insert_after:
+        return text, 0
+
+    out = []
+    for i, ln in enumerate(lines):
+        out.append(ln)
+        if i in insert_after:
+            out.append(insert_after[i])
+    return "\n".join(out) + ("\n" if text.endswith("\n") else ""), len(insert_after)
+
+
 def patch_config(text):
     """剔除冲突的顶层键，写入本机运行参数。"""
     kept = []
@@ -368,33 +446,46 @@ def patch_config(text):
             merged += "%s- 'MATCH,%s'\n" % (indent, target)
             log("  已追加兜底规则：MATCH,%s（其余流量走该组）" % target)
 
+    merged, n_lazy = make_groups_lazy(merged)
+    if n_lazy:
+        log("  已为 %d 个自动测速组添加 lazy: true（不用时不后台探测）" % n_lazy)
+
     return merged
 
 
 def validate_with_core(candidate_path):
-    """用 mihomo -t 做真实语法/协议校验；顺带保证 Country.mmdb 可达。"""
+    """用 mihomo -t 做真实语法/协议校验。
+
+    注意：测试目录**不能每次删除重建** —— mihomo 首次运行会下载 geoip.metadb
+    （约 7.5MB），如果每次 rmtree，就等于每次都要重下，下载慢时会直接超过
+    超时时间，表现为「配置校验莫名超时」。这里保留目录，只替换 config.yaml。
+    """
     if not os.path.exists(CORE):
         log("  ! 未找到内核 %s，跳过内核校验" % CORE)
         return True, ""
 
-    if os.path.isdir(TEST_DIR):
-        shutil.rmtree(TEST_DIR, ignore_errors=True)
-    os.makedirs(TEST_DIR, exist_ok=True)
+    if not os.path.isdir(TEST_DIR):
+        os.makedirs(TEST_DIR, exist_ok=True)
 
     shutil.copyfile(candidate_path, os.path.join(TEST_DIR, "config.yaml"))
     mmdb = os.path.join(BASE_DIR, "Country.mmdb")
     if os.path.exists(mmdb):
         dst = os.path.join(TEST_DIR, "Country.mmdb")
-        try:
-            os.symlink(mmdb, dst)
-        except Exception:
-            shutil.copyfile(mmdb, dst)
+        if not os.path.exists(dst):
+            try:
+                os.symlink(mmdb, dst)
+            except Exception:
+                shutil.copyfile(mmdb, dst)
 
-    proc = subprocess.run(
-        [CORE, "-t", "-d", TEST_DIR],
-        stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
-        timeout=90,
-    )
+    try:
+        proc = subprocess.run(
+            [CORE, "-t", "-d", TEST_DIR],
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            timeout=240,
+        )
+    except subprocess.TimeoutExpired as exc:
+        out = (exc.stdout or b"").decode("utf-8", "replace")
+        return False, out + "\n[超时] 内核校验超过 240 秒未返回"
     out = proc.stdout.decode("utf-8", "replace")
     return proc.returncode == 0, out
 
@@ -462,11 +553,53 @@ def kill_core():
     return not find_core_pids()
 
 
+def systemd_manages_core():
+    """内核是否由 systemd 托管（单元已 enable）。"""
+    try:
+        r = subprocess.run(["systemctl", "is-enabled", SYSTEMD_UNIT],
+                           stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+    except (FileNotFoundError, OSError):
+        return False
+    return r.returncode == 0
+
+
+def restart_core_via_systemd():
+    log("  内核由 systemd 托管，使用 systemctl restart %s" % SYSTEMD_UNIT)
+    r = subprocess.run(["systemctl", "restart", SYSTEMD_UNIT],
+                       stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    if r.returncode != 0:
+        msg = r.stdout.decode("utf-8", "replace").strip()
+        log("  ! systemctl restart 失败：%s" % msg[:200])
+        return False
+
+    for _ in range(20):
+        if subprocess.run(["systemctl", "is-active", "--quiet", SYSTEMD_UNIT]).returncode == 0:
+            break
+        time.sleep(0.5)
+    else:
+        log("  ! 服务在 10 秒内未进入 active 状态")
+        return False
+
+    pids = find_core_pids()
+    if len(pids) == 1:
+        log("  内核已重启，PID: %s（由 systemd 守护）" % pids[0])
+        return True
+    if len(pids) > 1:
+        log("  ! 检测到多个内核实例 %s，请检查是否还有手工启动的进程"
+            % ",".join(pids))
+        return False
+    log("  ! 服务显示 active 但找不到内核进程，请查看 journalctl -u %s" % SYSTEMD_UNIT)
+    return False
+
+
 def restart_core():
-    """重启本目录下的 mihomo。"""
+    """重启本目录下的 mihomo：systemd 托管时走 systemctl，否则 kill + Popen。"""
     if not os.path.exists(CORE):
         log("  ! 未找到内核 %s，跳过重启" % CORE)
         return False
+
+    if systemd_manages_core():
+        return restart_core_via_systemd()
 
     if not kill_core():
         log("  ! 旧内核未能退出，请手动清理后重试")
@@ -490,6 +623,23 @@ def restart_core():
     log("  ! 内核重启失败，请查看 %s/mihomo.log" % BASE_DIR)
     return False
 
+
+
+def check_connectivity():
+    """重启后实测一次代理连通性，避免「换完节点其实不通」还得自己再验一遍。"""
+    try:
+        r = subprocess.run(
+            ["curl", "-s", "-o", "/dev/null", "-w", "%{http_code}",
+             "-x", "http://127.0.0.1:7890", "--max-time", "15",
+             "https://www.gstatic.com/generate_204"],
+            stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+        code = r.stdout.decode("utf-8", "replace").strip()
+    except Exception:
+        return
+    if code == "204":
+        log("  连通性：OK (http 204)")
+    else:
+        log("  连通性：异常 (http %s)；可再跑一次 pick-node.py 或检查订阅是否到期" % code)
 
 
 def write_atomic(path, content):
@@ -578,14 +728,20 @@ def main():
             picker = os.path.join(BASE_DIR, "pick-node.py")
             if os.path.exists(picker) and "--no-probe" not in sys.argv:
                 log("")
-                log("启动测速（一次性）...")
-                subprocess.call([sys.executable, picker, "--rounds", "2", "--top", "3"])
+                log("启动测速（一次性，2 轮取最快，忽略容差直接切到最快节点）...")
+                # 与开机自启保持一致：此刻没有业务流量，直接选最快，不必保留 100ms 容差
+                subprocess.call([sys.executable, picker,
+                                 "--rounds", "2", "--top", "3", "--always-switch"])
+                check_connectivity()
     else:
         log("")
         log("完成。若内核正在运行，需要重启才能生效：")
-        log("  python3 update-mihomo-sub.py --restart    # 或手动执行：")
-        log("  pkill -f 'mihomo -d' ; nohup %s -d %s > %s/mihomo.log 2>&1 &"
-            % (CORE, BASE_DIR, BASE_DIR))
+        log("  python3 update-mihomo-sub.py --restart")
+        if systemd_manages_core():
+            log("  # 或只重启内核、不测速：sudo systemctl restart %s" % SYSTEMD_UNIT)
+        else:
+            log("  # 或手动执行：pkill -f 'mihomo -d' ; nohup %s -d %s > %s/mihomo.log 2>&1 &"
+                % (CORE, BASE_DIR, BASE_DIR))
     return 0
 
 

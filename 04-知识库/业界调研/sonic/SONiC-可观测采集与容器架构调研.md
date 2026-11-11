@@ -40,12 +40,13 @@ number headings: off
 
 ### 1.1 四个基座
 
-| 基座 | 中文说明 | 作用 | 来源 |
-|---|---|---|---|
-| Debian Linux | Debian 发行版 | 主机系统、内核网络栈、systemd、包管理；202405 周期升级到 Debian 12（Bookworm） | [架构综述](https://safeguard.sh/resources/blog/how-a-network-switch-is-made-switch-asics-network-operating-systems-and-firmware) |
-| SAI | 交换机抽象接口 | 厂商无关的 ASIC 控制 API，向下对接各芯片 SDK | [OCP SAI](https://github.com/opencomputeproject/SAI) |
-| Redis | 内存键值数据库 | 全局状态总线：CONFIG_DB / APPL_DB / STATE_DB / COUNTERS_DB / ASIC_DB 等 | [官方 Wiki](https://github.com/sonic-net/SONiC/wiki/Architecture) |
-| Docker | 容器运行时 | 每个功能模块一个容器，独立启停、独立镜像 | [官方 Wiki](https://github.com/sonic-net/SONiC/wiki/Architecture) |
+| 基座           | 中文说明       | 作用                                                              | 来源                                                                                                                           |
+| ------------ | ---------- | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Debian Linux | Debian 发行版 | 主机系统、内核网络栈、systemd、包管理；202405 周期升级到 Debian 12（Bookworm）         | [架构综述](https://safeguard.sh/resources/blog/how-a-network-switch-is-made-switch-asics-network-operating-systems-and-firmware) |
+| SAI          | 交换机抽象接口    | 厂商无关的 ASIC 控制 API，向下对接各芯片 SDK                                   | [OCP SAI](https://github.com/opencomputeproject/SAI)                                                                         |
+| Redis        | 内存键值数据库    | 全局状态总线：CONFIG_DB / APPL_DB / STATE_DB / COUNTERS_DB / ASIC_DB 等 | [官方 Wiki](https://github.com/sonic-net/SONiC/wiki/Architecture)                                                              |
+| Docker       | 容器运行时      | 每个功能模块一个容器，独立启停、独立镜像                                            | [官方 Wiki](https://github.com/sonic-net/SONiC/wiki/Architecture)                                                              |
+|              |            |                                                                 |                                                                                                                              |
 
 分层关系（自下而上）：**ASIC → SAI/SDK → syncd → SWSS（orchagent）→ 应用容器 → 管理面**。
 
@@ -345,24 +346,82 @@ Redis 在这里扮演的是**共享内存总线**，不是普通缓存：
 
 #### 3.5.2 系统事件流：ZMQ 代理跑在 eventd 容器里
 
-事件不走 Redis，走 **ZeroMQ 的 PUB/SUB**，拓扑是"中央代理 + 多发布者 + 多订阅者"：
+> 事件流的输入方、输出方、交互方式与两个设计取舍（为什么不用 Redis、为什么要有代理），已单独整理为 [[SONiC-事件数据抓取框架-输入输出与设计取舍]]。本节只保留架构视角的概述。
+
+事件不走 Redis，走 **ZeroMQ（ZMQ）的 PUB/SUB**，拓扑是"中央代理 + 多发布者 + 多订阅者"。ZMQ 本身是什么、怎么用，见 [[#3.7 ZeroMQ（ZMQ）是什么、怎么用|3.7]]：
 
 ```mermaid
 flowchart LR
-  P1["pmon：thermalctld / xcvrd / psud"] -- event_publish --> Z["eventd 容器<br/>zmqproxy（XPUB/XSUB）"]
-  P2["swss / bgp / 容器健康检查"] -- event_publish --> Z
+  P1["直接调 API：disk_check / container_checker / orchagent"] -- event_publish --> Z["eventd 容器<br/>proxy 线程（XPUB/XSUB）"]
+  P2["rsyslog 插件：bgp / swss / syncd / dhcp-relay / host 日志"] -- event_publish --> Z
+  PM["pmon：thermalctld / xcvrd / psud"] -. "只写 STATE_DB 与日志" .-> DB["STATE_DB"]
   Z -- 订阅 --> G["gnmi 容器<br/>events client"]
   Z -- 订阅 --> E["eventd 内 EventDB<br/>写 EVENT / ALARM 表"]
 ```
 
-- **代理**：`eventd` 容器内运行 `zmqproxy`（XPUB/XSUB），由 systemd 保证常驻。发布者连 SUB 端、订阅者连 PUB 端；默认端点硬编码在 `libswsscommon`，可用 `/etc/sonic/init_cfg.json` 覆盖。
+- **代理**：`eventd` 容器内，`eventd` 进程的一个线程承担代理（`eventd_proxy`，HLD 文档称 zmqproxy），bind XSUB/XPUB；由 supervisord 保证常驻。发布者连 SUB 端、订阅者连 PUB 端；默认端点硬编码在 `libswsscommon`，可用 `/etc/sonic/init_cfg.json` 覆盖。
 - **发布**：`events_init_publisher(source)` + `event_publish(handle, tag, params)`。消息按 YANG 校验，内嵌全局序列号（用于丢事件检测），缺时间戳时自动补齐。
 - **订阅**：`events_init_subscriber(use_cache, sources)` + 阻塞式 `event_receive()`，每次返回一个 JSON 字符串，并给出 `missed_cnt`。
-- **gNMI 出口**：`target=EVENTS`、路径 `/events`，**只支持 STREAM + ON_CHANGE**；单客户端、上限约 10K 事件/秒，背压溢出计入 `missed-slow-receiver`。gNMI 侧通过 CGO 直接调 swss-common 的订阅 API，**不经过 Redis**。
-- **另一路落库**：eventd 内的 EventDB 消费者同样订阅 zmqproxy，把事件写进独立的 `EVENT_DB`（id 19）实例的 `EVENT` / `ALARM` / `EVENT_STATS` / `ALARM_STATS` 表，供 CLI 与 REST 查询；历史默认保留 4 万条或 30 天。
+- **gNMI 出口**：`target=EVENTS`、路径 `/events`，**只支持 STREAM**（`PollRun` / `OnceRun` 是空实现，源码不校验 subscription mode）；背压由优先级队列 `qsize`（默认 10240，范围 1024–102400）控制，队列满即丢弃并计入 `missed_by_slow_receiver`。gNMI 侧通过 CGO 直接调 swss-common 的订阅 API，**不经过 Redis**。
+- **另一路落库**：eventd 内的 EventDB 消费者同样订阅这个代理，把事件写进 `EVENT_DB`（**主 redis 实例上的逻辑库 19**，`database_config.json` 中 `instance: redis`）的 `EVENT` / `ALARM` / `EVENT_STATS` / `ALARM_STATS` 表，供 CLI 与 REST 查询；历史默认保留 4 万条或 30 天。
 - **缓存与回放**：订阅方 `use_cache=true` 时，eventd 内的 events-cache 侧车会缓存事件，断连重连后回放，缓存溢出计入 `missed-offline-cache`。
 
-来源：[events-producer.md](https://github.com/sonic-net/SONiC/blob/master/doc/event-alarm-framework/events-producer.md)、[event-alarm-framework.md](https://github.com/sonic-net/SONiC/blob/master/doc/event-alarm-framework/event-alarm-framework.md)。
+**链路与端点（源码确认）**
+
+| 段 | 组件 | 地址 |
+|---|---|---|
+| 发布者 → 代理 | publisher 连 XSUB | `tcp://127.0.0.1:5570` |
+| 订阅者 ← 代理 | subscriber 连 XPUB | `tcp://127.0.0.1:5571` |
+| 控制面 | 服务请求 / 应答 | `tcp://127.0.0.1:5572` |
+| 缓存抓取 | 代理内部通道 | `tcp://127.0.0.1:5573` |
+
+对应键名 `xsub_path` / `xpub_path` / `req_rep_path` / `capture_path`，可写入 `/etc/sonic/init_cfg.json` 的 `events` 段覆盖；同段还有 `stats_upd_secs`（默认 5）。
+
+**线上消息是两段式 ZMQ 消息**
+
+- part1 = 事件源（如 `sonic-events-bgp`），供 ZMQ 侧做订阅过滤；
+- part2 = `boost::serialization` 文本归档的 map，键用单字母压缩：`d`=数据（JSON 字符串）、`r`=runtime-id（UUID）、`s`=sequence（uint32）、`t`=epoch；
+- 同一个进程对同一 source 重复 init 会复用同一 publisher；进程退出时发 `CONTROL_DEINIT` 退休 runtime-id，避免缓存泄漏（publisher 缓存上限 1000）。
+
+**订阅参数写在 path 的 key 里**
+
+| key | 默认 | 取值范围 | 作用 |
+|---|---|---|---|
+| `heartbeat` | 不设置 | ≤ 600 秒 | 空闲心跳；经 `event_set_global_options` 设为进程级全局值 |
+| `qsize` | 10240 | 1024–102400 | 优先级队列上限，满则丢弃 |
+| `usecache` | true | true / false | 断连期间由 eventd 的 cache 服务缓存并回放 |
+
+**事件有两条产生路径**
+
+1. **应用显式调用 API**：`events_init_publisher()` + `event_publish()`。社区代码里这类调用并不多——`scripts/disk_check.py`（磁盘）、monit 的 `container_checker` 脚本（容器健康）、orchagent 的个别事件，以及 `events_publish_tool` 这类调试工具；
+2. **日志转事件（大头）**：rsyslog 插件按正则把日志行解析成事件后发布。[docker-eventd](https://github.com/sonic-net/sonic-buildimage/tree/master/dockers/docker-eventd) 下的 `host_events_info.json`、`swss_events_info.json`、`syncd_events_info.json`、`bgp_events_info.json`、`dhcp_relay_events_info.json` 就是这套映射：每份只声明 `yang_module` 与 `proclist`（进程名 + 正则文件），其中 host 源覆盖 `monit`、`systemd`、`kernel`、`dockerd`、`arista`、`python3`。**bgp / swss / syncd 的事件基本都是这条路，不是应用直接发的。**
+
+**事件标识与负载**
+
+- 标识 = `<YANG 模块名>:<container 名>`，例 `sonic-events-bgp:bgp-state`；
+- 公共字段来自 `sonic-events-common` 的 `sonic-events-cmn` grouping，目前只有 `timestamp`（`yang::date-and-time`）；
+- 线上 JSON：`{"sonic-events-bgp:bgp-state":{"ip":"100.126.188.90","status":"down","timestamp":"2022-08-17T02:39:21.286611Z"}}`；
+- 自测事件 `sonic-host:device-test-event` 会被 events client 主动过滤，不下发给订阅者。
+
+**采集质量的三个指标（可直接查库）**
+
+events client 周期性把计数写回 **COUNTERS_DB 的 `COUNTERS_EVENTS` 表**，字段统一为 `value`：
+
+| key | 含义 |
+|---|---|
+| `COUNTERS_EVENTS:missed_internal` | 框架内丢失，按 runtime-id 的序号缺口累计 |
+| `COUNTERS_EVENTS:missed_by_slow_receiver` | 队列满丢弃 + 下发失败 |
+| `COUNTERS_EVENTS:latency_in_ms` | 最近 10 次下发的平均时延（发布时刻到当前时刻） |
+
+查询命令：`redis-cli -n 2 HGETALL COUNTERS_EVENTS`。
+
+**gNMI 侧封装**
+
+- Prefix：`target=EVENTS`；Path：`/events`；
+- Value：`TypedValue_JsonIetfVal`，内容即上述 JSON；
+- Timestamp 取 **`publish_epoch_ms`（发布时刻）**，不是接收时刻，因此设备与采集端的时钟偏差会直接体现为采集侧时延。
+
+来源：[events-producer.md](https://github.com/sonic-net/SONiC/blob/master/doc/event-alarm-framework/events-producer.md)、[event-alarm-framework.md](https://github.com/sonic-net/SONiC/blob/master/doc/event-alarm-framework/event-alarm-framework.md)、[events_common.h](https://github.com/sonic-net/sonic-swss-common/blob/master/common/events_common.h)、[events_common.cpp](https://github.com/sonic-net/sonic-swss-common/blob/master/common/events_common.cpp)、[events_client.go](https://github.com/sonic-net/sonic-gnmi/blob/master/sonic_data_client/events_client.go)、[events.cpp](https://github.com/sonic-net/sonic-swss-common/blob/master/common/events.cpp)。
 
 #### 3.5.3 平台硬件：只有 pmon 碰硬件，其他人读 STATE_DB
 
@@ -374,7 +433,7 @@ flowchart LR
 4. **落到 STATE_DB**：`TRANSCEIVER_INFO`、`TRANSCEIVER_DOM_SENSOR`、`TRANSCEIVER_STATUS`、`TEMPERATURE_INFO`、`FAN_INFO`、`PSU_INFO` 等表（表名随版本略有差异，以设备上 `redis-cli -n 6 KEYS '*'` 为准）。
 5. **出口只读**：gnmi 容器经 db client 读 `STATE_DB`，SNMP 容器经 AgentX 子代理读 `STATE_DB`，**两者都不碰 I2C**。平台数据在采集侧没有"直采"选项，只有"读库"。
 
-补充一条闭环：thermalctld / psud / xcvrd 在越过阈值时还会调用 `event_publish()`，把故障同时送进 3.5.2 的 ZMQ 通道。**同一份硬件数据，一条进 STATE_DB 做状态快照，一条进事件流做告警**。
+**更正一处**：pmon 的守护进程**不调** `event_publish()`——已核对 `thermalctld` 源码，全文只有 STATE_DB 写表与日志输出（`EventLogger` 只是把日志 tee 到 `/host/bmc/event.log`），没有任何事件 API 调用。所以硬件越阈值只产生两样东西：STATE_DB 的状态快照、syslog 日志；只有当这条日志被 `host_events_info.json` 的 `proclist` 覆盖时，才会被 rsyslog 插件转成事件。**"show 里有值、事件流里没有"的常见原因就在这里。**
 
 #### 3.5.4 三条路径的工程含义
 
@@ -383,7 +442,7 @@ flowchart LR
 | 采集粒度 | 由订阅 sample interval 决定 | 事件驱动，毫秒级 | 由 pmon 轮询周期决定（光模块/温度常见数十秒） |
 | 历史数据 | 无，只有瞬时值 | 有缓存回放，EventDB 可查历史 | 只有当前值，历史需外部存储 |
 | 失败表现 | 路径不在 trie 中 → 直接报错 | 背压/断连 → 丢事件并计数 | pmon 异常 → STATE_DB 停更，值变陈旧 |
-| 扩展方式 | 改代码加路径（硬编码 trie） | 新增 YANG 事件 + `event_publish` | 厂商实现 Platform API |
+| 扩展方式 | 改代码加路径（硬编码 trie） | 新增 YANG 事件 + 发布路径（调 API 或加 rsyslog 正则） | 厂商实现 Platform API |
 
 一句话概括：**非 DB 是"采集器自己看"，事件是"别人主动告诉它"，平台是"别人写好了它去读"**。三种模式对应三种可靠性边界，排障时应先判断问题落在哪一类，再去查对应的容器与表。
 
@@ -443,6 +502,298 @@ swsscommon / redis 客户端读取 `/var/run/redis/sonic-db/database_config.json
 - chassis：另起 `redis_chassis` 实例（端口 6380，socket `/var/run/redis-chassis/redis_chassis.sock`），并给容器加 `--add-host redis_chassis.server:<ip>`。
 
 来源：[database_config.json.j2](https://github.com/sonic-net/sonic-buildimage/blob/master/dockers/docker-database/database_config.json.j2)、[supervisord.conf.j2](https://github.com/sonic-net/sonic-buildimage/blob/master/dockers/docker-database/supervisord.conf.j2)。
+
+### 3.7 ZeroMQ（ZMQ）是什么、怎么用
+
+> 这一节是 [[#3.5.2 系统事件流：ZMQ 代理跑在 eventd 容器里|3.5.2]] 的前置知识：先把 ZeroMQ 本身讲清楚，再看 SONiC 怎么用它，最后回答"你自己怎么用"。
+
+#### 3.7.1 定义：它是一个库，不是中间件
+
+**ZeroMQ（零消息队列，ZeroMQ，缩写 ZMQ）是一个嵌入式消息库（embeddable messaging library）**：它把"套接字（socket）+ 消息队列 + 异步 I/O 线程"打包成一段能链接进你进程的代码，让进程之间、线程之间用同一套接口传消息。
+
+与常见消息中间件的区别，一张表就分得清：
+
+| 维度 | ZeroMQ | Kafka / RabbitMQ 这类消息中间件（message broker） |
+|---|---|---|
+| 形态 | 库（`libzmq`），链接进你的程序 | 独立服务进程，客户端连它 |
+| 是否要部署 | 不要，装个共享库即可 | 要，部署 broker、配集群与副本 |
+| 谁是中心 | 无中心，点对点，或自建代理 | broker 是中心 |
+| 持久化 | 无，内存队列，进程退出即失 | 有，磁盘日志或持久队列 |
+| 投递语义 | 至多一次（at-most-once），PUB/SUB 无 ACK | 至少一次 / 精确一次可配 |
+| 认证加密 | 默认无，可选 CURVE / PLAIN / GSSAPI | 内建 ACL、TLS、账号体系 |
+| 典型用途 | 机内/进程内高速 fan-out、采集侧车、控制面 | 跨机房数据管道、事件溯源 |
+
+所以在设备上 `ps` 里永远找不到叫 `zmqd` 的守护进程——**ZMQ 没有服务端**。SONiC 里的代理也不是独立服务：它是 `eventd` 进程内的一个线程（代码里叫 `eventd_proxy`，HLD 文档称 zmqproxy）。
+
+三个必须记住的语义，后面所有的坑都由它们派生：
+
+1. **消息边界被保留**：一次 `send` 就是一帧（frame），一次 `recv` 拿一帧，不会被 TCP 粘包切开；多帧消息用 `ZMQ_SNDMORE` 拼、用 `ZMQ_RCVMORE` 判断还有没有下一帧。
+2. **连接是异步的**：`connect()` 立即返回，后台 I/O 线程才去建链。连上之前发出的消息直接丢弃——这就是"慢加入者（slow joiner）"问题。
+3. **不重传**：PUB/SUB 下，没人订阅、队列满、对端太慢，消息都是**静默丢弃**，发送方完全无感知。
+
+#### 3.7.2 六种 socket 模式与两条关键语义
+
+ZMQ 的 socket 不是"一条 TCP 连接"，而是"一条带语义的消息通道"。常用的六种：
+
+| 模式 | 形状 | 方向 | 可靠性 | 典型用途 |
+|---|---|---|---|---|
+| PUB / SUB | 一对多 | 单向 | 丢就丢了 | 事件广播、遥测推送 |
+| XPUB / XSUB | 一对多 | 双向（订阅可见） | 同上，但能看到订阅/退订 | 写代理、做订阅审计 |
+| REQ / REP | 一对一 | 请求-应答 | 有重试，严格配对 | RPC、健康探测 |
+| DEALER / ROUTER | 多对多 | 双向 | 异步、可路由 | 自定义协议、网关 |
+| PUSH / PULL | 一对多 | 单向 | 轮询分发、负载均衡 | 任务流水线 |
+| PAIR | 一对一 | 双向 | — | 线程间专用通道 |
+
+其中 XPUB/XSUB 是 SONiC 能搭出那个代理的关键，值得单独说：
+
+- **普通 PUB 对订阅者是"隐形"的**：发布端看不到谁订了、订了什么，也没法据此做任何决策；
+- **XSUB ↔ XPUB 之间会传订阅消息**：首字节 `0x01` 表示订阅、`0x00` 表示退订，后面跟主题过滤串。代理据此维护 fan-out 表，才知道该把哪条消息转给谁。
+
+这也是 `zmq_proxy()` 存在的意义：它把 frontend（XSUB）与 backend（XPUB）桥接起来，等于一个**可编程的交换机**。见 [ZeroMQ 指南第 5 章](https://zguide.zeromq.org/docs/chapter5/) 中 Espresso 与 Last Value Cache 两个例子。
+
+#### 3.7.3 connect 与 bind：谁监听端口
+
+ZMQ 里 `bind` / `connect` 与"谁是客户端、谁是服务端"无关，只决定**谁占端口**：
+
+- `bind()` = 监听，端点必须先存在；
+- `connect()` = 主动连，对端不在时会自动重连（带退避）。
+
+SONiC 的拓扑是"代理 bind 两端，生产者与消费者都 connect"：
+
+```mermaid
+flowchart LR
+  P["发布者进程<br/>ZMQ_PUB"] -- "connect :5570" --> X["eventd 内 proxy 线程<br/>ZMQ_XSUB（bind 5570）"]
+  X --- XP["ZMQ_XPUB（bind 5571）"]
+  XP -- "connect :5571 + 订阅过滤" --> S["订阅者进程<br/>ZMQ_SUB"]
+```
+
+这个方向不是随手定的：发布者只该发、不该占端口（否则每加一个发布者就多一个监听端口）；代理固定占两个端口，才能把 N 个发布者与 M 个订阅者汇聚成多对多。
+
+#### 3.7.4 SONiC 的具体用法（源码确认）
+
+| 端点 | 键名（`init_cfg.json` 的 `events` 段） | socket 类型与归属 | 对端 |
+|---|---|---|---|
+| `tcp://127.0.0.1:5570` | `xsub_path` | `ZMQ_XSUB`，由 `eventd` 内的 proxy 线程 bind | 发布者用 `ZMQ_PUB` connect |
+| `tcp://127.0.0.1:5571` | `xpub_path` | `ZMQ_XPUB`，由 `eventd` 内的 proxy 线程 bind | 订阅者用 `ZMQ_SUB` connect |
+| `tcp://127.0.0.1:5572` | `req_rep_path` | `REQ` / `REP` 控制面（eventd 侧提供缓存与回显服务） | 发布方/订阅方用来探测连接就绪、开关缓存 |
+| `tcp://127.0.0.1:5573` | `capture_path` | `zmq_proxy` 的 capture 通道 | 代理内部，复制一份流给缓存侧车 |
+
+四个默认值硬编码在 [events_common.cpp](https://github.com/sonic-net/sonic-swss-common/blob/master/common/events_common.cpp) 的 `cfg_default`，可被 `/etc/sonic/init_cfg.json` 覆盖。
+
+**这条链路不经过 Redis**
+
+| 段 | 两端 | 传输 | 经过 Redis？ |
+|---|---|---|---|
+| 发布 → 代理 | 发布进程 ↔ `:5570` | ZMQ over TCP 回环（ZMTP 握手 + 分帧） | 否 |
+| 代理内部 | `ZMQ_XSUB` ↔ `ZMQ_XPUB` | 进程内内存队列 | 否 |
+| 代理 → 订阅 | `:5571` ↔ 订阅进程 | 同上 | 否 |
+| 下发给采集端 | `telemetry` ↔ Collector | gRPC（默认 8080） | 否 |
+| EventDB 落库 | `eventdb` ↔ `database` 容器 | Redis RESP over `redis.sock` | **是**（`EVENT_DB`，逻辑库 19） |
+| 采集质量指标 | events client ↔ `COUNTERS_DB` | 同上 | **是**（`COUNTERS_EVENTS`） |
+
+两个容易混的"发布订阅"：
+
+- **ZMQ 的 PUB/SUB**：socket 语义，点对点 TCP，没有 broker（这里的 proxy 只是转发器）；
+- **Redis 的 PUBLISH/SUBSCRIBE**：`libswsscommon` 的 `NotificationProducer` 用 `PUBLISH <频道> <json>` 做 DB 变更通知（频道名由调用方传入），与事件流是两套东西。
+
+一句话：**事件从产生到送到采集端，全程只碰 ZMQ 与 gRPC；Redis 只在"存历史"和"存质量指标"两个落点出现。** 验证命令 `ss -tnp | grep -E ':557[0-3]'`，看到的对端是本地进程，不是 `6379`。
+
+**线上消息是两帧**（[events_common.h](https://github.com/sonic-net/sonic-swss-common/blob/master/common/events_common.h) 的 `zmq_message_send`）：
+
+| 帧 | 内容 | 作用 |
+|---|---|---|
+| part1 | 事件源字符串，如 `sonic-events-bgp` | 供 ZMQ 侧做**前缀过滤**（订阅者只收匹配的源） |
+| part2 | `boost::serialization` **文本归档**的 `map<string,string>` | 承载 `d`（JSON 数据）、`r`（runtime-id）、`s`（序号）、`t`（epoch 微秒） |
+
+注意 part2 **不是 JSON**：它是 boost 文本归档，头部形如 `serialization::archive <版本号>`，之后按 map 结构依次排列条目数与各键值对的长度和内容、以空格分隔。`json.loads()` 对它一定报错——这一点决定了"能不能自己写个脚本直接订阅"。
+
+源码里另外三个细节：发布端 socket 只设了 `ZMQ_LINGER=100 ms`（进程退出时最多等 100 ms 把残留在队列里的消息发出去）；订阅端设 `ZMQ_RCVTIMEO` 与 `ZMQ_SUBSCRIBE`；`MAX_PUBLISHERS_COUNT=1000`，用于限制"按 runtime-id 记录序号缺口"的缓存规模。
+
+#### 3.7.5 你自己怎么用：三条路，别一上来就连 ZMQ
+
+| 做法 | 接口 | 你拿到什么 | 适用 |
+|---|---|---|---|
+| ① gNMI `EVENTS`（推荐） | gRPC `Subscribe`，`target=EVENTS`、`path=/events` | 已解码的 JSON、发布时刻时间戳、`missed` 计数 | 跨机采集、要认证、想复用现成 gNMI 客户端 |
+| ② `libswsscommon` 的 `event_receive()` | C++ / C / Go（cgo） | JSON 字符串 + `missed_cnt` + `publish_epoch_ms` | 在设备内写原生采集器 |
+| ③ 直连 XPUB `5571` | `pyzmq` / `libzmq` | 两帧原始数据，第二帧要自己解 boost 归档 | 只在必须拿原始 source、且能接受自己解包时 |
+
+**做法 ③ 的最小骨架**（Python，`pip install pyzmq`）：
+
+```python
+import zmq
+
+ctx = zmq.Context.instance()
+sub = ctx.socket(zmq.SUB)
+sub.setsockopt(zmq.LINGER, 100)          # 与 SONiC 的 LINGER_TIMEOUT 对齐
+sub.setsockopt(zmq.RCVTIMEO, 2000)       # 2 秒无数据抛 zmq.Again
+sub.connect("tcp://127.0.0.1:5571")      # XPUB 端点
+sub.setsockopt(zmq.SUBSCRIBE, b"sonic-events-bgp")   # 过滤的是 part1（事件源）
+
+while True:
+    source = sub.recv_string()   # part1: sonic-events-bgp
+    body   = sub.recv_string()   # part2: boost 文本归档，不是 JSON
+    print(source, body[:160])
+```
+
+顺带说明，**ZMQ 本身的用法**只有三步，其余都是模式选择：建上下文（`zmq_ctx_new`）→ 建 socket（`zmq_socket`）→ `bind` 或 `connect`，然后 `send` / `recv`。
+
+```python
+# 通用写法：一端 bind 监听，一端 connect；PUB 端不要在没订阅者时"以为发出去了"
+pub = ctx.socket(zmq.PUB);  pub.bind("tcp://*:5555");  pub.send_multipart([b"topic", b"payload"])
+sub = ctx.socket(zmq.SUB);  sub.connect("tcp://127.0.0.1:5555")
+sub.setsockopt(zmq.SUBSCRIBE, b"topic")
+```
+
+#### 3.7.6 四个坑，都会实际咬人
+
+| 坑 | 现象 | 原因与对策 |
+|---|---|---|
+| 只绑回环 | 远端采集器连 `设备IP:5571` 直接超时 | 默认端点写死 `127.0.0.1`。单 ASIC 下容器用 `--net=host`，**宿主机 shell 能直连**；多 ASIC 要进对应 netns。要跨机就得改 `events.xpub_path`，但 ZMQ 默认无认证无加密，暴露前先想安全 |
+| 慢加入者 | 程序启动后头几条事件收不到 | `connect` 是异步的，订阅生效前发布的消息被丢弃。SONiC 用 5572 的 echo 探测规避；自研客户端可靠序号缺口 `s` 判断，别假设"连上就全有" |
+| 静默丢弃 | 事件数比预期少，且没有任何错误 | PUB/SUB 不重传；libzmq 每对端默认高水位（high water mark，HWM）1000 条，满了就丢。gNMI 侧另有自己的 `qsize`（默认 10240） |
+| 过滤串写错 | 订阅 `bgp-state` 一条都收不到 | 过滤是**前缀匹配 part1（事件源）**，要写 `sonic-events-bgp`。另外 XPUB 默认不上报重复订阅，需要时得开 `ZMQ_XPUB_VERBOSE` |
+
+#### 3.7.7 自研 APM 要不要用 ZMQ
+
+| 场景 | 结论 | 理由 |
+|---|---|---|
+| 设备内多进程向多个消费者广播 | 合适 | 无 broker、时延低、fan-out 天然支持，SONiC 已是范例 |
+| 跨机、要求不丢、要认证 | 不合适 | 无持久化、无 ACK、默认无加密；这活该交给 gNMI 或 Kafka 一类 |
+| 需要历史回放 | 不合适 | ZMQ 不存历史；回放要靠 `EVENT_DB` 或下游存储 |
+
+**结论：在 SONiC 场景里，ZMQ 是"设备内部的传输层"，不是"对外的采集接口"。要做 APM 助手，消费事件优先走 gNMI 的 `EVENTS` target；只有在设备内写原生 agent、且确实需要极低时延时，才考虑直连 5571。**
+
+#### 3.7.8 四个高频疑问
+
+**① 为什么非要两帧，合成一帧不行吗**
+
+不行，至少"用 ZMQ 的过滤"这件事会直接失效。原因很具体：**所有事件的载荷开头都是同一串 `serialization::archive`**，如果只有一帧，前缀过滤面对每条消息看到的前缀都一样，等于没有过滤。
+
+| 好处 | 机制 |
+|---|---|
+| 让 ZMQ 层能按来源过滤 | 订阅匹配只作用于**第一帧**；把 `sonic-events-bgp` 单独放一帧，才有了可区分的路由标签 |
+| 过滤几乎不花钱 | 只比对短字符串，不解析 boost 归档；不匹配的消息在 zmq 引擎里就被丢弃，不会进应用 |
+| 编码可独立演进 | part1 是纯文本 source，part2 将来换序列化格式也不影响路由 |
+| 中间件只搬载荷 | 缓存服务按源码注释**只存 part2**（`event_serialized_t`），source 由通道决定，不必解包 |
+
+一句话：**part1 是信封上的地址，part2 是信；没有地址，邮局只能把每封信都拆开看。**
+
+**② 代理（zmqproxy）存在的目的**
+
+核心是把 **N×M 连接压成 N+M**：
+
+| 没有代理 | 有代理 |
+|---|---|
+| PUB 必须 bind，N 个发布者就是 N 个端点 | 代理统一 bind 两个固定端点 |
+| M 个订阅者要连 N 个地址，发布者增减就得改订阅方配置 | 订阅者只连 `5571` 一个地址 |
+| 发布者重启，订阅者重连并重新传播订阅，中间丢一段 | 订阅关系留在代理侧，发布者重启不影响订阅者 |
+| 想做缓存、审计，得改每个发布者 | 代理一个 capture 口就能复制全量流（`5573`） |
+
+同时要强调它**不是 broker**：不落盘、不 ACK、不重传；`zmq_proxy()` 只是 libzmq 里的一个函数，跑在 `eventd` 进程的第二个线程里（`eventd_proxy::run`），不是独立可执行文件。
+
+**③ 发布者是谁**
+
+发布者是**进程**，不是容器。分两类：
+
+| 类型 | 谁 | 怎么发 |
+|---|---|---|
+| 直接调 API | `disk_check.py`、monit 的 `container_checker`、orchagent 的个别事件 | `events_init_publisher(source)` + `event_publish(tag, params)` |
+| 日志转事件（多数） | rsyslog 插件，覆盖 bgp / swss / syncd / dhcp-relay / host | 插件按 `*_events_info.json` 的 proclist 与正则解析日志后发布 |
+
+一个进程可为多个 source 各建一个 publisher；同一 source 重复 init 会复用实例（`s_publishers` 按 source 去重）。
+
+**④ 订阅者又是谁**
+
+| 订阅者 | 位置 | 目的 |
+|---|---|---|
+| events client | gnmi 容器的 `telemetry` 进程 | 转成 gNMI `EVENTS` 下发，供外部采集 |
+| EventDB 消费者 | eventd 容器 | 写 `EVENT` / `ALARM` 表，供 CLI / REST 查历史 |
+| cache 服务 | eventd 容器 | 断连期间缓存、重连回放（走 capture `5573`） |
+| 自研进程 | 任意链接 `libswsscommon` 的程序 | 厂商或自研 agent 直接消费 |
+
+两个限制要记住：**每个进程只允许一个 subscriber**（`EventSubscriber::s_subscriber` 单例），所以 gNMI 的多客户端过滤只能在 gNMI 层做；**ZMQ 层只能按 source 过滤，不能按事件 tag 过滤**——只想要 `bgp-state` 这一类，得在 gNMI 或应用层再筛一次。
+
+#### 3.7.9 生产者链接的是哪个库：建连与发送的完整调用链
+
+先纠一个容易混的说法：**不存在"zmqproxy 的库"**。代理侧和生产者侧用的是同一个传输库，但它们是两个进程，之间只有一条 TCP 连接。
+
+| 层 | 具体名字 | 形态 | 与生产者的关系 |
+|---|---|---|---|
+| 传输协议库 | `libzmq.so.5`（ZeroMQ 本体，纯 C 接口） | 共享库 | 间接依赖，由下一层链接进来 |
+| SONiC 封装库 | `libswsscommon.so`（C++）／`_swsscommon.so`（Python 扩展） | 共享库 | **直接链接**，代码里只 include `events.h` |
+| 代理（proxy） | `eventd` 进程里的 `eventd_proxy` 线程 | 进程内线程 | **不链接**，只通过 `tcp://127.0.0.1:5570` 对话 |
+
+#### 3.7.9.1 初始化：六步，前五步在 `EventPublisher::init()` 里
+
+| # | 调用 | 所属库 | 作用 |
+|---|---|---|---|
+| 1 | `events_init_publisher("sonic-events-xxx")` | libswsscommon | 按 source 查静态表 `s_publishers`，命中就复用 |
+| 2 | `zmq_ctx_new()` | libzmq | 建 ZMQ 上下文（context），同时拉起自己的 I/O 线程 |
+| 3 | `zmq_socket(ctx, ZMQ_PUB)` | libzmq | 建发布者（PUB）类型的 socket |
+| 4 | `zmq_setsockopt(ZMQ_LINGER, LINGER_TIMEOUT)` | libzmq | 退出时最多等这么久，避免残留消息被直接丢 |
+| 5 | `zmq_connect(get_config(XSUB_END_KEY))` | libzmq | 连 `tcp://127.0.0.1:5570`，**立即返回** |
+| 6 | `m_event_service.echo_send("hello")` | libswsscommon | 走 5572 的 REQ/REP 往返，探测代理是否真的就绪 |
+
+第 5 步必须配第 6 步，源码注释写得很直白：
+
+> `REQ socket is connected and a message is sent & received, more to ensure PUB socket had enough time to establish connection. Any message published before connection establishment is dropped.`
+
+**这就是慢加入者（slow joiner）问题的官方解法**：`zmq_connect()` 只是登记端点，真正的握手在后台 I/O 线程完成，返回 0 不代表对端在线。所以封装库额外用一条 REQ/REP 往返，把"连接已建立"这件事同步出来。
+
+#### 3.7.9.2 发送：五步，最后落在两次 `zmq_send`
+
+| # | 调用 | 做什么 |
+|---|---|---|
+| 1 | `event_publish(h, "bgp-state", params)` | 应用侧入口 |
+| 2 | `EventPublisher::publish()` | 参数里没有时间戳就补 `EVENT_TS_PARAM` |
+| 3 | `convert_to_json(source + ":" + tag, params)` | 拼事件标识，序列化成 JSON 正文 |
+| 4 | `send_evt()` | 组 `internal_event_t`：`d` 正文、`r` runtime-id、`s` 递增序号、`t` epoch 微秒 |
+| 5 | `zmq_message_send(socket, source, evt)` | 发两帧，内部用 `ZMQ_SNDMORE` 拼接 |
+
+四个会实际影响设计的行为：
+
+1. **每个 source 一套上下文和连接**。`init()` 每次都 `zmq_ctx_new()`，去重只按 source 做。一个进程发 3 类事件，就是 3 个上下文、3 条到 5570 的 TCP 连接，彼此不共享。
+2. **`zmq_send` 成功不等于送达**。PUB 没有确认（ACK），返回值只表示"进了本地发送队列"；订阅者不在、高水位（HWM）满，消息直接丢。`event_publish` 的返回值不能当投递凭据。
+3. **代理是线程，不是进程**。`eventd.cpp` 里 `eventd_proxy::run()` 创建 `ZMQ_XSUB`（bind 5570）、`ZMQ_XPUB`（bind 5571）、`ZMQ_PUB`（capture，5573），然后一行 `zmq_proxy()` 永久阻塞。容器内 `ps` 只能看到 `eventd`。
+4. **`event_publish` 的 tag 不含 source**。source 在 init 时给，`source:tag` 由库内部拼接；两处都写 source 会得到 `sonic-events-bgp:sonic-events-bgp:bgp-state` 这类错标识。
+
+#### 3.7.9.3 两种写法
+
+Python 版摘自官方工具 `events_publish_tool.py`，是实际在用的接口，不是示意：
+
+```cpp
+// C++
+#include "events.h"
+event_handle_t h = events_init_publisher("sonic-events-vendor");
+event_params_t p{{"ip", "10.0.0.1"}, {"status", "down"}};
+event_publish(h, "link-state", &p);
+events_deinit_publisher(h);
+```
+
+```python
+# Python
+from swsscommon.swsscommon import (events_init_publisher, events_deinit_publisher,
+                                   event_publish, FieldValueMap)
+h = events_init_publisher("sonic-events-vendor")
+p = FieldValueMap()
+p["ip"] = "10.0.0.1"
+p["status"] = "down"
+event_publish(h, "link-state", p)
+events_deinit_publisher(h)
+```
+
+Python 侧参数是 `FieldValueMap`（本质为 `map<string,string>`），值必须转成字符串，直接传整数会报类型错。
+
+#### 3.7.9.4 四条验证命令
+
+```bash
+docker exec eventd ps -ef | grep eventd        # 只有 eventd，没有 zmqproxy
+ldd /usr/bin/eventd | grep zmq                  # 确认链接 libzmq
+ss -tnp | grep 5570                             # 生产者到代理的 ESTABLISHED
+nm -D /usr/lib/x86_64-linux-gnu/libswsscommon.so | grep event_publish
+```
+
+**结论：生产者做的是"调 `libswsscommon` 的 `events_init_publisher` 建连、调 `event_publish` 发送"；`libswsscommon` 再调 `libzmq` 的 `zmq_connect` / `zmq_send` 落到 TCP。全程没有任何代码"调用 zmqproxy"——代理只是这条 TCP 的另一端。**
 
 ---
 
@@ -549,6 +900,20 @@ swsscommon / redis 客户端读取 `/var/run/redis/sonic-db/database_config.json
 | SONiC 深度架构解读 | 容器、DB、SAI 的分层说明 | https://sonicfoundation.dev/deep-dive-into-sonic-architecture-design/ |
 | NOS 构成拆解 | 镜像里到底装了什么（Debian、SDK、平台包） | https://safeguard.sh/resources/blog/how-a-network-switch-is-made-switch-asics-network-operating-systems-and-firmware |
 
+### 7.6 ZeroMQ 与事件传输
+
+| 资料 | 说明 | 链接 |
+|---|---|---|
+| ZeroMQ 官网 | 项目主页、模式总览与语言绑定 | https://zeromq.org/ |
+| ZeroMQ 指南（zguide） | 官方推荐教程；第 1/2 章讲模式，第 5 章讲高级 PUB/SUB | https://zguide.zeromq.org/ |
+| zguide 第 5 章 | XPUB/XSUB 代理、Espresso 追踪、Last Value Cache | https://zguide.zeromq.org/docs/chapter5/ |
+| libzmq API 参考 | `zmq_socket` / `zmq_bind` / `zmq_proxy` / `zmq_setsockopt` | https://libzmq.readthedocs.io/en/latest/ |
+| pyzmq 文档 | Python 绑定与示例 | https://pyzmq.readthedocs.io/en/latest/ |
+| events_common.h | 两帧消息格式、四个端点默认值、boost 序列化实现 | https://github.com/sonic-net/sonic-swss-common/blob/master/common/events_common.h |
+| events.cpp | publisher/subscriber 的 socket 建立与选项（`LINGER`/`SUBSCRIBE`/`RCVTIMEO`） | https://github.com/sonic-net/sonic-swss-common/blob/master/common/events.cpp |
+| eventd.cpp | 代理实现：`eventd_proxy::run()` 建 XSUB/XPUB/capture 并调 `zmq_proxy()`；可据此确认代理是线程而非进程 | https://github.com/sonic-net/sonic-buildimage/blob/master/src/sonic-eventd/src/eventd.cpp |
+| events_publish_tool.py | 官方发布工具：Python 侧 `events_init_publisher` / `event_publish` / `FieldValueMap` 的可用示例 | https://github.com/sonic-net/sonic-buildimage/blob/master/src/sonic-eventd/tools/events_publish_tool.py |
+
 ## 8 待核实项
 
 | # | 问题 | 为何重要 | 建议验证方式 |
@@ -559,6 +924,7 @@ swsscommon / redis 客户端读取 `/var/run/redis/sonic-db/database_config.json
 | 4 | 平台是否支持 HFST / INT | 决定能否做毫秒级诊断 | 查芯片与厂商发行版说明 |
 | 5 | 多 ASIC / DPU 的容器与命名空间布局 | 影响采集寻址与 Redis 实例选择 | `ip netns list`、`docker ps` |
 | 6 | `STATE_DB` 中平台表的版本差异 | 光模块/传感器字段名随版本变化 | `redis-cli -n 6 KEYS '*'` 抽样比对 |
+| 7 | ZMQ 端点是否被改过、是否暴露到网络 | 决定能否跨机直连 5571，且涉及安全边界 | `jq .events /etc/sonic/init_cfg.json`、`ss -ltnp \| grep 557` |
 
 ---
 
@@ -567,5 +933,9 @@ swsscommon / redis 客户端读取 `/var/run/redis/sonic-db/database_config.json
 | 版本 | 日期 | 变更 |
 |---|---|---|
 | v0.1 | 2026-11-10 | 首版：整体组成、采集框架、容器角色、参考链接与待核实项 |
-| v0.2 | 2026-11-10 | 新增 §3.6 跨容器访问 Redis 的机制：bind mount + Unix socket、三条通道、database_config.json 与失败模式 |
-| v0.3 | 2026-11-10 | 重写 §3.5：非 DB 数据（non_db_client 直读 /proc）、事件流（eventd 的 ZMQ 代理 + EventDB）、平台硬件（pmon 独占 I2C → STATE_DB）三条路径，补三条路径对比与工程含义 |
+| v0.2 | 2026-11-10 | 新增 [[#3.6 跨容器访问 Redis 的具体机制\|§3.6]] 跨容器访问 Redis 的机制：bind mount + Unix socket、三条通道、database_config.json 与失败模式 |
+| v0.3 | 2026-11-10 | 重写 [[#3.5 三类非 Redis 数据的采集路径\|§3.5]]：非 DB 数据（non_db_client 直读 /proc）、事件流（eventd 的 ZMQ 代理 + EventDB）、平台硬件（pmon 独占 I2C → STATE_DB）三条路径，补三条路径对比与工程含义 |
+| v0.4 | 2026-11-11 | 新增 [[#3.7 ZeroMQ（ZMQ）是什么、怎么用\|§3.7]] ZeroMQ 基础与用法：库与中间件的区别、六种 socket 模式、`bind`/`connect` 语义、SONiC 四端点与两帧消息、三条消费路径（含 pyzmq 骨架）、四个坑与选型建议；补 [[#7.6 ZeroMQ 与事件传输\|§7.6]] 参考资料与待核实项第 7 条 |
+| v0.5 | 2026-11-11 | 新增 [[#3.7.8 四个高频疑问\|§3.7.8]] 四个高频疑问（两帧的收益、zmqproxy 的目的、发布者与订阅者清单）；更正三处：pmon 守护进程不调 `event_publish`、bgp/swss/syncd 事件主要来自 rsyslog 正则、[[#3.5.2 系统事件流：ZMQ 代理跑在 eventd 容器里\|§3.5.2]] 拓扑图的生产者改为"直接调 API + rsyslog 插件" |
+| v0.6 | 2026-11-11 | [[#3.7.4 SONiC 的具体用法（源码确认）\|§3.7.4]] 补"这条链路不经过 Redis"：六段跳转的传输方式对照、ZMQ PUB/SUB 与 Redis PUBLISH/SUBSCRIBE 的区别、`ss` 验证命令 |
+| v0.7 | 2026-11-11 | 新增 [[#3.7.9 生产者链接的是哪个库：建连与发送的完整调用链\|§3.7.9]]：libzmq / libswsscommon / 代理三层辨析、初始化六步与发送五步（含 `echo_send` 探测与 slow joiner）、C++ 与 Python 两种写法、四条验证命令；**更正结构性错误**：不存在独立 `zmqproxy` 进程，代理是 `eventd_proxy::run()` 线程（`zmq_proxy()` 在 eventd 进程内），同步修正 [[#3.5.2 系统事件流：ZMQ 代理跑在 eventd 容器里\|§3.5.2]]、[[#3.7.4 SONiC 的具体用法（源码确认）\|§3.7.4]]、[[#3.7.8 四个高频疑问\|§3.7.8]] 九处表述 |

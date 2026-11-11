@@ -1,0 +1,22 @@
+[Unit]
+Description=mihomo proxy core (Clash.Meta) - VPN egress on :7890
+Documentation=file:///home/u/VPN/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=u
+Group=u
+WorkingDirectory=/home/u/VPN
+# 启动前先校验配置，校验不过就不启动（避免坏配置静默接管端口）
+ExecStartPre=/home/u/VPN/mihomo -t -d /home/u/VPN
+ExecStart=/home/u/VPN/mihomo -d /home/u/VPN
+Restart=always
+RestartSec=5
+LimitNOFILE=65535
+StandardOutput=append:/home/u/VPN/mihomo.log
+StandardError=append:/home/u/VPN/mihomo.log
+
+[Install]
+WantedBy=multi-user.target

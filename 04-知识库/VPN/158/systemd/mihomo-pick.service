@@ -1,0 +1,18 @@
+[Unit]
+Description=mihomo boot-time node speed test (one-shot, no periodic probing)
+Documentation=file:///home/u/VPN/README.md
+After=mihomo.service
+Wants=mihomo.service
+
+[Service]
+Type=oneshot
+User=u
+Group=u
+WorkingDirectory=/home/u/VPN
+ExecStart=/home/u/VPN/boot-pick.sh
+TimeoutStartSec=300
+# 测速失败不算故障（沿用上次选择即可），避免开机时报红
+SuccessExitStatus=0 1
+
+[Install]
+WantedBy=multi-user.target
